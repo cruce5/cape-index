@@ -24,6 +24,7 @@
     --else: #9d7ce0;
     --pos: #3fb950;
     --neg: #f0883e;
+    --note: #caa25e;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
   }
   @media (prefers-color-scheme: light) {
@@ -45,6 +46,7 @@
       --else: #7c4db8;
       --pos: #1a7f37;
       --neg: #bc4c00;
+      --note: #8a6a34;
       --shadow: 0 1px 2px rgba(13, 15, 20, 0.06), 0 10px 30px -16px rgba(13, 15, 20, 0.18);
     }
   }
@@ -207,6 +209,27 @@
 
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* ============ ACT DIVIDERS ============ */
+  .act { padding: 52px 0 4px; }
+  .act .wrap { display: flex; align-items: baseline; gap: 16px; }
+  .act h3 { font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+  .act .rule { flex: 1 1 auto; height: 1px; background: var(--border); }
+  .act .sub { font-size: 12px; color: var(--ink-muted); white-space: nowrap; font-family: "IBM Plex Mono", monospace; }
+  @media (max-width: 640px) { .act .sub { display: none; } }
+
+  /* ============ TEACHING NOTES ============ */
+  .teach-hint { margin-top: 14px; font-size: 13.5px; color: var(--ink-muted); }
+  .teach-hint b { color: var(--note); font-weight: 600; }
+  .note { display: none; margin-top: 18px; border-top: 1px dashed var(--border-strong); padding-top: 15px; }
+  body.notes-on .note { display: block; }
+  .note .nlabel { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--note); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .note .nlabel::before { content: ""; width: 16px; height: 1px; background: var(--note); flex: none; }
+  .note dl { margin: 0; display: grid; grid-template-columns: 8.5rem 1fr; gap: 7px 18px; font-size: 13px; line-height: 1.5; }
+  .note dt { color: var(--ink-muted); font-weight: 600; }
+  .note dd { margin: 0; color: var(--ink-2); }
+  .note code { font-family: "IBM Plex Mono", monospace; font-size: 0.9em; background: var(--surface-2); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
+  @media (max-width: 620px) { .note dl { grid-template-columns: 1fr; gap: 2px; } .note dd { margin-bottom: 8px; } }
 </style>
 
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
@@ -216,6 +239,7 @@
     <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2008&ndash;2026</p>
     <h1>The Cape Index</h1>
     <p class="dek">Every Marvel and DC film since 2008, and what it made. Worldwide grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time. Any number on the page switches to 2025 dollars.</p>
+    <p class="teach-hint">It also works as a set of worked examples. Flip <b>Design notes</b> on, up in the toolbar, and every chart explains why it&rsquo;s built the way it is &mdash; the form, the colour, and what it can&rsquo;t tell you.</p>
     <div class="thesis" id="thesis"></div>
     <p class="smallprint" id="smallprint"></p>
   </div>
@@ -237,6 +261,13 @@
         <button data-money="real" aria-pressed="false">2025&nbsp;$</button>
       </div>
     </div>
+    <div class="cgroup" role="group" aria-label="Design notes">
+      <span class="clabel">Design notes</span>
+      <div class="seg">
+        <button data-notes="off" aria-pressed="true">Off</button>
+        <button data-notes="on" aria-pressed="false">On</button>
+      </div>
+    </div>
     <div class="cgroup">
       <span class="clabel">Theme</span>
       <div class="seg">
@@ -248,6 +279,8 @@
 </nav>
 
 <main>
+  <div class="act"><div class="wrap"><h3>Act I &nbsp;—&nbsp; The scoreboard</h3><span class="rule"></span><span class="sub">how big, and who</span></div></div>
+
   <section class="view" id="v-scorecard">
     <div class="wrap">
       <div class="view-head">
@@ -267,6 +300,12 @@
         <div id="chart-year"></div>
         <button class="minibtn" data-table="year" aria-pressed="false" style="margin-top:12px">Show data</button>
         <div id="table-year" hidden></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>How has total superhero box office moved year to year, and how does each year split between the studios?</dd>
+          <dt>Why this form</dt><dd>A stacked column reads as one total per year (the height) and a split within it (the segments). Separate lines would bury the &ldquo;how big was the whole year&rdquo; question; a grouped column would make the year total hard to see.</dd>
+          <dt>Choices here</dt><dd>Segments are held apart by a 2&nbsp;px gap in the page colour, not a stroke &mdash; a border is ink that isn&rsquo;t data. Universe order is fixed, so a colour never jumps position between years. Y-axis labels sit flush left, close to the title.</dd>
+          <dt>Watch for</dt><dd>Stacking hides the individual films. Good for the total and rough shares; useless for &ldquo;which 2021 Marvel film was that.&rdquo; That&rsquo;s what the table is for.</dd>
+        </dl></div>
       </div>
       <div class="card">
         <div class="card-head">
@@ -277,6 +316,12 @@
           <button class="minibtn" data-outlier aria-pressed="false">Hide &ge; $1B</button>
         </div>
         <div id="chart-box"></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Beyond the averages, how are each universe&rsquo;s grosses actually spread out?</dd>
+          <dt>Why this form</dt><dd>A box plot shows the middle 50%, the median and the tails at once. An average alone would hide that DC&rsquo;s range is both wider and lower. The dots put every film back on the chart so the summary isn&rsquo;t a black box.</dd>
+          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean &mdash; one $2.8B film drags a mean around. DCU and Elseworlds have two films each, so they get dots and a median tick only; a quartile box on n&nbsp;=&nbsp;2 is theatre.</dd>
+          <dt>Watch for</dt><dd>With this few films per group, a single film moves the quartiles a lot. Read it as &ldquo;roughly,&rdquo; not &ldquo;precisely.&rdquo;</dd>
+        </dl></div>
       </div>
     </div>
   </section>
@@ -294,9 +339,17 @@
           <span class="card-note" id="tm-count"></span>
         </div>
         <div id="chart-treemap"></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Where is the money concentrated across all 57 films at once?</dd>
+          <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 57-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
+          <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding &mdash; a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
+          <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
+        </dl></div>
       </div>
     </div>
   </section>
+
+  <div class="act"><div class="wrap"><h3>Act II &nbsp;—&nbsp; Over time</h3><span class="rule"></span><span class="sub">cadence, scale, budgets</span></div></div>
 
   <section class="view" id="v-beeswarm">
     <div class="wrap">
@@ -310,6 +363,12 @@
           <div class="legend" id="leg-bee"></div>
         </div>
         <div id="chart-beeswarm"></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>When did each film come out and how big was it &mdash; without films from the same summer hiding each other?</dd>
+          <dt>Why this form</dt><dd>A plain timeline stacks dots on top of each other around each release window. The beeswarm nudges them apart vertically so every film stays visible at its real date.</dd>
+          <dt>Choices here</dt><dd>Circle <em>area</em> is proportional to gross &mdash; the radius scales with the square root, so the big films aren&rsquo;t exaggerated. Each new circle is pushed to the nearest open spot. Vertical position on its own means nothing.</dd>
+          <dt>Watch for</dt><dd>The jitter is cosmetic. Don&rsquo;t read height as a second variable.</dd>
+        </dl></div>
       </div>
     </div>
   </section>
@@ -328,6 +387,128 @@
         </div>
         <div id="chart-scatter"></div>
         <div id="table-scatter" hidden></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Is there a trend in film size over 18 years, and which films broke away from the pack?</dd>
+          <dt>Why this form</dt><dd>Two continuous axes &mdash; date and gross &mdash; is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
+          <dt>Choices here</dt><dd>The fourth series can&rsquo;t be told from the others by colour alone under colour blindness, so each universe also carries a shape. Only the six biggest films are labelled; a label on all 57 is noise.</dd>
+          <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support &mdash; the story is the spread and the outliers, not a slope.</dd>
+        </dl></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-budget">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 05 &nbsp;/&nbsp; THE BUDGET ARMS RACE</span>
+        <h2>The typical superhero budget has roughly doubled since 2008, before inflation</h2>
+        <p class="dek">The median production budget by release year. <em>Iron Man</em> cost $140M in 2008; a mid-tier tentpole now runs $200&ndash;250M, and the biggest Avengers films clear $350M. Flip to 2025 dollars to see how much of that is real growth.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-budget"></div>
+          <button class="minibtn" data-table="budget" aria-pressed="false">Show data</button>
+        </div>
+        <div id="chart-budget"></div>
+        <div id="table-budget" hidden></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Have production budgets actually climbed once you strip out inflation?</dd>
+          <dt>Why this form</dt><dd>One measure over time is a line. The faint dots behind it are the individual films, so you can see the spread the line is summarising.</dd>
+          <dt>Choices here</dt><dd>The line is the <em>median</em> budget per year &mdash; the mean would swing with a single $350M Avengers. One line, not four: split by universe and the yearly counts get too small to read.</dd>
+          <dt>Watch for</dt><dd>Budgets are the softest number on the site. Studios don&rsquo;t disclose them; anything not straight from Box Office Mojo is an estimate, marked <code>est.</code> in the ledger.</dd>
+        </dl></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="act"><div class="wrap"><h3>Act III &nbsp;—&nbsp; Beyond the gross</h3><span class="rule"></span><span class="sub">profit, legs, reviews, geography</span></div></div>
+
+  <section class="view" id="v-profit">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 06 &nbsp;/&nbsp; DID IT MAKE MONEY?</span>
+        <h2>Eighteen of these films failed to clear their break-even point</h2>
+        <p class="dek">Each film&rsquo;s worldwide gross measured against an estimated break-even of 2.5&times; its production budget. To the right is profit, to the left is loss. <em>The Marvels</em> is the widest miss; <em>Joker</em> the widest hit, at nearly 20&times; its $55M budget.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-profit"></div>
+          <button class="minibtn" data-table="profit" aria-pressed="false">Show data</button>
+        </div>
+        <div id="chart-profit"></div>
+        <div id="table-profit" hidden></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Which films actually cleared their break-even point, and by how much?</dd>
+          <dt>Why this form</dt><dd>A diverging bar anchored at zero puts profit right, loss left, and sorts the whole slate best to worst in one read. Gross alone can&rsquo;t answer &ldquo;did it make money&rdquo; &mdash; a $400M film is a hit or a bomb depending on its budget.</dd>
+          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Bars are coloured by outcome, made money or lost money, with a &check; or &cross;; the universe rides along as a chip on the title.</dd>
+          <dt>Watch for</dt><dd>Break-even is a rule of thumb, not studio accounting &mdash; home video, streaming and TV deals aren&rsquo;t in it. Trust the ranking more than the exact dollar figure.</dd>
+        </dl></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-legs">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 07 &nbsp;/&nbsp; LEGS</span>
+        <h2>Some films made most of their money in three days; others kept selling for months</h2>
+        <p class="dek">For each film, its opening weekend and its full domestic run, connected. A long line is a film with legs &mdash; <em>Aquaman</em> finished at 4.9&times; its opening. A short one is front-loaded: <em>Joker: Folie &agrave; Deux</em> managed 1.5&times;.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-legs"></div>
+          <button class="minibtn" data-table="legs" aria-pressed="false">Show data</button>
+        </div>
+        <div id="chart-legs"></div>
+        <div id="table-legs" hidden></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>How much of each film&rsquo;s domestic run came from its opening weekend versus everything after?</dd>
+          <dt>Why this form</dt><dd>A dumbbell connects two related numbers &mdash; opening weekend and lifetime domestic &mdash; for each film. The length of the connector <em>is</em> the story: long means it kept selling, short means it faded.</dd>
+          <dt>Choices here</dt><dd>Sorted by the multiplier (<code>lifetime &divide; opening</code>), not by either raw number, so the leggy films rise to the top. Both ends carry the film&rsquo;s universe colour.</dd>
+          <dt>Watch for</dt><dd>Big openings and long legs aren&rsquo;t opposites &mdash; Endgame had both. And a huge multiple on a tiny platform release isn&rsquo;t the same thing as a wide release with staying power.</dd>
+        </dl></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-reviews">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 08 &nbsp;/&nbsp; REVIEWS &amp; REVENUE</span>
+        <h2>Reviews barely move with box office, and critics and audiences often part ways</h2>
+        <p class="dek">Two questions the enriched data can finally answer: do better-reviewed films make more, and where do the critics and the crowd disagree?</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Rotten Tomatoes critic score vs worldwide gross</div>
+            <div class="card-note">One point per film. If reviews drove grosses, this would slope up. It mostly doesn&rsquo;t.</div>
+          </div>
+          <div class="legend" id="leg-rev"></div>
+        </div>
+        <div id="chart-reviews"></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Do better reviews go with bigger box office?</dd>
+          <dt>Why this form</dt><dd>Two continuous variables, one point per film &mdash; a scatter. The question is whether there&rsquo;s a pattern, and the honest answer is &ldquo;barely.&rdquo;</dd>
+          <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is weak; a line would imply something predictable, which this isn&rsquo;t. The spread is the finding.</dd>
+          <dt>Watch for</dt><dd>Reviews and gross are both downstream of the same thing &mdash; franchise heat, timing, spend. A scatter shows association, never cause.</dd>
+        </dl></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Critics vs audiences</div>
+            <div class="card-note">RT critic score against IMDb user rating, both on 0&ndash;100. The diagonal is where they agree.</div>
+          </div>
+          <div class="legend" id="leg-par"></div>
+        </div>
+        <div id="chart-parity"></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Where do critics and the audience disagree, and who liked it more?</dd>
+          <dt>Why this form</dt><dd>Plot one score against the other and draw the 45&deg; line where they&rsquo;d match. Distance from the line is the size of the disagreement; the side tells you who was warmer.</dd>
+          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and grey &mdash; it&rsquo;s a reference, not data.</dd>
+          <dt>Watch for</dt><dd>RT critic % (share of positive reviews) and an IMDb rating (average score) aren&rsquo;t the same kind of measure. The diagonal is a visual aid, not a claim that the scales are equivalent.</dd>
+        </dl></div>
       </div>
     </div>
   </section>
@@ -335,7 +516,7 @@
   <section class="view" id="v-split">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 05 &nbsp;/&nbsp; DOMESTIC v OVERSEAS</span>
+        <span class="num">§ 09 &nbsp;/&nbsp; DOMESTIC v OVERSEAS</span>
         <h2>Most of this money comes from outside North America</h2>
         <p class="dek">Each film split into its domestic and overseas gross. The overseas share runs from 43% (Superman, Supergirl) to 72% (Wonder Woman 1984). Sort by it to see which films travelled.</p>
       </div>
@@ -348,19 +529,32 @@
           </div>
         </div>
         <div id="chart-split"></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>For each film, how much of the gross came from North America versus everywhere else?</dd>
+          <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 57 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
+          <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same colour at low opacity &mdash; one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalised so you compare shares directly.</dd>
+          <dt>Watch for</dt><dd>&ldquo;Overseas&rdquo; lumps very different markets together. China alone swings some of these films by ten points.</dd>
+        </dl></div>
       </div>
     </div>
   </section>
 
+  <div class="act"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the raw table &amp; the method</span></div></div>
+
   <section class="view" id="v-data">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 06 &nbsp;/&nbsp; THE LEDGER</span>
+        <span class="num">§ 10 &nbsp;/&nbsp; THE LEDGER</span>
         <h2>The whole thing, sortable</h2>
         <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend &mdash; how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
       </div>
       <div class="card" style="padding:16px">
         <div id="table-full"></div>
+        <div class="note" style="padding:0 6px"><div class="nlabel">Design note</div><dl>
+          <dt>Why this form</dt><dd>A sorted table is the most information-dense view there is, and it&rsquo;s the accessibility backbone: every value a chart encodes with position or colour is a plain number here.</dd>
+          <dt>Choices here</dt><dd>Click any header to sort. Money columns use a monospaced figure so the digits line up. Universe is a colour chip, not a colour-coded row &mdash; the text still has to work on its own.</dd>
+          <dt>Watch for</dt><dd>Sorting by a derived column (Mult., ROI) rewards small films with freak ratios. Read those next to the raw gross.</dd>
+        </dl></div>
       </div>
     </div>
   </section>
@@ -368,7 +562,7 @@
   <section class="view" id="v-method">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 07 &nbsp;/&nbsp; METHOD</span>
+        <span class="num">§ 11 &nbsp;/&nbsp; METHOD</span>
         <h2>How this was built</h2>
       </div>
       <div class="two-col">
@@ -985,6 +1179,221 @@
     });
   }
 
+  /* ---------- shared: universe-shaped marker ---------- */
+  var SHAPE = { MCU: "circle", DCEU: "square", DCU: "triangle", Elseworlds: "diamond" };
+  function uniMark(cx, cy, u, i, r) {
+    r = r || 6;
+    var c = "var(" + COLORVAR[u] + ")", s = SHAPE[u];
+    var a = ' fill="' + c + '" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + i + '"';
+    if (s === "square") return '<rect x="' + (cx - r) + '" y="' + (cy - r) + '" width="' + (2 * r) + '" height="' + (2 * r) + '" rx="1.5"' + a + "/>";
+    if (s === "triangle") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + (cy + r) + "L" + (cx - r - 1) + " " + (cy + r) + 'Z"' + a + "/>";
+    if (s === "diamond") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + cy + "L" + cx + " " + (cy + r + 1) + "L" + (cx - r - 1) + " " + cy + 'Z"' + a + "/>";
+    return '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + a + "/>";
+  }
+
+  /* ---------- §05 budget arms race ---------- */
+  function renderBudget() {
+    var W = 1000, H = 420, m = { t: 16, r: 18, b: 34, l: 54 };
+    var af = activeFilms();
+    var years = [];
+    for (var y = 2008; y <= 2026; y++) years.push(y);
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var perYear = years.map(function (yr) {
+      var b = af.filter(function (f) { return new Date(f.date).getFullYear() === yr && val(f, "budget"); }).map(function (f) { return val(f, "budget"); });
+      return { yr: yr, n: b.length, med: b.length ? median(b) : null, max: b.length ? Math.max.apply(null, b) : null };
+    });
+    var allB = af.map(function (f) { return val(f, "budget"); }).filter(Boolean);
+    var max = niceMax(Math.max.apply(null, allB) || 1);
+    var xS = function (yr) { return m.l + ((yr - 2008) / 18) * iw; };
+    var yS = function (v) { return m.t + ih - (v / max) * ih; };
+    var g = "";
+    axisTicks(max).forEach(function (t) {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+    });
+    var dots = af.filter(function (f) { return val(f, "budget"); }).map(function (f) {
+      return '<circle cx="' + xS(new Date(f.date).getFullYear()) + '" cy="' + yS(val(f, "budget")) + '" r="3" fill="var(--ink-muted)" fill-opacity="0.32" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
+    }).join("");
+    var pts = perYear.filter(function (p) { return p.med != null; });
+    var path = pts.map(function (p, i) { return (i ? "L" : "M") + xS(p.yr) + " " + yS(p.med); }).join(" ");
+    var ends = pts.map(function (p) {
+      return '<circle cx="' + xS(p.yr) + '" cy="' + yS(p.med) + '" r="3.5" fill="var(--dceu)" stroke="var(--surface)" stroke-width="1.5" class="budDot" data-yr="' + p.yr + '" data-med="' + p.med + '" data-n="' + p.n + '"/>';
+    }).join("");
+    var xlab = "";
+    for (var yy = 2008; yy <= 2026; yy += 2) xlab += '<text x="' + xS(yy) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + yy + "</text>";
+    var last = pts[pts.length - 1];
+    document.getElementById("chart-budget").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Median production budget by year">' +
+      '<g class="grid">' + g + xlab + "</g>" + dots +
+      '<path d="' + path + '" fill="none" stroke="var(--dceu)" stroke-width="2" stroke-linejoin="round"/>' + ends +
+      (last ? '<text x="' + (xS(last.yr) - 6) + '" y="' + (yS(last.med) - 10) + '" text-anchor="end" class="lbl lbl-strong" font-size="11">median ' + usd(last.med) + "</text>" : "") +
+      "</svg>";
+    var svg = document.querySelector("#chart-budget svg");
+    svg.querySelectorAll(".budDot").forEach(function (el) {
+      el.addEventListener("mousemove", function (e) {
+        showTip('<div class="tt">' + el.getAttribute("data-yr") + '</div><div class="tr"><span>Median budget</span><b>' + usd(+el.getAttribute("data-med")) + '</b></div><div class="tr"><span>Films</span><b>' + el.getAttribute("data-n") + "</b></div>", e.clientX, e.clientY);
+      });
+      el.addEventListener("mouseleave", hideTip);
+    });
+    wireDots(svg);
+    document.getElementById("leg-budget").innerHTML = '<span><i style="--c:var(--dceu)"></i>Median budget' + (STATE.money === "real" ? " (2025 $)" : "") + '</span><span style="color:var(--ink-muted)">faint dot = one film</span>';
+    fillTable("table-budget", perYear.filter(function (p) { return p.n; }).map(function (p) {
+      return [String(p.yr), String(p.n), usd(p.med), usd(p.max)];
+    }), ["Year", "Films", "Median budget", "Biggest"]);
+  }
+
+  /* ---------- §06 profitability (diverging) ---------- */
+  function profitOf(f) { return val(f, "ww") - val(f, "budget") * 2.5; }
+  function renderProfit() {
+    var af = activeFilms().slice().sort(function (a, b) { return profitOf(b) - profitOf(a); });
+    var W = 1000, rowH = 17, m = { t: 22, r: 86, b: 6, l: 210 };
+    var H = m.t + m.b + rowH * af.length;
+    var maxPos = Math.max.apply(null, af.map(profitOf).concat([1]));
+    var maxNeg = Math.abs(Math.min.apply(null, af.map(profitOf).concat([-1])));
+    var iw = W - m.l - m.r;
+    var scale = iw / (maxPos + maxNeg);
+    var x0 = m.l + maxNeg * scale;
+    var head = "";
+    [-maxNeg, -maxNeg / 2, 0, maxPos / 3, (2 * maxPos) / 3, maxPos].forEach(function (v) {
+      var x = x0 + v * scale;
+      head += '<line x1="' + x + '" x2="' + x + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
+      head += '<text x="' + x + '" y="14" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + (v === 0 ? "break-even" : (v > 0 ? "+" : "−") + usd(Math.abs(v)).replace("$", "$")) + "</text>";
+    });
+    var rows = af.map(function (f) {
+      var p = profitOf(f), i = af.indexOf(f), yy = m.t + i * rowH;
+      var c = p >= 0 ? "var(--pos)" : "var(--neg)";
+      var w = Math.abs(p) * scale;
+      var bx = p >= 0 ? x0 : x0 - w;
+      return '<g class="profRow" data-i="' + FILMS.indexOf(f) + '">' +
+        '<rect x="0" y="' + yy + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+        '<rect x="' + (m.l - 12) + '" y="' + (yy + rowH / 2 - 4) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
+        '<text x="' + (m.l - 26) + '" y="' + (yy + rowH / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
+        '<rect x="' + bx + '" y="' + (yy + 3) + '" width="' + Math.max(1, w) + '" height="' + (rowH - 6) + '" rx="1.5" fill="' + c + '"/>' +
+        '<text x="' + (p >= 0 ? bx + w + 6 : bx - 6) + '" y="' + (yy + rowH / 2 + 4) + '" text-anchor="' + (p >= 0 ? "start" : "end") + '" font-family="IBM Plex Mono" font-size="10" fill="' + c + '">' + (p >= 0 ? "✓ +" : "✗ −") + usd(Math.abs(p)).slice(1) + "</text>" +
+        "</g>";
+    }).join("");
+    document.getElementById("chart-profit").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Profit or loss versus break-even, per film">' +
+      head + rows +
+      '<line x1="' + x0 + '" x2="' + x0 + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--axis)" stroke-width="1.5"/>' +
+      "</svg>";
+    document.querySelectorAll("#chart-profit .profRow").forEach(function (el) {
+      var f = FILMS[+el.getAttribute("data-i")];
+      el.style.cursor = "pointer";
+      el.addEventListener("mousemove", function (e) {
+        var p = profitOf(f);
+        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div><div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div><div class="tr"><span>Break-even (2.5&times;)</span><b>' + usd(val(f, "budget") * 2.5) + '</b></div><div class="tr"><span>' + (p >= 0 ? "Profit" : "Loss") + '</span><b>' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)).slice(1) + "</b></div>", e.clientX, e.clientY);
+      });
+      el.addEventListener("mouseleave", hideTip);
+    });
+    var np = af.filter(function (f) { return profitOf(f) < 0; }).length;
+    document.getElementById("leg-profit").innerHTML = '<span><i style="--c:var(--pos)"></i>Cleared break-even</span><span><i style="--c:var(--neg)"></i>Fell short (' + np + ')</span><span style="color:var(--ink-muted)">break-even = 2.5&times; budget</span>';
+    fillTable("table-profit", af.map(function (f) {
+      var p = profitOf(f);
+      return [f.t + (f.final ? "" : " ◉"), f.u, usd(val(f, "ww")), usd(val(f, "budget")), usd(val(f, "budget") * 2.5), (p >= 0 ? "+" : "−") + usd(Math.abs(p)).slice(1)];
+    }), ["Film", "Universe", "Worldwide", "Budget", "Break-even", "Profit / loss"]);
+  }
+
+  /* ---------- §07 legs (dumbbell) ---------- */
+  function renderLegs() {
+    var af = activeFilms().slice().filter(function (f) { return f.open && f.mult != null; }).sort(function (a, b) { return b.mult - a.mult; });
+    var W = 1000, rowH = 16, m = { t: 20, r: 66, b: 8, l: 210 };
+    var H = m.t + m.b + rowH * af.length;
+    var max = niceMax(Math.max.apply(null, af.map(function (f) { return val(f, "d"); })) || 1);
+    var iw = W - m.l - m.r;
+    var xS = function (v) { return m.l + (v / max) * iw; };
+    var g = "";
+    axisTicks(max).forEach(function (t) {
+      g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
+      g += '<text x="' + xS(t) + '" y="14" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+    });
+    var rows = af.map(function (f, i) {
+      var yy = m.t + i * rowH + rowH / 2, c = "var(" + COLORVAR[f.u] + ")";
+      var xo = xS(f.open), xd = xS(val(f, "d"));
+      return '<g class="legRow" data-i="' + FILMS.indexOf(f) + '">' +
+        '<rect x="0" y="' + (yy - rowH / 2) + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+        '<text x="' + (m.l - 14) + '" y="' + (yy + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
+        '<line x1="' + xo + '" x2="' + xd + '" y1="' + yy + '" y2="' + yy + '" stroke="' + c + '" stroke-width="2" stroke-opacity="0.55"/>' +
+        '<circle cx="' + xo + '" cy="' + yy + '" r="3.4" fill="var(--surface)" stroke="' + c + '" stroke-width="1.6"/>' +
+        '<circle cx="' + xd + '" cy="' + yy + '" r="3.8" fill="' + c + '"/>' +
+        '<text x="' + (xd + 8) + '" y="' + (yy + 4) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + f.mult.toFixed(1) + "×</text>" +
+        "</g>";
+    }).join("");
+    document.getElementById("chart-legs").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Opening weekend to lifetime domestic, per film">' +
+      '<g class="grid">' + g + "</g>" + rows + "</svg>";
+    document.querySelectorAll("#chart-legs .legRow").forEach(function (el) {
+      var f = FILMS[+el.getAttribute("data-i")];
+      el.style.cursor = "pointer";
+      el.addEventListener("mousemove", function (e) {
+        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Opening weekend</span><b>' + usd(f.open) + '</b></div><div class="tr"><span>Lifetime domestic</span><b>' + usd(val(f, "d")) + '</b></div><div class="tr"><span>Multiplier</span><b>' + f.mult.toFixed(2) + "×</b></div>", e.clientX, e.clientY);
+      });
+      el.addEventListener("mouseleave", hideTip);
+    });
+    document.getElementById("leg-legs").innerHTML = '<span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span><span style="color:var(--ink-muted)">sorted by multiplier &mdash; bar colour = universe</span>';
+    fillTable("table-legs", af.map(function (f) {
+      return [f.t + (f.final ? "" : " ◉"), f.u, usd(f.open), usd(val(f, "d")), f.mult.toFixed(2) + "×"];
+    }), ["Film", "Universe", "Opening", "Lifetime domestic", "Multiplier"]);
+  }
+
+  /* ---------- §08 reviews vs revenue ---------- */
+  function renderReviews() {
+    var W = 1000, H = 440, m = { t: 18, r: 20, b: 40, l: 54 };
+    var af = activeFilms().filter(function (f) { return f.rt != null; });
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var max = niceMax(Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1);
+    var xS = function (v) { return m.l + (v / 100) * iw; };
+    var yS = function (v) { return m.t + ih - (v / max) * ih; };
+    var g = "";
+    [0, 25, 50, 75, 100].forEach(function (t) {
+      g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
+      g += '<text x="' + xS(t) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "%</text>";
+    });
+    axisTicks(max).forEach(function (t) {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+    });
+    var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(val(f, "ww")), f.u, FILMS.indexOf(f), 5.5); }).join("");
+    var top = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).slice(0, 4);
+    var labs = top.map(function (f) {
+      var x = xS(f.rt), right = f.rt > 66;
+      return '<text x="' + (right ? x - 10 : x + 10) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="11" style="pointer-events:none">' + esc(f.t) + "</text>";
+    }).join("");
+    document.getElementById("chart-reviews").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Rotten Tomatoes critic score versus worldwide gross"><g class="grid">' + g + "</g>" + pts + labs +
+      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="11">Rotten Tomatoes critic score</text></svg>';
+    wireDots(document.querySelector("#chart-reviews svg"));
+    legend("leg-rev", activeUnis(), false, true);
+  }
+  function renderParity() {
+    var W = 1000, H = 440, m = { t: 18, r: 20, b: 40, l: 46 };
+    var af = activeFilms().filter(function (f) { return f.rt != null && f.imdb != null; });
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var xS = function (v) { return m.l + (v / 100) * iw; };
+    var yS = function (v) { return m.t + ih - (v / 100) * ih; };
+    var g = "";
+    [0, 25, 50, 75, 100].forEach(function (t) {
+      g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
+      g += '<text x="' + xS(t) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "</text>";
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "</text>";
+    });
+    var diag = '<line x1="' + xS(0) + '" y1="' + yS(0) + '" x2="' + xS(100) + '" y2="' + yS(100) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>' +
+      '<text x="' + xS(88) + '" y="' + (yS(88) - 6) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">they agree</text>';
+    var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(f.imdb * 10), f.u, FILMS.indexOf(f), 5.5); }).join("");
+    var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, 4);
+    var labs = gap.map(function (f) {
+      var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 60;
+      return '<text x="' + (right ? x - 10 : x + 10) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="11" style="pointer-events:none">' + esc(f.t) + "</text>";
+    }).join("");
+    document.getElementById("chart-parity").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + diag + pts + labs +
+      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="11">RT critic score &nbsp;&rarr;</text>' +
+      '<text transform="translate(12,' + (m.t + ih / 2) + ') rotate(-90)" text-anchor="middle" class="lbl" font-size="11">IMDb user rating &times;10 &nbsp;&rarr;</text></svg>';
+    wireDots(document.querySelector("#chart-parity svg"));
+    legend("leg-par", activeUnis(), false, true);
+  }
+
   /* ---------- render all ---------- */
   function renderAll() {
     if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
@@ -995,6 +1404,11 @@
     renderTreemap();
     renderBeeswarm();
     renderScatter();
+    renderBudget();
+    renderProfit();
+    renderLegs();
+    renderReviews();
+    renderParity();
     renderSplit();
     renderFullTable();
   }
@@ -1051,13 +1465,25 @@
       renderSplit();
     });
   });
+  document.querySelectorAll("[data-notes]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var on = b.getAttribute("data-notes") === "on";
+      document.body.classList.toggle("notes-on", on);
+      document.querySelectorAll("[data-notes]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      try { localStorage.setItem("capeindex-notes", on ? "on" : "off"); } catch (e) {}
+    });
+  });
 
-  /* restore theme choice */
+  /* restore saved preferences */
   try {
     var saved = localStorage.getItem("capeindex-theme");
     if (saved) {
       document.documentElement.setAttribute("data-theme", saved);
       document.querySelectorAll("[data-theme-set]").forEach(function (x) { x.setAttribute("aria-pressed", x.getAttribute("data-theme-set") === saved ? "true" : "false"); });
+    }
+    if (localStorage.getItem("capeindex-notes") === "on") {
+      document.body.classList.add("notes-on");
+      document.querySelectorAll("[data-notes]").forEach(function (x) { x.setAttribute("aria-pressed", x.getAttribute("data-notes") === "on" ? "true" : "false"); });
     }
   } catch (e) {}
 
