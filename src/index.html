@@ -116,7 +116,7 @@
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
   }
-  .controls-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding: 12px 0; }
+  .controls-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding-top: 12px; padding-bottom: 12px; }
   .cgroup { display: flex; align-items: center; gap: 8px; }
   .clabel { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); font-family: "IBM Plex Mono", monospace; }
   .pill {
@@ -213,9 +213,9 @@
 
 <header class="masthead">
   <div class="wrap">
-    <p class="eyebrow">An index of superhero box office &nbsp;·&nbsp; 2008&ndash;2026</p>
+    <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2008&ndash;2026</p>
     <h1>The Cape Index</h1>
-    <p class="dek">Eighteen years of Marvel and DC at the global box office &mdash; every gross re-verified against Box&nbsp;Office&nbsp;Mojo, and adjustable, on request, into 2025 dollars.</p>
+    <p class="dek">Every Marvel and DC film since 2008, and what it made. Worldwide grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time. Any number on the page switches to 2025 dollars.</p>
     <div class="thesis" id="thesis"></div>
     <p class="smallprint" id="smallprint"></p>
   </div>
@@ -252,7 +252,7 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 01 &nbsp;/&nbsp; MARVEL v DC</span>
-        <h2>Marvel built a bank. DC built a filmography.</h2>
+        <h2>Marvel has out-grossed every DC film combined, close to four to one</h2>
         <p class="dek" id="d-scorecard"></p>
       </div>
       <div class="scorecards" id="scorecards"></div>
@@ -260,7 +260,7 @@
         <div class="card-head">
           <div>
             <div class="card-title">Worldwide gross by release year</div>
-            <div class="card-note">Stacked by universe. 2026 is a partial year.</div>
+            <div class="card-note">Stacked by universe. 2019 peaked at $6.5B; 2020 is the shutdown. 2026 is still partial.</div>
           </div>
           <div class="legend" id="leg-year"></div>
         </div>
@@ -271,8 +271,8 @@
       <div class="card">
         <div class="card-head">
           <div>
-            <div class="card-title">Distribution of worldwide grosses</div>
-            <div class="card-note">Box = 25th&ndash;75th percentile; line = median; whiskers = full range; dots = each film.</div>
+            <div class="card-title">Spread of worldwide grosses, by universe</div>
+            <div class="card-note">Box spans the 25th&ndash;75th percentile; the line is the median; dots are individual films. Marvel&rsquo;s median film out-grosses roughly three of every four DC films.</div>
           </div>
           <button class="minibtn" data-outlier aria-pressed="false">Hide &ge; $1B</button>
         </div>
@@ -285,8 +285,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 02 &nbsp;/&nbsp; TREEMAP</span>
-        <h2>Every film, sized by what it made</h2>
-        <p class="dek">One rectangle per film, area proportional to worldwide gross, coloured by universe. The eye goes where the money is.</p>
+        <h2>Only three films have passed $2 billion, and all three are Marvel</h2>
+        <p class="dek">Every film is a rectangle, area set by worldwide gross. Endgame leads at $2.80B, then Brand New Day at $2.34B and Infinity War at $2.05B. The largest DC film is Aquaman, at $1.15B.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -301,9 +301,9 @@
   <section class="view" id="v-beeswarm">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 03 &nbsp;/&nbsp; THE RELEASE STREAM</span>
-        <h2>Cadence and scale, film by film</h2>
-        <p class="dek">Each film placed on its release date, sized by worldwide gross. Marvel&rsquo;s release rhythm &mdash; and the size of its hits &mdash; is the story of the 2010s.</p>
+        <span class="num">§ 03 &nbsp;/&nbsp; BY RELEASE DATE</span>
+        <h2>Marvel put out more films, and bigger ones, through the 2010s</h2>
+        <p class="dek">Each film sits on its release date, sized by worldwide gross. The densest, largest run is 2018&ndash;19 &mdash; Infinity War, Captain Marvel, Endgame, Aquaman. The year after is almost blank.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -318,8 +318,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 04 &nbsp;/&nbsp; SCATTER</span>
-        <h2>The billion-dollar line</h2>
-        <p class="dek">Worldwide gross against release date. Reference lines mark $1B and $2B &mdash; the club Marvel entered eight times and DC once.</p>
+        <h2>Marvel has cleared $1 billion twelve times. DC has done it twice</h2>
+        <p class="dek">Worldwide gross by release date. The only DC films above the billion-dollar line are Aquaman (2018) and Joker (2019); everything else up there is Marvel.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -335,9 +335,9 @@
   <section class="view" id="v-split">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 05 &nbsp;/&nbsp; DOMESTIC v INTERNATIONAL</span>
-        <h2>Where the tickets sold</h2>
-        <p class="dek">Every film&rsquo;s gross split into domestic and overseas. Sort by total, or by how much of the take came from outside North America.</p>
+        <span class="num">§ 05 &nbsp;/&nbsp; DOMESTIC v OVERSEAS</span>
+        <h2>Most of this money comes from outside North America</h2>
+        <p class="dek">Each film split into its domestic and overseas gross. The overseas share runs from 43% (Superman, Supergirl) to 72% (Wonder Woman 1984). Sort by it to see which films travelled.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -356,8 +356,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 06 &nbsp;/&nbsp; THE LEDGER</span>
-        <h2>All of it, sortable</h2>
-        <p class="dek">The full table behind every chart above. Click a column to sort. &ldquo;Mult.&rdquo; is domestic total &divide; opening weekend &mdash; a film&rsquo;s legs. &ldquo;ROI&rdquo; is worldwide gross &divide; production budget.</p>
+        <h2>The whole thing, sortable</h2>
+        <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend &mdash; how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
       </div>
       <div class="card" style="padding:16px">
         <div id="table-full"></div>
@@ -374,7 +374,7 @@
       <div class="two-col">
         <div class="card">
           <div class="card-title">Sources</div>
-          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and international grosses plus opening weekends come from <a href="https://www.boxofficemojo.com/">Box Office Mojo</a> title pages, checked film by film. Critic and audience scores are from OMDb (Rotten Tomatoes critic, Metacritic, IMDb). Production budgets are Box Office Mojo where published, otherwise a widely-cited figure &mdash; marked <span class="mono">est.</span> in the ledger &mdash; and always the <em>production</em> budget, not a marketing-inclusive number.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb &mdash; Rotten Tomatoes (critics), Metacritic, IMDb. Budgets are Box Office Mojo where it lists one, otherwise a widely-cited figure marked <span class="mono">est.</span> Always the production budget, never a number with marketing folded in.</p>
         </div>
         <div class="card">
           <div class="card-title">Definitions</div>
@@ -502,16 +502,16 @@
     var m = sum(mcu, "ww"), d = sum(dc, "ww");
     var el = document.getElementById("thesis");
     el.innerHTML =
-      block("Marvel Studios", usd(m), mcu.length + " films · " + STATE.money) +
-      block("All DC on film", usd(d), dc.length + " films · DCEU + DCU + Elseworlds") +
-      block("Marvel’s edge", (m / d).toFixed(2) + "×", "more worldwide gross than DC");
+      block("Marvel Studios", usd(m), mcu.length + " films" + (STATE.money === "real" ? " · 2025 $" : "")) +
+      block("DCEU + DCU + Elseworlds", usd(d), dc.length + " films") +
+      block("The gap", (m / d).toFixed(2) + "×", "Marvel to DC, worldwide");
     function block(k, v, sub) {
-      return '<div><div class="k">' + k + '</div><div class="v" style="font-family:\'IBM Plex Sans Condensed\'">' + v + '</div><div class="sub">' + sub + "</div></div>";
+      return '<div><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="sub">' + sub + "</div></div>";
     }
     document.getElementById("smallprint").innerHTML =
-      FILMS.length + " films with a verified worldwide gross. <b>Avengers: Doomsday</b> and <b>Clayface</b> are omitted &mdash; not yet in release. Two films (<b>Supergirl</b>, <b>Spider-Man: Brand New Day</b>) are still in theatres. Source: Box Office Mojo, retrieved " + new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) + ".";
+      FILMS.length + " films with a worldwide gross to verify. <b>Avengers: Doomsday</b> and <b>Clayface</b> aren&rsquo;t out yet, so there&rsquo;s nothing to check. <b>Supergirl</b> and <b>Spider-Man: Brand New Day</b> are still in theatres. Box Office Mojo, read " + new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) + ".";
     document.getElementById("method-held").innerHTML =
-      "Held out until release: " + DB.meta.held_out.map(function (h) { return "<b>" + esc(h.t) + "</b> (" + h.date + ", " + h.u + ")"; }).join(" · ") + ".";
+      "Not in the data until they open: " + DB.meta.held_out.map(function (h) { return "<b>" + esc(h.t) + "</b> (" + h.date + ", " + h.u + ")"; }).join(" · ") + ".";
   }
 
   /* ---------- §01 scorecards ---------- */
@@ -539,15 +539,17 @@
     });
     function rowline(k, v) { return '<div class="row"><span>' + k + "</span><span>" + v + "</span></div>"; }
     var mcu = FILMS.filter(function (f) { return f.u === "MCU"; }), dc = FILMS.filter(function (f) { return f.u !== "MCU"; });
-    var am = mcu.reduce(function (a, f) { return a + val(f, "ww"); }, 0) / mcu.length;
-    var ad = dc.reduce(function (a, f) { return a + val(f, "ww"); }, 0) / dc.length;
+    var tm = mcu.reduce(function (a, f) { return a + val(f, "ww"); }, 0), td = dc.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
+    var am = tm / mcu.length, ad = td / dc.length;
+    var bm = mcu.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
+    var bd = dc.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     document.getElementById("d-scorecard").innerHTML =
-      "Across " + FILMS.length + " films, the average Marvel Studios release earns <b>" + usd(am) + "</b> worldwide against <b>" + usd(ad) + "</b> for the average DC film. The gap is widening: DC&rsquo;s last profitable original was years ago, while Marvel keeps posting billion-dollar tentpoles.";
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " &mdash; the DCEU, James Gunn&rsquo;s DCU, and the two Joker pictures. The average Marvel film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel films have passed $1B. " + bd + " DC films have.";
   }
 
   /* ---------- §01 stacked columns by year ---------- */
   function renderYear() {
-    var W = 1000, H = 430, m = { t: 14, r: 12, b: 34, l: 60 };
+    var W = 1000, H = 430, m = { t: 14, r: 12, b: 34, l: 46 };
     var years = [];
     for (var y = 2008; y <= 2026; y++) years.push(y);
     var af = activeFilms();
@@ -778,7 +780,7 @@
 
   /* ---------- §04 scatter ---------- */
   function renderScatter() {
-    var W = 1000, H = 470, m = { t: 20, r: 24, b: 34, l: 60 };
+    var W = 1000, H = 470, m = { t: 20, r: 24, b: 34, l: 46 };
     var af = activeFilms();
     var t0 = dateNum("2008-01-01"), t1 = dateNum("2026-12-31");
     var maxWW = niceMax(Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1);
@@ -942,7 +944,7 @@
     host.innerHTML = keys.map(function (k) {
       var mk = withShape ? '<span style="color:var(' + COLORVAR[k] + ');font-size:13px">' + shape[k] + "</span>" : '<i style="--c:var(' + COLORVAR[k] + ')"></i>';
       return "<span>" + mk + " " + (UNI.find(function (u) { return u.k === k; }).full) + "</span>";
-    }).join("") + (withSize ? '<span style="color:var(--ink-muted)">○ area/size = worldwide gross</span>' : "");
+    }).join("") + (withSize ? '<span style="color:var(--ink-muted)">circle size = worldwide gross</span>' : "");
   }
   function fillTable(id, rows, headers) {
     var host = document.getElementById(id);
