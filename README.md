@@ -18,12 +18,13 @@ Canonical dataset: **`data/films.json`** (version-controlled, hand-verified). Ev
 
 | Script | Does |
 |--------|------|
-| `npm run parse:baseline` | Parse `data/sheet-baseline.csv` (frozen copy of the legacy Tableau sheet) → skeleton `data/films.json`. |
-| `npm run scrape:bom` | Politely walk Box Office Mojo (cached to `data/raw/`, ~5–8 s between hits, resumable) for every film + the post-*Brave New World* candidates in `data/additions.json` → `data/scraped.json`. Pulls domestic / international / worldwide / domestic opening / budget / runtime / MPAA / distributor / genres. |
-| `npm run reconcile` | Diff `data/scraped.json` against the legacy sheet → `RECONCILIATION.md` (old → new → delta) for sign-off before promotion into `films.json`. |
-| `npm run build` | Render `src/` → `dist/index.html`, one self-contained file. |
+| `npm run scrape:bom` | Politely walk Box Office Mojo (cached to `data/raw/`, ~5–8 s between hits, resumable) for every film + the post-legacy candidates in `data/additions.json` → `data/scraped.json`. |
+| `npm run validate` | Cross-check every resolved BOM page's `<h1>` title/year against the film we meant to look up. |
+| `OMDB_KEY=… npm run data` | Full rebuild: `parse-baseline` → `promote` (BOM numbers → `data/films.json`) → `enrich-omdb` (RT/Metacritic/IMDb) → `enrich-wikipedia` (budgets + `data/budget-overrides.json`) → `derive` (multiplier, ROI, break-even) → `reconcile` (`RECONCILIATION.md`). |
+| `npm run build` | Inline `data/web.json` into `src/index.html` → `dist/index.html`, one self-contained file. |
+| `node scripts/serve.mjs` | Static-serve `dist/` on :4599 for local preview. |
 
-Second verification pass (separate sources, not on the BOM title page): **widest-release theater count**, **Rotten Tomatoes critic + audience**, **Metacritic**, **IMDb**.
+Still open: **widest-release theater counts** and **RT audience scores** (a second pass — not on the BOM title page or in OMDb).
 
 ## The Tableau suite (rebuild spec)
 
@@ -42,10 +43,11 @@ Design: **dark mode is the primary design target, always.** Marvel = warm red, D
 ## Roadmap
 
 - [x] Scaffold repo, freeze legacy sheet, define schema
-- [x] **Phase 1 — Verify**: BOM scrape (59 films) → `RECONCILIATION.md` → **awaiting sign-off** → promoted to `films.json` (57 verified)
-- [x] **Phase 2 — Extend**: added Joker ×2 (Elseworlds), Thunderbolts\*, F4: First Steps, Spider-Man: Brand New Day (MCU), Superman, Supergirl (DCU). Doomsday + Clayface held out (unreleased).
-- [ ] **Phase 1b — enrich**: RT / Metacritic / IMDb via OMDb (`enrich-omdb.mjs`, **key rejected — needs a working one**); backfill budgets for 5 recent titles; widest-release theater counts.
-- [ ] **Phase 3 — Rebuild**: the seven views as one dark-first HTML file, with a nominal ⇄ 2025-dollars toggle.
+- [x] **Phase 1 — Verify**: BOM scrape → `RECONCILIATION.md` → **signed off** → `films.json` (57 verified)
+- [x] **Phase 2 — Extend**: Joker ×2 (Elseworlds), Thunderbolts\*, F4: First Steps, Spider-Man: Brand New Day (MCU), Superman, Supergirl (DCU). Doomsday + Clayface held out.
+- [x] **Phase 1b — Enrich**: RT / Metacritic / IMDb (OMDb), production budgets (Wikipedia + overrides), derived metrics.
+- [x] **Phase 3 — Rebuild**: *The Cape Index* — seven dark-first views in one HTML file, nominal ⇄ 2025-$ toggle.
+- [ ] **Phase 3b — polish**: whatever Bill flags on the first build; RT audience + theater counts if wanted.
 - [ ] **Phase 4 — Deploy**: domain + host.
 
 ## Decisions (locked 2026-09-05)
