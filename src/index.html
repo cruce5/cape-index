@@ -1,0 +1,1065 @@
+<title>The Cape Index</title>
+<meta name="description" content="Eighteen years of Marvel and DC at the global box office, verified against Box Office Mojo." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" />
+
+<style>
+  /* ============ TOKENS — dark-first ============ */
+  :root {
+    color-scheme: dark;
+    --page: #0d0f14;
+    --surface: #161a23;
+    --surface-2: #1e232e;
+    --ink: #f2f3f7;
+    --ink-2: #a6acbb;
+    --ink-muted: #6f7688;
+    --grid: #242a37;
+    --axis: #343c4c;
+    --border: rgba(255, 255, 255, 0.11);
+    --border-strong: rgba(255, 255, 255, 0.2);
+    --mcu: #e5484d;
+    --dceu: #3987e5;
+    --dcu: #1f9d8d;
+    --else: #9d7ce0;
+    --pos: #3fb950;
+    --neg: #f0883e;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      color-scheme: light;
+      --page: #f6f7f9;
+      --surface: #ffffff;
+      --surface-2: #eef0f3;
+      --ink: #13151b;
+      --ink-2: #4b515e;
+      --ink-muted: #7b8290;
+      --grid: #e7e8ec;
+      --axis: #ccd0d8;
+      --border: rgba(13, 15, 20, 0.12);
+      --border-strong: rgba(13, 15, 20, 0.24);
+      --mcu: #d21f3c;
+      --dceu: #2a78d6;
+      --dcu: #157f73;
+      --else: #7c4db8;
+      --pos: #1a7f37;
+      --neg: #bc4c00;
+      --shadow: 0 1px 2px rgba(13, 15, 20, 0.06), 0 10px 30px -16px rgba(13, 15, 20, 0.18);
+    }
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --page: #f6f7f9;
+    --surface: #ffffff;
+    --surface-2: #eef0f3;
+    --ink: #13151b;
+    --ink-2: #4b515e;
+    --ink-muted: #7b8290;
+    --grid: #e7e8ec;
+    --axis: #ccd0d8;
+    --border: rgba(13, 15, 20, 0.12);
+    --border-strong: rgba(13, 15, 20, 0.24);
+    --mcu: #d21f3c;
+    --dceu: #2a78d6;
+    --dcu: #157f73;
+    --else: #7c4db8;
+    --pos: #1a7f37;
+    --neg: #bc4c00;
+    --shadow: 0 1px 2px rgba(13, 15, 20, 0.06), 0 10px 30px -16px rgba(13, 15, 20, 0.18);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  @media (max-width: 720px) { .wrap { padding: 0 18px; } }
+
+  h1, h2, h3 { font-family: "IBM Plex Sans Condensed", "IBM Plex Sans", sans-serif; font-weight: 700; margin: 0; line-height: 1.08; text-wrap: balance; letter-spacing: -0.01em; }
+  a { color: inherit; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* ============ MASTHEAD ============ */
+  header.masthead { border-bottom: 1px solid var(--border); padding: 68px 0 46px; }
+  .masthead h1 { font-size: clamp(48px, 9vw, 104px); letter-spacing: -0.028em; }
+  .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 20px 0 0; }
+  .thesis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 40px; }
+  .thesis > div { background: var(--surface); padding: 20px 22px; }
+  .thesis .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+  .thesis .v { font-size: clamp(28px, 4.6vw, 44px); font-weight: 700; font-family: "IBM Plex Sans Condensed", sans-serif; margin-top: 6px; }
+  .thesis .sub { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
+  @media (max-width: 640px) { .thesis { grid-template-columns: 1fr; } }
+  .smallprint { margin-top: 26px; font-size: 13px; color: var(--ink-muted); max-width: 70ch; }
+  .smallprint a { text-decoration-color: var(--border-strong); text-underline-offset: 2px; }
+
+  /* ============ STICKY CONTROLS ============ */
+  .controls {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--page) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .controls-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding: 12px 0; }
+  .cgroup { display: flex; align-items: center; gap: 8px; }
+  .clabel { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); font-family: "IBM Plex Mono", monospace; }
+  .pill {
+    appearance: none; border: 1px solid var(--border-strong); background: transparent; color: var(--ink-2);
+    font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 7px; transition: background 120ms, color 120ms, border-color 120ms;
+  }
+  .pill:hover { color: var(--ink); }
+  .pill .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); flex: none; }
+  .pill[aria-pressed="true"] { color: var(--ink); border-color: var(--c, var(--ink)); background: color-mix(in srgb, var(--c, var(--ink)) 15%, transparent); }
+  .pill[aria-pressed="false"] .dot { opacity: 0.35; }
+  .seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 999px; overflow: hidden; }
+  .seg button { appearance: none; border: 0; background: transparent; color: var(--ink-2); font: inherit; font-size: 13px; padding: 5px 13px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--page); }
+  button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--dceu); outline-offset: 2px; border-radius: 4px; }
+
+  /* ============ SECTIONS ============ */
+  section.view { padding: 60px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 64px; }
+  section.view:last-of-type { border-bottom: 0; }
+  .view-head { margin-bottom: 30px; }
+  .view-head .num { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-muted); letter-spacing: 0.14em; }
+  .view-head h2 { font-size: clamp(28px, 4.4vw, 40px); margin-top: 8px; }
+  .view-head .dek { color: var(--ink-2); max-width: 68ch; margin-top: 10px; font-size: 15.5px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; box-shadow: var(--shadow); }
+  .card + .card { margin-top: 20px; }
+  .card-title { font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 700; font-size: 17px; }
+  .card-note { font-size: 13px; color: var(--ink-muted); margin-top: 3px; }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+
+  /* stat grid */
+  .scorecards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 860px) { .scorecards { grid-template-columns: repeat(2, 1fr); } }
+  .sc { background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--c); border-radius: 12px; padding: 16px 16px 18px; }
+  .sc h3 { font-size: 14px; font-family: "IBM Plex Sans", sans-serif; font-weight: 600; color: var(--ink); }
+  .sc .rows { margin-top: 12px; display: grid; gap: 7px; }
+  .sc .row { display: flex; justify-content: space-between; font-size: 13px; }
+  .sc .row span:first-child { color: var(--ink-muted); }
+  .sc .row span:last-child { font-family: "IBM Plex Mono", monospace; font-weight: 500; }
+  .sc .big { font-size: 26px; font-weight: 700; font-family: "IBM Plex Sans Condensed", sans-serif; margin-top: 4px; }
+
+  /* legend */
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--ink-2); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 11px; height: 11px; border-radius: 3px; background: var(--c); display: inline-block; }
+  .legend i.hollow { background: color-mix(in srgb, var(--c) 34%, transparent); border: 1px solid var(--c); }
+
+  /* controls inside cards */
+  .minibtn { appearance: none; border: 1px solid var(--border-strong); background: transparent; color: var(--ink-2); font: inherit; font-size: 12px; padding: 4px 10px; border-radius: 7px; cursor: pointer; }
+  .minibtn:hover { color: var(--ink); }
+  .minibtn[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+
+  svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .ax text { fill: var(--ink-muted); font-family: "IBM Plex Mono", monospace; font-size: 11px; }
+  .ax line, .ax path { stroke: var(--axis); }
+  .grid line { stroke: var(--grid); }
+  .lbl { fill: var(--ink-2); font-family: "IBM Plex Sans", sans-serif; font-size: 11px; }
+  .lbl-strong { fill: var(--ink); font-weight: 600; }
+
+  /* tooltip */
+  .tip {
+    position: fixed; z-index: 100; pointer-events: none; opacity: 0; transition: opacity 90ms;
+    background: var(--surface-2); border: 1px solid var(--border-strong); border-radius: 9px;
+    padding: 9px 11px; font-size: 12.5px; box-shadow: var(--shadow); max-width: 260px;
+  }
+  .tip .tt { font-weight: 600; font-family: "IBM Plex Sans Condensed", sans-serif; font-size: 13.5px; margin-bottom: 3px; }
+  .tip .tr { display: flex; justify-content: space-between; gap: 18px; color: var(--ink-2); }
+  .tip .tr b { color: var(--ink); font-family: "IBM Plex Mono", monospace; font-weight: 500; }
+  .tip .flag { color: var(--neg); font-size: 11px; margin-top: 4px; }
+
+  /* data tables */
+  .tablewrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; }
+  table.data { border-collapse: collapse; width: 100%; font-size: 13px; }
+  table.data th, table.data td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
+  table.data th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; user-select: none; }
+  table.data th:first-child, table.data td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
+  table.data th:first-child { background: var(--surface-2); z-index: 1; }
+  table.data td { font-family: "IBM Plex Mono", monospace; }
+  table.data td.name { font-family: "IBM Plex Sans", sans-serif; }
+  table.data tbody tr:hover td { background: var(--surface-2); }
+  table.data .uchip { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 7px; vertical-align: middle; }
+  .th-sorted { color: var(--ink); }
+  .th-sorted::after { content: " " attr(data-arrow); }
+
+  .inrelease { color: var(--neg); font-weight: 600; }
+  footer.foot { padding: 44px 0 72px; color: var(--ink-muted); font-size: 13px; }
+  footer.foot a { text-underline-offset: 2px; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+</style>
+
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">An index of superhero box office &nbsp;·&nbsp; 2008&ndash;2026</p>
+    <h1>The Cape Index</h1>
+    <p class="dek">Eighteen years of Marvel and DC at the global box office &mdash; every gross re-verified against Box&nbsp;Office&nbsp;Mojo, and adjustable, on request, into 2025 dollars.</p>
+    <div class="thesis" id="thesis"></div>
+    <p class="smallprint" id="smallprint"></p>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Chart controls">
+  <div class="wrap controls-inner">
+    <div class="cgroup" role="group" aria-label="Filter by universe">
+      <span class="clabel">Universe</span>
+      <button class="pill" data-uni="MCU" style="--c:var(--mcu)" aria-pressed="true"><span class="dot"></span>MCU</button>
+      <button class="pill" data-uni="DCEU" style="--c:var(--dceu)" aria-pressed="true"><span class="dot"></span>DCEU</button>
+      <button class="pill" data-uni="DCU" style="--c:var(--dcu)" aria-pressed="true"><span class="dot"></span>DCU</button>
+      <button class="pill" data-uni="Elseworlds" style="--c:var(--else)" aria-pressed="true"><span class="dot"></span>Elseworlds</button>
+    </div>
+    <div class="cgroup" role="group" aria-label="Dollar basis">
+      <span class="clabel">Dollars</span>
+      <div class="seg">
+        <button data-money="nominal" aria-pressed="true">Nominal</button>
+        <button data-money="real" aria-pressed="false">2025&nbsp;$</button>
+      </div>
+    </div>
+    <div class="cgroup">
+      <span class="clabel">Theme</span>
+      <div class="seg">
+        <button data-theme-set="dark" aria-pressed="false">Dark</button>
+        <button data-theme-set="light" aria-pressed="false">Light</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="view" id="v-scorecard">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 01 &nbsp;/&nbsp; MARVEL v DC</span>
+        <h2>Marvel built a bank. DC built a filmography.</h2>
+        <p class="dek" id="d-scorecard"></p>
+      </div>
+      <div class="scorecards" id="scorecards"></div>
+      <div class="card" style="margin-top:20px">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Worldwide gross by release year</div>
+            <div class="card-note">Stacked by universe. 2026 is a partial year.</div>
+          </div>
+          <div class="legend" id="leg-year"></div>
+        </div>
+        <div id="chart-year"></div>
+        <button class="minibtn" data-table="year" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-year" hidden></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Distribution of worldwide grosses</div>
+            <div class="card-note">Box = 25th&ndash;75th percentile; line = median; whiskers = full range; dots = each film.</div>
+          </div>
+          <button class="minibtn" data-outlier aria-pressed="false">Hide &ge; $1B</button>
+        </div>
+        <div id="chart-box"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-treemap">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 02 &nbsp;/&nbsp; TREEMAP</span>
+        <h2>Every film, sized by what it made</h2>
+        <p class="dek">One rectangle per film, area proportional to worldwide gross, coloured by universe. The eye goes where the money is.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-tm"></div>
+          <span class="card-note" id="tm-count"></span>
+        </div>
+        <div id="chart-treemap"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-beeswarm">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 03 &nbsp;/&nbsp; THE RELEASE STREAM</span>
+        <h2>Cadence and scale, film by film</h2>
+        <p class="dek">Each film placed on its release date, sized by worldwide gross. Marvel&rsquo;s release rhythm &mdash; and the size of its hits &mdash; is the story of the 2010s.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-bee"></div>
+        </div>
+        <div id="chart-beeswarm"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-scatter">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 04 &nbsp;/&nbsp; SCATTER</span>
+        <h2>The billion-dollar line</h2>
+        <p class="dek">Worldwide gross against release date. Reference lines mark $1B and $2B &mdash; the club Marvel entered eight times and DC once.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-sc"></div>
+          <button class="minibtn" data-table="scatter" aria-pressed="false">Show data</button>
+        </div>
+        <div id="chart-scatter"></div>
+        <div id="table-scatter" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-split">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 05 &nbsp;/&nbsp; DOMESTIC v INTERNATIONAL</span>
+        <h2>Where the tickets sold</h2>
+        <p class="dek">Every film&rsquo;s gross split into domestic and overseas. Sort by total, or by how much of the take came from outside North America.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-split"></div>
+          <div style="display:flex;gap:8px">
+            <button class="minibtn" data-sort-split="ww" aria-pressed="true">By worldwide</button>
+            <button class="minibtn" data-sort-split="intl" aria-pressed="false">By overseas share</button>
+          </div>
+        </div>
+        <div id="chart-split"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-data">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 06 &nbsp;/&nbsp; THE LEDGER</span>
+        <h2>All of it, sortable</h2>
+        <p class="dek">The full table behind every chart above. Click a column to sort. &ldquo;Mult.&rdquo; is domestic total &divide; opening weekend &mdash; a film&rsquo;s legs. &ldquo;ROI&rdquo; is worldwide gross &divide; production budget.</p>
+      </div>
+      <div class="card" style="padding:16px">
+        <div id="table-full"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-method">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 07 &nbsp;/&nbsp; METHOD</span>
+        <h2>How this was built</h2>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-title">Sources</div>
+          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and international grosses plus opening weekends come from <a href="https://www.boxofficemojo.com/">Box Office Mojo</a> title pages, checked film by film. Critic and audience scores are from OMDb (Rotten Tomatoes critic, Metacritic, IMDb). Production budgets are Box Office Mojo where published, otherwise a widely-cited figure &mdash; marked <span class="mono">est.</span> in the ledger &mdash; and always the <em>production</em> budget, not a marketing-inclusive number.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Definitions</div>
+          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U to 2025 dollars. <b>Break-even</b> is estimated at 2.5&times; production budget &mdash; the rough point a theatrical release clears once exhibitors take their cut. <b>Still in release</b> films (marked <span class="inrelease">in release</span>) are included with grosses as of early September 2026 and will keep climbing.</p>
+        </div>
+      </div>
+      <p class="smallprint" id="method-held"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    Rebuilt from a <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome">Tableau Public workbook</a> by Bill Yost. Data verified September 2026 against Box Office Mojo. Not affiliated with Marvel, DC, Disney or Warner Bros.
+  </div>
+</footer>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  "use strict";
+  var DB = JSON.parse(document.getElementById("data").textContent);
+  var FILMS = DB.films;
+  var UNI = [
+    { k: "MCU", label: "MCU", full: "Marvel Cinematic Universe" },
+    { k: "DCEU", label: "DCEU", full: "DC Extended Universe" },
+    { k: "DCU", label: "DCU", full: "DC Universe" },
+    { k: "Elseworlds", label: "Elseworlds", full: "DC Elseworlds" }
+  ];
+  var COLORVAR = { MCU: "--mcu", DCEU: "--dceu", DCU: "--dcu", Elseworlds: "--else" };
+  function cvar(k) { return getComputedStyle(document.body).getPropertyValue(COLORVAR[k]).trim(); }
+
+  var STATE = {
+    unis: { MCU: true, DCEU: true, DCU: true, Elseworlds: true },
+    money: "nominal",
+    outlierHide: false,
+    splitSort: "ww",
+    sort: { key: "date", dir: 1 }
+  };
+
+  /* ---------- helpers ---------- */
+  function val(f, which) {
+    // which: 'ww' | 'd' | 'i' | 'budget'
+    var real = STATE.money === "real";
+    if (which === "ww") return real ? f.rw : f.ww;
+    if (which === "d") return real ? f.rd : f.wd;
+    if (which === "i") return real ? f.ri : f.wi;
+    if (which === "budget") return real ? f.rbudget : f.budget;
+    return f[which];
+  }
+  function usd(n) {
+    if (n == null || isNaN(n)) return "—";
+    var a = Math.abs(n);
+    if (a >= 1e9) return "$" + (n / 1e9).toFixed(2) + "B";
+    if (a >= 1e6) return "$" + Math.round(n / 1e6) + "M";
+    return "$" + Math.round(n / 1e3) + "K";
+  }
+  function usdAxis(n) {
+    if (n === 0) return "$0";
+    if (Math.abs(n) >= 1e9) return "$" + (n / 1e9).toFixed(n % 1e9 === 0 ? 0 : 1) + "B";
+    return "$" + Math.round(n / 1e6) + "M";
+  }
+  function pct(n) { return (n == null ? "—" : Math.round(n) + "%"); }
+  function median(arr) {
+    if (!arr.length) return 0;
+    var s = arr.slice().sort(function (a, b) { return a - b; });
+    var m = Math.floor(s.length / 2);
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  }
+  function quantile(sorted, q) {
+    var pos = (sorted.length - 1) * q, base = Math.floor(pos), rest = pos - base;
+    return sorted[base + 1] !== undefined ? sorted[base] + rest * (sorted[base + 1] - sorted[base]) : sorted[base];
+  }
+  function activeFilms() { return FILMS.filter(function (f) { return STATE.unis[f.u]; }); }
+  function anyUni() { return Object.keys(STATE.unis).some(function (k) { return STATE.unis[k]; }); }
+  function dateNum(d) { return new Date(d + "T00:00:00").getTime(); }
+  function niceMax(v) {
+    var pow = Math.pow(10, Math.floor(Math.log10(v)));
+    var n = v / pow;
+    var step = n <= 1 ? 1 : n <= 1.5 ? 1.5 : n <= 2 ? 2 : n <= 3 ? 3 : n <= 4 ? 4 : n <= 5 ? 5 : n <= 7.5 ? 7.5 : 10;
+    return step * pow;
+  }
+  function axisTicks(max) {
+    var pow = Math.pow(10, Math.floor(Math.log10(max)));
+    var n = max / pow;
+    var stepN = n <= 1 ? 0.2 : n <= 2 ? 0.5 : n <= 5 ? 1 : 2;
+    var step = stepN * pow, out = [];
+    for (var v = 0; v <= max * 1.001; v += step) out.push(Math.round(v));
+    return out;
+  }
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  /* ---------- tooltip ---------- */
+  var tip = document.getElementById("tip");
+  function showTip(html, x, y) {
+    tip.innerHTML = html;
+    tip.style.opacity = "1";
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var px = x + 16, py = y + 16;
+    if (px + w > window.innerWidth - 8) px = x - w - 16;
+    if (py + h > window.innerHeight - 8) py = y - h - 16;
+    tip.style.left = px + "px";
+    tip.style.top = py + "px";
+  }
+  function hideTip() { tip.style.opacity = "0"; }
+  function filmTip(f) {
+    var flag = f.final ? "" : '<div class="flag">◉ still in release &mdash; gross will climb</div>';
+    return '<div class="tt">' + esc(f.t) + '</div>' +
+      '<div class="tr"><span>' + f.u + " &nbsp;·&nbsp; " + new Date(f.date).getFullYear() + '</span></div>' +
+      '<div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div>' +
+      '<div class="tr"><span>Domestic</span><b>' + usd(val(f, "d")) + " (" + pct(f.pctDom) + ')</b></div>' +
+      '<div class="tr"><span>Overseas</span><b>' + usd(val(f, "i")) + " (" + pct(f.pctIntl) + ')</b></div>' +
+      '<div class="tr"><span>Opening wknd</span><b>' + usd(f.open) + '</b></div>' +
+      '<div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div>' +
+      '<div class="tr"><span>RT / MC / IMDb</span><b>' + (f.rt == null ? "—" : f.rt + "%") + " / " + f.mc + " / " + f.imdb + '</b></div>' +
+      flag;
+  }
+
+  /* ---------- masthead ---------- */
+  function renderThesis() {
+    var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
+    var dc = FILMS.filter(function (f) { return f.u !== "MCU"; });
+    var sum = function (a, w) { return a.reduce(function (s, f) { return s + val(f, w); }, 0); };
+    var m = sum(mcu, "ww"), d = sum(dc, "ww");
+    var el = document.getElementById("thesis");
+    el.innerHTML =
+      block("Marvel Studios", usd(m), mcu.length + " films · " + STATE.money) +
+      block("All DC on film", usd(d), dc.length + " films · DCEU + DCU + Elseworlds") +
+      block("Marvel’s edge", (m / d).toFixed(2) + "×", "more worldwide gross than DC");
+    function block(k, v, sub) {
+      return '<div><div class="k">' + k + '</div><div class="v" style="font-family:\'IBM Plex Sans Condensed\'">' + v + '</div><div class="sub">' + sub + "</div></div>";
+    }
+    document.getElementById("smallprint").innerHTML =
+      FILMS.length + " films with a verified worldwide gross. <b>Avengers: Doomsday</b> and <b>Clayface</b> are omitted &mdash; not yet in release. Two films (<b>Supergirl</b>, <b>Spider-Man: Brand New Day</b>) are still in theatres. Source: Box Office Mojo, retrieved " + new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) + ".";
+    document.getElementById("method-held").innerHTML =
+      "Held out until release: " + DB.meta.held_out.map(function (h) { return "<b>" + esc(h.t) + "</b> (" + h.date + ", " + h.u + ")"; }).join(" · ") + ".";
+  }
+
+  /* ---------- §01 scorecards ---------- */
+  function renderScorecards() {
+    var host = document.getElementById("scorecards");
+    host.innerHTML = "";
+    UNI.forEach(function (u) {
+      if (!STATE.unis[u.k]) return;
+      var fs = FILMS.filter(function (f) { return f.u === u.k; });
+      var gr = fs.map(function (f) { return val(f, "ww"); });
+      var tot = gr.reduce(function (a, b) { return a + b; }, 0);
+      var el = document.createElement("div");
+      el.className = "sc";
+      el.style.setProperty("--c", "var(" + COLORVAR[u.k] + ")");
+      el.innerHTML =
+        "<h3>" + u.full + "</h3>" +
+        '<div class="big">' + usd(tot) + "</div>" +
+        '<div class="rows">' +
+        rowline("Films", fs.length) +
+        rowline("Average", usd(tot / fs.length)) +
+        rowline("Median", usd(median(gr))) +
+        rowline("Biggest", usd(Math.max.apply(null, gr))) +
+        "</div>";
+      host.appendChild(el);
+    });
+    function rowline(k, v) { return '<div class="row"><span>' + k + "</span><span>" + v + "</span></div>"; }
+    var mcu = FILMS.filter(function (f) { return f.u === "MCU"; }), dc = FILMS.filter(function (f) { return f.u !== "MCU"; });
+    var am = mcu.reduce(function (a, f) { return a + val(f, "ww"); }, 0) / mcu.length;
+    var ad = dc.reduce(function (a, f) { return a + val(f, "ww"); }, 0) / dc.length;
+    document.getElementById("d-scorecard").innerHTML =
+      "Across " + FILMS.length + " films, the average Marvel Studios release earns <b>" + usd(am) + "</b> worldwide against <b>" + usd(ad) + "</b> for the average DC film. The gap is widening: DC&rsquo;s last profitable original was years ago, while Marvel keeps posting billion-dollar tentpoles.";
+  }
+
+  /* ---------- §01 stacked columns by year ---------- */
+  function renderYear() {
+    var W = 1000, H = 430, m = { t: 14, r: 12, b: 34, l: 60 };
+    var years = [];
+    for (var y = 2008; y <= 2026; y++) years.push(y);
+    var af = activeFilms();
+    var byYear = {};
+    years.forEach(function (y) { byYear[y] = {}; });
+    af.forEach(function (f) {
+      var y = new Date(f.date).getFullYear();
+      byYear[y][f.u] = (byYear[y][f.u] || 0) + val(f, "ww");
+    });
+    var totals = years.map(function (y) { return Object.keys(byYear[y]).reduce(function (s, k) { return s + byYear[y][k]; }, 0); });
+    var max = niceMax(Math.max.apply(null, totals) || 1);
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var bw = Math.min(34, iw / years.length * 0.62);
+    var x = function (i) { return m.l + (i + 0.5) * (iw / years.length); };
+    var yS = function (v) { return m.t + ih - (v / max) * ih; };
+    var order = ["MCU", "DCEU", "DCU", "Elseworlds"];
+    var g = "";
+    axisTicks(max).forEach(function (t) {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
+      g += '<text class="lbl" x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+    });
+    var bars = "";
+    years.forEach(function (yr, i) {
+      var acc = 0;
+      order.forEach(function (u) {
+        var v = byYear[yr][u]; if (!v) return;
+        var y0 = yS(acc), y1 = yS(acc + v);
+        var h = Math.max(0, y0 - y1 - 2);
+        bars += '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="2" fill="var(' + COLORVAR[u] + ')" data-y="' + yr + '" data-u="' + u + '" data-v="' + v + '"/>';
+        acc += v;
+      });
+      bars += '<text class="lbl" x="' + x(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
+    });
+    document.getElementById("chart-year").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Stacked columns of worldwide gross by year and universe">' +
+      '<g class="grid">' + g + "</g>" +
+      '<g id="year-bars">' + bars + "</g>" +
+      '<line class="ax" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(0) + '" y2="' + yS(0) + '" stroke="var(--axis)"/>' +
+      "</svg>";
+    var svg = document.querySelector("#chart-year svg");
+    svg.querySelectorAll("#year-bars rect").forEach(function (r) {
+      r.addEventListener("mousemove", function (e) {
+        var u = r.getAttribute("data-u"), yr = r.getAttribute("data-y"), v = +r.getAttribute("data-v");
+        showTip('<div class="tt">' + yr + " &nbsp;·&nbsp; " + u + '</div><div class="tr"><span>Worldwide</span><b>' + usd(v) + "</b></div>", e.clientX, e.clientY);
+      });
+      r.addEventListener("mouseleave", hideTip);
+    });
+    legend("leg-year", activeUnis());
+    tableToggleFill("table-year", yearTableData(byYear, years), ["Year", "MCU", "DCEU", "DCU", "Elseworlds", "Total"]);
+  }
+  function yearTableData(byYear, years) {
+    return years.map(function (y) {
+      var r = byYear[y] || {};
+      var tot = ["MCU", "DCEU", "DCU", "Elseworlds"].reduce(function (s, k) { return s + (r[k] || 0); }, 0);
+      return [String(y), usd(r.MCU || 0), usd(r.DCEU || 0), usd(r.DCU || 0), usd(r.Elseworlds || 0), usd(tot)];
+    });
+  }
+
+  /* ---------- §01 box-and-whisker ---------- */
+  function renderBox() {
+    var W = 1000, rowH = 92, m = { t: 10, r: 20, b: 34, l: 96 };
+    var us = activeUnis();
+    var H = m.t + m.b + rowH * us.length;
+    var all = activeFilms().filter(function (f) { return !(STATE.outlierHide && val(f, "ww") >= 1e9); });
+    var max = niceMax(Math.max.apply(null, all.map(function (f) { return val(f, "ww"); })) || 1);
+    var iw = W - m.l - m.r;
+    var xS = function (v) { return m.l + (v / max) * iw; };
+    var g = "";
+    axisTicks(max).forEach(function (t) {
+      g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
+      g += '<text class="lbl" x="' + xS(t) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+    });
+    function jit(s) { var h = 0; for (var k = 0; k < s.length; k++) h = (h * 31 + s.charCodeAt(k)) | 0; return (Math.abs(h) % 15) - 7; }
+    var rows = "";
+    us.forEach(function (u, i) {
+      var fs = all.filter(function (f) { return f.u === u; });
+      var arr = fs.map(function (f) { return val(f, "ww"); }).sort(function (a, b) { return a - b; });
+      var cy = m.t + rowH * i + rowH / 2;
+      var c = "var(" + COLORVAR[u] + ")";
+      rows += '<text x="' + (m.l - 12) + '" y="' + (cy + 4) + '" text-anchor="end" class="lbl lbl-strong" font-size="12">' + u + " · " + fs.length + "</text>";
+      if (arr.length < 4) {
+        if (arr.length >= 2) {
+          var md0 = quantile(arr, 0.5);
+          rows += '<line x1="' + xS(md0) + '" x2="' + xS(md0) + '" y1="' + (cy - 13) + '" y2="' + (cy + 13) + '" stroke="' + c + '" stroke-width="2"/>';
+        }
+        fs.forEach(function (f) { rows += dot(xS(val(f, "ww")), cy + jit(f.t), u, f); });
+        return;
+      }
+      var q1 = quantile(arr, 0.25), md = quantile(arr, 0.5), q3 = quantile(arr, 0.75);
+      var lo = arr[0], hi = arr[arr.length - 1];
+      rows += '<line x1="' + xS(lo) + '" x2="' + xS(hi) + '" y1="' + (cy - 8) + '" y2="' + (cy - 8) + '" stroke="' + c + '" stroke-opacity="0.5"/>';
+      rows += '<rect x="' + xS(q1) + '" y="' + (cy - 20) + '" width="' + (xS(q3) - xS(q1)) + '" height="24" rx="3" fill="' + c + '" fill-opacity="0.16" stroke="' + c + '" stroke-opacity="0.6"/>';
+      rows += '<line x1="' + xS(md) + '" x2="' + xS(md) + '" y1="' + (cy - 20) + '" y2="' + (cy + 4) + '" stroke="' + c + '" stroke-width="2"/>';
+      fs.forEach(function (f) { rows += dot(xS(val(f, "ww")), cy + 22 + jit(f.t), u, f); });
+    });
+    function dot(cx, cy, u, f) {
+      return '<circle cx="' + cx + '" cy="' + cy + '" r="3.6" fill="var(' + COLORVAR[u] + ')" fill-opacity="0.75" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
+    }
+    document.getElementById("chart-box").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Box and whisker of worldwide gross by universe">' +
+      '<g class="grid">' + g + "</g>" + rows + "</svg>";
+    wireDots(document.querySelector("#chart-box svg"));
+  }
+
+  /* ---------- §02 treemap (squarified) ---------- */
+  function squarify(items, x, y, w, h) {
+    // items: [{value, ...}] sorted desc; returns list with {x,y,w,h}
+    var out = [];
+    var i = 0, N = items.length;
+    var totalVal = items.reduce(function (s, d) { return s + d.value; }, 0);
+    var scale = (w * h) / totalVal;
+    var rects = items.map(function (d) { return { d: d, a: d.value * scale }; });
+    function worst(row, len) {
+      var s = row.reduce(function (a, r) { return a + r.a; }, 0);
+      var mx = Math.max.apply(null, row.map(function (r) { return r.a; }));
+      var mn = Math.min.apply(null, row.map(function (r) { return r.a; }));
+      return Math.max((len * len * mx) / (s * s), (s * s) / (len * len * mn));
+    }
+    var cx = x, cy = y, cw = w, ch = h;
+    while (i < N) {
+      var row = [];
+      var len = Math.min(cw, ch);
+      var idx = i;
+      while (idx < N) {
+        var trial = row.concat([rects[idx]]);
+        if (row.length && worst(trial, len) > worst(row, len)) break;
+        row.push(rects[idx]);
+        idx++;
+      }
+      var rowSum = row.reduce(function (a, r) { return a + r.a; }, 0);
+      if (cw >= ch) {
+        var rw = rowSum / ch;
+        var oy = cy;
+        row.forEach(function (r) {
+          var rh = r.a / rw;
+          out.push({ d: r.d, x: cx, y: oy, w: rw, h: rh });
+          oy += rh;
+        });
+        cx += rw; cw -= rw;
+      } else {
+        var rh2 = rowSum / cw;
+        var ox = cx;
+        row.forEach(function (r) {
+          var rw2 = r.a / rh2;
+          out.push({ d: r.d, x: ox, y: cy, w: rw2, h: rh2 });
+          ox += rw2;
+        });
+        cy += rh2; ch -= rh2;
+      }
+      i = idx;
+    }
+    return out;
+  }
+  function renderTreemap() {
+    var W = 1000, H = 560;
+    var af = activeFilms().slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); });
+    var items = af.map(function (f) { return { value: val(f, "ww"), f: f }; });
+    var cells = squarify(items, 0, 0, W, H);
+    var rects = cells.map(function (c) {
+      var f = c.d.f, col = "var(" + COLORVAR[f.u] + ")";
+      var big = c.w > 78 && c.h > 40;
+      var med = c.w > 54 && c.h > 26;
+      var label = "";
+      if (big) {
+        label = '<text x="' + (c.x + 8) + '" y="' + (c.y + 18) + '" fill="#fff" font-family="IBM Plex Sans" font-size="12" font-weight="600" style="pointer-events:none">' + esc(clip(f.t, Math.floor(c.w / 7))) + '</text>' +
+          '<text x="' + (c.x + 8) + '" y="' + (c.y + 34) + '" fill="rgba(255,255,255,0.82)" font-family="IBM Plex Mono" font-size="11" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
+      } else if (med) {
+        label = '<text x="' + (c.x + 6) + '" y="' + (c.y + 15) + '" fill="#fff" font-family="IBM Plex Mono" font-size="10" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
+      }
+      return '<g class="tmCell" data-i="' + FILMS.indexOf(f) + '">' +
+        '<rect x="' + (c.x + 1) + '" y="' + (c.y + 1) + '" width="' + Math.max(0, c.w - 2) + '" height="' + Math.max(0, c.h - 2) + '" fill="' + col + '" rx="2"/>' +
+        label + "</g>";
+    }).join("");
+    document.getElementById("chart-treemap").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Treemap of films by worldwide gross">' + rects + "</svg>";
+    document.getElementById("tm-count").textContent = af.length + " films · " + usd(af.reduce(function (s, f) { return s + val(f, "ww"); }, 0)) + " total";
+    legend("leg-tm", activeUnis());
+    wireCells(document.querySelector("#chart-treemap svg"));
+  }
+  function clip(s, n) { return s.length > n ? s.slice(0, Math.max(3, n - 1)) + "…" : s; }
+
+  /* ---------- §03 beeswarm by date ---------- */
+  function renderBeeswarm() {
+    var W = 1000, H = 460, m = { t: 20, r: 20, b: 34, l: 20 };
+    var af = activeFilms().slice().sort(function (a, b) { return dateNum(a.date) - dateNum(b.date); });
+    var t0 = dateNum("2008-01-01"), t1 = dateNum("2026-12-31");
+    var iw = W - m.l - m.r;
+    var xS = function (d) { return m.l + ((dateNum(d) - t0) / (t1 - t0)) * iw; };
+    var maxWW = Math.max.apply(null, af.map(function (f) { return val(f, "ww"); }));
+    var rS = function (v) { return 4 + Math.sqrt(v / maxWW) * 25; };
+    var midY = m.t + (H - m.t - m.b) / 2;
+    var placed = [];
+    var nodes = af.map(function (f) {
+      var r = rS(val(f, "ww"));
+      var cx = xS(f.date), cy = midY, dir = 1, step = 0;
+      for (var guard = 0; guard < 400; guard++) {
+        var ok = true;
+        for (var j = 0; j < placed.length; j++) {
+          var p = placed[j];
+          var dx = cx - p.cx, dy = cy - p.cy;
+          if (dx * dx + dy * dy < (r + p.r + 1.5) * (r + p.r + 1.5)) { ok = false; break; }
+        }
+        if (ok) break;
+        step += 1;
+        cy = midY + dir * step * 3.2;
+        dir *= -1;
+        if (cy - r < m.t) cy = m.t + r;
+        if (cy + r > H - m.b) cy = H - m.b - r;
+      }
+      placed.push({ cx: cx, cy: cy, r: r });
+      return { f: f, cx: cx, cy: cy, r: r };
+    });
+    var yearTicks = "";
+    for (var y = 2008; y <= 2026; y += 2) {
+      var xx = xS(y + "-01-01");
+      yearTicks += '<line x1="' + xx + '" x2="' + xx + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
+      yearTicks += '<text x="' + xx + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + y + "</text>";
+    }
+    var circ = nodes.map(function (n) {
+      return '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
+    }).join("");
+    document.getElementById("chart-beeswarm").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films placed by release date, sized by worldwide gross">' +
+      '<g class="grid">' + yearTicks + "</g>" + circ + "</svg>";
+    legend("leg-bee", activeUnis(), true);
+    wireDots(document.querySelector("#chart-beeswarm svg"));
+  }
+
+  /* ---------- §04 scatter ---------- */
+  function renderScatter() {
+    var W = 1000, H = 470, m = { t: 20, r: 24, b: 34, l: 60 };
+    var af = activeFilms();
+    var t0 = dateNum("2008-01-01"), t1 = dateNum("2026-12-31");
+    var maxWW = niceMax(Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1);
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var xS = function (d) { return m.l + ((dateNum(d) - t0) / (t1 - t0)) * iw; };
+    var yS = function (v) { return m.t + ih - (v / maxWW) * ih; };
+    var g = "";
+    axisTicks(maxWW).forEach(function (tk) {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(tk) + '" y2="' + yS(tk) + '"/>';
+      g += '<text class="lbl" x="' + (m.l - 8) + '" y="' + (yS(tk) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(tk) + "</text>";
+    });
+    for (var y = 2008; y <= 2026; y += 2) {
+      var xx = xS(y + "-01-01");
+      g += '<text class="lbl" x="' + xx + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + y + "</text>";
+    }
+    var refs = "";
+    [1e9, 2e9].forEach(function (r) {
+      if (r > maxWW) return;
+      refs += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(r) + '" y2="' + yS(r) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>';
+      refs += '<text x="' + (m.l + 6) + '" y="' + (yS(r) - 6) + '" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(r) + ' club</text>';
+    });
+    var shape = { MCU: "circle", DCEU: "square", DCU: "triangle", Elseworlds: "diamond" };
+    function mark(cx, cy, u, i) {
+      var c = "var(" + COLORVAR[u] + ")", s = shape[u], r = 6;
+      var common = ' fill="' + c + '" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + i + '"';
+      if (s === "circle") return '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + common + "/>";
+      if (s === "square") return '<rect x="' + (cx - r) + '" y="' + (cy - r) + '" width="' + (2 * r) + '" height="' + (2 * r) + '" rx="1.5"' + common + "/>";
+      if (s === "triangle") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + (cy + r) + "L" + (cx - r - 1) + " " + (cy + r) + 'Z"' + common + "/>";
+      return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + cy + "L" + cx + " " + (cy + r + 1) + "L" + (cx - r - 1) + " " + cy + 'Z"' + common + "/>";
+    }
+    var pts = "", labels = "";
+    var top = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).slice(0, 6);
+    af.forEach(function (f) {
+      var cx = xS(f.date), cy = yS(val(f, "ww"));
+      pts += mark(cx, cy, f.u, FILMS.indexOf(f));
+      if (top.indexOf(f) > -1) {
+        var rightSide = cx > m.l + iw * 0.66;
+        labels += '<text x="' + (rightSide ? cx - 11 : cx + 11) + '" y="' + (cy + 3) + '" text-anchor="' + (rightSide ? "end" : "start") + '" class="lbl lbl-strong" font-size="11" style="pointer-events:none">' + esc(f.t) + "</text>";
+      }
+    });
+    document.getElementById("chart-scatter").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Scatter of worldwide gross by release date">' +
+      '<g class="grid">' + g + "</g>" + refs + pts + labels +
+      '<line class="ax" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(0) + '" y2="' + yS(0) + '" stroke="var(--axis)"/>' + "</svg>";
+    legend("leg-sc", activeUnis(), false, true);
+    wireDots(document.querySelector("#chart-scatter svg"));
+    var rows = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).map(function (f) {
+      return [f.t, f.u, f.date, usd(val(f, "ww")), usd(f.open), (f.mult == null ? "—" : f.mult.toFixed(2) + "×")];
+    });
+    fillTable("table-scatter", rows, ["Film", "Universe", "Release", "Worldwide", "Opening", "Multiplier"]);
+  }
+
+  /* ---------- §05 domestic/international split ---------- */
+  function renderSplit() {
+    var af = activeFilms().slice();
+    if (STATE.splitSort === "intl") af.sort(function (a, b) { return b.pctIntl - a.pctIntl; });
+    else af.sort(function (a, b) { return val(b, "ww") - val(a, "ww"); });
+    var W = 1000, rowH = 20, m = { t: 26, r: 60, b: 10, l: 220 };
+    var H = m.t + m.b + rowH * af.length;
+    var maxWW = Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1;
+    var iw = W - m.l - m.r;
+    var mode = STATE.splitSort === "intl";
+    var bars = af.map(function (f, i) {
+      var y = m.t + i * rowH;
+      var d = val(f, "d"), ii = val(f, "i"), tot = d + ii;
+      var c = "var(" + COLORVAR[f.u] + ")";
+      var wpx = mode ? iw : (tot / maxWW) * iw;
+      var dw = wpx * (d / tot);
+      var iwd = wpx * (ii / tot) - 2;
+      var name = clip(f.t, 34) + (f.final ? "" : "  ◉");
+      return '<g class="splitRow" data-i="' + FILMS.indexOf(f) + '">' +
+        '<rect x="0" y="' + y + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+        '<text x="' + (m.l - 12) + '" y="' + (y + rowH / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(name) + "</text>" +
+        '<rect x="' + m.l + '" y="' + (y + 3) + '" width="' + Math.max(0, dw - 2) + '" height="' + (rowH - 6) + '" fill="' + c + '" rx="1.5"/>' +
+        '<rect x="' + (m.l + dw) + '" y="' + (y + 3) + '" width="' + Math.max(0, iwd) + '" height="' + (rowH - 6) + '" fill="' + c + '" fill-opacity="0.34" rx="1.5"/>' +
+        (mode
+          ? '<text x="' + (m.l + wpx + 8) + '" y="' + (y + rowH / 2 + 4) + '" class="lbl" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + pct(f.pctIntl) + " OS</text>"
+          : '<text x="' + (m.l + wpx + 8) + '" y="' + (y + rowH / 2 + 4) + '" class="lbl" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usd(tot) + "</text>") +
+        "</g>";
+    }).join("");
+    var scaleHint = mode ? "" :
+      (function () {
+        var out = "";
+        [0, maxWW / 2, maxWW].forEach(function (v) {
+          var xx = m.l + (v / maxWW) * iw;
+          out += '<text x="' + xx + '" y="14" text-anchor="middle" class="lbl" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(v) + "</text>";
+        });
+        return out;
+      })();
+    document.getElementById("chart-split").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Domestic and international split per film">' + scaleHint + bars + "</svg>";
+    document.getElementById("leg-split").innerHTML =
+      '<span><i style="--c:var(--ink-2);background:var(--ink-2)"></i>Solid&nbsp;= domestic</span>' +
+      '<span><i style="--c:var(--ink-2);background:color-mix(in srgb,var(--ink-2) 30%,transparent);border:1px solid var(--ink-2)"></i>Pale&nbsp;= overseas</span>' +
+      '<span style="color:var(--ink-muted)">Bar colour = universe &nbsp;·&nbsp; ◉ still in release</span>';
+    wireSplit(document.querySelector("#chart-split svg"));
+  }
+
+  /* ---------- §06 full table ---------- */
+  var COLS = [
+    { k: "t", label: "Film", t: "s" },
+    { k: "u", label: "Universe", t: "s" },
+    { k: "date", label: "Release", t: "s" },
+    { k: "ww", label: "Worldwide", t: "$", g: "ww" },
+    { k: "wd", label: "Domestic", t: "$", g: "d" },
+    { k: "wi", label: "Overseas", t: "$", g: "i" },
+    { k: "pctIntl", label: "OS %", t: "p" },
+    { k: "open", label: "Opening", t: "$" },
+    { k: "mult", label: "Mult.", t: "x" },
+    { k: "budget", label: "Budget", t: "$", g: "budget" },
+    { k: "roi", label: "ROI", t: "x" },
+    { k: "rt", label: "RT", t: "p" },
+    { k: "mc", label: "MC", t: "n" },
+    { k: "imdb", label: "IMDb", t: "n" }
+  ];
+  function renderFullTable() {
+    var af = activeFilms().slice();
+    var s = STATE.sort;
+    af.sort(function (a, b) {
+      var av = a[s.key], bv = b[s.key];
+      if (s.key === "ww" || s.key === "wd" || s.key === "wi" || s.key === "budget") { av = val(a, COLS.find(function (c) { return c.k === s.key; }).g); bv = val(b, COLS.find(function (c) { return c.k === s.key; }).g); }
+      if (typeof av === "string") return av.localeCompare(bv) * s.dir;
+      return ((av || 0) - (bv || 0)) * s.dir;
+    });
+    var thead = "<tr>" + COLS.map(function (c) {
+      var sorted = s.key === c.k ? " th-sorted" : "";
+      var arrow = s.key === c.k ? (s.dir === 1 ? "▲" : "▼") : "";
+      return '<th class="' + sorted.trim() + '" data-sort="' + c.k + '" data-arrow="' + arrow + '">' + c.label + "</th>";
+    }).join("") + "</tr>";
+    var tbody = af.map(function (f) {
+      return "<tr>" + COLS.map(function (c) {
+        var raw = c.g ? val(f, c.g) : f[c.k];
+        var disp;
+        if (c.k === "t") disp = '<span class="uchip" style="background:var(' + COLORVAR[f.u] + ')"></span>' + esc(f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
+        else if (c.t === "$") disp = usd(raw);
+        else if (c.t === "p") disp = raw == null ? "—" : Math.round(raw) + "%";
+        else if (c.t === "x") disp = raw == null ? "—" : raw.toFixed(2) + "×";
+        else if (c.t === "n") disp = raw == null ? "—" : raw;
+        else disp = esc(raw);
+        return '<td class="' + (c.k === "t" ? "name" : "") + '">' + disp + "</td>";
+      }).join("") + "</tr>";
+    }).join("");
+    document.getElementById("table-full").innerHTML =
+      '<div class="tablewrap"><table class="data"><thead>' + thead + "</thead><tbody>" + tbody + "</tbody></table></div>";
+    document.querySelectorAll("#table-full th").forEach(function (th) {
+      th.addEventListener("click", function () {
+        var k = th.getAttribute("data-sort");
+        if (STATE.sort.key === k) STATE.sort.dir *= -1;
+        else STATE.sort = { key: k, dir: k === "t" || k === "u" || k === "date" ? 1 : -1 };
+        renderFullTable();
+      });
+    });
+  }
+
+  /* ---------- shared: legend, tables, wiring ---------- */
+  function activeUnis() { return UNI.map(function (u) { return u.k; }).filter(function (k) { return STATE.unis[k]; }); }
+  function legend(id, keys, withSize, withShape) {
+    var host = document.getElementById(id);
+    if (!host) return;
+    var shape = { MCU: "●", DCEU: "■", DCU: "▲", Elseworlds: "◆" };
+    host.innerHTML = keys.map(function (k) {
+      var mk = withShape ? '<span style="color:var(' + COLORVAR[k] + ');font-size:13px">' + shape[k] + "</span>" : '<i style="--c:var(' + COLORVAR[k] + ')"></i>';
+      return "<span>" + mk + " " + (UNI.find(function (u) { return u.k === k; }).full) + "</span>";
+    }).join("") + (withSize ? '<span style="color:var(--ink-muted)">○ area/size = worldwide gross</span>' : "");
+  }
+  function fillTable(id, rows, headers) {
+    var host = document.getElementById(id);
+    host.innerHTML = '<div class="tablewrap"><table class="data"><thead><tr>' +
+      headers.map(function (h) { return "<th>" + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      rows.map(function (r) { return "<tr>" + r.map(function (c, i) { return '<td class="' + (i === 0 ? "name" : "") + '">' + c + "</td>"; }).join("") + "</tr>"; }).join("") +
+      "</tbody></table></div>";
+  }
+  function tableToggleFill(id, rows, headers) { fillTable(id, rows, headers); }
+  function wireDots(svg) {
+    svg.querySelectorAll(".beeDot").forEach(function (el) {
+      var f = FILMS[+el.getAttribute("data-i")];
+      el.style.cursor = "pointer";
+      el.setAttribute("tabindex", "0");
+      el.addEventListener("mousemove", function (e) { showTip(filmTip(f), e.clientX, e.clientY); });
+      el.addEventListener("mouseleave", hideTip);
+      el.addEventListener("focus", function () {
+        var r = el.getBoundingClientRect();
+        showTip(filmTip(f), r.left + r.width / 2, r.top);
+      });
+      el.addEventListener("blur", hideTip);
+    });
+  }
+  function wireCells(svg) {
+    svg.querySelectorAll(".tmCell").forEach(function (el) {
+      var f = FILMS[+el.getAttribute("data-i")];
+      el.style.cursor = "pointer";
+      el.addEventListener("mousemove", function (e) { showTip(filmTip(f), e.clientX, e.clientY); });
+      el.addEventListener("mouseleave", hideTip);
+    });
+  }
+  function wireSplit(svg) {
+    svg.querySelectorAll(".splitRow").forEach(function (el) {
+      var f = FILMS[+el.getAttribute("data-i")];
+      el.style.cursor = "pointer";
+      el.addEventListener("mousemove", function (e) { showTip(filmTip(f), e.clientX, e.clientY); });
+      el.addEventListener("mouseleave", hideTip);
+    });
+  }
+
+  /* ---------- render all ---------- */
+  function renderAll() {
+    if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
+    renderThesis();
+    renderScorecards();
+    renderYear();
+    renderBox();
+    renderTreemap();
+    renderBeeswarm();
+    renderScatter();
+    renderSplit();
+    renderFullTable();
+  }
+
+  /* ---------- controls ---------- */
+  function syncPills() {
+    document.querySelectorAll(".pill[data-uni]").forEach(function (b) {
+      b.setAttribute("aria-pressed", STATE.unis[b.getAttribute("data-uni")] ? "true" : "false");
+    });
+  }
+  document.querySelectorAll(".pill[data-uni]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var k = b.getAttribute("data-uni");
+      STATE.unis[k] = !STATE.unis[k];
+      syncPills();
+      renderAll();
+    });
+  });
+  document.querySelectorAll(".seg [data-money]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      STATE.money = b.getAttribute("data-money");
+      document.querySelectorAll(".seg [data-money]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      renderAll();
+    });
+  });
+  document.querySelectorAll("[data-theme-set]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var t = b.getAttribute("data-theme-set");
+      document.documentElement.setAttribute("data-theme", t);
+      document.querySelectorAll("[data-theme-set]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      try { localStorage.setItem("capeindex-theme", t); } catch (e) {}
+      renderAll();
+    });
+  });
+  document.querySelectorAll("[data-table]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var id = "table-" + b.getAttribute("data-table");
+      var el = document.getElementById(id);
+      var open = el.hidden;
+      el.hidden = !open;
+      b.setAttribute("aria-pressed", open ? "true" : "false");
+      b.textContent = open ? "Hide data" : "Show data";
+    });
+  });
+  document.querySelector("[data-outlier]").addEventListener("click", function () {
+    STATE.outlierHide = !STATE.outlierHide;
+    this.setAttribute("aria-pressed", STATE.outlierHide ? "true" : "false");
+    renderBox();
+  });
+  document.querySelectorAll("[data-sort-split]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      STATE.splitSort = b.getAttribute("data-sort-split");
+      document.querySelectorAll("[data-sort-split]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      renderSplit();
+    });
+  });
+
+  /* restore theme choice */
+  try {
+    var saved = localStorage.getItem("capeindex-theme");
+    if (saved) {
+      document.documentElement.setAttribute("data-theme", saved);
+      document.querySelectorAll("[data-theme-set]").forEach(function (x) { x.setAttribute("aria-pressed", x.getAttribute("data-theme-set") === saved ? "true" : "false"); });
+    }
+  } catch (e) {}
+
+  renderAll();
+  window.addEventListener("resize", function () { /* SVG is viewBox-scaled; only re-run layout-sensitive charts */ });
+})();
+</script>

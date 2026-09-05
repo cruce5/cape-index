@@ -54,3 +54,8 @@ Design: **dark mode is the primary design target, always.** Marvel = warm red, D
 - Canonical data = `data/films.json` in the repo. Single self-contained HTML output.
 - Full enrichment incl. scores. **Inflation toggle in the viz: yes.**
 - Accent colours: MCU red, DCEU blue, DCU + Elseworlds — TBD (leaning teal + violet).
+
+## Live
+
+Artifact: https://claude.ai/code/artifact/0dfb8ff4-bde5-4e40-aa34-0d601c69089e
+Local preview: `node scripts/serve.mjs` then http://localhost:4599
