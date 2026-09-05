@@ -440,7 +440,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which films actually cleared their break-even point, and by how much?</dd>
           <dt>Why this form</dt><dd>A diverging bar anchored at zero puts profit right, loss left, and sorts the whole slate best to worst in one read. Gross alone can&rsquo;t answer &ldquo;did it make money&rdquo; &mdash; a $400M film is a hit or a bomb depending on its budget.</dd>
-          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Bars are coloured by outcome, made money or lost money, with a &check; or &cross;; the universe rides along as a chip on the title.</dd>
+          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Bar colour and sign carry the outcome &mdash; green/right made money, orange/left lost it &mdash; and every value label sits in one column clear of the film names. The universe rides along as a chip on the title.</dd>
           <dt>Watch for</dt><dd>Break-even is a rule of thumb, not studio accounting &mdash; home video, streaming and TV deals aren&rsquo;t in it. Trust the ranking more than the exact dollar figure.</dd>
         </dl></div>
       </div>
@@ -463,9 +463,9 @@
         <div id="table-legs" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>How much of each film&rsquo;s domestic run came from its opening weekend versus everything after?</dd>
-          <dt>Why this form</dt><dd>A dumbbell connects two related numbers &mdash; opening weekend and lifetime domestic &mdash; for each film. The length of the connector <em>is</em> the story: long means it kept selling, short means it faded.</dd>
-          <dt>Choices here</dt><dd>Sorted by the multiplier (<code>lifetime &divide; opening</code>), not by either raw number, so the leggy films rise to the top. Both ends carry the film&rsquo;s universe colour.</dd>
-          <dt>Watch for</dt><dd>Big openings and long legs aren&rsquo;t opposites &mdash; Endgame had both. And a huge multiple on a tiny platform release isn&rsquo;t the same thing as a wide release with staying power.</dd>
+          <dt>Why this form</dt><dd>A dumbbell connects two related numbers &mdash; opening weekend and lifetime domestic &mdash; for each film, sorted by the multiplier (<code>lifetime &divide; opening</code>) so the leggy films rise to the top.</dd>
+          <dt>Why a log axis</dt><dd>On a linear dollar axis the connector length would be <em>dollars added after opening</em>, not the ratio &mdash; a $260M opener that triples looks longer than a $30M opener that quadruples. A log axis makes the pixel length equal to the multiplier, which is the thing being ranked.</dd>
+          <dt>Watch for</dt><dd>Big openings and long legs aren&rsquo;t opposites &mdash; Endgame had both. A huge multiple on a tiny platform release isn&rsquo;t the same phenomenon as a wide release with staying power.</dd>
         </dl></div>
       </div>
     </div>
@@ -1212,7 +1212,7 @@
       g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var dots = af.filter(function (f) { return val(f, "budget"); }).map(function (f) {
-      return '<circle cx="' + xS(new Date(f.date).getFullYear()) + '" cy="' + yS(val(f, "budget")) + '" r="3" fill="var(--ink-muted)" fill-opacity="0.32" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
+      return '<circle cx="' + xS(new Date(f.date).getFullYear()) + '" cy="' + yS(val(f, "budget")) + '" r="3" fill="var(--ink-muted)" fill-opacity="0.4" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
     }).join("");
     var pts = perYear.filter(function (p) { return p.med != null; });
     var path = pts.map(function (p, i) { return (i ? "L" : "M") + xS(p.yr) + " " + yS(p.med); }).join(" ");
@@ -1246,30 +1246,32 @@
   function profitOf(f) { return val(f, "ww") - val(f, "budget") * 2.5; }
   function renderProfit() {
     var af = activeFilms().slice().sort(function (a, b) { return profitOf(b) - profitOf(a); });
-    var W = 1000, rowH = 17, m = { t: 22, r: 86, b: 6, l: 210 };
+    var W = 1000, rowH = 18, m = { t: 26, r: 112, b: 8, l: 222 };
     var H = m.t + m.b + rowH * af.length;
     var maxPos = Math.max.apply(null, af.map(profitOf).concat([1]));
     var maxNeg = Math.abs(Math.min.apply(null, af.map(profitOf).concat([-1])));
     var iw = W - m.l - m.r;
     var scale = iw / (maxPos + maxNeg);
     var x0 = m.l + maxNeg * scale;
-    var head = "";
-    [-maxNeg, -maxNeg / 2, 0, maxPos / 3, (2 * maxPos) / 3, maxPos].forEach(function (v) {
-      var x = x0 + v * scale;
+    var head = '<text x="' + x0 + '" y="15" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">break&#8209;even</text>';
+    [0.25, 0.5, 0.75, 1].forEach(function (frac) {
+      var v = maxPos * frac, x = x0 + v * scale;
       head += '<line x1="' + x + '" x2="' + x + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
-      head += '<text x="' + x + '" y="14" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + (v === 0 ? "break-even" : (v > 0 ? "+" : "−") + usd(Math.abs(v)).replace("$", "$")) + "</text>";
+      head += '<text x="' + x + '" y="15" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">+' + usd(v).slice(1) + "</text>";
     });
     var rows = af.map(function (f) {
       var p = profitOf(f), i = af.indexOf(f), yy = m.t + i * rowH;
       var c = p >= 0 ? "var(--pos)" : "var(--neg)";
-      var w = Math.abs(p) * scale;
+      var w = Math.max(1.5, Math.abs(p) * scale);
       var bx = p >= 0 ? x0 : x0 - w;
+      // every value label lives in the same column: to the right, clear of the names
+      var lblX = p >= 0 ? bx + w + 7 : x0 + 8;
       return '<g class="profRow" data-i="' + FILMS.indexOf(f) + '">' +
         '<rect x="0" y="' + yy + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
-        '<rect x="' + (m.l - 12) + '" y="' + (yy + rowH / 2 - 4) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
-        '<text x="' + (m.l - 26) + '" y="' + (yy + rowH / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
-        '<rect x="' + bx + '" y="' + (yy + 3) + '" width="' + Math.max(1, w) + '" height="' + (rowH - 6) + '" rx="1.5" fill="' + c + '"/>' +
-        '<text x="' + (p >= 0 ? bx + w + 6 : bx - 6) + '" y="' + (yy + rowH / 2 + 4) + '" text-anchor="' + (p >= 0 ? "start" : "end") + '" font-family="IBM Plex Mono" font-size="10" fill="' + c + '">' + (p >= 0 ? "✓ +" : "✗ −") + usd(Math.abs(p)).slice(1) + "</text>" +
+        '<rect x="' + (m.l - 13) + '" y="' + (yy + rowH / 2 - 4) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
+        '<text x="' + (m.l - 28) + '" y="' + (yy + rowH / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
+        '<rect x="' + bx + '" y="' + (yy + 3.5) + '" width="' + w + '" height="' + (rowH - 7) + '" rx="1.5" fill="' + c + '"/>' +
+        '<text x="' + lblX + '" y="' + (yy + rowH / 2 + 4) + '" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)).slice(1) + "</text>" +
         "</g>";
     }).join("");
     document.getElementById("chart-profit").innerHTML =
@@ -1294,34 +1296,37 @@
     }), ["Film", "Universe", "Worldwide", "Budget", "Break-even", "Profit / loss"]);
   }
 
-  /* ---------- §07 legs (dumbbell) ---------- */
+  /* ---------- §07 legs (dumbbell, log x) ---------- */
   function renderLegs() {
     var af = activeFilms().slice().filter(function (f) { return f.open && f.mult != null; }).sort(function (a, b) { return b.mult - a.mult; });
-    var W = 1000, rowH = 16, m = { t: 20, r: 66, b: 8, l: 210 };
+    var W = 1000, rowH = 16, m = { t: 22, r: 66, b: 8, l: 218 };
     var H = m.t + m.b + rowH * af.length;
-    var max = niceMax(Math.max.apply(null, af.map(function (f) { return val(f, "d"); })) || 1);
-    var iw = W - m.l - m.r;
-    var xS = function (v) { return m.l + (v / max) * iw; };
+    var lo = 8e6, hi = 1e9;
+    af.forEach(function (f) { lo = Math.min(lo, f.open); hi = Math.max(hi, val(f, "d")); });
+    var l0 = Math.log10(lo), l1 = Math.log10(hi), iw = W - m.l - m.r;
+    var xS = function (v) { return m.l + (Math.log10(Math.max(1, v)) - l0) / (l1 - l0) * iw; };
     var g = "";
-    axisTicks(max).forEach(function (t) {
+    [1e7, 3e7, 1e8, 3e8, 1e9].forEach(function (t) {
+      if (t < lo || t > hi) return;
       g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
-      g += '<text x="' + xS(t) + '" y="14" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+      g += '<text x="' + xS(t) + '" y="15" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var rows = af.map(function (f, i) {
       var yy = m.t + i * rowH + rowH / 2, c = "var(" + COLORVAR[f.u] + ")";
       var xo = xS(f.open), xd = xS(val(f, "d"));
       return '<g class="legRow" data-i="' + FILMS.indexOf(f) + '">' +
         '<rect x="0" y="' + (yy - rowH / 2) + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
-        '<text x="' + (m.l - 14) + '" y="' + (yy + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
-        '<line x1="' + xo + '" x2="' + xd + '" y1="' + yy + '" y2="' + yy + '" stroke="' + c + '" stroke-width="2" stroke-opacity="0.55"/>' +
-        '<circle cx="' + xo + '" cy="' + yy + '" r="3.4" fill="var(--surface)" stroke="' + c + '" stroke-width="1.6"/>' +
+        '<text x="' + (m.l - 14) + '" y="' + (yy + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
+        '<line x1="' + xo + '" x2="' + xd + '" y1="' + yy + '" y2="' + yy + '" stroke="' + c + '" stroke-width="2.5" stroke-opacity="0.5" stroke-linecap="round"/>' +
+        '<circle cx="' + xo + '" cy="' + yy + '" r="3.2" fill="var(--surface)" stroke="' + c + '" stroke-width="1.6"/>' +
         '<circle cx="' + xd + '" cy="' + yy + '" r="3.8" fill="' + c + '"/>' +
-        '<text x="' + (xd + 8) + '" y="' + (yy + 4) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + f.mult.toFixed(1) + "×</text>" +
+        '<text x="' + (xd + 9) + '" y="' + (yy + 4) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">' + f.mult.toFixed(1) + "×</text>" +
         "</g>";
     }).join("");
     document.getElementById("chart-legs").innerHTML =
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Opening weekend to lifetime domestic, per film">' +
-      '<g class="grid">' + g + "</g>" + rows + "</svg>";
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Opening weekend to lifetime domestic, per film, on a log scale">' +
+      '<g class="grid">' + g + "</g>" + rows +
+      '<text x="' + (m.l) + '" y="15" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">domestic $, log scale &rarr;</text></svg>';
     document.querySelectorAll("#chart-legs .legRow").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
       el.style.cursor = "pointer";
@@ -1330,7 +1335,7 @@
       });
       el.addEventListener("mouseleave", hideTip);
     });
-    document.getElementById("leg-legs").innerHTML = '<span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span><span style="color:var(--ink-muted)">sorted by multiplier &mdash; bar colour = universe</span>';
+    document.getElementById("leg-legs").innerHTML = '<span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span><span style="color:var(--ink-muted)">log scale &mdash; line length = the multiplier</span>';
     fillTable("table-legs", af.map(function (f) {
       return [f.t + (f.final ? "" : " ◉"), f.u, usd(f.open), usd(val(f, "d")), f.mult.toFixed(2) + "×"];
     }), ["Film", "Universe", "Opening", "Lifetime domestic", "Multiplier"]);
@@ -1354,7 +1359,7 @@
       g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(val(f, "ww")), f.u, FILMS.indexOf(f), 5.5); }).join("");
-    var top = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).slice(0, 4);
+    var top = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).slice(0, 3);
     var labs = top.map(function (f) {
       var x = xS(f.rt), right = f.rt > 66;
       return '<text x="' + (right ? x - 10 : x + 10) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="11" style="pointer-events:none">' + esc(f.t) + "</text>";
@@ -1381,10 +1386,10 @@
     var diag = '<line x1="' + xS(0) + '" y1="' + yS(0) + '" x2="' + xS(100) + '" y2="' + yS(100) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>' +
       '<text x="' + xS(88) + '" y="' + (yS(88) - 6) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">they agree</text>';
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(f.imdb * 10), f.u, FILMS.indexOf(f), 5.5); }).join("");
-    var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, 4);
+    var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, 3);
     var labs = gap.map(function (f) {
-      var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 60;
-      return '<text x="' + (right ? x - 10 : x + 10) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="11" style="pointer-events:none">' + esc(f.t) + "</text>";
+      var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 55;
+      return '<text x="' + (right ? x - 10 : x + 10) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="11" style="pointer-events:none">' + esc(clip(f.t, 24)) + "</text>";
     }).join("");
     document.getElementById("chart-parity").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + diag + pts + labs +
