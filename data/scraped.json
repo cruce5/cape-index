@@ -774,5 +774,1313 @@
       "distributor": "Sony Pictures Releasing"
     },
     "scraped_at": "2026-09-05T19:00:01.489Z"
+  },
+  "thor-ragnarok-2017": {
+    "title": "Thor: Ragnarok",
+    "year": "2017",
+    "release_date": "2017-11-03",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt3501632",
+    "bom_url": "https://www.boxofficemojo.com/title/tt3501632/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt3501632",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 315058289,
+      "international": 540243517,
+      "worldwide": 855301806,
+      "opening_weekend_domestic": 122744989,
+      "budget": 180000000,
+      "earliest_release_date": "October 24, 2017 (United Kingdom)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 130,
+      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:00:18.204Z"
+  },
+  "justice-league-2017": {
+    "title": "Justice League",
+    "year": "2017",
+    "release_date": "2017-11-17",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt0974015",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0974015/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM5YmQxM2YtZjI2Yy00YjhhLTg5N2MtMTEyMzdlZDU3OTVhXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt0974015",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM5YmQxM2YtZjI2Yy00YjhhLTg5N2MtMTEyMzdlZDU3OTVhXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 229024295,
+      "international": 432302692,
+      "worldwide": 661326987,
+      "opening_weekend_domestic": 93842239,
+      "budget": null,
+      "earliest_release_date": "October 17, 2017 (Lithuania)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 120,
+      "genres": "Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:00:31.525Z"
+  },
+  "black-panther-2018": {
+    "title": "Black Panther",
+    "year": "2018",
+    "release_date": "2018-02-16",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt1825683",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1825683/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt1825683",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt37884905",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjNhNzIzNWQtMGNiYy00YTM5LWE2YzQtNjBkNTRjNDU4ZjM3XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt9114286",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWY5NDY1ZjItZDQxMy00MTAzLTgyOGQtNTQxYjFiMzZjMjUyXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0775543",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTIyNDEyNjY3NF5BMl5BanBnXkFtZTcwNjY0MjE3Mw@@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 700426566,
+      "international": 649499517,
+      "worldwide": 1349926083,
+      "opening_weekend_domestic": 202003951,
+      "budget": 200000000,
+      "earliest_release_date": "February 13, 2018 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 134,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:00:45.408Z"
+  },
+  "avengers-infinity-war-2018": {
+    "title": "Avengers: Infinity War",
+    "year": "2018",
+    "release_date": "2018-04-27",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt4154756",
+    "bom_url": "https://www.boxofficemojo.com/title/tt4154756/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt4154756",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 678815482,
+      "international": 1373599557,
+      "worldwide": 2052415039,
+      "opening_weekend_domestic": 257698183,
+      "budget": 350000000,
+      "earliest_release_date": "April 25, 2018 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 149,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:00:57.996Z"
+  },
+  "ant-man-and-the-wasp-2018": {
+    "title": "Ant-Man and the Wasp",
+    "year": "2018",
+    "release_date": "2018-07-06",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt5095030",
+    "bom_url": "https://www.boxofficemojo.com/title/tt5095030/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt5095030",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt10954600",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 216648740,
+      "international": 406025399,
+      "worldwide": 622674139,
+      "opening_weekend_domestic": 75812205,
+      "budget": null,
+      "earliest_release_date": "July 4, 2018 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 118,
+      "genres": "Action Adventure Comedy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:01:13.792Z"
+  },
+  "aquaman-2018": {
+    "title": "Aquaman",
+    "year": "2018",
+    "release_date": "2018-12-21",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt1477834",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1477834/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt1477834",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt9663764",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjQ1ZTUzMWMtY2VkNS00ZDRjLWEwODYtYmFkMWJiNTQxMDUzXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 335104314,
+      "international": 816924079,
+      "worldwide": 1152028393,
+      "opening_weekend_domestic": 67873522,
+      "budget": null,
+      "earliest_release_date": "December 7, 2018 (China)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 143,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:01:29.276Z"
+  },
+  "captain-marvel-2019": {
+    "title": "Captain Marvel",
+    "year": "2019",
+    "release_date": "2019-03-08",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt4154664",
+    "bom_url": "https://www.boxofficemojo.com/title/tt4154664/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZDI1NGU2ODAtNzBiNy00MWY5LWIyMGEtZjUxZjUwZmZiNjBlXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt4154664",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZDI1NGU2ODAtNzBiNy00MWY5LWIyMGEtZjUxZjUwZmZiNjBlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt10676048",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt1843866",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 426829839,
+      "international": 704586607,
+      "worldwide": 1131416446,
+      "opening_weekend_domestic": 153433423,
+      "budget": 160000000,
+      "earliest_release_date": "March 6, 2019 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 123,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:01:42.110Z"
+  },
+  "shazam-2019": {
+    "title": "Shazam!",
+    "year": "2019",
+    "release_date": "2019-04-05",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt0448115",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0448115/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZWM1YjdmOGQtNGYyMC00NjMwLTk1OWUtMGYzM2NjYjliYzYyXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt0448115",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZWM1YjdmOGQtNGYyMC00NjMwLTk1OWUtMGYzM2NjYjliYzYyXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt10151854",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0805184",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIyNmJjMDYtNTFjOS00NDA0LWI1NTMtNjc5NDRkZWQ2NjMyXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt35613198",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2YwYTFiM2YtNjY3Ny00OWZiLTlkOTctYjk4Mjk3YTg5MzkyXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 140480049,
+      "international": 227318962,
+      "worldwide": 367799011,
+      "opening_weekend_domestic": 53505326,
+      "budget": 100000000,
+      "earliest_release_date": "April 3, 2019 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 132,
+      "genres": "Action Adventure Comedy Fantasy",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:01:55.699Z"
+  },
+  "avengers-endgame-2019": {
+    "title": "Avengers: Endgame",
+    "year": "2019",
+    "release_date": "2019-04-26",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt4154796",
+    "bom_url": "https://www.boxofficemojo.com/title/tt4154796/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWEyNDM2ZmQtMmFkNi00MTQ1LTk1MjItMzdlZGJlYmIyYzZlXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt4154796",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWEyNDM2ZmQtMmFkNi00MTQ1LTk1MjItMzdlZGJlYmIyYzZlXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 858373000,
+      "international": 1941066100,
+      "worldwide": 2799439100,
+      "opening_weekend_domestic": 357115007,
+      "budget": 356000000,
+      "earliest_release_date": "April 24, 2019 (22 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 181,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:02:10.053Z"
+  },
+  "spider-man-far-from-home-2019": {
+    "title": "Spider-Man: Far From Home",
+    "year": "2019",
+    "release_date": "2019-07-02",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt6320628",
+    "bom_url": "https://www.boxofficemojo.com/title/tt6320628/",
+    "matchedText": "Spider-Man: Far from Home (2019)",
+    "candidates": [
+      {
+        "id": "tt6320628",
+        "text": "Spider-Man: Far from Home (2019)",
+        "score": 120
+      },
+      {
+        "id": "tt0097332",
+        "text": "Far from Home (1989)",
+        "score": 60
+      },
+      {
+        "id": "tt10872600",
+        "text": "Spider-Man: No Way Home (2021)",
+        "score": 4
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 391283774,
+      "international": 741414082,
+      "worldwide": 1132723226,
+      "opening_weekend_domestic": 92579212,
+      "budget": 160000000,
+      "earliest_release_date": "June 28, 2019 (China, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 129,
+      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-05T19:12:31.955Z"
+  },
+  "birds-of-prey-and-the-fantabulous-emancipation-of-one-harley-quinn-2020": {
+    "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+    "year": "2020",
+    "release_date": "2020-02-07",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt7713068",
+    "bom_url": "https://www.boxofficemojo.com/title/tt7713068/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTgwNWEwOWMtNGIxMy00YzU5LTk2MzgtMjAzMmM1MjZiY2RiXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt7713068",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTgwNWEwOWMtNGIxMy00YzU5LTk2MzgtMjAzMmM1MjZiY2RiXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 84172791,
+      "international": 121200000,
+      "worldwide": 205537933,
+      "opening_weekend_domestic": 33010017,
+      "budget": 84500000,
+      "earliest_release_date": "February 5, 2020 (APAC, EMEA)",
+      "mpaa": "R",
+      "running_time_minutes": 109,
+      "genres": "Action Comedy Crime",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:02:30.528Z"
+  },
+  "wonder-woman-1984-2020": {
+    "title": "Wonder Woman 1984",
+    "year": "2020",
+    "release_date": "2020-12-25",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt7126948",
+    "bom_url": "https://www.boxofficemojo.com/title/tt7126948/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTdkYjI0M2ItMmUxZi00YjU1LTgwM2ItODgxNDY0ODZhZDQzXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt7126948",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTdkYjI0M2ItMmUxZi00YjU1LTgwM2ItODgxNDY0ODZhZDQzXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0451279",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 46801036,
+      "international": 122800000,
+      "worldwide": 169601036,
+      "opening_weekend_domestic": 16701957,
+      "budget": null,
+      "earliest_release_date": "December 16, 2020 (EMEA, LATAM)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 151,
+      "genres": "Action Adventure Fantasy",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:02:43.675Z"
+  },
+  "black-widow-2021": {
+    "title": "Black Widow",
+    "year": "2021",
+    "release_date": "2021-07-09",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt3480822",
+    "bom_url": "https://www.boxofficemojo.com/title/tt3480822/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTMyZTA0ZTItYjY3Yi00ODNjLWExYTgtYzgxZTk0NTg0Y2FlXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt3480822",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTMyZTA0ZTItYjY3Yi00ODNjLWExYTgtYzgxZTk0NTg0Y2FlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0090738",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTFjOGViZjYtOWE4Mi00NTQyLTkyOTMtNjFmMzhjZWM5NzQ3XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt9272572",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmM4MWUyZGEtYTdmNC00OTZkLWJmZjItNWM0OGI5ZmFiNDEwXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0257727",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmM3NGU4ODgtM2VmZi00ZjU4LWI4MjktM2VjZDQzY2UzMDM3XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt4920094",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODRkNTc2NGQtMTI5Mi00MWE2LTlmNjItOGUwZDgwMjBjMzJlXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 183651655,
+      "international": 196100000,
+      "worldwide": 379751655,
+      "opening_weekend_domestic": 80366312,
+      "budget": null,
+      "earliest_release_date": "July 7, 2021 (EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 134,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:02:57.292Z"
+  },
+  "the-suicide-squad-2021": {
+    "title": "The Suicide Squad",
+    "year": "2021",
+    "release_date": "2021-08-05",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt6334354",
+    "bom_url": "https://www.boxofficemojo.com/title/tt6334354/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt6334354",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt1386697",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt4232610",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTliYjFmMDMtODdkZC00OTZjLTk1M2UtMWZiMmIxNDhlN2EyXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt1547084",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTExNDI2NDcxNTNeQTJeQWpwZ15BbWU3MDg1Mjg2OTY@._V1_SY96_CR0,0,66"
+      },
+      {
+        "id": "tt1655413",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMDQ0MjJjYmItZjU2YS00M2NiLTkxZTYtNWVlNjMwYWRkZjhlXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 55817425,
+      "international": 112900000,
+      "worldwide": 168717425,
+      "opening_weekend_domestic": 26205415,
+      "budget": 185000000,
+      "earliest_release_date": "May 8, 2021 (Italy)",
+      "mpaa": "R",
+      "running_time_minutes": 132,
+      "genres": "Action Adventure Comedy Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:03:11.833Z"
+  },
+  "shang-chi-and-the-legend-of-the-ten-rings-2021": {
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "year": "2021",
+    "release_date": "2021-09-03",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt9376612",
+    "bom_url": "https://www.boxofficemojo.com/title/tt9376612/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmY5MDcyNzAtYzg3MC00MGNlLTg3OGItNmRjYThkZGVlNzAyXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt9376612",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmY5MDcyNzAtYzg3MC00MGNlLTg3OGItNmRjYThkZGVlNzAyXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 224543292,
+      "international": 207700000,
+      "worldwide": 432243292,
+      "opening_weekend_domestic": 75388688,
+      "budget": null,
+      "earliest_release_date": "September 1, 2021 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 132,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:03:26.132Z"
+  },
+  "eternals-2021": {
+    "title": "Eternals",
+    "year": "2021",
+    "release_date": "2021-11-05",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt9032400",
+    "bom_url": "https://www.boxofficemojo.com/title/tt9032400/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt9032400",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0338013",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0885520",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMDQ3ZGNlZjMtMjM1Yy00OTg3LThhNTItZTQxMDQ5OTJkYTNiXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt3914324",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTgwOTYwNzU3OV5BMl5BanBnXkFtZTgwNzYyNjc5NTE@._V1_SY96_CR0,0,66"
+      },
+      {
+        "id": "tt20199286",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTI2MjFkZDEtYjJiMy00MjUwLTgyZTEtYWI5OTYyOTE5MjliXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 164870234,
+      "international": 237194665,
+      "worldwide": 402064899,
+      "opening_weekend_domestic": 71297219,
+      "budget": null,
+      "earliest_release_date": "November 3, 2021 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 156,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:03:41.382Z"
+  },
+  "spider-man-no-way-home-2021": {
+    "title": "Spider-Man: No Way Home",
+    "year": "2021",
+    "release_date": "2021-12-17",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt10872600",
+    "bom_url": "https://www.boxofficemojo.com/title/tt10872600/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt10872600",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 814866759,
+      "international": 1106533944,
+      "worldwide": 1921426073,
+      "opening_weekend_domestic": 260138569,
+      "budget": 200000000,
+      "earliest_release_date": "December 15, 2021 (14 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 148,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-05T19:03:53.150Z"
+  },
+  "doctor-strange-in-the-multiverse-of-madness-2022": {
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "year": "2022",
+    "release_date": "2022-05-06",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt9419884",
+    "bom_url": "https://www.boxofficemojo.com/title/tt9419884/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BN2YxZGRjMzYtZjE1ZC00MDI0LThjZmQtZTZmMzVmMmQ2NzBmXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt9419884",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BN2YxZGRjMzYtZjE1ZC00MDI0LThjZmQtZTZmMzVmMmQ2NzBmXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 411331607,
+      "international": 544444197,
+      "worldwide": 955775804,
+      "opening_weekend_domestic": 187420998,
+      "budget": 414900000,
+      "earliest_release_date": "May 4, 2022 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 126,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:04:07.476Z"
+  },
+  "thor-love-and-thunder-2022": {
+    "title": "Thor: Love and Thunder",
+    "year": "2022",
+    "release_date": "2022-07-08",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt10648342",
+    "bom_url": "https://www.boxofficemojo.com/title/tt10648342/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt10648342",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 343256830,
+      "international": 417671251,
+      "worldwide": 760928081,
+      "opening_weekend_domestic": 144165107,
+      "budget": null,
+      "earliest_release_date": "July 6, 2022 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 118,
+      "genres": "Action Adventure Comedy Romance Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:04:19.231Z"
+  },
+  "black-adam-2022": {
+    "title": "Black Adam",
+    "year": "2022",
+    "release_date": "2022-10-21",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt6443346",
+    "bom_url": "https://www.boxofficemojo.com/title/tt6443346/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmM3OTM4NDktMmI2NS00OWU0LTg4OTQtNjZhMmFkYjhmOGY1XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt6443346",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmM3OTM4NDktMmI2NS00OWU0LTg4OTQtNjZhMmFkYjhmOGY1XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 168152111,
+      "international": 225300000,
+      "worldwide": 393452111,
+      "opening_weekend_domestic": 67004323,
+      "budget": null,
+      "earliest_release_date": "October 14, 2022 (Iceland)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 125,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:04:33.516Z"
+  },
+  "black-panther-wakanda-forever-2022": {
+    "title": "Black Panther: Wakanda Forever",
+    "year": "2022",
+    "release_date": "2022-11-11",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt9114286",
+    "bom_url": "https://www.boxofficemojo.com/title/tt9114286/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWY5NDY1ZjItZDQxMy00MTAzLTgyOGQtNTQxYjFiMzZjMjUyXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt9114286",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWY5NDY1ZjItZDQxMy00MTAzLTgyOGQtNTQxYjFiMzZjMjUyXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 453829060,
+      "international": 405379776,
+      "worldwide": 859208836,
+      "opening_weekend_domestic": 181339761,
+      "budget": 250000000,
+      "earliest_release_date": "November 4, 2022 (Iceland)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 161,
+      "genres": "Action Adventure Drama Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:04:48.294Z"
+  },
+  "ant-man-and-the-wasp-quantumania-2023": {
+    "title": "Ant-Man and the Wasp: Quantumania",
+    "year": "2023",
+    "release_date": "2023-02-17",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt10954600",
+    "bom_url": "https://www.boxofficemojo.com/title/tt10954600/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt10954600",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 214504909,
+      "international": 261566271,
+      "worldwide": 476071180,
+      "opening_weekend_domestic": 106109650,
+      "budget": null,
+      "earliest_release_date": "February 15, 2023 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 124,
+      "genres": "Action Adventure Comedy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:05:02.750Z"
+  },
+  "shazam-fury-of-the-gods-2023": {
+    "title": "Shazam! Fury of the Gods",
+    "year": "2023",
+    "release_date": "2023-03-17",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt10151854",
+    "bom_url": "https://www.boxofficemojo.com/title/tt10151854/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt10151854",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 57638006,
+      "international": 76500000,
+      "worldwide": 134138006,
+      "opening_weekend_domestic": 30111158,
+      "budget": null,
+      "earliest_release_date": "March 15, 2023 (APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 130,
+      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:05:16.903Z"
+  },
+  "guardians-of-the-galaxy-vol-3-2023": {
+    "title": "Guardians of the Galaxy Vol. 3",
+    "year": "2023",
+    "release_date": "2023-05-05",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt6791350",
+    "bom_url": "https://www.boxofficemojo.com/title/tt6791350/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt6791350",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt3896198",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt2015381",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 358995815,
+      "international": 486559962,
+      "worldwide": 845555777,
+      "opening_weekend_domestic": 118414021,
+      "budget": 250000000,
+      "earliest_release_date": "April 13, 2023 (Italy)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 150,
+      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:05:31.457Z"
+  },
+  "the-flash-2023": {
+    "title": "The Flash",
+    "year": "2023",
+    "release_date": "2023-06-16",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt0439572",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0439572/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmE2NzBjNGUtNTJiMy00N2UxLWEyYzMtYzFjODFhMGZlOTgzXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt0439572",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmE2NzBjNGUtNTJiMy00N2UxLWEyYzMtYzFjODFhMGZlOTgzXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt3623726",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTY1NzIxNzkzM15BMl5BanBnXkFtZTgwMzAzNjIzNjE@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt2704212",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjlmODhkZmUtYzJmYy00NzVhLWFiN2YtYzU5NTlkNWY1ZTYyXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0800320",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTYxNjg4MzU5OV5BMl5BanBnXkFtZTcwOTA3NTUwMw@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt32915652",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWJjZmEyZDEtYmRhNS00OTJlLWEzNjMtYzQ1ZWY5ZTA5NzYxXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 108133313,
+      "international": 163300000,
+      "worldwide": 271433313,
+      "opening_weekend_domestic": 55043679,
+      "budget": null,
+      "earliest_release_date": "June 14, 2023 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 144,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:05:46.012Z"
+  },
+  "blue-beetle-2023": {
+    "title": "Blue Beetle",
+    "year": "2023",
+    "release_date": "2023-08-18",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt9362930",
+    "bom_url": "https://www.boxofficemojo.com/title/tt9362930/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTEyYzQzOTMtMWExNi00OWNjLTgwMDUtNzY0YjhmZDBiMTk2XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt9362930",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTEyYzQzOTMtMWExNi00OWNjLTgwMDUtNzY0YjhmZDBiMTk2XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 72488072,
+      "international": 58300000,
+      "worldwide": 130788072,
+      "opening_weekend_domestic": 25030225,
+      "budget": null,
+      "earliest_release_date": "August 16, 2023 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 127,
+      "genres": "Action Adventure Sci-Fi Thriller",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:05:58.660Z"
+  },
+  "the-marvels-2023": {
+    "title": "The Marvels",
+    "year": "2023",
+    "release_date": "2023-11-10",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt10676048",
+    "bom_url": "https://www.boxofficemojo.com/title/tt10676048/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt10676048",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 84500223,
+      "international": 121636602,
+      "worldwide": 206136825,
+      "opening_weekend_domestic": 46110859,
+      "budget": null,
+      "earliest_release_date": "November 8, 2023 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 105,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:06:12.791Z"
+  },
+  "aquaman-and-the-lost-kingdom-2023": {
+    "title": "Aquaman and the Lost Kingdom",
+    "year": "2023",
+    "release_date": "2023-12-20",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt9663764",
+    "bom_url": "https://www.boxofficemojo.com/title/tt9663764/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjQ1ZTUzMWMtY2VkNS00ZDRjLWEwODYtYmFkMWJiNTQxMDUzXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt9663764",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjQ1ZTUzMWMtY2VkNS00ZDRjLWEwODYtYmFkMWJiNTQxMDUzXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt10187800",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTJmNjg1NTAtMDFjNi00NGEzLWI0YWYtZDA1OWNhM2Q2MzQ2XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt7547410",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjUwNjJmOGEtOGI0YS00ZjAyLWJjMTYtMjMzZjNhYWQxODY1XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt1206585",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOWQ4ZDk4NWItNWZhNi00ZDU3LThhYTMtMGI4NzdlNjUxZjFlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0082971",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGNhMjg2ZjgtYzk4Ni00MTViLTg1MmUtYzM2MDZiYjZlMmU3XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 124481226,
+      "international": 315700000,
+      "worldwide": 440181226,
+      "opening_weekend_domestic": 27686211,
+      "budget": null,
+      "earliest_release_date": "December 20, 2023 (9 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 124,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:06:26.998Z"
+  },
+  "deadpool-wolverine-2024": {
+    "title": "Deadpool & Wolverine",
+    "year": "2024",
+    "release_date": "2024-07-26",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt6263850",
+    "bom_url": "https://www.boxofficemojo.com/title/tt6263850/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt6263850",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 636745858,
+      "international": 701327787,
+      "worldwide": 1338073645,
+      "opening_weekend_domestic": 211435291,
+      "budget": 537000000,
+      "earliest_release_date": "July 18, 2024 (Slovakia)",
+      "mpaa": "R",
+      "running_time_minutes": 128,
+      "genres": "Action Adventure Comedy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:06:41.175Z"
+  },
+  "captain-america-brave-new-world-2025": {
+    "title": "Captain America: Brave New World",
+    "year": "2025",
+    "release_date": "2025-02-14",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt14513804",
+    "bom_url": "https://www.boxofficemojo.com/title/tt14513804/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt14513804",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 200500001,
+      "international": 214601576,
+      "worldwide": 415101577,
+      "opening_weekend_domestic": 88842603,
+      "budget": null,
+      "earliest_release_date": "February 12, 2025 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 118,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:06:54.978Z"
+  },
+  "thunderbolts-2025": {
+    "title": "Thunderbolts*",
+    "year": "2025",
+    "release_date": "2025-05-02",
+    "universe": "MCU",
+    "source": "addition",
+    "bom_id": "tt20969586",
+    "bom_url": "https://www.boxofficemojo.com/title/tt20969586/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 190274328,
+      "international": 192162589,
+      "worldwide": 382436917,
+      "opening_weekend_domestic": 74300608,
+      "budget": null,
+      "earliest_release_date": "January 1, 2025 (Portugal)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 127,
+      "genres": "Action Adventure Crime Drama Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:07:01.135Z"
+  },
+  "the-fantastic-four-first-steps-2025": {
+    "title": "The Fantastic Four: First Steps",
+    "year": "2025",
+    "release_date": "2025-07-25",
+    "universe": "MCU",
+    "source": "addition",
+    "bom_id": "tt10676052",
+    "bom_url": "https://www.boxofficemojo.com/title/tt10676052/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt10676052",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 274286610,
+      "international": 247572118,
+      "worldwide": 521858728,
+      "opening_weekend_domestic": 117644828,
+      "budget": null,
+      "earliest_release_date": "July 23, 2025 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 115,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:07:13.626Z"
+  },
+  "spider-man-brand-new-day-2026": {
+    "title": "Spider-Man: Brand New Day",
+    "year": "2026",
+    "release_date": "2026-07-31",
+    "universe": "MCU",
+    "source": "addition",
+    "bom_id": "tt22084616",
+    "bom_url": "https://www.boxofficemojo.com/title/tt22084616/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt22084616",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 899762495,
+      "international": 1441505369,
+      "worldwide": 2341267864,
+      "opening_weekend_domestic": 360091572,
+      "budget": null,
+      "earliest_release_date": "July 29, 2026 (6 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 145,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-05T19:07:27.555Z"
+  },
+  "avengers-doomsday-2026": {
+    "title": "Avengers: Doomsday",
+    "year": "2026",
+    "release_date": "2026-12-18",
+    "universe": "MCU",
+    "source": "addition",
+    "bom_id": "tt21357150",
+    "bom_url": "https://www.boxofficemojo.com/title/tt21357150/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "unreleased-or-no-gross",
+    "parsed": {
+      "domestic": null,
+      "international": null,
+      "worldwide": null,
+      "opening_weekend_domestic": null,
+      "budget": null,
+      "earliest_release_date": "December 18, 2026 (Domestic)",
+      "mpaa": null,
+      "running_time_minutes": 165,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T19:12:44.540Z"
+  },
+  "superman-2025": {
+    "title": "Superman",
+    "year": "2025",
+    "release_date": "2025-07-11",
+    "universe": "DCU",
+    "source": "addition",
+    "bom_id": "tt5950044",
+    "bom_url": "https://www.boxofficemojo.com/title/tt5950044/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt5950044",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0770828",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0078346",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMzFlZDJjMDAtZDYxZS00NzZhLTk2ODMtZWRlODA3Njk3ZTdmXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0348150",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjg1ZGRiMTEtYmU4Zi00NTkwLWJmODQtMjU3MTAyMGQ2OGZlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0081573",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzg5ZjJkNGEtNzhjNy00YzI4LTlkZjItNTViNmYxNGZlZWE2XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 354223803,
+      "international": 264500000,
+      "worldwide": 618723803,
+      "opening_weekend_domestic": 125021735,
+      "budget": 225000000,
+      "earliest_release_date": "July 9, 2025 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 129,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:07:58.647Z"
+  },
+  "supergirl-2026": {
+    "title": "Supergirl",
+    "year": "2026",
+    "release_date": "2026-06-26",
+    "universe": "DCU",
+    "source": "addition",
+    "bom_id": "tt8814476",
+    "bom_url": "https://www.boxofficemojo.com/title/tt8814476/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmJkOTE0MWUtY2E5OS00NzEyLWI4NjEtYzQzYzFmMjk5ODE3XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt8814476",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmJkOTE0MWUtY2E5OS00NzEyLWI4NjEtYzQzYzFmMjk5ODE3XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0088206",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODQzZTdjMmYtOWFiYS00NWRlLWI5NTYtZTExNGYyMTFmZTUzXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 72366532,
+      "international": 54000000,
+      "worldwide": 126366532,
+      "opening_weekend_domestic": 37102018,
+      "budget": null,
+      "earliest_release_date": "June 24, 2026 (APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 108,
+      "genres": "Action Adventure Drama Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:08:10.690Z"
+  },
+  "clayface-2026": {
+    "title": "Clayface",
+    "year": "2026",
+    "release_date": "2026-09-11",
+    "universe": "DCU",
+    "source": "addition",
+    "bom_id": "tt34890576",
+    "bom_url": "https://www.boxofficemojo.com/title/tt34890576/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "unreleased-or-no-gross",
+    "parsed": {
+      "domestic": null,
+      "international": null,
+      "worldwide": null,
+      "opening_weekend_domestic": null,
+      "budget": null,
+      "earliest_release_date": "October 23, 2026 (Domestic)",
+      "mpaa": null,
+      "running_time_minutes": null,
+      "genres": "Horror Sci-Fi Thriller",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:12:44.542Z"
+  },
+  "joker-2019": {
+    "title": "Joker",
+    "year": "2019",
+    "release_date": "2019-10-04",
+    "universe": "Elseworlds",
+    "source": "addition",
+    "bom_id": "tt7286456",
+    "bom_url": "https://www.boxofficemojo.com/title/tt7286456/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 335477657,
+      "international": 743480625,
+      "worldwide": 1078958629,
+      "opening_weekend_domestic": 96202337,
+      "budget": 55000000,
+      "earliest_release_date": "October 2, 2019 (APAC, LATAM)",
+      "mpaa": "R",
+      "running_time_minutes": 122,
+      "genres": "Drama",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:12:38.186Z"
+  },
+  "joker-folie-a-deux-2024": {
+    "title": "Joker: Folie a Deux",
+    "year": "2024",
+    "release_date": "2024-10-04",
+    "universe": "Elseworlds",
+    "source": "addition",
+    "bom_id": "tt11315808",
+    "bom_url": "https://www.boxofficemojo.com/title/tt11315808/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 58300287,
+      "international": 149200000,
+      "worldwide": 207500287,
+      "opening_weekend_domestic": 37678467,
+      "budget": null,
+      "earliest_release_date": "October 1, 2024 (South Korea)",
+      "mpaa": "R",
+      "running_time_minutes": 138,
+      "genres": "Drama Musical Thriller",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T19:12:44.536Z"
   }
 }

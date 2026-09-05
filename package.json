@@ -7,7 +7,10 @@
   "scripts": {
     "parse:baseline": "node scripts/parse-baseline.mjs",
     "scrape:bom": "node scripts/scrape-bom.mjs",
+    "validate": "node scripts/validate-matches.mjs",
+    "promote": "node scripts/promote.mjs",
     "reconcile": "node scripts/reconcile.mjs",
+    "enrich": "node scripts/enrich-omdb.mjs",
     "build": "node scripts/build.mjs"
   }
 }

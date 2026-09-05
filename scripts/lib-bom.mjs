@@ -41,23 +41,53 @@ const money = (s) => {
   return Number.isFinite(n) && n > 0 ? n : null;
 };
 
+const normTitle = (s) =>
+  s.toLowerCase().replace(/&amp;/g, "&").replace(/[’']/g, "").replace(/[^a-z0-9]+/g, " ").replace(/\bthe\b/g, "").trim().replace(/\s+/g, " ");
+
+// Pull the visible result rows from a BOM search page: the bold title anchor plus
+// its "(YYYY)" span. Ignores the sibling poster-image anchor.
+function parseSearchRows(doc) {
+  const rows = [];
+  const re = /<a class="a-size-medium a-link-normal[^"]*" href="\/(?:title|release)\/(tt\d+)\/[^"]*">([^<]+)<\/a>\s*<span class="a-color-secondary">\s*\((\d{4})\)/g;
+  let m;
+  while ((m = re.exec(doc))) rows.push({ id: m[1], title: m[2].trim(), year: Number(m[3]) });
+  return rows;
+}
+
 // Resolve a film title+year to a Box Office Mojo /title/ttXXXX id via site search.
-// Returns { id, matchedText } or null. `year` is used to disambiguate.
+// Returns { id, matchedText, candidates } or null. Retries once with punctuation
+// stripped — BOM search returns zero results for some colon'd titles.
 export async function resolveTitleId(title, year, html) {
-  const doc = html ?? (await fetchText("https://www.boxofficemojo.com/search/?q=" + encodeURIComponent(title)));
-  if (!doc) return null;
-  const matches = [
-    ...doc.matchAll(/href="(\/title\/(tt\d+)\/)[^"]*"([\s\S]{0,240})/g),
-  ].map((m) => ({ id: m[2], text: strip(m[3]).slice(0, 120) }));
-  // De-dupe (search lists an image link then a text link per result).
-  const seen = new Set();
-  const uniq = matches.filter((m) => (seen.has(m.id) ? false : seen.add(m.id)));
-  if (!uniq.length) return null;
-  const wantYear = String(year);
-  // Prefer a result whose blurb contains the target year; else first result.
-  const byYear = uniq.find((m) => m.text.includes(`(${wantYear})`));
-  const chosen = byYear || uniq[0];
-  return { id: chosen.id, matchedText: chosen.text, candidates: uniq.slice(0, 5) };
+  const want = normTitle(title);
+  const wantYear = Number(year);
+
+  const tryQuery = async (q, preFetched) => {
+    const doc = preFetched ?? (await fetchText("https://www.boxofficemojo.com/search/?q=" + encodeURIComponent(q)));
+    return doc ? parseSearchRows(doc) : [];
+  };
+
+  let rows = await tryQuery(title, html);
+  if (!rows.length) {
+    const cleaned = title.replace(/[:–—]/g, " ").replace(/\s+/g, " ").trim();
+    if (cleaned !== title) rows = await tryQuery(cleaned);
+  }
+  if (!rows.length) return null;
+
+  const scored = rows.map((r) => {
+    const t = normTitle(r.title);
+    let score = 0;
+    if (t === want) score += 100;
+    else if (t.includes(want) || want.includes(t)) score += 60;
+    if (Number.isFinite(wantYear) && Number.isFinite(r.year)) score += Math.max(0, 20 - Math.abs(r.year - wantYear) * 8);
+    return { ...r, score };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  const chosen = scored[0];
+  return {
+    id: chosen.id,
+    matchedText: `${chosen.title} (${chosen.year})`,
+    candidates: scored.slice(0, 5).map((c) => ({ id: c.id, text: `${c.title} (${c.year})`, score: c.score })),
+  };
 }
 
 // Parse the summary box of a /title/ page.

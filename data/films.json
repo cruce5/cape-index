@@ -1,14 +1,33 @@
 {
   "meta": {
-    "generated": "2026-09-05T18:52:27.583Z",
+    "generated": "2026-09-05T19:13:39.765Z",
     "currency": "USD",
-    "grosses": "nominal lifetime gross unless a film is still in release (then as-of dated)",
-    "universes": [
-      "MCU",
-      "DCEU",
-      "DCU"
+    "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
+    "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
+    "universes": {
+      "MCU": 38,
+      "DCEU": 15,
+      "DCU": 2,
+      "Elseworlds": 2
+    },
+    "count": 57,
+    "held_out": [
+      {
+        "title": "Avengers: Doomsday",
+        "release_date": "2026-12-18",
+        "universe": "MCU",
+        "bom_url": "https://www.boxofficemojo.com/title/tt21357150/",
+        "reason": "no worldwide gross on Box Office Mojo (unreleased)"
+      },
+      {
+        "title": "Clayface",
+        "release_date": "2026-09-11",
+        "universe": "DCU",
+        "bom_url": "https://www.boxofficemojo.com/title/tt34890576/",
+        "reason": "no worldwide gross on Box Office Mojo (unreleased)"
+      }
     ],
-    "source_note": "Baseline parsed from the legacy Tableau Public sheet; box_office/budget/scores pending Box Office Mojo + score-source verification."
+    "scores_source": "OMDb (pending enrich-omdb.mjs)"
   },
   "films": [
     {
@@ -17,28 +36,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 319034126,
-        "international": 266762121,
-        "worldwide": 585796247
+      "bom": {
+        "id": "tt0371746",
+        "url": "https://www.boxofficemojo.com/title/tt0371746/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 319034126,
+        "international": 266762121,
+        "worldwide": 585796247,
+        "opening_weekend_domestic": 98618668,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 477284998,
+        "international": 399084449,
+        "worldwide": 876369448
+      },
+      "budget": 140000000,
+      "runtime_minutes": 126,
+      "mpaa": "PG-13",
+      "distributor": "Paramount Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 319034126,
+        "international": 266762121,
+        "worldwide": 585796247
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 30, 2008 (29 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -47,28 +86,47 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 134806913,
-        "international": 129964083,
-        "worldwide": 264770996
+      "bom": {
+        "id": "tt0800080",
+        "url": "https://www.boxofficemojo.com/title/tt0800080/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 134806913,
+        "international": 129964083,
+        "worldwide": 264770996,
+        "opening_weekend_domestic": 55414050,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 201675344,
+        "international": 194430320,
+        "worldwide": 396105664
+      },
+      "budget": 150000000,
+      "runtime_minutes": 112,
+      "mpaa": "PG-13",
+      "distributor": "Universal Pictures",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 134806913,
+        "international": 129964083,
+        "worldwide": 264770996
+      },
+      "bom_meta": {
+        "earliest_release_date": "June 11, 2008 (Ukraine)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -77,28 +135,47 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 312433331,
-        "international": 311500000,
-        "worldwide": 623933331
+      "bom": {
+        "id": "tt1228705",
+        "url": "https://www.boxofficemojo.com/title/tt1228705/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 312433331,
+        "international": 311500000,
+        "worldwide": 623933331,
+        "opening_weekend_domestic": 128122480,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 461508860,
+        "international": 460130196,
+        "worldwide": 921639056
+      },
+      "budget": 200000000,
+      "runtime_minutes": 124,
+      "mpaa": "PG-13",
+      "distributor": "Paramount Pictures",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 312433331,
+        "international": 311500000,
+        "worldwide": 623933331
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 28, 2010 (EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -107,28 +184,47 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 181030624,
-        "international": 268295994,
-        "worldwide": 449326618
+      "bom": {
+        "id": "tt0800369",
+        "url": "https://www.boxofficemojo.com/title/tt0800369/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 181030624,
+        "international": 268295994,
+        "worldwide": 449326618,
+        "opening_weekend_domestic": 65723338,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 259225674,
+        "international": 384184778,
+        "worldwide": 643410452
+      },
+      "budget": 150000000,
+      "runtime_minutes": 115,
+      "mpaa": "PG-13",
+      "distributor": "Paramount Pictures",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 181030624,
+        "international": 268295994,
+        "worldwide": 449326618
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 21, 2011 (Australia)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -137,28 +233,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 176654505,
-        "international": 193915269,
-        "worldwide": 370569774
+      "bom": {
+        "id": "tt0458339",
+        "url": "https://www.boxofficemojo.com/title/tt0458339/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 176654505,
+        "international": 193915269,
+        "worldwide": 370569774,
+        "opening_weekend_domestic": 65058524,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 252959318,
+        "international": 277675762,
+        "worldwide": 530635080
+      },
+      "budget": 140000000,
+      "runtime_minutes": 124,
+      "mpaa": "PG-13",
+      "distributor": "Paramount Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 176654505,
+        "international": 193915269,
+        "worldwide": 370569774
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 22, 2011 (Domestic, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -167,28 +283,47 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 623357910,
-        "international": 897180626,
-        "worldwide": 1520538536
+      "bom": {
+        "id": "tt0848228",
+        "url": "https://www.boxofficemojo.com/title/tt0848228/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 623357910,
+        "international": 897180626,
+        "worldwide": 1520538536,
+        "opening_weekend_domestic": 207438708,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 874515810,
+        "international": 1258664772,
+        "worldwide": 2133180582
+      },
+      "budget": 220000000,
+      "runtime_minutes": 143,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 623357910,
+        "international": 897180626,
+        "worldwide": 1520538536
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 25, 2012 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -197,28 +332,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 409013994,
-        "international": 806563211,
-        "worldwide": 1215577205
+      "bom": {
+        "id": "tt1300854",
+        "url": "https://www.boxofficemojo.com/title/tt1300854/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 409013994,
+        "international": 806563211,
+        "worldwide": 1215577205,
+        "opening_weekend_domestic": 174144585,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 565526717,
+        "international": 1115201562,
+        "worldwide": 1680728279
+      },
+      "budget": 200000000,
+      "runtime_minutes": 130,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 409013994,
+        "international": 806563211,
+        "worldwide": 1215577205
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 24, 2013 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -227,28 +382,48 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 291045518,
-        "international": 377000000,
-        "worldwide": 668045518
+      "bom": {
+        "id": "tt0770828",
+        "url": "https://www.boxofficemojo.com/title/tt0770828/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 291045518,
+        "international": 379100000,
+        "worldwide": 670145518,
+        "opening_weekend_domestic": 116619362,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 402416589,
+        "international": 524165876,
+        "worldwide": 926582465
+      },
+      "budget": 225000000,
+      "runtime_minutes": 143,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 291045518,
+        "international": 377000000,
+        "worldwide": 668045518
+      },
+      "bom_meta": {
+        "earliest_release_date": "June 12, 2013 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -257,28 +432,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 206362140,
-        "international": 438421000,
-        "worldwide": 644783140
+      "bom": {
+        "id": "tt1981115",
+        "url": "https://www.boxofficemojo.com/title/tt1981115/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 206362140,
+        "international": 438421000,
+        "worldwide": 644783140,
+        "opening_weekend_domestic": 85737841,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 285328388,
+        "international": 606186567,
+        "worldwide": 891514955
+      },
+      "budget": 170000000,
+      "runtime_minutes": 112,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 206362140,
+        "international": 438421000,
+        "worldwide": 644783140
+      },
+      "bom_meta": {
+        "earliest_release_date": "October 30, 2013 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -287,28 +483,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 259766572,
-        "international": 454654931,
-        "worldwide": 714421503
+      "bom": {
+        "id": "tt1843866",
+        "url": "https://www.boxofficemojo.com/title/tt1843866/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 259766572,
+        "international": 454654931,
+        "worldwide": 714421503,
+        "opening_weekend_domestic": 95023721,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 353435104,
+        "international": 618597735,
+        "worldwide": 972032839
+      },
+      "budget": 170000000,
+      "runtime_minutes": 136,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi",
+        "Thriller"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 259766572,
+        "international": 454654931,
+        "worldwide": 714421503
+      },
+      "bom_meta": {
+        "earliest_release_date": "March 26, 2014 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -317,28 +534,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 333718600,
-        "international": 439631547,
-        "worldwide": 773350147
+      "bom": {
+        "id": "tt2015381",
+        "url": "https://www.boxofficemojo.com/title/tt2015381/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 333718600,
+        "international": 439631547,
+        "worldwide": 773350376,
+        "opening_weekend_domestic": 94320883,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 454053296,
+        "international": 598157109,
+        "worldwide": 1052210716
+      },
+      "budget": 170000000,
+      "runtime_minutes": 121,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 333718600,
+        "international": 439631547,
+        "worldwide": 773350147
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 30, 2014 (Iceland)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -347,28 +585,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 459005868,
-        "international": 946012180,
-        "worldwide": 1405018048
+      "bom": {
+        "id": "tt2395427",
+        "url": "https://www.boxofficemojo.com/title/tt2395427/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 459005868,
+        "international": 946012180,
+        "worldwide": 1405018048,
+        "opening_weekend_domestic": 191271109,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 623777156,
+        "international": 1285606194,
+        "worldwide": 1909383349
+      },
+      "budget": 250000000,
+      "runtime_minutes": 141,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 459005868,
+        "international": 946012180,
+        "worldwide": 1405018048
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 22, 2015 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -377,28 +635,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 180202163,
-        "international": 339109802,
-        "worldwide": 519311965
+      "bom": {
+        "id": "tt0478970",
+        "url": "https://www.boxofficemojo.com/title/tt0478970/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 180202163,
+        "international": 339109802,
+        "worldwide": 519311965,
+        "opening_weekend_domestic": 57225526,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 244890099,
+        "international": 460841489,
+        "worldwide": 705731589
+      },
+      "budget": 130000000,
+      "runtime_minutes": 117,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 180202163,
+        "international": 339109802,
+        "worldwide": 519311965
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 10, 2015 (Bulgaria)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -407,28 +685,46 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 330360194,
-        "international": 543277334,
-        "worldwide": 873637528
+      "bom": {
+        "id": "tt2975590",
+        "url": "https://www.boxofficemojo.com/title/tt2975590/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 330360194,
+        "international": 544002609,
+        "worldwide": 874362803,
+        "opening_weekend_domestic": 166007347,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 443357979,
+        "international": 730075541,
+        "worldwide": 1173433520
+      },
+      "budget": 250000000,
+      "runtime_minutes": 151,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 330360194,
+        "international": 543277334,
+        "worldwide": 873637528
+      },
+      "bom_meta": {
+        "earliest_release_date": "March 23, 2016 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -437,28 +733,47 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 408084349,
-        "international": 746962067,
-        "worldwide": 1155046416
+      "bom": {
+        "id": "tt3498820",
+        "url": "https://www.boxofficemojo.com/title/tt3498820/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 408084349,
+        "international": 746962067,
+        "worldwide": 1155046416,
+        "opening_weekend_domestic": 179139142,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 547667230,
+        "international": 1002456102,
+        "worldwide": 1550123332
+      },
+      "budget": 250000000,
+      "runtime_minutes": 147,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 408084349,
+        "international": 746962067,
+        "worldwide": 1155046416
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 27, 2016 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -467,28 +782,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 325100054,
-        "international": 421746840,
-        "worldwide": 746846894
+      "bom": {
+        "id": "tt1386697",
+        "url": "https://www.boxofficemojo.com/title/tt1386697/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 325100054,
+        "international": 424100000,
+        "worldwide": 749200054,
+        "opening_weekend_domestic": 133682248,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 436298639,
+        "international": 569160941,
+        "worldwide": 1005459580
+      },
+      "budget": 175000000,
+      "runtime_minutes": 123,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 325100054,
+        "international": 421746840,
+        "worldwide": 746846894
+      },
+      "bom_meta": {
+        "earliest_release_date": "August 3, 2016 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -497,28 +833,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 232641920,
-        "international": 445154156,
-        "worldwide": 677796076
+      "bom": {
+        "id": "tt1211837",
+        "url": "https://www.boxofficemojo.com/title/tt1211837/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 232641920,
+        "international": 445154156,
+        "worldwide": 677796833,
+        "opening_weekend_domestic": 85058311,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 312215737,
+        "international": 597416549,
+        "worldwide": 909633302
+      },
+      "budget": 165000000,
+      "runtime_minutes": 115,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 232641920,
+        "international": 445154156,
+        "worldwide": 677796076
+      },
+      "bom_meta": {
+        "earliest_release_date": "October 25, 2016 (United Kingdom)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -527,28 +884,51 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 389813101,
-        "international": 473942950,
-        "worldwide": 863756051
+      "bom": {
+        "id": "tt3896198",
+        "url": "https://www.boxofficemojo.com/title/tt3896198/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 389813101,
+        "international": 473950261,
+        "worldwide": 863764214,
+        "opening_weekend_domestic": 146510104,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 512234007,
+        "international": 622794464,
+        "worldwide": 1135029591
+      },
+      "budget": 200000000,
+      "runtime_minutes": 136,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Music",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 389813101,
+        "international": 473942950,
+        "worldwide": 863756051
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 25, 2017 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -557,28 +937,50 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 412845172,
-        "international": 410009114,
-        "worldwide": 822854286
+      "bom": {
+        "id": "tt0451279",
+        "url": "https://www.boxofficemojo.com/title/tt0451279/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 412845172,
+        "international": 411125510,
+        "worldwide": 823970682,
+        "opening_weekend_domestic": 103251471,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 542499306,
+        "international": 540239584,
+        "worldwide": 1082738890
+      },
+      "budget": 149000000,
+      "runtime_minutes": 141,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi",
+        "War"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 412845172,
+        "international": 410009114,
+        "worldwide": 822854286
+      },
+      "bom_meta": {
+        "earliest_release_date": "May 30, 2017 (APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -587,28 +989,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 334201140,
-        "international": 545965784,
-        "worldwide": 880166924
+      "bom": {
+        "id": "tt2250912",
+        "url": "https://www.boxofficemojo.com/title/tt2250912/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 334952829,
+        "international": 545983955,
+        "worldwide": 880978185,
+        "opening_weekend_domestic": 117027503,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 440144852,
+        "international": 717450359,
+        "worldwide": 1157649614
+      },
+      "budget": 175000000,
+      "runtime_minutes": 133,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 334201140,
+        "international": 545965784,
+        "worldwide": 880166924
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 5, 2017 (8 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -617,28 +1039,50 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 315058289,
-        "international": 540243517,
-        "worldwide": 855301806
+      "bom": {
+        "id": "tt3501632",
+        "url": "https://www.boxofficemojo.com/title/tt3501632/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 315058289,
+        "international": 540243517,
+        "worldwide": 855301806,
+        "opening_weekend_domestic": 122744989,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 414002427,
+        "international": 709907135,
+        "worldwide": 1123909561
+      },
+      "budget": 180000000,
+      "runtime_minutes": 130,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 315058289,
+        "international": 540243517,
+        "worldwide": 855301806
+      },
+      "bom_meta": {
+        "earliest_release_date": "October 24, 2017 (United Kingdom)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -647,28 +1091,46 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 229024295,
-        "international": 428902692,
-        "worldwide": 657926987
+      "bom": {
+        "id": "tt0974015",
+        "url": "https://www.boxofficemojo.com/title/tt0974015/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 229024295,
+        "international": 432302692,
+        "worldwide": 661326987,
+        "opening_weekend_domestic": 93842239,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 300949435,
+        "international": 568067465,
+        "worldwide": 869016900
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 120,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 229024295,
+        "international": 428902692,
+        "worldwide": 657926987
+      },
+      "bom_meta": {
+        "earliest_release_date": "October 17, 2017 (Lithuania)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -677,28 +1139,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 700426566,
-        "international": 649499517,
-        "worldwide": 1349926083
+      "bom": {
+        "id": "tt1825683",
+        "url": "https://www.boxofficemojo.com/title/tt1825683/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 700426566,
+        "international": 649499517,
+        "worldwide": 1349926083,
+        "opening_weekend_domestic": 202003951,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 898451246,
+        "international": 833126095,
+        "worldwide": 1731577341
+      },
+      "budget": 200000000,
+      "runtime_minutes": 134,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 700426566,
+        "international": 649499517,
+        "worldwide": 1349926083
+      },
+      "bom_meta": {
+        "earliest_release_date": "February 13, 2018 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -707,28 +1189,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 678815482,
-        "international": 1373599557,
-        "worldwide": 2052415039
+      "bom": {
+        "id": "tt4154756",
+        "url": "https://www.boxofficemojo.com/title/tt4154756/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 678815482,
+        "international": 1373599557,
+        "worldwide": 2052415039,
+        "opening_weekend_domestic": 257698183,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 870730273,
+        "international": 1761943782,
+        "worldwide": 2632674056
+      },
+      "budget": 350000000,
+      "runtime_minutes": 149,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 678815482,
+        "international": 1373599557,
+        "worldwide": 2052415039
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 25, 2018 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -737,28 +1239,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 216648740,
-        "international": 406025399,
-        "worldwide": 622674139
+      "bom": {
+        "id": "tt5095030",
+        "url": "https://www.boxofficemojo.com/title/tt5095030/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 216648740,
+        "international": 406025399,
+        "worldwide": 622674139,
+        "opening_weekend_domestic": 75812205,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 277899697,
+        "international": 520816947,
+        "worldwide": 798716643
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 118,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 216648740,
+        "international": 406025399,
+        "worldwide": 622674139
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 4, 2018 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -767,28 +1290,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 335104314,
-        "international": 813424079,
-        "worldwide": 1148528393
+      "bom": {
+        "id": "tt1477834",
+        "url": "https://www.boxofficemojo.com/title/tt1477834/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 335104314,
+        "international": 816924079,
+        "worldwide": 1152028393,
+        "opening_weekend_domestic": 67873522,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 429845044,
+        "international": 1047884949,
+        "worldwide": 1477729993
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 143,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 335104314,
+        "international": 813424079,
+        "worldwide": 1148528393
+      },
+      "bom_meta": {
+        "earliest_release_date": "December 7, 2018 (China)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -797,28 +1341,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 426829839,
-        "international": 704586607,
-        "worldwide": 1131416446
+      "bom": {
+        "id": "tt4154664",
+        "url": "https://www.boxofficemojo.com/title/tt4154664/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 426829839,
+        "international": 704586607,
+        "worldwide": 1131416446,
+        "opening_weekend_domestic": 153433423,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 537759151,
+        "international": 887702453,
+        "worldwide": 1425461604
+      },
+      "budget": 160000000,
+      "runtime_minutes": 123,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 426829839,
+        "international": 704586607,
+        "worldwide": 1131416446
+      },
+      "bom_meta": {
+        "earliest_release_date": "March 6, 2019 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -827,28 +1391,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 140480049,
-        "international": 227318962,
-        "worldwide": 367799011
+      "bom": {
+        "id": "tt0448115",
+        "url": "https://www.boxofficemojo.com/title/tt0448115/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 140480049,
+        "international": 227318962,
+        "worldwide": 367799011,
+        "opening_weekend_domestic": 53505326,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 176989575,
+        "international": 286397156,
+        "worldwide": 463386731
+      },
+      "budget": 100000000,
+      "runtime_minutes": 132,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 140480049,
+        "international": 227318962,
+        "worldwide": 367799011
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 3, 2019 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -857,28 +1442,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 858373000,
-        "international": 1941066100,
-        "worldwide": 2799439100
+      "bom": {
+        "id": "tt4154796",
+        "url": "https://www.boxofficemojo.com/title/tt4154796/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 858373000,
+        "international": 1941066100,
+        "worldwide": 2799439100,
+        "opening_weekend_domestic": 357115007,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 1081456574,
+        "international": 2445532064,
+        "worldwide": 3526988638
+      },
+      "budget": 356000000,
+      "runtime_minutes": 181,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 858373000,
+        "international": 1941066100,
+        "worldwide": 2799439100
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 24, 2019 (22 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -887,29 +1492,95 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 390532085,
-        "international": 741395911,
-        "worldwide": 1131927996
+      "bom": {
+        "id": "tt6320628",
+        "url": "https://www.boxofficemojo.com/title/tt6320628/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 391283774,
+        "international": 741414082,
+        "worldwide": 1132723226,
+        "opening_weekend_domestic": 92579212,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 492974977,
+        "international": 934101064,
+        "worldwide": 1427108004
+      },
+      "budget": 160000000,
+      "runtime_minutes": 129,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 390532085,
+        "international": 741395911,
+        "worldwide": 1131927996
+      },
+      "bom_meta": {
+        "earliest_release_date": "June 28, 2019 (China, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
+    },
+    {
+      "title": "Joker",
+      "release_date": "2019-10-04",
+      "universe": "Elseworlds",
+      "universe_label": "DC Elseworlds",
+      "studio_label": "Warner Bros.",
+      "bom": {
+        "id": "tt7286456",
+        "url": "https://www.boxofficemojo.com/title/tt7286456/"
+      },
+      "box_office": {
+        "domestic": 335477657,
+        "international": 743480625,
+        "worldwide": 1078958629,
+        "opening_weekend_domestic": 96202337,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 422665342,
+        "international": 936704684,
+        "worldwide": 1359370463
+      },
+      "budget": 55000000,
+      "runtime_minutes": 122,
+      "mpaa": "R",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Drama"
+      ],
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "October 2, 2019 (APAC, LATAM)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
+      "notes": "Added beyond the legacy Tableau sheet."
     },
     {
       "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
@@ -917,28 +1588,48 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 84172791,
-        "international": 121200000,
-        "worldwide": 205372791
+      "bom": {
+        "id": "tt7713068",
+        "url": "https://www.boxofficemojo.com/title/tt7713068/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 84172791,
+        "international": 121200000,
+        "worldwide": 205537933,
+        "opening_weekend_domestic": 33010017,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 104756197,
+        "international": 150837947,
+        "worldwide": 255799669
+      },
+      "budget": 84500000,
+      "runtime_minutes": 109,
+      "mpaa": "R",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 84172791,
+        "international": 121200000,
+        "worldwide": 205372791
+      },
+      "bom_meta": {
+        "earliest_release_date": "February 5, 2020 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -947,28 +1638,48 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 46801036,
-        "international": 122800000,
-        "worldwide": 169601036
+      "bom": {
+        "id": "tt7126948",
+        "url": "https://www.boxofficemojo.com/title/tt7126948/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 46801036,
+        "international": 122800000,
+        "worldwide": 169601036,
+        "opening_weekend_domestic": 16701957,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 58245645,
+        "international": 152829207,
+        "worldwide": 211074853
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 151,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 46801036,
+        "international": 122800000,
+        "worldwide": 169601036
+      },
+      "bom_meta": {
+        "earliest_release_date": "December 16, 2020 (EMEA, LATAM)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -977,28 +1688,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 183651655,
-        "international": 196100000,
-        "worldwide": 379751655
+      "bom": {
+        "id": "tt3480822",
+        "url": "https://www.boxofficemojo.com/title/tt3480822/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 183651655,
+        "international": 196100000,
+        "worldwide": 379751655,
+        "opening_weekend_domestic": 80366312,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 218305340,
+        "international": 233102594,
+        "worldwide": 451407935
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 134,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 183651655,
+        "international": 196100000,
+        "worldwide": 379751655
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 7, 2021 (EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1007,28 +1738,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 55817425,
-        "international": 112900000,
-        "worldwide": 168717425
+      "bom": {
+        "id": "tt6334354",
+        "url": "https://www.boxofficemojo.com/title/tt6334354/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 55817425,
+        "international": 112900000,
+        "worldwide": 168717425,
+        "opening_weekend_domestic": 26205415,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 66349753,
+        "international": 134203380,
+        "worldwide": 200553134
+      },
+      "budget": 185000000,
+      "runtime_minutes": 132,
+      "mpaa": "R",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 55817425,
+        "international": 112900000,
+        "worldwide": 168717425
+      },
+      "bom_meta": {
+        "earliest_release_date": "May 8, 2021 (Italy)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1037,28 +1789,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 224543292,
-        "international": 207700000,
-        "worldwide": 432243292
+      "bom": {
+        "id": "tt9376612",
+        "url": "https://www.boxofficemojo.com/title/tt9376612/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 224543292,
+        "international": 207700000,
+        "worldwide": 432243292,
+        "opening_weekend_domestic": 75388688,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 266912922,
+        "international": 246891427,
+        "worldwide": 513804349
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 132,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 224543292,
+        "international": 207700000,
+        "worldwide": 432243292
+      },
+      "bom_meta": {
+        "earliest_release_date": "September 1, 2021 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1067,28 +1840,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 164870234,
-        "international": 237194665,
-        "worldwide": 402064899
+      "bom": {
+        "id": "tt9032400",
+        "url": "https://www.boxofficemojo.com/title/tt9032400/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 164870234,
+        "international": 237194665,
+        "worldwide": 402064899,
+        "opening_weekend_domestic": 71297219,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 195980007,
+        "international": 281951513,
+        "worldwide": 477931520
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 156,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 164870234,
+        "international": 237194665,
+        "worldwide": 402064899
+      },
+      "bom_meta": {
+        "earliest_release_date": "November 3, 2021 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1097,28 +1891,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 814115070,
-        "international": 1107732041,
-        "worldwide": 1921847111
+      "bom": {
+        "id": "tt10872600",
+        "url": "https://www.boxofficemojo.com/title/tt10872600/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 814866759,
+        "international": 1106533944,
+        "worldwide": 1921426073,
+        "opening_weekend_domestic": 260138569,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 968625985,
+        "international": 1315328573,
+        "worldwide": 2283984715
+      },
+      "budget": 200000000,
+      "runtime_minutes": 148,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 814115070,
+        "international": 1107732041,
+        "worldwide": 1921847111
+      },
+      "bom_meta": {
+        "earliest_release_date": "December 15, 2021 (14 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1127,28 +1942,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 411331607,
-        "international": 544444197,
-        "worldwide": 955775804
+      "bom": {
+        "id": "tt9419884",
+        "url": "https://www.boxofficemojo.com/title/tt9419884/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 411331607,
+        "international": 544444197,
+        "worldwide": 955775804,
+        "opening_weekend_domestic": 187420998,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 452717058,
+        "international": 599222552,
+        "worldwide": 1051939610
+      },
+      "budget": 414900000,
+      "runtime_minutes": 126,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 411331607,
+        "international": 544444197,
+        "worldwide": 955775804
+      },
+      "bom_meta": {
+        "earliest_release_date": "May 4, 2022 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1157,28 +1993,50 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 343256830,
-        "international": 417671251,
-        "worldwide": 760928081
+      "bom": {
+        "id": "tt10648342",
+        "url": "https://www.boxofficemojo.com/title/tt10648342/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 343256830,
+        "international": 417671251,
+        "worldwide": 760928081,
+        "opening_weekend_domestic": 144165107,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 377793050,
+        "international": 459694555,
+        "worldwide": 837487604
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 118,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Romance",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 343256830,
+        "international": 417671251,
+        "worldwide": 760928081
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 6, 2022 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1187,28 +2045,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 168152111,
-        "international": 225300000,
-        "worldwide": 393452111
+      "bom": {
+        "id": "tt6443346",
+        "url": "https://www.boxofficemojo.com/title/tt6443346/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 168152111,
+        "international": 225300000,
+        "worldwide": 393452111,
+        "opening_weekend_domestic": 67004323,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 185070458,
+        "international": 247968188,
+        "worldwide": 433038646
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 125,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 168152111,
+        "international": 225300000,
+        "worldwide": 393452111
+      },
+      "bom_meta": {
+        "earliest_release_date": "October 14, 2022 (Iceland)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1217,28 +2096,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 453829060,
-        "international": 405379776,
-        "worldwide": 859208836
+      "bom": {
+        "id": "tt9114286",
+        "url": "https://www.boxofficemojo.com/title/tt9114286/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 453829060,
+        "international": 405379776,
+        "worldwide": 859208836,
+        "opening_weekend_domestic": 181339761,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 499490322,
+        "international": 446166393,
+        "worldwide": 945656716
+      },
+      "budget": 250000000,
+      "runtime_minutes": 161,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 453829060,
+        "international": 405379776,
+        "worldwide": 859208836
+      },
+      "bom_meta": {
+        "earliest_release_date": "November 4, 2022 (Iceland)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1247,28 +2147,49 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 214504909,
-        "international": 261566271,
-        "worldwide": 476071180
+      "bom": {
+        "id": "tt10954600",
+        "url": "https://www.boxofficemojo.com/title/tt10954600/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 214504909,
+        "international": 261566271,
+        "worldwide": 476071180,
+        "opening_weekend_domestic": 106109650,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 226752798,
+        "international": 276501289,
+        "worldwide": 503254088
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 124,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 214504909,
+        "international": 261566271,
+        "worldwide": 476071180
+      },
+      "bom_meta": {
+        "earliest_release_date": "February 15, 2023 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1277,28 +2198,50 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 57638006,
-        "international": 76500000,
-        "worldwide": 134138006
+      "bom": {
+        "id": "tt10151854",
+        "url": "https://www.boxofficemojo.com/title/tt10151854/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 57638006,
+        "international": 76500000,
+        "worldwide": 134138006,
+        "opening_weekend_domestic": 30111158,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 60929045,
+        "international": 80868028,
+        "worldwide": 141797073
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 130,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 57638006,
+        "international": 76500000,
+        "worldwide": 134138006
+      },
+      "bom_meta": {
+        "earliest_release_date": "March 15, 2023 (APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1307,28 +2250,50 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 358995815,
-        "international": 486476606,
-        "worldwide": 845472421
+      "bom": {
+        "id": "tt6791350",
+        "url": "https://www.boxofficemojo.com/title/tt6791350/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 358995815,
+        "international": 486559962,
+        "worldwide": 845555777,
+        "opening_weekend_domestic": 118414021,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 379493906,
+        "international": 514341763,
+        "worldwide": 893835668
+      },
+      "budget": 250000000,
+      "runtime_minutes": 150,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 358995815,
+        "international": 486476606,
+        "worldwide": 845472421
+      },
+      "bom_meta": {
+        "earliest_release_date": "April 13, 2023 (Italy)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1337,28 +2302,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 108133313,
-        "international": 163300000,
-        "worldwide": 271433313
+      "bom": {
+        "id": "tt0439572",
+        "url": "https://www.boxofficemojo.com/title/tt0439572/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 108133313,
+        "international": 163300000,
+        "worldwide": 271433313,
+        "opening_weekend_domestic": 55043679,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 114307553,
+        "international": 172624171,
+        "worldwide": 286931724
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 144,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 108133313,
+        "international": 163300000,
+        "worldwide": 271433313
+      },
+      "bom_meta": {
+        "earliest_release_date": "June 14, 2023 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1367,28 +2353,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 72488072,
-        "international": 58300000,
-        "worldwide": 130788072
+      "bom": {
+        "id": "tt9362930",
+        "url": "https://www.boxofficemojo.com/title/tt9362930/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 72488072,
+        "international": 58300000,
+        "worldwide": 130788072,
+        "opening_weekend_domestic": 25030225,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 76627026,
+        "international": 61628837,
+        "worldwide": 138255863
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 127,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi",
+        "Thriller"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 72488072,
+        "international": 58300000,
+        "worldwide": 130788072
+      },
+      "bom_meta": {
+        "earliest_release_date": "August 16, 2023 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1397,28 +2404,48 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 84500223,
-        "international": 121636602,
-        "worldwide": 206136825
+      "bom": {
+        "id": "tt10676048",
+        "url": "https://www.boxofficemojo.com/title/tt10676048/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 84500223,
+        "international": 121636602,
+        "worldwide": 206136825,
+        "opening_weekend_domestic": 46110859,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 89325051,
+        "international": 128581859,
+        "worldwide": 217906910
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 105,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 84500223,
+        "international": 121636602,
+        "worldwide": 206136825
+      },
+      "bom_meta": {
+        "earliest_release_date": "November 8, 2023 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1427,28 +2454,49 @@
       "universe": "DCEU",
       "universe_label": "DC Extended Universe",
       "studio_label": "DC Extended Universe",
-      "sheet": {
-        "domestic": 124481226,
-        "international": 314900000,
-        "worldwide": 439381226
+      "bom": {
+        "id": "tt9663764",
+        "url": "https://www.boxofficemojo.com/title/tt9663764/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 124481226,
+        "international": 315700000,
+        "worldwide": 440181226,
+        "opening_weekend_domestic": 27686211,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 131588906,
+        "international": 333725968,
+        "worldwide": 465314875
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 124,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 124481226,
+        "international": 314900000,
+        "worldwide": 439381226
+      },
+      "bom_meta": {
+        "earliest_release_date": "December 20, 2023 (9 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
     },
     {
@@ -1457,29 +2505,96 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 636745858,
-        "international": 701327787,
-        "worldwide": 1338073645
+      "bom": {
+        "id": "tt6263850",
+        "url": "https://www.boxofficemojo.com/title/tt6263850/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 636745858,
+        "international": 701327787,
+        "worldwide": 1338073645,
+        "opening_weekend_domestic": 211435291,
+        "widest_release_theaters": null,
+        "is_final": true
       },
-      "budget": null,
-      "runtime_minutes": null,
+      "box_office_real_2025": {
+        "domestic": 653819040,
+        "international": 720132616,
+        "worldwide": 1373951656
+      },
+      "budget": 537000000,
+      "runtime_minutes": 128,
+      "mpaa": "R",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 636745858,
+        "international": 701327787,
+        "worldwide": 1338073645
+      },
+      "bom_meta": {
+        "earliest_release_date": "July 18, 2024 (Slovakia)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
+    },
+    {
+      "title": "Joker: Folie à Deux",
+      "release_date": "2024-10-04",
+      "universe": "Elseworlds",
+      "universe_label": "DC Elseworlds",
+      "studio_label": "Warner Bros.",
+      "bom": {
+        "id": "tt11315808",
+        "url": "https://www.boxofficemojo.com/title/tt11315808/"
+      },
+      "box_office": {
+        "domestic": 58300287,
+        "international": 149200000,
+        "worldwide": 207500287,
+        "opening_weekend_domestic": 37678467,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 59863503,
+        "international": 153200527,
+        "worldwide": 213064030
+      },
+      "budget": null,
+      "runtime_minutes": 138,
+      "mpaa": "R",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Drama",
+        "Musical",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "October 1, 2024 (South Korea)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
+      "notes": "Added beyond the legacy Tableau sheet."
     },
     {
       "title": "Captain America: Brave New World",
@@ -1487,29 +2602,283 @@
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
-      "sheet": {
-        "domestic": 200001599,
-        "international": 214276189,
-        "worldwide": 414277788
+      "bom": {
+        "id": "tt14513804",
+        "url": "https://www.boxofficemojo.com/title/tt14513804/"
       },
       "box_office": {
-        "domestic": null,
-        "international": null,
-        "worldwide": null,
-        "opening_weekend_domestic": null,
-        "widest_release_theaters": null
+        "domestic": 200500001,
+        "international": 214601576,
+        "worldwide": 415101577,
+        "opening_weekend_domestic": 88842603,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 200500001,
+        "international": 214601576,
+        "worldwide": 415101577
       },
       "budget": null,
-      "runtime_minutes": null,
+      "runtime_minutes": 118,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
       "scores": {
         "rt_critic": null,
         "rt_audience": null,
         "metacritic": null,
         "imdb": null
       },
-      "sources": {},
-      "verified": false,
+      "sheet": {
+        "domestic": 200001599,
+        "international": 214276189,
+        "worldwide": 414277788
+      },
+      "bom_meta": {
+        "earliest_release_date": "February 12, 2025 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
       "notes": null
+    },
+    {
+      "title": "Thunderbolts*",
+      "release_date": "2025-05-02",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "bom": {
+        "id": "tt20969586",
+        "url": "https://www.boxofficemojo.com/title/tt20969586/"
+      },
+      "box_office": {
+        "domestic": 190274328,
+        "international": 192162589,
+        "worldwide": 382436917,
+        "opening_weekend_domestic": 74300608,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 190274328,
+        "international": 192162589,
+        "worldwide": 382436917
+      },
+      "budget": null,
+      "runtime_minutes": 127,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Crime",
+        "Drama",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "January 1, 2025 (Portugal)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
+      "notes": "Added beyond the legacy Tableau sheet."
+    },
+    {
+      "title": "Superman",
+      "release_date": "2025-07-11",
+      "universe": "DCU",
+      "universe_label": "DC Universe",
+      "studio_label": "DC Studios",
+      "bom": {
+        "id": "tt5950044",
+        "url": "https://www.boxofficemojo.com/title/tt5950044/"
+      },
+      "box_office": {
+        "domestic": 354223803,
+        "international": 264500000,
+        "worldwide": 618723803,
+        "opening_weekend_domestic": 125021735,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 354223803,
+        "international": 264500000,
+        "worldwide": 618723803
+      },
+      "budget": 225000000,
+      "runtime_minutes": 129,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 9, 2025 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
+      "notes": "Added beyond the legacy Tableau sheet."
+    },
+    {
+      "title": "The Fantastic Four: First Steps",
+      "release_date": "2025-07-25",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "bom": {
+        "id": "tt10676052",
+        "url": "https://www.boxofficemojo.com/title/tt10676052/"
+      },
+      "box_office": {
+        "domestic": 274286610,
+        "international": 247572118,
+        "worldwide": 521858728,
+        "opening_weekend_domestic": 117644828,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 274286610,
+        "international": 247572118,
+        "worldwide": 521858728
+      },
+      "budget": null,
+      "runtime_minutes": 115,
+      "mpaa": "PG-13",
+      "distributor": "Walt Disney Studios Motion Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 23, 2025 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
+      "notes": "Added beyond the legacy Tableau sheet."
+    },
+    {
+      "title": "Supergirl",
+      "release_date": "2026-06-26",
+      "universe": "DCU",
+      "universe_label": "DC Universe",
+      "studio_label": "DC Studios",
+      "bom": {
+        "id": "tt8814476",
+        "url": "https://www.boxofficemojo.com/title/tt8814476/"
+      },
+      "box_office": {
+        "domestic": 72366532,
+        "international": 54000000,
+        "worldwide": 126366532,
+        "opening_weekend_domestic": 37102018,
+        "widest_release_theaters": null,
+        "is_final": false
+      },
+      "box_office_real_2025": {
+        "domestic": 72366532,
+        "international": 54000000,
+        "worldwide": 126366532
+      },
+      "budget": null,
+      "runtime_minutes": 108,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "June 24, 2026 (APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
+      "notes": "Added beyond the legacy Tableau sheet."
+    },
+    {
+      "title": "Spider-Man: Brand New Day",
+      "release_date": "2026-07-31",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "bom": {
+        "id": "tt22084616",
+        "url": "https://www.boxofficemojo.com/title/tt22084616/"
+      },
+      "box_office": {
+        "domestic": 899762495,
+        "international": 1441505369,
+        "worldwide": 2341267864,
+        "opening_weekend_domestic": 360091572,
+        "widest_release_theaters": null,
+        "is_final": false
+      },
+      "box_office_real_2025": {
+        "domestic": 899762495,
+        "international": 1441505369,
+        "worldwide": 2341267864
+      },
+      "budget": null,
+      "runtime_minutes": 145,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 29, 2026 (6 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-05",
+      "notes": "Added beyond the legacy Tableau sheet."
     }
   ]
 }

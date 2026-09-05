@@ -9,7 +9,8 @@ Tableau Public suite as a verified dataset + a dark-first, single-file HTML visu
 |------|-------|------|-------|
 | `MCU`  | Marvel Cinematic Universe | *Iron Man* (2008) → present | Marvel Studios productions only (no Sony/Fox Spider-Man, X-Men, etc.). *Deadpool & Wolverine* counts. |
 | `DCEU` | DC Extended Universe | *Man of Steel* (2013) → *Aquaman and the Lost Kingdom* (Dec 2023) | **Closed continuity.** Nothing releases after Dec 2023. |
-| `DCU`  | DC Universe — "Gods and Monsters" | *Superman* (July 2025) → present | James Gunn / Peter Safran relaunch. Theatrical films only (Creature Commandos, Peacemaker, Lanterns are TV). |
+| `DCU`  | DC Universe | *Superman* (July 2025) → present | James Gunn / Peter Safran relaunch. Theatrical films only (Creature Commandos, Peacemaker, Lanterns are TV). |
+| `Elseworlds` | DC Elseworlds | *Joker* (2019), *Joker: Folie à Deux* (2024) | Warner/DC standalone films outside any shared continuity. |
 
 ## Data pipeline
 
@@ -41,15 +42,15 @@ Design: **dark mode is the primary design target, always.** Marvel = warm red, D
 ## Roadmap
 
 - [x] Scaffold repo, freeze legacy sheet, define schema
-- [~] **Phase 1 — Verify**: BOM scrape running → reconcile → sign-off → promote to `films.json`
-- [ ] **Phase 2 — Extend**: add post-BNW MCU + new DCU set; confirm each against BOM
-- [ ] Phase 1b — scores + theater counts second pass
-- [ ] **Phase 3 — Rebuild**: the seven views as one dark-first HTML file
-- [ ] **Phase 4 — Deploy**: domain + host
+- [x] **Phase 1 — Verify**: BOM scrape (59 films) → `RECONCILIATION.md` → **awaiting sign-off** → promoted to `films.json` (57 verified)
+- [x] **Phase 2 — Extend**: added Joker ×2 (Elseworlds), Thunderbolts\*, F4: First Steps, Spider-Man: Brand New Day (MCU), Superman, Supergirl (DCU). Doomsday + Clayface held out (unreleased).
+- [ ] **Phase 1b — enrich**: RT / Metacritic / IMDb via OMDb (`enrich-omdb.mjs`, **key rejected — needs a working one**); backfill budgets for 5 recent titles; widest-release theater counts.
+- [ ] **Phase 3 — Rebuild**: the seven views as one dark-first HTML file, with a nominal ⇄ 2025-dollars toggle.
+- [ ] **Phase 4 — Deploy**: domain + host.
 
-## Open questions for Bill
+## Decisions (locked 2026-09-05)
 
-1. **DCU label** — "DC Universe (Gods and Monsters)" or just "DCU"? Third accent colour preference?
-2. **Joker: Folie à Deux** (2024) — include as a DC-on-film entry, or leave out (not DCEU/DCU canon)?
-3. **Scores** — OK to pull RT / Metacritic / IMDb (needs a second scrape pass or an OMDb API key — free, 1k/day)?
-4. **Grosses** — nominal only, or also inflation-adjusted (2025 USD) as a toggle?
+- Universes: `MCU`, `DCEU`, `DCU` (just "DCU"), `Elseworlds` (Joker films).
+- Canonical data = `data/films.json` in the repo. Single self-contained HTML output.
+- Full enrichment incl. scores. **Inflation toggle in the viz: yes.**
+- Accent colours: MCU red, DCEU blue, DCU + Elseworlds — TBD (leaning teal + violet).
