@@ -1,0 +1,13 @@
+{
+  "name": "marvel-dc-boxoffice",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Verified box-office dataset and dark-first HTML visualization suite for the MCU, DCEU, and DCU.",
+  "scripts": {
+    "parse:baseline": "node scripts/parse-baseline.mjs",
+    "scrape:bom": "node scripts/scrape-bom.mjs",
+    "reconcile": "node scripts/reconcile.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

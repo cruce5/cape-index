@@ -1,0 +1,1515 @@
+{
+  "meta": {
+    "generated": "2026-09-05T18:52:27.583Z",
+    "currency": "USD",
+    "grosses": "nominal lifetime gross unless a film is still in release (then as-of dated)",
+    "universes": [
+      "MCU",
+      "DCEU",
+      "DCU"
+    ],
+    "source_note": "Baseline parsed from the legacy Tableau Public sheet; box_office/budget/scores pending Box Office Mojo + score-source verification."
+  },
+  "films": [
+    {
+      "title": "Iron Man",
+      "release_date": "2008-05-02",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 319034126,
+        "international": 266762121,
+        "worldwide": 585796247
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "The Incredible Hulk",
+      "release_date": "2008-06-13",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 134806913,
+        "international": 129964083,
+        "worldwide": 264770996
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Iron Man 2",
+      "release_date": "2010-05-07",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 312433331,
+        "international": 311500000,
+        "worldwide": 623933331
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Thor",
+      "release_date": "2011-05-06",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 181030624,
+        "international": 268295994,
+        "worldwide": 449326618
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Captain America: The First Avenger",
+      "release_date": "2011-07-22",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 176654505,
+        "international": 193915269,
+        "worldwide": 370569774
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "The Avengers",
+      "release_date": "2012-05-12",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 623357910,
+        "international": 897180626,
+        "worldwide": 1520538536
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Iron Man 3",
+      "release_date": "2013-05-03",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 409013994,
+        "international": 806563211,
+        "worldwide": 1215577205
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Man of Steel",
+      "release_date": "2013-06-14",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 291045518,
+        "international": 377000000,
+        "worldwide": 668045518
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Thor: The Dark World",
+      "release_date": "2013-11-08",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 206362140,
+        "international": 438421000,
+        "worldwide": 644783140
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Captain America: The Winter Soldier",
+      "release_date": "2014-04-04",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 259766572,
+        "international": 454654931,
+        "worldwide": 714421503
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Guardians of the Galaxy",
+      "release_date": "2014-08-01",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 333718600,
+        "international": 439631547,
+        "worldwide": 773350147
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Avengers: Age of Ultron",
+      "release_date": "2015-05-01",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 459005868,
+        "international": 946012180,
+        "worldwide": 1405018048
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Ant-Man",
+      "release_date": "2015-07-17",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 180202163,
+        "international": 339109802,
+        "worldwide": 519311965
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Batman v Superman: Dawn of Justice",
+      "release_date": "2016-03-25",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 330360194,
+        "international": 543277334,
+        "worldwide": 873637528
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Captain America: Civil War",
+      "release_date": "2016-05-06",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 408084349,
+        "international": 746962067,
+        "worldwide": 1155046416
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Suicide Squad",
+      "release_date": "2016-08-05",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 325100054,
+        "international": 421746840,
+        "worldwide": 746846894
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Doctor Strange",
+      "release_date": "2016-11-04",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 232641920,
+        "international": 445154156,
+        "worldwide": 677796076
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Guardians of the Galaxy Vol. 2",
+      "release_date": "2017-05-05",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 389813101,
+        "international": 473942950,
+        "worldwide": 863756051
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Wonder Woman",
+      "release_date": "2017-06-02",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 412845172,
+        "international": 410009114,
+        "worldwide": 822854286
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Spider-Man: Homecoming",
+      "release_date": "2017-07-07",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 334201140,
+        "international": 545965784,
+        "worldwide": 880166924
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Thor: Ragnarok",
+      "release_date": "2017-11-03",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 315058289,
+        "international": 540243517,
+        "worldwide": 855301806
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Justice League",
+      "release_date": "2017-11-17",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 229024295,
+        "international": 428902692,
+        "worldwide": 657926987
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Black Panther",
+      "release_date": "2018-02-16",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 700426566,
+        "international": 649499517,
+        "worldwide": 1349926083
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Avengers: Infinity War",
+      "release_date": "2018-04-27",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 678815482,
+        "international": 1373599557,
+        "worldwide": 2052415039
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Ant-Man and the Wasp",
+      "release_date": "2018-07-06",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 216648740,
+        "international": 406025399,
+        "worldwide": 622674139
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Aquaman",
+      "release_date": "2018-12-21",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 335104314,
+        "international": 813424079,
+        "worldwide": 1148528393
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Captain Marvel",
+      "release_date": "2019-03-08",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 426829839,
+        "international": 704586607,
+        "worldwide": 1131416446
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Shazam!",
+      "release_date": "2019-04-05",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 140480049,
+        "international": 227318962,
+        "worldwide": 367799011
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Avengers: Endgame",
+      "release_date": "2019-04-26",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 858373000,
+        "international": 1941066100,
+        "worldwide": 2799439100
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Spider-Man: Far From Home",
+      "release_date": "2019-07-02",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 390532085,
+        "international": 741395911,
+        "worldwide": 1131927996
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+      "release_date": "2020-02-07",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 84172791,
+        "international": 121200000,
+        "worldwide": 205372791
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Wonder Woman 1984",
+      "release_date": "2020-12-25",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 46801036,
+        "international": 122800000,
+        "worldwide": 169601036
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Black Widow",
+      "release_date": "2021-07-09",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 183651655,
+        "international": 196100000,
+        "worldwide": 379751655
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "The Suicide Squad",
+      "release_date": "2021-08-05",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 55817425,
+        "international": 112900000,
+        "worldwide": 168717425
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "release_date": "2021-09-03",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 224543292,
+        "international": 207700000,
+        "worldwide": 432243292
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Eternals",
+      "release_date": "2021-11-05",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 164870234,
+        "international": 237194665,
+        "worldwide": 402064899
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Spider-Man: No Way Home",
+      "release_date": "2021-12-17",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 814115070,
+        "international": 1107732041,
+        "worldwide": 1921847111
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "release_date": "2022-05-06",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 411331607,
+        "international": 544444197,
+        "worldwide": 955775804
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Thor: Love and Thunder",
+      "release_date": "2022-07-08",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 343256830,
+        "international": 417671251,
+        "worldwide": 760928081
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Black Adam",
+      "release_date": "2022-10-21",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 168152111,
+        "international": 225300000,
+        "worldwide": 393452111
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Black Panther: Wakanda Forever",
+      "release_date": "2022-11-11",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 453829060,
+        "international": 405379776,
+        "worldwide": 859208836
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Ant-Man and the Wasp: Quantumania",
+      "release_date": "2023-02-17",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 214504909,
+        "international": 261566271,
+        "worldwide": 476071180
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Shazam! Fury of the Gods",
+      "release_date": "2023-03-17",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 57638006,
+        "international": 76500000,
+        "worldwide": 134138006
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Guardians of the Galaxy Vol. 3",
+      "release_date": "2023-05-05",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 358995815,
+        "international": 486476606,
+        "worldwide": 845472421
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "The Flash",
+      "release_date": "2023-06-16",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 108133313,
+        "international": 163300000,
+        "worldwide": 271433313
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Blue Beetle",
+      "release_date": "2023-08-18",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 72488072,
+        "international": 58300000,
+        "worldwide": 130788072
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "The Marvels",
+      "release_date": "2023-11-10",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 84500223,
+        "international": 121636602,
+        "worldwide": 206136825
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Aquaman and the Lost Kingdom",
+      "release_date": "2023-12-20",
+      "universe": "DCEU",
+      "universe_label": "DC Extended Universe",
+      "studio_label": "DC Extended Universe",
+      "sheet": {
+        "domestic": 124481226,
+        "international": 314900000,
+        "worldwide": 439381226
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Deadpool & Wolverine",
+      "release_date": "2024-07-26",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 636745858,
+        "international": 701327787,
+        "worldwide": 1338073645
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    },
+    {
+      "title": "Captain America: Brave New World",
+      "release_date": "2025-02-14",
+      "universe": "MCU",
+      "universe_label": "Marvel Cinematic Universe",
+      "studio_label": "Marvel Studios",
+      "sheet": {
+        "domestic": 200001599,
+        "international": 214276189,
+        "worldwide": 414277788
+      },
+      "box_office": {
+        "domestic": null,
+        "international": null,
+        "worldwide": null,
+        "opening_weekend_domestic": null,
+        "widest_release_theaters": null
+      },
+      "budget": null,
+      "runtime_minutes": null,
+      "scores": {
+        "rt_critic": null,
+        "rt_audience": null,
+        "metacritic": null,
+        "imdb": null
+      },
+      "sources": {},
+      "verified": false,
+      "notes": null
+    }
+  ]
+}

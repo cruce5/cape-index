@@ -1,0 +1,778 @@
+{
+  "iron-man-2008": {
+    "title": "Iron Man",
+    "year": "2008",
+    "release_date": "2008-05-02",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt0371746",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0371746/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt0371746",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt1228705",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt1300854",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0082222",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmE4N2Q0ZWItNjRiNC00YzkyLWE2MmYtNzdhYjQ2YWVkZGQ5XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0096251",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BY2YwM2EyZDMtZTdhYi00NDg1LTgxYWItNWU2NDdiY2JiZGJjXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 319034126,
+      "international": 266762121,
+      "worldwide": 585796247,
+      "opening_weekend_domestic": 98618668,
+      "budget": 140000000,
+      "earliest_release_date": "April 30, 2008 (29 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 126,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Paramount Pictures"
+    },
+    "scraped_at": "2026-09-05T18:55:31.292Z"
+  },
+  "the-incredible-hulk-2008": {
+    "title": "The Incredible Hulk",
+    "year": "2008",
+    "release_date": "2008-06-13",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt0800080",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0800080/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt0800080",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0286716",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTQxMmVlMTItMGFjYi00MTc2LWE5MzMtYjFhZWJmZGY0MTY5XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt32642156",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZDczZmYxNWEtNjNkNy00OWEwLWE3YjQtMzJmNWE5N2VlYjI4XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0790628",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk3MDkxMDAyN15BMl5BanBnXkFtZTcwODY5NzQyOQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0107131",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOWQzYzgyNGEtMjFhMC00MjhlLTk2OGYtMzY4M2MyYWE5ZGI1XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 134806913,
+      "international": 129964083,
+      "worldwide": 264770996,
+      "opening_weekend_domestic": 55414050,
+      "budget": 150000000,
+      "earliest_release_date": "June 11, 2008 (Ukraine)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 112,
+      "genres": "Action Sci-Fi",
+      "distributor": "Universal Pictures"
+    },
+    "scraped_at": "2026-09-05T18:55:43.214Z"
+  },
+  "iron-man-2-2010": {
+    "title": "Iron Man 2",
+    "year": "2010",
+    "release_date": "2010-05-07",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt1228705",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1228705/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt1228705",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0371746",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt1300854",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0082222",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmE4N2Q0ZWItNjRiNC00YzkyLWE2MmYtNzdhYjQ2YWVkZGQ5XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0096251",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BY2YwM2EyZDMtZTdhYi00NDg1LTgxYWItNWU2NDdiY2JiZGJjXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 312433331,
+      "international": 311500000,
+      "worldwide": 623933331,
+      "opening_weekend_domestic": 128122480,
+      "budget": 200000000,
+      "earliest_release_date": "April 28, 2010 (EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 124,
+      "genres": "Action Sci-Fi",
+      "distributor": "Paramount Pictures"
+    },
+    "scraped_at": "2026-09-05T18:55:56.955Z"
+  },
+  "thor-2011": {
+    "title": "Thor",
+    "year": "2011",
+    "release_date": "2011-05-06",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt0800369",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0800369/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjRhNGZjZjEtYTQzYS00OWUxLThjNGEtMTIwMTE2ZDFlZTZkXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt0800369",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjRhNGZjZjEtYTQzYS00OWUxLThjNGEtMTIwMTE2ZDFlZTZkXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt3501632",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt1981115",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SY96_CR0,0,66"
+      },
+      {
+        "id": "tt10648342",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0115610",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjBkYzY5MzMtYmFlNS00NGVlLWFjMGEtYjZiMzdjNzRhZGI5XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 181030624,
+      "international": 268295994,
+      "worldwide": 449326618,
+      "opening_weekend_domestic": 65723338,
+      "budget": 150000000,
+      "earliest_release_date": "April 21, 2011 (Australia)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 115,
+      "genres": "Action Fantasy",
+      "distributor": "Paramount Pictures"
+    },
+    "scraped_at": "2026-09-05T18:56:10.560Z"
+  },
+  "captain-america-the-first-avenger-2011": {
+    "title": "Captain America: The First Avenger",
+    "year": "2011",
+    "release_date": "2011-07-22",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt0458339",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0458339/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzUyM2YyY2MtNzNlMS00MWU5LTgxNjAtNzZlNmI2NjU2NDZlXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt0458339",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzUyM2YyY2MtNzNlMS00MWU5LTgxNjAtNzZlNmI2NjU2NDZlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt1843866",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt3498820",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 176654505,
+      "international": 193915269,
+      "worldwide": 370569774,
+      "opening_weekend_domestic": 65058524,
+      "budget": 140000000,
+      "earliest_release_date": "July 22, 2011 (Domestic, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 124,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Paramount Pictures"
+    },
+    "scraped_at": "2026-09-05T18:56:24.506Z"
+  },
+  "the-avengers-2012": {
+    "title": "The Avengers",
+    "year": "2012",
+    "release_date": "2012-05-12",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt0848228",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0848228/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt0848228",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0118661",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTA4ZmZlZWQtZDRlYS00ZWZhLTk0MzEtYjExMGIzMTBlZDNlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt20969586",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNDIzNGUwZmYtODM0Yy00NjA3LTgxOGUtOTY0ZGM5MjBkM2I3XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt4154756",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt21357150",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNGEwYWZkN2UtOTQ5Mi00MGQzLWEzNjYtMWMyNDBkMTkzMWNkXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 623357910,
+      "international": 897180626,
+      "worldwide": 1520538536,
+      "opening_weekend_domestic": 207438708,
+      "budget": 220000000,
+      "earliest_release_date": "April 25, 2012 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 143,
+      "genres": "Action Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:56:40.728Z"
+  },
+  "iron-man-3-2013": {
+    "title": "Iron Man 3",
+    "year": "2013",
+    "release_date": "2013-05-03",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt1300854",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1300854/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt1300854",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0371746",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt1228705",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0423866",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTM1ODIwNzM5OV5BMl5BanBnXkFtZTcwNjk5MDkyMQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt0082222",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmE4N2Q0ZWItNjRiNC00YzkyLWE2MmYtNzdhYjQ2YWVkZGQ5XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 409013994,
+      "international": 806563211,
+      "worldwide": 1215577205,
+      "opening_weekend_domestic": 174144585,
+      "budget": 200000000,
+      "earliest_release_date": "April 24, 2013 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 130,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:56:53.400Z"
+  },
+  "man-of-steel-2013": {
+    "title": "Man of Steel",
+    "year": "2013",
+    "release_date": "2013-06-14",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt0770828",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0770828/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt0770828",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt37833661",
+        "text": "> <a class=\"a-size-medium a-link-normal a-text-bold"
+      },
+      {
+        "id": "tt11132342",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTc2OTdiMGEtYzBhMy00NGY3LWFiMjctZmYxZDA3NjRhNTZlXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt11083552",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODE4ZGY4OTktNDBjMy00NGVkLTk5YWUtNjA3NGU3MTA5NzM0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0098362",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzhjMzM2MjQtNzY4ZC00MDFhLWEwZTUtNWNjZTc4NmMwMzA0XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 291045518,
+      "international": 379100000,
+      "worldwide": 670145518,
+      "opening_weekend_domestic": 116619362,
+      "budget": 225000000,
+      "earliest_release_date": "June 12, 2013 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 143,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T18:57:08.006Z"
+  },
+  "thor-the-dark-world-2013": {
+    "title": "Thor: The Dark World",
+    "year": "2013",
+    "release_date": "2013-11-08",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt1981115",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1981115/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SY96_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt1981115",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SY96_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 206362140,
+      "international": 438421000,
+      "worldwide": 644783140,
+      "opening_weekend_domestic": 85737841,
+      "budget": 170000000,
+      "earliest_release_date": "October 30, 2013 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 112,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:57:21.478Z"
+  },
+  "captain-america-the-winter-soldier-2014": {
+    "title": "Captain America: The Winter Soldier",
+    "year": "2014",
+    "release_date": "2014-04-04",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt1843866",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1843866/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt1843866",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 259766572,
+      "international": 454654931,
+      "worldwide": 714421503,
+      "opening_weekend_domestic": 95023721,
+      "budget": 170000000,
+      "earliest_release_date": "March 26, 2014 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 136,
+      "genres": "Action Adventure Sci-Fi Thriller",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:57:36.614Z"
+  },
+  "guardians-of-the-galaxy-2014": {
+    "title": "Guardians of the Galaxy",
+    "year": "2014",
+    "release_date": "2014-08-01",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt2015381",
+    "bom_url": "https://www.boxofficemojo.com/title/tt2015381/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt2015381",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt6791350",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt3896198",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt32649961",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjc0MjgwMjAtZWVmZS00NTRiLThlMjYtODhiMGFjYjYzYjM1XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt1446192",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTkzMjgwMDg1M15BMl5BanBnXkFtZTcwMTgzNTI1OA@@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 333718600,
+      "international": 439631547,
+      "worldwide": 773350376,
+      "opening_weekend_domestic": 94320883,
+      "budget": 170000000,
+      "earliest_release_date": "July 30, 2014 (Iceland)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 121,
+      "genres": "Action Adventure Comedy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:57:49.775Z"
+  },
+  "avengers-age-of-ultron-2015": {
+    "title": "Avengers: Age of Ultron",
+    "year": "2015",
+    "release_date": "2015-05-01",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt2395427",
+    "bom_url": "https://www.boxofficemojo.com/title/tt2395427/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt2395427",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 459005868,
+      "international": 946012180,
+      "worldwide": 1405018048,
+      "opening_weekend_domestic": 191271109,
+      "budget": 250000000,
+      "earliest_release_date": "April 22, 2015 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 141,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:58:06.775Z"
+  },
+  "ant-man-2015": {
+    "title": "Ant-Man",
+    "year": "2015",
+    "release_date": "2015-07-17",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt0478970",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0478970/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt0478970",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt5095030",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt10954600",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 180202163,
+      "international": 339109802,
+      "worldwide": 519311965,
+      "opening_weekend_domestic": 57225526,
+      "budget": 130000000,
+      "earliest_release_date": "July 10, 2015 (Bulgaria)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 117,
+      "genres": "Action Comedy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:58:22.749Z"
+  },
+  "batman-v-superman-dawn-of-justice-2016": {
+    "title": "Batman v Superman: Dawn of Justice",
+    "year": "2016",
+    "release_date": "2016-03-25",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt2975590",
+    "bom_url": "https://www.boxofficemojo.com/title/tt2975590/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTJkYjdmYjYtOGMyNC00ZGU1LThkY2ItYTc1OTVlMmE2YWY1XkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt2975590",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTJkYjdmYjYtOGMyNC00ZGU1LThkY2ItYTc1OTVlMmE2YWY1XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 330360194,
+      "international": 544002609,
+      "worldwide": 874362803,
+      "opening_weekend_domestic": 166007347,
+      "budget": 250000000,
+      "earliest_release_date": "March 23, 2016 (EMEA, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 151,
+      "genres": "Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T18:58:35.821Z"
+  },
+  "captain-america-civil-war-2016": {
+    "title": "Captain America: Civil War",
+    "year": "2016",
+    "release_date": "2016-05-06",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt3498820",
+    "bom_url": "https://www.boxofficemojo.com/title/tt3498820/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt3498820",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 408084349,
+      "international": 746962067,
+      "worldwide": 1155046416,
+      "opening_weekend_domestic": 179139142,
+      "budget": 250000000,
+      "earliest_release_date": "April 27, 2016 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 147,
+      "genres": "Action Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:58:48.887Z"
+  },
+  "suicide-squad-2016": {
+    "title": "Suicide Squad",
+    "year": "2016",
+    "release_date": "2016-08-05",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt1386697",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1386697/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt1386697",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt6334354",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 325100054,
+      "international": 424100000,
+      "worldwide": 749200054,
+      "opening_weekend_domestic": 133682248,
+      "budget": 175000000,
+      "earliest_release_date": "August 3, 2016 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 123,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T18:59:04.246Z"
+  },
+  "doctor-strange-2016": {
+    "title": "Doctor Strange",
+    "year": "2016",
+    "release_date": "2016-11-04",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt1211837",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1211837/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt1211837",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX66_CR0,0,66"
+      },
+      {
+        "id": "tt9419884",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BN2YxZGRjMzYtZjE1ZC00MDI0LThjZmQtZTZmMzVmMmQ2NzBmXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt0057012",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjFjYzBlOTktMTI2OS00ZWVhLTgxMDUtNzAwODY2NmI3YTAzXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt3693414",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjU4NDIxZjUtZDNkNC00ZTBlLTg0NzUtNjJlNjYzNjIwZGRmXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 232641920,
+      "international": 445154156,
+      "worldwide": 677796833,
+      "opening_weekend_domestic": 85058311,
+      "budget": 165000000,
+      "earliest_release_date": "October 25, 2016 (United Kingdom)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 115,
+      "genres": "Action Adventure Fantasy Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:59:18.627Z"
+  },
+  "guardians-of-the-galaxy-vol-2-2017": {
+    "title": "Guardians of the Galaxy Vol. 2",
+    "year": "2017",
+    "release_date": "2017-05-05",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt3896198",
+    "bom_url": "https://www.boxofficemojo.com/title/tt3896198/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt3896198",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt6791350",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt2015381",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 389813101,
+      "international": 473950261,
+      "worldwide": 863764214,
+      "opening_weekend_domestic": 146510104,
+      "budget": 200000000,
+      "earliest_release_date": "April 25, 2017 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 136,
+      "genres": "Action Adventure Comedy Fantasy Music Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-09-05T18:59:32.532Z"
+  },
+  "wonder-woman-2017": {
+    "title": "Wonder Woman",
+    "year": "2017",
+    "release_date": "2017-06-02",
+    "universe": "DCEU",
+    "source": "baseline",
+    "bom_id": "tt0451279",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0451279/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._",
+    "candidates": [
+      {
+        "id": "tt0451279",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt7126948",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTdkYjI0M2ItMmUxZi00YjU1LTgwM2ItODgxNDY0ODZhZDQzXkEyXkFqcGc@._"
+      },
+      {
+        "id": "tt6133130",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTcyMTQzMDIwNl5BMl5BanBnXkFtZTgwMTY1NjgzMzI@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 412845172,
+      "international": 411125510,
+      "worldwide": 823970682,
+      "opening_weekend_domestic": 103251471,
+      "budget": 149000000,
+      "earliest_release_date": "May 30, 2017 (APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 141,
+      "genres": "Action Adventure Fantasy Sci-Fi War",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-05T18:59:46.873Z"
+  },
+  "spider-man-homecoming-2017": {
+    "title": "Spider-Man: Homecoming",
+    "year": "2017",
+    "release_date": "2017-07-07",
+    "universe": "MCU",
+    "source": "baseline",
+    "bom_id": "tt2250912",
+    "bom_url": "https://www.boxofficemojo.com/title/tt2250912/",
+    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_SX66_CR0,0,66",
+    "candidates": [
+      {
+        "id": "tt2250912",
+        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_SX66_CR0,0,66"
+      }
+    ],
+    "status": "ok",
+    "parsed": {
+      "domestic": 334952829,
+      "international": 545983955,
+      "worldwide": 880978185,
+      "opening_weekend_domestic": 117027503,
+      "budget": 175000000,
+      "earliest_release_date": "July 5, 2017 (8 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 133,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-05T19:00:01.489Z"
+  }
+}
