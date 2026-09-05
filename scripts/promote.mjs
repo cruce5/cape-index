@@ -12,7 +12,7 @@ import { toReal2025 } from "./inflation.mjs";
 
 const scraped = JSON.parse(readFileSync(join(ROOT, "data/scraped.json"), "utf8"));
 const additions = JSON.parse(readFileSync(join(ROOT, "data/additions.json"), "utf8")).candidates;
-const skeleton = JSON.parse(readFileSync(join(ROOT, "data/films.json"), "utf8"));
+const skeleton = JSON.parse(readFileSync(join(ROOT, "data/skeleton.json"), "utf8"));
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 

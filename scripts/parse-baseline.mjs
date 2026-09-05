@@ -1,5 +1,5 @@
 // Parse data/sheet-baseline.csv (the current Tableau Public source) into the
-// canonical data/films.json shape. All box-office numbers from the sheet are
+// canonical data/skeleton.json shape. All box-office numbers from the sheet are
 // carried over as `sheet_*` reference values; the `verified` block stays empty
 // until Box Office Mojo reconciliation fills it in.
 import { readFileSync, writeFileSync } from "node:fs";
@@ -90,5 +90,5 @@ const out = {
   films,
 };
 
-writeFileSync(join(root, "data/films.json"), JSON.stringify(out, null, 2) + "\n");
-console.log(`Wrote data/films.json — ${films.length} films (${films.filter(f => f.universe === "MCU").length} MCU, ${films.filter(f => f.universe === "DCEU").length} DCEU).`);
+writeFileSync(join(root, "data/skeleton.json"), JSON.stringify(out, null, 2) + "\n");
+console.log(`Wrote data/skeleton.json — ${films.length} films (${films.filter(f => f.universe === "MCU").length} MCU, ${films.filter(f => f.universe === "DCEU").length} DCEU).`);

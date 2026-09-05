@@ -1,0 +1,51 @@
+{
+  "Title": "Thor",
+  "Year": "2011",
+  "Rated": "PG-13",
+  "Released": "06 May 2011",
+  "Runtime": "115 min",
+  "Genre": "Action, Fantasy",
+  "Director": "Kenneth Branagh",
+  "Writer": "Ashley E. Miller, Zack Stentz, Don Payne",
+  "Actors": "Chris Hemsworth, Anthony Hopkins, Natalie Portman",
+  "Plot": "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
+  "Language": "English",
+  "Country": "United States, France",
+  "Awards": "5 wins & 30 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNjRhNGZjZjEtYTQzYS00OWUxLThjNGEtMTIwMTE2ZDFlZTZkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.0/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "77%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "57/100"
+    }
+  ],
+  "Metascore": "57",
+  "imdbRating": "7.0",
+  "imdbVotes": "963,947",
+  "imdbID": "tt0800369",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/thor/",
+  "DVD": "N/A",
+  "BoxOffice": "$181,030,624",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

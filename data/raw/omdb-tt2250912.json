@@ -1,0 +1,51 @@
+{
+  "Title": "Spider-Man: Homecoming",
+  "Year": "2017",
+  "Rated": "PG-13",
+  "Released": "07 Jul 2017",
+  "Runtime": "133 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Jon Watts",
+  "Writer": "Jonathan Goldstein, John Francis Daley, Jon Watts",
+  "Actors": "Tom Holland, Michael Keaton, Robert Downey Jr.",
+  "Plot": "Peter Parker tries to stop Adrian 'The Vulture' Toomes from selling weapons made with advanced Chitauri technology while trying to balance his life as an ordinary high school student.",
+  "Language": "English, Spanish",
+  "Country": "United States, Canada, Australia",
+  "Awards": "8 wins & 11 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.4/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "92%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "73/100"
+    }
+  ],
+  "Metascore": "73",
+  "imdbRating": "7.4",
+  "imdbVotes": "816,073",
+  "imdbID": "tt2250912",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/the_amazing_spider_man_3/",
+  "DVD": "N/A",
+  "BoxOffice": "$334,952,829",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

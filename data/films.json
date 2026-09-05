@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-05T19:13:39.765Z",
+    "generated": "2026-09-05T19:26:16.627Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -27,7 +27,8 @@
         "reason": "no worldwide gross on Box Office Mojo (unreleased)"
       }
     ],
-    "scores_source": "OMDb (pending enrich-omdb.mjs)"
+    "scores_source": "OMDb (omdbapi.com) — RT critic, Metacritic, IMDb; RT audience + budgets pending",
+    "budget_note": "Budget source order: Box Office Mojo → Wikipedia infobox → data/budget-overrides.json. Anything not straight from BOM is budget_estimated:true and approximate (studios rarely disclose; net vs gross-of-rebate varies)."
   },
   "films": [
     {
@@ -63,10 +64,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 94,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 79,
+        "imdb": 7.9
       },
       "sheet": {
         "domestic": 319034126,
@@ -112,10 +113,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 68,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 61,
+        "imdb": 6.6
       },
       "sheet": {
         "domestic": 134806913,
@@ -161,10 +162,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 72,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 57,
+        "imdb": 6.9
       },
       "sheet": {
         "domestic": 312433331,
@@ -210,10 +211,10 @@
         "Fantasy"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 77,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 57,
+        "imdb": 7
       },
       "sheet": {
         "domestic": 181030624,
@@ -260,10 +261,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 80,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 66,
+        "imdb": 6.9
       },
       "sheet": {
         "domestic": 176654505,
@@ -309,10 +310,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 91,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 69,
+        "imdb": 8
       },
       "sheet": {
         "domestic": 623357910,
@@ -359,10 +360,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 79,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 62,
+        "imdb": 7.1
       },
       "sheet": {
         "domestic": 409013994,
@@ -409,10 +410,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 56,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 55,
+        "imdb": 7.1
       },
       "sheet": {
         "domestic": 291045518,
@@ -460,10 +461,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 67,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 54,
+        "imdb": 6.7
       },
       "sheet": {
         "domestic": 206362140,
@@ -511,10 +512,10 @@
         "Thriller"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 90,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 70,
+        "imdb": 7.7
       },
       "sheet": {
         "domestic": 259766572,
@@ -562,10 +563,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 91,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 76,
+        "imdb": 8
       },
       "sheet": {
         "domestic": 333718600,
@@ -612,10 +613,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 75,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 66,
+        "imdb": 7.3
       },
       "sheet": {
         "domestic": 459005868,
@@ -662,10 +663,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 83,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 64,
+        "imdb": 7.2
       },
       "sheet": {
         "domestic": 180202163,
@@ -710,10 +711,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 28,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 44,
+        "imdb": 6.4
       },
       "sheet": {
         "domestic": 330360194,
@@ -759,10 +760,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 90,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 75,
+        "imdb": 7.8
       },
       "sheet": {
         "domestic": 408084349,
@@ -810,10 +811,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 26,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 40,
+        "imdb": 5.9
       },
       "sheet": {
         "domestic": 325100054,
@@ -861,10 +862,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 89,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 72,
+        "imdb": 7.5
       },
       "sheet": {
         "domestic": 232641920,
@@ -914,10 +915,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 85,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 67,
+        "imdb": 7.6
       },
       "sheet": {
         "domestic": 389813101,
@@ -966,10 +967,10 @@
         "War"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 93,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 76,
+        "imdb": 7.3
       },
       "sheet": {
         "domestic": 412845172,
@@ -1016,10 +1017,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 92,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 73,
+        "imdb": 7.4
       },
       "sheet": {
         "domestic": 334201140,
@@ -1068,10 +1069,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 93,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 74,
+        "imdb": 7.9
       },
       "sheet": {
         "domestic": 315058289,
@@ -1108,7 +1109,7 @@
         "international": 568067465,
         "worldwide": 869016900
       },
-      "budget": null,
+      "budget": 300000000,
       "runtime_minutes": 120,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -1116,10 +1117,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 39,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 45,
+        "imdb": 6
       },
       "sheet": {
         "domestic": 229024295,
@@ -1131,7 +1132,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Black Panther",
@@ -1166,10 +1168,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 96,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 88,
+        "imdb": 7.3
       },
       "sheet": {
         "domestic": 700426566,
@@ -1216,10 +1218,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 85,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 68,
+        "imdb": 8.4
       },
       "sheet": {
         "domestic": 678815482,
@@ -1256,7 +1258,7 @@
         "international": 520816947,
         "worldwide": 798716643
       },
-      "budget": null,
+      "budget": 162000000,
       "runtime_minutes": 118,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -1267,10 +1269,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 87,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 70,
+        "imdb": 7
       },
       "sheet": {
         "domestic": 216648740,
@@ -1282,7 +1284,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Aquaman",
@@ -1307,7 +1310,7 @@
         "international": 1047884949,
         "worldwide": 1477729993
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 143,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -1318,10 +1321,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 66,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 55,
+        "imdb": 6.8
       },
       "sheet": {
         "domestic": 335104314,
@@ -1333,7 +1336,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Captain Marvel",
@@ -1368,10 +1372,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 79,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 64,
+        "imdb": 6.7
       },
       "sheet": {
         "domestic": 426829839,
@@ -1419,10 +1423,10 @@
         "Fantasy"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 90,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 71,
+        "imdb": 7
       },
       "sheet": {
         "domestic": 140480049,
@@ -1469,10 +1473,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 94,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 78,
+        "imdb": 8.4
       },
       "sheet": {
         "domestic": 858373000,
@@ -1521,10 +1525,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 91,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 69,
+        "imdb": 7.3
       },
       "sheet": {
         "domestic": 390532085,
@@ -1569,10 +1573,10 @@
         "Drama"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 68,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 59,
+        "imdb": 8.3
       },
       "sheet": null,
       "bom_meta": {
@@ -1615,10 +1619,10 @@
         "Crime"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 79,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 60,
+        "imdb": 6.1
       },
       "sheet": {
         "domestic": 84172791,
@@ -1655,7 +1659,7 @@
         "international": 152829207,
         "worldwide": 211074853
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 151,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -1665,10 +1669,10 @@
         "Fantasy"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 57,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 60,
+        "imdb": 5.3
       },
       "sheet": {
         "domestic": 46801036,
@@ -1680,7 +1684,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Black Widow",
@@ -1705,7 +1710,7 @@
         "international": 233102594,
         "worldwide": 451407935
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 134,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -1715,10 +1720,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 79,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 68,
+        "imdb": 6.6
       },
       "sheet": {
         "domestic": 183651655,
@@ -1730,7 +1735,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "The Suicide Squad",
@@ -1766,10 +1772,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 90,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 72,
+        "imdb": 7.2
       },
       "sheet": {
         "domestic": 55817425,
@@ -1806,7 +1812,7 @@
         "international": 246891427,
         "worldwide": 513804349
       },
-      "budget": null,
+      "budget": 150000000,
       "runtime_minutes": 132,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -1817,10 +1823,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 92,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 71,
+        "imdb": 7.3
       },
       "sheet": {
         "domestic": 224543292,
@@ -1832,7 +1838,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Eternals",
@@ -1857,7 +1864,7 @@
         "international": 281951513,
         "worldwide": 477931520
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 156,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -1868,10 +1875,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 48,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 52,
+        "imdb": 6.2
       },
       "sheet": {
         "domestic": 164870234,
@@ -1883,7 +1890,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Spider-Man: No Way Home",
@@ -1919,10 +1927,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 93,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 71,
+        "imdb": 8.1
       },
       "sheet": {
         "domestic": 814115070,
@@ -1970,10 +1978,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 73,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 60,
+        "imdb": 6.9
       },
       "sheet": {
         "domestic": 411331607,
@@ -2010,7 +2018,7 @@
         "international": 459694555,
         "worldwide": 837487604
       },
-      "budget": null,
+      "budget": 250000000,
       "runtime_minutes": 118,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -2022,10 +2030,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 64,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 57,
+        "imdb": 6.1
       },
       "sheet": {
         "domestic": 343256830,
@@ -2037,7 +2045,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Black Adam",
@@ -2062,7 +2071,7 @@
         "international": 247968188,
         "worldwide": 433038646
       },
-      "budget": null,
+      "budget": 260000000,
       "runtime_minutes": 125,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -2073,10 +2082,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 39,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 41,
+        "imdb": 6.1
       },
       "sheet": {
         "domestic": 168152111,
@@ -2088,7 +2097,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Black Panther: Wakanda Forever",
@@ -2124,10 +2134,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 84,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 67,
+        "imdb": 6.6
       },
       "sheet": {
         "domestic": 453829060,
@@ -2164,7 +2174,7 @@
         "international": 276501289,
         "worldwide": 503254088
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 124,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -2175,10 +2185,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 46,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 48,
+        "imdb": 6
       },
       "sheet": {
         "domestic": 214504909,
@@ -2190,7 +2200,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Shazam! Fury of the Gods",
@@ -2215,7 +2226,7 @@
         "international": 80868028,
         "worldwide": 141797073
       },
-      "budget": null,
+      "budget": 125000000,
       "runtime_minutes": 130,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -2227,10 +2238,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 49,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 47,
+        "imdb": 5.9
       },
       "sheet": {
         "domestic": 57638006,
@@ -2242,7 +2253,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Guardians of the Galaxy Vol. 3",
@@ -2279,10 +2291,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 82,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 64,
+        "imdb": 7.9
       },
       "sheet": {
         "domestic": 358995815,
@@ -2319,7 +2331,7 @@
         "international": 172624171,
         "worldwide": 286931724
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 144,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -2330,10 +2342,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 63,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 55,
+        "imdb": 6.6
       },
       "sheet": {
         "domestic": 108133313,
@@ -2345,7 +2357,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Blue Beetle",
@@ -2370,7 +2383,7 @@
         "international": 61628837,
         "worldwide": 138255863
       },
-      "budget": null,
+      "budget": 120000000,
       "runtime_minutes": 127,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -2381,10 +2394,10 @@
         "Thriller"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 78,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 61,
+        "imdb": 5.9
       },
       "sheet": {
         "domestic": 72488072,
@@ -2396,7 +2409,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "The Marvels",
@@ -2421,7 +2435,7 @@
         "international": 128581859,
         "worldwide": 217906910
       },
-      "budget": null,
+      "budget": 274800000,
       "runtime_minutes": 105,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -2431,10 +2445,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 63,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 50,
+        "imdb": 5.5
       },
       "sheet": {
         "domestic": 84500223,
@@ -2446,7 +2460,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Aquaman and the Lost Kingdom",
@@ -2471,7 +2486,7 @@
         "international": 333725968,
         "worldwide": 465314875
       },
-      "budget": null,
+      "budget": 205000000,
       "runtime_minutes": 124,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -2482,10 +2497,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 33,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 42,
+        "imdb": 5.6
       },
       "sheet": {
         "domestic": 124481226,
@@ -2497,7 +2512,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Deadpool & Wolverine",
@@ -2533,10 +2549,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 77,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 56,
+        "imdb": 7.5
       },
       "sheet": {
         "domestic": 636745858,
@@ -2573,7 +2589,7 @@
         "international": 153200527,
         "worldwide": 213064030
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 138,
       "mpaa": "R",
       "distributor": "Warner Bros.",
@@ -2583,10 +2599,10 @@
         "Thriller"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 31,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 45,
+        "imdb": 5.2
       },
       "sheet": null,
       "bom_meta": {
@@ -2594,7 +2610,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet."
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true
     },
     {
       "title": "Captain America: Brave New World",
@@ -2619,7 +2636,7 @@
         "international": 214601576,
         "worldwide": 415101577
       },
-      "budget": null,
+      "budget": 180000000,
       "runtime_minutes": 118,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -2629,10 +2646,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 46,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 42,
+        "imdb": 5.6
       },
       "sheet": {
         "domestic": 200001599,
@@ -2644,7 +2661,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true
     },
     {
       "title": "Thunderbolts*",
@@ -2669,7 +2687,7 @@
         "international": 192162589,
         "worldwide": 382436917
       },
-      "budget": null,
+      "budget": 180000000,
       "runtime_minutes": 127,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -2682,10 +2700,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 88,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 68,
+        "imdb": 7.1
       },
       "sheet": null,
       "bom_meta": {
@@ -2693,7 +2711,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet."
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true
     },
     {
       "title": "Superman",
@@ -2728,10 +2747,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 83,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 68,
+        "imdb": 7
       },
       "sheet": null,
       "bom_meta": {
@@ -2764,7 +2783,7 @@
         "international": 247572118,
         "worldwide": 521858728
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 115,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -2774,10 +2793,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 86,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 65,
+        "imdb": 6.8
       },
       "sheet": null,
       "bom_meta": {
@@ -2785,7 +2804,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet."
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true
     },
     {
       "title": "Supergirl",
@@ -2810,7 +2830,7 @@
         "international": 54000000,
         "worldwide": 126366532
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 108,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -2821,10 +2841,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 53,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 50,
+        "imdb": 5.9
       },
       "sheet": null,
       "bom_meta": {
@@ -2832,7 +2852,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet."
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true
     },
     {
       "title": "Spider-Man: Brand New Day",
@@ -2857,7 +2878,7 @@
         "international": 1441505369,
         "worldwide": 2341267864
       },
-      "budget": null,
+      "budget": 200000000,
       "runtime_minutes": 145,
       "mpaa": "PG-13",
       "distributor": "Sony Pictures Releasing",
@@ -2867,10 +2888,10 @@
         "Sci-Fi"
       ],
       "scores": {
-        "rt_critic": null,
+        "rt_critic": 89,
         "rt_audience": null,
-        "metacritic": null,
-        "imdb": null
+        "metacritic": 66,
+        "imdb": 8.1
       },
       "sheet": null,
       "bom_meta": {
@@ -2878,7 +2899,8 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet."
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true
     }
   ]
 }

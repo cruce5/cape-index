@@ -1,0 +1,51 @@
+{
+  "Title": "Joker",
+  "Year": "2019",
+  "Rated": "R",
+  "Released": "04 Oct 2019",
+  "Runtime": "122 min",
+  "Genre": "Crime, Drama, Thriller",
+  "Director": "Todd Phillips",
+  "Writer": "Todd Phillips, Scott Silver, Bob Kane",
+  "Actors": "Joaquin Phoenix, Robert De Niro, Zazie Beetz",
+  "Plot": "Arthur Fleck, a party clown and a failed stand-up comedian, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak, he decides to embrace the life of chaos in Gotham City.",
+  "Language": "English, German",
+  "Country": "United States, Canada, Australia",
+  "Awards": "Won 2 Oscars. 120 wins & 247 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNzY3OWQ5NDktNWQ2OC00ZjdlLThkMmItMDhhNDk3NTFiZGU4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "8.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "68%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "59/100"
+    }
+  ],
+  "Metascore": "59",
+  "imdbRating": "8.3",
+  "imdbVotes": "1,690,149",
+  "imdbID": "tt7286456",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/joker_2019",
+  "DVD": "N/A",
+  "BoxOffice": "$335,477,657",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

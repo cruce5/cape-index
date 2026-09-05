@@ -1,0 +1,51 @@
+{
+  "Title": "Eternals",
+  "Year": "2021",
+  "Rated": "PG-13",
+  "Released": "05 Nov 2021",
+  "Runtime": "156 min",
+  "Genre": "Action, Adventure, Fantasy",
+  "Director": "Chloé Zhao",
+  "Writer": "Chloé Zhao, Patrick Burleigh, Ryan Firpo",
+  "Actors": "Gemma Chan, Richard Madden, Angelina Jolie",
+  "Plot": "The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.",
+  "Language": "English, American Sign , Marathi, Assyrian Neo-Aramaic, Spanish, Sumerian, Latin, Sanskrit, Greek, Ancient (to 1453), Arabic",
+  "Country": "United States",
+  "Awards": "7 wins & 18 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.2/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "48%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "52/100"
+    }
+  ],
+  "Metascore": "52",
+  "imdbRating": "6.2",
+  "imdbVotes": "423,444",
+  "imdbID": "tt9032400",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/eternals",
+  "DVD": "N/A",
+  "BoxOffice": "$164,870,234",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

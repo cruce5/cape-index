@@ -1,0 +1,51 @@
+{
+  "Title": "The Incredible Hulk",
+  "Year": "2008",
+  "Rated": "PG-13",
+  "Released": "13 Jun 2008",
+  "Runtime": "112 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Louis Leterrier",
+  "Writer": "Zak Penn, Stan Lee, Jack Kirby",
+  "Actors": "Edward Norton, Liv Tyler, Tim Roth",
+  "Plot": "Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into whenever he loses his temper.",
+  "Language": "English, Portuguese, Spanish",
+  "Country": "United States, Canada, Japan",
+  "Awards": "4 wins & 10 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.6/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "68%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "61/100"
+    }
+  ],
+  "Metascore": "61",
+  "imdbRating": "6.6",
+  "imdbVotes": "563,613",
+  "imdbID": "tt0800080",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/the_incredible_hulk/",
+  "DVD": "N/A",
+  "BoxOffice": "$134,806,913",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

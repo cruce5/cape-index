@@ -1,0 +1,26 @@
+{
+  "note": "Hand-set production budgets (USD) for titles whose Wikipedia infobox lists multiple net/gross figures that the parser can't disambiguate. Widely-cited production-budget figures; still approximate. Applied last, after BOM and Wikipedia, and marked budget_estimated unless BOM had it.",
+  "budgets": {
+    "Ant-Man and the Wasp": 162000000,
+    "Black Widow": 200000000,
+    "Eternals": 200000000,
+    "Shang-Chi and the Legend of the Ten Rings": 150000000,
+    "Ant-Man and the Wasp: Quantumania": 200000000,
+    "The Marvels": 274800000,
+    "The Flash": 200000000,
+    "Blue Beetle": 120000000,
+    "Aquaman and the Lost Kingdom": 205000000,
+    "Shazam! Fury of the Gods": 125000000,
+    "Joker: Folie à Deux": 200000000,
+    "The Fantastic Four: First Steps": 200000000,
+    "Thunderbolts*": 180000000,
+    "Superman": 225000000,
+    "Supergirl": 200000000,
+    "Captain America: Brave New World": 180000000,
+    "Spider-Man: Brand New Day": 200000000
+  },
+  "rt_critic_note": "Filled only where OMDb and Wikipedia both omit a literal RT %. From rottentomatoes.com.",
+  "rt_critic": {
+    "The Suicide Squad": 90
+  }
+}

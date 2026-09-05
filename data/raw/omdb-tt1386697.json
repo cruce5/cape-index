@@ -1,0 +1,51 @@
+{
+  "Title": "Suicide Squad",
+  "Year": "2016",
+  "Rated": "PG-13",
+  "Released": "05 Aug 2016",
+  "Runtime": "123 min",
+  "Genre": "Action, Adventure, Fantasy",
+  "Director": "David Ayer",
+  "Writer": "David Ayer, John Ostrander",
+  "Actors": "Will Smith, Jared Leto, Margot Robbie",
+  "Plot": "A secret government agency recruits some of the most dangerous incarcerated super-villains to form a defensive task force. Their first mission: save the world from the apocalypse.",
+  "Language": "English, Japanese, Spanish",
+  "Country": "United States",
+  "Awards": "Won 1 Oscar. 18 wins & 41 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.9/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "26%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "40/100"
+    }
+  ],
+  "Metascore": "40",
+  "imdbRating": "5.9",
+  "imdbVotes": "758,745",
+  "imdbID": "tt1386697",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/suicide_squad_2016/",
+  "DVD": "N/A",
+  "BoxOffice": "$325,100,054",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

@@ -1,0 +1,51 @@
+{
+  "Title": "Wonder Woman",
+  "Year": "2017",
+  "Rated": "PG-13",
+  "Released": "02 Jun 2017",
+  "Runtime": "141 min",
+  "Genre": "Action, Adventure, Fantasy",
+  "Director": "Patty Jenkins",
+  "Writer": "Allan Heinberg, Zack Snyder, Jason Fuchs",
+  "Actors": "Gal Gadot, Chris Pine, Robin Wright",
+  "Plot": "When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny.",
+  "Language": "English, German, Dutch, Flemish, French, Spanish, Chinese, Greek, Ancient (to 1453), North American Indian",
+  "Country": "United States, China, Hong Kong",
+  "Awards": "37 wins & 76 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "93%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "76/100"
+    }
+  ],
+  "Metascore": "76",
+  "imdbRating": "7.3",
+  "imdbVotes": "732,467",
+  "imdbID": "tt0451279",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/wonder_woman_2017",
+  "DVD": "N/A",
+  "BoxOffice": "$412,845,172",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

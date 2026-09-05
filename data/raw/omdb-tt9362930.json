@@ -1,0 +1,51 @@
+{
+  "Title": "Blue Beetle",
+  "Year": "2023",
+  "Rated": "PG-13",
+  "Released": "18 Aug 2023",
+  "Runtime": "127 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Angel Manuel Soto",
+  "Writer": "Gareth Dunnet-Alcocer",
+  "Actors": "Xolo Maridueña, Bruna Marquezine, Becky G",
+  "Plot": "An alien scarab chooses Jaime Reyes to be its symbiotic host, bestowing the recent college graduate with a suit of armor that's capable of extraordinary powers, forever changing his destiny as he becomes the superhero known as Blu...",
+  "Language": "English, Spanish, Portuguese",
+  "Country": "United States, Mexico, Canada, Germany",
+  "Awards": "3 wins & 12 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOTEyYzQzOTMtMWExNi00OWNjLTgwMDUtNzY0YjhmZDBiMTk2XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.9/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "78%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "61/100"
+    }
+  ],
+  "Metascore": "61",
+  "imdbRating": "5.9",
+  "imdbVotes": "111,218",
+  "imdbID": "tt9362930",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/blue_beetle",
+  "DVD": "N/A",
+  "BoxOffice": "$72,488,072",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

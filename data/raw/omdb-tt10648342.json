@@ -1,0 +1,51 @@
+{
+  "Title": "Thor: Love and Thunder",
+  "Year": "2022",
+  "Rated": "PG-13",
+  "Released": "08 Jul 2022",
+  "Runtime": "118 min",
+  "Genre": "Action, Adventure, Comedy",
+  "Director": "Taika Waititi",
+  "Writer": "Taika Waititi, Jennifer Kaytin Robinson, Stan Lee",
+  "Actors": "Chris Hemsworth, Natalie Portman, Christian Bale",
+  "Plot": "Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.",
+  "Language": "English",
+  "Country": "Australia, United States",
+  "Awards": "5 wins & 24 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.1/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "64%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "57/100"
+    }
+  ],
+  "Metascore": "57",
+  "imdbRating": "6.1",
+  "imdbVotes": "459,337",
+  "imdbID": "tt10648342",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/thor_love_and_thunder",
+  "DVD": "N/A",
+  "BoxOffice": "$343,256,830",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}
