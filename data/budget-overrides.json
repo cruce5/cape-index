@@ -1,6 +1,8 @@
 {
-  "note": "Hand-set production budgets (USD) for titles whose Wikipedia infobox lists multiple net/gross figures that the parser can't disambiguate. Widely-cited production-budget figures; still approximate. Applied last, after BOM and Wikipedia, and marked budget_estimated unless BOM had it.",
+  "note": "PRODUCTION budgets (USD), r/boxoffice convention: the number used for break-even math, NOT studio 'all-in' / marketing-inclusive figures. Box Office Mojo now lists inflated all-in budgets for some recent films (Doctor Strange 2 $414.9M, Deadpool & Wolverine $537M) — those are overridden here to the widely-cited production figure. Applied last, after BOM and Wikipedia. Everything here is budget_estimated:true.",
   "budgets": {
+    "Doctor Strange in the Multiverse of Madness": 200000000,
+    "Deadpool & Wolverine": 200000000,
     "Ant-Man and the Wasp": 162000000,
     "Black Widow": 200000000,
     "Eternals": 200000000,

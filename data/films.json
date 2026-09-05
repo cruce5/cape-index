@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-05T19:26:16.627Z",
+    "generated": "2026-09-05T19:29:19.139Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -28,7 +28,8 @@
       }
     ],
     "scores_source": "OMDb (omdbapi.com) — RT critic, Metacritic, IMDb; RT audience + budgets pending",
-    "budget_note": "Budget source order: Box Office Mojo → Wikipedia infobox → data/budget-overrides.json. Anything not straight from BOM is budget_estimated:true and approximate (studios rarely disclose; net vs gross-of-rebate varies)."
+    "budget_note": "Budget source order: Box Office Mojo → Wikipedia infobox → data/budget-overrides.json. Anything not straight from BOM is budget_estimated:true and approximate (studios rarely disclose; net vs gross-of-rebate varies).",
+    "derived_note": "metrics.* added by derive.mjs. breakeven_worldwide = production budget x 2.5 (theatrical rule of thumb). domestic_multiplier = domestic total / domestic opening weekend."
   },
   "films": [
     {
@@ -79,7 +80,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 54.46,
+        "pct_international": 45.54,
+        "domestic_multiplier": 3.24,
+        "opening_share_worldwide": 16.83,
+        "roi_worldwide": 4.18,
+        "breakeven_worldwide": 350000000,
+        "profit_vs_breakeven": 235796247,
+        "profitable": true,
+        "budget_real_2025": 209444364
+      }
     },
     {
       "title": "The Incredible Hulk",
@@ -128,7 +140,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 50.91,
+        "pct_international": 49.09,
+        "domestic_multiplier": 2.43,
+        "opening_share_worldwide": 20.93,
+        "roi_worldwide": 1.77,
+        "breakeven_worldwide": 375000000,
+        "profit_vs_breakeven": -110229004,
+        "profitable": false,
+        "budget_real_2025": 224404676
+      }
     },
     {
       "title": "Iron Man 2",
@@ -177,7 +200,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 50.07,
+        "pct_international": 49.93,
+        "domestic_multiplier": 2.44,
+        "opening_share_worldwide": 20.53,
+        "roi_worldwide": 3.12,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 123933331,
+        "profitable": true,
+        "budget_real_2025": 295428697
+      }
     },
     {
       "title": "Thor",
@@ -226,7 +260,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 40.29,
+        "pct_international": 59.71,
+        "domestic_multiplier": 2.75,
+        "opening_share_worldwide": 14.63,
+        "roi_worldwide": 3,
+        "breakeven_worldwide": 375000000,
+        "profit_vs_breakeven": 74326618,
+        "profitable": true,
+        "budget_real_2025": 214791566
+      }
     },
     {
       "title": "Captain America: The First Avenger",
@@ -276,7 +321,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 47.67,
+        "pct_international": 52.33,
+        "domestic_multiplier": 2.72,
+        "opening_share_worldwide": 17.56,
+        "roi_worldwide": 2.65,
+        "breakeven_worldwide": 350000000,
+        "profit_vs_breakeven": 20569774,
+        "profitable": true,
+        "budget_real_2025": 200472128
+      }
     },
     {
       "title": "The Avengers",
@@ -325,7 +381,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 41,
+        "pct_international": 59,
+        "domestic_multiplier": 3.01,
+        "opening_share_worldwide": 13.64,
+        "roi_worldwide": 6.91,
+        "breakeven_worldwide": 550000000,
+        "profit_vs_breakeven": 970538536,
+        "profitable": true,
+        "budget_real_2025": 308640470
+      }
     },
     {
       "title": "Iron Man 3",
@@ -375,7 +442,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 33.65,
+        "pct_international": 66.35,
+        "domestic_multiplier": 2.35,
+        "opening_share_worldwide": 14.33,
+        "roi_worldwide": 6.08,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 715577205,
+        "profitable": true,
+        "budget_real_2025": 276531720
+      }
     },
     {
       "title": "Man of Steel",
@@ -425,7 +503,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 43.43,
+        "pct_international": 56.57,
+        "domestic_multiplier": 2.5,
+        "opening_share_worldwide": 17.4,
+        "roi_worldwide": 2.98,
+        "breakeven_worldwide": 562500000,
+        "profit_vs_breakeven": 107645518,
+        "profitable": true,
+        "budget_real_2025": 311098186
+      }
     },
     {
       "title": "Thor: The Dark World",
@@ -476,7 +565,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 32,
+        "pct_international": 68,
+        "domestic_multiplier": 2.41,
+        "opening_share_worldwide": 13.3,
+        "roi_worldwide": 3.79,
+        "breakeven_worldwide": 425000000,
+        "profit_vs_breakeven": 219783140,
+        "profitable": true,
+        "budget_real_2025": 235051962
+      }
     },
     {
       "title": "Captain America: The Winter Soldier",
@@ -527,7 +627,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 36.36,
+        "pct_international": 63.64,
+        "domestic_multiplier": 2.73,
+        "opening_share_worldwide": 13.3,
+        "roi_worldwide": 4.2,
+        "breakeven_worldwide": 425000000,
+        "profit_vs_breakeven": 289421503,
+        "profitable": true,
+        "budget_real_2025": 231299845
+      }
     },
     {
       "title": "Guardians of the Galaxy",
@@ -578,7 +689,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 43.15,
+        "pct_international": 56.85,
+        "domestic_multiplier": 3.54,
+        "opening_share_worldwide": 12.2,
+        "roi_worldwide": 4.55,
+        "breakeven_worldwide": 425000000,
+        "profit_vs_breakeven": 348350376,
+        "profitable": true,
+        "budget_real_2025": 231299845
+      }
     },
     {
       "title": "Avengers: Age of Ultron",
@@ -628,7 +750,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 32.67,
+        "pct_international": 67.33,
+        "domestic_multiplier": 2.4,
+        "opening_share_worldwide": 13.61,
+        "roi_worldwide": 5.62,
+        "breakeven_worldwide": 625000000,
+        "profit_vs_breakeven": 780018048,
+        "profitable": true,
+        "budget_real_2025": 339743563
+      }
     },
     {
       "title": "Ant-Man",
@@ -678,7 +811,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 34.7,
+        "pct_international": 65.3,
+        "domestic_multiplier": 3.15,
+        "opening_share_worldwide": 11.02,
+        "roi_worldwide": 3.99,
+        "breakeven_worldwide": 325000000,
+        "profit_vs_breakeven": 194311965,
+        "profitable": true,
+        "budget_real_2025": 176666653
+      }
     },
     {
       "title": "Batman v Superman: Dawn of Justice",
@@ -726,7 +870,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 37.78,
+        "pct_international": 62.22,
+        "domestic_multiplier": 1.99,
+        "opening_share_worldwide": 18.99,
+        "roi_worldwide": 3.5,
+        "breakeven_worldwide": 625000000,
+        "profit_vs_breakeven": 249362803,
+        "profitable": true,
+        "budget_real_2025": 335511048
+      }
     },
     {
       "title": "Captain America: Civil War",
@@ -775,7 +930,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 35.33,
+        "pct_international": 64.67,
+        "domestic_multiplier": 2.28,
+        "opening_share_worldwide": 15.51,
+        "roi_worldwide": 4.62,
+        "breakeven_worldwide": 625000000,
+        "profit_vs_breakeven": 530046416,
+        "profitable": true,
+        "budget_real_2025": 335511048
+      }
     },
     {
       "title": "Suicide Squad",
@@ -826,7 +992,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 43.39,
+        "pct_international": 56.61,
+        "domestic_multiplier": 2.43,
+        "opening_share_worldwide": 17.84,
+        "roi_worldwide": 4.28,
+        "breakeven_worldwide": 437500000,
+        "profit_vs_breakeven": 311700054,
+        "profitable": true,
+        "budget_real_2025": 234857733
+      }
     },
     {
       "title": "Doctor Strange",
@@ -877,7 +1054,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 34.32,
+        "pct_international": 65.68,
+        "domestic_multiplier": 2.74,
+        "opening_share_worldwide": 12.55,
+        "roi_worldwide": 4.11,
+        "breakeven_worldwide": 412500000,
+        "profit_vs_breakeven": 265296833,
+        "profitable": true,
+        "budget_real_2025": 221437291
+      }
     },
     {
       "title": "Guardians of the Galaxy Vol. 2",
@@ -930,7 +1118,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 45.13,
+        "pct_international": 54.87,
+        "domestic_multiplier": 2.66,
+        "opening_share_worldwide": 16.96,
+        "roi_worldwide": 4.32,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 363764214,
+        "profitable": true,
+        "budget_real_2025": 262810052
+      }
     },
     {
       "title": "Wonder Woman",
@@ -982,7 +1181,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 50.1,
+        "pct_international": 49.9,
+        "domestic_multiplier": 4,
+        "opening_share_worldwide": 12.53,
+        "roi_worldwide": 5.53,
+        "breakeven_worldwide": 372500000,
+        "profit_vs_breakeven": 451470682,
+        "profitable": true,
+        "budget_real_2025": 195793489
+      }
     },
     {
       "title": "Spider-Man: Homecoming",
@@ -1032,7 +1242,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 38.02,
+        "pct_international": 61.97,
+        "domestic_multiplier": 2.86,
+        "opening_share_worldwide": 13.28,
+        "roi_worldwide": 5.03,
+        "breakeven_worldwide": 437500000,
+        "profit_vs_breakeven": 443478185,
+        "profitable": true,
+        "budget_real_2025": 229958796
+      }
     },
     {
       "title": "Thor: Ragnarok",
@@ -1084,7 +1305,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 36.84,
+        "pct_international": 63.16,
+        "domestic_multiplier": 2.57,
+        "opening_share_worldwide": 14.35,
+        "roi_worldwide": 4.75,
+        "breakeven_worldwide": 450000000,
+        "profit_vs_breakeven": 405301806,
+        "profitable": true,
+        "budget_real_2025": 236529047
+      }
     },
     {
       "title": "Justice League",
@@ -1133,7 +1365,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 34.63,
+        "pct_international": 65.37,
+        "domestic_multiplier": 2.44,
+        "opening_share_worldwide": 14.19,
+        "roi_worldwide": 2.2,
+        "breakeven_worldwide": 750000000,
+        "profit_vs_breakeven": -88673013,
+        "profitable": false,
+        "budget_real_2025": 394215078
+      }
     },
     {
       "title": "Black Panther",
@@ -1183,7 +1426,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 51.89,
+        "pct_international": 48.11,
+        "domestic_multiplier": 3.47,
+        "opening_share_worldwide": 14.96,
+        "roi_worldwide": 6.75,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 849926083,
+        "profitable": true,
+        "budget_real_2025": 256544023
+      }
     },
     {
       "title": "Avengers: Infinity War",
@@ -1233,7 +1487,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 33.07,
+        "pct_international": 66.93,
+        "domestic_multiplier": 2.63,
+        "opening_share_worldwide": 12.56,
+        "roi_worldwide": 5.86,
+        "breakeven_worldwide": 875000000,
+        "profit_vs_breakeven": 1177415039,
+        "profitable": true,
+        "budget_real_2025": 448952040
+      }
     },
     {
       "title": "Ant-Man and the Wasp",
@@ -1285,7 +1550,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 34.79,
+        "pct_international": 65.21,
+        "domestic_multiplier": 2.86,
+        "opening_share_worldwide": 12.18,
+        "roi_worldwide": 3.84,
+        "breakeven_worldwide": 405000000,
+        "profit_vs_breakeven": 217674139,
+        "profitable": true,
+        "budget_real_2025": 207800659
+      }
     },
     {
       "title": "Aquaman",
@@ -1337,7 +1613,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 29.09,
+        "pct_international": 70.91,
+        "domestic_multiplier": 4.94,
+        "opening_share_worldwide": 5.89,
+        "roi_worldwide": 5.76,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 652028393,
+        "profitable": true,
+        "budget_real_2025": 256544023
+      }
     },
     {
       "title": "Captain Marvel",
@@ -1387,7 +1674,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 37.73,
+        "pct_international": 62.27,
+        "domestic_multiplier": 2.78,
+        "opening_share_worldwide": 13.56,
+        "roi_worldwide": 7.07,
+        "breakeven_worldwide": 400000000,
+        "profit_vs_breakeven": 731416446,
+        "profitable": true,
+        "budget_real_2025": 201582589
+      }
     },
     {
       "title": "Shazam!",
@@ -1438,7 +1736,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 38.19,
+        "pct_international": 61.81,
+        "domestic_multiplier": 2.63,
+        "opening_share_worldwide": 14.55,
+        "roi_worldwide": 3.68,
+        "breakeven_worldwide": 250000000,
+        "profit_vs_breakeven": 117799011,
+        "profitable": true,
+        "budget_real_2025": 125989118
+      }
     },
     {
       "title": "Avengers: Endgame",
@@ -1488,7 +1797,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 30.66,
+        "pct_international": 69.34,
+        "domestic_multiplier": 2.4,
+        "opening_share_worldwide": 12.76,
+        "roi_worldwide": 7.86,
+        "breakeven_worldwide": 890000000,
+        "profit_vs_breakeven": 1909439100,
+        "profitable": true,
+        "budget_real_2025": 448521261
+      }
     },
     {
       "title": "Spider-Man: Far From Home",
@@ -1540,7 +1860,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 34.54,
+        "pct_international": 65.45,
+        "domestic_multiplier": 4.23,
+        "opening_share_worldwide": 8.17,
+        "roi_worldwide": 7.08,
+        "breakeven_worldwide": 400000000,
+        "profit_vs_breakeven": 732723226,
+        "profitable": true,
+        "budget_real_2025": 201582589
+      }
     },
     {
       "title": "Joker",
@@ -1584,7 +1915,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet."
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 31.09,
+        "pct_international": 68.91,
+        "domestic_multiplier": 3.49,
+        "opening_share_worldwide": 8.92,
+        "roi_worldwide": 19.62,
+        "breakeven_worldwide": 137500000,
+        "profit_vs_breakeven": 941458629,
+        "profitable": true,
+        "budget_real_2025": 69294015
+      }
     },
     {
       "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
@@ -1634,7 +1976,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 40.95,
+        "pct_international": 58.97,
+        "domestic_multiplier": 2.55,
+        "opening_share_worldwide": 16.06,
+        "roi_worldwide": 2.43,
+        "breakeven_worldwide": 211250000,
+        "profit_vs_breakeven": -5712067,
+        "profitable": false,
+        "budget_real_2025": 105163420
+      }
     },
     {
       "title": "Wonder Woman 1984",
@@ -1685,7 +2038,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 27.59,
+        "pct_international": 72.41,
+        "domestic_multiplier": 2.8,
+        "opening_share_worldwide": 9.85,
+        "roi_worldwide": 0.85,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -330398964,
+        "profitable": false,
+        "budget_real_2025": 248907504
+      }
     },
     {
       "title": "Black Widow",
@@ -1736,7 +2100,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 48.36,
+        "pct_international": 51.64,
+        "domestic_multiplier": 2.29,
+        "opening_share_worldwide": 21.16,
+        "roi_worldwide": 1.9,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -120248345,
+        "profitable": false,
+        "budget_real_2025": 237738495
+      }
     },
     {
       "title": "The Suicide Squad",
@@ -1787,7 +2162,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 33.08,
+        "pct_international": 66.92,
+        "domestic_multiplier": 2.13,
+        "opening_share_worldwide": 15.53,
+        "roi_worldwide": 0.91,
+        "breakeven_worldwide": 462500000,
+        "profit_vs_breakeven": -293782575,
+        "profitable": false,
+        "budget_real_2025": 219908108
+      }
     },
     {
       "title": "Shang-Chi and the Legend of the Ten Rings",
@@ -1839,7 +2225,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 51.95,
+        "pct_international": 48.05,
+        "domestic_multiplier": 2.98,
+        "opening_share_worldwide": 17.44,
+        "roi_worldwide": 2.88,
+        "breakeven_worldwide": 375000000,
+        "profit_vs_breakeven": 57243292,
+        "profitable": true,
+        "budget_real_2025": 178303871
+      }
     },
     {
       "title": "Eternals",
@@ -1891,7 +2288,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 41.01,
+        "pct_international": 58.99,
+        "domestic_multiplier": 2.31,
+        "opening_share_worldwide": 17.73,
+        "roi_worldwide": 2.01,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -97935101,
+        "profitable": false,
+        "budget_real_2025": 237738495
+      }
     },
     {
       "title": "Spider-Man: No Way Home",
@@ -1942,7 +2350,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 42.41,
+        "pct_international": 57.59,
+        "domestic_multiplier": 3.13,
+        "opening_share_worldwide": 13.54,
+        "roi_worldwide": 9.61,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 1421426073,
+        "profitable": true,
+        "budget_real_2025": 237738495
+      }
     },
     {
       "title": "Doctor Strange in the Multiverse of Madness",
@@ -1967,7 +2386,7 @@
         "international": 599222552,
         "worldwide": 1051939610
       },
-      "budget": 414900000,
+      "budget": 200000000,
       "runtime_minutes": 126,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -1993,7 +2412,19 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 43.04,
+        "pct_international": 56.96,
+        "domestic_multiplier": 2.19,
+        "opening_share_worldwide": 19.61,
+        "roi_worldwide": 4.78,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 455775804,
+        "profitable": true,
+        "budget_real_2025": 220122670
+      }
     },
     {
       "title": "Thor: Love and Thunder",
@@ -2046,7 +2477,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 45.11,
+        "pct_international": 54.89,
+        "domestic_multiplier": 2.38,
+        "opening_share_worldwide": 18.95,
+        "roi_worldwide": 3.04,
+        "breakeven_worldwide": 625000000,
+        "profit_vs_breakeven": 135928081,
+        "profitable": true,
+        "budget_real_2025": 275153338
+      }
     },
     {
       "title": "Black Adam",
@@ -2098,7 +2540,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 42.74,
+        "pct_international": 57.26,
+        "domestic_multiplier": 2.51,
+        "opening_share_worldwide": 17.03,
+        "roi_worldwide": 1.51,
+        "breakeven_worldwide": 650000000,
+        "profit_vs_breakeven": -256547889,
+        "profitable": false,
+        "budget_real_2025": 286159471
+      }
     },
     {
       "title": "Black Panther: Wakanda Forever",
@@ -2149,7 +2602,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 52.82,
+        "pct_international": 47.18,
+        "domestic_multiplier": 2.5,
+        "opening_share_worldwide": 21.11,
+        "roi_worldwide": 3.44,
+        "breakeven_worldwide": 625000000,
+        "profit_vs_breakeven": 234208836,
+        "profitable": true,
+        "budget_real_2025": 275153338
+      }
     },
     {
       "title": "Ant-Man and the Wasp: Quantumania",
@@ -2201,7 +2665,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 45.06,
+        "pct_international": 54.94,
+        "domestic_multiplier": 2.02,
+        "opening_share_worldwide": 22.29,
+        "roi_worldwide": 2.38,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -23928820,
+        "profitable": false,
+        "budget_real_2025": 211419682
+      }
     },
     {
       "title": "Shazam! Fury of the Gods",
@@ -2254,7 +2729,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 42.97,
+        "pct_international": 57.03,
+        "domestic_multiplier": 1.91,
+        "opening_share_worldwide": 22.45,
+        "roi_worldwide": 1.07,
+        "breakeven_worldwide": 312500000,
+        "profit_vs_breakeven": -178361994,
+        "profitable": false,
+        "budget_real_2025": 132137301
+      }
     },
     {
       "title": "Guardians of the Galaxy Vol. 3",
@@ -2306,7 +2792,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "metrics": {
+        "pct_domestic": 42.46,
+        "pct_international": 57.54,
+        "domestic_multiplier": 3.03,
+        "opening_share_worldwide": 14,
+        "roi_worldwide": 3.38,
+        "breakeven_worldwide": 625000000,
+        "profit_vs_breakeven": 220555777,
+        "profitable": true,
+        "budget_real_2025": 264274603
+      }
     },
     {
       "title": "The Flash",
@@ -2358,7 +2855,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 39.84,
+        "pct_international": 60.16,
+        "domestic_multiplier": 1.96,
+        "opening_share_worldwide": 20.28,
+        "roi_worldwide": 1.36,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -228566687,
+        "profitable": false,
+        "budget_real_2025": 211419682
+      }
     },
     {
       "title": "Blue Beetle",
@@ -2410,7 +2918,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 55.42,
+        "pct_international": 44.58,
+        "domestic_multiplier": 2.9,
+        "opening_share_worldwide": 19.14,
+        "roi_worldwide": 1.09,
+        "breakeven_worldwide": 300000000,
+        "profit_vs_breakeven": -169211928,
+        "profitable": false,
+        "budget_real_2025": 126851809
+      }
     },
     {
       "title": "The Marvels",
@@ -2461,7 +2980,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 40.99,
+        "pct_international": 59.01,
+        "domestic_multiplier": 1.83,
+        "opening_share_worldwide": 22.37,
+        "roi_worldwide": 0.75,
+        "breakeven_worldwide": 687000000,
+        "profit_vs_breakeven": -480863175,
+        "profitable": false,
+        "budget_real_2025": 290490643
+      }
     },
     {
       "title": "Aquaman and the Lost Kingdom",
@@ -2513,7 +3043,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 28.28,
+        "pct_international": 71.72,
+        "domestic_multiplier": 4.5,
+        "opening_share_worldwide": 6.29,
+        "roi_worldwide": 2.15,
+        "breakeven_worldwide": 512500000,
+        "profit_vs_breakeven": -72318774,
+        "profitable": false,
+        "budget_real_2025": 216705174
+      }
     },
     {
       "title": "Deadpool & Wolverine",
@@ -2538,7 +3079,7 @@
         "international": 720132616,
         "worldwide": 1373951656
       },
-      "budget": 537000000,
+      "budget": 200000000,
       "runtime_minutes": 128,
       "mpaa": "R",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -2564,7 +3105,19 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": null
+      "notes": null,
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 47.59,
+        "pct_international": 52.41,
+        "domestic_multiplier": 3.01,
+        "opening_share_worldwide": 15.8,
+        "roi_worldwide": 6.69,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 838073645,
+        "profitable": true,
+        "budget_real_2025": 205362636
+      }
     },
     {
       "title": "Joker: Folie à Deux",
@@ -2611,7 +3164,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": "Added beyond the legacy Tableau sheet.",
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 28.1,
+        "pct_international": 71.9,
+        "domestic_multiplier": 1.55,
+        "opening_share_worldwide": 18.16,
+        "roi_worldwide": 1.04,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -292499713,
+        "profitable": false,
+        "budget_real_2025": 205362636
+      }
     },
     {
       "title": "Captain America: Brave New World",
@@ -2662,7 +3226,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": null,
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 48.3,
+        "pct_international": 51.7,
+        "domestic_multiplier": 2.26,
+        "opening_share_worldwide": 21.4,
+        "roi_worldwide": 2.31,
+        "breakeven_worldwide": 450000000,
+        "profit_vs_breakeven": -34898423,
+        "profitable": false,
+        "budget_real_2025": 180000000
+      }
     },
     {
       "title": "Thunderbolts*",
@@ -2712,7 +3287,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": "Added beyond the legacy Tableau sheet.",
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 49.75,
+        "pct_international": 50.25,
+        "domestic_multiplier": 2.56,
+        "opening_share_worldwide": 19.43,
+        "roi_worldwide": 2.12,
+        "breakeven_worldwide": 450000000,
+        "profit_vs_breakeven": -67563083,
+        "profitable": false,
+        "budget_real_2025": 180000000
+      }
     },
     {
       "title": "Superman",
@@ -2758,7 +3344,18 @@
       },
       "verified": true,
       "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet."
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 57.25,
+        "pct_international": 42.75,
+        "domestic_multiplier": 2.83,
+        "opening_share_worldwide": 20.21,
+        "roi_worldwide": 2.75,
+        "breakeven_worldwide": 562500000,
+        "profit_vs_breakeven": 56223803,
+        "profitable": true,
+        "budget_real_2025": 225000000
+      }
     },
     {
       "title": "The Fantastic Four: First Steps",
@@ -2805,7 +3402,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": "Added beyond the legacy Tableau sheet.",
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 52.56,
+        "pct_international": 47.44,
+        "domestic_multiplier": 2.33,
+        "opening_share_worldwide": 22.54,
+        "roi_worldwide": 2.61,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 21858728,
+        "profitable": true,
+        "budget_real_2025": 200000000
+      }
     },
     {
       "title": "Supergirl",
@@ -2853,7 +3461,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": "Added beyond the legacy Tableau sheet.",
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 57.27,
+        "pct_international": 42.73,
+        "domestic_multiplier": 1.95,
+        "opening_share_worldwide": 29.36,
+        "roi_worldwide": 0.63,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -373633468,
+        "profitable": false,
+        "budget_real_2025": 200000000
+      }
     },
     {
       "title": "Spider-Man: Brand New Day",
@@ -2900,7 +3519,18 @@
       "verified": true,
       "verified_at": "2026-09-05",
       "notes": "Added beyond the legacy Tableau sheet.",
-      "budget_estimated": true
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 38.43,
+        "pct_international": 61.57,
+        "domestic_multiplier": 2.5,
+        "opening_share_worldwide": 15.38,
+        "roi_worldwide": 11.71,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 1841267864,
+        "profitable": true,
+        "budget_real_2025": 200000000
+      }
     }
   ]
 }
