@@ -329,6 +329,7 @@
     <div class="cgroup">
       <span class="clabel">Theme</span>
       <div class="seg">
+        <button data-theme-set="auto" aria-pressed="true">Auto</button>
         <button data-theme-set="dark" aria-pressed="false">Dark</button>
         <button data-theme-set="light" aria-pressed="false">Light</button>
       </div>
@@ -1939,15 +1940,30 @@
       renderAll();
     });
   });
+  function applyTheme(t) {
+    if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    else document.documentElement.removeAttribute("data-theme"); // "auto" -> follow the OS
+    document.querySelectorAll("[data-theme-set]").forEach(function (x) {
+      x.setAttribute("aria-pressed", x.getAttribute("data-theme-set") === t ? "true" : "false");
+    });
+  }
   document.querySelectorAll("[data-theme-set]").forEach(function (b) {
     b.addEventListener("click", function () {
       var t = b.getAttribute("data-theme-set");
-      document.documentElement.setAttribute("data-theme", t);
-      document.querySelectorAll("[data-theme-set]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-      try { localStorage.setItem("capeindex-theme", t); } catch (e) {}
+      applyTheme(t);
+      try {
+        if (t === "auto") localStorage.removeItem("capeindex-theme");
+        else localStorage.setItem("capeindex-theme", t);
+      } catch (e) {}
       renderAll();
     });
   });
+  // re-render charts if the OS theme flips while on Auto (colours are read from CSS vars)
+  try {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+      if (!document.documentElement.hasAttribute("data-theme")) renderAll();
+    });
+  } catch (e) {}
   document.querySelectorAll("[data-table]").forEach(function (b) {
     b.addEventListener("click", function () {
       var id = "table-" + b.getAttribute("data-table");
@@ -1982,10 +1998,7 @@
   /* restore saved preferences */
   try {
     var saved = localStorage.getItem("capeindex-theme");
-    if (saved) {
-      document.documentElement.setAttribute("data-theme", saved);
-      document.querySelectorAll("[data-theme-set]").forEach(function (x) { x.setAttribute("aria-pressed", x.getAttribute("data-theme-set") === saved ? "true" : "false"); });
-    }
+    applyTheme(saved === "dark" || saved === "light" ? saved : "auto");
     if (localStorage.getItem("capeindex-notes") === "on") {
       document.body.classList.add("notes-on");
       document.querySelectorAll("[data-notes]").forEach(function (x) { x.setAttribute("aria-pressed", x.getAttribute("data-notes") === "on" ? "true" : "false"); });

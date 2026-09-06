@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-06T04:53:10.213Z",
+  "generated": "2026-09-06T14:51:15.760Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 140,
+  "count": 141,
   "characters": [
     {
       "name": "Iron Man",
@@ -2832,6 +2832,27 @@
           "order": 2,
           "minor": false,
           "actor": "Vanessa Kirby"
+        }
+      ]
+    },
+    {
+      "name": "Iron Monger",
+      "real_name": "Obadiah Stane",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jeff Bridges"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Iron Man",
+          "universe": "MCU",
+          "date": "2008-05-02",
+          "order": 3,
+          "minor": false,
+          "actor": "Jeff Bridges"
         }
       ]
     },

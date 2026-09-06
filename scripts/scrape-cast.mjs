@@ -178,6 +178,7 @@ const CANON = {
   "Red Skull": "Red Skull", "Johann Schmidt": "Red Skull",
   "Abomination": "Abomination", "Emil Blonsky": "Abomination",
   "Whiplash": "Whiplash", "Ivan Vanko": "Whiplash",
+  "Iron Monger": "Iron Monger", "Obadiah Stane": "Iron Monger",
   "The Leader": "The Leader", "Samuel Sterns": "The Leader",
   // Thaddeus Ross is a plain government official in five films; he is only credited "/ Red Hulk" in Brave New World (2025), so that is his one costumed appearance.
   "Red Hulk": "Red Hulk",
