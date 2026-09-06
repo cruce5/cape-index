@@ -1,96 +1,10 @@
 {
-  "generated": "2026-09-06T02:10:49.003Z",
+  "generated": "2026-09-06T04:53:10.213Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 138,
+  "count": 140,
   "characters": [
-    {
-      "name": "Captain America",
-      "real_name": "Steve Rogers",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Chris Evans",
-        "Anthony Mackie"
-      ],
-      "appearances": 9,
-      "films": [
-        {
-          "title": "Captain America: The First Avenger",
-          "universe": "MCU",
-          "date": "2011-07-22",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-12",
-          "order": 2,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Captain America: The Winter Soldier",
-          "universe": "MCU",
-          "date": "2014-04-04",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 4,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Ant-Man",
-          "universe": "MCU",
-          "date": "2015-07-17",
-          "order": 7,
-          "minor": false,
-          "actor": "Anthony Mackie"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 4,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 2,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Captain America: Brave New World",
-          "universe": "MCU",
-          "date": "2025-02-14",
-          "order": 1,
-          "minor": false,
-          "actor": "Anthony Mackie"
-        }
-      ]
-    },
     {
       "name": "Iron Man",
       "real_name": "Tony Stark",
@@ -331,6 +245,75 @@
       ]
     },
     {
+      "name": "Captain America",
+      "real_name": "Steve Rogers",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chris Evans"
+      ],
+      "appearances": 7,
+      "films": [
+        {
+          "title": "Captain America: The First Avenger",
+          "universe": "MCU",
+          "date": "2011-07-22",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        }
+      ]
+    },
+    {
       "name": "Hulk",
       "real_name": "Bruce Banner",
       "universes": [
@@ -401,145 +384,6 @@
       ]
     },
     {
-      "name": "Nick Fury",
-      "real_name": null,
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Samuel L. Jackson"
-      ],
-      "appearances": 7,
-      "films": [
-        {
-          "title": "Iron Man 2",
-          "universe": "MCU",
-          "date": "2010-05-07",
-          "order": 7,
-          "minor": false,
-          "actor": "Samuel L. Jackson"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-12",
-          "order": 9,
-          "minor": false,
-          "actor": "Samuel L. Jackson"
-        },
-        {
-          "title": "Captain America: The Winter Soldier",
-          "universe": "MCU",
-          "date": "2014-04-04",
-          "order": 12,
-          "minor": false,
-          "actor": "Samuel L. Jackson"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 18,
-          "minor": false,
-          "actor": "Samuel L. Jackson"
-        },
-        {
-          "title": "Captain Marvel",
-          "universe": "MCU",
-          "date": "2019-03-08",
-          "order": 2,
-          "minor": false,
-          "actor": "Samuel L. Jackson"
-        },
-        {
-          "title": "Spider-Man: Far From Home",
-          "universe": "MCU",
-          "date": "2019-07-02",
-          "order": 2,
-          "minor": false,
-          "actor": "Samuel L. Jackson"
-        },
-        {
-          "title": "The Marvels",
-          "universe": "MCU",
-          "date": "2023-11-10",
-          "order": 10,
-          "minor": false,
-          "actor": "Samuel L. Jackson"
-        }
-      ]
-    },
-    {
-      "name": "War Machine",
-      "real_name": "James Rhodes",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Terrence Howard",
-        "Don Cheadle"
-      ],
-      "appearances": 7,
-      "films": [
-        {
-          "title": "Iron Man",
-          "universe": "MCU",
-          "date": "2008-05-02",
-          "order": 2,
-          "minor": false,
-          "actor": "Terrence Howard"
-        },
-        {
-          "title": "Iron Man 2",
-          "universe": "MCU",
-          "date": "2010-05-07",
-          "order": 3,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Iron Man 3",
-          "universe": "MCU",
-          "date": "2013-05-03",
-          "order": 3,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 7,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 6,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 6,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 7,
-          "minor": false,
-          "actor": "Don Cheadle"
-        }
-      ]
-    },
-    {
       "name": "Spider-Man",
       "real_name": "Peter Parker",
       "universes": [
@@ -597,6 +441,67 @@
           "order": 1,
           "minor": false,
           "actor": "Tom Holland"
+        }
+      ]
+    },
+    {
+      "name": "War Machine",
+      "real_name": "James Rhodes",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Don Cheadle"
+      ],
+      "appearances": 6,
+      "films": [
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 3,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Iron Man 3",
+          "universe": "MCU",
+          "date": "2013-05-03",
+          "order": 3,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 7,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 6,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 6,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 7,
+          "minor": false,
+          "actor": "Don Cheadle"
         }
       ]
     },
@@ -711,6 +616,59 @@
           "order": 1,
           "minor": false,
           "actor": "Paul Rudd"
+        }
+      ]
+    },
+    {
+      "name": "Falcon",
+      "real_name": "Sam Wilson",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Anthony Mackie"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 4,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 12,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Ant-Man",
+          "universe": "MCU",
+          "date": "2015-07-17",
+          "order": 7,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 5,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 11,
+          "minor": false,
+          "actor": "Anthony Mackie"
         }
       ]
     },
@@ -876,52 +834,6 @@
       ]
     },
     {
-      "name": "Black Panther",
-      "real_name": "T'Challa",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Chadwick Boseman",
-        "Letitia Wright"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 8,
-          "minor": false,
-          "actor": "Chadwick Boseman"
-        },
-        {
-          "title": "Black Panther",
-          "universe": "MCU",
-          "date": "2018-02-16",
-          "order": 1,
-          "minor": false,
-          "actor": "Chadwick Boseman"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 8,
-          "minor": false,
-          "actor": "Chadwick Boseman"
-        },
-        {
-          "title": "Black Panther: Wakanda Forever",
-          "universe": "MCU",
-          "date": "2022-11-11",
-          "order": 1,
-          "minor": false,
-          "actor": "Letitia Wright"
-        }
-      ]
-    },
-    {
       "name": "Gamora",
       "real_name": null,
       "universes": [
@@ -1008,52 +920,6 @@
           "order": 6,
           "minor": false,
           "actor": "Jeremy Renner"
-        }
-      ]
-    },
-    {
-      "name": "Red Hulk",
-      "real_name": "Thaddeus Ross",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "William Hurt",
-        "Harrison Ford"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "The Incredible Hulk",
-          "universe": "MCU",
-          "date": "2008-06-13",
-          "order": 4,
-          "minor": false,
-          "actor": "William Hurt"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 17,
-          "minor": false,
-          "actor": "William Hurt"
-        },
-        {
-          "title": "Black Widow",
-          "universe": "MCU",
-          "date": "2021-07-09",
-          "order": 6,
-          "minor": false,
-          "actor": "William Hurt"
-        },
-        {
-          "title": "Captain America: Brave New World",
-          "universe": "MCU",
-          "date": "2025-02-14",
-          "order": 9,
-          "minor": false,
-          "actor": "Harrison Ford"
         }
       ]
     },
@@ -1358,6 +1224,43 @@
       ]
     },
     {
+      "name": "Black Panther",
+      "real_name": "T'Challa",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chadwick Boseman"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 8,
+          "minor": false,
+          "actor": "Chadwick Boseman"
+        },
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 1,
+          "minor": false,
+          "actor": "Chadwick Boseman"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 8,
+          "minor": false,
+          "actor": "Chadwick Boseman"
+        }
+      ]
+    },
+    {
       "name": "Black Widow (Yelena)",
       "real_name": "Yelena Belova",
       "universes": [
@@ -1539,43 +1442,6 @@
           "order": 5,
           "minor": false,
           "actor": "Pom Klementieff"
-        }
-      ]
-    },
-    {
-      "name": "Mighty Thor",
-      "real_name": "Jane Foster",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Natalie Portman"
-      ],
-      "appearances": 3,
-      "films": [
-        {
-          "title": "Thor",
-          "universe": "MCU",
-          "date": "2011-05-06",
-          "order": 2,
-          "minor": false,
-          "actor": "Natalie Portman"
-        },
-        {
-          "title": "Thor: The Dark World",
-          "universe": "MCU",
-          "date": "2013-11-08",
-          "order": 2,
-          "minor": false,
-          "actor": "Natalie Portman"
-        },
-        {
-          "title": "Thor: Love and Thunder",
-          "universe": "MCU",
-          "date": "2022-07-08",
-          "order": 7,
-          "minor": false,
-          "actor": "Natalie Portman"
         }
       ]
     },
@@ -2340,6 +2206,27 @@
       ]
     },
     {
+      "name": "Black Panther (Shuri)",
+      "real_name": "Shuri",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Letitia Wright"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 1,
+          "minor": false,
+          "actor": "Letitia Wright"
+        }
+      ]
+    },
+    {
       "name": "Blackguard",
       "real_name": "Richard Hertz",
       "universes": [
@@ -2399,6 +2286,27 @@
           "order": 1,
           "minor": false,
           "actor": "Xolo Maridueña"
+        }
+      ]
+    },
+    {
+      "name": "Captain America (Sam Wilson)",
+      "real_name": "Sam Wilson",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Anthony Mackie"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 1,
+          "minor": false,
+          "actor": "Anthony Mackie"
         }
       ]
     },
@@ -2655,7 +2563,7 @@
       ]
     },
     {
-      "name": "Falcon",
+      "name": "Falcon (Joaquin Torres)",
       "real_name": "Joaquin Torres",
       "universes": [
         "MCU"
@@ -3076,7 +2984,7 @@
     },
     {
       "name": "King Shark",
-      "real_name": "the voice of Nanaue",
+      "real_name": "Nanaue",
       "universes": [
         "DCEU"
       ],
@@ -3202,7 +3110,7 @@
     },
     {
       "name": "Mar-Vell",
-      "real_name": "the Supreme Intelligence and Mar-Vell",
+      "real_name": null,
       "universes": [
         "MCU"
       ],
@@ -3239,6 +3147,27 @@
           "order": 5,
           "minor": false,
           "actor": "Anthony Carrigan"
+        }
+      ]
+    },
+    {
+      "name": "Mighty Thor",
+      "real_name": "Jane Foster",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Natalie Portman"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 7,
+          "minor": false,
+          "actor": "Natalie Portman"
         }
       ]
     },
@@ -3512,6 +3441,27 @@
           "order": 8,
           "minor": false,
           "actor": "Daniela Melchior"
+        }
+      ]
+    },
+    {
+      "name": "Red Hulk",
+      "real_name": "Thaddeus Ross",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Harrison Ford"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 9,
+          "minor": false,
+          "actor": "Harrison Ford"
         }
       ]
     },

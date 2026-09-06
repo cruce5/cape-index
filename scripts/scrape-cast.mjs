@@ -54,7 +54,8 @@ const CODE_KEEP = new Set([
   "Adam Warlock", "High Evolutionary", "Cassandra Nova", "Lady Deathstrike", "Silver Surfer",
   "Galactus", "Red Skull", "Zemo", "Baron Zemo", "Winter Soldier", "War Machine", "Scarlet Witch",
   "Star-Lord", "Doctor Strange", "Ancient One", "The Ancient One", "The Mandarin", "The Leader",
-  "Aunt May", "Red Guardian", "Ghost Rider", "US Agent", "U.S. Agent", "John Walker", "Sam Wilson",
+  "Aunt May", "Red Guardian", "Ghost Rider", "US Agent", "U.S. Agent", "John Walker",
+  "Red Hulk", "Mighty Thor",
   // DC
   "Doomsday", "Steppenwolf", "Darkseid", "Ares", "Starro", "Krypto", "Peacemaker", "Bloodsport",
   "Blackguard", "Mongal", "Javelin", "Weasel", "Savant", "T.D.K.", "Nanaue", "King Shark",
@@ -123,13 +124,16 @@ function codenameOf(character) {
 // Any of these strings (a real name, an alias, a variant) -> one canonical codename.
 const CANON = {
   "Iron Man": "Iron Man", "Tony Stark": "Iron Man",
-  "Captain America": "Captain America", "Steve Rogers": "Captain America", "Nomad": "Captain America", "Sam Wilson": "Captain America",
+  "Captain America": "Captain America", "Steve Rogers": "Captain America", "Nomad": "Captain America",
+  // Sam Wilson carries the Falcon mantle for five films, then Captain America from 2025 — track them apart (as with Natasha / Yelena).
+  "Sam Wilson": "Falcon", "Sam Wilson / Captain America": "Captain America (Sam Wilson)",
   "Hulk": "Hulk", "The Hulk": "Hulk", "Bruce Banner": "Hulk", "Smart Hulk": "Hulk",
   "Thor": "Thor", "Thor Odinson": "Thor",
   "Black Widow": "Black Widow", "Natasha Romanoff": "Black Widow", "Natasha Romanova": "Black Widow", "Yelena Belova": "Black Widow (Yelena)",
   "Hawkeye": "Hawkeye", "Ronin": "Hawkeye", "Clint Barton": "Hawkeye",
-  "War Machine": "War Machine", "Iron Patriot": "War Machine", "Rhodey": "War Machine", "James Rhodes": "War Machine", "James Rhodey Rhodes": "War Machine",
-  "Falcon": "Falcon",
+  // War Machine only from Iron Man 2 on (suits up then); "James Rhodes" alone in Iron Man 2008 is pre-armour and does not count.
+  "War Machine": "War Machine", "Iron Patriot": "War Machine",
+  "Falcon": "Falcon", "Joaquin Torres": "Falcon (Joaquin Torres)", "Joaquin Torres / Falcon": "Falcon (Joaquin Torres)",
   "Winter Soldier": "Winter Soldier", "White Wolf": "Winter Soldier", "Bucky Barnes": "Winter Soldier", "Bucky Buchanan Barnes": "Winter Soldier", "James Bucky Barnes": "Winter Soldier",
   "Scarlet Witch": "Scarlet Witch", "Wanda Maximoff": "Scarlet Witch", "Wanda": "Scarlet Witch",
   "Spider-Man": "Spider-Man", "Peter Parker": "Spider-Man",
@@ -141,6 +145,8 @@ const CANON = {
   "The Mandarin": "The Mandarin", "Wenwu": "The Mandarin", "Xu Wenwu": "The Mandarin",
   "Doctor Strange": "Doctor Strange", "Stephen Strange": "Doctor Strange", "Sinister Strange": "Doctor Strange", "Defender Strange": "Doctor Strange",
   "Black Panther": "Black Panther", "T'Challa": "Black Panther",
+  "Shuri / Black Panther": "Black Panther (Shuri)", // Shuri takes the mantle in Wakanda Forever
+  "Yelena Belova / Black Widow": "Black Widow (Yelena)",
   "The Ancient One": "The Ancient One", "Ancient One": "The Ancient One",
   "General Zod": "General Zod", "Zod": "General Zod", "Dru-Zod": "General Zod",
   "Lex Luthor": "Lex Luthor", "Alexander Luthor": "Lex Luthor", "Alexander Luthor Jr.": "Lex Luthor",
@@ -173,11 +179,13 @@ const CANON = {
   "Abomination": "Abomination", "Emil Blonsky": "Abomination",
   "Whiplash": "Whiplash", "Ivan Vanko": "Whiplash",
   "The Leader": "The Leader", "Samuel Sterns": "The Leader",
-  "Red Hulk": "Red Hulk", "Thaddeus Ross": "Red Hulk", "Thunderbolt Ross": "Red Hulk",
+  // Thaddeus Ross is a plain government official in five films; he is only credited "/ Red Hulk" in Brave New World (2025), so that is his one costumed appearance.
+  "Red Hulk": "Red Hulk",
   "Ms. Marvel": "Ms. Marvel", "Kamala Khan": "Ms. Marvel",
   "Ironheart": "Ironheart", "Riri Williams": "Ironheart",
   "U.S. Agent": "U.S. Agent", "US Agent": "U.S. Agent", "John Walker": "U.S. Agent",
-  "Mighty Thor": "Mighty Thor", "Jane Foster": "Mighty Thor",
+  // Jane Foster is an astrophysicist in Thor / The Dark World; she is only "/ Mighty Thor" in Love and Thunder (2022).
+  "Mighty Thor": "Mighty Thor",
   "Gorr": "Gorr", "Gorr the God Butcher": "Gorr",
   "Sentry": "Sentry", "Void": "Sentry", "Bob Reynolds": "Sentry", "Robert Reynolds": "Sentry",
   "Red Guardian": "Red Guardian", "Alexei Shostakov": "Red Guardian",
@@ -229,7 +237,7 @@ const CANON = {
   "Joker": "Joker", "Arthur Fleck": "Joker",
   "The Collector": "The Collector", "Taneleer Tivan": "The Collector",
   "Amanda Waller": "Amanda Waller", "Rick Flag": "Rick Flag",
-  "Nick Fury": "Nick Fury",
+  // Nick Fury has no codename — out of scope for a costumed/codenamed roster.
   "Blackguard": "Blackguard", "Savant": "Savant", "Weasel": "Weasel", "Mongal": "Mongal", "Javelin": "Javelin", "T.D.K.": "T.D.K.",
   "Valkyrie": "Valkyrie",
   "Pyro": "Pyro", "John Allerdyce": "Pyro",
@@ -241,6 +249,9 @@ const CANON = {
 };
 // noise that slips through the heuristics — never a real hero/villain identity here
 const DROP = new Set(["Anne", "Isis", "Sol Soria", "Grid", "The Kid", "Girl"]);
+// Identities that are a later transformation, not a through-line: only count a film
+// where the credit actually carries the alias ("Real Name / Codename"), never a bare real name.
+const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)"]);
 const canon = (c) => CANON[c] || c;
 function canonOf(raw) {
   // try full string, then the real-name (pre-slash) part, then a quote-stripped variant
@@ -274,6 +285,9 @@ for (const f of films) {
     else if (cn) { name = canon(cn.code); real = cn.real; }
     else continue;
     if (real === name || !real) real = null;
+    if (real) real = real.replace(/^the\s+voice\s+of\s+/i, "").replace(/^the\s+/i, "").trim();
+    if (real && (/\b(and|voice|uncredited|archive)\b/i.test(real) || real.length > 32)) real = null;
+    if (ALIAS_ONLY.has(name) && !/\s\/\s/.test(r.character)) continue; // needs the alias form
     if (DROP.has(name) || seen.has(name)) continue;
     seen.add(name);
     if (!chars.has(name)) chars.set(name, { name, real: real || null, universes: new Set(), actors: new Set(), films: [] });
