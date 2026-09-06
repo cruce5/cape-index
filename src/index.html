@@ -440,9 +440,9 @@
         <div id="table-beeswarm" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>When did each film come out and how big was it, without films from the same summer hiding each other?</dd>
-          <dt>Why this form</dt><dd>A plain timeline stacks dots on top of each other around each release window. The beeswarm nudges them apart so every film stays visible at its real date. On a phone that swarm gets too narrow to read, so the mobile view switches to one row per year, films laid biggest-first.</dd>
+          <dt>Why this form</dt><dd>A plain timeline stacks dots on top of each other around each release window. The beeswarm nudges them apart so every film stays visible at its real date; the vertical pile-up at a date is how many films landed near it.</dd>
           <dt>Choices here</dt><dd>Circle <em>area</em> is proportional to gross, the radius scales with the square root, so the big films aren&rsquo;t exaggerated. Each new circle is pushed to the nearest open spot. Vertical position on its own means nothing.</dd>
-          <dt>Watch for</dt><dd>On desktop the vertical jitter is cosmetic; don&rsquo;t read height as a second variable. On mobile the left-to-right order within a year is by gross, not by exact release date.</dd>
+          <dt>Watch for</dt><dd>The vertical position of any one circle is just where it landed in the packing; only the density reads. Don&rsquo;t treat height as a second variable.</dd>
         </dl></div>
       </div>
     </div>
@@ -1136,85 +1136,50 @@
   }
   function clip(s, n) { return s.length > n ? s.slice(0, Math.max(3, n - 1)) + "…" : s; }
 
-  /* ---------- §03 films over time (beeswarm on desktop, year rows on mobile) ---------- */
+  /* ---------- §03 beeswarm by date (horizontal; smaller on mobile) ---------- */
   function renderBeeswarm() {
     var af = activeFilms().slice().sort(function (a, b) { return dateNum(a.date) - dateNum(b.date); });
     var t0 = dateNum("2008-01-01"), t1 = dateNum("2026-12-31");
-    var maxWW = Math.max.apply(null, af.map(function (f) { return val(f, "ww"); }));
+    var maxWW = Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1;
+    var mob = isMobile();
+    var W = mob ? 360 : 1000, H = mob ? 232 : 460;
+    var m = mob ? { t: 10, r: 10, b: 22, l: 10 } : { t: 20, r: 20, b: 34, l: 20 };
+    var rS = mob
+      ? function (v) { return 2 + Math.sqrt(v / maxWW) * 10; }
+      : function (v) { return 4 + Math.sqrt(v / maxWW) * 25; };
+    var iw = W - m.l - m.r;
+    var xOf = function (d) { return m.l + ((dateNum(d) - t0) / (t1 - t0)) * iw; };
+    var mid = m.t + (H - m.t - m.b) / 2, lim0 = m.t, lim1 = H - m.b;
+    var step0 = mob ? 2.2 : 3.2, gap = mob ? 0.8 : 1.4;
 
-    if (isMobile()) {
-      // A skinny vertical swarm reads badly on a phone. Instead: one row per year,
-      // that year's films laid out biggest-first, sized by gross. Cadence + scale.
-      var W = 360, mL = 32, mR = 8, mT = 6, rowH = 30, iw = W - mL - mR;
-      var rS0 = function (v) { return 2 + Math.sqrt(v / maxWW) * 8; };
-      var rows = [];
-      for (var y = 2008; y <= 2026; y++) {
-        var fy = af.filter(function (f) { return new Date(f.date).getFullYear() === y; });
-        if (fy.length) rows.push({ y: y, films: fy.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }) });
-      }
-      var Hm = mT + rows.length * rowH + 4;
-      // one fixed slot width for every row, so row length reads as "how many films that year"
-      var maxK = Math.max.apply(null, rows.map(function (r) { return r.films.length; }).concat([1]));
-      var slotW = iw / maxK, rCap = Math.min(12, slotW / 2 - 2);
-      var body = rows.map(function (row, i) {
-        var cy = mT + i * rowH + rowH / 2, yb = mT + (i + 1) * rowH;
-        var g = '<text x="' + (mL - 6) + '" y="' + (cy + 3.5) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">&rsquo;' + String(row.y).slice(2) + '</text>' +
-          '<line x1="' + mL + '" x2="' + (W - mR) + '" y1="' + yb + '" y2="' + yb + '" stroke="var(--grid)"/>';
-        row.films.forEach(function (f, j) {
-          var cx = mL + slotW * (j + 0.5);
-          var r = Math.min(rCap, Math.sqrt(val(f, "ww") / maxWW) * 14 + 2);
-          g += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="var(' + COLORVAR[f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.3" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
-        });
-        return g;
-      }).join("");
-      document.getElementById("chart-beeswarm").innerHTML =
-        '<svg viewBox="0 0 ' + W + " " + Hm + '" role="img" aria-label="Films per year, each sized by worldwide gross, biggest first">' + body + "</svg>";
-      legend("leg-bee", activeUnis(), true);
-      wireDots(document.querySelector("#chart-beeswarm svg"));
-      fillTable("table-beeswarm", af.map(function (f) { return [f.t + (f.final ? "" : " ◉"), f.u, f.date, usd(val(f, "ww"))]; }), ["Film", "Universe", "Release", "Worldwide"]);
-      return;
-    }
-
-    var W, H, m, rS, posOf, mid, lim0, lim1;
-    var N = af.length || 1;
-    var vert = false;
-    W = 1000; H = 460; m = { t: 20, r: 20, b: 34, l: 20 };
-    rS = function (v) { return 4 + Math.sqrt(v / maxWW) * 25; };
-    posOf = function (d) { return m.l + ((dateNum(d) - t0) / (t1 - t0)) * (W - m.l - m.r); };
-    mid = m.t + (H - m.t - m.b) / 2; lim0 = m.t; lim1 = H - m.b;
     var placed = [];
-    var nodes = af.map(function (f, idx) {
-      var r = rS(val(f, "ww")), pos = posOf(f.date, idx), spread = mid, dir = 1, step = 0;
-      for (var guard = 0; guard < 500; guard++) {
+    var nodes = af.map(function (f) {
+      var r = rS(val(f, "ww")), pos = xOf(f.date), spread = mid, dir = 1, step = 0;
+      for (var guard = 0; guard < 600; guard++) {
         var ok = true;
         for (var j = 0; j < placed.length; j++) {
-          var p = placed[j];
-          var dp = pos - p.pos, ds = spread - p.spread;
-          if (dp * dp + ds * ds < (r + p.r + (vert ? 0.8 : 1.4)) * (r + p.r + (vert ? 0.8 : 1.4))) { ok = false; break; }
+          var p = placed[j], dp = pos - p.pos, ds = spread - p.spread;
+          if (dp * dp + ds * ds < (r + p.r + gap) * (r + p.r + gap)) { ok = false; break; }
         }
         if (ok) break;
         step += 1;
-        spread = mid + dir * step * (vert ? 2.1 : 3.2);
+        spread = mid + dir * step * step0;
         dir *= -1;
         if (spread - r < lim0) spread = lim0 + r;
         if (spread + r > lim1) spread = lim1 - r;
       }
       placed.push({ pos: pos, spread: spread, r: r });
-      return { f: f, cx: vert ? spread : pos, cy: vert ? pos : spread, r: r };
+      return { f: f, cx: pos, cy: spread, r: r };
     });
+
     var ticks = "";
-    for (var y = 2008; y <= 2026; y += 2) {
-      var p = posOf(y + "-01-01");
-      if (vert) {
-        ticks += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + p + '" y2="' + p + '" stroke="var(--grid)"/>';
-        ticks += '<text x="' + (m.l - 8) + '" y="' + (p + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + y + "</text>";
-      } else {
-        ticks += '<line x1="' + p + '" x2="' + p + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
-        ticks += '<text x="' + p + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + y + "</text>";
-      }
+    for (var y = 2008; y <= 2026; y += (mob ? 4 : 2)) {
+      var p = xOf(y + "-01-01");
+      ticks += '<line x1="' + p + '" x2="' + p + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
+      ticks += '<text x="' + p + '" y="' + (H - m.b + (mob ? 13 : 16)) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 9 : 11) + '" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(y).slice(2) : y) + "</text>";
     }
     var circ = nodes.map(function (n) {
-      return '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
+      return '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="' + (mob ? 1 : 1.5) + '" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
     }).join("");
     document.getElementById("chart-beeswarm").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films placed by release date, sized by worldwide gross">' +
