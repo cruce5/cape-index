@@ -126,13 +126,13 @@
   header.masthead { border-bottom: 1px solid var(--border); padding: 68px 0 46px; }
   .masthead h1 { font-size: clamp(48px, 9vw, 104px); letter-spacing: -0.028em; }
   .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 20px 0 0; }
-  .thesis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 40px; }
+  .thesis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 40px; max-width: 52rem; }
   .thesis > div { background: var(--surface); padding: 20px 22px; }
   .thesis .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
   .thesis .v { font-size: clamp(28px, 4.6vw, 44px); font-weight: 700; font-family: "IBM Plex Sans Condensed", sans-serif; margin-top: 6px; }
   .thesis .sub { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
   @media (max-width: 640px) { .thesis { grid-template-columns: 1fr; } }
-  .smallprint { margin-top: 26px; font-size: 13px; color: var(--ink-muted); max-width: 70ch; }
+  .smallprint { margin-top: 26px; font-size: 13px; color: var(--ink-muted); max-width: 52rem; }
   .smallprint a { text-decoration-color: var(--border-strong); text-underline-offset: 2px; }
 
   /* ============ STICKY CONTROLS ============ */
@@ -248,7 +248,7 @@
   @media (max-width: 640px) { .act .sub { display: none; } }
 
   /* ============ TEACHING NOTES ============ */
-  .teach-hint { margin-top: 14px; font-size: 13.5px; color: var(--ink-2); }
+  .teach-hint { margin-top: 14px; font-size: 13.5px; color: var(--ink-2); max-width: 52rem; }
   .teach-hint b { color: var(--note); font-weight: 600; }
   .note { display: none; margin-top: 18px; border-top: 1px dashed var(--border-strong); padding-top: 15px; }
   body.notes-on .note { display: block; }
