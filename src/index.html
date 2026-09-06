@@ -189,6 +189,9 @@
   .tip .tr { display: flex; justify-content: space-between; gap: 18px; color: var(--ink-2); }
   .tip .tr b { color: var(--ink); font-family: "IBM Plex Mono", monospace; font-weight: 500; }
   .tip .flag { color: var(--neg); font-size: 11px; margin-top: 4px; }
+  .tip .flist { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); display: grid; gap: 2px; }
+  .tip .flist div { display: flex; gap: 8px; color: var(--ink-2); font-size: 11.5px; line-height: 1.35; }
+  .tip .flist .fy { color: var(--ink-muted); font-family: "IBM Plex Mono", monospace; flex: none; }
 
   /* data tables */
   .tablewrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; }
@@ -1627,6 +1630,16 @@
       .filter(function (x) { return x.films.length > 0; })
       .sort(function (a, b) { return b.films.length - a.films.length || a.c.n.localeCompare(b.c.n); });
   }
+  // release-ordered "'18  Avengers: Infinity War" list for a character tooltip
+  function charFilmList(titles) {
+    var fs = titles
+      .map(function (t) { return FILMS.find(function (f) { return f.t === t; }); })
+      .filter(Boolean)
+      .sort(function (a, b) { return a.date.localeCompare(b.date); });
+    return '<div class="flist">' + fs.map(function (f) {
+      return "<div><span class=\"fy\">&rsquo;" + f.date.slice(2, 4) + "</span><span>" + esc(f.t) + "</span></div>";
+    }).join("") + "</div>";
+  }
   function renderRoster() {
     var mob = isMobile();
     var af = castFilms();
@@ -1785,7 +1798,7 @@
       var x = activeChars().find(function (y) { return y.c.n === el.getAttribute("data-c"); });
       if (!x) return;
       el.addEventListener("mousemove", function (e) {
-        showTip('<div class="tt">' + esc(x.c.n) + '</div><div class="tr"><span>' + (x.c.real ? esc(x.c.real) + " · " : "") + x.c.u + '</span></div><div class="tr"><span>Films</span><b>' + x.films.length + '</b></div><div class="tr"><span>' + esc(x.c.actors.join(", ")) + "</span></div>", e.clientX, e.clientY);
+        showTip('<div class="tt">' + esc(x.c.n) + '</div><div class="tr"><span>' + (x.c.real ? esc(x.c.real) + " · " : "") + x.c.u + '</span></div><div class="tr"><span>' + esc(x.c.actors.join(", ")) + "</span></div>" + charFilmList(x.films), e.clientX, e.clientY);
       });
       el.addEventListener("mouseleave", hideTip);
     });
