@@ -5,9 +5,9 @@ node_modules/
 dist/
 build/
 
-# raw scrape caches (HTML title pages + the wikicast dumps) are regenerable
-data/raw/*.html
-data/raw/wikicast-*.txt
+# scrape caches (BOM HTML, OMDb JSON, Wikipedia wikitext) are all regenerable
+# from the scripts + additions.json — kept off the repo to keep it lean
+data/raw/*
 !data/raw/.gitkeep
 
 # local secrets (OMDb key etc.) — keep the .example, ignore the real one
