@@ -25,7 +25,7 @@
     --pos: #3fb950;
     --neg: #f0883e;
     --note: #caa25e;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px -12px rgba(0, 0, 0, 0.45);
   }
   @media (prefers-color-scheme: light) {
     :root:not([data-theme="dark"]) {
@@ -47,7 +47,7 @@
       --pos: #1a7f37;
       --neg: #bc4c00;
       --note: #8a6a34;
-      --shadow: 0 1px 2px rgba(13, 15, 20, 0.06), 0 10px 30px -16px rgba(13, 15, 20, 0.18);
+      --shadow: 0 1px 2px rgba(13, 15, 20, 0.05), 0 4px 16px -14px rgba(13, 15, 20, 0.14);
     }
   }
   :root[data-theme="light"] {
@@ -68,7 +68,7 @@
     --else: #7c4db8;
     --pos: #1a7f37;
     --neg: #bc4c00;
-    --shadow: 0 1px 2px rgba(13, 15, 20, 0.06), 0 10px 30px -16px rgba(13, 15, 20, 0.18);
+    --shadow: 0 1px 2px rgba(13, 15, 20, 0.05), 0 4px 16px -14px rgba(13, 15, 20, 0.14);
   }
 
   * { box-sizing: border-box; }
@@ -344,6 +344,8 @@
           <button class="minibtn" data-outlier aria-pressed="false">Hide &ge; $1B</button>
         </div>
         <div id="chart-box"></div>
+        <button class="minibtn" data-table="box" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-box" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Beyond the averages, how are each universe&rsquo;s grosses actually spread out?</dd>
           <dt>Why this form</dt><dd>A box plot shows the middle 50%, the median and the tails at once. An average alone would hide that DC&rsquo;s range is both wider and lower. The dots put every film back on the chart so the summary isn&rsquo;t a black box.</dd>
@@ -367,6 +369,8 @@
           <span class="card-note" id="tm-count"></span>
         </div>
         <div id="chart-treemap"></div>
+        <button class="minibtn" data-table="treemap" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-treemap" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where is the money concentrated across all 57 films at once?</dd>
           <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 57-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
@@ -391,6 +395,8 @@
           <div class="legend" id="leg-bee"></div>
         </div>
         <div id="chart-beeswarm"></div>
+        <button class="minibtn" data-table="beeswarm" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-beeswarm" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>When did each film come out and how big was it &mdash; without films from the same summer hiding each other?</dd>
           <dt>Why this form</dt><dd>A plain timeline stacks dots on top of each other around each release window. The beeswarm nudges them apart vertically so every film stays visible at its real date.</dd>
@@ -557,6 +563,8 @@
           </div>
         </div>
         <div id="chart-split"></div>
+        <button class="minibtn" data-table="split" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-split" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>For each film, how much of the gross came from North America versus everywhere else?</dd>
           <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 57 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
@@ -798,13 +806,15 @@
     var bars = "";
     years.forEach(function (yr, i) {
       var acc = 0;
+      var partial = yr >= 2026;
       order.forEach(function (u) {
         var v = byYear[yr][u]; if (!v) return;
         var y0 = yS(acc), y1 = yS(acc + v);
         var h = Math.max(0, y0 - y1 - 2);
-        bars += '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="2" fill="var(' + COLORVAR[u] + ')" data-y="' + yr + '" data-u="' + u + '" data-v="' + v + '"/>';
+        bars += '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="2" fill="var(' + COLORVAR[u] + ')"' + (partial ? ' fill-opacity="0.5"' : '') + ' data-y="' + yr + '" data-u="' + u + '" data-v="' + v + '"/>';
         acc += v;
       });
+      if (partial) bars += '<text x="' + x(i) + '" y="' + (yS(acc) - 6) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--ink-muted)">partial</text>';
       if (!mob || i % 2 === 0) bars += '<text class="lbl" x="' + x(i) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 9 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
     });
     document.getElementById("chart-year").innerHTML =
@@ -877,6 +887,11 @@
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Box and whisker of worldwide gross by universe">' +
       '<g class="grid">' + g + "</g>" + rows + "</svg>";
     wireDots(document.querySelector("#chart-box svg"));
+    fillTable("table-box", us.map(function (u) {
+      var a = all.filter(function (f) { return f.u === u; }).map(function (f) { return val(f, "ww"); }).sort(function (x, y) { return x - y; });
+      if (!a.length) return [u, "0", "—", "—", "—", "—", "—"];
+      return [u, String(a.length), usd(a[0]), usd(quantile(a, 0.25)), usd(quantile(a, 0.5)), usd(quantile(a, 0.75)), usd(a[a.length - 1])];
+    }), ["Universe", "Films", "Min", "25th", "Median", "75th", "Max"]);
   }
 
   /* ---------- §02 treemap (squarified) ---------- */
@@ -946,7 +961,7 @@
         label = '<text x="' + (c.x + 6) + '" y="' + (c.y + 15) + '" fill="#fff" font-family="IBM Plex Mono" font-size="10" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
       }
       return '<g class="tmCell" data-i="' + FILMS.indexOf(f) + '">' +
-        '<rect x="' + (c.x + 1) + '" y="' + (c.y + 1) + '" width="' + Math.max(0, c.w - 2) + '" height="' + Math.max(0, c.h - 2) + '" fill="' + col + '" rx="2"/>' +
+        '<rect x="' + (c.x + 1) + '" y="' + (c.y + 1) + '" width="' + Math.max(0, c.w - 2) + '" height="' + Math.max(0, c.h - 2) + '" fill="' + col + '" fill-opacity="0.88" rx="2"/>' +
         label + "</g>";
     }).join("");
     document.getElementById("chart-treemap").innerHTML =
@@ -954,6 +969,7 @@
     document.getElementById("tm-count").textContent = af.length + " films · " + usd(af.reduce(function (s, f) { return s + val(f, "ww"); }, 0)) + " total";
     legend("leg-tm", activeUnis());
     wireCells(document.querySelector("#chart-treemap svg"));
+    fillTable("table-treemap", af.map(function (f) { return [f.t + (f.final ? "" : " ◉"), f.u, usd(val(f, "ww"))]; }), ["Film", "Universe", "Worldwide"]);
   }
   function clip(s, n) { return s.length > n ? s.slice(0, Math.max(3, n - 1)) + "…" : s; }
 
@@ -1014,6 +1030,7 @@
       '<g class="grid">' + ticks + "</g>" + circ + "</svg>";
     legend("leg-bee", activeUnis(), true);
     wireDots(document.querySelector("#chart-beeswarm svg"));
+    fillTable("table-beeswarm", af.map(function (f) { return [f.t + (f.final ? "" : " ◉"), f.u, f.date, usd(val(f, "ww"))]; }), ["Film", "Universe", "Release", "Worldwide"]);
   }
 
   /* ---------- §04 scatter ---------- */
@@ -1099,7 +1116,7 @@
           '<text x="' + (m.l + 14) + '" y="' + (y + 12) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
           '<text x="' + (W - m.r) + '" y="' + (y + 12) + '" text-anchor="end" class="lbl" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + (mode ? pct(f.pctIntl) + " overseas" : usd(tot)) + "</text>" +
           '<rect x="' + m.l + '" y="' + (y + 20) + '" width="' + Math.max(0, dw - 2) + '" height="11" rx="2" fill="' + c + '"/>' +
-          '<rect x="' + (m.l + dw) + '" y="' + (y + 20) + '" width="' + Math.max(0, wpx - dw) + '" height="11" rx="2" fill="' + c + '" fill-opacity="0.32"/>' +
+          '<rect x="' + (m.l + dw) + '" y="' + (y + 20) + '" width="' + Math.max(0, wpx - dw) + '" height="11" rx="2" fill="' + c + '" fill-opacity="0.42"/>' +
           "</g>";
       }
       var wpxd = mode ? iw : (tot / maxWW) * iw;
@@ -1110,7 +1127,7 @@
         '<rect x="0" y="' + y + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
         '<text x="' + (m.l - 12) + '" y="' + (y + rowH / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(name) + "</text>" +
         '<rect x="' + m.l + '" y="' + (y + 3) + '" width="' + Math.max(0, dwd - 2) + '" height="' + (rowH - 6) + '" fill="' + c + '" rx="1.5"/>' +
-        '<rect x="' + (m.l + dwd) + '" y="' + (y + 3) + '" width="' + Math.max(0, iwdd) + '" height="' + (rowH - 6) + '" fill="' + c + '" fill-opacity="0.34" rx="1.5"/>' +
+        '<rect x="' + (m.l + dwd) + '" y="' + (y + 3) + '" width="' + Math.max(0, iwdd) + '" height="' + (rowH - 6) + '" fill="' + c + '" fill-opacity="0.42" rx="1.5"/>' +
         '<text x="' + (m.l + wpxd + 8) + '" y="' + (y + rowH / 2 + 4) + '" class="lbl" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + (mode ? pct(f.pctIntl) + " OS" : usd(tot)) + "</text>" +
         "</g>";
     }).join("");
@@ -1121,6 +1138,9 @@
       '<span><i style="--c:var(--ink-2);background:color-mix(in srgb,var(--ink-2) 30%,transparent);border:1px solid var(--ink-2)"></i>Pale&nbsp;= overseas</span>' +
       '<span style="color:var(--ink-muted)">Bar colour = universe &nbsp;·&nbsp; ◉ still in release</span>';
     wireSplit(document.querySelector("#chart-split svg"));
+    fillTable("table-split", af.map(function (f) {
+      return [f.t + (f.final ? "" : " ◉"), f.u, usd(val(f, "d")), usd(val(f, "i")), pct(f.pctIntl)];
+    }), ["Film", "Universe", "Domestic", "Overseas", "Overseas %"]);
   }
 
   /* ---------- §06 full table ---------- */
@@ -1188,7 +1208,7 @@
     var shape = { MCU: "●", DCEU: "■", DCU: "▲", Elseworlds: "◆" };
     host.innerHTML = keys.map(function (k) {
       var mk = withShape ? '<span style="color:var(' + COLORVAR[k] + ');font-size:13px">' + shape[k] + "</span>" : '<i style="--c:var(' + COLORVAR[k] + ')"></i>';
-      return "<span>" + mk + " " + (UNI.find(function (u) { return u.k === k; }).full) + "</span>";
+      return "<span>" + mk + " " + k + "</span>";
     }).join("") + (withSize ? '<span style="color:var(--ink-muted)">circle size = worldwide gross</span>' : "");
   }
   function fillTable(id, rows, headers) {
@@ -1314,7 +1334,7 @@
           '<rect x="0" y="' + yy + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
           '<rect x="' + padX + '" y="' + (yy + 8) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
           '<text x="' + (padX + 14) + '" y="' + (yy + 15) + '" class="lbl" font-size="12.5" fill="var(--ink)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
-          '<text x="' + (W - padX) + '" y="' + (yy + 15) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="12" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)).slice(1) + "</text>" +
+          '<text x="' + (W - padX) + '" y="' + (yy + 15) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="12" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</text>" +
           '<rect x="' + bx + '" y="' + (yy + 24) + '" width="' + w + '" height="11" rx="2" fill="' + c + '"/>' +
           "</g>";
       }).join("");
@@ -1331,7 +1351,7 @@
       [0.25, 0.5, 0.75, 1].forEach(function (frac) {
         var v = maxPos * frac, x = x0d + v * scd;
         head += '<line x1="' + x + '" x2="' + x + '" y1="' + md.t + '" y2="' + (Hd - md.b) + '" stroke="var(--grid)"/>';
-        head += '<text x="' + x + '" y="15" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">+' + usd(v).slice(1) + "</text>";
+        head += '<text x="' + x + '" y="15" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + '+' + usd(v) + "</text>";
       });
       var rows = af.map(function (f) {
         var p = profitOf(f), i = af.indexOf(f), yy = md.t + i * rh;
@@ -1343,7 +1363,7 @@
           '<rect x="' + (md.l - 13) + '" y="' + (yy + rh / 2 - 4) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
           '<text x="' + (md.l - 28) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
           '<rect x="' + bx + '" y="' + (yy + 3.5) + '" width="' + w + '" height="' + (rh - 7) + '" rx="1.5" fill="' + c + '"/>' +
-          '<text x="' + lblX + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)).slice(1) + "</text>" +
+          '<text x="' + lblX + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</text>" +
           "</g>";
       }).join("");
       svg = '<svg viewBox="0 0 ' + Wd + " " + Hd + '" role="img" aria-label="Profit or loss versus break-even, per film">' +
@@ -1355,7 +1375,7 @@
       el.style.cursor = "pointer";
       el.addEventListener("mousemove", function (e) {
         var p = profitOf(f);
-        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div><div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div><div class="tr"><span>Break-even (2.5&times;)</span><b>' + usd(val(f, "budget") * 2.5) + '</b></div><div class="tr"><span>' + (p >= 0 ? "Profit" : "Loss") + '</span><b>' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)).slice(1) + "</b></div>", e.clientX, e.clientY);
+        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div><div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div><div class="tr"><span>Break-even (2.5&times;)</span><b>' + usd(val(f, "budget") * 2.5) + '</b></div><div class="tr"><span>' + (p >= 0 ? "Profit" : "Loss") + '</span><b>' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</b></div>", e.clientX, e.clientY);
       });
       el.addEventListener("mouseleave", hideTip);
     });
@@ -1363,7 +1383,7 @@
     document.getElementById("leg-profit").innerHTML = '<span><i style="--c:var(--pos)"></i>Cleared break-even</span><span><i style="--c:var(--neg)"></i>Fell short (' + np + ')</span><span style="color:var(--ink-muted)">break-even = 2.5&times; budget</span>';
     fillTable("table-profit", af.map(function (f) {
       var p = profitOf(f);
-      return [f.t + (f.final ? "" : " ◉"), f.u, usd(val(f, "ww")), usd(val(f, "budget")), usd(val(f, "budget") * 2.5), (p >= 0 ? "+" : "−") + usd(Math.abs(p)).slice(1)];
+      return [f.t + (f.final ? "" : " ◉"), f.u, usd(val(f, "ww")), usd(val(f, "budget")), usd(val(f, "budget") * 2.5), (p >= 0 ? "+" : "−") + usd(Math.abs(p))];
     }), ["Film", "Universe", "Worldwide", "Budget", "Break-even", "Profit / loss"]);
   }
 
@@ -1379,7 +1399,7 @@
     var H = m.t + m.b + rowH * af.length;
     var iw = W - m.l - m.r;
     var xS = function (v) { return m.l + (Math.log10(Math.max(1, v)) - l0) / (l1 - l0) * iw; };
-    var g = "";
+    var g = '<text x="2" y="13" text-anchor="start" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">domestic $ · log scale</text>';
     [1e7, 3e7, 1e8, 3e8, 1e9].forEach(function (t) {
       if (t < lo || t > hi) return;
       g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
@@ -1446,9 +1466,15 @@
       g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(val(f, "ww")), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
-    var top = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).slice(0, mob ? 2 : 3);
-    var labs = top.map(function (f) {
-      var x = xS(f.rt), right = f.rt > 60;
+    // label the films that defy the pattern: a panned one that made a fortune,
+    // and a well-reviewed one that flopped — that's the "reviews don't drive gross" story
+    var panHit = af.filter(function (f) { return f.rt < 55; }).sort(function (a, b) { return val(b, "ww") - val(a, "ww"); })[0];
+    var likedMiss = af.filter(function (f) { return f.rt >= 75; }).sort(function (a, b) { return val(a, "ww") - val(b, "ww"); })[0];
+    var biggest = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); })[0];
+    var pick = [biggest, panHit, likedMiss].filter(function (f, i, a) { return f && a.indexOf(f) === i; });
+    if (mob) pick = pick.slice(0, 2);
+    var labs = pick.map(function (f) {
+      var x = xS(f.rt), right = f.rt > 55;
       return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 10 : 11) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 18) : f.t) + "</text>";
     }).join("");
     document.getElementById("chart-reviews").innerHTML =
