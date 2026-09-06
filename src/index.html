@@ -1,5 +1,5 @@
 <title>The Cape Index</title>
-<meta name="description" content="Eighteen years of Marvel and DC at the global box office, verified against Box Office Mojo." />
+<meta name="description" content="Every Marvel and DC film since 2008, plus Sony's Spider-Man spin-offs, and what each one made. Grosses verified against Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
 <meta name="author" content="Bill Yost" />
 
 <!-- Update the four URLs below to the custom domain once it is live. -->
@@ -7,14 +7,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cape Index" />
 <meta property="og:title" content="The Cape Index" />
-<meta property="og:description" content="Every Marvel and DC film since 2008, and what it made. Grosses verified against Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
+<meta property="og:description" content="Every Marvel and DC film since 2008, plus Sony's Spider-Man spin-offs, and what each one made. Grosses verified against Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
 <meta property="og:url" content="https://cape-index.williamfyost.workers.dev/" />
 <meta property="og:image" content="https://cape-index.williamfyost.workers.dev/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="The Cape Index" />
-<meta name="twitter:description" content="Every Marvel and DC film since 2008, and what it made. Verified box office, profit, legs, reviews and the shared-cast roster." />
+<meta name="twitter:description" content="Every Marvel and DC film since 2008, plus Sony's Spider-Man spin-offs. Verified box office, profit, legs, reviews and the shared-cast roster." />
 <meta name="twitter:image" content="https://cape-index.williamfyost.workers.dev/og.png" />
 <meta name="theme-color" content="#0d0f14" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
@@ -240,8 +240,9 @@
   footer.foot { padding: 44px 0 72px; color: var(--ink-muted); font-size: 13px; }
   footer.foot a { text-underline-offset: 2px; }
 
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .two-col > .card + .card { margin-top: 0; }
+  @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } .two-col > .card + .card { margin-top: 20px; } }
 
   /* ============ ACT DIVIDERS ============ */
   .act { padding: 52px 0 4px; }
@@ -721,7 +722,7 @@
       </div>
       <div class="card" style="margin-top:20px">
         <div class="card-title">Scope</div>
-        <p style="font-size:14px;color:var(--ink-2)">Every live-action Marvel or DC theatrical film from 2008 on that belongs to one of the connected universes here: the MCU, the DCEU, James Gunn&rsquo;s DCU, Sony&rsquo;s Spider-Man Universe, or DC&rsquo;s Elseworlds label (both Jokers and The Batman). <em>Deadpool &amp; Wolverine</em> counts as an MCU film; <em>Deadpool</em> and <em>Deadpool&nbsp;2</em> do not, they are part of the Fox X-Men run, which is out. Also out: Sony&rsquo;s pre-MCU Spider-Man films, the Fox X-Men and Fantastic Four films, anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>), and anything before 2008.</p>
+        <p style="font-size:14px;color:var(--ink-2)">Every live-action Marvel or DC theatrical film from 2008 on that belongs to one of the connected universes here: the MCU, the DCEU, James Gunn&rsquo;s DCU, Sony&rsquo;s Spider-Man Universe, or DC&rsquo;s Elseworlds label (both Jokers and The Batman). <em>Deadpool &amp; Wolverine</em> counts as an MCU film; <em>Deadpool</em> and <em>Deadpool&nbsp;2</em> do not, they are part of the Fox X-Men run, which is out. Also out: Sony&rsquo;s pre-MCU Spider-Man films, the Fox X-Men and pre-MCU Fantastic Four films, anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>), and anything before 2008.</p>
       </div>
       <p class="smallprint" id="method-held"></p>
     </div>
@@ -730,7 +731,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    Built by <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a>, rebuilt from his <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a>. Data verified September 2026 against Box Office Mojo. Not affiliated with Marvel, DC, Disney or Warner Bros.
+    Built by <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a>, rebuilt from his <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a>. Data verified September 2026 against Box Office Mojo. Not affiliated with Marvel, DC, Disney, Warner Bros. or Sony.
   </div>
 </footer>
 
