@@ -1,0 +1,4070 @@
+{
+  "generated": "2026-09-06T02:09:18.586Z",
+  "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
+  "source": "English Wikipedia film Cast sections (billing order)",
+  "missing_cast": [],
+  "count": 139,
+  "characters": [
+    {
+      "name": "Black Widow",
+      "real_name": "Natasha Romanoff",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Scarlett Johansson",
+        "Florence Pugh"
+      ],
+      "appearances": 9,
+      "films": [
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 4,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 2,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 3,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Black Widow",
+          "universe": "MCU",
+          "date": "2021-07-09",
+          "order": 1,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Spider-Man: Brand New Day",
+          "universe": "MCU",
+          "date": "2026-07-31",
+          "order": 6,
+          "minor": false,
+          "actor": "Florence Pugh"
+        }
+      ]
+    },
+    {
+      "name": "Iron Man",
+      "real_name": "Tony Stark",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Robert Downey Jr."
+      ],
+      "appearances": 9,
+      "films": [
+        {
+          "title": "Iron Man",
+          "universe": "MCU",
+          "date": "2008-05-02",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "Iron Man 3",
+          "universe": "MCU",
+          "date": "2013-05-03",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 2,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "Spider-Man: Homecoming",
+          "universe": "MCU",
+          "date": "2017-07-07",
+          "order": 13,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        }
+      ]
+    },
+    {
+      "name": "Captain America",
+      "real_name": "Steve Rogers",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chris Evans",
+        "Anthony Mackie"
+      ],
+      "appearances": 8,
+      "films": [
+        {
+          "title": "Captain America: The First Avenger",
+          "universe": "MCU",
+          "date": "2011-07-22",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 1,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        }
+      ]
+    },
+    {
+      "name": "Thor",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chris Hemsworth"
+      ],
+      "appearances": 8,
+      "films": [
+        {
+          "title": "Thor",
+          "universe": "MCU",
+          "date": "2011-05-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        }
+      ]
+    },
+    {
+      "name": "Hulk",
+      "real_name": "Bruce Banner",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Edward Norton",
+        "Mark Ruffalo"
+      ],
+      "appearances": 7,
+      "films": [
+        {
+          "title": "The Incredible Hulk",
+          "universe": "MCU",
+          "date": "2008-06-13",
+          "order": 1,
+          "minor": false,
+          "actor": "Edward Norton"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 8,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Spider-Man: Brand New Day",
+          "universe": "MCU",
+          "date": "2026-07-31",
+          "order": 9,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        }
+      ]
+    },
+    {
+      "name": "Nick Fury",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Samuel L. Jackson"
+      ],
+      "appearances": 7,
+      "films": [
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 7,
+          "minor": false,
+          "actor": "Samuel L. Jackson"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 9,
+          "minor": false,
+          "actor": "Samuel L. Jackson"
+        },
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 12,
+          "minor": false,
+          "actor": "Samuel L. Jackson"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 18,
+          "minor": false,
+          "actor": "Samuel L. Jackson"
+        },
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": 2,
+          "minor": false,
+          "actor": "Samuel L. Jackson"
+        },
+        {
+          "title": "Spider-Man: Far From Home",
+          "universe": "MCU",
+          "date": "2019-07-02",
+          "order": 2,
+          "minor": false,
+          "actor": "Samuel L. Jackson"
+        },
+        {
+          "title": "The Marvels",
+          "universe": "MCU",
+          "date": "2023-11-10",
+          "order": 10,
+          "minor": false,
+          "actor": "Samuel L. Jackson"
+        }
+      ]
+    },
+    {
+      "name": "War Machine",
+      "real_name": "James Rhodes",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Terrence Howard",
+        "Don Cheadle"
+      ],
+      "appearances": 7,
+      "films": [
+        {
+          "title": "Iron Man",
+          "universe": "MCU",
+          "date": "2008-05-02",
+          "order": 2,
+          "minor": false,
+          "actor": "Terrence Howard"
+        },
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 3,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Iron Man 3",
+          "universe": "MCU",
+          "date": "2013-05-03",
+          "order": 3,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 7,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 6,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 6,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 7,
+          "minor": false,
+          "actor": "Don Cheadle"
+        }
+      ]
+    },
+    {
+      "name": "Falcon",
+      "real_name": "Sam Wilson",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Anthony Mackie",
+        "Danny Ramirez"
+      ],
+      "appearances": 6,
+      "films": [
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 4,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 12,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Ant-Man",
+          "universe": "MCU",
+          "date": "2015-07-17",
+          "order": 7,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 5,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 11,
+          "minor": false,
+          "actor": "Anthony Mackie"
+        },
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 2,
+          "minor": false,
+          "actor": "Danny Ramirez"
+        }
+      ]
+    },
+    {
+      "name": "Spider-Man",
+      "real_name": "Peter Parker",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Tom Holland"
+      ],
+      "appearances": 6,
+      "films": [
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 14,
+          "minor": false,
+          "actor": "Tom Holland"
+        },
+        {
+          "title": "Spider-Man: Homecoming",
+          "universe": "MCU",
+          "date": "2017-07-07",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Holland"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 7,
+          "minor": false,
+          "actor": "Tom Holland"
+        },
+        {
+          "title": "Spider-Man: Far From Home",
+          "universe": "MCU",
+          "date": "2019-07-02",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Holland"
+        },
+        {
+          "title": "Spider-Man: No Way Home",
+          "universe": "MCU",
+          "date": "2021-12-17",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Holland"
+        },
+        {
+          "title": "Spider-Man: Brand New Day",
+          "universe": "MCU",
+          "date": "2026-07-31",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Holland"
+        }
+      ]
+    },
+    {
+      "name": "Wong",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Benedict Wong"
+      ],
+      "appearances": 6,
+      "films": [
+        {
+          "title": "Doctor Strange",
+          "universe": "MCU",
+          "date": "2016-11-04",
+          "order": 3,
+          "minor": false,
+          "actor": "Benedict Wong"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 16,
+          "minor": false,
+          "actor": "Benedict Wong"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 12,
+          "minor": false,
+          "actor": "Benedict Wong"
+        },
+        {
+          "title": "Shang-Chi and the Legend of the Ten Rings",
+          "universe": "MCU",
+          "date": "2021-09-03",
+          "order": 6,
+          "minor": false,
+          "actor": "Benedict Wong"
+        },
+        {
+          "title": "Spider-Man: No Way Home",
+          "universe": "MCU",
+          "date": "2021-12-17",
+          "order": 8,
+          "minor": false,
+          "actor": "Benedict Wong"
+        },
+        {
+          "title": "Doctor Strange in the Multiverse of Madness",
+          "universe": "MCU",
+          "date": "2022-05-06",
+          "order": 3,
+          "minor": false,
+          "actor": "Benedict Wong"
+        }
+      ]
+    },
+    {
+      "name": "Ant-Man",
+      "real_name": "Scott Lang",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Paul Rudd"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Ant-Man",
+          "universe": "MCU",
+          "date": "2015-07-17",
+          "order": 1,
+          "minor": false,
+          "actor": "Paul Rudd"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 11,
+          "minor": false,
+          "actor": "Paul Rudd"
+        },
+        {
+          "title": "Ant-Man and the Wasp",
+          "universe": "MCU",
+          "date": "2018-07-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Paul Rudd"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 8,
+          "minor": false,
+          "actor": "Paul Rudd"
+        },
+        {
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "universe": "MCU",
+          "date": "2023-02-17",
+          "order": 1,
+          "minor": false,
+          "actor": "Paul Rudd"
+        }
+      ]
+    },
+    {
+      "name": "Loki",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Tom Hiddleston"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Thor",
+          "universe": "MCU",
+          "date": "2011-05-06",
+          "order": 3,
+          "minor": false,
+          "actor": "Tom Hiddleston"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 7,
+          "minor": false,
+          "actor": "Tom Hiddleston"
+        },
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 3,
+          "minor": false,
+          "actor": "Tom Hiddleston"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 2,
+          "minor": false,
+          "actor": "Tom Hiddleston"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 13,
+          "minor": false,
+          "actor": "Tom Hiddleston"
+        }
+      ]
+    },
+    {
+      "name": "Nebula",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Karen Gillan"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 8,
+          "minor": false,
+          "actor": "Karen Gillan"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 7,
+          "minor": false,
+          "actor": "Karen Gillan"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 18,
+          "minor": false,
+          "actor": "Karen Gillan"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 10,
+          "minor": false,
+          "actor": "Karen Gillan"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 4,
+          "minor": false,
+          "actor": "Karen Gillan"
+        }
+      ]
+    },
+    {
+      "name": "Superman",
+      "real_name": "Kal-El",
+      "universes": [
+        "DCEU",
+        "DCU"
+      ],
+      "actors": [
+        "Henry Cavill",
+        "David Corenswet"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Man of Steel",
+          "universe": "DCEU",
+          "date": "2013-06-14",
+          "order": 1,
+          "minor": false,
+          "actor": "Henry Cavill"
+        },
+        {
+          "title": "Batman v Superman: Dawn of Justice",
+          "universe": "DCEU",
+          "date": "2016-03-25",
+          "order": 2,
+          "minor": false,
+          "actor": "Henry Cavill"
+        },
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 2,
+          "minor": false,
+          "actor": "Henry Cavill"
+        },
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": 1,
+          "minor": false,
+          "actor": "David Corenswet"
+        },
+        {
+          "title": "Supergirl",
+          "universe": "DCU",
+          "date": "2026-06-26",
+          "order": 6,
+          "minor": false,
+          "actor": "David Corenswet"
+        }
+      ]
+    },
+    {
+      "name": "Black Panther",
+      "real_name": "T'Challa",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chadwick Boseman",
+        "Letitia Wright"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 8,
+          "minor": false,
+          "actor": "Chadwick Boseman"
+        },
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 1,
+          "minor": false,
+          "actor": "Chadwick Boseman"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 8,
+          "minor": false,
+          "actor": "Chadwick Boseman"
+        },
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 1,
+          "minor": false,
+          "actor": "Letitia Wright"
+        }
+      ]
+    },
+    {
+      "name": "Gamora",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Zoe Saldaña"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 2,
+          "minor": false,
+          "actor": "Zoe Saldaña"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 2,
+          "minor": false,
+          "actor": "Zoe Saldaña"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 20,
+          "minor": false,
+          "actor": "Zoe Saldaña"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 2,
+          "minor": false,
+          "actor": "Zoe Saldaña"
+        }
+      ]
+    },
+    {
+      "name": "Hawkeye",
+      "real_name": "Clint Barton",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jeremy Renner"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-12",
+          "order": 6,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 6,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 7,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 6,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        }
+      ]
+    },
+    {
+      "name": "Red Hulk",
+      "real_name": "Thaddeus Ross",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "William Hurt",
+        "Harrison Ford"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "The Incredible Hulk",
+          "universe": "MCU",
+          "date": "2008-06-13",
+          "order": 4,
+          "minor": false,
+          "actor": "William Hurt"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 17,
+          "minor": false,
+          "actor": "William Hurt"
+        },
+        {
+          "title": "Black Widow",
+          "universe": "MCU",
+          "date": "2021-07-09",
+          "order": 6,
+          "minor": false,
+          "actor": "William Hurt"
+        },
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 9,
+          "minor": false,
+          "actor": "Harrison Ford"
+        }
+      ]
+    },
+    {
+      "name": "Rocket",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Bradley Cooper"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 5,
+          "minor": false,
+          "actor": "Bradley Cooper"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 22,
+          "minor": false,
+          "actor": "Bradley Cooper"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 14,
+          "minor": false,
+          "actor": "Bradley Cooper"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 7,
+          "minor": false,
+          "actor": "Bradley Cooper"
+        }
+      ]
+    },
+    {
+      "name": "Scarlet Witch",
+      "real_name": "Wanda Maximoff",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Elizabeth Olsen"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 9,
+          "minor": false,
+          "actor": "Elizabeth Olsen"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 10,
+          "minor": false,
+          "actor": "Elizabeth Olsen"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 10,
+          "minor": false,
+          "actor": "Elizabeth Olsen"
+        },
+        {
+          "title": "Doctor Strange in the Multiverse of Madness",
+          "universe": "MCU",
+          "date": "2022-05-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Elizabeth Olsen"
+        }
+      ]
+    },
+    {
+      "name": "Star-Lord",
+      "real_name": "Peter Quill",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chris Pratt"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Pratt"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Pratt"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 26,
+          "minor": false,
+          "actor": "Chris Pratt"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Pratt"
+        }
+      ]
+    },
+    {
+      "name": "Winter Soldier",
+      "real_name": "Bucky Barnes",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Sebastian Stan"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 3,
+          "minor": false,
+          "actor": "Sebastian Stan"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 4,
+          "minor": false,
+          "actor": "Sebastian Stan"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 12,
+          "minor": false,
+          "actor": "Sebastian Stan"
+        },
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 2,
+          "minor": false,
+          "actor": "Sebastian Stan"
+        }
+      ]
+    },
+    {
+      "name": "Wonder Woman",
+      "real_name": "Diana Prince",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Gal Gadot"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Batman v Superman: Dawn of Justice",
+          "universe": "DCEU",
+          "date": "2016-03-25",
+          "order": 9,
+          "minor": false,
+          "actor": "Gal Gadot"
+        },
+        {
+          "title": "Wonder Woman",
+          "universe": "DCEU",
+          "date": "2017-06-02",
+          "order": 1,
+          "minor": false,
+          "actor": "Gal Gadot"
+        },
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 3,
+          "minor": false,
+          "actor": "Gal Gadot"
+        },
+        {
+          "title": "Wonder Woman 1984",
+          "universe": "DCEU",
+          "date": "2020-12-25",
+          "order": 1,
+          "minor": false,
+          "actor": "Gal Gadot"
+        }
+      ]
+    },
+    {
+      "name": "Aquaman",
+      "real_name": "Arthur Curry",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Jason Momoa"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 5,
+          "minor": false,
+          "actor": "Jason Momoa"
+        },
+        {
+          "title": "Aquaman",
+          "universe": "DCEU",
+          "date": "2018-12-21",
+          "order": 1,
+          "minor": false,
+          "actor": "Jason Momoa"
+        },
+        {
+          "title": "Aquaman and the Lost Kingdom",
+          "universe": "DCEU",
+          "date": "2023-12-20",
+          "order": 1,
+          "minor": false,
+          "actor": "Jason Momoa"
+        }
+      ]
+    },
+    {
+      "name": "Batman",
+      "real_name": "Bruce Wayne",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Ben Affleck",
+        "Michael Keaton"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Batman v Superman: Dawn of Justice",
+          "universe": "DCEU",
+          "date": "2016-03-25",
+          "order": 1,
+          "minor": false,
+          "actor": "Ben Affleck"
+        },
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 1,
+          "minor": false,
+          "actor": "Ben Affleck"
+        },
+        {
+          "title": "The Flash",
+          "universe": "DCEU",
+          "date": "2023-06-16",
+          "order": 8,
+          "minor": false,
+          "actor": "Michael Keaton"
+        }
+      ]
+    },
+    {
+      "name": "Captain Marvel",
+      "real_name": "Carol Danvers",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Brie Larson"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": 1,
+          "minor": false,
+          "actor": "Brie Larson"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 9,
+          "minor": false,
+          "actor": "Brie Larson"
+        },
+        {
+          "title": "The Marvels",
+          "universe": "MCU",
+          "date": "2023-11-10",
+          "order": 1,
+          "minor": false,
+          "actor": "Brie Larson"
+        }
+      ]
+    },
+    {
+      "name": "Groot",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Vin Diesel"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 4,
+          "minor": false,
+          "actor": "Vin Diesel"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 21,
+          "minor": false,
+          "actor": "Vin Diesel"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 6,
+          "minor": false,
+          "actor": "Vin Diesel"
+        }
+      ]
+    },
+    {
+      "name": "Harley Quinn",
+      "real_name": "Dr. Harleen Quinzel",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Margot Robbie"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 3,
+          "minor": false,
+          "actor": "Margot Robbie"
+        },
+        {
+          "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+          "universe": "DCEU",
+          "date": "2020-02-07",
+          "order": 1,
+          "minor": false,
+          "actor": "Margot Robbie"
+        },
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Margot Robbie"
+        }
+      ]
+    },
+    {
+      "name": "Mantis",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Pom Klementieff"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 8,
+          "minor": false,
+          "actor": "Pom Klementieff"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 17,
+          "minor": false,
+          "actor": "Pom Klementieff"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 5,
+          "minor": false,
+          "actor": "Pom Klementieff"
+        }
+      ]
+    },
+    {
+      "name": "Mighty Thor",
+      "real_name": "Jane Foster",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Natalie Portman"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Thor",
+          "universe": "MCU",
+          "date": "2011-05-06",
+          "order": 2,
+          "minor": false,
+          "actor": "Natalie Portman"
+        },
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 2,
+          "minor": false,
+          "actor": "Natalie Portman"
+        },
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 7,
+          "minor": false,
+          "actor": "Natalie Portman"
+        }
+      ]
+    },
+    {
+      "name": "Wasp",
+      "real_name": "Hope van Dyne",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Evangeline Lilly"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Ant-Man",
+          "universe": "MCU",
+          "date": "2015-07-17",
+          "order": 2,
+          "minor": false,
+          "actor": "Evangeline Lilly"
+        },
+        {
+          "title": "Ant-Man and the Wasp",
+          "universe": "MCU",
+          "date": "2018-07-06",
+          "order": 2,
+          "minor": false,
+          "actor": "Evangeline Lilly"
+        },
+        {
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "universe": "MCU",
+          "date": "2023-02-17",
+          "order": 2,
+          "minor": false,
+          "actor": "Evangeline Lilly"
+        }
+      ]
+    },
+    {
+      "name": "Amanda Waller",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Viola Davis"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 5,
+          "minor": false,
+          "actor": "Viola Davis"
+        },
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 6,
+          "minor": false,
+          "actor": "Viola Davis"
+        }
+      ]
+    },
+    {
+      "name": "Black Manta",
+      "real_name": "David Kane",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Yahya Abdul-Mateen II"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Aquaman",
+          "universe": "DCEU",
+          "date": "2018-12-21",
+          "order": 6,
+          "minor": false,
+          "actor": "Yahya Abdul-Mateen II"
+        },
+        {
+          "title": "Aquaman and the Lost Kingdom",
+          "universe": "DCEU",
+          "date": "2023-12-20",
+          "order": 4,
+          "minor": false,
+          "actor": "Yahya Abdul-Mateen II"
+        }
+      ]
+    },
+    {
+      "name": "Black Widow (Yelena)",
+      "real_name": "Yelena Belova",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Florence Pugh"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Black Widow",
+          "universe": "MCU",
+          "date": "2021-07-09",
+          "order": 2,
+          "minor": false,
+          "actor": "Florence Pugh"
+        },
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 1,
+          "minor": false,
+          "actor": "Florence Pugh"
+        }
+      ]
+    },
+    {
+      "name": "Captain Boomerang",
+      "real_name": "Digger Harkness",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Jai Courtney"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 6,
+          "minor": false,
+          "actor": "Jai Courtney"
+        },
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 10,
+          "minor": false,
+          "actor": "Jai Courtney"
+        }
+      ]
+    },
+    {
+      "name": "Faora",
+      "real_name": "Faora-Ul",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Antje Traue"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Man of Steel",
+          "universe": "DCEU",
+          "date": "2013-06-14",
+          "order": 7,
+          "minor": false,
+          "actor": "Antje Traue"
+        },
+        {
+          "title": "The Flash",
+          "universe": "DCEU",
+          "date": "2023-06-16",
+          "order": 7,
+          "minor": false,
+          "actor": "Antje Traue"
+        }
+      ]
+    },
+    {
+      "name": "General Zod",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Michael Shannon"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Man of Steel",
+          "universe": "DCEU",
+          "date": "2013-06-14",
+          "order": 3,
+          "minor": false,
+          "actor": "Michael Shannon"
+        },
+        {
+          "title": "The Flash",
+          "universe": "DCEU",
+          "date": "2023-06-16",
+          "order": 3,
+          "minor": false,
+          "actor": "Michael Shannon"
+        }
+      ]
+    },
+    {
+      "name": "Ghost",
+      "real_name": "Ava Starr",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Hannah John-Kamen"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Ant-Man and the Wasp",
+          "universe": "MCU",
+          "date": "2018-07-06",
+          "order": 5,
+          "minor": false,
+          "actor": "Hannah John-Kamen"
+        },
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 10,
+          "minor": false,
+          "actor": "Hannah John-Kamen"
+        }
+      ]
+    },
+    {
+      "name": "Lex Luthor",
+      "real_name": null,
+      "universes": [
+        "DCEU",
+        "DCU"
+      ],
+      "actors": [
+        "Jesse Eisenberg",
+        "Nicholas Hoult"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Batman v Superman: Dawn of Justice",
+          "universe": "DCEU",
+          "date": "2016-03-25",
+          "order": 4,
+          "minor": false,
+          "actor": "Jesse Eisenberg"
+        },
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": 3,
+          "minor": false,
+          "actor": "Nicholas Hoult"
+        }
+      ]
+    },
+    {
+      "name": "Ocean Master",
+      "real_name": "Orm Marius",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Patrick Wilson"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Aquaman",
+          "universe": "DCEU",
+          "date": "2018-12-21",
+          "order": 4,
+          "minor": false,
+          "actor": "Patrick Wilson"
+        },
+        {
+          "title": "Aquaman and the Lost Kingdom",
+          "universe": "DCEU",
+          "date": "2023-12-20",
+          "order": 2,
+          "minor": false,
+          "actor": "Patrick Wilson"
+        }
+      ]
+    },
+    {
+      "name": "Red Guardian",
+      "real_name": "Alexei Shostakov",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "David Harbour"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Black Widow",
+          "universe": "MCU",
+          "date": "2021-07-09",
+          "order": 3,
+          "minor": false,
+          "actor": "David Harbour"
+        },
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 9,
+          "minor": false,
+          "actor": "David Harbour"
+        }
+      ]
+    },
+    {
+      "name": "Shazam",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Djimon Hounsou"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Shazam!",
+          "universe": "DCEU",
+          "date": "2019-04-05",
+          "order": 3,
+          "minor": false,
+          "actor": "Djimon Hounsou"
+        },
+        {
+          "title": "Shazam! Fury of the Gods",
+          "universe": "DCEU",
+          "date": "2023-03-17",
+          "order": 4,
+          "minor": false,
+          "actor": "Djimon Hounsou"
+        }
+      ]
+    },
+    {
+      "name": "Supergirl",
+      "real_name": "Kara Zor-El",
+      "universes": [
+        "DCEU",
+        "DCU"
+      ],
+      "actors": [
+        "Sasha Calle",
+        "Milly Alcock"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "The Flash",
+          "universe": "DCEU",
+          "date": "2023-06-16",
+          "order": 2,
+          "minor": false,
+          "actor": "Sasha Calle"
+        },
+        {
+          "title": "Supergirl",
+          "universe": "DCU",
+          "date": "2026-06-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Milly Alcock"
+        }
+      ]
+    },
+    {
+      "name": "Taskmaster",
+      "real_name": "Antonia Dreykov",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Olga Kurylenko"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Black Widow",
+          "universe": "MCU",
+          "date": "2021-07-09",
+          "order": 5,
+          "minor": false,
+          "actor": "Olga Kurylenko"
+        },
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 4,
+          "minor": false,
+          "actor": "Olga Kurylenko"
+        }
+      ]
+    },
+    {
+      "name": "Thanos",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Josh Brolin"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 25,
+          "minor": false,
+          "actor": "Josh Brolin"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 16,
+          "minor": false,
+          "actor": "Josh Brolin"
+        }
+      ]
+    },
+    {
+      "name": "The Collector",
+      "real_name": "Taneleer Tivan",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Benicio del Toro"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 12,
+          "minor": false,
+          "actor": "Benicio del Toro"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 24,
+          "minor": false,
+          "actor": "Benicio del Toro"
+        }
+      ]
+    },
+    {
+      "name": "The Flash",
+      "real_name": "Barry Allen",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Ezra Miller"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 4,
+          "minor": false,
+          "actor": "Ezra Miller"
+        },
+        {
+          "title": "The Flash",
+          "universe": "DCEU",
+          "date": "2023-06-16",
+          "order": 1,
+          "minor": false,
+          "actor": "Ezra Miller"
+        }
+      ]
+    },
+    {
+      "name": "The Leader",
+      "real_name": "Samuel Sterns",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Tim Blake Nelson"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "The Incredible Hulk",
+          "universe": "MCU",
+          "date": "2008-06-13",
+          "order": 5,
+          "minor": false,
+          "actor": "Tim Blake Nelson"
+        },
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 8,
+          "minor": false,
+          "actor": "Tim Blake Nelson"
+        }
+      ]
+    },
+    {
+      "name": "Valkyrie",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Tessa Thompson"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 6,
+          "minor": false,
+          "actor": "Tessa Thompson"
+        },
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 3,
+          "minor": false,
+          "actor": "Tessa Thompson"
+        }
+      ]
+    },
+    {
+      "name": "Vision",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Paul Bettany"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 9,
+          "minor": false,
+          "actor": "Paul Bettany"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 9,
+          "minor": false,
+          "actor": "Paul Bettany"
+        }
+      ]
+    },
+    {
+      "name": "Abomination",
+      "real_name": "Emil Blonsky",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Tim Roth"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Incredible Hulk",
+          "universe": "MCU",
+          "date": "2008-06-13",
+          "order": 3,
+          "minor": false,
+          "actor": "Tim Roth"
+        }
+      ]
+    },
+    {
+      "name": "Adam Warlock",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Will Poulter"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 8,
+          "minor": false,
+          "actor": "Will Poulter"
+        }
+      ]
+    },
+    {
+      "name": "Agent 13",
+      "real_name": "Sharon Carter",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Emily VanCamp"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 7,
+          "minor": false,
+          "actor": "Emily VanCamp"
+        }
+      ]
+    },
+    {
+      "name": "Ajak",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Salma Hayek"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 10,
+          "minor": false,
+          "actor": "Salma Hayek"
+        }
+      ]
+    },
+    {
+      "name": "Atom Smasher",
+      "real_name": "Albert Rothstein",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Noah Centineo"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Adam",
+          "universe": "DCEU",
+          "date": "2022-10-21",
+          "order": 3,
+          "minor": false,
+          "actor": "Noah Centineo"
+        }
+      ]
+    },
+    {
+      "name": "Black Adam",
+      "real_name": "Teth-Adam",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Dwayne Johnson"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Adam",
+          "universe": "DCEU",
+          "date": "2022-10-21",
+          "order": 1,
+          "minor": false,
+          "actor": "Dwayne Johnson"
+        }
+      ]
+    },
+    {
+      "name": "Black Canary",
+      "real_name": "Dinah Lance",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Jurnee Smollett-Bell"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+          "universe": "DCEU",
+          "date": "2020-02-07",
+          "order": 3,
+          "minor": false,
+          "actor": "Jurnee Smollett-Bell"
+        }
+      ]
+    },
+    {
+      "name": "Black Mask",
+      "real_name": "Roman Sionis",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Ewan McGregor"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+          "universe": "DCEU",
+          "date": "2020-02-07",
+          "order": 8,
+          "minor": false,
+          "actor": "Ewan McGregor"
+        }
+      ]
+    },
+    {
+      "name": "Blackguard",
+      "real_name": "Richard Hertz",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Pete Davidson"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 13,
+          "minor": false,
+          "actor": "Pete Davidson"
+        }
+      ]
+    },
+    {
+      "name": "Bloodsport",
+      "real_name": "Robert DuBois",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Idris Elba"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 2,
+          "minor": false,
+          "actor": "Idris Elba"
+        }
+      ]
+    },
+    {
+      "name": "Blue Beetle",
+      "real_name": "Jaime Reyes",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Xolo Maridueña"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Blue Beetle",
+          "universe": "DCEU",
+          "date": "2023-08-18",
+          "order": 1,
+          "minor": false,
+          "actor": "Xolo Maridueña"
+        }
+      ]
+    },
+    {
+      "name": "Cassandra Nova",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Emma Corrin"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": 3,
+          "minor": false,
+          "actor": "Emma Corrin"
+        }
+      ]
+    },
+    {
+      "name": "Cheetah",
+      "real_name": "Barbara Minerva",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Kristen Wiig"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Wonder Woman 1984",
+          "universe": "DCEU",
+          "date": "2020-12-25",
+          "order": 3,
+          "minor": false,
+          "actor": "Kristen Wiig"
+        }
+      ]
+    },
+    {
+      "name": "Cyborg",
+      "real_name": "Victor Stone",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Ray Fisher"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 6,
+          "minor": false,
+          "actor": "Ray Fisher"
+        }
+      ]
+    },
+    {
+      "name": "Cyclone",
+      "real_name": "Maxine Hunkel",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Quintessa Swindell"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Adam",
+          "universe": "DCEU",
+          "date": "2022-10-21",
+          "order": 6,
+          "minor": false,
+          "actor": "Quintessa Swindell"
+        }
+      ]
+    },
+    {
+      "name": "Deadpool",
+      "real_name": "Wade Wilson",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Ryan Reynolds"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Ryan Reynolds"
+        }
+      ]
+    },
+    {
+      "name": "Deadshot",
+      "real_name": "Floyd Lawton",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Will Smith"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Will Smith"
+        }
+      ]
+    },
+    {
+      "name": "Doctor Fate",
+      "real_name": "Kent Nelson",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Pierce Brosnan"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Adam",
+          "universe": "DCEU",
+          "date": "2022-10-21",
+          "order": 8,
+          "minor": false,
+          "actor": "Pierce Brosnan"
+        }
+      ]
+    },
+    {
+      "name": "Doctor Octopus",
+      "real_name": "Otto Octavius",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Alfred Molina"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man: No Way Home",
+          "universe": "MCU",
+          "date": "2021-12-17",
+          "order": 7,
+          "minor": false,
+          "actor": "Alfred Molina"
+        }
+      ]
+    },
+    {
+      "name": "Druig",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Barry Keoghan"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 7,
+          "minor": false,
+          "actor": "Barry Keoghan"
+        }
+      ]
+    },
+    {
+      "name": "El Diablo",
+      "real_name": "Chato Santana",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Jay Hernandez"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 8,
+          "minor": false,
+          "actor": "Jay Hernandez"
+        }
+      ]
+    },
+    {
+      "name": "Electro",
+      "real_name": "Max Dillon",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jamie Foxx"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man: No Way Home",
+          "universe": "MCU",
+          "date": "2021-12-17",
+          "order": 5,
+          "minor": false,
+          "actor": "Jamie Foxx"
+        }
+      ]
+    },
+    {
+      "name": "Enchantress",
+      "real_name": "Dr. June Moone",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Cara Delevingne"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 13,
+          "minor": false,
+          "actor": "Cara Delevingne"
+        }
+      ]
+    },
+    {
+      "name": "Galactus",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Ralph Ineson"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 10,
+          "minor": false,
+          "actor": "Ralph Ineson"
+        }
+      ]
+    },
+    {
+      "name": "Gilgamesh",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Ma Dong-seok"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 8,
+          "minor": false,
+          "actor": "Ma Dong-seok"
+        }
+      ]
+    },
+    {
+      "name": "Gorr",
+      "real_name": "Gorr the God Butcher",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Christian Bale"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 2,
+          "minor": false,
+          "actor": "Christian Bale"
+        }
+      ]
+    },
+    {
+      "name": "Green Goblin",
+      "real_name": "Norman Osborn",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Willem Dafoe"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man: No Way Home",
+          "universe": "MCU",
+          "date": "2021-12-17",
+          "order": 6,
+          "minor": false,
+          "actor": "Willem Dafoe"
+        }
+      ]
+    },
+    {
+      "name": "Green Lantern",
+      "real_name": "Guy Gardner",
+      "universes": [
+        "DCU"
+      ],
+      "actors": [
+        "Nathan Fillion"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": 6,
+          "minor": false,
+          "actor": "Nathan Fillion"
+        }
+      ]
+    },
+    {
+      "name": "Hawkgirl",
+      "real_name": "Kendra Saunders",
+      "universes": [
+        "DCU"
+      ],
+      "actors": [
+        "Isabela Merced"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": 7,
+          "minor": false,
+          "actor": "Isabela Merced"
+        }
+      ]
+    },
+    {
+      "name": "Hawkman",
+      "real_name": "Carter Hall",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Aldis Hodge"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Adam",
+          "universe": "DCEU",
+          "date": "2022-10-21",
+          "order": 2,
+          "minor": false,
+          "actor": "Aldis Hodge"
+        }
+      ]
+    },
+    {
+      "name": "Hela",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Cate Blanchett"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 3,
+          "minor": false,
+          "actor": "Cate Blanchett"
+        }
+      ]
+    },
+    {
+      "name": "Human Torch",
+      "real_name": "Johnny Storm",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Joseph Quinn"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 4,
+          "minor": false,
+          "actor": "Joseph Quinn"
+        }
+      ]
+    },
+    {
+      "name": "Huntress",
+      "real_name": "Helena Bertinelli",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Mary Elizabeth Winstead"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+          "universe": "DCEU",
+          "date": "2020-02-07",
+          "order": 2,
+          "minor": false,
+          "actor": "Mary Elizabeth Winstead"
+        }
+      ]
+    },
+    {
+      "name": "Ikaris",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Richard Madden"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 2,
+          "minor": false,
+          "actor": "Richard Madden"
+        }
+      ]
+    },
+    {
+      "name": "Invisible Woman",
+      "real_name": "Sue Storm",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Vanessa Kirby"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 2,
+          "minor": false,
+          "actor": "Vanessa Kirby"
+        }
+      ]
+    },
+    {
+      "name": "Ironheart",
+      "real_name": "Riri Williams",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Dominique Thorne"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 6,
+          "minor": false,
+          "actor": "Dominique Thorne"
+        }
+      ]
+    },
+    {
+      "name": "Joker",
+      "real_name": "Arthur Fleck",
+      "universes": [
+        "Elseworlds"
+      ],
+      "actors": [
+        "Joaquin Phoenix"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Joker",
+          "universe": "Elseworlds",
+          "date": "2019-10-04",
+          "order": 1,
+          "minor": false,
+          "actor": "Joaquin Phoenix"
+        }
+      ]
+    },
+    {
+      "name": "Kaecilius",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Mads Mikkelsen"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Doctor Strange",
+          "universe": "MCU",
+          "date": "2016-11-04",
+          "order": 7,
+          "minor": false,
+          "actor": "Mads Mikkelsen"
+        }
+      ]
+    },
+    {
+      "name": "Kang",
+      "real_name": "Kang the Conqueror",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jonathan Majors"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "universe": "MCU",
+          "date": "2023-02-17",
+          "order": 3,
+          "minor": false,
+          "actor": "Jonathan Majors"
+        }
+      ]
+    },
+    {
+      "name": "Katana",
+      "real_name": "Tatsu Yamashiro",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Karen Fukuhara"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 7,
+          "minor": false,
+          "actor": "Karen Fukuhara"
+        }
+      ]
+    },
+    {
+      "name": "Killer Croc",
+      "real_name": "Waylon Jones",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Adewale Akinnuoye-Agbaje"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 9,
+          "minor": false,
+          "actor": "Adewale Akinnuoye-Agbaje"
+        }
+      ]
+    },
+    {
+      "name": "Killmonger",
+      "real_name": "N'Jadaka",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Michael B. Jordan"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 2,
+          "minor": false,
+          "actor": "Michael B. Jordan"
+        }
+      ]
+    },
+    {
+      "name": "King Shark",
+      "real_name": "the voice of Nanaue",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Sylvester Stallone"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 5,
+          "minor": false,
+          "actor": "Sylvester Stallone"
+        }
+      ]
+    },
+    {
+      "name": "Kingo",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Kumail Nanjiani"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 3,
+          "minor": false,
+          "actor": "Kumail Nanjiani"
+        }
+      ]
+    },
+    {
+      "name": "Korg",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Taika Waititi"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 5,
+          "minor": false,
+          "actor": "Taika Waititi"
+        }
+      ]
+    },
+    {
+      "name": "Kurse",
+      "real_name": "Algrim",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Adewale Akinnuoye-Agbaje"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 7,
+          "minor": false,
+          "actor": "Adewale Akinnuoye-Agbaje"
+        }
+      ]
+    },
+    {
+      "name": "M.O.D.O.K.",
+      "real_name": "Darren Cross",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Corey Stoll"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "universe": "MCU",
+          "date": "2023-02-17",
+          "order": 10,
+          "minor": false,
+          "actor": "Corey Stoll"
+        }
+      ]
+    },
+    {
+      "name": "Makkari",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Lauren Ridloff"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 6,
+          "minor": false,
+          "actor": "Lauren Ridloff"
+        }
+      ]
+    },
+    {
+      "name": "Malekith",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Christopher Eccleston"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 6,
+          "minor": false,
+          "actor": "Christopher Eccleston"
+        }
+      ]
+    },
+    {
+      "name": "Mar-Vell",
+      "real_name": "the Supreme Intelligence and Mar-Vell",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Annette Bening"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": 8,
+          "minor": false,
+          "actor": "Annette Bening"
+        }
+      ]
+    },
+    {
+      "name": "Metamorpho",
+      "real_name": "Rex Mason",
+      "universes": [
+        "DCU"
+      ],
+      "actors": [
+        "Anthony Carrigan"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": 5,
+          "minor": false,
+          "actor": "Anthony Carrigan"
+        }
+      ]
+    },
+    {
+      "name": "Mister Fantastic",
+      "real_name": "Reed Richards",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Pedro Pascal"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 1,
+          "minor": false,
+          "actor": "Pedro Pascal"
+        }
+      ]
+    },
+    {
+      "name": "Mister Terrific",
+      "real_name": "Michael Holt",
+      "universes": [
+        "DCU"
+      ],
+      "actors": [
+        "Edi Gathegi"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": 4,
+          "minor": false,
+          "actor": "Edi Gathegi"
+        }
+      ]
+    },
+    {
+      "name": "Mole Man",
+      "real_name": "Harvey Elder",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Paul Walter Hauser"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 9,
+          "minor": false,
+          "actor": "Paul Walter Hauser"
+        }
+      ]
+    },
+    {
+      "name": "Ms. Marvel",
+      "real_name": "Kamala Khan",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Iman Vellani"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Marvels",
+          "universe": "MCU",
+          "date": "2023-11-10",
+          "order": 3,
+          "minor": false,
+          "actor": "Iman Vellani"
+        }
+      ]
+    },
+    {
+      "name": "Mysterio",
+      "real_name": "Quentin Beck",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jake Gyllenhaal"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man: Far From Home",
+          "universe": "MCU",
+          "date": "2019-07-02",
+          "order": 11,
+          "minor": false,
+          "actor": "Jake Gyllenhaal"
+        }
+      ]
+    },
+    {
+      "name": "Namor",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Tenoch Huerta Mejía"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 9,
+          "minor": false,
+          "actor": "Tenoch Huerta Mejía"
+        }
+      ]
+    },
+    {
+      "name": "OMAC",
+      "real_name": "Ignacio Carapax",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Raoul Max Trujillo"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Blue Beetle",
+          "universe": "DCEU",
+          "date": "2023-08-18",
+          "order": 6,
+          "minor": false,
+          "actor": "Raoul Max Trujillo"
+        }
+      ]
+    },
+    {
+      "name": "Peacemaker",
+      "real_name": "Christopher Smith",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "John Cena"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 3,
+          "minor": false,
+          "actor": "John Cena"
+        }
+      ]
+    },
+    {
+      "name": "Phastos",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Brian Tyree Henry"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 5,
+          "minor": false,
+          "actor": "Brian Tyree Henry"
+        }
+      ]
+    },
+    {
+      "name": "Polka-Dot Man",
+      "real_name": "Abner Krill",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "David Dastmalchian"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 7,
+          "minor": false,
+          "actor": "David Dastmalchian"
+        }
+      ]
+    },
+    {
+      "name": "Punisher",
+      "real_name": "Frank Castle",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jon Bernthal"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man: Brand New Day",
+          "universe": "MCU",
+          "date": "2026-07-31",
+          "order": 5,
+          "minor": false,
+          "actor": "Jon Bernthal"
+        }
+      ]
+    },
+    {
+      "name": "Pyro",
+      "real_name": "John Allerdyce",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Aaron Stanford"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": 7,
+          "minor": false,
+          "actor": "Aaron Stanford"
+        }
+      ]
+    },
+    {
+      "name": "Ratcatcher 2",
+      "real_name": "Cleo Cazo",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Daniela Melchior"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 8,
+          "minor": false,
+          "actor": "Daniela Melchior"
+        }
+      ]
+    },
+    {
+      "name": "Red Skull",
+      "real_name": "Johann Schmidt",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Hugo Weaving"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain America: The First Avenger",
+          "universe": "MCU",
+          "date": "2011-07-22",
+          "order": 3,
+          "minor": false,
+          "actor": "Hugo Weaving"
+        }
+      ]
+    },
+    {
+      "name": "Sabbac",
+      "real_name": "Ishmael Gregor",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Marwan Kenzari"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Adam",
+          "universe": "DCEU",
+          "date": "2022-10-21",
+          "order": 5,
+          "minor": false,
+          "actor": "Marwan Kenzari"
+        }
+      ]
+    },
+    {
+      "name": "Savant",
+      "real_name": "Brian Durlin",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Michael Rooker"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 9,
+          "minor": false,
+          "actor": "Michael Rooker"
+        }
+      ]
+    },
+    {
+      "name": "Sentry",
+      "real_name": "Robert Reynolds",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Lewis Pullman"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 5,
+          "minor": false,
+          "actor": "Lewis Pullman"
+        }
+      ]
+    },
+    {
+      "name": "Sersi",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Gemma Chan"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Gemma Chan"
+        }
+      ]
+    },
+    {
+      "name": "Shang-Chi",
+      "real_name": "Xu Shang-Chi",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Simu Liu"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Shang-Chi and the Legend of the Ten Rings",
+          "universe": "MCU",
+          "date": "2021-09-03",
+          "order": 1,
+          "minor": false,
+          "actor": "Simu Liu"
+        }
+      ]
+    },
+    {
+      "name": "Shocker",
+      "real_name": "Herman Schultz",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Bokeem Woodbine"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man: Homecoming",
+          "universe": "MCU",
+          "date": "2017-07-07",
+          "order": 10,
+          "minor": false,
+          "actor": "Bokeem Woodbine"
+        }
+      ]
+    },
+    {
+      "name": "Sidewinder",
+      "real_name": "Seth Voelker",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Giancarlo Esposito"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 6,
+          "minor": false,
+          "actor": "Giancarlo Esposito"
+        }
+      ]
+    },
+    {
+      "name": "Silver Surfer",
+      "real_name": "Shalla-Bal",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Julia Garner"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 5,
+          "minor": false,
+          "actor": "Julia Garner"
+        }
+      ]
+    },
+    {
+      "name": "Slipknot",
+      "real_name": "Christopher Weiss",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Adam Beach"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Suicide Squad",
+          "universe": "DCEU",
+          "date": "2016-08-05",
+          "order": 12,
+          "minor": false,
+          "actor": "Adam Beach"
+        }
+      ]
+    },
+    {
+      "name": "Sprite",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Lia McHugh"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 4,
+          "minor": false,
+          "actor": "Lia McHugh"
+        }
+      ]
+    },
+    {
+      "name": "Steppenwolf",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Ciarán Hinds"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 12,
+          "minor": false,
+          "actor": "Ciarán Hinds"
+        }
+      ]
+    },
+    {
+      "name": "The Mandarin",
+      "real_name": "Xu Wenwu",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Tony Leung Chiu-wai"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Shang-Chi and the Legend of the Ten Rings",
+          "universe": "MCU",
+          "date": "2021-09-03",
+          "order": 10,
+          "minor": false,
+          "actor": "Tony Leung Chiu-wai"
+        }
+      ]
+    },
+    {
+      "name": "The Thing",
+      "real_name": "Ben Grimm",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Ebon Moss-Bachrach"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 3,
+          "minor": false,
+          "actor": "Ebon Moss-Bachrach"
+        }
+      ]
+    },
+    {
+      "name": "The Thinker",
+      "real_name": "Gaius Grieves",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Peter Capaldi"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Suicide Squad",
+          "universe": "DCEU",
+          "date": "2021-08-05",
+          "order": 11,
+          "minor": false,
+          "actor": "Peter Capaldi"
+        }
+      ]
+    },
+    {
+      "name": "Thena",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Angelina Jolie"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Eternals",
+          "universe": "MCU",
+          "date": "2021-11-05",
+          "order": 11,
+          "minor": false,
+          "actor": "Angelina Jolie"
+        }
+      ]
+    },
+    {
+      "name": "U.S. Agent",
+      "real_name": "John Walker",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Wyatt Russell"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 3,
+          "minor": false,
+          "actor": "Wyatt Russell"
+        }
+      ]
+    },
+    {
+      "name": "Ultron",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "James Spader"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 17,
+          "minor": false,
+          "actor": "James Spader"
+        }
+      ]
+    },
+    {
+      "name": "Vulture",
+      "real_name": "Adrian Toomes",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Michael Keaton"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man: Homecoming",
+          "universe": "MCU",
+          "date": "2017-07-07",
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Keaton"
+        }
+      ]
+    },
+    {
+      "name": "Wasp (Janet)",
+      "real_name": "Janet van Dyne",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Michelle Pfeiffer"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Ant-Man and the Wasp",
+          "universe": "MCU",
+          "date": "2018-07-06",
+          "order": 12,
+          "minor": false,
+          "actor": "Michelle Pfeiffer"
+        }
+      ]
+    },
+    {
+      "name": "Whiplash",
+      "real_name": "Ivan Vanko",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Mickey Rourke"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 6,
+          "minor": false,
+          "actor": "Mickey Rourke"
+        }
+      ]
+    },
+    {
+      "name": "Wolverine",
+      "real_name": "Logan",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Hugh Jackman"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": 2,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        }
+      ]
+    },
+    {
+      "name": "Xialing",
+      "real_name": "Xu Xialing",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Meng'er Zhang"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Shang-Chi and the Legend of the Ten Rings",
+          "universe": "MCU",
+          "date": "2021-09-03",
+          "order": 3,
+          "minor": false,
+          "actor": "Meng'er Zhang"
+        }
+      ]
+    },
+    {
+      "name": "Yellowjacket",
+      "real_name": "Darren Cross",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Corey Stoll"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Ant-Man",
+          "universe": "MCU",
+          "date": "2015-07-17",
+          "order": 3,
+          "minor": false,
+          "actor": "Corey Stoll"
+        }
+      ]
+    },
+    {
+      "name": "Zemo",
+      "real_name": "Helmut Zemo",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Daniel Brühl"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 18,
+          "minor": false,
+          "actor": "Daniel Brühl"
+        }
+      ]
+    }
+  ]
+}

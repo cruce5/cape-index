@@ -6,3 +6,5 @@ dist/
 data/raw/*.html
 !data/raw/.gitkeep
 build/
+
+data/raw/wikicast-*.txt
