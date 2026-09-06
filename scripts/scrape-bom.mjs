@@ -5,11 +5,15 @@
 // Output: data/scraped.json  (one record per film, with resolved BOM id,
 // the matched search blurb for eyeballing, and the parsed summary box.)
 import { fetchText, resolveTitleId, parseTitlePage, sleep, jitter, io, ROOT, RAW_DIR } from "./lib-bom.mjs";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, rmSync } from "node:fs";
 import { join } from "node:path";
 
 const DELAY_BASE = Number(process.env.BOM_DELAY ?? 5000); // ms between network hits
 const DELAY_SPREAD = 3000;
+// BOM_REFRESH=1 forgets the cache for recent / upcoming films so a periodic rebuild
+// actually pulls their climbing grosses. Films older than this stay frozen.
+const REFRESH = process.env.BOM_REFRESH === "1";
+const REFRESH_MAX_AGE_DAYS = 300;
 
 const films = JSON.parse(readFileSync(join(ROOT, "data/films.json"), "utf8")).films;
 const additions = JSON.parse(readFileSync(join(ROOT, "data/additions.json"), "utf8")).candidates;
@@ -37,6 +41,15 @@ async function cachedFetch(url, cacheKey) {
 
 for (const t of targets) {
   const key = slug(`${t.title}-${t.year}`);
+  if (REFRESH) {
+    const ageDays = (Date.now() - Date.parse(t.release_date)) / 864e5;
+    if (ageDays < REFRESH_MAX_AGE_DAYS) {
+      const bom = results[key]?.bom_id || t.bom_id;
+      if (bom) { const rf = join(RAW_DIR, "title-" + bom + ".html"); if (existsSync(rf)) rmSync(rf); }
+      delete results[key];
+      console.log(`refresh  ${t.title} (${t.year}) — recent release, re-fetching`);
+    }
+  }
   if (results[key]?.parsed?.worldwide != null || results[key]?.status === "unreleased") {
     console.log(`skip  ${t.title} (${t.year}) — already have it`);
     continue;

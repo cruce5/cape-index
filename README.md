@@ -1,64 +1,85 @@
-# Marvel / DC / DCU Box Office
+# The Cape Index
 
-Rebuild of Bill Yost's [*Marvel / DC Box Office*](https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome)
-Tableau Public suite as a verified dataset + a dark-first, single-file HTML visualization package.
+Every live-action Marvel or DC superhero film since 2000 that belongs to a
+multi-film franchise, its verified box office, and a dark-first single-file HTML
+visualization of the lot.
 
-## Universes tracked
+**Live:** https://cape-index.williamfyost.workers.dev
 
-| Code | Label | Span | Notes |
-|------|-------|------|-------|
-| `MCU`  | Marvel Cinematic Universe | *Iron Man* (2008) → present | Marvel Studios productions only (no Sony/Fox Spider-Man, X-Men, etc.). *Deadpool & Wolverine* counts. |
-| `DCEU` | DC Extended Universe | *Man of Steel* (2013) → *Aquaman and the Lost Kingdom* (Dec 2023) | **Closed continuity.** Nothing releases after Dec 2023. |
-| `DCU`  | DC Universe | *Superman* (July 2025) → present | James Gunn / Peter Safran relaunch. Theatrical films only (Creature Commandos, Peacemaker, Lanterns are TV). |
-| `Elseworlds` | DC Elseworlds | *Joker* (2019), *Joker: Folie à Deux* (2024) | Warner/DC standalone films outside any shared continuity. |
+Grew out of [Bill Yost's *Marvel / DC Box Office*](https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome)
+Tableau Public workbook — a rebuild that turned into a re-verification and a
+much wider scope. The full story of how it got made, with the wrong turns and
+the bugs, is section 14 of the site itself.
 
-## Data pipeline
+## Scope
 
-Canonical dataset: **`data/films.json`** (version-controlled, hand-verified). Everything else feeds it.
+One rule: every live-action theatrical **Marvel or DC superhero film** whose
+continuity **began in 2000 or later** and that is **part of a multi-film
+continuity** — a shared universe, a trilogy, or a film with a theatrical sequel.
+One-and-done films with no sequel are out (no franchise arc to compare).
 
-| Script | Does |
-|--------|------|
-| `npm run scrape:bom` | Politely walk Box Office Mojo (cached to `data/raw/`, ~5–8 s between hits, resumable) for every film + the post-legacy candidates in `data/additions.json` → `data/scraped.json`. |
-| `npm run validate` | Cross-check every resolved BOM page's `<h1>` title/year against the film we meant to look up. |
-| `OMDB_KEY=… npm run data` | Full rebuild: `parse-baseline` → `promote` (BOM numbers → `data/films.json`) → `enrich-omdb` (RT/Metacritic/IMDb) → `enrich-wikipedia` (budgets + `data/budget-overrides.json`) → `derive` (multiplier, ROI, break-even) → `reconcile` (`RECONCILIATION.md`). |
-| `npm run build` | Inline `data/web.json` into `src/index.html` → `dist/index.html`, one self-contained file. |
-| `node scripts/serve.mjs` | Static-serve `dist/` on :4599 for local preview. |
+**In (92 films):**
 
-Still open: **widest-release theater counts** and **RT audience scores** (a second pass — not on the BOM title page or in OMDb).
+| Code | Group | What it covers |
+|------|-------|----------------|
+| `MCU` | Marvel Cinematic Universe | Marvel Studios productions. *Deadpool & Wolverine* counts here, not Fox. |
+| `Fox` | 20th Century Fox's Marvel films | The X-Men series (2000–2020), all three *Fantastic Four*s, *Daredevil*, *Elektra*. |
+| `SSU` | Sony's Marvel films | Raimi's *Spider-Man* trilogy, *The Amazing Spider-Man* 1–2, the Venom-led SSU, both *Ghost Rider*s. |
+| `DCEU` | DC Extended Universe | *Man of Steel* (2013) through *Aquaman and the Lost Kingdom* (2023). Closed continuity. |
+| `DCU` | DC Universe | James Gunn's relaunch, *Superman* (2025) on. Theatrical only. |
+| `Elseworlds` | DC's standalone films | Nolan's *Dark Knight* trilogy, both *Joker*s, *The Batman*. |
 
-## The Tableau suite (rebuild spec)
+**Out:** continuities that began before 2000 (Burton's *Batman*, Donner's
+*Superman*, the *Blade* trilogy); anything animated; one-and-done films
+(*Catwoman*, *Constantine*, *Green Lantern*, *Jonah Hex*, *Watchmen*, Ang Lee's
+*Hulk*). A later multiverse cameo doesn't pull an excluded film back in.
 
-Seven tabs in the original workbook. The HTML version keeps all seven as sections/tabs of one page.
+## Data
 
-1. **Welcome** — title card ("Superheroes at the Box Office — how powerful is Marvel and DC at the movies?"), intro copy, nav links, decorative character bands.
-2. **Marvel v DC** — side-by-side franchise scorecards: total movies, total / average / median worldwide gross; stacked **box-office-by-year area chart** (Marvel above axis, DC below, 2007–2026); **box-&-whisker** of gross by franchise. Filters: *Outlier filter*, *Franchise*. Headline: "…Marvel making almost 5× as much globally."
-3. **Treemap / movie** — treemap of every film, area = worldwide gross, colour = universe, label = title + gross. Filter: *Franchise*.
-4. **Bubbles / movie** — packed-bubble timeline (bubbles per year, sized by gross) above two packed-bubble clusters (DC vs Marvel), bubble = film sized by gross. Filter: *Franchise*.
-5. **Scatterplot** — X = release date, Y = worldwide gross, marker = universe logo, reference lines at \$1B / \$2B, outliers labelled. Filters: *Franchise*, *Outlier filter*.
-6. **Domestic / International** — diverging bar per film, domestic (blue) vs international (green), one view ranked by total gross, one normalised to 100% ranked by international share. Filters: *Franchise*, *Movie*.
-7. **All data** — sortable table: release date, universe, title, worldwide, domestic, international, % domestic, % international.
+`data/films.json` is the canonical, hand-verified dataset. Everything else feeds it.
 
-Design: **dark mode is the primary design target, always.** Marvel = warm red, DCEU = blue, DCU = a third hue (TBD — teal/violet). Accessible contrast, works in light too.
+Adding a film: append it to `data/additions.json` with a pinned IMDb id, then
 
-## Roadmap
+```
+npm run scrape:bom          # Box Office Mojo: worldwide / domestic / overseas / opening
+OMDB_KEY=<key> npm run data  # scores from OMDb, budgets, derived metrics, RECONCILIATION.md
+npm run cast                 # Wikipedia cast sections -> the roster
+npm run build                # inline everything into dist/index.html + og.png
+```
 
-- [x] Scaffold repo, freeze legacy sheet, define schema
-- [x] **Phase 1 — Verify**: BOM scrape → `RECONCILIATION.md` → **signed off** → `films.json` (57 verified)
-- [x] **Phase 2 — Extend**: Joker ×2 (Elseworlds), Thunderbolts\*, F4: First Steps, Spider-Man: Brand New Day (MCU), Superman, Supergirl (DCU). Doomsday + Clayface held out.
-- [x] **Phase 1b — Enrich**: RT / Metacritic / IMDb (OMDb), production budgets (Wikipedia + overrides), derived metrics.
-- [x] **Phase 3 — Rebuild**: *The Cape Index* — seven dark-first views in one HTML file, nominal ⇄ 2025-$ toggle.
-- [ ] **Phase 3b — polish**: whatever Bill flags on the first build; RT audience + theater counts if wanted.
-- [x] **Phase 4 — Deploy**: live on Cloudflare Workers at cape-index.williamfyost.workers.dev (`npx wrangler deploy`). Custom domain still TBD.
+Grosses are checked one title page at a time. Budgets are the **production**
+budget (r/boxoffice convention, not marketing-inclusive); break-even is estimated
+at 2.5× that. In-release films are marked and held out of the profit tallies.
+Roughly half the budgets are estimates, marked `est.` in the ledger.
 
-## Decisions (locked 2026-09-05)
+## Weekly refresh
 
-- Universes: `MCU`, `DCEU`, `DCU` (just "DCU"), `Elseworlds` (Joker films).
-- Canonical data = `data/films.json` in the repo. Single self-contained HTML output.
-- Full enrichment incl. scores. **Inflation toggle in the viz: yes.**
-- Accent colours: MCU red, DCEU blue, DCU + Elseworlds — TBD (leaning teal + violet).
+`scripts/weekly-rebuild.ps1` (Windows Task Scheduler, Mondays) re-scrapes only the
+films still in motion — released within ~10 months, or not out yet — rebuilds, and
+deploys. Older films stay frozen. It aborts before deploying on any failure and
+logs to `scripts/weekly-rebuild.log`.
 
-## Live
+Set up: copy `scripts/local.env.example.ps1` to `scripts/local.env.ps1` and put
+your OMDb key in it (gitignored).
 
-Live: https://cape-index.williamfyost.workers.dev  (Cloudflare Workers, `npx wrangler deploy`)
-Artifact: https://claude.ai/code/artifact/0dfb8ff4-bde5-4e40-aa34-0d601c69089e
-Local preview: `node scripts/serve.mjs` then http://localhost:4599
+## Design
+
+Dark mode is the primary target. The palette is a colour-blind-safe set
+([Paul Tol "bright"](https://personal.sron.nl/~pault/) plus a grey), validated
+with a script rather than by eye, with a mark shape per group as a backstop.
+Section headlines state the finding, not the axis. No dual-axis charts, no trend
+lines where the data doesn't support one, median over mean. Every chart carries a
+"why this form / what it can't tell you" note behind a toggle, and every encoded
+value is a plain number in the data table.
+
+## Stack
+
+One HTML file, hand-written inline SVG, no charting library. Node scripts for the
+data pipeline. Hosted on Cloudflare Workers static assets (`npm run deploy`).
+Local preview: `node scripts/serve.mjs` then http://localhost:4599.
+
+## Credits
+
+Built by [Bill Yost](https://www.linkedin.com/in/billyost/), rebuilt from his
+Tableau Public workbook. Box office from Box Office Mojo, scores from OMDb, cast
+from Wikipedia. Not affiliated with Marvel, DC, Disney, Warner Bros. or Sony.

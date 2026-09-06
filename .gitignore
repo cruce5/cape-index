@@ -3,8 +3,14 @@ node_modules/
 *.log
 .wrangler/
 dist/
-data/raw/*.html
-!data/raw/.gitkeep
 build/
 
+# raw scrape caches (HTML title pages + the wikicast dumps) are regenerable
+data/raw/*.html
 data/raw/wikicast-*.txt
+!data/raw/.gitkeep
+
+# local secrets (OMDb key etc.) — keep the .example, ignore the real one
+scripts/local.env.ps1
+.env
+.env.local
