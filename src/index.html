@@ -290,7 +290,11 @@
     .act .rule { display: none; }
     .note dl { grid-template-columns: 1fr; gap: 2px; }
     .note dd { margin-bottom: 8px; }
-    table.data th, table.data td { padding: 6px 10px; font-size: 12.5px; }
+    table.data { font-size: 11px; }
+    table.data th, table.data td { padding: 4px 6px; }
+    table.data th:first-child, table.data td:first-child { position: static; }
+    table.data td.name, table.data td:first-child { max-width: 30vw; overflow: hidden; text-overflow: ellipsis; }
+    table.data .uchip { margin-right: 5px; }
   }
 </style>
 
@@ -1333,23 +1337,25 @@
   function renderFullTable() {
     var af = activeFilms().slice();
     var s = STATE.sort;
-    var cols = isMobile() ? COLS.filter(function (c) { return ["t", "u", "ww", "mult", "budget", "roi", "rt"].indexOf(c.k) > -1; }) : COLS;
+    var mob = isMobile();
+    var cols = mob ? COLS.filter(function (c) { return ["t", "ww", "mult", "roi", "rt"].indexOf(c.k) > -1; }) : COLS;
     af.sort(function (a, b) {
       var av = a[s.key], bv = b[s.key];
       if (s.key === "ww" || s.key === "wd" || s.key === "wi" || s.key === "budget") { av = val(a, COLS.find(function (c) { return c.k === s.key; }).g); bv = val(b, COLS.find(function (c) { return c.k === s.key; }).g); }
       if (typeof av === "string") return av.localeCompare(bv) * s.dir;
       return ((av || 0) - (bv || 0)) * s.dir;
     });
+    var mlbl = { ww: "WW", mult: "Mult", roi: "ROI", rt: "RT" };
     var thead = "<tr>" + cols.map(function (c) {
       var sorted = s.key === c.k ? " th-sorted" : "";
       var arrow = s.key === c.k ? (s.dir === 1 ? "▲" : "▼") : "";
-      return '<th class="' + sorted.trim() + '" data-sort="' + c.k + '" data-arrow="' + arrow + '">' + c.label + "</th>";
+      return '<th class="' + sorted.trim() + '" data-sort="' + c.k + '" data-arrow="' + arrow + '">' + ((mob && mlbl[c.k]) || c.label) + "</th>";
     }).join("") + "</tr>";
     var tbody = af.map(function (f) {
       return "<tr>" + cols.map(function (c) {
         var raw = c.g ? val(f, c.g) : f[c.k];
         var disp;
-        if (c.k === "t") disp = '<span class="uchip" style="background:var(' + COLORVAR[f.u] + ')"></span>' + esc(f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
+        if (c.k === "t") disp = '<span class="uchip" style="background:var(' + COLORVAR[f.u] + ')"></span>' + esc(mob ? clip(f.t, 16) : f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
         else if (c.t === "$") disp = usd(raw);
         else if (c.t === "p") disp = raw == null ? "&ndash;" : Math.round(raw) + "%";
         else if (c.t === "x") disp = raw == null ? "&ndash;" : raw.toFixed(2) + "×";
