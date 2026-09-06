@@ -10,7 +10,7 @@ _Generated 2026-09-06. Source of truth: Box Office Mojo (boxofficemojo.com) titl
 | Exact match (no change) | 34 |
 | Minor drift (< $1M worldwide) | 11 |
 | **Material change (≥ $1M worldwide)** | **5** |
-| New films added (verified) | 13 |
+| New films added (verified) | 14 |
 | Held out (unreleased on BOM) | 2 |
 | Legacy total worldwide | $38,797,637,720 |
 | Verified total worldwide | $38,813,899,440 |
@@ -53,6 +53,7 @@ Iron Man · The Incredible Hulk · Iron Man 2 · Thor · Captain America: The Fi
 | Venom | SSU | 2018-10-05 | $213,515,506 | $642,569,645 | $856,085,161 | yes |
 | Joker | Elseworlds | 2019-10-04 | $335,477,657 | $743,480,625 | $1,078,958,629 | yes |
 | Venom: Let There Be Carnage | SSU | 2021-10-01 | $213,550,366 | $293,263,498 | $506,813,864 | yes |
+| The Batman | Elseworlds | 2022-03-04 | $369,801,546 | $402,973,732 | $772,775,278 | yes |
 | Morbius | SSU | 2022-04-01 | $73,865,530 | $93,595,431 | $167,460,961 | yes |
 | Madame Web | SSU | 2024-02-14 | $43,817,106 | $56,681,658 | $100,498,764 | yes |
 | Joker: Folie à Deux | Elseworlds | 2024-10-04 | $58,300,287 | $149,200,000 | $207,500,287 | yes |

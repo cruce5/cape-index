@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T15:11:42.571Z",
+  "generated": "2026-09-06T15:45:11.971Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "Iron Man": {
@@ -2985,6 +2985,61 @@
           "minor": false,
           "actor": "Tobey Maguire",
           "character": "Peter Parker / Spider-Man"
+        }
+      ]
+    },
+    "The Batman": {
+      "page": "The Batman (film)",
+      "universe": "Elseworlds",
+      "date": "2022-03-04",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Pattinson",
+          "character": "Bruce Wayne / Batman"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Zoë Kravitz",
+          "character": "Selina Kyle / Catwoman"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Paul Dano",
+          "character": "Edward Nashton / The Riddler"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Jeffrey Wright",
+          "character": "Jim Gordon"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "John Turturro",
+          "character": "Carmine Falcone"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Peter Sarsgaard",
+          "character": "Gil Colson"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Andy Serkis",
+          "character": "Alfred Pennyworth"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Colin Farrell",
+          "character": "Oz / The Penguin"
         }
       ]
     },

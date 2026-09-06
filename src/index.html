@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://cape-index.williamfyost.workers.dev/og.png" />
 <meta name="theme-color" content="#0d0f14" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0f14'/%3E%3Crect x='7' y='17' width='5' height='9' rx='1' fill='%23e66767'/%3E%3Crect x='13.5' y='11' width='5' height='15' rx='1' fill='%233987e5'/%3E%3Crect x='20' y='14' width='5' height='12' rx='1' fill='%23199e70'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0f14'/%3E%3Crect x='7' y='17' width='5' height='9' rx='1' fill='%233ba152'/%3E%3Crect x='13.5' y='11' width='5' height='15' rx='1' fill='%234a86c8'/%3E%3Crect x='20' y='14' width='5' height='12' rx='1' fill='%2363c6e4'/%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,12 +37,13 @@
     --axis: #343c4c;
     --border: rgba(255, 255, 255, 0.11);
     --border-strong: rgba(255, 255, 255, 0.2);
-    /* categorical — validated CVD-safe set (data-viz reference hues), dark steps */
-    --mcu: #e66767;
-    --dceu: #3987e5;
-    --dcu: #199e70;
-    --else: #9085e9;
-    --ssu: #d55181;
+    /* categorical — CVD-safe set (Paul Tol "bright", stepped for the dark surface).
+       Red/blue franchise convention dropped for separability. Order = MCU, DCEU, DCU, Elseworlds, SSU. */
+    --mcu: #3ba152;
+    --dceu: #4a86c8;
+    --dcu: #63c6e4;
+    --else: #bd4a8f;
+    --ssu: #ccbb44;
     --pos: #3fb950;
     --neg: #f0883e;
     --note: #caa25e;
@@ -61,11 +62,11 @@
       --axis: #ccd0d8;
       --border: rgba(13, 15, 20, 0.12);
       --border-strong: rgba(13, 15, 20, 0.24);
-      --mcu: #e34948;
-      --dceu: #2a78d6;
-      --dcu: #1baf7a;
-      --else: #4a3aa7;
-      --ssu: #e87ba4;
+      --mcu: #2c8a3f;
+      --dceu: #33549c;
+      --dcu: #1b8fb0;
+      --else: #9c3172;
+      --ssu: #a8791d;
       --pos: #1a7f37;
       --neg: #bc4c00;
       --note: #8a6a34;
@@ -84,11 +85,11 @@
     --axis: #ccd0d8;
     --border: rgba(13, 15, 20, 0.12);
     --border-strong: rgba(13, 15, 20, 0.24);
-    --mcu: #e34948;
-    --dceu: #2a78d6;
-    --dcu: #1baf7a;
-    --else: #4a3aa7;
-    --ssu: #e87ba4;
+    --mcu: #2c8a3f;
+    --dceu: #33549c;
+    --dcu: #1b8fb0;
+    --else: #9c3172;
+    --ssu: #a8791d;
     --pos: #1a7f37;
     --neg: #bc4c00;
     --shadow: 0 1px 2px rgba(13, 15, 20, 0.05), 0 4px 16px -14px rgba(13, 15, 20, 0.14);
@@ -412,7 +413,7 @@
         <button class="minibtn" data-table="treemap" aria-pressed="false" style="margin-top:12px">Show data</button>
         <div id="table-treemap" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
-          <dt>Question</dt><dd>Where is the money concentrated across all 63 films at once?</dd>
+          <dt>Question</dt><dd>Where is the money concentrated across all 64 films at once?</dd>
           <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 57-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
           <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
           <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
@@ -464,7 +465,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Is there a trend in film size over 18 years, and which films broke away from the pack?</dd>
           <dt>Why this form</dt><dd>Two continuous axes, date and gross, is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
-          <dt>Choices here</dt><dd>The palette is a colour-blind-safe set, checked pair by pair, but five hues can&rsquo;t all stay distinct under every kind of colour blindness, so each universe also carries a shape: circle, square, triangle, diamond, plus. Only the six biggest films are labelled; a label on all 63 is noise.</dd>
+          <dt>Choices here</dt><dd>The palette is a colour-blind-safe set, checked pair by pair, but five hues can&rsquo;t all stay distinct under every kind of colour blindness, so each universe also carries a shape: circle, square, triangle, diamond, plus. Only the six biggest films are labelled; a label on all 64 is noise.</dd>
           <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support, the story is the spread and the outliers, not a slope.</dd>
         </dl></div>
       </div>
@@ -634,7 +635,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
           <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
-          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 63 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
+          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 64 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
           <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgement call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
         </dl></div>
       </div>
@@ -926,7 +927,7 @@
     var bm = mcu.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     var bd = dc.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     document.getElementById("d-scorecard").innerHTML =
-      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the two Joker pictures. The average Marvel film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel films have passed $1B; " + bd + " DC films have. Sony&rsquo;s six Spider-Man spin-offs add <b>" + usd(tss) + "</b> more, none of them past $900M.";
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds one-offs (both Jokers, The Batman). The average Marvel film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel films have passed $1B; " + bd + " DC films have. Sony&rsquo;s six Spider-Man spin-offs add <b>" + usd(tss) + "</b> more, none of them past $900M.";
   }
 
   /* ---------- §01 stacked columns by year ---------- */
@@ -1111,12 +1112,15 @@
       var big = c.w > 78 && c.h > 40;
       var med = c.w > 54 && c.h > 26;
       var label = "";
-      var halo = ' paint-order="stroke" stroke="rgba(0,0,0,0.38)" stroke-width="3" stroke-linejoin="round"';
+      // the cyan (DCU) and yellow (SSU) fills are light — dark ink + light halo reads on those
+      var lightFill = f.u === "DCU" || f.u === "SSU";
+      var ink = lightFill ? "#12151b" : "#fff", ink2 = lightFill ? "rgba(18,21,27,0.78)" : "rgba(255,255,255,0.92)";
+      var halo = ' paint-order="stroke" stroke="' + (lightFill ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.38)") + '" stroke-width="3" stroke-linejoin="round"';
       if (big) {
-        label = '<text x="' + (c.x + 8) + '" y="' + (c.y + 18) + '" fill="#fff"' + halo + ' font-family="IBM Plex Sans" font-size="12" font-weight="600" style="pointer-events:none">' + esc(clip(f.t, Math.floor(c.w / 7))) + '</text>' +
-          '<text x="' + (c.x + 8) + '" y="' + (c.y + 34) + '" fill="rgba(255,255,255,0.92)"' + halo + ' font-family="IBM Plex Mono" font-size="11" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
+        label = '<text x="' + (c.x + 8) + '" y="' + (c.y + 18) + '" fill="' + ink + '"' + halo + ' font-family="IBM Plex Sans" font-size="12" font-weight="600" style="pointer-events:none">' + esc(clip(f.t, Math.floor(c.w / 7))) + '</text>' +
+          '<text x="' + (c.x + 8) + '" y="' + (c.y + 34) + '" fill="' + ink2 + '"' + halo + ' font-family="IBM Plex Mono" font-size="11" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
       } else if (med) {
-        label = '<text x="' + (c.x + 6) + '" y="' + (c.y + 15) + '" fill="#fff"' + halo + ' font-family="IBM Plex Mono" font-size="10" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
+        label = '<text x="' + (c.x + 6) + '" y="' + (c.y + 15) + '" fill="' + ink + '"' + halo + ' font-family="IBM Plex Mono" font-size="10" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
       }
       return '<g class="tmCell" data-i="' + FILMS.indexOf(f) + '">' +
         '<rect x="' + (c.x + 1) + '" y="' + (c.y + 1) + '" width="' + Math.max(0, c.w - 2) + '" height="' + Math.max(0, c.h - 2) + '" fill="' + col + '" fill-opacity="0.88" rx="2"/>' +

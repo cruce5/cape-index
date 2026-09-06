@@ -3,6 +3,7 @@
   "candidates": [
     { "title": "Joker", "release_date": "2019-10-04", "universe": "Elseworlds", "universe_label": "DC Elseworlds", "studio_label": "Warner Bros.", "bom_id": "tt7286456" },
     { "title": "Joker: Folie à Deux", "release_date": "2024-10-04", "universe": "Elseworlds", "universe_label": "DC Elseworlds", "studio_label": "Warner Bros.", "bom_id": "tt11315808" },
+    { "title": "The Batman", "release_date": "2022-03-04", "universe": "Elseworlds", "universe_label": "DC Elseworlds", "studio_label": "Warner Bros.", "bom_id": "tt1877830" },
     { "title": "Thunderbolts*", "release_date": "2025-05-02", "universe": "MCU", "universe_label": "Marvel Cinematic Universe", "studio_label": "Marvel Studios", "bom_id": "tt20969586" },
     { "title": "The Fantastic Four: First Steps", "release_date": "2025-07-25", "universe": "MCU", "universe_label": "Marvel Cinematic Universe", "studio_label": "Marvel Studios", "bom_id": "tt10676052" },
     { "title": "Spider-Man: Brand New Day", "release_date": "2026-07-31", "universe": "MCU", "universe_label": "Marvel Cinematic Universe", "studio_label": "Marvel Studios", "bom_id": "tt22084616" },

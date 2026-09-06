@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-06T15:11:42.572Z",
+  "generated": "2026-09-06T15:45:11.973Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 151,
+  "count": 154,
   "characters": [
     {
       "name": "Iron Man",
@@ -834,6 +834,54 @@
       ]
     },
     {
+      "name": "Batman",
+      "real_name": "Bruce Wayne",
+      "universes": [
+        "DCEU",
+        "Elseworlds"
+      ],
+      "actors": [
+        "Ben Affleck",
+        "Robert Pattinson",
+        "Michael Keaton"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Batman v Superman: Dawn of Justice",
+          "universe": "DCEU",
+          "date": "2016-03-25",
+          "order": 1,
+          "minor": false,
+          "actor": "Ben Affleck"
+        },
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 1,
+          "minor": false,
+          "actor": "Ben Affleck"
+        },
+        {
+          "title": "The Batman",
+          "universe": "Elseworlds",
+          "date": "2022-03-04",
+          "order": 1,
+          "minor": false,
+          "actor": "Robert Pattinson"
+        },
+        {
+          "title": "The Flash",
+          "universe": "DCEU",
+          "date": "2023-06-16",
+          "order": 8,
+          "minor": false,
+          "actor": "Michael Keaton"
+        }
+      ]
+    },
+    {
       "name": "Gamora",
       "real_name": null,
       "universes": [
@@ -1182,44 +1230,6 @@
           "order": 1,
           "minor": false,
           "actor": "Jason Momoa"
-        }
-      ]
-    },
-    {
-      "name": "Batman",
-      "real_name": "Bruce Wayne",
-      "universes": [
-        "DCEU"
-      ],
-      "actors": [
-        "Ben Affleck",
-        "Michael Keaton"
-      ],
-      "appearances": 3,
-      "films": [
-        {
-          "title": "Batman v Superman: Dawn of Justice",
-          "universe": "DCEU",
-          "date": "2016-03-25",
-          "order": 1,
-          "minor": false,
-          "actor": "Ben Affleck"
-        },
-        {
-          "title": "Justice League",
-          "universe": "DCEU",
-          "date": "2017-11-17",
-          "order": 1,
-          "minor": false,
-          "actor": "Ben Affleck"
-        },
-        {
-          "title": "The Flash",
-          "universe": "DCEU",
-          "date": "2023-06-16",
-          "order": 8,
-          "minor": false,
-          "actor": "Michael Keaton"
         }
       ]
     },
@@ -2415,6 +2425,27 @@
           "order": 3,
           "minor": false,
           "actor": "Emma Corrin"
+        }
+      ]
+    },
+    {
+      "name": "Catwoman",
+      "real_name": "Selina Kyle",
+      "universes": [
+        "Elseworlds"
+      ],
+      "actors": [
+        "Zoë Kravitz"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Batman",
+          "universe": "Elseworlds",
+          "date": "2022-03-04",
+          "order": 2,
+          "minor": false,
+          "actor": "Zoë Kravitz"
         }
       ]
     },
@@ -3990,6 +4021,48 @@
           "order": 10,
           "minor": false,
           "actor": "Tony Leung Chiu-wai"
+        }
+      ]
+    },
+    {
+      "name": "The Penguin",
+      "real_name": "Oz",
+      "universes": [
+        "Elseworlds"
+      ],
+      "actors": [
+        "Colin Farrell"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Batman",
+          "universe": "Elseworlds",
+          "date": "2022-03-04",
+          "order": 8,
+          "minor": false,
+          "actor": "Colin Farrell"
+        }
+      ]
+    },
+    {
+      "name": "The Riddler",
+      "real_name": "Edward Nashton",
+      "universes": [
+        "Elseworlds"
+      ],
+      "actors": [
+        "Paul Dano"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Batman",
+          "universe": "Elseworlds",
+          "date": "2022-03-04",
+          "order": 3,
+          "minor": false,
+          "actor": "Paul Dano"
         }
       ]
     },

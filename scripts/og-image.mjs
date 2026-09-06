@@ -19,14 +19,14 @@ const SANS = "Arial, 'Helvetica Neue', Helvetica, sans-serif";
 // three ascending bars, lower-right motif (kept clear of all text)
 const baseline = 552;
 const bars = [
-  { x: 892, h: 96, c: "#e66767" },
-  { x: 992, h: 168, c: "#3987e5" },
-  { x: 1092, h: 132, c: "#199e70" },
+  { x: 892, h: 96, c: "#3ba152" },
+  { x: 992, h: 168, c: "#4a86c8" },
+  { x: 1092, h: 132, c: "#63c6e4" },
 ].map((b) => `<rect x="${b.x}" y="${baseline - b.h}" width="64" height="${b.h}" rx="6" fill="${b.c}"/>`).join("");
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <rect width="${W}" height="${H}" fill="#0d0f14"/>
-  <rect x="0" y="0" width="${W}" height="6" fill="#e66767"/>
+  <rect x="0" y="0" width="${W}" height="6" fill="#3ba152"/>
   <text x="80" y="156" font-family="${SANS}" font-size="25" letter-spacing="5" fill="#8a92a4">SUPERHERO BOX OFFICE &#183; 2008&#8211;2026</text>
   <text x="76" y="300" font-family="${SANS}" font-size="118" font-weight="800" fill="#f2f3f7" letter-spacing="-3">The Cape Index</text>
   <text x="80" y="366" font-family="${SANS}" font-size="33" fill="#a6acbb">Every Marvel and DC film since 2008, and what it made.</text>

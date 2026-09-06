@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-06T15:01:58.587Z",
+    "generated": "2026-09-06T15:44:56.334Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -8,9 +8,10 @@
       "MCU": 38,
       "DCEU": 15,
       "DCU": 2,
-      "Elseworlds": 2
+      "SSU": 6,
+      "Elseworlds": 3
     },
-    "count": 63,
+    "count": 64,
     "held_out": [
       {
         "title": "Avengers: Doomsday",
@@ -2480,6 +2481,64 @@
         "profit_vs_breakeven": 1421426073,
         "profitable": true,
         "budget_real_2025": 237738495
+      }
+    },
+    {
+      "title": "The Batman",
+      "release_date": "2022-03-04",
+      "universe": "Elseworlds",
+      "universe_label": "DC Elseworlds",
+      "studio_label": "Warner Bros.",
+      "bom": {
+        "id": "tt1877830",
+        "url": "https://www.boxofficemojo.com/title/tt1877830/"
+      },
+      "box_office": {
+        "domestic": 369801546,
+        "international": 402973732,
+        "worldwide": 772775278,
+        "opening_weekend_domestic": 134008624,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 407008518,
+        "international": 443518269,
+        "worldwide": 850526788
+      },
+      "budget": 200000000,
+      "runtime_minutes": 176,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "scores": {
+        "rt_critic": 85,
+        "rt_audience": null,
+        "metacritic": 72,
+        "imdb": 7.8
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "March 1, 2022 (South Korea)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 47.85,
+        "pct_international": 52.15,
+        "domestic_multiplier": 2.76,
+        "opening_share_worldwide": 17.34,
+        "roi_worldwide": 3.86,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 272775278,
+        "profitable": true,
+        "budget_real_2025": 220122670
       }
     },
     {

@@ -1926,7 +1926,7 @@
       "genres": "Action Adventure Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-06T15:01:49.340Z"
+    "scraped_at": "2026-09-06T15:44:38.610Z"
   },
   "superman-2025": {
     "title": "Superman",
@@ -2031,7 +2031,7 @@
       "genres": "Horror Sci-Fi Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-06T15:01:49.342Z"
+    "scraped_at": "2026-09-06T15:44:38.612Z"
   },
   "joker-2019": {
     "title": "Joker",
@@ -2238,5 +2238,30 @@
       "distributor": "Warner Bros."
     },
     "scraped_at": "2026-09-06T15:01:49.337Z"
+  },
+  "the-batman-2022": {
+    "title": "The Batman",
+    "year": "2022",
+    "release_date": "2022-03-04",
+    "universe": "Elseworlds",
+    "source": "addition",
+    "bom_id": "tt1877830",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1877830/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 369801546,
+      "international": 402973732,
+      "worldwide": 772775278,
+      "opening_weekend_domestic": 134008624,
+      "budget": 200000000,
+      "earliest_release_date": "March 1, 2022 (South Korea)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 176,
+      "genres": "Action Crime Drama Mystery",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-09-06T15:44:38.607Z"
   }
 }
