@@ -1200,10 +1200,15 @@
     var mob = isMobile();
     var W = mob ? 360 : 1000, rowH = mob ? 38 : 20;
     var m = mob ? { t: 18, r: 8, b: 6, l: 8 } : { t: 26, r: 60, b: 10, l: 220 };
-    var H = m.t + m.b + rowH * af.length;
+    var fold = mob ? foldList(af, "split", 12, 12, function (a, b) {
+      return (af.length - 24) + " more films, " + (mode ? pct(a.pctIntl) + " to " + pct(b.pctIntl) + " overseas" : usd(val(a, "ww")) + " to " + usd(val(b, "ww")));
+    }) : { rows: af, fold: -1, hidden: 0, label: "" };
+    var rowsArr = fold.rows;
+    var foldH = fold.fold > -1 ? 26 : 0;
+    var H = m.t + m.b + rowH * rowsArr.length + foldH;
     var iw = W - m.l - m.r;
-    var bars = af.map(function (f, i) {
-      var y = m.t + i * rowH;
+    var bars = rowsArr.map(function (f, i) {
+      var y = m.t + i * rowH + (fold.fold > -1 && i >= fold.fold ? foldH : 0);
       var d = val(f, "d"), ii = val(f, "i"), tot = d + ii;
       var c = "var(" + COLORVAR[f.u] + ")";
       if (mob) {
@@ -1230,8 +1235,12 @@
         '<text x="' + (m.l + wpxd + 8) + '" y="' + (y + rowH / 2 + 4) + '" class="lbl" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + (mode ? pct(f.pctIntl) + " OS" : usd(tot)) + "</text>" +
         "</g>";
     }).join("");
+    var foldMark = fold.fold > -1
+      ? '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fold.fold + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">· ' + fold.label + " ·</text>"
+      : "";
     document.getElementById("chart-split").innerHTML =
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Domestic and international split per film">' + bars + "</svg>";
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Domestic and international split per film">' + foldMark + bars + "</svg>";
+    if (mob && !STATE.expand.split && af.length > 26) showAllBtn(document.getElementById("chart-split"), "split", af.length);
     document.getElementById("leg-split").innerHTML =
       '<span><i style="--c:var(--ink-2);background:var(--ink-2)"></i>Solid&nbsp;= domestic</span>' +
       '<span><i style="--c:var(--ink-2);background:color-mix(in srgb,var(--ink-2) 30%,transparent);border:1px solid var(--ink-2)"></i>Pale&nbsp;= overseas</span>' +
@@ -1765,11 +1774,14 @@
   /* ---------- §11 footprint (lollipop) ---------- */
   function renderFootprint() {
     var mob = isMobile();
-    var rows = activeChars().filter(function (x) { return x.films.length >= 2; });
+    var allRows = activeChars().filter(function (x) { return x.films.length >= 2; });
+    var folded = mob && !STATE.expand.footprint && allRows.length > 22;
+    var rows = folded ? allRows.slice(0, 18) : allRows;
+    var hidden = allRows.length - rows.length;
     var max = Math.max.apply(null, rows.map(function (x) { return x.films.length; }).concat([1]));
     var W = mob ? 360 : 1000, rowH = mob ? 26 : 15;
     var m = mob ? { t: 14, r: 30, b: 8, l: 8 } : { t: 16, r: 40, b: 8, l: 180 };
-    var H = m.t + m.b + rowH * rows.length;
+    var H = m.t + m.b + rowH * rows.length + (folded ? 22 : 0);
     var iw = W - m.l - m.r;
     var xS = function (v) { return m.l + (v / max) * iw; };
     var g = "";
@@ -1798,9 +1810,13 @@
         '<circle cx="' + xS(n) + '" cy="' + yy + '" r="3.6" fill="' + c + '"/>' +
         '<text x="' + (xS(n) + 8) + '" y="' + (yy + 3.5) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + n + "</text></g>";
     }).join("");
+    var foldMark = folded
+      ? '<text x="' + (W / 2) + '" y="' + (m.t + rowH * rows.length + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">· ' + hidden + ' more, down to 2 films ·</text>'
+      : "";
     document.getElementById("chart-footprint").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Characters ranked by number of film appearances">' +
-      '<g class="grid">' + g + "</g>" + body + "</svg>";
+      '<g class="grid">' + g + "</g>" + body + foldMark + "</svg>";
+    if (folded) showAllBtn(document.getElementById("chart-footprint"), "footprint", allRows.length);
     document.querySelectorAll("#chart-footprint .fpRow").forEach(function (el) {
       var x = activeChars().find(function (y) { return y.c.n === el.getAttribute("data-c"); });
       if (!x) return;
