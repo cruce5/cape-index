@@ -48,7 +48,7 @@ Design: **dark mode is the primary design target, always.** Marvel = warm red, D
 - [x] **Phase 1b — Enrich**: RT / Metacritic / IMDb (OMDb), production budgets (Wikipedia + overrides), derived metrics.
 - [x] **Phase 3 — Rebuild**: *The Cape Index* — seven dark-first views in one HTML file, nominal ⇄ 2025-$ toggle.
 - [ ] **Phase 3b — polish**: whatever Bill flags on the first build; RT audience + theater counts if wanted.
-- [ ] **Phase 4 — Deploy**: domain + host.
+- [x] **Phase 4 — Deploy**: live on Cloudflare Workers at cape-index.williamfyost.workers.dev (`npx wrangler deploy`). Custom domain still TBD.
 
 ## Decisions (locked 2026-09-05)
 
@@ -59,5 +59,6 @@ Design: **dark mode is the primary design target, always.** Marvel = warm red, D
 
 ## Live
 
+Live: https://cape-index.williamfyost.workers.dev  (Cloudflare Workers, `npx wrangler deploy`)
 Artifact: https://claude.ai/code/artifact/0dfb8ff4-bde5-4e40-aa34-0d601c69089e
 Local preview: `node scripts/serve.mjs` then http://localhost:4599
