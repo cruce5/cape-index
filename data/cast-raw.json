@@ -1,7 +1,907 @@
 {
-  "generated": "2026-09-06T15:45:11.971Z",
+  "generated": "2026-09-06T19:21:10.126Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
+    "X-Men": {
+      "page": "X-Men (film)",
+      "universe": "Fox",
+      "date": "2000-07-14",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman",
+          "character": "Logan / Wolverine"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Patrick Stewart",
+          "character": "Professor Charles Xavier"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Ian McKellen",
+          "character": "Erik Lehnsherr / Magneto"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Anna Paquin",
+          "character": "Marie D'Ancanto / Rogue"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Halle Berry",
+          "character": "Ororo Munroe / Storm"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Famke Janssen",
+          "character": "Jean Grey"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "James Marsden",
+          "character": "Scott Summers / Cyclops"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Bruce Davison",
+          "character": "Senator Robert Kelly"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Rebecca Romijn",
+          "character": "Mystique"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Ray Park",
+          "character": "Toad"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Tyler Mane",
+          "character": "Sabretooth"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Shawn Ashmore",
+          "character": "Bobby Drake / Iceman"
+        }
+      ]
+    },
+    "Spider-Man": {
+      "page": "Spider-Man (2002 film)",
+      "universe": "SSU",
+      "date": "2002-05-03",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Tobey Maguire",
+          "character": "Peter Parker / Spider-Man"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Willem Dafoe",
+          "character": "Norman Osborn / Green Goblin"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Kirsten Dunst",
+          "character": "Mary Jane Watson"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "James Franco",
+          "character": "Harry Osborn"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Cliff Robertson",
+          "character": "Ben Parker"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Rosemary Harris",
+          "character": "May Parker"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "J. K. Simmons",
+          "character": "J. Jonah Jameson"
+        }
+      ]
+    },
+    "Daredevil": {
+      "page": "Daredevil (2003 film)",
+      "universe": "Fox",
+      "date": "2003-02-14",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Ben Affleck",
+          "character": "Matt Murdock / Daredevil"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Scott Terra",
+          "character": "Young Matt Murdock"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Jennifer Garner",
+          "character": "Elektra Natchios"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Michael Clarke Duncan",
+          "character": "Wilson Fisk / Kingpin"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Colin Farrell",
+          "character": "Bullseye"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Joe Pantoliano",
+          "character": "Ben Urich"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Jon Favreau",
+          "character": "Franklin Nelson"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "David Keith",
+          "character": "Jack Murdock"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Leland Orser",
+          "character": "Wesley Owen Welch"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Ellen Pompeo",
+          "character": "Karen Page"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Lennie Loftin",
+          "character": "Detective Nick Manolis"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Erick Avari",
+          "character": "Nikolas Natchios"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Derrick O'Connor",
+          "character": "Father Everett"
+        }
+      ]
+    },
+    "X2": {
+      "page": "X2 (film)",
+      "universe": "Fox",
+      "date": "2003-05-02",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Patrick Stewart",
+          "character": "Professor Charles Xavier"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Hugh Jackman",
+          "character": "Logan / Wolverine"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Alan Cumming",
+          "character": "Kurt Wagner / Nightcrawler"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Halle Berry",
+          "character": "Ororo Munroe / Storm"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Famke Janssen",
+          "character": "Jean Grey"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "James Marsden",
+          "character": "Scott Summers / Cyclops"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Anna Paquin",
+          "character": "Marie / Rogue"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Brian Cox",
+          "character": "Colonel William Stryker"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Ian McKellen",
+          "character": "Erik Lehnsherr / Magneto"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Rebecca Romijn-Stamos",
+          "character": "Mystique"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Bruce Davison",
+          "character": "Senator Robert Kelly"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Shawn Ashmore",
+          "character": "Bobby Drake / Iceman"
+        },
+        {
+          "order": 13,
+          "minor": false,
+          "actor": "Aaron Stanford",
+          "character": "John Allerdyce / Pyro"
+        },
+        {
+          "order": 14,
+          "minor": false,
+          "actor": "Kelly Hu",
+          "character": "Yuriko Oyama / Deathstrike"
+        }
+      ]
+    },
+    "Spider-Man 2": {
+      "page": "Spider-Man 2",
+      "universe": "SSU",
+      "date": "2004-06-30",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Tobey Maguire",
+          "character": "Peter Parker / Spider-Man"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Kirsten Dunst",
+          "character": "Mary Jane Watson"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "James Franco",
+          "character": "Harry Osborn"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Alfred Molina",
+          "character": "Dr. Otto Octavius / Doctor Octopus"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Rosemary Harris",
+          "character": "May Parker"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Donna Murphy",
+          "character": "Rosalie Octavius"
+        }
+      ]
+    },
+    "Elektra": {
+      "page": "Elektra (2005 film)",
+      "universe": "Fox",
+      "date": "2005-01-14",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Jennifer Garner",
+          "character": "Elektra Natchios"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Laura Ward",
+          "character": "Young Elektra Natchios"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Kirsten Prout",
+          "character": "Abby Miller"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Goran Višnjić",
+          "character": "Mark Miller"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Terence Stamp",
+          "character": "Stick"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Cary-Hiroyuki Tagawa",
+          "character": "Master Roshi"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Will Yun Lee",
+          "character": "Kirigi"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Natassia Malthe",
+          "character": "Typhoid"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Chris Ackerman",
+          "character": "Tattoo"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Bob Sapp",
+          "character": "Stone"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Edson T. Ribeiro",
+          "character": "Kinkou"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Colin Cunningham",
+          "character": "McCabe"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Hiro Kanagawa",
+          "character": "Meizumi"
+        },
+        {
+          "order": 13,
+          "minor": false,
+          "actor": "Jana Mitsoula",
+          "character": "Elektra's Mother"
+        },
+        {
+          "order": 14,
+          "minor": false,
+          "actor": "Kurt Max Runte",
+          "character": "Nikolas Natchios"
+        },
+        {
+          "order": 15,
+          "minor": false,
+          "actor": "Jason Isaacs",
+          "character": "DeMarco"
+        }
+      ]
+    },
+    "Batman Begins": {
+      "page": "Batman Begins",
+      "universe": "Elseworlds",
+      "date": "2005-06-15",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Christian Bale",
+          "character": "Bruce Wayne / Batman"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Gus Lewis",
+          "character": "Young Bruce Wayne"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Caine",
+          "character": "Alfred Pennyworth"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Liam Neeson",
+          "character": "Henri Ducard / Ra's al Ghul"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Katie Holmes",
+          "character": "Rachel Dawes"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Emma Lockhart",
+          "character": "Young Rachel Dawes"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Gary Oldman",
+          "character": "James Gordon"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Cillian Murphy",
+          "character": "Dr. Jonathan Crane / Scarecrow"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Tom Wilkinson",
+          "character": "Carmine Falcone"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Rutger Hauer",
+          "character": "William Earle"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Ken Watanabe",
+          "character": "decoy Ra's al Ghul"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Morgan Freeman",
+          "character": "Lucius Fox"
+        }
+      ]
+    },
+    "Fantastic Four (2005)": {
+      "page": "Fantastic Four (2005 film)",
+      "universe": "Fox",
+      "date": "2005-07-08",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Ioan Gruffudd",
+          "character": "Reed Richards"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Jessica Alba",
+          "character": "Sue Storm"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Chris Evans",
+          "character": "Johnny Storm"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Michael Chiklis",
+          "character": "Ben Grimm"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Julian McMahon",
+          "character": "Victor von Doom"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Hamish Linklater",
+          "character": "Leonard"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Kerry Washington",
+          "character": "Alicia Masters"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Laurie Holden",
+          "character": "Debbie McIlvane"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Kevin McNulty",
+          "character": "Jimmy O'Hoolihan"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Maria Menounos",
+          "character": "Sexy Nurse"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Michael Kopsa",
+          "character": "Ned Cecil"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Stan Lee",
+          "character": "Willie Lumpkin"
+        }
+      ]
+    },
+    "X-Men: The Last Stand": {
+      "page": "X-Men: The Last Stand",
+      "universe": "Fox",
+      "date": "2006-05-26",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman",
+          "character": "Logan / Wolverine"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Halle Berry",
+          "character": "Ororo Munroe / Storm"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Ian McKellen",
+          "character": "Erik Lehnsherr / Magneto"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Famke Janssen",
+          "character": "Jean Grey / Phoenix"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Anna Paquin",
+          "character": "Marie / Rogue"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Kelsey Grammer",
+          "character": "Dr. Henry McCoy / Beast"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Patrick Stewart",
+          "character": "Professor Charles Xavier"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Rebecca Romijn",
+          "character": "Raven Darkholme / Mystique"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "James Marsden",
+          "character": "Scott Summers / Cyclops"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Shawn Ashmore",
+          "character": "Bobby Drake / Iceman"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Aaron Stanford",
+          "character": "John Allerdyce / Pyro"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Vinnie Jones",
+          "character": "Cain Marko / Juggernaut"
+        }
+      ]
+    },
+    "Ghost Rider": {
+      "page": "Ghost Rider (2007 film)",
+      "universe": "SSU",
+      "date": "2007-02-16",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Nicolas Cage",
+          "character": "Johnny Blaze / Ghost Rider"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Matt Long",
+          "character": "young Johnny Blaze"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Eva Mendes",
+          "character": "Roxanne Simpson"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Raquel Alessi",
+          "character": "young Roxanne Simpson"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Sam Elliott",
+          "character": "Carter Slade (credited as )"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Wes Bentley",
+          "character": "Blackheart / Legion"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Peter Fonda",
+          "character": "Mephistopheles"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Donal Logue",
+          "character": "Mack"
+        }
+      ]
+    },
+    "Spider-Man 3": {
+      "page": "Spider-Man 3",
+      "universe": "SSU",
+      "date": "2007-05-04",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Tobey Maguire",
+          "character": "Peter Parker / Spider-Man"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Kirsten Dunst",
+          "character": "Mary Jane Watson"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "James Franco",
+          "character": "Harry Osborn / New Goblin"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Thomas Haden Church",
+          "character": "Flint Marko / Sandman"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Topher Grace",
+          "character": "Edward Brock Jr. / Venom"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Bryce Dallas Howard",
+          "character": "Gwen Stacy"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "James Cromwell",
+          "character": "Captain George Stacy"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Rosemary Harris",
+          "character": "May Parker"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "J. K. Simmons",
+          "character": "J. Jonah Jameson"
+        }
+      ]
+    },
+    "Fantastic Four: Rise of the Silver Surfer": {
+      "page": "Fantastic Four: Rise of the Silver Surfer",
+      "universe": "Fox",
+      "date": "2007-06-15",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Ioan Gruffudd",
+          "character": "Reed Richards"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Jessica Alba",
+          "character": "Sue Storm"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Chris Evans",
+          "character": "Johnny Storm"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Michael Chiklis",
+          "character": "Ben Grimm"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Julian McMahon",
+          "character": "Victor Von Doom"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Kerry Washington",
+          "character": "Alicia Masters"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Andre Braugher",
+          "character": "General Hager"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Laurence Fishburne",
+          "character": "Voice of the Silver Surfer"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Doug Jones",
+          "character": "Silver Surfer"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Beau Garrett",
+          "character": "Captain Raye"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Brian Posehn",
+          "character": "Wedding Minister"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Zach Grenier",
+          "character": "Mr. Sherman/Rafke"
+        },
+        {
+          "order": 13,
+          "minor": false,
+          "actor": "Kenneth Welsh",
+          "character": "Dr. Jeff Wagner"
+        },
+        {
+          "order": 14,
+          "minor": false,
+          "actor": "Vanessa Minnillo",
+          "character": "Johnny's Wedding Date"
+        },
+        {
+          "order": 15,
+          "minor": false,
+          "actor": "Stan Lee",
+          "character": "Rejected Wedding Guest"
+        }
+      ]
+    },
     "Iron Man": {
       "page": "Iron Man (2008 film)",
       "universe": "MCU",
@@ -91,6 +991,134 @@
           "minor": false,
           "actor": "Christina Cabot",
           "character": "Kathleen Sparr"
+        }
+      ]
+    },
+    "The Dark Knight": {
+      "page": "The Dark Knight",
+      "universe": "Elseworlds",
+      "date": "2008-07-18",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Christian Bale",
+          "character": "Bruce Wayne / Batman"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Caine",
+          "character": "Alfred Pennyworth"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Heath Ledger",
+          "character": "the Joker"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Gary Oldman",
+          "character": "James Gordon"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Aaron Eckhart",
+          "character": "Harvey Dent / Two-Face"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Maggie Gyllenhaal",
+          "character": "Rachel Dawes"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Morgan Freeman",
+          "character": "Lucius Fox"
+        }
+      ]
+    },
+    "X-Men Origins: Wolverine": {
+      "page": "X-Men Origins: Wolverine",
+      "universe": "Fox",
+      "date": "2009-05-01",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman",
+          "character": "Logan / Wolverine"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Troye Sivan",
+          "character": "James"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Liev Schreiber",
+          "character": "Victor Creed"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael-James Olsen",
+          "character": "young Victor"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Danny Huston",
+          "character": "William Stryker"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "will.i.am",
+          "character": "John Wraith"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Lynn Collins",
+          "character": "Kayla Silverfox"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Kevin Durand",
+          "character": "Fred Dukes"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Dominic Monaghan",
+          "character": "Chris Bradley"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Taylor Kitsch",
+          "character": "Remy LeBeau"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Daniel Henney",
+          "character": "Agent Zero"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Ryan Reynolds",
+          "character": "Wade Wilson"
         }
       ]
     },
@@ -222,6 +1250,123 @@
         }
       ]
     },
+    "X-Men: First Class": {
+      "page": "X-Men: First Class",
+      "universe": "Fox",
+      "date": "2011-06-03",
+      "cast": [
+        {
+          "actor": "Michael Fassbender",
+          "character": "Erik Lehnsherr / Magneto",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "James McAvoy",
+          "character": "Charles Xavier"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Laurence Belcher",
+          "character": "Charles Xavier (12 years)"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Kevin Bacon",
+          "character": "Sebastian Shaw"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Rose Byrne",
+          "character": "Moira MacTaggert"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Jennifer Lawrence",
+          "character": "Raven / Mystique"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Morgan Lily",
+          "character": "young Raven (10 years)"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Rebecca Romijn",
+          "character": "older Raven"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Oliver Platt",
+          "character": "Man In Black Suit"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Álex González",
+          "character": "Janos Quested / Riptide"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Jason Flemyng",
+          "character": "Azazel"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Zoë Kravitz",
+          "character": "Angel Salvadore"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "January Jones",
+          "character": "Emma Frost"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Nicholas Hoult",
+          "character": "Hank / Beast"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Caleb Landry Jones",
+          "character": "Cassidy / Banshee"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Edi Gathegi",
+          "character": "Darwin / Armando Muñoz"
+        },
+        {
+          "order": 13,
+          "minor": false,
+          "actor": "Lucas Till",
+          "character": "Alex Summers / Havok"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Matt Craven",
+          "character": "CIA Director McCone",
+          "fromProse": true
+        }
+      ]
+    },
     "Captain America: The First Avenger": {
       "page": "Captain America: The First Avenger",
       "universe": "MCU",
@@ -289,6 +1434,55 @@
         }
       ]
     },
+    "Ghost Rider: Spirit of Vengeance": {
+      "page": "Ghost Rider: Spirit of Vengeance",
+      "universe": "SSU",
+      "date": "2012-02-17",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Nicolas Cage",
+          "character": "Johnny Blaze / Ghost Rider"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Fergus Riordan",
+          "character": "Danny Ketch"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Ciarán Hinds",
+          "character": "Mephistopheles / Roarke"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Violante Placido",
+          "character": "Nadya Ketch"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Idris Elba",
+          "character": "Moreau"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Christopher Lambert",
+          "character": "Methodius"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Johnny Whitworth",
+          "character": "Ray Carrigan / Blackout"
+        }
+      ]
+    },
     "The Avengers": {
       "page": "The Avengers (2012 film)",
       "universe": "MCU",
@@ -347,6 +1541,212 @@
           "minor": false,
           "actor": "Samuel L. Jackson",
           "character": "Nick Fury"
+        }
+      ]
+    },
+    "The Amazing Spider-Man": {
+      "page": "The Amazing Spider-Man (2012 film)",
+      "universe": "SSU",
+      "date": "2012-07-03",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Andrew Garfield",
+          "character": "Peter Parker / Spider-Man"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Emma Stone",
+          "character": "Gwen Stacy"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Rhys Ifans",
+          "character": "Dr. Curt Connors / Lizard"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Denis Leary",
+          "character": "George Stacy"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Campbell Scott",
+          "character": "Richard Parker"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Irrfan Khan",
+          "character": "Rajit Ratha"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Martin Sheen",
+          "character": "Ben Parker"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Sally Field",
+          "character": "May Parker"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Embeth Davidtz",
+          "character": "Mary Parker"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Chris Zylka",
+          "character": "Flash Thompson"
+        }
+      ]
+    },
+    "The Dark Knight Rises": {
+      "page": "The Dark Knight Rises",
+      "universe": "Elseworlds",
+      "date": "2012-07-20",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Christian Bale",
+          "character": "Bruce Wayne / Batman"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Caine",
+          "character": "Alfred Pennyworth"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Gary Oldman",
+          "character": "James Gordon"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Anne Hathaway",
+          "character": "Selina Kyle / The Cat"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Tom Hardy",
+          "character": "Bane"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Marion Cotillard",
+          "character": "Miranda Tate / Talia al Ghul"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Joey King",
+          "character": "young Talia al Ghul"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Joseph Gordon-Levitt",
+          "character": "John Blake"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Morgan Freeman",
+          "character": "Lucius Fox"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Matthew Modine",
+          "character": "Peter Foley"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Ben Mendelsohn",
+          "character": "John Daggett"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Burn Gorman",
+          "character": "Philip Stryver"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Néstor Carbonell",
+          "character": "Anthony Garcia"
+        },
+        {
+          "order": 13,
+          "minor": false,
+          "actor": "Juno Temple",
+          "character": "Jen"
+        },
+        {
+          "order": 14,
+          "minor": false,
+          "actor": "Josh Stewart",
+          "character": "Barsad"
+        },
+        {
+          "order": 15,
+          "minor": false,
+          "actor": "Alon Abutbul",
+          "character": "Dr. Leonid Pavel"
+        },
+        {
+          "order": 16,
+          "minor": false,
+          "actor": "Aidan Gillen",
+          "character": "Bill Wilson"
+        },
+        {
+          "order": 17,
+          "minor": false,
+          "actor": "Liam Neeson",
+          "character": "Ra's al Ghul"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Josh Pence",
+          "character": "young Ra's al Ghul"
+        },
+        {
+          "order": 18,
+          "minor": false,
+          "actor": "Cillian Murphy",
+          "character": "Dr. Jonathan Crane / Scarecrow"
+        },
+        {
+          "order": 19,
+          "minor": false,
+          "actor": "India Wadsworth",
+          "character": "the wife of Ra's al Ghul and the mother of Talia al Ghul"
+        },
+        {
+          "order": 20,
+          "minor": false,
+          "actor": "William Devane",
+          "character": "the President of the United States"
         }
       ]
     },
@@ -487,6 +1887,67 @@
           "minor": false,
           "actor": "Russell Crowe",
           "character": "Jor-El"
+        }
+      ]
+    },
+    "The Wolverine": {
+      "page": "The Wolverine (film)",
+      "universe": "Fox",
+      "date": "2013-07-26",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman",
+          "character": "Logan / The Wolverine"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Tao Okamoto",
+          "character": "Mariko Yashida"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Rila Fukushima",
+          "character": "Yukio"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Svetlana Khodchenkova",
+          "character": "Viper / Dr. Green"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Brian Tee",
+          "character": "Noburo Mori"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Will Yun Lee",
+          "character": "Kenuichio Harada"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Famke Janssen",
+          "character": "Jean Grey"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Hiroyuki Sanada",
+          "character": "Shingen Yashida"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Haruhiko Yamanouchi",
+          "character": "Ichiro Yashida"
         }
       ]
     },
@@ -660,6 +2121,206 @@
         }
       ]
     },
+    "The Amazing Spider-Man 2": {
+      "page": "The Amazing Spider-Man 2",
+      "universe": "SSU",
+      "date": "2014-05-02",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Andrew Garfield",
+          "character": "Peter Parker / Spider-Man"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Emma Stone",
+          "character": "Gwen Stacy"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Jamie Foxx",
+          "character": "Max Dillon / Electro"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Dane DeHaan",
+          "character": "Harry Osborn / Green Goblin"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Campbell Scott",
+          "character": "Richard Parker"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Embeth Davidtz",
+          "character": "Mary Parker"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Colm Feore",
+          "character": "Donald Menken"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Paul Giamatti",
+          "character": "Aleksei Sytsevich / The Rhino"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Sally Field",
+          "character": "May Parker"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Chris Cooper",
+          "character": "Norman Osborn",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Denis Leary",
+          "character": "George Stacy",
+          "fromProse": true
+        }
+      ]
+    },
+    "X-Men: Days of Future Past": {
+      "page": "X-Men: Days of Future Past",
+      "universe": "Fox",
+      "date": "2014-05-23",
+      "cast": [
+        {
+          "actor": "James McAvoy",
+          "character": "Charles Xavier / Professor X",
+          "order": -4,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Michael Fassbender",
+          "character": "Erik Lehnsherr / Magneto",
+          "order": -3,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Patrick Stewart",
+          "character": "Charles Xavier / Professor X",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Ian McKellen",
+          "character": "Erik Lehnsherr / Magneto",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman",
+          "character": "Logan / Wolverine"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Jennifer Lawrence",
+          "character": "Raven / Mystique"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Halle Berry",
+          "character": "Storm"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Anna Paquin",
+          "character": "Rogue"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Elliot Page",
+          "character": "Kitty Pryde"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Peter Dinklage",
+          "character": "Dr. Bolivar Trask"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Nicholas Hoult",
+          "character": "Hank / Beast"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Shawn Ashmore",
+          "character": "Bobby / Iceman"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Omar Sy",
+          "character": "Bishop"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Evan Peters",
+          "character": "Peter / Quicksilver"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Josh Helman",
+          "character": "Maj. Bill Stryker"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Daniel Cudmore",
+          "character": "Colossus"
+        },
+        {
+          "order": 13,
+          "minor": false,
+          "actor": "Fan Bingbing",
+          "character": "Blink"
+        },
+        {
+          "order": 14,
+          "minor": false,
+          "actor": "Adan Canto",
+          "character": "Sunspot"
+        },
+        {
+          "order": 15,
+          "minor": false,
+          "actor": "Booboo Stewart",
+          "character": "Warpath"
+        }
+      ]
+    },
     "Guardians of the Galaxy": {
       "page": "Guardians of the Galaxy (film)",
       "universe": "MCU",
@@ -693,7 +2354,7 @@
           "order": 5,
           "minor": false,
           "actor": "Bradley Cooper",
-          "character": "[[Rocket (Marvel Cinematic Universe)|Rocket"
+          "character": "Rocket"
         },
         {
           "order": 6,
@@ -933,6 +2594,152 @@
         }
       ]
     },
+    "Fantastic Four (2015)": {
+      "page": "Fantastic Four (2015 film)",
+      "universe": "Fox",
+      "date": "2015-08-07",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Miles Teller",
+          "character": "Reed Richards / Mister Fantastic"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michael B. Jordan",
+          "character": "Johnny Storm / Human Torch"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Kate Mara",
+          "character": "Sue Storm / Invisible Woman"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Jamie Bell",
+          "character": "Ben Grimm / The Thing"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Toby Kebbell",
+          "character": "Victor Von Doom / Dr. Doom"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Reg E. Cathey",
+          "character": "Dr. Franklin Storm"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Tim Blake Nelson",
+          "character": "Dr. Harvey Allen"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Tim Heidecker",
+          "character": "Mr. Richards"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Dan Castellaneta",
+          "character": "Mr. Kenny"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Wayne Péré",
+          "character": "Science Fair Judge"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Chet Hanks",
+          "character": "Jimmy Grimm"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Mary-Pat Green",
+          "character": "Elsie Grimm"
+        }
+      ]
+    },
+    "Deadpool": {
+      "page": "Deadpool (film)",
+      "universe": "Fox",
+      "date": "2016-02-12",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Ryan Reynolds",
+          "character": "Wade Wilson / Deadpool"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Morena Baccarin",
+          "character": "Vanessa Carlysle"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "T.J. Miller",
+          "character": "Weasel"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Ed Skrein",
+          "character": "Francis Freeman / Ajax"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Brianna Hildebrand",
+          "character": "Negasonic Teenage Warhead"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Leslie Uggams",
+          "character": "Blind Al"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Karan Soni",
+          "character": "Dopinder"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Gina Carano",
+          "character": "Angel Dust"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Jed Rees",
+          "character": "The Recruiter"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Stefan Kapičić",
+          "character": "the voice of Colossus"
+        }
+      ]
+    },
     "Batman v Superman: Dawn of Justice": {
       "page": "Batman v Superman: Dawn of Justice",
       "universe": "DCEU",
@@ -1009,6 +2816,13 @@
           "minor": false,
           "actor": "Tao Okamoto",
           "character": "Mercy Graves"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Kevin Costner",
+          "character": "Jonathan Kent",
+          "fromProse": true
         }
       ]
     },
@@ -1127,6 +2941,109 @@
         }
       ]
     },
+    "X-Men: Apocalypse": {
+      "page": "X-Men: Apocalypse",
+      "universe": "Fox",
+      "date": "2016-05-27",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "James McAvoy",
+          "character": "Professor Charles Xavier"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Fassbender",
+          "character": "Erik Lehnsherr / Magneto"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Jennifer Lawrence",
+          "character": "Raven / Mystique"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Nicholas Hoult",
+          "character": "Hank McCoy / Beast"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Oscar Isaac",
+          "character": "En Sabah Nur / Apocalypse"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Rose Byrne",
+          "character": "Moira MacTaggert"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Evan Peters",
+          "character": "Peter Maximoff / Quicksilver"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Josh Helman",
+          "character": "Col. William Stryker"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Sophie Turner",
+          "character": "Jean Grey"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Tye Sheridan",
+          "character": "Scott Summers / Cyclops"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "Lucas Till",
+          "character": "Alex Summers / Havok"
+        },
+        {
+          "order": 12,
+          "minor": false,
+          "actor": "Kodi Smit-McPhee",
+          "character": "Kurt Wagner / Nightcrawler"
+        },
+        {
+          "order": 13,
+          "minor": false,
+          "actor": "Ben Hardy",
+          "character": "Angel"
+        },
+        {
+          "order": 14,
+          "minor": false,
+          "actor": "Alexandra Shipp",
+          "character": "Ororo Munroe / Storm"
+        },
+        {
+          "order": 15,
+          "minor": false,
+          "actor": "Lana Condor",
+          "character": "Jubilee"
+        },
+        {
+          "order": 16,
+          "minor": false,
+          "actor": "Olivia Munn",
+          "character": "Psylocke"
+        }
+      ]
+    },
     "Suicide Squad": {
       "page": "Suicide Squad (2016 film)",
       "universe": "DCEU",
@@ -1220,50 +3137,99 @@
         {
           "order": 1,
           "minor": false,
+          "actor": "Benedict Cumberbatch",
+          "character": "Dr. Stephen Strange"
+        },
+        {
+          "order": 2,
+          "minor": false,
           "actor": "Chiwetel Ejiofor",
           "character": "Karl Mordo"
         },
         {
-          "order": 2,
+          "order": 3,
           "minor": false,
           "actor": "Rachel McAdams",
           "character": "Christine Palmer"
         },
         {
-          "order": 3,
+          "order": 4,
           "minor": false,
           "actor": "Benedict Wong",
           "character": "Wong"
         },
         {
-          "order": 4,
+          "order": 5,
           "minor": false,
           "actor": "Michael Stuhlbarg",
           "character": "Nicodemus West"
         },
         {
-          "order": 5,
+          "order": 6,
           "minor": false,
           "actor": "Benjamin Bratt",
           "character": "Jonathan Pangborn"
         },
         {
-          "order": 6,
+          "order": 7,
           "minor": false,
           "actor": "Scott Adkins",
           "character": "Lucian"
         },
         {
-          "order": 7,
+          "order": 8,
           "minor": false,
           "actor": "Mads Mikkelsen",
           "character": "Kaecilius"
         },
         {
-          "order": 8,
+          "order": 9,
           "minor": false,
           "actor": "Tilda Swinton",
           "character": "the Ancient One"
+        }
+      ]
+    },
+    "Logan": {
+      "page": "Logan (film)",
+      "universe": "Fox",
+      "date": "2017-03-03",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman",
+          "character": "James Howlett / Logan"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Patrick Stewart",
+          "character": "Charles Xavier"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Dafne Keen",
+          "character": "Laura / X23"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Boyd Holbrook",
+          "character": "Donald Pierce"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Stephen Merchant",
+          "character": "Caliban"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Richard E. Grant",
+          "character": "Dr. Zander Rice"
         }
       ]
     },
@@ -1331,6 +3297,34 @@
           "minor": false,
           "actor": "Kurt Russell",
           "character": "Ego"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Laura Haddock",
+          "character": "Meredith Quill",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael Rosenbaum",
+          "character": "Martinex",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ving Rhames",
+          "character": "Charlie-27",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michelle Yeoh",
+          "character": "Aleta Ogord",
+          "fromProse": true
         }
       ]
     },
@@ -1464,7 +3458,7 @@
           "order": 8,
           "minor": false,
           "actor": "Laura Harrier",
-          "character": "[[Liz (Marvel Cinematic Universe)|Liz"
+          "character": "Liz"
         },
         {
           "order": 9,
@@ -1495,6 +3489,27 @@
           "minor": false,
           "actor": "Robert Downey Jr.",
           "character": "Tony Stark / Iron Man"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael Chernus",
+          "character": "Phineas Mason",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael Mando",
+          "character": "Mac Gargan",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Christopher Berry",
+          "character": "Randy Vale",
+          "fromProse": true
         }
       ]
     },
@@ -1767,128 +3782,238 @@
         {
           "order": 6,
           "minor": false,
+          "actor": "Benedict Cumberbatch",
+          "character": "Dr. Stephen Strange"
+        },
+        {
+          "order": 7,
+          "minor": false,
           "actor": "Don Cheadle",
           "character": "James Rhodes / War Machine"
         },
         {
-          "order": 7,
+          "order": 8,
           "minor": false,
           "actor": "Tom Holland",
           "character": "Peter Parker / Spider-Man"
         },
         {
-          "order": 8,
+          "order": 9,
           "minor": false,
           "actor": "Chadwick Boseman",
           "character": "T'Challa / Black Panther"
         },
         {
-          "order": 9,
+          "order": 10,
           "minor": false,
           "actor": "Paul Bettany",
           "character": "Vision"
         },
         {
-          "order": 10,
+          "order": 11,
           "minor": false,
           "actor": "Elizabeth Olsen",
           "character": "Wanda Maximoff"
         },
         {
-          "order": 11,
+          "order": 12,
           "minor": false,
           "actor": "Anthony Mackie",
           "character": "Sam Wilson / Falcon"
         },
         {
-          "order": 12,
+          "order": 13,
           "minor": false,
           "actor": "Sebastian Stan",
           "character": "Bucky Barnes / Winter Soldier"
         },
         {
-          "order": 13,
+          "order": 14,
           "minor": false,
           "actor": "Tom Hiddleston",
           "character": "Loki"
         },
         {
-          "order": 14,
+          "order": 15,
           "minor": false,
           "actor": "Idris Elba",
           "character": "Heimdall"
         },
         {
-          "order": 15,
+          "order": 16,
           "minor": false,
           "actor": "Peter Dinklage",
           "character": "Eitri"
         },
         {
-          "order": 16,
+          "order": 17,
           "minor": false,
           "actor": "Benedict Wong",
           "character": "Wong"
         },
         {
-          "order": 17,
+          "order": 18,
           "minor": false,
           "actor": "Pom Klementieff",
           "character": "Mantis"
         },
         {
-          "order": 18,
+          "order": 19,
           "minor": false,
           "actor": "Karen Gillan",
           "character": "Nebula"
         },
         {
-          "order": 19,
+          "order": 20,
           "minor": false,
           "actor": "Dave Bautista",
           "character": "Drax the Destroyer"
         },
         {
-          "order": 20,
+          "order": 21,
           "minor": false,
           "actor": "Zoe Saldaña",
           "character": "Gamora"
         },
         {
-          "order": 21,
+          "order": 22,
           "minor": false,
           "actor": "Vin Diesel",
           "character": "Groot"
         },
         {
-          "order": 22,
+          "order": 23,
           "minor": false,
           "actor": "Bradley Cooper",
           "character": "Rocket"
         },
         {
-          "order": 23,
+          "order": 24,
           "minor": false,
           "actor": "Gwyneth Paltrow",
           "character": "Pepper Potts"
         },
         {
-          "order": 24,
+          "order": 25,
           "minor": false,
           "actor": "Benicio del Toro",
           "character": "Taneleer Tivan / The Collector"
         },
         {
-          "order": 25,
+          "order": 26,
           "minor": false,
           "actor": "Josh Brolin",
           "character": "Thanos"
         },
         {
-          "order": 26,
+          "order": 27,
           "minor": false,
           "actor": "Chris Pratt",
           "character": "Peter Quill / Star-Lord"
+        }
+      ]
+    },
+    "Deadpool 2": {
+      "page": "Deadpool 2",
+      "universe": "Fox",
+      "date": "2018-05-18",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Ryan Reynolds",
+          "character": "Wade Wilson / Deadpool"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Josh Brolin",
+          "character": "Cable"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Morena Baccarin",
+          "character": "Vanessa Carlysle"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Julian Dennison",
+          "character": "Russell Collins / Firefist"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Zazie Beetz",
+          "character": "Domino"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "T.J. Miller",
+          "character": "Weasel"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Brianna Hildebrand",
+          "character": "Negasonic Teenage Warhead"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Jack Kesy",
+          "character": "Black Tom Cassidy"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Leslie Uggams",
+          "character": "Blind Al",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Karan Soni",
+          "character": "Dopinder",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Nicholas Hoult",
+          "character": "Beast",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Evan Peters",
+          "character": "Quicksilver",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tye Sheridan",
+          "character": "Cyclops",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Alexandra Shipp",
+          "character": "Storm",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Kodi Smit-McPhee",
+          "character": "Nightcrawler",
+          "fromProse": true
         }
       ]
     },
@@ -2166,6 +4291,20 @@
       "date": "2019-04-05",
       "cast": [
         {
+          "actor": "Zachary Levi",
+          "character": "Shazam",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Asher Angel",
+          "character": "Billy Batson",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Mark Strong",
@@ -2321,6 +4460,346 @@
           "minor": false,
           "actor": "Josh Brolin",
           "character": "Thanos"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Benedict Cumberbatch",
+          "character": "Stephen Strange",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Chadwick Boseman",
+          "character": "T'Challa / Black Panther",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tom Holland",
+          "character": "Peter Parker / Spider-Man",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Zoe Saldaña",
+          "character": "Gamora",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Elizabeth Olsen",
+          "character": "Wanda Maximoff",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Anthony Mackie",
+          "character": "Sam Wilson / Falcon",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Sebastian Stan",
+          "character": "Bucky Barnes / Winter Soldier",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tom Hiddleston",
+          "character": "Loki",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Pom Klementieff",
+          "character": "Mantis",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Dave Bautista",
+          "character": "Drax the Destroyer",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Letitia Wright",
+          "character": "Shuri",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "William Hurt",
+          "character": "Thaddeus Ross",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Cobie Smulders",
+          "character": "Maria Hill",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Winston Duke",
+          "character": "M'Baku",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tom Vaughan-Lawlor",
+          "character": "Ebony Maw",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Jacob Batalon",
+          "character": "Ned",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Vin Diesel",
+          "character": "Groot",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Chris Pratt",
+          "character": "Peter Quill / Star-Lord",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Samuel L. Jackson",
+          "character": "Nick Fury",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ross Marquand",
+          "character": "Red Skull / Stonekeeper",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael James Shaw",
+          "character": "Corvus Glaive",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Terry Notary",
+          "character": "Cull Obsidian",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Evangeline Lilly",
+          "character": "Hope van Dyne / Wasp",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tessa Thompson",
+          "character": "Valkyrie",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Rene Russo",
+          "character": "Frigga",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "John Slattery",
+          "character": "Howard Stark",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tilda Swinton",
+          "character": "Ancient One",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Hayley Atwell",
+          "character": "Peggy Carter",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Marisa Tomei",
+          "character": "May Parker",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Taika Waititi",
+          "character": "Korg",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Angela Bassett",
+          "character": "Ramonda",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael Douglas",
+          "character": "Hank Pym",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michelle Pfeiffer",
+          "character": "Janet van Dyne",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Linda Cardellini",
+          "character": "Laura Barton",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Maximiliano Hernández",
+          "character": "Jasper Sitwell",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Frank Grillo",
+          "character": "Brock Rumlow",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Robert Redford",
+          "character": "Alexander Pierce",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Callan Mulvey",
+          "character": "Jack Rollins",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ty Simpkins",
+          "character": "Harley Keener",
+          "fromProse": true
+        }
+      ]
+    },
+    "X-Men: Dark Phoenix": {
+      "page": "Dark Phoenix (film)",
+      "universe": "Fox",
+      "date": "2019-06-07",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "James McAvoy",
+          "character": "Professor Charles Xavier"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Fassbender",
+          "character": "Erik Lehnsherr / Magneto"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Jennifer Lawrence",
+          "character": "Raven Darkholme / Mystique"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Nicholas Hoult",
+          "character": "Hank McCoy / Beast"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Sophie Turner",
+          "character": "Jean Grey / Phoenix"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Tye Sheridan",
+          "character": "Scott Summers / Cyclops"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Alexandra Shipp",
+          "character": "Ororo Munroe / Storm"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Evan Peters",
+          "character": "Peter Maximoff / Quicksilver"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Kodi Smit-McPhee",
+          "character": "Kurt Wagner / Nightcrawler"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Jessica Chastain",
+          "character": "Vuk / Margaret Smith"
         }
       ]
     },
@@ -2534,6 +5013,67 @@
           "minor": false,
           "actor": "Ewan McGregor",
           "character": "Roman Sionis / Black Mask"
+        }
+      ]
+    },
+    "The New Mutants": {
+      "page": "The New Mutants (film)",
+      "universe": "Fox",
+      "date": "2020-08-28",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Maisie Williams",
+          "character": "Rahne Grace Sinclair / Wolfsbane"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Anya Taylor-Joy",
+          "character": "Illyana Nikolaievna Rasputina / Magik"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Charlie Heaton",
+          "character": "Samuel Zachary Guthrie / Cannonball"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Alice Braga",
+          "character": "Dr. Cecilia Reyes"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Blu Hunt",
+          "character": "Danielle Moonstar / Mirage"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Henrique Zaga",
+          "character": "Roberto da Costa / Sunspot"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Adam Beach",
+          "character": "William Lonestar"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Thomas Kee",
+          "character": "Thomas Guthrie, Sam's father"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Happy Anderson",
+          "character": "Reverend Craig, a priest from Rahne's village"
         }
       ]
     },
@@ -2790,6 +5330,13 @@
           "minor": false,
           "actor": "Tony Leung Chiu-wai",
           "character": "Xu Wenwu"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Andy Le",
+          "character": "Death Dealer",
+          "fromProse": true
         }
       ]
     },
@@ -2833,6 +5380,13 @@
           "minor": false,
           "actor": "Woody Harrelson",
           "character": "Cletus Kasady / Carnage"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "J. K. Simmons",
+          "character": "J. Jonah Jameson",
+          "fromProse": true
         }
       ]
     },
@@ -2929,62 +5483,103 @@
         {
           "order": 3,
           "minor": false,
+          "actor": "Benedict Cumberbatch",
+          "character": "Dr. Stephen Strange"
+        },
+        {
+          "order": 4,
+          "minor": false,
           "actor": "Jacob Batalon",
           "character": "Ned Leeds"
         },
         {
-          "order": 4,
+          "order": 5,
           "minor": false,
           "actor": "Jon Favreau",
           "character": "Happy Hogan"
         },
         {
-          "order": 5,
+          "order": 6,
           "minor": false,
           "actor": "Jamie Foxx",
           "character": "Max Dillon / Electro"
         },
         {
-          "order": 6,
+          "order": 7,
           "minor": false,
           "actor": "Willem Dafoe",
           "character": "Norman Osborn / Green Goblin"
         },
         {
-          "order": 7,
+          "order": 8,
           "minor": false,
           "actor": "Alfred Molina",
           "character": "Otto Octavius / Doctor Octopus"
         },
         {
-          "order": 8,
+          "order": 9,
           "minor": false,
           "actor": "Benedict Wong",
           "character": "Wong"
         },
         {
-          "order": 9,
+          "order": 10,
           "minor": false,
           "actor": "Tony Revolori",
           "character": "Eugene Thompson"
         },
         {
-          "order": 10,
+          "order": 11,
           "minor": false,
           "actor": "Marisa Tomei",
           "character": "May Parker"
         },
         {
-          "order": 11,
+          "order": 12,
           "minor": false,
           "actor": "Andrew Garfield",
           "character": "Peter Parker / Spider-Man"
         },
         {
-          "order": 12,
+          "order": 13,
           "minor": false,
           "actor": "Tobey Maguire",
           "character": "Peter Parker / Spider-Man"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Angourie Rice",
+          "character": "Betty Brant",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Martin Starr",
+          "character": "Roger Harrington",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "J. B. Smoove",
+          "character": "Julius Dell",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "J. K. Simmons",
+          "character": "J. Jonah Jameson",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Gary Weeks",
+          "character": "Department of Damage Control",
+          "fromProse": true
         }
       ]
     },
@@ -3094,38 +5689,51 @@
         {
           "order": 1,
           "minor": false,
+          "actor": "Benedict Cumberbatch",
+          "character": "Dr. Stephen Strange"
+        },
+        {
+          "order": 2,
+          "minor": false,
           "actor": "Elizabeth Olsen",
           "character": "Wanda Maximoff / Scarlet Witch"
         },
         {
-          "order": 2,
+          "order": 3,
           "minor": false,
           "actor": "Chiwetel Ejiofor",
           "character": "Karl Mordo"
         },
         {
-          "order": 3,
+          "order": 4,
           "minor": false,
           "actor": "Benedict Wong",
           "character": "Wong"
         },
         {
-          "order": 4,
+          "order": 5,
           "minor": false,
           "actor": "Xochitl Gomez",
           "character": "America Chavez"
         },
         {
-          "order": 5,
+          "order": 6,
           "minor": false,
           "actor": "Michael Stuhlbarg",
           "character": "Nicodemus West"
         },
         {
-          "order": 6,
+          "order": 7,
           "minor": false,
           "actor": "Rachel McAdams",
           "character": "Christine Palmer"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Sheila Atim",
+          "character": "Sara",
+          "fromProse": true
         }
       ]
     },
@@ -3175,6 +5783,48 @@
           "minor": false,
           "actor": "Natalie Portman",
           "character": "Jane Foster / Mighty Thor"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ben Falcone",
+          "character": "stage manager",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Idris Elba",
+          "character": "Heimdall",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Rene Russo",
+          "character": "Frigga",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ray Stevenson",
+          "character": "Volstagg",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tadanobu Asano",
+          "character": "Hogun",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Zachary Levi",
+          "character": "Fandral",
+          "fromProse": true
         }
       ]
     },
@@ -3382,6 +6032,13 @@
           "minor": false,
           "actor": "Michael Douglas",
           "character": "Dr. Hank Pym / Ant-Man"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Gregg Turkington",
+          "character": "Baskin-Robbins",
+          "fromProse": true
         }
       ]
     },
@@ -3390,6 +6047,13 @@
       "universe": "DCEU",
       "date": "2023-03-17",
       "cast": [
+        {
+          "actor": "Zachary Levi",
+          "character": "Billy Batson / Shazam",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -3504,6 +6168,34 @@
           "minor": false,
           "actor": "Sylvester Stallone",
           "character": "Stakar Ogord"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Elizabeth Debicki",
+          "character": "Ayesha",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael Rosenbaum",
+          "character": "Martinex",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Christopher Fairbank",
+          "character": "Broker",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michael Rooker",
+          "character": "Yondu Udonta",
+          "fromProse": true
         }
       ]
     },
@@ -3644,7 +6336,7 @@
           "order": 2,
           "minor": false,
           "actor": "Teyonah Parris",
-          "character": "[[Monica Rambeau (Marvel Cinematic Universe)|Monica Rambeau"
+          "character": "Monica Rambeau"
         },
         {
           "order": 3,
@@ -3693,6 +6385,13 @@
           "minor": false,
           "actor": "Samuel L. Jackson",
           "character": "Nick Fury"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Kelsey Grammer",
+          "character": "Dr. Hank McCoy / Beast",
+          "fromProse": true
         }
       ]
     },
@@ -3882,6 +6581,76 @@
           "minor": false,
           "actor": "Matthew Macfadyen",
           "character": "Mr. Paradox"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Karan Soni",
+          "character": "Dopinder",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Brianna Hildebrand",
+          "character": "Negasonic Teenage Warhead",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Shioli Kutsuna",
+          "character": "Yukio",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Lewis Tan",
+          "character": "Rusty / Shatterstar",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tyler Mane",
+          "character": "Victor Creed / Sabretooth",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Dafne Keen",
+          "character": "Laura / X-23",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Jennifer Garner",
+          "character": "Elektra Natchios",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Wesley Snipes",
+          "character": "half-vampire",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Chris Evans",
+          "character": "Johnny Storm / Human Torch",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "UK Pitbulls",
+          "character": "Fred Dukes / Blob",
+          "fromProse": true
         }
       ]
     },
@@ -3890,6 +6659,20 @@
       "universe": "Elseworlds",
       "date": "2024-10-04",
       "cast": [
+        {
+          "actor": "Joaquin Phoenix",
+          "character": "Arthur Fleck / Joker",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Lady Gaga",
+          "character": "Lee Quinzel / Harley Quinn",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,

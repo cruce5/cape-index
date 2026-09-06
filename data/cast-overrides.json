@@ -1,0 +1,34 @@
+{
+  "note": "Top-billed cast the Wikipedia Cast-section parser misses because those pages lead with a prose paragraph instead of a bullet for the stars (verified by hand against each film's Wikipedia cast section). Merged ahead of the scraped rows in scrape-cast.mjs, then canonicalised like any other credit.",
+  "add": {
+    "Joker: Folie à Deux": [
+      { "actor": "Joaquin Phoenix", "character": "Arthur Fleck / Joker" },
+      { "actor": "Lady Gaga", "character": "Lee Quinzel / Harley Quinn" }
+    ],
+    "X-Men: First Class": [
+      { "actor": "Michael Fassbender", "character": "Erik Lehnsherr / Magneto" }
+    ],
+    "X-Men: Days of Future Past": [
+      { "actor": "James McAvoy", "character": "Charles Xavier / Professor X" },
+      { "actor": "Michael Fassbender", "character": "Erik Lehnsherr / Magneto" },
+      { "actor": "Patrick Stewart", "character": "Charles Xavier / Professor X" },
+      { "actor": "Ian McKellen", "character": "Erik Lehnsherr / Magneto" }
+    ],
+    "Doctor Strange": [
+      { "actor": "Benedict Cumberbatch", "character": "Stephen Strange / Doctor Strange" }
+    ],
+    "Doctor Strange in the Multiverse of Madness": [
+      { "actor": "Benedict Cumberbatch", "character": "Stephen Strange / Doctor Strange" }
+    ],
+    "Shazam!": [
+      { "actor": "Zachary Levi", "character": "Shazam" },
+      { "actor": "Asher Angel", "character": "Billy Batson" }
+    ],
+    "Shazam! Fury of the Gods": [
+      { "actor": "Zachary Levi", "character": "Billy Batson / Shazam" }
+    ],
+    "Venom: Let There Be Carnage": [
+      { "actor": "Woody Harrelson", "character": "Cletus Kasady / Carnage" }
+    ]
+  }
+}

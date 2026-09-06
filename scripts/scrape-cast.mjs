@@ -10,6 +10,7 @@ import { ROOT, sleep } from "./lib-bom.mjs";
 
 const films = JSON.parse(readFileSync(join(ROOT, "data/films.json"), "utf8")).films;
 const PAGES = JSON.parse(readFileSync(join(ROOT, "data/wiki-pages.json"), "utf8")).pages;
+const OVERRIDES = JSON.parse(readFileSync(join(ROOT, "data/cast-overrides.json"), "utf8")).add || {};
 
 async function wikitext(page) {
   const cache = join(ROOT, `data/raw/wikicast-${page.replace(/[^a-z0-9]+/gi, "_")}.txt`);
@@ -86,7 +87,13 @@ function parseCast(wt, filmTitle) {
     const m = rawLine.match(/^(\*+)\s*(.+)$/);
     if (!m) continue;
     const depth = m[1].length;
-    let body = m[2];
+    let body = m[2]
+      .replace(/<!--[\s\S]*?-->/g, "")               // HTML comments (may sit between "as" and the character)
+      .replace(/<ref[^>]*\/>/gi, "")                 // self-closing <ref .../>
+      .replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, "")    // <ref>...</ref>
+      .replace(/\{\{(?:sfn|efn|refn)[^{}]*\}\}/gi, "") // citation templates
+      .replace(/'''?/g, "")                          // bold/italic wiki markup
+      .trim();
     // must look like "<actor> as <character>"
     const am = body.match(/^\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\s+as\s+(.+)$/i)
       || body.match(/^([A-ZÀ-Ý][\wÀ-ÿ.'’-]+(?:\s+[A-ZÀ-Ý][\wÀ-ÿ.'’-]+){0,3})\s+as\s+(.+)$/);
@@ -101,6 +108,29 @@ function parseCast(wt, filmTitle) {
     if (depth === 1) order++;
     rows.push({ order: depth === 1 ? order : null, minor: depth > 1, actor, character });
   }
+
+  // Endgame-style pages list returning cast in a PROSE paragraph, not bullets. Only scan
+  // paragraphs that explicitly signal a cast list ("reprise/reprising their roles", "also
+  // appear", "return as"), and only take clean "[[Actor]] as [[…|Character]]" wikilink pairs.
+  const haveActors = new Set(rows.map((r) => (r.actor || "").toLowerCase()));
+  for (const para of section.split(/\n/)) {
+    if (/^\s*[*:]/.test(para)) continue;
+    if (!/\b(repris\w+ (?:their|his|her) roles?|also (?:appear|star|reprise)|return(?:ing)? as|from previous .{0,20}films?)\b/i.test(para)) continue;
+    const clean = para.replace(/<!--[\s\S]*?-->/g, "").replace(/<ref[^>]*\/>/gi, "").replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, "");
+    const RX = /\[\[([^\]|]+?)(?:\|[^\]]+?)?\]\]\s+as\s+(?:the\s+|an?\s+)?(?:Dr\.?\s+|Doctor\s+)?\[\[([^\]|]+?)(?:\|([^\]]+?))?\]\]/gi;
+    let pm;
+    while ((pm = RX.exec(clean))) {
+      const before = clean.slice(Math.max(0, pm.index - 40), pm.index).toLowerCase();
+      if (/\b(footage|archiv|stock photo|photo of|clip|deleted|cut from|unused|cameo|likeness|voice(d)? of|was cast|originally|rumou?red|reportedly|would have|set to)\b/.test(before)) continue;
+      const actor = strip(unlink(pm[1])).replace(/\s*\([^)]*\)\s*$/, "");
+      if (!actor || !/^[A-ZÀ-Ý]/.test(actor) || haveActors.has(actor.toLowerCase())) continue;
+      let character = strip(unlink(pm[3] || pm[2])).replace(/\s*\([^)]*\)\s*$/, "").replace(/[.,;:]+$/, "").replace(/\s+/g, " ").trim();
+      if (!character || character.length > 60) continue;
+      haveActors.add(actor.toLowerCase());
+      rows.push({ order: null, minor: true, actor, character, fromProse: true });
+    }
+  }
+
   return { rows, missing: rows.length === 0 };
 }
 
@@ -258,6 +288,72 @@ const CANON = {
   "Chameleon": "Chameleon", "Dmitri Kravinoff": "Chameleon", "Dmitri Smerdyakov": "Chameleon",
   "Rhino": "Rhino", "Aleksei Sytsevich": "Rhino",
   "Toxin": "Toxin", "Patrick Mulligan": "Toxin",
+  // 20th Century Fox — X-Men era (recasts merge, per the roster rules; Deadpool & Wolverine is filed under MCU, not here)
+  "Charles Xavier": "Professor X", "Professor X": "Professor X", "Professor Charles Xavier": "Professor X",
+  "Erik Lehnsherr": "Magneto", "Magneto": "Magneto", "Max Eisenhardt": "Magneto",
+  "Raven Darkhölme": "Mystique", "Raven": "Mystique", "Mystique": "Mystique",
+  "Hank McCoy": "Beast", "Beast": "Beast",
+  "Ororo Munroe": "Storm", "Storm": "Storm",
+  "Scott Summers": "Cyclops", "Cyclops": "Cyclops",
+  "Jean Grey": "Jean Grey", "Phoenix": "Jean Grey", "Dark Phoenix": "Jean Grey",
+  "Kurt Wagner": "Nightcrawler", "Nightcrawler": "Nightcrawler",
+  "Peter Maximoff": "Quicksilver", "Quicksilver": "Quicksilver", "Pietro Maximoff": "Quicksilver",
+  "Piotr Rasputin": "Colossus", "Colossus": "Colossus",
+  "Marie": "Rogue", "Rogue": "Rogue",
+  "Bobby Drake": "Iceman", "Iceman": "Iceman",
+  "Kitty Pryde": "Shadowcat", "Shadowcat": "Shadowcat",
+  "Warren Worthington III": "Angel", "Angel": "Angel", "Archangel": "Angel",
+  "Alex Summers": "Havok", "Havok": "Havok",
+  "Sean Cassidy": "Banshee", "Banshee": "Banshee",
+  "Laura": "X-23", "Laura Kinney": "X-23", "X-23": "X-23",
+  "Nathan Summers": "Cable", "Cable": "Cable",
+  "Neena": "Domino", "Domino": "Domino",
+  "Negasonic Teenage Warhead": "Negasonic Teenage Warhead", "Ellie Phimister": "Negasonic Teenage Warhead",
+  "Yukio": "Yukio",
+  "En Sabah Nur": "Apocalypse", "Apocalypse": "Apocalypse",
+  "William Stryker": "William Stryker", "Colonel William Stryker": "William Stryker", "Colonel Stryker": "William Stryker", "Colonel William Styker": "William Stryker",
+  "Sebastian Shaw": "Sebastian Shaw",
+  "Emma Frost": "Emma Frost",
+  "Azazel": "Azazel", "Darwin": "Darwin", "Armando Muñoz": "Darwin",
+  "Toad": "Toad", "Mortimer Toynbee": "Toad",
+  "Ichirō Yashida": "Silver Samurai", "Silver Samurai": "Silver Samurai",
+  "Viper": "Viper",
+  "Caliban": "Caliban",
+  "Russell Collins": "Firefist", "Firefist": "Firefist",
+  "Juggernaut": "Juggernaut", "Cain Marko": "Juggernaut",
+  // The New Mutants
+  "Danielle Moonstar": "Mirage", "Dani Moonstar": "Mirage", "Mirage": "Mirage",
+  "Rahne Sinclair": "Wolfsbane", "Wolfsbane": "Wolfsbane",
+  "Illyana Rasputin": "Magik", "Magik": "Magik",
+  "Sam Guthrie": "Cannonball", "Cannonball": "Cannonball",
+  "Roberto da Costa": "Sunspot", "Sunspot": "Sunspot",
+  // Fantastic Four (2015, Fox) — merges with the MCU FF row, same as other recasts
+  "Victor von Doom": "Doctor Doom", "Doctor Doom": "Doctor Doom", "Victor Domashev": "Doctor Doom", "Dr. Doom": "Doctor Doom", "Doom": "Doctor Doom",
+  // The Amazing Spider-Man 1 & 2 (Garfield Spider-Man merges into the Spider-Man row)
+  "Curt Connors": "Lizard", "The Lizard": "Lizard", "Lizard": "Lizard",
+  "Harry Osborn": "Green Goblin",
+  // Raimi Spider-Man trilogy (2002–2007) — Maguire's Peter merges into the Spider-Man row
+  "Flint Marko": "Sandman", "Sandman": "Sandman",
+  "Eddie Brock": "Venom",
+  // Nolan Dark Knight trilogy (Bale's Bruce merges into the Batman row)
+  "Ra's al Ghul": "Ra's al Ghul", "Henri Ducard": "Ra's al Ghul",
+  "Jonathan Crane": "Scarecrow", "Scarecrow": "Scarecrow",
+  "Harvey Dent": "Two-Face", "Two-Face": "Two-Face",
+  "Bane": "Bane",
+  "Selina Kyle": "Catwoman", "Catwoman": "Catwoman",
+  "Talia al Ghul": "Talia al Ghul",
+  // Fox Marvel — Daredevil (2003) + Elektra (2005); Garner reprised Elektra in Deadpool & Wolverine
+  "Matt Murdock": "Daredevil", "Matthew Murdock": "Daredevil", "Daredevil": "Daredevil",
+  "Elektra Natchios": "Elektra", "Elektra": "Elektra",
+  "Bullseye": "Bullseye",
+  "Wilson Fisk": "Kingpin", "Kingpin": "Kingpin",
+  "Typhoid Mary": "Typhoid Mary",
+  // Fantastic Four (2005) + Rise of the Silver Surfer — merge with the other FF rows
+  "Galactus": "Galactus",
+  // Ghost Rider (2007) + Spirit of Vengeance (2011)
+  "Johnny Blaze": "Ghost Rider", "Ghost Rider": "Ghost Rider",
+  "Blackheart": "Blackheart",
+  "Mephistopheles": "Mephisto", "Mephisto": "Mephisto", "Roarke": "Mephisto",
 };
 // noise that slips through the heuristics — never a real hero/villain identity here
 const DROP = new Set(["Anne", "Isis", "Sol Soria", "Grid", "The Kid", "Girl", "Milo Morbius", "Milo", "Lucien"]);
@@ -265,13 +361,30 @@ const DROP = new Set(["Anne", "Isis", "Sol Soria", "Grid", "The Kid", "Girl", "M
 // where the credit actually carries the alias ("Real Name / Codename"), never a bare real name.
 const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)"]);
 const canon = (c) => CANON[c] || c;
+const CANON_LC = {};
+for (const [k, v] of Object.entries(CANON)) CANON_LC[k.toLowerCase()] = v;
+for (const k of CODE_KEEP) if (!(k.toLowerCase() in CANON_LC)) CANON_LC[k.toLowerCase()] = k; // mononyms resolve to themselves
+function lookup(s) {
+  if (!s) return null;
+  if (CANON[s]) return CANON[s];
+  const lc = s.toLowerCase().replace(/["'’]/g, "").replace(/\s+/g, " ").trim();
+  const tries = new Set([lc]);
+  tries.add(lc.replace(/^(the|a)\s+/, ""));                    // drop article
+  tries.add(lc.replace(/^dr\.?\s+/, "doctor "));               // "Dr." -> "Doctor" (title)
+  tries.add(lc.replace(/^(dr\.?|doctor|mr\.?|ms\.?|mrs\.?|prof\.?|professor|sgt\.?|col\.?|gen\.?|capt\.?|lt\.?)\s+/, "")); // drop honorific entirely
+  for (const t of tries) if (t && CANON_LC[t]) return CANON_LC[t];
+  return null;
+}
 function canonOf(raw) {
-  // try full string, then the real-name (pre-slash) part, then a quote-stripped variant
-  if (CANON[raw]) return CANON[raw];
-  const first = raw.split(/\s*\/\s*/)[0].trim();
-  if (CANON[first]) return CANON[first];
-  const noquote = raw.replace(/["'’]/g, "").replace(/\s+/g, " ").trim();
-  if (CANON[noquote]) return CANON[noquote];
+  // try the whole string, then each "/"-separated part (real-name OR codename side),
+  // case-insensitively, with "the "/"a " articles and "Dr." -> "Doctor" normalised
+  let hit = lookup(raw);
+  if (hit) return hit;
+  // split on "/" (Real Name / Codename) and on " and " (dual credits like "J.A.R.V.I.S. and Vision")
+  for (const part of raw.split(/\s*\/\s*|\s+and\s+|\s*&\s*/)) {
+    hit = lookup(part.trim());
+    if (hit) return hit;
+  }
   return null;
 }
 
@@ -284,7 +397,16 @@ for (const f of films) {
   if (!page) { console.error("no wiki page mapped:", f.title); continue; }
   process.stdout.write(`  ${f.title} … `);
   const wt = await wikitext(page);
-  const { rows, missing: miss } = parseCast(wt, f.title);
+  let { rows, missing: miss } = parseCast(wt, f.title);
+  const ov = OVERRIDES[f.title];
+  if (ov) {
+    const have = new Set(rows.map((r) => (r.actor || "").toLowerCase()));
+    const add = ov
+      .filter((o) => !have.has((o.actor || "").toLowerCase()))
+      .map((o, i) => ({ actor: o.actor, character: o.character, order: -ov.length + i, minor: false, fromOverride: true }));
+    rows = [...add, ...rows];
+    if (add.length) miss = false;
+  }
   raw[f.title] = { page, universe: f.universe, date: f.release_date, cast: rows };
   if (miss) { missing.push(f.title); console.log("NO CAST"); continue; }
 
