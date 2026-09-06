@@ -154,8 +154,9 @@
   @media (max-width: 860px) { .scorecards { grid-template-columns: repeat(2, 1fr); } }
   .sc { background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--c); border-radius: 12px; padding: 16px 16px 18px; }
   .sc h3 { font-size: 14px; font-family: "IBM Plex Sans", sans-serif; font-weight: 600; color: var(--ink); }
+  .sc h3 .sc-short { display: none; }
   .sc .rows { margin-top: 12px; display: grid; gap: 7px; }
-  .sc .row { display: flex; justify-content: space-between; font-size: 13px; }
+  .sc .row { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
   .sc .row span:first-child { color: var(--ink-muted); }
   .sc .row span:last-child { font-family: "IBM Plex Mono", monospace; font-weight: 500; }
   .sc .big { font-size: 26px; font-weight: 700; font-family: "IBM Plex Sans Condensed", sans-serif; margin-top: 4px; }
@@ -245,12 +246,21 @@
     .view-head { margin-bottom: 22px; }
     .card { padding: 16px; border-radius: 12px; }
     .card-head { margin-bottom: 12px; }
-    .thesis { grid-template-columns: 1fr; margin-top: 28px; }
-    .scorecards { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .sc { padding: 13px 13px 15px; }
-    .sc .big { font-size: 22px; }
+    .thesis { grid-template-columns: 1fr; margin-top: 24px; }
+    .thesis > div { padding: 12px 16px; }
+    .thesis .v { font-size: 25px; margin-top: 2px; }
+    .thesis .sub { font-size: 12px; }
+    .scorecards { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .sc { padding: 12px 12px 13px; }
+    .sc h3 .sc-full { display: none; }
+    .sc h3 .sc-short { display: inline; }
+    .sc h3 { font-size: 13px; }
+    .sc .big { font-size: 20px; margin-top: 2px; }
+    .sc .rows { margin-top: 8px; gap: 4px; }
+    .sc .row { font-size: 12px; }
     .controls { position: static; }
     .controls-inner { gap: 8px 14px; }
+    .cgroup { flex-wrap: wrap; gap: 6px; }
     .clabel { font-size: 10px; }
     .act { padding: 34px 0 2px; }
     .act h3 { letter-spacing: 0.1em; white-space: normal; font-size: 11px; }
@@ -258,9 +268,6 @@
     .note dl { grid-template-columns: 1fr; gap: 2px; }
     .note dd { margin-bottom: 8px; }
     table.data th, table.data td { padding: 6px 10px; font-size: 12.5px; }
-  }
-  @media (max-width: 420px) {
-    .scorecards { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -843,7 +850,7 @@
       el.className = "sc";
       el.style.setProperty("--c", "var(" + COLORVAR[u.k] + ")");
       el.innerHTML =
-        "<h3>" + u.full + "</h3>" +
+        '<h3><span class="sc-full">' + u.full + '</span><span class="sc-short">' + u.label + "</span></h3>" +
         '<div class="big">' + usd(tot) + "</div>" +
         '<div class="rows">' +
         rowline("Films", fs.length) +
