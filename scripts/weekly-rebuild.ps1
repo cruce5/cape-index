@@ -10,8 +10,8 @@
 #
 # Switches:
 #   -SkipDeploy   rebuild locally but don't push to Cloudflare
-#   -Commit       also `git add data && git commit` the refreshed JSON (off by default;
-#                 the live site is the source of truth for "current", git is optional)
+#   -Commit       also commit the refreshed data/*.json and push to origin/main
+#                 (the registered Task Scheduler job passes this)
 #   -BomDelay N   ms between Box Office Mojo requests (default 4000)
 
 param(
@@ -96,6 +96,8 @@ if ($Commit) {
     $stamp = Get-Date -Format "yyyy-MM-dd"
     git commit -m "Weekly data refresh $stamp" | Out-Null
     Say "committed refreshed data (Weekly data refresh $stamp)"
+    git push origin main 2>&1 | ForEach-Object { $s = "$_"; Write-Host $s; Add-Content -Path $log -Value $s -Encoding utf8 }
+    if ($LASTEXITCODE -eq 0) { Say "pushed to origin/main" } else { Say "WARNING: git push failed (commit is local only) - push it by hand" }
   } else {
     git reset -q
     Say "no data changes to commit"

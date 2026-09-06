@@ -83,3 +83,5 @@ Local preview: `node scripts/serve.mjs` then http://localhost:4599.
 Built by [Bill Yost](https://www.linkedin.com/in/billyost/), rebuilt from his
 Tableau Public workbook. Box office from Box Office Mojo, scores from OMDb, cast
 from Wikipedia. Not affiliated with Marvel, DC, Disney, Warner Bros. or Sony.
+
+Code is [MIT](LICENSE). The box office figures are facts and aren't covered by it.
