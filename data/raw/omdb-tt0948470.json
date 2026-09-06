@@ -1,0 +1,51 @@
+{
+  "Title": "The Amazing Spider-Man",
+  "Year": "2012",
+  "Rated": "PG-13",
+  "Released": "03 Jul 2012",
+  "Runtime": "136 min",
+  "Genre": "Action, Sci-Fi",
+  "Director": "Marc Webb",
+  "Writer": "James Vanderbilt, Alvin Sargent, Steve Kloves",
+  "Actors": "Andrew Garfield, Emma Stone, Rhys Ifans",
+  "Plot": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "2 wins & 33 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.9/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "71%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "66/100"
+    }
+  ],
+  "Metascore": "66",
+  "imdbRating": "6.9",
+  "imdbVotes": "763,493",
+  "imdbID": "tt0948470",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/the_amazing_spider_man/",
+  "DVD": "N/A",
+  "BoxOffice": "$262,782,352",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

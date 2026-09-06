@@ -1,0 +1,51 @@
+{
+  "Title": "X-Men",
+  "Year": "2000",
+  "Rated": "PG-13",
+  "Released": "14 Jul 2000",
+  "Runtime": "104 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Bryan Singer",
+  "Writer": "Tom DeSanto, Bryan Singer, David Hayter",
+  "Actors": "Patrick Stewart, Hugh Jackman, Ian McKellen",
+  "Plot": "In a world where mutants (evolved super-powered humans) exist and are discriminated against, two groups form for an inevitable clash: the supremacist Brotherhood, and the pacifist X-Men.",
+  "Language": "English",
+  "Country": "United States, Canada",
+  "Awards": "14 wins & 26 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNzNjZjQwOTAtNWQ3NC00MmJlLThlZDEtZmUyMWQ3NmE4Y2Y5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "82%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "64/100"
+    }
+  ],
+  "Metascore": "64",
+  "imdbRating": "7.3",
+  "imdbVotes": "690,803",
+  "imdbID": "tt0120903",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/xmen/",
+  "DVD": "N/A",
+  "BoxOffice": "$157,299,718",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

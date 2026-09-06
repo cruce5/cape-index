@@ -25,7 +25,10 @@ const additionMeta = new Map(
 );
 
 const CANON_TITLE = { "Joker: Folie a Deux": "Joker: Folie à Deux" };
-const FINAL_CUTOFF = "2026-05-01"; // releases after this are still "in release" -> not final
+// Releases before this are treated as done in theatres; later ones carry the "still in release" marker
+// and stay out of the profit tallies. Nudge forward as runs end — 2026-07-01 keeps Supergirl (Jun 26,
+// now on digital) in the profit math while Spider-Man: Brand New Day (Jul 31) is still running.
+const FINAL_CUTOFF = "2026-07-01";
 
 const films = [];
 const heldOut = [];
@@ -95,7 +98,7 @@ const out = {
     currency: "USD",
     grosses: "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     source_of_truth: "Box Office Mojo (boxofficemojo.com) title pages",
-    universes: { MCU: byU("MCU"), DCEU: byU("DCEU"), DCU: byU("DCU"), SSU: byU("SSU"), Elseworlds: byU("Elseworlds") },
+    universes: { MCU: byU("MCU"), Fox: byU("Fox"), SSU: byU("SSU"), DCEU: byU("DCEU"), DCU: byU("DCU"), Elseworlds: byU("Elseworlds") },
     count: films.length,
     held_out: heldOut,
     scores_source: "OMDb (pending enrich-omdb.mjs)",
@@ -104,5 +107,5 @@ const out = {
 };
 
 writeFileSync(join(ROOT, "data/films.json"), JSON.stringify(out, null, 2) + "\n");
-console.log(`films.json: ${films.length} verified films — MCU ${byU("MCU")}, DCEU ${byU("DCEU")}, DCU ${byU("DCU")}, Elseworlds ${byU("Elseworlds")}`);
+console.log(`films.json: ${films.length} verified films — MCU ${byU("MCU")}, Fox ${byU("Fox")}, SSU ${byU("SSU")}, DCEU ${byU("DCEU")}, DCU ${byU("DCU")}, Elseworlds ${byU("Elseworlds")}`);
 console.log(`held out: ${heldOut.map((h) => h.title).join(", ") || "none"}`);

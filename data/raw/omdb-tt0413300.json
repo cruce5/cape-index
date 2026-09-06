@@ -1,0 +1,51 @@
+{
+  "Title": "Spider-Man 3",
+  "Year": "2007",
+  "Rated": "PG-13",
+  "Released": "04 May 2007",
+  "Runtime": "139 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Sam Raimi",
+  "Writer": "Sam Raimi, Ivan Raimi, Alvin Sargent",
+  "Actors": "Tobey Maguire, Kirsten Dunst, Topher Grace",
+  "Plot": "A strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge.",
+  "Language": "English, French",
+  "Country": "United States",
+  "Awards": "Nominated for 1 BAFTA Award4 wins & 44 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BODE2NzNhMDctYjUzMC00Y2M5LWI2Y2EtODJkZTFjN2Y5ODlmXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.3/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "62%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "59/100"
+    }
+  ],
+  "Metascore": "59",
+  "imdbRating": "6.3",
+  "imdbVotes": "692,051",
+  "imdbID": "tt0413300",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/spiderman_3/",
+  "DVD": "N/A",
+  "BoxOffice": "$338,032,318",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

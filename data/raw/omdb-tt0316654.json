@@ -1,0 +1,51 @@
+{
+  "Title": "Spider-Man 2",
+  "Year": "2004",
+  "Rated": "PG-13",
+  "Released": "30 Jun 2004",
+  "Runtime": "127 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Sam Raimi",
+  "Writer": "Stan Lee, Steve Ditko, Alfred Gough",
+  "Actors": "Tobey Maguire, Kirsten Dunst, Alfred Molina",
+  "Plot": "Peter Parker is beset with troubles in his failing personal life as he battles a former brilliant scientist named Otto Octavius.",
+  "Language": "English, Russian, Chinese",
+  "Country": "United States",
+  "Awards": "Won 1 Oscar. 25 wins & 60 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNGQ0YTQyYTgtNWI2YS00NTE2LWJmNDItNTFlMTUwNmFlZTM0XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.5/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "93%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "83/100"
+    }
+  ],
+  "Metascore": "83",
+  "imdbRating": "7.5",
+  "imdbVotes": "777,496",
+  "imdbID": "tt0316654",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/spiderman_2/",
+  "DVD": "N/A",
+  "BoxOffice": "$375,087,840",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

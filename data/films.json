@@ -1,17 +1,18 @@
 {
   "meta": {
-    "generated": "2026-09-06T15:44:56.334Z",
+    "generated": "2026-09-06T22:24:01.799Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
     "universes": {
       "MCU": 38,
+      "Fox": 18,
+      "SSU": 13,
       "DCEU": 15,
       "DCU": 2,
-      "SSU": 6,
-      "Elseworlds": 3
+      "Elseworlds": 6
     },
-    "count": 64,
+    "count": 92,
     "held_out": [
       {
         "title": "Avengers: Doomsday",
@@ -33,6 +34,692 @@
     "derived_note": "metrics.* added by derive.mjs. breakeven_worldwide = production budget x 2.5 (theatrical rule of thumb). domestic_multiplier = domestic total / domestic opening weekend."
   },
   "films": [
+    {
+      "title": "X-Men",
+      "release_date": "2000-07-14",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0120903",
+        "url": "https://www.boxofficemojo.com/title/tt0120903/"
+      },
+      "box_office": {
+        "domestic": 157299718,
+        "international": 139039810,
+        "worldwide": 296339528,
+        "opening_weekend_domestic": 54471475,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 157299718,
+        "international": 139039810,
+        "worldwide": 296339528
+      },
+      "budget": 75000000,
+      "runtime_minutes": 104,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 82,
+        "rt_audience": null,
+        "metacritic": 64,
+        "imdb": 7.3
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 13, 2000 (Australia)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 53.08,
+        "pct_international": 46.92,
+        "domestic_multiplier": 2.89,
+        "opening_share_worldwide": 18.38,
+        "roi_worldwide": 3.95,
+        "breakeven_worldwide": 187500000,
+        "profit_vs_breakeven": 108839528,
+        "profitable": true,
+        "budget_real_2025": 75000000
+      }
+    },
+    {
+      "title": "Spider-Man",
+      "release_date": "2002-05-03",
+      "universe": "SSU",
+      "universe_label": "Sony Pictures (Raimi)",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt0145487",
+        "url": "https://www.boxofficemojo.com/title/tt0145487/"
+      },
+      "box_office": {
+        "domestic": 408524875,
+        "international": 402400432,
+        "worldwide": 810925307,
+        "opening_weekend_domestic": 114844116,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 408524875,
+        "international": 402400432,
+        "worldwide": 810925307
+      },
+      "budget": 139000000,
+      "runtime_minutes": 121,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 90,
+        "rt_audience": null,
+        "metacritic": 73,
+        "imdb": 7.4
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "May 3, 2002 (18 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 50.38,
+        "pct_international": 49.62,
+        "domestic_multiplier": 3.56,
+        "opening_share_worldwide": 14.16,
+        "roi_worldwide": 5.83,
+        "breakeven_worldwide": 347500000,
+        "profit_vs_breakeven": 463425307,
+        "profitable": true,
+        "budget_real_2025": 139000000
+      }
+    },
+    {
+      "title": "Daredevil",
+      "release_date": "2003-02-14",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (Marvel)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0287978",
+        "url": "https://www.boxofficemojo.com/title/tt0287978/"
+      },
+      "box_office": {
+        "domestic": 102543518,
+        "international": 76636200,
+        "worldwide": 179179718,
+        "opening_weekend_domestic": 40310419,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 102543518,
+        "international": 76636200,
+        "worldwide": 179179718
+      },
+      "budget": 78000000,
+      "runtime_minutes": 103,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 42,
+        "rt_audience": null,
+        "metacritic": 42,
+        "imdb": 5.3
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "February 14, 2003 (Domestic, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 57.23,
+        "pct_international": 42.77,
+        "domestic_multiplier": 2.54,
+        "opening_share_worldwide": 22.5,
+        "roi_worldwide": 2.3,
+        "breakeven_worldwide": 195000000,
+        "profit_vs_breakeven": -15820282,
+        "profitable": false,
+        "budget_real_2025": 78000000
+      }
+    },
+    {
+      "title": "X2",
+      "release_date": "2003-05-02",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0290334",
+        "url": "https://www.boxofficemojo.com/title/tt0290334/"
+      },
+      "box_office": {
+        "domestic": 214949694,
+        "international": 192761855,
+        "worldwide": 407711549,
+        "opening_weekend_domestic": 85558731,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 214949694,
+        "international": 192761855,
+        "worldwide": 407711549
+      },
+      "budget": 110000000,
+      "runtime_minutes": 134,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 85,
+        "rt_audience": null,
+        "metacritic": 68,
+        "imdb": 7.4
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "April 30, 2003 (24 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 52.72,
+        "pct_international": 47.28,
+        "domestic_multiplier": 2.51,
+        "opening_share_worldwide": 20.99,
+        "roi_worldwide": 3.71,
+        "breakeven_worldwide": 275000000,
+        "profit_vs_breakeven": 132711549,
+        "profitable": true,
+        "budget_real_2025": 110000000
+      }
+    },
+    {
+      "title": "Spider-Man 2",
+      "release_date": "2004-06-30",
+      "universe": "SSU",
+      "universe_label": "Sony Pictures (Raimi)",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt0316654",
+        "url": "https://www.boxofficemojo.com/title/tt0316654/"
+      },
+      "box_office": {
+        "domestic": 375087840,
+        "international": 413165651,
+        "worldwide": 788253491,
+        "opening_weekend_domestic": 88156227,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 375087840,
+        "international": 413165651,
+        "worldwide": 788253491
+      },
+      "budget": 200000000,
+      "runtime_minutes": 127,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 93,
+        "rt_audience": null,
+        "metacritic": 83,
+        "imdb": 7.5
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "June 30, 2004 (19 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 47.58,
+        "pct_international": 52.42,
+        "domestic_multiplier": 4.25,
+        "opening_share_worldwide": 11.18,
+        "roi_worldwide": 3.94,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 288253491,
+        "profitable": true,
+        "budget_real_2025": 200000000
+      }
+    },
+    {
+      "title": "Elektra",
+      "release_date": "2005-01-14",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (Marvel)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0357277",
+        "url": "https://www.boxofficemojo.com/title/tt0357277/"
+      },
+      "box_office": {
+        "domestic": 24409722,
+        "international": 32585924,
+        "worldwide": 56995646,
+        "opening_weekend_domestic": 12804793,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 24409722,
+        "international": 32585924,
+        "worldwide": 56995646
+      },
+      "budget": 43000000,
+      "runtime_minutes": 97,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Crime",
+        "Fantasy"
+      ],
+      "scores": {
+        "rt_critic": 11,
+        "rt_audience": null,
+        "metacritic": 34,
+        "imdb": 4.7
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "January 12, 2005 (Lesser Antilles)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 42.83,
+        "pct_international": 57.17,
+        "domestic_multiplier": 1.91,
+        "opening_share_worldwide": 22.47,
+        "roi_worldwide": 1.33,
+        "breakeven_worldwide": 107500000,
+        "profit_vs_breakeven": -50504354,
+        "profitable": false,
+        "budget_real_2025": 43000000
+      }
+    },
+    {
+      "title": "Batman Begins",
+      "release_date": "2005-06-15",
+      "universe": "Elseworlds",
+      "universe_label": "DC Elseworlds",
+      "studio_label": "Warner Bros.",
+      "bom": {
+        "id": "tt0372784",
+        "url": "https://www.boxofficemojo.com/title/tt0372784/"
+      },
+      "box_office": {
+        "domestic": 206863479,
+        "international": 168701066,
+        "worldwide": 375591291,
+        "opening_weekend_domestic": 48745440,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 206863479,
+        "international": 168701066,
+        "worldwide": 375591291
+      },
+      "budget": 150000000,
+      "runtime_minutes": 140,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Crime"
+      ],
+      "scores": {
+        "rt_critic": 85,
+        "rt_audience": null,
+        "metacritic": 70,
+        "imdb": 8.2
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "June 15, 2005 (6 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 55.08,
+        "pct_international": 44.92,
+        "domestic_multiplier": 4.24,
+        "opening_share_worldwide": 12.98,
+        "roi_worldwide": 2.5,
+        "breakeven_worldwide": 375000000,
+        "profit_vs_breakeven": 591291,
+        "profitable": true,
+        "budget_real_2025": 150000000
+      }
+    },
+    {
+      "title": "Fantastic Four (2005)",
+      "release_date": "2005-07-08",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (Marvel)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0120667",
+        "url": "https://www.boxofficemojo.com/title/tt0120667/"
+      },
+      "box_office": {
+        "domestic": 154696080,
+        "international": 178839854,
+        "worldwide": 333535934,
+        "opening_weekend_domestic": 56061504,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 154696080,
+        "international": 178839854,
+        "worldwide": 333535934
+      },
+      "budget": 100000000,
+      "runtime_minutes": 106,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 28,
+        "rt_audience": null,
+        "metacritic": 40,
+        "imdb": 5.7
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 6, 2005 (APAC, LATAM)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 46.38,
+        "pct_international": 53.62,
+        "domestic_multiplier": 2.76,
+        "opening_share_worldwide": 16.81,
+        "roi_worldwide": 3.34,
+        "breakeven_worldwide": 250000000,
+        "profit_vs_breakeven": 83535934,
+        "profitable": true,
+        "budget_real_2025": 100000000
+      }
+    },
+    {
+      "title": "X-Men: The Last Stand",
+      "release_date": "2006-05-26",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0376994",
+        "url": "https://www.boxofficemojo.com/title/tt0376994/"
+      },
+      "box_office": {
+        "domestic": 234362462,
+        "international": 226072829,
+        "worldwide": 460435291,
+        "opening_weekend_domestic": 102750665,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 234362462,
+        "international": 226072829,
+        "worldwide": 460435291
+      },
+      "budget": 210000000,
+      "runtime_minutes": 104,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 56,
+        "rt_audience": null,
+        "metacritic": 58,
+        "imdb": 6.6
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "May 24, 2006 (13 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 50.9,
+        "pct_international": 49.1,
+        "domestic_multiplier": 2.28,
+        "opening_share_worldwide": 22.32,
+        "roi_worldwide": 2.19,
+        "breakeven_worldwide": 525000000,
+        "profit_vs_breakeven": -64564709,
+        "profitable": false,
+        "budget_real_2025": 210000000
+      }
+    },
+    {
+      "title": "Ghost Rider",
+      "release_date": "2007-02-16",
+      "universe": "SSU",
+      "universe_label": "Sony Pictures",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt0259324",
+        "url": "https://www.boxofficemojo.com/title/tt0259324/"
+      },
+      "box_office": {
+        "domestic": 115802596,
+        "international": 112935797,
+        "worldwide": 228738393,
+        "opening_weekend_domestic": 45388836,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 115802596,
+        "international": 112935797,
+        "worldwide": 228738393
+      },
+      "budget": 110000000,
+      "runtime_minutes": 110,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 28,
+        "rt_audience": null,
+        "metacritic": 35,
+        "imdb": 5.3
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "February 14, 2007 (9 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 50.63,
+        "pct_international": 49.37,
+        "domestic_multiplier": 2.55,
+        "opening_share_worldwide": 19.84,
+        "roi_worldwide": 2.08,
+        "breakeven_worldwide": 275000000,
+        "profit_vs_breakeven": -46261607,
+        "profitable": false,
+        "budget_real_2025": 110000000
+      }
+    },
+    {
+      "title": "Spider-Man 3",
+      "release_date": "2007-05-04",
+      "universe": "SSU",
+      "universe_label": "Sony Pictures (Raimi)",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt0413300",
+        "url": "https://www.boxofficemojo.com/title/tt0413300/"
+      },
+      "box_office": {
+        "domestic": 338032318,
+        "international": 549325104,
+        "worldwide": 887415130,
+        "opening_weekend_domestic": 151116516,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 338032318,
+        "international": 549325104,
+        "worldwide": 887415130
+      },
+      "budget": 258000000,
+      "runtime_minutes": 139,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 62,
+        "rt_audience": null,
+        "metacritic": 59,
+        "imdb": 6.3
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "May 1, 2007 (18 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 38.09,
+        "pct_international": 61.9,
+        "domestic_multiplier": 2.24,
+        "opening_share_worldwide": 17.03,
+        "roi_worldwide": 3.44,
+        "breakeven_worldwide": 645000000,
+        "profit_vs_breakeven": 242415130,
+        "profitable": true,
+        "budget_real_2025": 258000000
+      }
+    },
+    {
+      "title": "Fantastic Four: Rise of the Silver Surfer",
+      "release_date": "2007-06-15",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (Marvel)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0486576",
+        "url": "https://www.boxofficemojo.com/title/tt0486576/"
+      },
+      "box_office": {
+        "domestic": 131921738,
+        "international": 169991393,
+        "worldwide": 301913131,
+        "opening_weekend_domestic": 58051684,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 131921738,
+        "international": 169991393,
+        "worldwide": 301913131
+      },
+      "budget": 130000000,
+      "runtime_minutes": 92,
+      "mpaa": "PG",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 38,
+        "rt_audience": null,
+        "metacritic": 45,
+        "imdb": 5.6
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "June 13, 2007 (9 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 43.7,
+        "pct_international": 56.3,
+        "domestic_multiplier": 2.27,
+        "opening_share_worldwide": 19.23,
+        "roi_worldwide": 2.32,
+        "breakeven_worldwide": 325000000,
+        "profit_vs_breakeven": -23086869,
+        "profitable": false,
+        "budget_real_2025": 130000000
+      }
+    },
     {
       "title": "Iron Man",
       "release_date": "2008-05-02",
@@ -152,6 +839,118 @@
         "profit_vs_breakeven": -110229004,
         "profitable": false,
         "budget_real_2025": 224404676
+      }
+    },
+    {
+      "title": "The Dark Knight",
+      "release_date": "2008-07-18",
+      "universe": "Elseworlds",
+      "universe_label": "DC Elseworlds",
+      "studio_label": "Warner Bros.",
+      "bom": {
+        "id": "tt0468569",
+        "url": "https://www.boxofficemojo.com/title/tt0468569/"
+      },
+      "box_office": {
+        "domestic": 534987076,
+        "international": 473298787,
+        "worldwide": 1008480529,
+        "opening_weekend_domestic": 158411483,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 800357344,
+        "international": 708069740,
+        "worldwide": 1508718310
+      },
+      "budget": 185000000,
+      "runtime_minutes": 152,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 94,
+        "rt_audience": null,
+        "metacritic": 85,
+        "imdb": 9.1
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 16, 2008 (Taiwan)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 53.05,
+        "pct_international": 46.93,
+        "domestic_multiplier": 3.38,
+        "opening_share_worldwide": 15.71,
+        "roi_worldwide": 5.45,
+        "breakeven_worldwide": 462500000,
+        "profit_vs_breakeven": 545980529,
+        "profitable": true,
+        "budget_real_2025": 276765767
+      }
+    },
+    {
+      "title": "X-Men Origins: Wolverine",
+      "release_date": "2009-05-01",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt0458525",
+        "url": "https://www.boxofficemojo.com/title/tt0458525/"
+      },
+      "box_office": {
+        "domestic": 179883157,
+        "international": 193179707,
+        "worldwide": 373062864,
+        "opening_weekend_domestic": 85058003,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 270071665,
+        "international": 290034743,
+        "worldwide": 560106408
+      },
+      "budget": 150000000,
+      "runtime_minutes": 107,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 37,
+        "rt_audience": null,
+        "metacritic": 40,
+        "imdb": 6.5
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "April 29, 2009 (28 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 48.22,
+        "pct_international": 51.78,
+        "domestic_multiplier": 2.11,
+        "opening_share_worldwide": 22.8,
+        "roi_worldwide": 2.49,
+        "breakeven_worldwide": 375000000,
+        "profit_vs_breakeven": -1937136,
+        "profitable": false,
+        "budget_real_2025": 225205909
       }
     },
     {
@@ -275,6 +1074,62 @@
       }
     },
     {
+      "title": "X-Men: First Class",
+      "release_date": "2011-06-03",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt1270798",
+        "url": "https://www.boxofficemojo.com/title/tt1270798/"
+      },
+      "box_office": {
+        "domestic": 146408305,
+        "international": 206208385,
+        "worldwide": 352616690,
+        "opening_weekend_domestic": 55101604,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 209648460,
+        "international": 295278813,
+        "worldwide": 504927273
+      },
+      "budget": 160000000,
+      "runtime_minutes": 131,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 86,
+        "rt_audience": null,
+        "metacritic": 65,
+        "imdb": 7.7
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "June 1, 2011 (EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 41.52,
+        "pct_international": 58.48,
+        "domestic_multiplier": 2.66,
+        "opening_share_worldwide": 15.63,
+        "roi_worldwide": 2.2,
+        "breakeven_worldwide": 400000000,
+        "profit_vs_breakeven": -47383310,
+        "profitable": false,
+        "budget_real_2025": 229111003
+      }
+    },
+    {
       "title": "Captain America: The First Avenger",
       "release_date": "2011-07-22",
       "universe": "MCU",
@@ -336,6 +1191,65 @@
       }
     },
     {
+      "title": "Ghost Rider: Spirit of Vengeance",
+      "release_date": "2012-02-17",
+      "universe": "SSU",
+      "universe_label": "Sony Pictures",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt1071875",
+        "url": "https://www.boxofficemojo.com/title/tt1071875/"
+      },
+      "box_office": {
+        "domestic": 51774002,
+        "international": 80789928,
+        "worldwide": 132563930,
+        "opening_weekend_domestic": 22115334,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 72634329,
+        "international": 113341097,
+        "worldwide": 185975426
+      },
+      "budget": 57000000,
+      "runtime_minutes": 96,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 18,
+        "rt_audience": null,
+        "metacritic": 34,
+        "imdb": 4.4
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "February 15, 2012 (EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 39.06,
+        "pct_international": 60.94,
+        "domestic_multiplier": 2.34,
+        "opening_share_worldwide": 16.68,
+        "roi_worldwide": 2.33,
+        "breakeven_worldwide": 142500000,
+        "profit_vs_breakeven": -9936070,
+        "profitable": false,
+        "budget_real_2025": 79965940
+      }
+    },
+    {
       "title": "The Avengers",
       "release_date": "2012-05-12",
       "universe": "MCU",
@@ -393,6 +1307,118 @@
         "profit_vs_breakeven": 970538536,
         "profitable": true,
         "budget_real_2025": 308640470
+      }
+    },
+    {
+      "title": "The Amazing Spider-Man",
+      "release_date": "2012-07-03",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt0948470",
+        "url": "https://www.boxofficemojo.com/title/tt0948470/"
+      },
+      "box_office": {
+        "domestic": 262782352,
+        "international": 495918171,
+        "worldwide": 758725893,
+        "opening_weekend_domestic": 62004688,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 368660312,
+        "international": 695729169,
+        "worldwide": 1064425073
+      },
+      "budget": 230000000,
+      "runtime_minutes": 136,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 71,
+        "rt_audience": null,
+        "metacritic": 66,
+        "imdb": 6.9
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "June 28, 2012 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 34.63,
+        "pct_international": 65.36,
+        "domestic_multiplier": 4.24,
+        "opening_share_worldwide": 8.17,
+        "roi_worldwide": 3.3,
+        "breakeven_worldwide": 575000000,
+        "profit_vs_breakeven": 183725893,
+        "profitable": true,
+        "budget_real_2025": 322669582
+      }
+    },
+    {
+      "title": "The Dark Knight Rises",
+      "release_date": "2012-07-20",
+      "universe": "Elseworlds",
+      "universe_label": "DC Elseworlds",
+      "studio_label": "Warner Bros.",
+      "bom": {
+        "id": "tt1345836",
+        "url": "https://www.boxofficemojo.com/title/tt1345836/"
+      },
+      "box_office": {
+        "domestic": 448149584,
+        "international": 637268735,
+        "worldwide": 1085429692,
+        "opening_weekend_domestic": 160887295,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 628714082,
+        "international": 894031462,
+        "worldwide": 1522761500
+      },
+      "budget": 250000000,
+      "runtime_minutes": 164,
+      "mpaa": "PG-13",
+      "distributor": "Warner Bros.",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 87,
+        "rt_audience": null,
+        "metacritic": 78,
+        "imdb": 8.4
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 19, 2012 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 41.29,
+        "pct_international": 58.71,
+        "domestic_multiplier": 2.79,
+        "opening_share_worldwide": 14.82,
+        "roi_worldwide": 4.34,
+        "breakeven_worldwide": 625000000,
+        "profit_vs_breakeven": 460429692,
+        "profitable": true,
+        "budget_real_2025": 350727806
       }
     },
     {
@@ -518,6 +1544,63 @@
       }
     },
     {
+      "title": "The Wolverine",
+      "release_date": "2013-07-26",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt1430132",
+        "url": "https://www.boxofficemojo.com/title/tt1430132/"
+      },
+      "box_office": {
+        "domestic": 132556852,
+        "international": 282271394,
+        "worldwide": 414828246,
+        "opening_weekend_domestic": 53113752,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 183280872,
+        "international": 390284971,
+        "worldwide": 573565843
+      },
+      "budget": 120000000,
+      "runtime_minutes": 126,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 70,
+        "rt_audience": null,
+        "metacritic": 61,
+        "imdb": 6.7
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "July 24, 2013 (EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 31.95,
+        "pct_international": 68.05,
+        "domestic_multiplier": 2.5,
+        "opening_share_worldwide": 12.8,
+        "roi_worldwide": 3.46,
+        "breakeven_worldwide": 300000000,
+        "profit_vs_breakeven": 114828246,
+        "profitable": true,
+        "budget_real_2025": 165919032
+      }
+    },
+    {
       "title": "Thor: The Dark World",
       "release_date": "2013-11-08",
       "universe": "MCU",
@@ -639,6 +1722,122 @@
         "profit_vs_breakeven": 289421503,
         "profitable": true,
         "budget_real_2025": 231299845
+      }
+    },
+    {
+      "title": "The Amazing Spider-Man 2",
+      "release_date": "2014-05-02",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt1872181",
+        "url": "https://www.boxofficemojo.com/title/tt1872181/"
+      },
+      "box_office": {
+        "domestic": 203605622,
+        "international": 513278887,
+        "worldwide": 716934779,
+        "opening_weekend_domestic": 91608337,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 277023228,
+        "international": 698360746,
+        "worldwide": 975452370
+      },
+      "budget": 200000000,
+      "runtime_minutes": 142,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 50,
+        "rt_audience": null,
+        "metacritic": 53,
+        "imdb": 6.6
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "April 16, 2014 (Belgium)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 28.4,
+        "pct_international": 71.59,
+        "domestic_multiplier": 2.22,
+        "opening_share_worldwide": 12.78,
+        "roi_worldwide": 3.58,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 216934779,
+        "profitable": true,
+        "budget_real_2025": 272117464
+      }
+    },
+    {
+      "title": "X-Men: Days of Future Past",
+      "release_date": "2014-05-23",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt1877832",
+        "url": "https://www.boxofficemojo.com/title/tt1877832/"
+      },
+      "box_office": {
+        "domestic": 233921534,
+        "international": 512124166,
+        "worldwide": 746045700,
+        "opening_weekend_domestic": 90823660,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 318270673,
+        "international": 696789647,
+        "worldwide": 1015060320
+      },
+      "budget": 200000000,
+      "runtime_minutes": 132,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 90,
+        "rt_audience": null,
+        "metacritic": 75,
+        "imdb": 7.9
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "May 21, 2014 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 31.35,
+        "pct_international": 68.65,
+        "domestic_multiplier": 2.58,
+        "opening_share_worldwide": 12.17,
+        "roi_worldwide": 3.73,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": 246045700,
+        "profitable": true,
+        "budget_real_2025": 272117464
       }
     },
     {
@@ -826,6 +2025,121 @@
       }
     },
     {
+      "title": "Fantastic Four (2015)",
+      "release_date": "2015-08-07",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (Marvel)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt1502712",
+        "url": "https://www.boxofficemojo.com/title/tt1502712/"
+      },
+      "box_office": {
+        "domestic": 56117548,
+        "international": 111765333,
+        "worldwide": 167882881,
+        "opening_weekend_domestic": 25685737,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 76262303,
+        "international": 151886210,
+        "worldwide": 228148512
+      },
+      "budget": 120000000,
+      "runtime_minutes": 100,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 9,
+        "rt_audience": null,
+        "metacritic": 27,
+        "imdb": 4.3
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "August 5, 2015 (EMEA, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 33.43,
+        "pct_international": 66.57,
+        "domestic_multiplier": 2.18,
+        "opening_share_worldwide": 15.3,
+        "roi_worldwide": 1.4,
+        "breakeven_worldwide": 300000000,
+        "profit_vs_breakeven": -132117119,
+        "profitable": false,
+        "budget_real_2025": 163076910
+      }
+    },
+    {
+      "title": "Deadpool",
+      "release_date": "2016-02-12",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt1431045",
+        "url": "https://www.boxofficemojo.com/title/tt1431045/"
+      },
+      "box_office": {
+        "domestic": 363070709,
+        "international": 419766082,
+        "worldwide": 782837347,
+        "opening_weekend_domestic": 132434639,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 487256936,
+        "international": 563344632,
+        "worldwide": 1050602314
+      },
+      "budget": 58000000,
+      "runtime_minutes": 108,
+      "mpaa": "R",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 85,
+        "rt_audience": null,
+        "metacritic": 65,
+        "imdb": 8
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "February 9, 2016 (Taiwan)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 46.38,
+        "pct_international": 53.62,
+        "domestic_multiplier": 2.74,
+        "opening_share_worldwide": 16.92,
+        "roi_worldwide": 13.5,
+        "breakeven_worldwide": 145000000,
+        "profit_vs_breakeven": 637837347,
+        "profitable": true,
+        "budget_real_2025": 77838563
+      }
+    },
+    {
       "title": "Batman v Superman: Dawn of Justice",
       "release_date": "2016-03-25",
       "universe": "DCEU",
@@ -942,6 +2256,63 @@
         "profit_vs_breakeven": 530046416,
         "profitable": true,
         "budget_real_2025": 335511048
+      }
+    },
+    {
+      "title": "X-Men: Apocalypse",
+      "release_date": "2016-05-27",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt3385516",
+        "url": "https://www.boxofficemojo.com/title/tt3385516/"
+      },
+      "box_office": {
+        "domestic": 155442489,
+        "international": 388491616,
+        "worldwide": 543934105,
+        "opening_weekend_domestic": 65769562,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 208610689,
+        "international": 521372916,
+        "worldwide": 729983606
+      },
+      "budget": 178000000,
+      "runtime_minutes": 144,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 47,
+        "rt_audience": null,
+        "metacritic": 52,
+        "imdb": 6.8
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "May 18, 2016 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 28.58,
+        "pct_international": 71.42,
+        "domestic_multiplier": 2.36,
+        "opening_share_worldwide": 12.09,
+        "roi_worldwide": 3.06,
+        "breakeven_worldwide": 445000000,
+        "profit_vs_breakeven": 98934105,
+        "profitable": true,
+        "budget_real_2025": 238883866
       }
     },
     {
@@ -1066,6 +2437,64 @@
         "profit_vs_breakeven": 265296833,
         "profitable": true,
         "budget_real_2025": 221437291
+      }
+    },
+    {
+      "title": "Logan",
+      "release_date": "2017-03-03",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt3315342",
+        "url": "https://www.boxofficemojo.com/title/tt3315342/"
+      },
+      "box_office": {
+        "domestic": 226277068,
+        "international": 392902882,
+        "worldwide": 619180476,
+        "opening_weekend_domestic": 88411916,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 297339440,
+        "international": 516294135,
+        "worldwide": 813634266
+      },
+      "budget": 97000000,
+      "runtime_minutes": 137,
+      "mpaa": "R",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Drama",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 93,
+        "rt_audience": null,
+        "metacritic": 77,
+        "imdb": 8.1
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "March 1, 2017 (12 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 36.54,
+        "pct_international": 63.46,
+        "domestic_multiplier": 2.56,
+        "opening_share_worldwide": 14.28,
+        "roi_worldwide": 6.38,
+        "breakeven_worldwide": 242500000,
+        "profit_vs_breakeven": 376680476,
+        "profitable": true,
+        "budget_real_2025": 127462875
       }
     },
     {
@@ -1502,6 +2931,64 @@
       }
     },
     {
+      "title": "Deadpool 2",
+      "release_date": "2018-05-18",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt5463162",
+        "url": "https://www.boxofficemojo.com/title/tt5463162/"
+      },
+      "box_office": {
+        "domestic": 324591735,
+        "international": 461304874,
+        "worldwide": 785896632,
+        "opening_weekend_domestic": 125507153,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 416360348,
+        "international": 591725041,
+        "worldwide": 1008085418
+      },
+      "budget": 110000000,
+      "runtime_minutes": 119,
+      "mpaa": "R",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 83,
+        "rt_audience": null,
+        "metacritic": 66,
+        "imdb": 7.6
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "May 16, 2018 (18 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 41.3,
+        "pct_international": 58.7,
+        "domestic_multiplier": 2.59,
+        "opening_share_worldwide": 15.97,
+        "roi_worldwide": 7.14,
+        "breakeven_worldwide": 275000000,
+        "profit_vs_breakeven": 510896632,
+        "profitable": true,
+        "budget_real_2025": 141099213
+      }
+    },
+    {
       "title": "Ant-Man and the Wasp",
       "release_date": "2018-07-06",
       "universe": "MCU",
@@ -1869,6 +3356,63 @@
       }
     },
     {
+      "title": "X-Men: Dark Phoenix",
+      "release_date": "2019-06-07",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt6565702",
+        "url": "https://www.boxofficemojo.com/title/tt6565702/"
+      },
+      "box_office": {
+        "domestic": 65845974,
+        "international": 186597000,
+        "worldwide": 252442974,
+        "opening_weekend_domestic": 32828348,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 82958762,
+        "international": 235091915,
+        "worldwide": 318050677
+      },
+      "budget": 200000000,
+      "runtime_minutes": 113,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Fox",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 22,
+        "rt_audience": null,
+        "metacritic": 43,
+        "imdb": 5.7
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "June 5, 2019 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 26.08,
+        "pct_international": 73.92,
+        "domestic_multiplier": 2.01,
+        "opening_share_worldwide": 13,
+        "roi_worldwide": 1.26,
+        "breakeven_worldwide": 500000000,
+        "profit_vs_breakeven": -247557026,
+        "profitable": false,
+        "budget_real_2025": 251978236
+      }
+    },
+    {
       "title": "Spider-Man: Far From Home",
       "release_date": "2019-07-02",
       "universe": "MCU",
@@ -2045,6 +3589,65 @@
         "profit_vs_breakeven": -5712067,
         "profitable": false,
         "budget_real_2025": 105163420
+      }
+    },
+    {
+      "title": "The New Mutants",
+      "release_date": "2020-08-28",
+      "universe": "Fox",
+      "universe_label": "20th Century Fox (X-Men era)",
+      "studio_label": "20th Century Fox",
+      "bom": {
+        "id": "tt4682266",
+        "url": "https://www.boxofficemojo.com/title/tt4682266/"
+      },
+      "box_office": {
+        "domestic": 23852659,
+        "international": 25316935,
+        "worldwide": 49169594,
+        "opening_weekend_domestic": 7037017,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 29685529,
+        "international": 31507875,
+        "worldwide": 61193405
+      },
+      "budget": 67000000,
+      "runtime_minutes": 94,
+      "mpaa": "PG-13",
+      "distributor": "20th Century Studios",
+      "genres": [
+        "Action",
+        "Horror",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 36,
+        "rt_audience": null,
+        "metacritic": 43,
+        "imdb": 5.3
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "August 26, 2020 (EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 48.51,
+        "pct_international": 51.49,
+        "domestic_multiplier": 3.39,
+        "opening_share_worldwide": 14.31,
+        "roi_worldwide": 0.73,
+        "breakeven_worldwide": 167500000,
+        "profit_vs_breakeven": -118330406,
+        "profitable": false,
+        "budget_real_2025": 83384014
       }
     },
     {
@@ -3844,7 +5447,7 @@
         "worldwide": 126366532,
         "opening_weekend_domestic": 37102018,
         "widest_release_theaters": null,
-        "is_final": false
+        "is_final": true
       },
       "box_office_real_2025": {
         "domestic": 72366532,
@@ -3898,17 +5501,17 @@
         "url": "https://www.boxofficemojo.com/title/tt22084616/"
       },
       "box_office": {
-        "domestic": 899762495,
-        "international": 1441505369,
-        "worldwide": 2341267864,
+        "domestic": 923062495,
+        "international": 1485000000,
+        "worldwide": 2408062495,
         "opening_weekend_domestic": 360091572,
         "widest_release_theaters": null,
         "is_final": false
       },
       "box_office_real_2025": {
-        "domestic": 899762495,
-        "international": 1441505369,
-        "worldwide": 2341267864
+        "domestic": 923062495,
+        "international": 1485000000,
+        "worldwide": 2408062495
       },
       "budget": 200000000,
       "runtime_minutes": 145,
@@ -3934,13 +5537,13 @@
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
-        "pct_domestic": 38.43,
-        "pct_international": 61.57,
-        "domestic_multiplier": 2.5,
-        "opening_share_worldwide": 15.38,
-        "roi_worldwide": 11.71,
+        "pct_domestic": 38.33,
+        "pct_international": 61.67,
+        "domestic_multiplier": 2.56,
+        "opening_share_worldwide": 14.95,
+        "roi_worldwide": 12.04,
         "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": 1841267864,
+        "profit_vs_breakeven": 1908062495,
         "profitable": true,
         "budget_real_2025": 200000000
       }

@@ -27,9 +27,9 @@ const bars = [
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <rect width="${W}" height="${H}" fill="#0d0f14"/>
   <rect x="0" y="0" width="${W}" height="6" fill="#3ba152"/>
-  <text x="80" y="156" font-family="${SANS}" font-size="25" letter-spacing="5" fill="#8a92a4">SUPERHERO BOX OFFICE &#183; 2008&#8211;2026</text>
+  <text x="80" y="156" font-family="${SANS}" font-size="25" letter-spacing="5" fill="#8a92a4">SUPERHERO BOX OFFICE &#183; 2000&#8211;2026</text>
   <text x="76" y="300" font-family="${SANS}" font-size="118" font-weight="800" fill="#f2f3f7" letter-spacing="-3">The Cape Index</text>
-  <text x="80" y="366" font-family="${SANS}" font-size="33" fill="#a6acbb">Every Marvel and DC film since 2008, and what it made.</text>
+  <text x="80" y="366" font-family="${SANS}" font-size="33" fill="#a6acbb">Every live-action Marvel and DC film since 2000, and what it made.</text>
   <text x="80" y="524" font-family="${SANS}" font-size="30" font-weight="700" fill="#f2f3f7">${usd(total)} worldwide &#183; ${films.length} films</text>
   <text x="80" y="566" font-family="${SANS}" font-size="24" fill="#8a92a4">Marvel out-grosses DC ${gap}&#215;, verified against Box Office Mojo</text>
   ${bars}

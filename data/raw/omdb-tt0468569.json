@@ -1,0 +1,51 @@
+{
+  "Title": "The Dark Knight",
+  "Year": "2008",
+  "Rated": "PG-13",
+  "Released": "18 Jul 2008",
+  "Runtime": "152 min",
+  "Genre": "Action, Crime, Drama",
+  "Director": "Christopher Nolan",
+  "Writer": "Jonathan Nolan, Christopher Nolan, David S. Goyer",
+  "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+  "Plot": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+  "Language": "English, Mandarin",
+  "Country": "United States, United Kingdom",
+  "Awards": "Won 2 Oscars. 163 wins & 165 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "9.1/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "94%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "85/100"
+    }
+  ],
+  "Metascore": "85",
+  "imdbRating": "9.1",
+  "imdbVotes": "3,161,907",
+  "imdbID": "tt0468569",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/the_dark_knight/",
+  "DVD": "N/A",
+  "BoxOffice": "$534,987,076",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

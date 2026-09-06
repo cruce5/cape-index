@@ -1,0 +1,51 @@
+{
+  "Title": "Spider-Man",
+  "Year": "2002",
+  "Rated": "PG-13",
+  "Released": "03 May 2002",
+  "Runtime": "121 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Sam Raimi",
+  "Writer": "Stan Lee, Steve Ditko, David Koepp",
+  "Actors": "Tobey Maguire, Kirsten Dunst, Willem Dafoe",
+  "Plot": "After being bitten by a genetically-modified spider, a shy teenager gains spider-like abilities that he uses to fight injustice as a masked superhero and face a vengeful enemy.",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "Nominated for 2 Oscars. 17 wins & 65 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZWM0OWVmNTEtNWVkOS00MzgyLTkyMzgtMmE2ZTZiNjY4MmFiXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.4/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "90%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "73/100"
+    }
+  ],
+  "Metascore": "73",
+  "imdbRating": "7.4",
+  "imdbVotes": "958,249",
+  "imdbID": "tt0145487",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/spiderman/",
+  "DVD": "N/A",
+  "BoxOffice": "$408,524,875",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}
