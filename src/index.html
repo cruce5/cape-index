@@ -705,12 +705,18 @@
       <div class="two-col">
         <div class="card">
           <div class="card-title">Sources</div>
-          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb. Budgets are Box Office Mojo where it lists one, otherwise a widely-cited figure marked <span class="mono">est.</span> Always the production budget, never a number with marketing folded in.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. Box Office Mojo where it lists a clean one; otherwise the widely-cited number, marked <span class="mono">est.</span> Roughly half are estimates, and studios don&rsquo;t publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
         </div>
         <div class="card">
           <div class="card-title">Definitions</div>
-          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U to 2025 dollars. <b>Break-even</b> is estimated at 2.5&times; production budget: the rough point a theatrical release clears once exhibitors take their cut. <b>Still in release</b> films (marked <span class="inrelease">in release</span>) are included with grosses as of early September 2026 and will keep climbing.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">in release</span>) carry grosses as of early September 2026 and will climb; they are left out of the profit tallies until their runs end.</p>
         </div>
+      </div>
+      <div class="card" style="margin-top:20px">
+        <div class="card-title">Scope</div>
+        <p style="font-size:14px;color:var(--ink-2)">Every live-action Marvel or DC theatrical film from 2008 on that belongs to one of the connected universes here: the MCU, the DCEU, James Gunn&rsquo;s DCU, Sony&rsquo;s Spider-Man Universe, or DC&rsquo;s Elseworlds label (both Jokers and The Batman). <em>Deadpool &amp; Wolverine</em> counts as an MCU film; <em>Deadpool</em> and <em>Deadpool&nbsp;2</em> do not, they are part of the Fox X-Men run, which is out. Also out: Sony&rsquo;s pre-MCU Spider-Man films, the Fox X-Men and Fantastic Four films, anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>), and anything before 2008.</p>
       </div>
       <p class="smallprint" id="method-held"></p>
     </div>
@@ -903,7 +909,8 @@
       var fs = FILMS.filter(function (f) { return f.u === u.k; });
       var gr = fs.map(function (f) { return val(f, "ww"); });
       var tot = gr.reduce(function (a, b) { return a + b; }, 0);
-      var np = fs.reduce(function (a, f) { return a + profitOf(f); }, 0);
+      // profit only from films that have finished their run — an in-release film's loss isn't real yet
+      var np = fs.filter(function (f) { return f.final; }).reduce(function (a, f) { return a + profitOf(f); }, 0);
       var el = document.createElement("div");
       el.className = "sc";
       el.style.setProperty("--c", "var(" + COLORVAR[u.k] + ")");
@@ -1477,7 +1484,8 @@
   /* ---------- §06 profitability (diverging) ---------- */
   function profitOf(f) { return val(f, "ww") - val(f, "budget") * 2.5; }
   function renderProfit() {
-    var af = activeFilms().slice().sort(function (a, b) { return profitOf(b) - profitOf(a); });
+    // a film still in theatres hasn't finished making its money — keep it out of the P/L read
+    var af = activeFilms().filter(function (f) { return f.final; }).slice().sort(function (a, b) { return profitOf(b) - profitOf(a); });
     var maxPos = Math.max.apply(null, af.map(profitOf).concat([1]));
     var maxNeg = Math.abs(Math.min.apply(null, af.map(profitOf).concat([-1])));
     var svg;
