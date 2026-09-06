@@ -170,6 +170,7 @@
   .minibtn { appearance: none; border: 1px solid var(--border-strong); background: transparent; color: var(--ink-2); font: inherit; font-size: 12px; padding: 4px 10px; border-radius: 7px; cursor: pointer; }
   .minibtn:hover { color: var(--ink); }
   .minibtn[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+  .minibtn.showall { display: block; width: 100%; margin-top: 12px; padding: 10px; font-size: 13px; }
 
   svg { display: block; width: 100%; height: auto; overflow: visible; }
   .ax text { fill: var(--ink-muted); font-family: "IBM Plex Mono", monospace; font-size: 11px; }
@@ -642,8 +643,27 @@
     money: "nominal",
     outlierHide: false,
     splitSort: "ww",
-    sort: { key: "date", dir: 1 }
+    sort: { key: "date", dir: 1 },
+    expand: {}
   };
+
+  // On mobile, long ranked lists show head + tail with the quiet middle folded.
+  // Returns { list, foldAt, hiddenCount, midLabelFn } — foldAt is the index the
+  // fold marker goes after; render() re-runs when the "show all" button flips the flag.
+  function foldList(af, key, headN, tailN, midLabel) {
+    if (!isMobile() || STATE.expand[key] || af.length <= headN + tailN + 2) {
+      return { rows: af, fold: -1, hidden: 0, label: "" };
+    }
+    var head = af.slice(0, headN), tail = af.slice(af.length - tailN);
+    return { rows: head.concat(tail), fold: headN, hidden: af.length - headN - tailN, label: midLabel(af[headN - 1], af[af.length - tailN]) };
+  }
+  function showAllBtn(host, key, total) {
+    var b = document.createElement("button");
+    b.className = "minibtn showall";
+    b.textContent = "Show all " + total + " films";
+    b.addEventListener("click", function () { STATE.expand[key] = true; renderAll(); });
+    host.appendChild(b);
+  }
 
   /* ---------- helpers ---------- */
   function val(f, which) {
@@ -980,10 +1000,17 @@
     var maxWW = Math.max.apply(null, af.map(function (f) { return val(f, "ww"); }));
     var vert = isMobile();
     var W, H, m, rS, posOf, mid, lim0, lim1;
+    var N = af.length || 1;
     if (vert) {
-      W = 360; H = 34 * af.length + 56; m = { t: 28, r: 16, b: 14, l: 42 };
-      rS = function (v) { return 3.5 + Math.sqrt(v / maxWW) * 13.5; };
-      posOf = function (d) { return m.t + ((dateNum(d) - t0) / (t1 - t0)) * (H - m.t - m.b); };
+      // Blend date-fraction with rank-fraction so long empty stretches (2020) don't
+      // waste vertical space while the timeline still reads chronologically.
+      W = 360; H = 19 * N + 46; m = { t: 24, r: 16, b: 14, l: 42 };
+      rS = function (v) { return 3 + Math.sqrt(v / maxWW) * 11; };
+      posOf = function (d, idx) {
+        if (idx == null) idx = af.filter(function (f) { return f.date < d; }).length;
+        var dFrac = (dateNum(d) - t0) / (t1 - t0), rFrac = idx / N;
+        return m.t + (0.32 * dFrac + 0.68 * rFrac) * (H - m.t - m.b);
+      };
       mid = m.l + (W - m.l - m.r) / 2; lim0 = m.l; lim1 = W - m.r;
     } else {
       W = 1000; H = 460; m = { t: 20, r: 20, b: 34, l: 20 };
@@ -992,8 +1019,8 @@
       mid = m.t + (H - m.t - m.b) / 2; lim0 = m.t; lim1 = H - m.b;
     }
     var placed = [];
-    var nodes = af.map(function (f) {
-      var r = rS(val(f, "ww")), pos = posOf(f.date), spread = mid, dir = 1, step = 0;
+    var nodes = af.map(function (f, idx) {
+      var r = rS(val(f, "ww")), pos = posOf(f.date, idx), spread = mid, dir = 1, step = 0;
       for (var guard = 0; guard < 500; guard++) {
         var ok = true;
         for (var j = 0; j < placed.length; j++) {
@@ -1003,7 +1030,7 @@
         }
         if (ok) break;
         step += 1;
-        spread = mid + dir * step * (vert ? 3.0 : 3.2);
+        spread = mid + dir * step * (vert ? 2.5 : 3.2);
         dir *= -1;
         if (spread - r < lim0) spread = lim0 + r;
         if (spread + r > lim1) spread = lim1 - r;
@@ -1322,25 +1349,32 @@
     var maxNeg = Math.abs(Math.min.apply(null, af.map(profitOf).concat([-1])));
     var svg;
     if (isMobile()) {
-      var W = 360, rowH = 44, top = 22, padX = 8;
-      var H = top + rowH * af.length;
+      var fold = foldList(af, "profit", 12, 12, function (a, b) {
+        return (af.length - 24) + " more films, +" + usd(profitOf(a)) + " down to −" + usd(Math.abs(profitOf(b)));
+      });
+      var W = 360, rowH = 31, top = 20, padX = 8, foldH = fold.fold > -1 ? 30 : 0;
+      var H = top + rowH * fold.rows.length + foldH;
       var iw = W - padX * 2;
       var sc = iw / (maxPos + maxNeg);
       var x0 = padX + maxNeg * sc;
-      var body = af.map(function (f, i) {
-        var p = profitOf(f), yy = top + i * rowH, c = p >= 0 ? "var(--pos)" : "var(--neg)";
+      var body = fold.rows.map(function (f, i) {
+        var p = profitOf(f), yy = top + i * rowH + (fold.fold > -1 && i >= fold.fold ? foldH : 0);
+        var c = p >= 0 ? "var(--pos)" : "var(--neg)";
         var w = Math.max(2, Math.abs(p) * sc), bx = p >= 0 ? x0 : x0 - w;
         return '<g class="profRow" data-i="' + FILMS.indexOf(f) + '">' +
           '<rect x="0" y="' + yy + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
-          '<rect x="' + padX + '" y="' + (yy + 8) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
-          '<text x="' + (padX + 14) + '" y="' + (yy + 15) + '" class="lbl" font-size="12.5" fill="var(--ink)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
-          '<text x="' + (W - padX) + '" y="' + (yy + 15) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="12" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</text>" +
-          '<rect x="' + bx + '" y="' + (yy + 24) + '" width="' + w + '" height="11" rx="2" fill="' + c + '"/>' +
+          '<rect x="' + padX + '" y="' + (yy + 6) + '" width="7" height="7" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
+          '<text x="' + (padX + 13) + '" y="' + (yy + 12.5) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
+          '<text x="' + (W - padX) + '" y="' + (yy + 12.5) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11.5" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</text>" +
+          '<rect x="' + bx + '" y="' + (yy + 19) + '" width="' + w + '" height="9" rx="2" fill="' + c + '"/>' +
           "</g>";
       }).join("");
+      var foldMark = fold.fold > -1
+        ? '<text x="' + (W / 2) + '" y="' + (top + rowH * fold.fold + 19) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">· ' + fold.label + " ·</text>"
+        : "";
       svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Profit or loss versus break-even, per film">' +
         '<text x="' + x0 + '" y="13" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">break&#8209;even</text>' +
-        '<line x1="' + x0 + '" x2="' + x0 + '" y1="' + top + '" y2="' + H + '" stroke="var(--axis)" stroke-width="1"/>' + body + "</svg>";
+        '<line x1="' + x0 + '" x2="' + x0 + '" y1="' + top + '" y2="' + H + '" stroke="var(--axis)" stroke-width="1"/>' + foldMark + body + "</svg>";
     } else {
       var Wd = 1000, rh = 18, md = { t: 26, r: 112, b: 8, l: 222 };
       var Hd = md.t + md.b + rh * af.length;
@@ -1370,6 +1404,7 @@
         head + rows + '<line x1="' + x0d + '" x2="' + x0d + '" y1="' + md.t + '" y2="' + (Hd - md.b) + '" stroke="var(--axis)" stroke-width="1.5"/></svg>';
     }
     document.getElementById("chart-profit").innerHTML = svg;
+    if (isMobile() && !STATE.expand.profit && af.length > 26) showAllBtn(document.getElementById("chart-profit"), "profit", af.length);
     document.querySelectorAll("#chart-profit .profRow").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
       el.style.cursor = "pointer";
@@ -1394,9 +1429,13 @@
     af.forEach(function (f) { lo = Math.min(lo, f.open); hi = Math.max(hi, val(f, "d")); });
     var l0 = Math.log10(lo), l1 = Math.log10(hi);
     var mob = isMobile();
-    var W = mob ? 360 : 1000, rowH = mob ? 40 : 16;
-    var m = mob ? { t: 20, r: 44, b: 6, l: 12 } : { t: 22, r: 66, b: 8, l: 218 };
-    var H = m.t + m.b + rowH * af.length;
+    var fold = mob ? foldList(af, "legs", 12, 12, function (a, b) {
+      return (af.length - 24) + " more, " + a.mult.toFixed(1) + "× down to " + b.mult.toFixed(1) + "×";
+    }) : { rows: af, fold: -1 };
+    var W = mob ? 360 : 1000, rowH = mob ? 31 : 16;
+    var m = mob ? { t: 18, r: 44, b: 6, l: 12 } : { t: 22, r: 66, b: 8, l: 218 };
+    var foldH = fold.fold > -1 ? 26 : 0;
+    var H = m.t + m.b + rowH * fold.rows.length + foldH;
     var iw = W - m.l - m.r;
     var xS = function (v) { return m.l + (Math.log10(Math.max(1, v)) - l0) / (l1 - l0) * iw; };
     var g = '<text x="2" y="13" text-anchor="start" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">domestic $ · log scale</text>';
@@ -1405,19 +1444,21 @@
       g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
       g += '<text x="' + xS(t) + '" y="13" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
-    var rows = af.map(function (f, i) {
+    if (fold.fold > -1) g += '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fold.fold + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">· ' + fold.label + " ·</text>";
+    var rows = fold.rows.map(function (f, i) {
       var c = "var(" + COLORVAR[f.u] + ")";
       var xo = xS(f.open), xd = xS(val(f, "d"));
+      var off = (fold.fold > -1 && i >= fold.fold ? foldH : 0);
       if (mob) {
-        var yt = m.t + i * rowH, yb = yt + rowH / 2 + 8;
+        var yt = m.t + i * rowH + off, yb = yt + rowH / 2 + 6;
         return '<g class="legRow" data-i="' + FILMS.indexOf(f) + '">' +
           '<rect x="0" y="' + yt + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
-          '<rect x="' + m.l + '" y="' + (yt + 6) + '" width="8" height="8" rx="1.5" fill="' + c + '"/>' +
-          '<text x="' + (m.l + 14) + '" y="' + (yt + 13) + '" class="lbl" font-size="12.5" fill="var(--ink)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
-          '<text x="' + (W - m.r + 40) + '" y="' + (yt + 13) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="12" fill="var(--ink-2)">' + f.mult.toFixed(1) + "×</text>" +
+          '<rect x="' + m.l + '" y="' + (yt + 4) + '" width="7" height="7" rx="1.5" fill="' + c + '"/>' +
+          '<text x="' + (m.l + 13) + '" y="' + (yt + 10.5) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
+          '<text x="' + (W - m.r + 40) + '" y="' + (yt + 10.5) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11.5" fill="var(--ink-2)">' + f.mult.toFixed(1) + "×</text>" +
           '<line x1="' + xo + '" x2="' + xd + '" y1="' + yb + '" y2="' + yb + '" stroke="' + c + '" stroke-width="3" stroke-opacity="0.5" stroke-linecap="round"/>' +
-          '<circle cx="' + xo + '" cy="' + yb + '" r="4" fill="var(--surface)" stroke="' + c + '" stroke-width="1.8"/>' +
-          '<circle cx="' + xd + '" cy="' + yb + '" r="4.6" fill="' + c + '"/>' + "</g>";
+          '<circle cx="' + xo + '" cy="' + yb + '" r="3.6" fill="var(--surface)" stroke="' + c + '" stroke-width="1.8"/>' +
+          '<circle cx="' + xd + '" cy="' + yb + '" r="4.2" fill="' + c + '"/>' + "</g>";
       }
       var yy = m.t + i * rowH + rowH / 2;
       return '<g class="legRow" data-i="' + FILMS.indexOf(f) + '">' +
@@ -1432,6 +1473,7 @@
     document.getElementById("chart-legs").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Opening weekend to lifetime domestic, per film, on a log scale">' +
       '<g class="grid">' + g + "</g>" + rows + "</svg>";
+    if (mob && !STATE.expand.legs && af.length > 26) showAllBtn(document.getElementById("chart-legs"), "legs", af.length);
     document.querySelectorAll("#chart-legs .legRow").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
       el.style.cursor = "pointer";
