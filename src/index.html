@@ -1,5 +1,24 @@
 <title>The Cape Index</title>
 <meta name="description" content="Eighteen years of Marvel and DC at the global box office, verified against Box Office Mojo." />
+
+<!-- Update the four URLs below to the custom domain once it is live. -->
+<link rel="canonical" href="https://cape-index.williamfyost.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Cape Index" />
+<meta property="og:title" content="The Cape Index" />
+<meta property="og:description" content="Every Marvel and DC film since 2008, and what it made. Grosses verified against Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
+<meta property="og:url" content="https://cape-index.williamfyost.workers.dev/" />
+<meta property="og:image" content="https://cape-index.williamfyost.workers.dev/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Cape Index" />
+<meta name="twitter:description" content="Every Marvel and DC film since 2008, and what it made. Verified box office, profit, legs, reviews and the shared-cast roster." />
+<meta name="twitter:image" content="https://cape-index.williamfyost.workers.dev/og.png" />
+<meta name="theme-color" content="#0d0f14" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0f14'/%3E%3Crect x='7' y='17' width='5' height='9' rx='1' fill='%23e5484d'/%3E%3Crect x='13.5' y='11' width='5' height='15' rx='1' fill='%233987e5'/%3E%3Crect x='20' y='14' width='5' height='12' rx='1' fill='%231f9d8d'/%3E%3C/svg%3E" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" />
@@ -271,7 +290,7 @@
   }
 </style>
 
-<div class="tip" id="tip" role="status" aria-live="polite"></div>
+<div class="tip" id="tip" role="status" aria-live="off"></div>
 
 <header class="masthead">
   <div class="wrap">
@@ -675,7 +694,7 @@
       <div class="two-col">
         <div class="card">
           <div class="card-title">Sources</div>
-          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb. Budgets are Box Office Mojo where it lists one, otherwise a widely-cited figure marked <span class="mono">est.</span> Always the production budget, never a number with marketing folded in.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb. Budgets are Box Office Mojo where it lists one, otherwise a widely-cited figure marked <span class="mono">est.</span> Always the production budget, never a number with marketing folded in.</p>
         </div>
         <div class="card">
           <div class="card-title">Definitions</div>
@@ -689,7 +708,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    Rebuilt from a <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome">Tableau Public workbook</a> by Bill Yost. Data verified September 2026 against Box Office Mojo. Not affiliated with Marvel, DC, Disney or Warner Bros.
+    Rebuilt from a <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a> by Bill Yost. Data verified September 2026 against Box Office Mojo. Not affiliated with Marvel, DC, Disney or Warner Bros.
   </div>
 </footer>
 
@@ -729,10 +748,10 @@
     var head = af.slice(0, headN), tail = af.slice(af.length - tailN);
     return { rows: head.concat(tail), fold: headN, hidden: af.length - headN - tailN, label: midLabel(af[headN - 1], af[af.length - tailN]) };
   }
-  function showAllBtn(host, key, total) {
+  function showAllBtn(host, key, total, noun) {
     var b = document.createElement("button");
     b.className = "minibtn showall";
-    b.textContent = "Show all " + total + " films";
+    b.textContent = "Show all " + total + " " + (noun || "films");
     b.addEventListener("click", function () { STATE.expand[key] = true; renderAll(); });
     host.appendChild(b);
   }
@@ -793,17 +812,43 @@
 
   /* ---------- tooltip ---------- */
   var tip = document.getElementById("tip");
+  var tipPinned = false;
   function showTip(html, x, y) {
     tip.innerHTML = html;
     tip.style.opacity = "1";
     var w = tip.offsetWidth, h = tip.offsetHeight;
     var px = x + 16, py = y + 16;
-    if (px + w > window.innerWidth - 8) px = x - w - 16;
-    if (py + h > window.innerHeight - 8) py = y - h - 16;
+    if (px + w > window.innerWidth - 8) px = Math.max(8, x - w - 16);
+    if (py + h > window.innerHeight - 8) py = Math.max(8, y - h - 16);
     tip.style.left = px + "px";
     tip.style.top = py + "px";
   }
-  function hideTip() { tip.style.opacity = "0"; }
+  function hideTip() { if (!tipPinned) tip.style.opacity = "0"; }
+  // Bind a mark to the tooltip for mouse (hover) and touch (tap to pin), and,
+  // when keyboardable, for focus. htmlFn returns the markup; position comes
+  // from the pointer or the element box.
+  function tipBind(el, htmlFn, keyboardable) {
+    el.style.cursor = "pointer";
+    function at(e) {
+      var r = el.getBoundingClientRect();
+      var x = e && e.clientX ? e.clientX : r.left + r.width / 2;
+      var y = e && e.clientY ? e.clientY : r.top + Math.min(r.height / 2, 12);
+      showTip(htmlFn(), x, y);
+    }
+    el.addEventListener("mousemove", function (e) { if (!tipPinned) at(e); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("click", function (e) {
+      e.stopPropagation();
+      tipPinned = false; at(e); tipPinned = true;
+    });
+    if (keyboardable) {
+      if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "0");
+      el.addEventListener("focus", function () { tipPinned = false; at(); });
+      el.addEventListener("blur", hideTip);
+    }
+  }
+  document.addEventListener("click", function () { if (tipPinned) { tipPinned = false; hideTip(); } });
+  window.addEventListener("keydown", function (e) { if (e.key === "Escape" && tipPinned) { tipPinned = false; hideTip(); } });
   function filmTip(f) {
     var flag = f.final ? "" : '<div class="flag">◉ still in release, gross will climb</div>';
     return '<div class="tt">' + esc(f.t) + '</div>' +
@@ -917,11 +962,17 @@
       "</svg>";
     var svg = document.querySelector("#chart-year svg");
     svg.querySelectorAll("#year-bars rect").forEach(function (r) {
-      r.addEventListener("mousemove", function (e) {
-        var u = r.getAttribute("data-u"), yr = r.getAttribute("data-y"), v = +r.getAttribute("data-v");
-        showTip('<div class="tt">' + yr + " &nbsp;·&nbsp; " + u + '</div><div class="tr"><span>Worldwide</span><b>' + usd(v) + "</b></div>", e.clientX, e.clientY);
+      tipBind(r, function () {
+        var u = r.getAttribute("data-u"), yr = +r.getAttribute("data-y"), v = +r.getAttribute("data-v");
+        var fs = af.filter(function (f) { return f.u === u && new Date(f.date).getFullYear() === yr; })
+          .sort(function (a, b) { return val(b, "ww") - val(a, "ww"); });
+        return '<div class="tt">' + yr + " &nbsp;·&nbsp; " + u + '</div>' +
+          '<div class="tr"><span>Worldwide</span><b>' + usd(v) + '</b></div>' +
+          '<div class="tr"><span>Films</span><b>' + fs.length + '</b></div>' +
+          '<div class="flist">' + fs.map(function (f) {
+            return "<div><span>" + esc(f.t) + ' &nbsp;<span class="fy">' + usd(val(f, "ww")) + "</span></span></div>";
+          }).join("") + "</div>";
       });
-      r.addEventListener("mouseleave", hideTip);
     });
     legend("leg-year", activeUnis());
     tableToggleFill("table-year", yearTableData(byYear, years), ["Year", "MCU", "DCEU", "DCU", "Elseworlds", "Total"]);
@@ -937,7 +988,7 @@
   /* ---------- §01 box-and-whisker ---------- */
   function renderBox() {
     var mob = isMobile();
-    var W = mob ? 460 : 1000, rowH = mob ? 82 : 92, m = mob ? { t: 10, r: 12, b: 28, l: 68 } : { t: 10, r: 20, b: 34, l: 96 };
+    var W = mob ? 460 : 1000, rowH = mob ? 82 : 92, m = mob ? { t: 10, r: 12, b: 28, l: 80 } : { t: 10, r: 20, b: 34, l: 96 };
     var us = activeUnis();
     var H = m.t + m.b + rowH * us.length;
     var all = activeFilms().filter(function (f) { return !(STATE.outlierHide && val(f, "ww") >= 1e9); });
@@ -956,7 +1007,7 @@
       var arr = fs.map(function (f) { return val(f, "ww"); }).sort(function (a, b) { return a - b; });
       var cy = m.t + rowH * i + rowH / 2;
       var c = "var(" + COLORVAR[u] + ")";
-      rows += '<text x="' + (m.l - 12) + '" y="' + (cy + 4) + '" text-anchor="end" class="lbl lbl-strong" font-size="12">' + u + " · " + fs.length + "</text>";
+      rows += '<text x="' + (m.l - 10) + '" y="' + (cy + 4) + '" text-anchor="end" class="lbl lbl-strong" font-size="' + (mob ? 10 : 12) + '">' + u + (mob ? " " : " · ") + fs.length + "</text>";
       if (arr.length < 4) {
         if (arr.length >= 2) {
           var md0 = quantile(arr, 0.5);
@@ -1328,36 +1379,15 @@
       "</tbody></table></div>";
   }
   function tableToggleFill(id, rows, headers) { fillTable(id, rows, headers); }
-  function wireDots(svg) {
-    svg.querySelectorAll(".beeDot").forEach(function (el) {
+  function wireFilmMarks(svg, sel, kb) {
+    svg.querySelectorAll(sel).forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
-      el.style.cursor = "pointer";
-      el.setAttribute("tabindex", "0");
-      el.addEventListener("mousemove", function (e) { showTip(filmTip(f), e.clientX, e.clientY); });
-      el.addEventListener("mouseleave", hideTip);
-      el.addEventListener("focus", function () {
-        var r = el.getBoundingClientRect();
-        showTip(filmTip(f), r.left + r.width / 2, r.top);
-      });
-      el.addEventListener("blur", hideTip);
+      tipBind(el, function () { return filmTip(f); }, kb);
     });
   }
-  function wireCells(svg) {
-    svg.querySelectorAll(".tmCell").forEach(function (el) {
-      var f = FILMS[+el.getAttribute("data-i")];
-      el.style.cursor = "pointer";
-      el.addEventListener("mousemove", function (e) { showTip(filmTip(f), e.clientX, e.clientY); });
-      el.addEventListener("mouseleave", hideTip);
-    });
-  }
-  function wireSplit(svg) {
-    svg.querySelectorAll(".splitRow").forEach(function (el) {
-      var f = FILMS[+el.getAttribute("data-i")];
-      el.style.cursor = "pointer";
-      el.addEventListener("mousemove", function (e) { showTip(filmTip(f), e.clientX, e.clientY); });
-      el.addEventListener("mouseleave", hideTip);
-    });
-  }
+  function wireDots(svg) { wireFilmMarks(svg, ".beeDot", true); }
+  function wireCells(svg) { wireFilmMarks(svg, ".tmCell", false); }
+  function wireSplit(svg) { wireFilmMarks(svg, ".splitRow", false); }
 
   /* ---------- shared: universe-shaped marker ---------- */
   var SHAPE = { MCU: "circle", DCEU: "square", DCU: "triangle", Elseworlds: "diamond" };
@@ -1381,7 +1411,7 @@
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var perYear = years.map(function (yr) {
       var b = af.filter(function (f) { return new Date(f.date).getFullYear() === yr && val(f, "budget"); }).map(function (f) { return val(f, "budget"); });
-      return { yr: yr, n: b.length, med: b.length ? median(b) : null, max: b.length ? Math.max.apply(null, b) : null };
+      return { yr: yr, n: b.length, med: b.length ? median(b) : null, min: b.length ? Math.min.apply(null, b) : null, max: b.length ? Math.max.apply(null, b) : null };
     });
     var allB = af.map(function (f) { return val(f, "budget"); }).filter(Boolean);
     var max = niceMax(Math.max.apply(null, allB) || 1);
@@ -1411,10 +1441,18 @@
       "</svg>";
     var svg = document.querySelector("#chart-budget svg");
     svg.querySelectorAll(".budDot").forEach(function (el) {
-      el.addEventListener("mousemove", function (e) {
-        showTip('<div class="tt">' + el.getAttribute("data-yr") + '</div><div class="tr"><span>Median budget</span><b>' + usd(+el.getAttribute("data-med")) + '</b></div><div class="tr"><span>Films</span><b>' + el.getAttribute("data-n") + "</b></div>", e.clientX, e.clientY);
+      tipBind(el, function () {
+        var yr = +el.getAttribute("data-yr");
+        var p = perYear.find(function (q) { return q.yr === yr; }) || {};
+        var fs = af.filter(function (f) { return new Date(f.date).getFullYear() === yr && val(f, "budget"); })
+          .sort(function (a, b) { return val(b, "budget") - val(a, "budget"); });
+        return '<div class="tt">' + yr + '</div>' +
+          '<div class="tr"><span>Median budget</span><b>' + usd(p.med) + '</b></div>' +
+          '<div class="tr"><span>Range</span><b>' + usd(p.min) + "–" + usd(p.max) + '</b></div>' +
+          '<div class="flist">' + fs.map(function (f) {
+            return "<div><span>" + esc(f.t) + (f.budgetEst ? " (est)" : "") + ' &nbsp;<span class="fy">' + usd(val(f, "budget")) + "</span></span></div>";
+          }).join("") + "</div>";
       });
-      el.addEventListener("mouseleave", hideTip);
     });
     wireDots(svg);
     document.getElementById("leg-budget").innerHTML = '<span><i style="--c:var(--dceu)"></i>Median budget' + (STATE.money === "real" ? " (2025 $)" : "") + '</span><span style="color:var(--ink-muted)">faint dot = one film</span>';
@@ -1489,12 +1527,15 @@
     if (isMobile() && !STATE.expand.profit && af.length > 26) showAllBtn(document.getElementById("chart-profit"), "profit", af.length);
     document.querySelectorAll("#chart-profit .profRow").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
-      el.style.cursor = "pointer";
-      el.addEventListener("mousemove", function (e) {
-        var p = profitOf(f);
-        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div><div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div><div class="tr"><span>Break-even (2.5&times;)</span><b>' + usd(val(f, "budget") * 2.5) + '</b></div><div class="tr"><span>' + (p >= 0 ? "Profit" : "Loss") + '</span><b>' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</b></div>", e.clientX, e.clientY);
+      tipBind(el, function () {
+        var p = profitOf(f), be = val(f, "budget") * 2.5;
+        return '<div class="tt">' + esc(f.t) + '</div>' +
+          '<div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div>' +
+          '<div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div>' +
+          '<div class="tr"><span>Break-even (2.5&times;)</span><b>' + usd(be) + '</b></div>' +
+          '<div class="tr"><span>' + (p >= 0 ? "Profit" : "Loss") + '</span><b>' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + '</b></div>' +
+          '<div class="tr"><span>Gross vs break-even</span><b>' + (val(f, "ww") / be).toFixed(2) + "&times;</b></div>";
       });
-      el.addEventListener("mouseleave", hideTip);
     });
     var np = af.filter(function (f) { return profitOf(f) < 0; }).length;
     document.getElementById("leg-profit").innerHTML = '<span><i style="--c:var(--pos)"></i>Cleared break-even</span><span><i style="--c:var(--neg)"></i>Fell short (' + np + ')</span><span style="color:var(--ink-muted)">break-even = 2.5&times; budget</span>';
@@ -1558,11 +1599,13 @@
     if (mob && !STATE.expand.legs && af.length > 26) showAllBtn(document.getElementById("chart-legs"), "legs", af.length);
     document.querySelectorAll("#chart-legs .legRow").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
-      el.style.cursor = "pointer";
-      el.addEventListener("mousemove", function (e) {
-        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Opening weekend</span><b>' + usd(f.open) + '</b></div><div class="tr"><span>Lifetime domestic</span><b>' + usd(val(f, "d")) + '</b></div><div class="tr"><span>Multiplier</span><b>' + f.mult.toFixed(2) + "×</b></div>", e.clientX, e.clientY);
+      tipBind(el, function () {
+        return '<div class="tt">' + esc(f.t) + '</div>' +
+          '<div class="tr"><span>Opening weekend</span><b>' + usd(f.open) + '</b></div>' +
+          '<div class="tr"><span>Lifetime domestic</span><b>' + usd(val(f, "d")) + '</b></div>' +
+          '<div class="tr"><span>Multiplier</span><b>' + f.mult.toFixed(2) + '×</b></div>' +
+          '<div class="tr"><span>Opening share</span><b>' + Math.round(f.open / val(f, "d") * 100) + "%</b></div>";
       });
-      el.addEventListener("mouseleave", hideTip);
     });
     document.getElementById("leg-legs").innerHTML = '<span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span><span style="color:var(--ink-muted)">log scale, line length = the multiplier</span>';
     fillTable("table-legs", af.map(function (f) {
@@ -1657,6 +1700,13 @@
       return "<div><span class=\"fy\">&rsquo;" + f.date.slice(2, 4) + "</span><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>";
   }
+  function charByName(n) { return CAST.characters.find(function (c) { return c.n === n; }); }
+  function charFilmTip(c, films) {
+    return '<div class="tt">' + esc(c.n) + '</div>' +
+      '<div class="tr"><span>' + (c.real ? esc(c.real) + " &nbsp;·&nbsp; " : "") + c.u + '</span></div>' +
+      (c.actors && c.actors.length ? '<div class="tr"><span>' + esc(c.actors.join(", ")) + '</span></div>' : "") +
+      charFilmList(films || c.films);
+  }
   function renderRoster() {
     var mob = isMobile();
     var af = castFilms();
@@ -1688,6 +1738,10 @@
       }
       document.getElementById("chart-roster").innerHTML =
         '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Each character\'s film appearances over time">' + yl + body + "</svg>";
+      document.querySelectorAll("#chart-roster .rosterRow").forEach(function (el) {
+        var rec = rows.find(function (z) { return z.c.n === el.getAttribute("data-c"); });
+        if (rec) tipBind(el, function () { return charFilmTip(rec.c, rec.films); });
+      });
     } else {
       var Wd = 1000, md = { t: 34, r: 12, b: 10, l: 152 }, rh = 19, N = 26;
       var showD = rows.slice(0, N);
@@ -1717,11 +1771,21 @@
       document.getElementById("chart-roster").innerHTML =
         '<svg viewBox="0 0 ' + Wd + " " + Hd + '" role="img" aria-label="Grid of the 26 most-recurring characters against every film in release order">' + head + grid + "</svg>";
       document.querySelectorAll("#chart-roster .rc").forEach(function (el) {
-        el.addEventListener("mousemove", function (e) {
-          var f = FILMS.find(function (x) { return x.t === el.getAttribute("data-f"); });
-          showTip('<div class="tt">' + esc(el.getAttribute("data-c")) + '</div><div class="tr"><span>' + esc(f.t) + "</span></div><div class=\"tr\"><span>" + f.u + " · " + new Date(f.date).getFullYear() + "</span></div>", e.clientX, e.clientY);
+        var name = el.getAttribute("data-c"), title = el.getAttribute("data-f");
+        var f = FILMS.find(function (x) { return x.t === title; });
+        var rec = rows.find(function (z) { return z.c.n === name; });
+        tipBind(el, function () {
+          var ordered = (rec ? rec.c.films : []).slice().sort(function (a, b) {
+            var za = FILMS.find(function (z) { return z.t === a; }), zb = FILMS.find(function (z) { return z.t === b; });
+            return (za ? za.date : "").localeCompare(zb ? zb.date : "");
+          });
+          var rank = ordered.indexOf(title) + 1;
+          var actor = rec && rec.c.fa ? rec.c.fa[title] : null;
+          return '<div class="tt">' + esc(name) + '</div>' +
+            '<div class="tr"><span>' + esc(f.t) + " &nbsp;·&nbsp; " + new Date(f.date).getFullYear() + '</span></div>' +
+            (actor ? '<div class="tr"><span>Played by</span><b>' + esc(actor) + '</b></div>' : "") +
+            '<div class="tr"><span>Their film</span><b>' + rank + " of " + ordered.length + "</b></div>";
         });
-        el.addEventListener("mouseleave", hideTip);
       });
     }
     legend("leg-roster", activeUnis());
@@ -1764,10 +1828,14 @@
       '<g class="grid">' + g + yl + "</g>" + bars + "</svg>";
     document.querySelectorAll("#chart-ensemble .ensBar").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
-      el.addEventListener("mousemove", function (e) {
-        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Codenamed characters</span><b>' + el.getAttribute("data-v") + "</b></div>", e.clientX, e.clientY);
+      tipBind(el, function () {
+        var names = (CAST.byFilm[f.t] || []).slice();
+        var shown = names.slice(0, 16), more = names.length - shown.length;
+        return '<div class="tt">' + esc(f.t) + '</div>' +
+          '<div class="tr"><span>Codenamed characters</span><b>' + names.length + '</b></div>' +
+          '<div class="flist">' + shown.map(function (n) { return "<div><span>" + esc(n) + "</span></div>"; }).join("") +
+          (more > 0 ? '<div><span class="fy">+ ' + more + " more</span></div>" : "") + "</div>";
       });
-      el.addEventListener("mouseleave", hideTip);
     });
     legend("leg-ensemble", activeUnis());
   }
@@ -1817,14 +1885,10 @@
     document.getElementById("chart-footprint").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Characters ranked by number of film appearances">' +
       '<g class="grid">' + g + "</g>" + body + foldMark + "</svg>";
-    if (folded) showAllBtn(document.getElementById("chart-footprint"), "footprint", allRows.length);
+    if (folded) showAllBtn(document.getElementById("chart-footprint"), "footprint", allRows.length, "characters");
     document.querySelectorAll("#chart-footprint .fpRow").forEach(function (el) {
-      var x = activeChars().find(function (y) { return y.c.n === el.getAttribute("data-c"); });
-      if (!x) return;
-      el.addEventListener("mousemove", function (e) {
-        showTip('<div class="tt">' + esc(x.c.n) + '</div><div class="tr"><span>' + (x.c.real ? esc(x.c.real) + " · " : "") + x.c.u + '</span></div><div class="tr"><span>' + esc(x.c.actors.join(", ")) + "</span></div>" + charFilmList(x.films), e.clientX, e.clientY);
-      });
-      el.addEventListener("mouseleave", hideTip);
+      var x = allRows.find(function (y) { return y.c.n === el.getAttribute("data-c"); });
+      if (x) tipBind(el, function () { return charFilmTip(x.c, x.films); });
     });
     legend("leg-fp", activeUnis());
     fillTable("table-footprint", activeChars().map(function (x) {

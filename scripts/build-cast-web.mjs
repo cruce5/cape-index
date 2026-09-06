@@ -13,15 +13,21 @@ const primaryUniverse = (c) => {
   return Object.keys(t).sort((a, b) => t[b] - t[a])[0];
 };
 
-const characters = chars.map((c) => ({
-  n: c.name,
-  real: c.real_name || null,
-  u: primaryUniverse(c),
-  us: c.universes,
-  apps: c.appearances,
-  actors: c.actors,
-  films: c.films.map((f) => f.title).filter((t) => filmOrder.includes(t)),
-}));
+const characters = chars.map((c) => {
+  const films = c.films.filter((f) => filmOrder.includes(f.title));
+  const fa = {};
+  films.forEach((f) => { if (f.actor) fa[f.title] = f.actor; });
+  return {
+    n: c.name,
+    real: c.real_name || null,
+    u: primaryUniverse(c),
+    us: c.universes,
+    apps: c.appearances,
+    actors: c.actors,
+    films: films.map((f) => f.title),
+    fa, // film title -> actor in that film
+  };
+});
 
 const byFilm = {};
 filmOrder.forEach((t) => { byFilm[t] = []; });
