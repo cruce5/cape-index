@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" />
 
 <style>
-  /* ============ TOKENS — dark-first ============ */
+  /* ============ TOKENS - dark-first ============ */
   :root {
     color-scheme: dark;
     --page: #0d0f14;
@@ -271,7 +271,7 @@
     <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2008&ndash;2026</p>
     <h1>The Cape Index</h1>
     <p class="dek">Every Marvel and DC film since 2008, and what it made. Worldwide grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time. Any number on the page switches to 2025 dollars.</p>
-    <p class="teach-hint">It also works as a set of worked examples. Flip <b>Design notes</b> on, up in the toolbar, and every chart explains why it&rsquo;s built the way it is &mdash; the form, the colour, and what it can&rsquo;t tell you.</p>
+    <p class="teach-hint">It also works as a set of worked examples. Flip <b>Design notes</b> on, up in the toolbar, and every chart explains why it&rsquo;s built the way it is, the form, the colour, and what it can&rsquo;t tell you.</p>
     <div class="thesis" id="thesis"></div>
     <p class="smallprint" id="smallprint"></p>
   </div>
@@ -311,7 +311,7 @@
 </nav>
 
 <main>
-  <div class="act"><div class="wrap"><h3>Act I &nbsp;—&nbsp; The scoreboard</h3><span class="rule"></span><span class="sub">how big, and who</span></div></div>
+  <div class="act"><div class="wrap"><h3>Act I &nbsp;&middot;&nbsp; The scoreboard</h3><span class="rule"></span><span class="sub">how big, and who</span></div></div>
 
   <section class="view" id="v-scorecard">
     <div class="wrap">
@@ -335,7 +335,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>How has total superhero box office moved year to year, and how does each year split between the studios?</dd>
           <dt>Why this form</dt><dd>A stacked column reads as one total per year (the height) and a split within it (the segments). Separate lines would bury the &ldquo;how big was the whole year&rdquo; question; a grouped column would make the year total hard to see.</dd>
-          <dt>Choices here</dt><dd>Segments are held apart by a 2&nbsp;px gap in the page colour, not a stroke &mdash; a border is ink that isn&rsquo;t data. Universe order is fixed, so a colour never jumps position between years. Y-axis labels sit flush left, close to the title.</dd>
+          <dt>Choices here</dt><dd>Segments are held apart by a 2&nbsp;px gap in the page colour, not a stroke, a border is ink that isn&rsquo;t data. Universe order is fixed, so a colour never jumps position between years. Y-axis labels sit flush left, close to the title.</dd>
           <dt>Watch for</dt><dd>Stacking hides the individual films. Good for the total and rough shares; useless for &ldquo;which 2021 Marvel film was that.&rdquo; That&rsquo;s what the table is for.</dd>
         </dl></div>
       </div>
@@ -353,7 +353,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Beyond the averages, how are each universe&rsquo;s grosses actually spread out?</dd>
           <dt>Why this form</dt><dd>A box plot shows the middle 50%, the median and the tails at once. An average alone would hide that DC&rsquo;s range is both wider and lower. The dots put every film back on the chart so the summary isn&rsquo;t a black box.</dd>
-          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean &mdash; one $2.8B film drags a mean around. DCU and Elseworlds have two films each, so they get dots and a median tick only; a quartile box on n&nbsp;=&nbsp;2 is theatre.</dd>
+          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean, one $2.8B film drags a mean around. DCU and Elseworlds have two films each, so they get dots and a median tick only; a quartile box on n&nbsp;=&nbsp;2 is theatre.</dd>
           <dt>Watch for</dt><dd>With this few films per group, a single film moves the quartiles a lot. Read it as &ldquo;roughly,&rdquo; not &ldquo;precisely.&rdquo;</dd>
         </dl></div>
       </div>
@@ -378,21 +378,21 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where is the money concentrated across all 57 films at once?</dd>
           <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 57-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
-          <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding &mdash; a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
+          <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
           <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
         </dl></div>
       </div>
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>Act II &nbsp;—&nbsp; Over time</h3><span class="rule"></span><span class="sub">cadence, scale, budgets</span></div></div>
+  <div class="act"><div class="wrap"><h3>Act II &nbsp;&middot;&nbsp; Over time</h3><span class="rule"></span><span class="sub">cadence, scale, budgets</span></div></div>
 
   <section class="view" id="v-beeswarm">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 03 &nbsp;/&nbsp; BY RELEASE DATE</span>
         <h2>Marvel put out more films, and bigger ones, through the 2010s</h2>
-        <p class="dek">Each film sits on its release date, sized by worldwide gross. The densest, largest run is 2018&ndash;19 &mdash; Infinity War, Captain Marvel, Endgame, Aquaman. The year after is almost blank.</p>
+        <p class="dek">Each film sits on its release date, sized by worldwide gross. The densest, largest run is 2018&ndash;19: Infinity War, Captain Marvel, Endgame, Aquaman. The year after is almost blank.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -402,9 +402,9 @@
         <button class="minibtn" data-table="beeswarm" aria-pressed="false" style="margin-top:12px">Show data</button>
         <div id="table-beeswarm" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
-          <dt>Question</dt><dd>When did each film come out and how big was it &mdash; without films from the same summer hiding each other?</dd>
+          <dt>Question</dt><dd>When did each film come out and how big was it, without films from the same summer hiding each other?</dd>
           <dt>Why this form</dt><dd>A plain timeline stacks dots on top of each other around each release window. The beeswarm nudges them apart vertically so every film stays visible at its real date.</dd>
-          <dt>Choices here</dt><dd>Circle <em>area</em> is proportional to gross &mdash; the radius scales with the square root, so the big films aren&rsquo;t exaggerated. Each new circle is pushed to the nearest open spot. Vertical position on its own means nothing.</dd>
+          <dt>Choices here</dt><dd>Circle <em>area</em> is proportional to gross, the radius scales with the square root, so the big films aren&rsquo;t exaggerated. Each new circle is pushed to the nearest open spot. Vertical position on its own means nothing.</dd>
           <dt>Watch for</dt><dd>The jitter is cosmetic. Don&rsquo;t read height as a second variable.</dd>
         </dl></div>
       </div>
@@ -427,9 +427,9 @@
         <div id="table-scatter" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Is there a trend in film size over 18 years, and which films broke away from the pack?</dd>
-          <dt>Why this form</dt><dd>Two continuous axes &mdash; date and gross &mdash; is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
+          <dt>Why this form</dt><dd>Two continuous axes, date and gross, is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
           <dt>Choices here</dt><dd>The fourth series can&rsquo;t be told from the others by colour alone under colour blindness, so each universe also carries a shape. Only the six biggest films are labelled; a label on all 57 is noise.</dd>
-          <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support &mdash; the story is the spread and the outliers, not a slope.</dd>
+          <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support, the story is the spread and the outliers, not a slope.</dd>
         </dl></div>
       </div>
     </div>
@@ -452,14 +452,14 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Have production budgets actually climbed once you strip out inflation?</dd>
           <dt>Why this form</dt><dd>One measure over time is a line. The faint dots behind it are the individual films, so you can see the spread the line is summarising.</dd>
-          <dt>Choices here</dt><dd>The line is the <em>median</em> budget per year &mdash; the mean would swing with a single $350M Avengers. One line, not four: split by universe and the yearly counts get too small to read.</dd>
+          <dt>Choices here</dt><dd>The line is the <em>median</em> budget per year, the mean would swing with a single $350M Avengers. One line, not four: split by universe and the yearly counts get too small to read.</dd>
           <dt>Watch for</dt><dd>Budgets are the softest number on the site. Studios don&rsquo;t disclose them; anything not straight from Box Office Mojo is an estimate, marked <code>est.</code> in the ledger.</dd>
         </dl></div>
       </div>
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>Act III &nbsp;—&nbsp; Beyond the gross</h3><span class="rule"></span><span class="sub">profit, legs, reviews, geography</span></div></div>
+  <div class="act"><div class="wrap"><h3>Act III &nbsp;&middot;&nbsp; Beyond the gross</h3><span class="rule"></span><span class="sub">profit, legs, reviews, geography</span></div></div>
 
   <section class="view" id="v-profit">
     <div class="wrap">
@@ -477,9 +477,9 @@
         <div id="table-profit" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which films actually cleared their break-even point, and by how much?</dd>
-          <dt>Why this form</dt><dd>A diverging bar anchored at zero puts profit right, loss left, and sorts the whole slate best to worst in one read. Gross alone can&rsquo;t answer &ldquo;did it make money&rdquo; &mdash; a $400M film is a hit or a bomb depending on its budget.</dd>
-          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Bar colour and sign carry the outcome &mdash; green/right made money, orange/left lost it &mdash; and every value label sits in one column clear of the film names. The universe rides along as a chip on the title.</dd>
-          <dt>Watch for</dt><dd>Break-even is a rule of thumb, not studio accounting &mdash; home video, streaming and TV deals aren&rsquo;t in it. Trust the ranking more than the exact dollar figure.</dd>
+          <dt>Why this form</dt><dd>A diverging bar anchored at zero puts profit right, loss left, and sorts the whole slate best to worst in one read. Gross alone can&rsquo;t answer &ldquo;did it make money&rdquo;, a $400M film is a hit or a bomb depending on its budget.</dd>
+          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Bar colour and sign carry the outcome, green/right made money, orange/left lost it, and every value label sits in one column clear of the film names. The universe rides along as a chip on the title.</dd>
+          <dt>Watch for</dt><dd>Break-even is a rule of thumb, not studio accounting, home video, streaming and TV deals aren&rsquo;t in it. Trust the ranking more than the exact dollar figure.</dd>
         </dl></div>
       </div>
     </div>
@@ -490,7 +490,7 @@
       <div class="view-head">
         <span class="num">§ 07 &nbsp;/&nbsp; LEGS</span>
         <h2>Some films made most of their money in three days; others kept selling for months</h2>
-        <p class="dek">For each film, its opening weekend and its full domestic run, connected. A long line is a film with legs &mdash; <em>Aquaman</em> finished at 4.9&times; its opening. A short one is front-loaded: <em>Joker: Folie &agrave; Deux</em> managed 1.5&times;.</p>
+        <p class="dek">For each film, its opening weekend and its full domestic run, connected. A long line is a film with legs: <em>Aquaman</em> finished at 4.9&times; its opening. A short one is front-loaded: <em>Joker: Folie &agrave; Deux</em> managed 1.5&times;.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -501,9 +501,9 @@
         <div id="table-legs" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>How much of each film&rsquo;s domestic run came from its opening weekend versus everything after?</dd>
-          <dt>Why this form</dt><dd>A dumbbell connects two related numbers &mdash; opening weekend and lifetime domestic &mdash; for each film, sorted by the multiplier (<code>lifetime &divide; opening</code>) so the leggy films rise to the top.</dd>
-          <dt>Why a log axis</dt><dd>On a linear dollar axis the connector length would be <em>dollars added after opening</em>, not the ratio &mdash; a $260M opener that triples looks longer than a $30M opener that quadruples. A log axis makes the pixel length equal to the multiplier, which is the thing being ranked.</dd>
-          <dt>Watch for</dt><dd>Big openings and long legs aren&rsquo;t opposites &mdash; Endgame had both. A huge multiple on a tiny platform release isn&rsquo;t the same phenomenon as a wide release with staying power.</dd>
+          <dt>Why this form</dt><dd>A dumbbell connects two related numbers, opening weekend and lifetime domestic, for each film, sorted by the multiplier (<code>lifetime &divide; opening</code>) so the leggy films rise to the top.</dd>
+          <dt>Why a log axis</dt><dd>On a linear dollar axis the connector length would be <em>dollars added after opening</em>, not the ratio, a $260M opener that triples looks longer than a $30M opener that quadruples. A log axis makes the pixel length equal to the multiplier, which is the thing being ranked.</dd>
+          <dt>Watch for</dt><dd>Big openings and long legs aren&rsquo;t opposites, Endgame had both. A huge multiple on a tiny platform release isn&rsquo;t the same phenomenon as a wide release with staying power.</dd>
         </dl></div>
       </div>
     </div>
@@ -527,9 +527,9 @@
         <div id="chart-reviews"></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Do better reviews go with bigger box office?</dd>
-          <dt>Why this form</dt><dd>Two continuous variables, one point per film &mdash; a scatter. The question is whether there&rsquo;s a pattern, and the honest answer is &ldquo;barely.&rdquo;</dd>
+          <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter. The question is whether there&rsquo;s a pattern, and the honest answer is &ldquo;barely.&rdquo;</dd>
           <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is weak; a line would imply something predictable, which this isn&rsquo;t. The spread is the finding.</dd>
-          <dt>Watch for</dt><dd>Reviews and gross are both downstream of the same thing &mdash; franchise heat, timing, spend. A scatter shows association, never cause.</dd>
+          <dt>Watch for</dt><dd>Reviews and gross are both downstream of the same thing: franchise heat, timing, spend. A scatter shows association, never cause.</dd>
         </dl></div>
       </div>
       <div class="card">
@@ -544,7 +544,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where do critics and the audience disagree, and who liked it more?</dd>
           <dt>Why this form</dt><dd>Plot one score against the other and draw the 45&deg; line where they&rsquo;d match. Distance from the line is the size of the disagreement; the side tells you who was warmer.</dd>
-          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and grey &mdash; it&rsquo;s a reference, not data.</dd>
+          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and grey. It&rsquo;s a reference, not data.</dd>
           <dt>Watch for</dt><dd>RT critic % (share of positive reviews) and an IMDb rating (average score) aren&rsquo;t the same kind of measure. The diagonal is a visual aid, not a claim that the scales are equivalent.</dd>
         </dl></div>
       </div>
@@ -572,14 +572,14 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>For each film, how much of the gross came from North America versus everywhere else?</dd>
           <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 57 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
-          <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same colour at low opacity &mdash; one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalised so you compare shares directly.</dd>
+          <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same colour at low opacity, one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalised so you compare shares directly.</dd>
           <dt>Watch for</dt><dd>&ldquo;Overseas&rdquo; lumps very different markets together. China alone swings some of these films by ten points.</dd>
         </dl></div>
       </div>
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>Act IV &nbsp;—&nbsp; The roster</h3><span class="rule"></span><span class="sub">who shows up where</span></div></div>
+  <div class="act"><div class="wrap"><h3>Act IV &nbsp;&middot;&nbsp; The roster</h3><span class="rule"></span><span class="sub">who shows up where</span></div></div>
 
   <section class="view" id="v-roster">
     <div class="wrap">
@@ -597,9 +597,9 @@
         <div id="table-roster" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
-          <dt>Why this form</dt><dd>A presence grid &mdash; character &times; film &mdash; is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
+          <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
           <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 57 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
-          <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgement call. Plain-name roles are out even when the person is central &mdash; Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
+          <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgement call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
         </dl></div>
       </div>
       <div class="card">
@@ -620,7 +620,7 @@
       <div class="view-head">
         <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELLED</span>
         <h2>Iron Man leads at nine films; Superman, at five, is the most-travelled DC character</h2>
-        <p class="dek">Characters ranked by how many films they turn up in. The long tail &mdash; 90-odd characters with a single appearance &mdash; is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
+        <p class="dek">Characters ranked by how many films they turn up in. The long tail, 90-odd characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -632,8 +632,8 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Who carries the most cross-film weight?</dd>
           <dt>Why this form</dt><dd>A lollipop, not a bar: the counts are small integers (1&ndash;9), so a dot on a light stem reads the value cleanly without a heavy block of ink for &ldquo;3&rdquo;.</dd>
-          <dt>Choices here</dt><dd>Sorted by count, coloured by the universe the character appears in most. Single-appearance characters are cut &mdash; there are ~90 of them and they&rsquo;d bury the signal.</dd>
-          <dt>Watch for</dt><dd>Each identity is one person here. &ldquo;Captain America&rdquo; is Steve Rogers; Sam Wilson&rsquo;s turn is its own row, as are Yelena&rsquo;s Black Widow and Shuri&rsquo;s Black Panther. A codename counts from the film the character takes it up, not before &mdash; so Red Hulk and Mighty Thor sit at one film each.</dd>
+          <dt>Choices here</dt><dd>Sorted by count, coloured by the universe the character appears in most. Single-appearance characters are cut, there are ~90 of them and they&rsquo;d bury the signal.</dd>
+          <dt>Watch for</dt><dd>Each identity is one person here. &ldquo;Captain America&rdquo; is Steve Rogers; Sam Wilson&rsquo;s turn is its own row, as are Yelena&rsquo;s Black Widow and Shuri&rsquo;s Black Panther. A codename counts from the film the character takes it up, not before, so Red Hulk and Mighty Thor sit at one film each.</dd>
         </dl></div>
       </div>
     </div>
@@ -646,13 +646,13 @@
       <div class="view-head">
         <span class="num">§ 12 &nbsp;/&nbsp; THE LEDGER</span>
         <h2>The whole thing, sortable</h2>
-        <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend &mdash; how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
+        <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend: how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
       </div>
       <div class="card" style="padding:16px">
         <div id="table-full"></div>
         <div class="note" style="padding:0 6px"><div class="nlabel">Design note</div><dl>
           <dt>Why this form</dt><dd>A sorted table is the most information-dense view there is, and it&rsquo;s the accessibility backbone: every value a chart encodes with position or colour is a plain number here.</dd>
-          <dt>Choices here</dt><dd>Click any header to sort. Money columns use a monospaced figure so the digits line up. Universe is a colour chip, not a colour-coded row &mdash; the text still has to work on its own.</dd>
+          <dt>Choices here</dt><dd>Click any header to sort. Money columns use a monospaced figure so the digits line up. Universe is a colour chip, not a colour-coded row, the text still has to work on its own.</dd>
           <dt>Watch for</dt><dd>Sorting by a derived column (Mult., ROI) rewards small films with freak ratios. Read those next to the raw gross.</dd>
         </dl></div>
       </div>
@@ -668,11 +668,11 @@
       <div class="two-col">
         <div class="card">
           <div class="card-title">Sources</div>
-          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb &mdash; Rotten Tomatoes (critics), Metacritic, IMDb. Budgets are Box Office Mojo where it lists one, otherwise a widely-cited figure marked <span class="mono">est.</span> Always the production budget, never a number with marketing folded in.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb. Budgets are Box Office Mojo where it lists one, otherwise a widely-cited figure marked <span class="mono">est.</span> Always the production budget, never a number with marketing folded in.</p>
         </div>
         <div class="card">
           <div class="card-title">Definitions</div>
-          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U to 2025 dollars. <b>Break-even</b> is estimated at 2.5&times; production budget &mdash; the rough point a theatrical release clears once exhibitors take their cut. <b>Still in release</b> films (marked <span class="inrelease">in release</span>) are included with grosses as of early September 2026 and will keep climbing.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U to 2025 dollars. <b>Break-even</b> is estimated at 2.5&times; production budget: the rough point a theatrical release clears once exhibitors take their cut. <b>Still in release</b> films (marked <span class="inrelease">in release</span>) are included with grosses as of early September 2026 and will keep climbing.</p>
         </div>
       </div>
       <p class="smallprint" id="method-held"></p>
@@ -713,7 +713,7 @@
   };
 
   // On mobile, long ranked lists show head + tail with the quiet middle folded.
-  // Returns { list, foldAt, hiddenCount, midLabelFn } — foldAt is the index the
+  // Returns { list, foldAt, hiddenCount, midLabelFn }. foldAt is the index the
   // fold marker goes after; render() re-runs when the "show all" button flips the flag.
   function foldList(af, key, headN, tailN, midLabel) {
     if (!isMobile() || STATE.expand[key] || af.length <= headN + tailN + 2) {
@@ -741,7 +741,7 @@
     return f[which];
   }
   function usd(n) {
-    if (n == null || isNaN(n)) return "—";
+    if (n == null || isNaN(n)) return "&ndash;";
     var a = Math.abs(n);
     if (a >= 1e9) return "$" + (n / 1e9).toFixed(2) + "B";
     if (a >= 1e6) return "$" + Math.round(n / 1e6) + "M";
@@ -752,7 +752,7 @@
     if (Math.abs(n) >= 1e9) return "$" + (n / 1e9).toFixed(n % 1e9 === 0 ? 0 : 1) + "B";
     return "$" + Math.round(n / 1e6) + "M";
   }
-  function pct(n) { return (n == null ? "—" : Math.round(n) + "%"); }
+  function pct(n) { return (n == null ? "&ndash;" : Math.round(n) + "%"); }
   function median(arr) {
     if (!arr.length) return 0;
     var s = arr.slice().sort(function (a, b) { return a - b; });
@@ -798,7 +798,7 @@
   }
   function hideTip() { tip.style.opacity = "0"; }
   function filmTip(f) {
-    var flag = f.final ? "" : '<div class="flag">◉ still in release &mdash; gross will climb</div>';
+    var flag = f.final ? "" : '<div class="flag">◉ still in release, gross will climb</div>';
     return '<div class="tt">' + esc(f.t) + '</div>' +
       '<div class="tr"><span>' + f.u + " &nbsp;·&nbsp; " + new Date(f.date).getFullYear() + '</span></div>' +
       '<div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div>' +
@@ -806,7 +806,7 @@
       '<div class="tr"><span>Overseas</span><b>' + usd(val(f, "i")) + " (" + pct(f.pctIntl) + ')</b></div>' +
       '<div class="tr"><span>Opening wknd</span><b>' + usd(f.open) + '</b></div>' +
       '<div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div>' +
-      '<div class="tr"><span>RT / MC / IMDb</span><b>' + (f.rt == null ? "—" : f.rt + "%") + " / " + f.mc + " / " + f.imdb + '</b></div>' +
+      '<div class="tr"><span>RT / MC / IMDb</span><b>' + (f.rt == null ? "&ndash;" : f.rt + "%") + " / " + f.mc + " / " + f.imdb + '</b></div>' +
       flag;
   }
 
@@ -860,7 +860,7 @@
     var bm = mcu.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     var bd = dc.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     document.getElementById("d-scorecard").innerHTML =
-      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " &mdash; the DCEU, James Gunn&rsquo;s DCU, and the two Joker pictures. The average Marvel film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel films have passed $1B. " + bd + " DC films have.";
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + ": the DCEU, James Gunn&rsquo;s DCU, and the two Joker pictures. The average Marvel film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel films have passed $1B. " + bd + " DC films have.";
   }
 
   /* ---------- §01 stacked columns by year ---------- */
@@ -974,7 +974,7 @@
     wireDots(document.querySelector("#chart-box svg"));
     fillTable("table-box", us.map(function (u) {
       var a = all.filter(function (f) { return f.u === u; }).map(function (f) { return val(f, "ww"); }).sort(function (x, y) { return x - y; });
-      if (!a.length) return [u, "0", "—", "—", "—", "—", "—"];
+      if (!a.length) return [u, "0", "&ndash;", "&ndash;", "&ndash;", "&ndash;", "&ndash;"];
       return [u, String(a.length), usd(a[0]), usd(quantile(a, 0.25)), usd(quantile(a, 0.5)), usd(quantile(a, 0.75)), usd(a[a.length - 1])];
     }), ["Universe", "Films", "Min", "25th", "Median", "75th", "Max"]);
   }
@@ -1178,7 +1178,7 @@
     legend("leg-sc", activeUnis(), false, true);
     wireDots(document.querySelector("#chart-scatter svg"));
     var rows = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).map(function (f) {
-      return [f.t, f.u, f.date, usd(val(f, "ww")), usd(f.open), (f.mult == null ? "—" : f.mult.toFixed(2) + "×")];
+      return [f.t, f.u, f.date, usd(val(f, "ww")), usd(f.open), (f.mult == null ? "&ndash;" : f.mult.toFixed(2) + "×")];
     });
     fillTable("table-scatter", rows, ["Film", "Universe", "Release", "Worldwide", "Opening", "Multiplier"]);
   }
@@ -1273,9 +1273,9 @@
         var disp;
         if (c.k === "t") disp = '<span class="uchip" style="background:var(' + COLORVAR[f.u] + ')"></span>' + esc(f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
         else if (c.t === "$") disp = usd(raw);
-        else if (c.t === "p") disp = raw == null ? "—" : Math.round(raw) + "%";
-        else if (c.t === "x") disp = raw == null ? "—" : raw.toFixed(2) + "×";
-        else if (c.t === "n") disp = raw == null ? "—" : raw;
+        else if (c.t === "p") disp = raw == null ? "&ndash;" : Math.round(raw) + "%";
+        else if (c.t === "x") disp = raw == null ? "&ndash;" : raw.toFixed(2) + "×";
+        else if (c.t === "n") disp = raw == null ? "&ndash;" : raw;
         else disp = esc(raw);
         return '<td class="' + (c.k === "t" ? "name" : "") + '">' + disp + "</td>";
       }).join("") + "</tr>";
@@ -1547,7 +1547,7 @@
       });
       el.addEventListener("mouseleave", hideTip);
     });
-    document.getElementById("leg-legs").innerHTML = '<span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span><span style="color:var(--ink-muted)">log scale &mdash; line length = the multiplier</span>';
+    document.getElementById("leg-legs").innerHTML = '<span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span><span style="color:var(--ink-muted)">log scale, line length = the multiplier</span>';
     fillTable("table-legs", af.map(function (f) {
       return [f.t + (f.final ? "" : " ◉"), f.u, usd(f.open), usd(val(f, "d")), f.mult.toFixed(2) + "×"];
     }), ["Film", "Universe", "Opening", "Lifetime domestic", "Multiplier"]);
@@ -1574,7 +1574,7 @@
     });
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(val(f, "ww")), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
     // label the films that defy the pattern: a panned one that made a fortune,
-    // and a well-reviewed one that flopped — that's the "reviews don't drive gross" story
+    // and a well-reviewed one that flopped. That is the "reviews don't drive gross" story
     var panHit = af.filter(function (f) { return f.rt < 55; }).sort(function (a, b) { return val(b, "ww") - val(a, "ww"); })[0];
     var likedMiss = af.filter(function (f) { return f.rt >= 75; }).sort(function (a, b) { return val(a, "ww") - val(b, "ww"); })[0];
     var biggest = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); })[0];
@@ -1709,7 +1709,7 @@
     }
     legend("leg-roster", activeUnis());
     fillTable("table-roster", activeChars().map(function (x) {
-      return [x.c.n, x.c.real || "—", x.c.u, String(x.films.length), x.c.actors.join(", ")];
+      return [x.c.n, x.c.real || "&ndash;", x.c.u, String(x.films.length), x.c.actors.join(", ")];
     }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
   }
 
@@ -1804,7 +1804,7 @@
     });
     legend("leg-fp", activeUnis());
     fillTable("table-footprint", activeChars().map(function (x) {
-      return [x.c.n, x.c.real || "—", x.c.u, String(x.films.length), x.c.actors.join(", ")];
+      return [x.c.n, x.c.real || "&ndash;", x.c.u, String(x.films.length), x.c.actors.join(", ")];
     }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
   }
 
