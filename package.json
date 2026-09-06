@@ -12,7 +12,7 @@
     "reconcile": "node scripts/reconcile.mjs",
     "enrich": "node scripts/enrich-omdb.mjs",
     "enrich:wiki": "node scripts/enrich-wikipedia.mjs",
-    "data": "node scripts/parse-baseline.mjs && node scripts/promote.mjs && node scripts/enrich-omdb.mjs && node scripts/enrich-wikipedia.mjs && node scripts/derive.mjs && node scripts/reconcile.mjs",
+    "data": "node scripts/parse-baseline.mjs && node scripts/promote.mjs && node scripts/enrich-omdb.mjs && node scripts/enrich-wikipedia.mjs && node scripts/derive.mjs && node scripts/reconcile.mjs", "cast": "node scripts/scrape-cast.mjs && node scripts/build-cast-web.mjs",
     "build": "node scripts/build.mjs"
   }
 }

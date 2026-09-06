@@ -576,12 +576,72 @@
     </div>
   </section>
 
+  <div class="act"><div class="wrap"><h3>Act IV &nbsp;—&nbsp; The roster</h3><span class="rule"></span><span class="sub">who shows up where</span></div></div>
+
+  <section class="view" id="v-roster">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 10 &nbsp;/&nbsp; WHO'S IN WHICH FILM</span>
+        <h2>Marvel built a shared cast; DC kept starting over</h2>
+        <p class="dek">Every costumed hero and villain, and the films they appear in, in release order. A filled cell is an appearance. The Avengers films are the vertical stripes; DC&rsquo;s rows barely connect.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-roster"></div>
+          <button class="minibtn" data-table="roster" aria-pressed="false">Show data</button>
+        </div>
+        <div id="chart-roster"></div>
+        <div id="table-roster" hidden></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
+          <dt>Why this form</dt><dd>A presence grid &mdash; character &times; film &mdash; is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
+          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 57 films in release order, with year ticks. A recast counts as one character (Hulk = Norton then Ruffalo); the actors are in the tooltip and the table.</dd>
+          <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgement call &mdash; plain-name supporting roles (Pepper Potts, Alfred) are out. Cast lists come from Wikipedia and skew toward billed roles, so blink-and-miss cameos may be undercounted.</dd>
+        </dl></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Codenamed characters per film</div>
+            <div class="card-note">How many heroes and villains each film puts on screen, in release order. Infinity War tops out at 22.</div>
+          </div>
+          <div class="legend" id="leg-ensemble"></div>
+        </div>
+        <div id="chart-ensemble"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-footprint">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELLED</span>
+        <h2>Iron Man and Captain America anchor nine films each</h2>
+        <p class="dek">Characters ranked by how many films they turn up in. The long tail &mdash; 90-odd characters with a single appearance &mdash; is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="legend" id="leg-fp"></div>
+          <button class="minibtn" data-table="footprint" aria-pressed="false">Show data</button>
+        </div>
+        <div id="chart-footprint"></div>
+        <div id="table-footprint" hidden></div>
+        <div class="note"><div class="nlabel">Design note</div><dl>
+          <dt>Question</dt><dd>Who carries the most cross-film weight?</dd>
+          <dt>Why this form</dt><dd>A lollipop, not a bar: the counts are small integers (1&ndash;9), so a dot on a light stem reads the value cleanly without a heavy block of ink for &ldquo;3&rdquo;.</dd>
+          <dt>Choices here</dt><dd>Sorted by count, coloured by the universe the character appears in most. Single-appearance characters are cut &mdash; there are ~90 of them and they&rsquo;d bury the signal.</dd>
+          <dt>Watch for</dt><dd>Mantle-sharing inflates a couple of counts: &ldquo;Captain America&rdquo; is Steve Rogers <em>and</em> Sam Wilson, &ldquo;Black Widow&rdquo; is only Natasha (Yelena is listed separately).</dd>
+        </dl></div>
+      </div>
+    </div>
+  </section>
+
   <div class="act"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the raw table &amp; the method</span></div></div>
 
   <section class="view" id="v-data">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 10 &nbsp;/&nbsp; THE LEDGER</span>
+        <span class="num">§ 12 &nbsp;/&nbsp; THE LEDGER</span>
         <h2>The whole thing, sortable</h2>
         <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend &mdash; how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
       </div>
@@ -599,7 +659,7 @@
   <section class="view" id="v-method">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 11 &nbsp;/&nbsp; METHOD</span>
+        <span class="num">§ 13 &nbsp;/&nbsp; METHOD</span>
         <h2>How this was built</h2>
       </div>
       <div class="two-col">
@@ -624,11 +684,13 @@
 </footer>
 
 <script id="data" type="application/json">__DATA__</script>
+<script id="cast-data" type="application/json">__CAST__</script>
 <script>
 (function () {
   "use strict";
   var DB = JSON.parse(document.getElementById("data").textContent);
   var FILMS = DB.films;
+  var CAST = JSON.parse(document.getElementById("cast-data").textContent);
   var UNI = [
     { k: "MCU", label: "MCU", full: "Marvel Cinematic Universe" },
     { k: "DCEU", label: "DCEU", full: "DC Extended Universe" },
@@ -1556,6 +1618,183 @@
     legend("leg-par", activeUnis(), false, true);
   }
 
+  /* ---------- §10 roster grid (character × film) ---------- */
+  function castFilms() { return FILMS.filter(function (f) { return STATE.unis[f.u]; }); }
+  function activeChars() {
+    var titles = {}; castFilms().forEach(function (f) { titles[f.t] = 1; });
+    return CAST.characters
+      .map(function (c) { return { c: c, films: c.films.filter(function (t) { return titles[t]; }) }; })
+      .filter(function (x) { return x.films.length > 0; })
+      .sort(function (a, b) { return b.films.length - a.films.length || a.c.n.localeCompare(b.c.n); });
+  }
+  function renderRoster() {
+    var mob = isMobile();
+    var af = castFilms();
+    var idxOf = {}; af.forEach(function (f, i) { idxOf[f.t] = i; });
+    var rows = activeChars();
+    if (mob) {
+      var W = 360, m = { t: 14, r: 10, b: 8, l: 8 }, rowH = 30;
+      var show = rows.slice(0, 20);
+      var H = m.t + m.b + rowH * show.length;
+      var iw = W - m.l - m.r;
+      var xI = function (i) { return m.l + (af.length < 2 ? iw / 2 : (i / (af.length - 1)) * iw); };
+      var body = show.map(function (x, r) {
+        var yt = m.t + r * rowH, c = "var(" + COLORVAR[x.c.u] + ")";
+        var ticks = x.films.map(function (t) {
+          return '<rect x="' + (xI(idxOf[t]) - 2.5) + '" y="' + (yt + 19) + '" width="5" height="9" rx="1" fill="' + c + '"/>';
+        }).join("");
+        return '<g class="rosterRow" data-c="' + esc(x.c.n) + '">' +
+          '<rect x="0" y="' + yt + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+          '<rect x="' + m.l + '" y="' + (yt + 5) + '" width="7" height="7" rx="1.5" fill="' + c + '"/>' +
+          '<text x="' + (m.l + 13) + '" y="' + (yt + 12) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(x.c.n, 28)) + "</text>" +
+          '<text x="' + (W - m.r) + '" y="' + (yt + 12) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + x.films.length + "</text>" +
+          '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + (yt + 23.5) + '" y2="' + (yt + 23.5) + '" stroke="var(--grid)"/>' + ticks + "</g>";
+      }).join("");
+      var yl = "";
+      for (var y = 2008; y <= 2026; y += 6) {
+        var fi = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= y; });
+        if (fi < 0) continue;
+        yl += '<text x="' + xI(fi) + '" y="10" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--ink-muted)">’' + String(y).slice(2) + "</text>";
+      }
+      document.getElementById("chart-roster").innerHTML =
+        '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Each character\'s film appearances over time">' + yl + body + "</svg>";
+    } else {
+      var Wd = 1000, md = { t: 34, r: 12, b: 10, l: 152 }, rh = 19, N = 26;
+      var showD = rows.slice(0, N);
+      var Hd = md.t + md.b + rh * showD.length;
+      var iwd = Wd - md.l - md.r;
+      var colW = iwd / af.length;
+      var head = "";
+      for (var yr = 2008; yr <= 2026; yr++) {
+        var f0 = af.findIndex(function (f) { return new Date(f.date).getFullYear() === yr; });
+        if (f0 < 0) continue;
+        var xx = md.l + f0 * colW;
+        head += '<line x1="' + xx + '" x2="' + xx + '" y1="' + (md.t - 6) + '" y2="' + (Hd - md.b) + '" stroke="var(--grid)"/>';
+        head += '<text x="' + (xx + 2) + '" y="' + (md.t - 12) + '" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
+      }
+      var grid = showD.map(function (x, r) {
+        var yy = md.t + r * rh, c = "var(" + COLORVAR[x.c.u] + ")";
+        var cells = x.films.map(function (t) {
+          var cx = md.l + idxOf[t] * colW;
+          return '<rect x="' + (cx + colW * 0.15) + '" y="' + (yy + 3) + '" width="' + (colW * 0.7) + '" height="' + (rh - 8) + '" rx="1.5" fill="' + c + '" class="rc" data-c="' + esc(x.c.n) + '" data-f="' + esc(t) + '"/>';
+        }).join("");
+        return '<g>' +
+          '<rect x="' + (md.l - 14) + '" y="' + (yy + rh / 2 - 4) + '" width="8" height="8" rx="1.5" fill="' + c + '"/>' +
+          '<text x="' + (md.l - 22) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11.5" fill="var(--ink-2)">' + esc(clip(x.c.n, 22)) + "</text>" +
+          '<text x="' + (Wd - md.r) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + x.films.length + "</text>" +
+          cells + "</g>";
+      }).join("");
+      document.getElementById("chart-roster").innerHTML =
+        '<svg viewBox="0 0 ' + Wd + " " + Hd + '" role="img" aria-label="Grid of the 26 most-recurring characters against every film in release order">' + head + grid + "</svg>";
+      document.querySelectorAll("#chart-roster .rc").forEach(function (el) {
+        el.addEventListener("mousemove", function (e) {
+          var f = FILMS.find(function (x) { return x.t === el.getAttribute("data-f"); });
+          showTip('<div class="tt">' + esc(el.getAttribute("data-c")) + '</div><div class="tr"><span>' + esc(f.t) + "</span></div><div class=\"tr\"><span>" + f.u + " · " + new Date(f.date).getFullYear() + "</span></div>", e.clientX, e.clientY);
+        });
+        el.addEventListener("mouseleave", hideTip);
+      });
+    }
+    legend("leg-roster", activeUnis());
+    fillTable("table-roster", activeChars().map(function (x) {
+      return [x.c.n, x.c.real || "—", x.c.u, String(x.films.length), x.c.actors.join(", ")];
+    }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
+  }
+
+  /* ---------- §10b codenamed characters per film ---------- */
+  function renderEnsemble() {
+    var mob = isMobile();
+    var af = castFilms();
+    var counts = af.map(function (f) { return (CAST.byFilm[f.t] || []).length; });
+    var max = Math.max.apply(null, counts.concat([1]));
+    var W = mob ? 480 : 1000, H = mob ? 220 : 300, m = mob ? { t: 12, r: 8, b: 24, l: 26 } : { t: 16, r: 12, b: 28, l: 34 };
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var bw = Math.min(mob ? 8 : 13, iw / af.length * 0.66);
+    var x = function (i) { return m.l + (i + 0.5) * (iw / af.length); };
+    var yS = function (v) { return m.t + ih - (v / max) * ih; };
+    var g = "";
+    [0, 5, 10, 15, 20].forEach(function (t) {
+      if (t > max) return;
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
+      g += '<text x="' + (m.l - 6) + '" y="' + (yS(t) + 3) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="' + (mob ? 8 : 10) + '" fill="var(--ink-muted)">' + t + "</text>";
+    });
+    var bars = af.map(function (f, i) {
+      var v = counts[i], y1 = yS(v), h = Math.max(0, yS(0) - y1 - 1.5);
+      var lbl = "";
+      if (v >= (mob ? 13 : 11)) lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="' + (mob ? 8 : 10) + '">' + clip(f.t, 12) + " " + v + "</text>";
+      return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + COLORVAR[f.u] + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
+    }).join("");
+    var yl = "";
+    for (var yy = 2008; yy <= 2026; yy += (mob ? 4 : 2)) {
+      var fi = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= yy; });
+      if (fi < 0) continue;
+      yl += '<text x="' + x(fi) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 8 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yy).slice(2)) + "</text>";
+    }
+    document.getElementById("chart-ensemble").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Number of codenamed characters per film, in release order">' +
+      '<g class="grid">' + g + yl + "</g>" + bars + "</svg>";
+    document.querySelectorAll("#chart-ensemble .ensBar").forEach(function (el) {
+      var f = FILMS[+el.getAttribute("data-i")];
+      el.addEventListener("mousemove", function (e) {
+        showTip('<div class="tt">' + esc(f.t) + '</div><div class="tr"><span>Codenamed characters</span><b>' + el.getAttribute("data-v") + "</b></div>", e.clientX, e.clientY);
+      });
+      el.addEventListener("mouseleave", hideTip);
+    });
+    legend("leg-ensemble", activeUnis());
+  }
+
+  /* ---------- §11 footprint (lollipop) ---------- */
+  function renderFootprint() {
+    var mob = isMobile();
+    var rows = activeChars().filter(function (x) { return x.films.length >= 2; });
+    var max = Math.max.apply(null, rows.map(function (x) { return x.films.length; }).concat([1]));
+    var W = mob ? 360 : 1000, rowH = mob ? 26 : 15;
+    var m = mob ? { t: 14, r: 30, b: 8, l: 8 } : { t: 16, r: 40, b: 8, l: 180 };
+    var H = m.t + m.b + rowH * rows.length;
+    var iw = W - m.l - m.r;
+    var xS = function (v) { return m.l + (v / max) * iw; };
+    var g = "";
+    for (var t = 0; t <= max; t += (mob ? 3 : 2)) {
+      g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
+      g += '<text x="' + xS(t) + '" y="10" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">' + t + "</text>";
+    }
+    var body = rows.map(function (x, i) {
+      var c = "var(" + COLORVAR[x.c.u] + ")", n = x.films.length;
+      if (mob) {
+        var yt = m.t + i * rowH;
+        return '<g class="fpRow" data-c="' + esc(x.c.n) + '">' +
+          '<rect x="0" y="' + yt + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+          '<rect x="' + m.l + '" y="' + (yt + 5) + '" width="7" height="7" rx="1.5" fill="' + c + '"/>' +
+          '<text x="' + (m.l + 13) + '" y="' + (yt + 12) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(x.c.n, 26)) + "</text>" +
+          '<line x1="' + m.l + '" x2="' + xS(n) + '" y1="' + (yt + 20) + '" y2="' + (yt + 20) + '" stroke="' + c + '" stroke-width="2" stroke-opacity="0.5"/>' +
+          '<circle cx="' + xS(n) + '" cy="' + (yt + 20) + '" r="4" fill="' + c + '"/>' +
+          '<text x="' + (xS(n) + 9) + '" y="' + (yt + 24) + '" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-2)">' + n + "</text></g>";
+      }
+      var yy = m.t + i * rowH + rowH / 2;
+      return '<g class="fpRow" data-c="' + esc(x.c.n) + '">' +
+        '<rect x="0" y="' + (yy - rowH / 2) + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+        '<rect x="' + (m.l - 14) + '" y="' + (yy - 4) + '" width="8" height="8" rx="1.5" fill="' + c + '"/>' +
+        '<text x="' + (m.l - 22) + '" y="' + (yy + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(x.c.n, 26)) + "</text>" +
+        '<line x1="' + m.l + '" x2="' + xS(n) + '" y1="' + yy + '" y2="' + yy + '" stroke="' + c + '" stroke-width="2" stroke-opacity="0.45"/>' +
+        '<circle cx="' + xS(n) + '" cy="' + yy + '" r="3.6" fill="' + c + '"/>' +
+        '<text x="' + (xS(n) + 8) + '" y="' + (yy + 3.5) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + n + "</text></g>";
+    }).join("");
+    document.getElementById("chart-footprint").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Characters ranked by number of film appearances">' +
+      '<g class="grid">' + g + "</g>" + body + "</svg>";
+    document.querySelectorAll("#chart-footprint .fpRow").forEach(function (el) {
+      var x = activeChars().find(function (y) { return y.c.n === el.getAttribute("data-c"); });
+      if (!x) return;
+      el.addEventListener("mousemove", function (e) {
+        showTip('<div class="tt">' + esc(x.c.n) + '</div><div class="tr"><span>' + (x.c.real ? esc(x.c.real) + " · " : "") + x.c.u + '</span></div><div class="tr"><span>Films</span><b>' + x.films.length + '</b></div><div class="tr"><span>' + esc(x.c.actors.join(", ")) + "</span></div>", e.clientX, e.clientY);
+      });
+      el.addEventListener("mouseleave", hideTip);
+    });
+    legend("leg-fp", activeUnis());
+    fillTable("table-footprint", activeChars().map(function (x) {
+      return [x.c.n, x.c.real || "—", x.c.u, String(x.films.length), x.c.actors.join(", ")];
+    }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
+  }
+
   /* ---------- render all ---------- */
   function renderAll() {
     if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
@@ -1572,6 +1811,9 @@
     renderReviews();
     renderParity();
     renderSplit();
+    renderRoster();
+    renderEnsemble();
+    renderFootprint();
     renderFullTable();
   }
 
