@@ -6,5 +6,11 @@
     "directory": "./dist",
     "not_found_handling": "single-page-application"
   },
+  // capeindex.com + www serve the site directly. thecapeindex.com (and its www)
+  // 301 to capeindex.com via a Cloudflare Redirect Rule on that zone, not here.
+  "routes": [
+    { "pattern": "capeindex.com", "custom_domain": true },
+    { "pattern": "www.capeindex.com", "custom_domain": true }
+  ],
   "observability": { "enabled": true }
 }

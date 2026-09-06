@@ -20,7 +20,9 @@ param(
   [int]$BomDelay = 4000
 )
 
-$ErrorActionPreference = "Stop"
+# Continue, not Stop: native tools (git especially) write progress to stderr, and under
+# Stop that terminates the script even on exit 0. We check $LASTEXITCODE explicitly instead.
+$ErrorActionPreference = "Continue"
 try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch {}
 $repo = Split-Path -Parent $PSScriptRoot
 Set-Location $repo

@@ -4,7 +4,7 @@ Every live-action Marvel or DC superhero film since 2000 that belongs to a
 multi-film franchise, its verified box office, and a dark-first single-file HTML
 visualization of the lot.
 
-**Live:** https://cape-index.williamfyost.workers.dev
+**Live:** https://capeindex.com
 
 Grew out of [Bill Yost's *Marvel / DC Box Office*](https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome)
 Tableau Public workbook — a rebuild that turned into a re-verification and a
