@@ -1,5 +1,6 @@
 <title>The Cape Index</title>
 <meta name="description" content="Eighteen years of Marvel and DC at the global box office, verified against Box Office Mojo." />
+<meta name="author" content="Bill Yost" />
 
 <!-- Update the four URLs below to the custom domain once it is live. -->
 <link rel="canonical" href="https://cape-index.williamfyost.workers.dev/" />
@@ -126,6 +127,9 @@
   header.masthead { border-bottom: 1px solid var(--border); padding: 68px 0 46px; }
   .masthead h1 { font-size: clamp(48px, 9vw, 104px); letter-spacing: -0.028em; }
   .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 20px 0 0; }
+  .byline { margin: 16px 0 0; font-size: 14px; color: var(--ink-muted); }
+  .byline a { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
+  .byline a:hover { text-decoration-color: var(--ink); }
   .thesis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 40px; max-width: 52rem; }
   .thesis > div { background: var(--surface); padding: 20px 22px; }
   .thesis .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
@@ -306,6 +310,7 @@
     <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2008&ndash;2026</p>
     <h1>The Cape Index</h1>
     <p class="dek">Every Marvel and DC film since 2008, plus Sony&rsquo;s Spider-Man spin-offs, and what each one made. Worldwide grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time. Any number on the page switches to 2025 dollars.</p>
+    <p class="byline">By <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a></p>
     <p class="teach-hint">It also works as a set of worked examples. Flip <b>Design notes</b> on, up in the toolbar, and every chart explains why it&rsquo;s built the way it is, the form, the colour, and what it can&rsquo;t tell you.</p>
     <div class="thesis" id="thesis"></div>
     <p class="smallprint" id="smallprint"></p>
@@ -725,7 +730,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    Rebuilt from a <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a> by Bill Yost. Data verified September 2026 against Box Office Mojo. Not affiliated with Marvel, DC, Disney or Warner Bros.
+    Built by <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a>, rebuilt from his <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a>. Data verified September 2026 against Box Office Mojo. Not affiliated with Marvel, DC, Disney or Warner Bros.
   </div>
 </footer>
 
