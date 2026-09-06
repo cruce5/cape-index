@@ -40,6 +40,7 @@
     --mcu: #e5484d;
     --dceu: #3987e5;
     --dcu: #1f9d8d;
+    --ssu: #d6409f;
     --else: #9d7ce0;
     --pos: #3fb950;
     --neg: #f0883e;
@@ -62,6 +63,7 @@
       --mcu: #d21f3c;
       --dceu: #2a78d6;
       --dcu: #157f73;
+      --ssu: #c0257f;
       --else: #7c4db8;
       --pos: #1a7f37;
       --neg: #bc4c00;
@@ -84,6 +86,7 @@
     --mcu: #d21f3c;
     --dceu: #2a78d6;
     --dcu: #157f73;
+    --ssu: #c0257f;
     --else: #7c4db8;
     --pos: #1a7f37;
     --neg: #bc4c00;
@@ -296,7 +299,7 @@
   <div class="wrap">
     <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2008&ndash;2026</p>
     <h1>The Cape Index</h1>
-    <p class="dek">Every Marvel and DC film since 2008, and what it made. Worldwide grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time. Any number on the page switches to 2025 dollars.</p>
+    <p class="dek">Every Marvel and DC film since 2008, plus Sony&rsquo;s Spider-Man spin-offs, and what each one made. Worldwide grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time. Any number on the page switches to 2025 dollars.</p>
     <p class="teach-hint">It also works as a set of worked examples. Flip <b>Design notes</b> on, up in the toolbar, and every chart explains why it&rsquo;s built the way it is, the form, the colour, and what it can&rsquo;t tell you.</p>
     <div class="thesis" id="thesis"></div>
     <p class="smallprint" id="smallprint"></p>
@@ -310,6 +313,7 @@
       <button class="pill" data-uni="MCU" style="--c:var(--mcu)" aria-pressed="true"><span class="dot"></span>MCU</button>
       <button class="pill" data-uni="DCEU" style="--c:var(--dceu)" aria-pressed="true"><span class="dot"></span>DCEU</button>
       <button class="pill" data-uni="DCU" style="--c:var(--dcu)" aria-pressed="true"><span class="dot"></span>DCU</button>
+      <button class="pill" data-uni="SSU" style="--c:var(--ssu)" aria-pressed="true"><span class="dot"></span>SSU</button>
       <button class="pill" data-uni="Elseworlds" style="--c:var(--else)" aria-pressed="true"><span class="dot"></span>Elseworlds</button>
     </div>
     <div class="cgroup" role="group" aria-label="Dollar basis">
@@ -403,7 +407,7 @@
         <button class="minibtn" data-table="treemap" aria-pressed="false" style="margin-top:12px">Show data</button>
         <div id="table-treemap" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
-          <dt>Question</dt><dd>Where is the money concentrated across all 57 films at once?</dd>
+          <dt>Question</dt><dd>Where is the money concentrated across all 63 films at once?</dd>
           <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 57-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
           <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
           <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
@@ -442,7 +446,7 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 04 &nbsp;/&nbsp; SCATTER</span>
-        <h2>Marvel has cleared $1 billion twelve times. DC has done it twice</h2>
+        <h2>Marvel has cleared $1 billion twelve times. DC twice, Sony never</h2>
         <p class="dek">Worldwide gross by release date. The only DC films above the billion-dollar line are Aquaman (2018) and Joker (2019); everything else up there is Marvel.</p>
       </div>
       <div class="card">
@@ -455,7 +459,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Is there a trend in film size over 18 years, and which films broke away from the pack?</dd>
           <dt>Why this form</dt><dd>Two continuous axes, date and gross, is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
-          <dt>Choices here</dt><dd>The fourth series can&rsquo;t be told from the others by colour alone under colour blindness, so each universe also carries a shape. Only the six biggest films are labelled; a label on all 57 is noise.</dd>
+          <dt>Choices here</dt><dd>Five universes can&rsquo;t be separated by colour alone under colour blindness, so each also carries a shape: circle, square, triangle, plus, diamond. Only the six biggest films are labelled; a label on all 63 is noise.</dd>
           <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support, the story is the spread and the outliers, not a slope.</dd>
         </dl></div>
       </div>
@@ -625,7 +629,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
           <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
-          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 57 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
+          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 63 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
           <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgement call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
         </dl></div>
       </div>
@@ -725,13 +729,14 @@
     { k: "MCU", label: "MCU", full: "Marvel Cinematic Universe" },
     { k: "DCEU", label: "DCEU", full: "DC Extended Universe" },
     { k: "DCU", label: "DCU", full: "DC Universe" },
+    { k: "SSU", label: "SSU", full: "Sony's Spider-Man Universe" },
     { k: "Elseworlds", label: "Elseworlds", full: "DC Elseworlds" }
   ];
-  var COLORVAR = { MCU: "--mcu", DCEU: "--dceu", DCU: "--dcu", Elseworlds: "--else" };
+  var COLORVAR = { MCU: "--mcu", DCEU: "--dceu", DCU: "--dcu", SSU: "--ssu", Elseworlds: "--else" };
   function cvar(k) { return getComputedStyle(document.body).getPropertyValue(COLORVAR[k]).trim(); }
 
   var STATE = {
-    unis: { MCU: true, DCEU: true, DCU: true, Elseworlds: true },
+    unis: { MCU: true, DCEU: true, DCU: true, SSU: true, Elseworlds: true },
     money: "nominal",
     outlierHide: false,
     splitSort: "ww",
@@ -866,13 +871,13 @@
   /* ---------- masthead ---------- */
   function renderThesis() {
     var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
-    var dc = FILMS.filter(function (f) { return f.u !== "MCU"; });
+    var dc = FILMS.filter(function (f) { return f.u === "DCEU" || f.u === "DCU" || f.u === "Elseworlds"; });
     var sum = function (a, w) { return a.reduce(function (s, f) { return s + val(f, w); }, 0); };
     var m = sum(mcu, "ww"), d = sum(dc, "ww");
     var el = document.getElementById("thesis");
     el.innerHTML =
       block("Marvel Studios", usd(m), mcu.length + " films" + (STATE.money === "real" ? " · 2025 $" : "")) +
-      block("DCEU + DCU + Elseworlds", usd(d), dc.length + " films") +
+      block("DC, all continuities", usd(d), dc.length + " films · DCEU + DCU + Elseworlds") +
       block("The gap", (m / d).toFixed(2) + "×", "Marvel to DC, worldwide");
     function block(k, v, sub) {
       return '<div><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="sub">' + sub + "</div></div>";
@@ -907,13 +912,16 @@
       host.appendChild(el);
     });
     function rowline(k, v) { return '<div class="row"><span>' + k + "</span><span>" + v + "</span></div>"; }
-    var mcu = FILMS.filter(function (f) { return f.u === "MCU"; }), dc = FILMS.filter(function (f) { return f.u !== "MCU"; });
+    var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
+    var dc = FILMS.filter(function (f) { return f.u === "DCEU" || f.u === "DCU" || f.u === "Elseworlds"; });
+    var ssu = FILMS.filter(function (f) { return f.u === "SSU"; });
     var tm = mcu.reduce(function (a, f) { return a + val(f, "ww"); }, 0), td = dc.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
+    var tss = ssu.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
     var am = tm / mcu.length, ad = td / dc.length;
     var bm = mcu.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     var bd = dc.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     document.getElementById("d-scorecard").innerHTML =
-      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + ": the DCEU, James Gunn&rsquo;s DCU, and the two Joker pictures. The average Marvel film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel films have passed $1B. " + bd + " DC films have.";
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the two Joker pictures. The average Marvel film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel films have passed $1B; " + bd + " DC films have. Sony&rsquo;s six Spider-Man spin-offs add <b>" + usd(tss) + "</b> more, none of them past $900M.";
   }
 
   /* ---------- §01 stacked columns by year ---------- */
@@ -935,7 +943,7 @@
     var bw = Math.min(34, iw / years.length * 0.62);
     var x = function (i) { return m.l + (i + 0.5) * (iw / years.length); };
     var yS = function (v) { return m.t + ih - (v / max) * ih; };
-    var order = ["MCU", "DCEU", "DCU", "Elseworlds"];
+    var order = ["MCU", "SSU", "DCEU", "DCU", "Elseworlds"];
     var g = "";
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
@@ -976,13 +984,13 @@
       });
     });
     legend("leg-year", activeUnis());
-    tableToggleFill("table-year", yearTableData(byYear, years), ["Year", "MCU", "DCEU", "DCU", "Elseworlds", "Total"]);
+    tableToggleFill("table-year", yearTableData(byYear, years), ["Year", "MCU", "SSU", "DCEU", "DCU", "Elseworlds", "Total"]);
   }
   function yearTableData(byYear, years) {
     return years.map(function (y) {
       var r = byYear[y] || {};
-      var tot = ["MCU", "DCEU", "DCU", "Elseworlds"].reduce(function (s, k) { return s + (r[k] || 0); }, 0);
-      return [String(y), usd(r.MCU || 0), usd(r.DCEU || 0), usd(r.DCU || 0), usd(r.Elseworlds || 0), usd(tot)];
+      var tot = ["MCU", "SSU", "DCEU", "DCU", "Elseworlds"].reduce(function (s, k) { return s + (r[k] || 0); }, 0);
+      return [String(y), usd(r.MCU || 0), usd(r.SSU || 0), usd(r.DCEU || 0), usd(r.DCU || 0), usd(r.Elseworlds || 0), usd(tot)];
     });
   }
 
@@ -1212,13 +1220,13 @@
       refs += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(r) + '" y2="' + yS(r) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>';
       refs += '<text x="' + (m.l + 6) + '" y="' + (yS(r) - 6) + '" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(r) + ' club</text>';
     });
-    var shape = { MCU: "circle", DCEU: "square", DCU: "triangle", Elseworlds: "diamond" };
     function mark(cx, cy, u, i) {
-      var c = "var(" + COLORVAR[u] + ")", s = shape[u], r = mr;
+      var c = "var(" + COLORVAR[u] + ")", s = SHAPE[u], r = mr;
       var common = ' fill="' + c + '" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + i + '"';
       if (s === "circle") return '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + common + "/>";
       if (s === "square") return '<rect x="' + (cx - r) + '" y="' + (cy - r) + '" width="' + (2 * r) + '" height="' + (2 * r) + '" rx="1.5"' + common + "/>";
       if (s === "triangle") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + (cy + r) + "L" + (cx - r - 1) + " " + (cy + r) + 'Z"' + common + "/>";
+      if (s === "plus") return '<path d="' + plusPath(cx, cy, r + 1) + '"' + common + "/>";
       return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + cy + "L" + cx + " " + (cy + r + 1) + "L" + (cx - r - 1) + " " + cy + 'Z"' + common + "/>";
     }
     var pts = "", labels = "";
@@ -1366,7 +1374,7 @@
   function legend(id, keys, withSize, withShape) {
     var host = document.getElementById(id);
     if (!host) return;
-    var shape = { MCU: "●", DCEU: "■", DCU: "▲", Elseworlds: "◆" };
+    var shape = { MCU: "●", DCEU: "■", DCU: "▲", SSU: "✚", Elseworlds: "◆" };
     host.innerHTML = keys.map(function (k) {
       var mk = withShape ? '<span style="color:var(' + COLORVAR[k] + ');font-size:13px">' + shape[k] + "</span>" : '<i style="--c:var(' + COLORVAR[k] + ')"></i>';
       return "<span>" + mk + " " + k + "</span>";
@@ -1391,7 +1399,12 @@
   function wireSplit(svg) { wireFilmMarks(svg, ".splitRow", false); }
 
   /* ---------- shared: universe-shaped marker ---------- */
-  var SHAPE = { MCU: "circle", DCEU: "square", DCU: "triangle", Elseworlds: "diamond" };
+  var SHAPE = { MCU: "circle", DCEU: "square", DCU: "triangle", SSU: "plus", Elseworlds: "diamond" };
+  function plusPath(cx, cy, r) {
+    var t = r * 0.42;
+    return "M" + (cx - t) + " " + (cy - r) + "H" + (cx + t) + "V" + (cy - t) + "H" + (cx + r) + "V" + (cy + t) +
+      "H" + (cx + t) + "V" + (cy + r) + "H" + (cx - t) + "V" + (cy + t) + "H" + (cx - r) + "V" + (cy - t) + "H" + (cx - t) + "Z";
+  }
   function uniMark(cx, cy, u, i, r) {
     r = r || 6;
     var c = "var(" + COLORVAR[u] + ")", s = SHAPE[u];
@@ -1399,6 +1412,7 @@
     if (s === "square") return '<rect x="' + (cx - r) + '" y="' + (cy - r) + '" width="' + (2 * r) + '" height="' + (2 * r) + '" rx="1.5"' + a + "/>";
     if (s === "triangle") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + (cy + r) + "L" + (cx - r - 1) + " " + (cy + r) + 'Z"' + a + "/>";
     if (s === "diamond") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + cy + "L" + cx + " " + (cy + r + 1) + "L" + (cx - r - 1) + " " + cy + 'Z"' + a + "/>";
+    if (s === "plus") return '<path d="' + plusPath(cx, cy, r + 1) + '"' + a + "/>";
     return '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + a + "/>";
   }
 

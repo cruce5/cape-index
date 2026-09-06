@@ -2,13 +2,20 @@
   "note": "Films beyond the legacy sheet. Release/gross status is confirmed against Box Office Mojo by the scraper; entries BOM shows as unreleased or not-yet-grossing are held out of films.json (kept here, flagged) until they earn a worldwide number.",
   "candidates": [
     { "title": "Joker", "release_date": "2019-10-04", "universe": "Elseworlds", "universe_label": "DC Elseworlds", "studio_label": "Warner Bros.", "bom_id": "tt7286456" },
-    { "title": "Joker: Folie a Deux", "release_date": "2024-10-04", "universe": "Elseworlds", "universe_label": "DC Elseworlds", "studio_label": "Warner Bros.", "bom_id": "tt11315808" },
+    { "title": "Joker: Folie à Deux", "release_date": "2024-10-04", "universe": "Elseworlds", "universe_label": "DC Elseworlds", "studio_label": "Warner Bros.", "bom_id": "tt11315808" },
     { "title": "Thunderbolts*", "release_date": "2025-05-02", "universe": "MCU", "universe_label": "Marvel Cinematic Universe", "studio_label": "Marvel Studios", "bom_id": "tt20969586" },
     { "title": "The Fantastic Four: First Steps", "release_date": "2025-07-25", "universe": "MCU", "universe_label": "Marvel Cinematic Universe", "studio_label": "Marvel Studios", "bom_id": "tt10676052" },
     { "title": "Spider-Man: Brand New Day", "release_date": "2026-07-31", "universe": "MCU", "universe_label": "Marvel Cinematic Universe", "studio_label": "Marvel Studios", "bom_id": "tt22084616" },
     { "title": "Avengers: Doomsday", "release_date": "2026-12-18", "universe": "MCU", "universe_label": "Marvel Cinematic Universe", "studio_label": "Marvel Studios", "bom_id": "tt21357150" },
     { "title": "Superman", "release_date": "2025-07-11", "universe": "DCU", "universe_label": "DC Universe", "studio_label": "DC Studios", "bom_id": "tt5950044" },
     { "title": "Supergirl", "release_date": "2026-06-26", "universe": "DCU", "universe_label": "DC Universe", "studio_label": "DC Studios", "bom_id": "tt8814476" },
-    { "title": "Clayface", "release_date": "2026-09-11", "universe": "DCU", "universe_label": "DC Universe", "studio_label": "DC Studios", "bom_id": "tt34890576" }
+    { "title": "Clayface", "release_date": "2026-09-11", "universe": "DCU", "universe_label": "DC Universe", "studio_label": "DC Studios", "bom_id": "tt34890576" },
+
+    { "title": "Venom", "release_date": "2018-10-05", "universe": "SSU", "universe_label": "Sony's Spider-Man Universe", "studio_label": "Sony Pictures", "bom_id": "tt1270797" },
+    { "title": "Venom: Let There Be Carnage", "release_date": "2021-10-01", "universe": "SSU", "universe_label": "Sony's Spider-Man Universe", "studio_label": "Sony Pictures", "bom_id": "tt7097896" },
+    { "title": "Morbius", "release_date": "2022-04-01", "universe": "SSU", "universe_label": "Sony's Spider-Man Universe", "studio_label": "Sony Pictures", "bom_id": "tt5108870" },
+    { "title": "Madame Web", "release_date": "2024-02-14", "universe": "SSU", "universe_label": "Sony's Spider-Man Universe", "studio_label": "Sony Pictures", "bom_id": "tt11057302" },
+    { "title": "Venom: The Last Dance", "release_date": "2024-10-25", "universe": "SSU", "universe_label": "Sony's Spider-Man Universe", "studio_label": "Sony Pictures", "bom_id": "tt16366836" },
+    { "title": "Kraven the Hunter", "release_date": "2024-12-13", "universe": "SSU", "universe_label": "Sony's Spider-Man Universe", "studio_label": "Sony Pictures", "bom_id": "tt8790086" }
   ]
 }

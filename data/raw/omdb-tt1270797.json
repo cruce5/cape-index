@@ -1,0 +1,51 @@
+{
+  "Title": "Venom",
+  "Year": "2018",
+  "Rated": "PG-13",
+  "Released": "05 Oct 2018",
+  "Runtime": "112 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Ruben Fleischer",
+  "Writer": "Jeff Pinkner, Scott Rosenberg, Kelly Marcel",
+  "Actors": "Tom Hardy, Michelle Williams, Riz Ahmed",
+  "Plot": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.",
+  "Language": "English, Mandarin, Malay",
+  "Country": "United States, China",
+  "Awards": "2 wins & 9 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BNTYwMDg5MDItNjhmZi00NmVmLThjNWItMmNkMjVkMWRhNzI2XkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "6.6/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "31%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "35/100"
+    }
+  ],
+  "Metascore": "35",
+  "imdbRating": "6.6",
+  "imdbVotes": "601,600",
+  "imdbID": "tt1270797",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/venom_2018",
+  "DVD": "N/A",
+  "BoxOffice": "$213,515,506",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

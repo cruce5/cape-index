@@ -95,7 +95,7 @@ const out = {
     currency: "USD",
     grosses: "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     source_of_truth: "Box Office Mojo (boxofficemojo.com) title pages",
-    universes: { MCU: byU("MCU"), DCEU: byU("DCEU"), DCU: byU("DCU"), Elseworlds: byU("Elseworlds") },
+    universes: { MCU: byU("MCU"), DCEU: byU("DCEU"), DCU: byU("DCU"), SSU: byU("SSU"), Elseworlds: byU("Elseworlds") },
     count: films.length,
     held_out: heldOut,
     scores_source: "OMDb (pending enrich-omdb.mjs)",

@@ -247,9 +247,20 @@ const CANON = {
   "Sidewinder": "Sidewinder", "Seth Voelker": "Sidewinder",
   "Mar-Vell": "Mar-Vell", "Wendy Lawson": "Mar-Vell", "Dr. Wendy Lawson": "Mar-Vell",
   "Black Canary": "Black Canary", "Dinah Lance": "Black Canary", "Shocker": "Shocker", "Herman Schultz": "Shocker",
+  // Sony's Spider-Man Universe
+  "Venom": "Venom", "Eddie Brock": "Venom",
+  "Carnage": "Carnage", "Cletus Kasady": "Carnage",
+  "Riot": "Riot", "Carlton Drake": "Riot",
+  "Shriek": "Shriek", "Frances Barrison": "Shriek",
+  "Morbius": "Morbius", "Michael Morbius": "Morbius", "Dr. Michael Morbius": "Morbius",
+  "Madame Web": "Madame Web", "Cassandra Webb": "Madame Web", "Cassie Webb": "Madame Web",
+  "Kraven the Hunter": "Kraven the Hunter", "Kraven": "Kraven the Hunter", "Sergei Kravinoff": "Kraven the Hunter",
+  "Chameleon": "Chameleon", "Dmitri Kravinoff": "Chameleon", "Dmitri Smerdyakov": "Chameleon",
+  "Rhino": "Rhino", "Aleksei Sytsevich": "Rhino",
+  "Toxin": "Toxin", "Patrick Mulligan": "Toxin",
 };
 // noise that slips through the heuristics — never a real hero/villain identity here
-const DROP = new Set(["Anne", "Isis", "Sol Soria", "Grid", "The Kid", "Girl"]);
+const DROP = new Set(["Anne", "Isis", "Sol Soria", "Grid", "The Kid", "Girl", "Milo Morbius", "Milo", "Lucien"]);
 // Identities that are a later transformation, not a through-line: only count a film
 // where the credit actually carries the alias ("Real Name / Codename"), never a bare real name.
 const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)"]);

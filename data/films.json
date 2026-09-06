@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-05T19:29:19.139Z",
+    "generated": "2026-09-06T15:01:58.587Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -10,7 +10,7 @@
       "DCU": 2,
       "Elseworlds": 2
     },
-    "count": 57,
+    "count": 63,
     "held_out": [
       {
         "title": "Avengers: Doomsday",
@@ -79,7 +79,7 @@
         "earliest_release_date": "April 30, 2008 (29 markets)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 54.46,
@@ -139,7 +139,7 @@
         "earliest_release_date": "June 11, 2008 (Ukraine)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.91,
@@ -199,7 +199,7 @@
         "earliest_release_date": "April 28, 2010 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.07,
@@ -259,7 +259,7 @@
         "earliest_release_date": "April 21, 2011 (Australia)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 40.29,
@@ -320,7 +320,7 @@
         "earliest_release_date": "July 22, 2011 (Domestic, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 47.67,
@@ -380,7 +380,7 @@
         "earliest_release_date": "April 25, 2012 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 41,
@@ -441,7 +441,7 @@
         "earliest_release_date": "April 24, 2013 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.65,
@@ -502,7 +502,7 @@
         "earliest_release_date": "June 12, 2013 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.43,
@@ -564,7 +564,7 @@
         "earliest_release_date": "October 30, 2013 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 32,
@@ -626,7 +626,7 @@
         "earliest_release_date": "March 26, 2014 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 36.36,
@@ -688,7 +688,7 @@
         "earliest_release_date": "July 30, 2014 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.15,
@@ -749,7 +749,7 @@
         "earliest_release_date": "April 22, 2015 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 32.67,
@@ -810,7 +810,7 @@
         "earliest_release_date": "July 10, 2015 (Bulgaria)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.7,
@@ -869,7 +869,7 @@
         "earliest_release_date": "March 23, 2016 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 37.78,
@@ -929,7 +929,7 @@
         "earliest_release_date": "April 27, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 35.33,
@@ -991,7 +991,7 @@
         "earliest_release_date": "August 3, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.39,
@@ -1053,7 +1053,7 @@
         "earliest_release_date": "October 25, 2016 (United Kingdom)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.32,
@@ -1117,7 +1117,7 @@
         "earliest_release_date": "April 25, 2017 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 45.13,
@@ -1180,7 +1180,7 @@
         "earliest_release_date": "May 30, 2017 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.1,
@@ -1241,7 +1241,7 @@
         "earliest_release_date": "July 5, 2017 (8 markets)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 38.02,
@@ -1304,7 +1304,7 @@
         "earliest_release_date": "October 24, 2017 (United Kingdom)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 36.84,
@@ -1363,7 +1363,7 @@
         "earliest_release_date": "October 17, 2017 (Lithuania)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -1425,7 +1425,7 @@
         "earliest_release_date": "February 13, 2018 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 51.89,
@@ -1486,7 +1486,7 @@
         "earliest_release_date": "April 25, 2018 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.07,
@@ -1548,7 +1548,7 @@
         "earliest_release_date": "July 4, 2018 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -1561,6 +1561,63 @@
         "profit_vs_breakeven": 217674139,
         "profitable": true,
         "budget_real_2025": 207800659
+      }
+    },
+    {
+      "title": "Venom",
+      "release_date": "2018-10-05",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt1270797",
+        "url": "https://www.boxofficemojo.com/title/tt1270797/"
+      },
+      "box_office": {
+        "domestic": 213515506,
+        "international": 642569645,
+        "worldwide": 856085161,
+        "opening_weekend_domestic": 80255756,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 273880634,
+        "international": 824237009,
+        "worldwide": 1098117656
+      },
+      "budget": 100000000,
+      "runtime_minutes": 112,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "scores": {
+        "rt_critic": 31,
+        "rt_audience": null,
+        "metacritic": 35,
+        "imdb": 6.6
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "October 3, 2018 (7 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "metrics": {
+        "pct_domestic": 24.94,
+        "pct_international": 75.06,
+        "domestic_multiplier": 2.66,
+        "opening_share_worldwide": 9.37,
+        "roi_worldwide": 8.56,
+        "breakeven_worldwide": 250000000,
+        "profit_vs_breakeven": 606085161,
+        "profitable": true,
+        "budget_real_2025": 128272012
       }
     },
     {
@@ -1611,7 +1668,7 @@
         "earliest_release_date": "December 7, 2018 (China)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -1673,7 +1730,7 @@
         "earliest_release_date": "March 6, 2019 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 37.73,
@@ -1735,7 +1792,7 @@
         "earliest_release_date": "April 3, 2019 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 38.19,
@@ -1796,7 +1853,7 @@
         "earliest_release_date": "April 24, 2019 (22 markets)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 30.66,
@@ -1859,7 +1916,7 @@
         "earliest_release_date": "June 28, 2019 (China, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.54,
@@ -1914,7 +1971,7 @@
         "earliest_release_date": "October 2, 2019 (APAC, LATAM)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 31.09,
@@ -1975,7 +2032,7 @@
         "earliest_release_date": "February 5, 2020 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 40.95,
@@ -2036,7 +2093,7 @@
         "earliest_release_date": "December 16, 2020 (EMEA, LATAM)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2098,7 +2155,7 @@
         "earliest_release_date": "July 7, 2021 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2161,7 +2218,7 @@
         "earliest_release_date": "May 8, 2021 (Italy)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.08,
@@ -2223,7 +2280,7 @@
         "earliest_release_date": "September 1, 2021 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2236,6 +2293,68 @@
         "profit_vs_breakeven": 57243292,
         "profitable": true,
         "budget_real_2025": 178303871
+      }
+    },
+    {
+      "title": "Venom: Let There Be Carnage",
+      "release_date": "2021-10-01",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt7097896",
+        "url": "https://www.boxofficemojo.com/title/tt7097896/"
+      },
+      "box_office": {
+        "domestic": 213550366,
+        "international": 293263498,
+        "worldwide": 506813864,
+        "opening_weekend_domestic": 90033210,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 253845713,
+        "international": 348600113,
+        "worldwide": 602445826
+      },
+      "budget": 110000000,
+      "runtime_minutes": 97,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Crime",
+        "Fantasy",
+        "Horror",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 58,
+        "rt_audience": null,
+        "metacritic": 49,
+        "imdb": 5.9
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "September 30, 2021 (Russia/CIS)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 42.14,
+        "pct_international": 57.86,
+        "domestic_multiplier": 2.37,
+        "opening_share_worldwide": 17.76,
+        "roi_worldwide": 4.61,
+        "breakeven_worldwide": 275000000,
+        "profit_vs_breakeven": 231813864,
+        "profitable": true,
+        "budget_real_2025": 130756172
       }
     },
     {
@@ -2286,7 +2405,7 @@
         "earliest_release_date": "November 3, 2021 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2349,7 +2468,7 @@
         "earliest_release_date": "December 15, 2021 (14 markets)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 42.41,
@@ -2361,6 +2480,66 @@
         "profit_vs_breakeven": 1421426073,
         "profitable": true,
         "budget_real_2025": 237738495
+      }
+    },
+    {
+      "title": "Morbius",
+      "release_date": "2022-04-01",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt5108870",
+        "url": "https://www.boxofficemojo.com/title/tt5108870/"
+      },
+      "box_office": {
+        "domestic": 73865530,
+        "international": 93595431,
+        "worldwide": 167460961,
+        "opening_weekend_domestic": 39005895,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 81297388,
+        "international": 103012381,
+        "worldwide": 184309769
+      },
+      "budget": 75000000,
+      "runtime_minutes": 104,
+      "mpaa": "PG-13",
+      "distributor": "Columbia Pictures",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Horror",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 15,
+        "rt_audience": null,
+        "metacritic": 35,
+        "imdb": 5.1
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "March 30, 2022 (APAC, EMEA)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 44.11,
+        "pct_international": 55.89,
+        "domestic_multiplier": 1.89,
+        "opening_share_worldwide": 23.29,
+        "roi_worldwide": 2.23,
+        "breakeven_worldwide": 187500000,
+        "profit_vs_breakeven": -20039039,
+        "profitable": false,
+        "budget_real_2025": 82546001
       }
     },
     {
@@ -2411,7 +2590,7 @@
         "earliest_release_date": "May 4, 2022 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2475,7 +2654,7 @@
         "earliest_release_date": "July 6, 2022 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2538,7 +2717,7 @@
         "earliest_release_date": "October 14, 2022 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2601,7 +2780,7 @@
         "earliest_release_date": "November 4, 2022 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 52.82,
@@ -2663,7 +2842,7 @@
         "earliest_release_date": "February 15, 2023 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2727,7 +2906,7 @@
         "earliest_release_date": "March 15, 2023 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2791,7 +2970,7 @@
         "earliest_release_date": "April 13, 2023 (Italy)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "metrics": {
         "pct_domestic": 42.46,
@@ -2853,7 +3032,7 @@
         "earliest_release_date": "June 14, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2916,7 +3095,7 @@
         "earliest_release_date": "August 16, 2023 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2978,7 +3157,7 @@
         "earliest_release_date": "November 8, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3041,7 +3220,7 @@
         "earliest_release_date": "December 20, 2023 (9 markets)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3054,6 +3233,63 @@
         "profit_vs_breakeven": -72318774,
         "profitable": false,
         "budget_real_2025": 216705174
+      }
+    },
+    {
+      "title": "Madame Web",
+      "release_date": "2024-02-14",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt11057302",
+        "url": "https://www.boxofficemojo.com/title/tt11057302/"
+      },
+      "box_office": {
+        "domestic": 43817106,
+        "international": 56681658,
+        "worldwide": 100498764,
+        "opening_weekend_domestic": 15335860,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 44991982,
+        "international": 58201474,
+        "worldwide": 103193456
+      },
+      "budget": 80000000,
+      "runtime_minutes": 116,
+      "mpaa": "PG-13",
+      "distributor": "Columbia Pictures",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 10,
+        "rt_audience": null,
+        "metacritic": 26,
+        "imdb": 4.1
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "February 14, 2024 (7 markets)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 43.6,
+        "pct_international": 56.4,
+        "domestic_multiplier": 2.86,
+        "opening_share_worldwide": 15.26,
+        "roi_worldwide": 1.26,
+        "breakeven_worldwide": 200000000,
+        "profit_vs_breakeven": -99501236,
+        "profitable": false,
+        "budget_real_2025": 82145054
       }
     },
     {
@@ -3104,7 +3340,7 @@
         "earliest_release_date": "July 18, 2024 (Slovakia)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3162,8 +3398,8 @@
         "earliest_release_date": "October 1, 2024 (South Korea)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
-      "notes": "Added beyond the legacy Tableau sheet.",
+      "verified_at": "2026-09-06",
+      "notes": null,
       "budget_estimated": true,
       "metrics": {
         "pct_domestic": 28.1,
@@ -3175,6 +3411,124 @@
         "profit_vs_breakeven": -292499713,
         "profitable": false,
         "budget_real_2025": 205362636
+      }
+    },
+    {
+      "title": "Venom: The Last Dance",
+      "release_date": "2024-10-25",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt16366836",
+        "url": "https://www.boxofficemojo.com/title/tt16366836/"
+      },
+      "box_office": {
+        "domestic": 139755882,
+        "international": 339181736,
+        "worldwide": 478937618,
+        "opening_weekend_domestic": 51012404,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 143503182,
+        "international": 348276277,
+        "worldwide": 491779459
+      },
+      "budget": 120000000,
+      "runtime_minutes": 110,
+      "mpaa": "PG-13",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Horror",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 40,
+        "rt_audience": null,
+        "metacritic": 41,
+        "imdb": 6
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "October 23, 2024 (China, APAC)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 29.18,
+        "pct_international": 70.82,
+        "domestic_multiplier": 2.74,
+        "opening_share_worldwide": 10.65,
+        "roi_worldwide": 3.99,
+        "breakeven_worldwide": 300000000,
+        "profit_vs_breakeven": 178937618,
+        "profitable": true,
+        "budget_real_2025": 123217582
+      }
+    },
+    {
+      "title": "Kraven the Hunter",
+      "release_date": "2024-12-13",
+      "universe": "SSU",
+      "universe_label": "Sony's Spider-Man Universe",
+      "studio_label": "Sony Pictures",
+      "bom": {
+        "id": "tt8790086",
+        "url": "https://www.boxofficemojo.com/title/tt8790086/"
+      },
+      "box_office": {
+        "domestic": 25026310,
+        "international": 37050223,
+        "worldwide": 62076533,
+        "opening_weekend_domestic": 11001109,
+        "widest_release_theaters": null,
+        "is_final": true
+      },
+      "box_office_real_2025": {
+        "domestic": 25697345,
+        "international": 38043657,
+        "worldwide": 63741002
+      },
+      "budget": 110000000,
+      "runtime_minutes": 127,
+      "mpaa": "R",
+      "distributor": "Sony Pictures Releasing",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Thriller"
+      ],
+      "scores": {
+        "rt_critic": 15,
+        "rt_audience": null,
+        "metacritic": 35,
+        "imdb": 5.5
+      },
+      "sheet": null,
+      "bom_meta": {
+        "earliest_release_date": "December 11, 2024 (Mexico)"
+      },
+      "verified": true,
+      "verified_at": "2026-09-06",
+      "notes": "Added beyond the legacy Tableau sheet.",
+      "budget_estimated": true,
+      "metrics": {
+        "pct_domestic": 40.32,
+        "pct_international": 59.68,
+        "domestic_multiplier": 2.27,
+        "opening_share_worldwide": 17.72,
+        "roi_worldwide": 0.56,
+        "breakeven_worldwide": 275000000,
+        "profit_vs_breakeven": -212923467,
+        "profitable": false,
+        "budget_real_2025": 112949450
       }
     },
     {
@@ -3224,7 +3578,7 @@
         "earliest_release_date": "February 12, 2025 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3285,7 +3639,7 @@
         "earliest_release_date": "January 1, 2025 (Portugal)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -3343,7 +3697,7 @@
         "earliest_release_date": "July 9, 2025 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 57.25,
@@ -3400,7 +3754,7 @@
         "earliest_release_date": "July 23, 2025 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -3459,7 +3813,7 @@
         "earliest_release_date": "June 24, 2026 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -3517,7 +3871,7 @@
         "earliest_release_date": "July 29, 2026 (6 markets)"
       },
       "verified": true,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {

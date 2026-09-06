@@ -1,6 +1,6 @@
 # Reconciliation — legacy sheet vs Box Office Mojo
 
-_Generated 2026-09-05. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
+_Generated 2026-09-06. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
 
 ## Summary
 
@@ -10,7 +10,7 @@ _Generated 2026-09-05. Source of truth: Box Office Mojo (boxofficemojo.com) titl
 | Exact match (no change) | 34 |
 | Minor drift (< $1M worldwide) | 11 |
 | **Material change (≥ $1M worldwide)** | **5** |
-| New films added (verified) | 7 |
+| New films added (verified) | 13 |
 | Held out (unreleased on BOM) | 2 |
 | Legacy total worldwide | $38,797,637,720 |
 | Verified total worldwide | $38,813,899,440 |
@@ -50,8 +50,14 @@ Iron Man · The Incredible Hulk · Iron Man 2 · Thor · Captain America: The Fi
 
 | Film | Universe | Release | Domestic | International | Worldwide | Final? |
 |------|----------|---------|----------|--------------|-----------|--------|
+| Venom | SSU | 2018-10-05 | $213,515,506 | $642,569,645 | $856,085,161 | yes |
 | Joker | Elseworlds | 2019-10-04 | $335,477,657 | $743,480,625 | $1,078,958,629 | yes |
+| Venom: Let There Be Carnage | SSU | 2021-10-01 | $213,550,366 | $293,263,498 | $506,813,864 | yes |
+| Morbius | SSU | 2022-04-01 | $73,865,530 | $93,595,431 | $167,460,961 | yes |
+| Madame Web | SSU | 2024-02-14 | $43,817,106 | $56,681,658 | $100,498,764 | yes |
 | Joker: Folie à Deux | Elseworlds | 2024-10-04 | $58,300,287 | $149,200,000 | $207,500,287 | yes |
+| Venom: The Last Dance | SSU | 2024-10-25 | $139,755,882 | $339,181,736 | $478,937,618 | yes |
+| Kraven the Hunter | SSU | 2024-12-13 | $25,026,310 | $37,050,223 | $62,076,533 | yes |
 | Thunderbolts* | MCU | 2025-05-02 | $190,274,328 | $192,162,589 | $382,436,917 | yes |
 | Superman | DCU | 2025-07-11 | $354,223,803 | $264,500,000 | $618,723,803 | yes |
 | The Fantastic Four: First Steps | MCU | 2025-07-25 | $274,286,610 | $247,572,118 | $521,858,728 | yes |

@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-06T14:51:15.760Z",
+  "generated": "2026-09-06T15:11:42.572Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 141,
+  "count": 151,
   "characters": [
     {
       "name": "Iron Man",
@@ -1446,6 +1446,43 @@
       ]
     },
     {
+      "name": "Venom",
+      "real_name": "Eddie Brock",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Tom Hardy"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Venom",
+          "universe": "SSU",
+          "date": "2018-10-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Hardy"
+        },
+        {
+          "title": "Venom: Let There Be Carnage",
+          "universe": "SSU",
+          "date": "2021-10-01",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Hardy"
+        },
+        {
+          "title": "Venom: The Last Dance",
+          "universe": "SSU",
+          "date": "2024-10-25",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Hardy"
+        }
+      ]
+    },
+    {
       "name": "Wasp",
       "real_name": "Hope van Dyne",
       "universes": [
@@ -1951,6 +1988,35 @@
       ]
     },
     {
+      "name": "Toxin",
+      "real_name": "Patrick Mulligan",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Stephen Graham"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Venom: Let There Be Carnage",
+          "universe": "SSU",
+          "date": "2021-10-01",
+          "order": 5,
+          "minor": false,
+          "actor": "Stephen Graham"
+        },
+        {
+          "title": "Venom: The Last Dance",
+          "universe": "SSU",
+          "date": "2024-10-25",
+          "order": 5,
+          "minor": false,
+          "actor": "Stephen Graham"
+        }
+      ]
+    },
+    {
       "name": "Valkyrie",
       "real_name": null,
       "universes": [
@@ -2311,6 +2377,27 @@
       ]
     },
     {
+      "name": "Carnage",
+      "real_name": "Cletus Kasady",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Woody Harrelson"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Venom: Let There Be Carnage",
+          "universe": "SSU",
+          "date": "2021-10-01",
+          "order": 6,
+          "minor": false,
+          "actor": "Woody Harrelson"
+        }
+      ]
+    },
+    {
       "name": "Cassandra Nova",
       "real_name": null,
       "universes": [
@@ -2328,6 +2415,27 @@
           "order": 3,
           "minor": false,
           "actor": "Emma Corrin"
+        }
+      ]
+    },
+    {
+      "name": "Chameleon",
+      "real_name": "Dmitri Kravinoff",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Fred Hechinger"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Kraven the Hunter",
+          "universe": "SSU",
+          "date": "2024-12-13",
+          "order": 3,
+          "minor": false,
+          "actor": "Fred Hechinger"
         }
       ]
     },
@@ -3067,6 +3175,27 @@
       ]
     },
     {
+      "name": "Kraven the Hunter",
+      "real_name": "Sergei Kravinoff",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Aaron Taylor-Johnson"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Kraven the Hunter",
+          "universe": "SSU",
+          "date": "2024-12-13",
+          "order": 1,
+          "minor": false,
+          "actor": "Aaron Taylor-Johnson"
+        }
+      ]
+    },
+    {
       "name": "Kurse",
       "real_name": "Algrim",
       "universes": [
@@ -3084,6 +3213,27 @@
           "order": 7,
           "minor": false,
           "actor": "Adewale Akinnuoye-Agbaje"
+        }
+      ]
+    },
+    {
+      "name": "Madame Web",
+      "real_name": "Cassandra Webb",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Dakota Johnson"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Madame Web",
+          "universe": "SSU",
+          "date": "2024-02-14",
+          "order": 1,
+          "minor": false,
+          "actor": "Dakota Johnson"
         }
       ]
     },
@@ -3252,6 +3402,27 @@
           "order": 9,
           "minor": false,
           "actor": "Paul Walter Hauser"
+        }
+      ]
+    },
+    {
+      "name": "Morbius",
+      "real_name": "Dr. Michael Morbius",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Jared Leto"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Morbius",
+          "universe": "SSU",
+          "date": "2022-04-01",
+          "order": 1,
+          "minor": false,
+          "actor": "Jared Leto"
         }
       ]
     },
@@ -3508,6 +3679,48 @@
       ]
     },
     {
+      "name": "Rhino",
+      "real_name": "Aleksei Sytsevich",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Alessandro Nivola"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Kraven the Hunter",
+          "universe": "SSU",
+          "date": "2024-12-13",
+          "order": 4,
+          "minor": false,
+          "actor": "Alessandro Nivola"
+        }
+      ]
+    },
+    {
+      "name": "Riot",
+      "real_name": "Carlton Drake",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Riz Ahmed"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Venom",
+          "universe": "SSU",
+          "date": "2018-10-05",
+          "order": 3,
+          "minor": false,
+          "actor": "Riz Ahmed"
+        }
+      ]
+    },
+    {
       "name": "Sabbac",
       "real_name": "Ishmael Gregor",
       "universes": [
@@ -3630,6 +3843,27 @@
           "order": 10,
           "minor": false,
           "actor": "Bokeem Woodbine"
+        }
+      ]
+    },
+    {
+      "name": "Shriek",
+      "real_name": "Frances Barrison",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Naomie Harris"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Venom: Let There Be Carnage",
+          "universe": "SSU",
+          "date": "2021-10-01",
+          "order": 3,
+          "minor": false,
+          "actor": "Naomie Harris"
         }
       ]
     },

@@ -1,0 +1,340 @@
+{{Short description|2024 film by Kelly Marcel}}
+{{Use American English|date=September 2025}}
+{{Use list-defined references|date=September 2025}}
+{{Use mdy dates|date=September 2025}}
+{{Infobox film
+| image          = Venom The Last Dance Poster.jpg
+| caption        = Theatrical release poster
+| director       = [[Kelly Marcel]]
+| screenplay     = Kelly Marcel
+| story          = {{Plainlist|
+* [[Tom Hardy]]
+* Kelly Marcel
+}}
+| based_on       = [[Marvel Comics]]<!-- Credit per official website: https://venom.movie/synopsis/ -->
+| producer       = {{Plainlist|
+* [[Avi Arad]]
+* [[Matt Tolmach]]
+* [[Amy Pascal]]
+* Kelly Marcel
+* Tom Hardy
+* Hutch Parker
+}}
+| starring       = {{Plainlist|<!-- Order per official movie end credits-->
+* Tom Hardy
+* [[Chiwetel Ejiofor]]
+* [[Juno Temple]]
+* [[Rhys Ifans]]
+* [[Stephen Graham]]
+* [[Peggy Lu]]
+* [[Alanna Ubach]]
+}}
+| cinematography = [[Fabian Wagner]]
+| editing        = [[Mark Sanger]]
+| music          = [[Dan Deacon]]
+| studio         = {{Plainlist|
+* [[Columbia Pictures]]
+* [[Marvel Entertainment]]
+* Arad Productions
+* Matt Tolmach Productions
+* Pascal Pictures
+* Marcel Hardy Productions
+* Hutch Parker Entertainment
+}}
+| distributor    = [[Sony Pictures Releasing]]
+| released       = {{Film date|2024|10|21|New York City|2024|10|25|United States}}
+| runtime        = 109 minutes<ref name="Runtime" />
+| country        = United States
+| language       = English
+| budget         = $110–120&nbsp;million<ref name="NUM" /><ref name="Budget" />
+| gross          = <!-- First update article body -->$478.9&nbsp;million<ref name="NUM" /><ref name="BOM" />
+}}
+'''''Venom: The Last Dance''''' is a 2024 American [[superhero film]] based on the [[Marvel Comics]] character [[Venom (character)|Venom]]. It is the sequel to ''[[Venom (2018 film)|Venom]]'' (2018) and ''[[Venom: Let There Be Carnage]]'' (2021), and the fifth film in [[Sony's Spider-Man Universe]] (SSU). Written and directed by [[Kelly Marcel]], it stars [[Tom Hardy]] as [[Venom (Sony's Spider-Man Universe)#Bonding with Eddie Brock|Eddie Brock]] and [[Venom (Sony's Spider-Man Universe)|Venom]], alongside [[Chiwetel Ejiofor]], [[Juno Temple]], [[Rhys Ifans]], [[Stephen Graham]], [[Peggy Lu]], and [[Alanna Ubach]]. In the film, Eddie and Venom are on the run from both of their worlds.
+
+Hardy revealed in August 2018 that he was signed on to appear in a third ''Venom'' film and [[Sony Pictures]] began development by December 2021 after the second film was released. Marcel and Hardy were writing the script by June 2022, and Marcel was set to make her [[List of directorial debuts|directorial debut]] with the film that October. New cast members, including Ejiofor and Temple, joined in mid-2023 and filming began at the end of June 2023 in [[Spain]]. Production was halted the next month due to the [[2023 SAG-AFTRA strike]], and resumed that November after the strike ended. The film was completed by the end of February 2024.
+
+''Venom: The Last Dance'' premiered at the [[Regal Cinemas|Regal]] [[Times Square]] theater in New York City on October 21, 2024, and was released in the United States on October 25. The film received mixed reviews from critics, with some praising Hardy's performance. Despite being the lowest-grossing film in the trilogy, it was still a box-office success, grossing $478.9 million worldwide.
+
+==Plot==
+After returning from another universe,{{efn|Identified offscreen as the [[Marvel Cinematic Universe]]}} [[Eddie Brock (Sony's Spider-Man Universe)|Eddie Brock]] and the [[Venom (Sony's Spider-Man Universe)|Venom symbiote]] are drunk in a bar in [[Mexico]]. Still on the run after their recent battle with [[Carnage (character)|Carnage]],{{efn|As depicted in ''[[Venom: Let There Be Carnage]]'' (2021)}} the apparent murder of [[Patrick Mulligan (character)|Patrick Mulligan]] makes international headlines with Eddie, who is falsely branded a prime suspect. He decides to set out for [[New York City]] to meet an old acquaintance in an attempt to clear his name — not before unwittingly leaving a bit of Venom at the bar. Meanwhile, a creature known as a [[Xenophage (comics)|Xenophage]] has begun tracking Eddie and Venom. 
+
+Soldier [[Rex Strickland]] oversees Imperium, a government operation at the site of the soon-to-be-decommissioned [[Area 51]] for the capture and study of other [[Symbiote (comics)|symbiotes]] that have fallen to Earth. Mulligan, revealed to have survived his encounter with Carnage, is captured by Strickland. He is bonded with one of many contained symbiotes and questioned by Imperium researchers Dr. [[Doctor Paine|Teddy Paine]] and Sadie "Christmas" to learn about the symbiotes' purpose on Earth. 
+
+While traveling via the side of an airplane bound for New York City, Eddie and Venom are attacked by the Xenophage and forced to drop into the [[Nevada]] desert. Venom explains that Xenophages were sent to Earth by symbiote creator [[Knull]] to retrieve a Codex, forged when a symbiote resurrects its host; the Codex will free Knull from the prison the symbiotes trapped him in long ago. Having previously revived Eddie,{{efn|As depicted in ''[[Venom (2018 film)|Venom]]'' (2018)}} Venom and Eddie are now carrying a Codex. After escaping both the Xenophage and Strickland and his team, Eddie hitches a ride to [[Las Vegas]] with a family of alien enthusiast hippies. Mulligan's symbiote informs Strickland of Knull's intentions with the Codex, which can only be destroyed if either Eddie or Venom dies.
+
+In Las Vegas, after a reunion with Mrs. Chen, Eddie and Venom are ambushed by both the Xenophage and Strickland's team. The pair are separated and taken to Area 51. Sadie, sympathetic to the symbiotes, frees Venom, who re-bonds with Eddie after Strickland shoots him. This attracts the Xenophage, which devours Mulligan in the battle. Venom has the other confined symbiotes released, which bond with Sadie and the other scientists to fight off the Xenophage. Knull is signalled that the Codex has been found and sends more Xenophages to Earth, overwhelming the symbiotes. Realizing he must sacrifice himself to destroy the Codex and save the universe, Venom merges with the Xenophages, leads them to the acid tanks, and bids Eddie farewell. A mortally wounded Strickland has a change of heart about the symbiotes and sets off his grenades to destroy the Xenophages. Teddy bonds with [[Agony (comics)|a symbiote]] to save Sadie from the resulting explosion.
+
+Eddie wakes up in a hospital, where a military official informs him that his brave actions at Area 51 have earned him an [[expungement]], under the condition of keeping the events a secret. Eddie travels to New York City and visits the [[Statue of Liberty]] to honor Venom, who had desired to see the statue.<!--Do NOT add a linebreak here as these sentences are short enough to be combined!--> In a [[mid-credits scene]], Knull declares that the universe is no longer safe from him now that Venom has fallen. In a [[post-credits scene]], the Mexican bartender—who was taken into custody by Strickland after Eddie left—escapes the burned remains of Area 51. Nearby, a black cockroach crawls out next to a broken vial that previously contained a sample of the Venom symbiote.
+
+== Cast ==
+[[File:Tom Hardy by Gage Skidmore in 2018.jpg|thumb|upright|Tom Hardy reprises his role as Eddie Brock and Venom.]]<!-- Order per official website: https://venom.movie/synopsis/ -->
+* [[Tom Hardy]] as [[Venom (Sony's Spider-Man Universe)#Bonding with Eddie Brock|Eddie Brock]] / [[Venom (Sony's Spider-Man Universe)|Venom]]: An [[investigative journalist]] who is the host of Venom, an alien [[Symbiote (comics)|symbiote]] that imbues him with super-human abilities.<ref name="HardyTrilogy" />
+* [[Chiwetel Ejiofor]] as General [[Rex Strickland]]: A commander for Imperium who is tracking Eddie and trying to capture Venom.<ref name="NYCC2024" /><ref name="TrailerPolygon" /><ref name="TrailerAVClub" /> 
+* [[Juno Temple]] as Dr. [[Doctor Paine|Theodora "Teddy" Paine]]: A scientist for Imperium, haunted by the death of her brother from a [[lightning strike]] that also paralyzed her left arm.<ref name="TrailerAVClub" />
+* [[Rhys Ifans]] as Martin Moon: A hippie and an alien enthusiast.<ref name="TrailerDeadline" /> 
+* [[Stephen Graham]] as [[Patrick Mulligan (character)|Patrick Mulligan]]: A former police detective who was infected with a symbiote after encountering [[Carnage (character)|Carnage]], but is left for dead by it before he is captured by Imperium. Graham also voices an unnamed green symbiote with whom Mulligan bonds.<ref name="TrailerPolygon" />{{efn|While neither symbiote is named on-screen, the official subtitles of the movie trailer call the green symbiote [[Toxin (character)|Toxin]]. The symbiote that saved Mulligan's life remains unidentified.{{citation needed|date=March 2025}}}}
+* [[Peggy Lu]] as Mrs. Chen: A convenience store owner who befriended Eddie and Venom.<ref name="TrailerGizmodo" />
+* [[Clark Backo]] as [[Lasher (comics)|Sadie "Christmas"]]<!--While credited as "Sadie Christmas", the film presents "Christmas" as being a nickname given to Sadie by Strickland, derived from her Christmas tree badge, and not her actual last name.-->: A researcher for Imperium. She is nicknamed "Christmas" by Strickland due to her Christmas tree badge.<ref name="Backo" />
+* [[Alanna Ubach]] as Nova Moon: Martin's wife and fellow hippie.<ref name="TrailerDeadline" />
+* [[Andy Serkis]] as [[Knull]]: The creator of the symbiotes, who seeks Eddie and Venom's codex to free himself.<ref name="Knull" /><ref name="KnullActor" /> Director [[Kelly Marcel]] said about choosing Serkis, who directed ''[[Venom: Let There Be Carnage]]'' (2021), to play the character: "We knew on ''Venom 2'' that he was going to be this [Knull] character, we should be able to bring the character into this movie."<ref name="SerkisOptionKnull" />
+
+Additionally, [[Hala Finley]] and Dash McCloud portray Martin's children Echo and Leaf Moon, respectively.<ref name="FinleyMcLoud" /> [[Cristo Fernández]] reprises his role as the bartender from the [[Marvel Cinematic Universe]] (MCU) film ''[[Spider-Man: No Way Home]]'' (2021), as well as a version of the character from Venom's universe.<ref name="TrailerGizmodo" /><ref name="FernándezScott" /> [[Jared Abrahamson]] portrays Captain Forrest, a member of Imperium.<ref>{{cite web |title=The Penguin & Venom 3 Have a Weird Connection Fans Probably Missed |url=https://comicbook.com/tv-shows/news/venom-3-the-penguin-same-actor-jared-abrahamson-connection/ |website=comicbook.com |date=October 30, 2024 |access-date=2 October 2025}}</ref> Jack Brady portrays Jim, an Imperium security guard who bonds with a brown-colored symbiote, while Jade Nicholson-Lamb portrays Jade Clark, an Imperium lab technician who bonds with a violet-colored symbiote.<ref>{{Cite web|title=Jack Brady- Venom: The Last Dance|url=https://www.mclean-williams.com/jack-brady-venom-the-last-dance/|access-date=November 20, 2024|website=McLean-Williams Limited}}</ref><ref name="VenomVFX">{{Cite web|last=Frei|first=Vincent|date=November 18, 2024|title=Venom – The Last Dance: John Moffatt and Aharon Bourland – Production VFX Supervisors|url=https://www.artofvfx.com/venom-the-last-dance-john-moffatt-and-aharon-bourland-production-vfx-supervisors/|access-date=November 20, 2024|website=Art of VFX|archive-date=November 18, 2024|archive-url=https://web.archive.org/web/20241118175402/https://www.artofvfx.com/venom-the-last-dance-john-moffatt-and-aharon-bourland-production-vfx-supervisors/|url-status=live}}</ref><ref>{{Cite Instagram |user=jadenicholsonlamb |postid=DBgVVH6yvNh |date=October 24, 2024 |title= Venom: The Last Dance|access-date=November 20, 2024}}</ref> [[Reid Scott (actor)|Reid Scott]], who previously portrayed Dr. Dan Lewis in the first two ''Venom'' films, returns as the shadowy head of Imperium.<ref name="FernándezScott" />{{efn|The head of Imperium and Dan Lewis are separate characters, despite Reid Scott being credited as "Dr. Dan Lewis" in the film's end credits.{{citation needed|date=March 2025}}}}
+
+== Production ==
+=== Development and pre-production ===
+Star [[Tom Hardy]] stated in August 2018 that he had signed on to star in three ''[[Venom (2018 film)|Venom]]'' films.<ref name="HardyTrilogy" /> In September 2021, Hardy noted that the producers would have to continue to develop [[Sony's Spider-Man Universe]] (SSU) in future films but said they were also interested in [[Crossover (fiction)|crossing over]] with the [[Marvel Cinematic Universe]] (MCU) more.<ref name="HardyFutureSR" /> ''[[Venom: Let There Be Carnage]]'' (2021) director [[Andy Serkis]] expressed interest in returning to direct another ''Venom'' film,<ref name="SerkisFutureSR" /> and felt there was more to explore with [[Venom (Sony's Spider-Man Universe)|Venom]] in future films before the character could meet [[Spider-Man]] in a future crossover film,<ref name="SerkisFutureJT" /> including further exploration of the [[Ravencroft Institute]] and other potential villains being held there.<ref name="SerkisFutureSR" /> In October, [[Tom Holland]] said he and producer [[Amy Pascal]] had discussed him potentially reprising his MCU role as [[Peter Parker (Marvel Cinematic Universe)|Peter Parker / Spider-Man]] in future ''Venom'' sequels, after he made a [[cameo appearance]] in ''Let There Be Carnage'' via footage from the MCU film ''[[Spider-Man: No Way Home]]'' (2021).<ref name="Holland" /> Neither Holland nor his character appeared in the finished film. Adam B. Vary clarified in December 2024 that, according to one Sony source, [[The Walt Disney Company]] never precluded Sony from using Holland for their films; it simply never happened due to the studio feeling that audiences wouldn't accept Holland's Spider-Man appearing in non-MCU films, especially after the releases of ''No Way Home'' and ''[[Doctor Strange in the Multiverse of Madness]]'' (2022) and the MCU's [[Multiverse (Marvel Cinematic Universe)|multiverse]].<ref name="NoHollandDespitePermission" /> 
+
+[[Sony Pictures]] confirmed the film was in development at [[CinemaCon]] in April 2022.<ref name="CinemaConV3" /> In June, Hardy revealed that [[Kelly Marcel]] was writing the screenplay after previously working on the prior ''Venom'' films and that he was co-writing the story with her.<ref name="HardyMarcelScript" /> Hardy was set to be paid $20&nbsp;million for his involvement.<ref name="HardySalary" /> Serkis was unable to return as director due to his commitments to ''[[Animal Farm (2025 film)|Animal Farm]]'', which he had delayed to work on ''Let There Be Carnage'',<ref name="SerkisNov2022" /> but ultimately portrayed the character [[Knull]] in the film.<ref name="SerkisOptionKnull" /> Marcel signed on in October to make her [[directorial debut]] with the film, which was expected to conclude the ''Venom'' trilogy.<ref name="MarcelDirect" /> She was also set to produce the film alongside [[Avi Arad]], [[Matt Tolmach]], Pascal, Hutch Parker, and Hardy,<ref name="MarcelDirect" /> all doing so through their respective production companies [[Arad Productions]], [[Matt Tolmach Productions]], [[Pascal Pictures]], Hutch Parker Entertainment, and [[Hardy Son & Baker]]. [[Columbia Pictures]] also produces in association with [[Marvel Entertainment]].<ref name="ProductionWeeklyNov2022" /> Hardy confirmed in February 2023 that pre-production work had begun.<ref name="HardyPreprod" /> [[Juno Temple]] entered negotiations to join the cast in an undisclosed "lead role" in April.<ref name="Temple" /> The next month, filming was expected to begin in June in London,<ref name="Wagner" /><ref name="LondonFilmingStart" /> and [[Chiwetel Ejiofor]] was cast as [[Rex Strickland]],<ref name="NYCC2024" /><ref name="Ejiofor" /> when Temple was confirmed to have been cast.<ref name="Ejiofor" /> In June, the film was set for release in October 2024.<ref name="Oct2024ReleaseTimeframe" />
+
+The film features [[Knull]], the King in Black of the symbiotes who was introduced to the source material in 2018. The filmmakers were always kept aware of the character, but decided they had to lay the foundations for Venom's character and his relationship with Eddie Brock before featuring the Marvel supervillain. As such, they looked for inspiration from the ''[[Venom (comic book)|Venom]]'' comic books by [[David Michelinie]], [[Todd McFarlane]], [[Donny Cates]] and [[Ryan Stegman]], the latter two being Knull's creators, leading Sony to hire them for an advisory relationship and allowing at least Cates to read the screenplay. Cates and Stegman expected monetary compensation for the inclusion of Knull.<ref name="MarcelOctober2024" />
+
+=== Filming ===
+[[Principal photography]] began on June 26, 2023, at Los Mateos in [[Cartagena, Spain]], as well as at the [[Calblanque Regional Park]],<ref name="FilmingStart" /><ref name="MurciaFilming" /> under the [[working title]] ''Orwell''.<ref name="WorkingTitle" /> [[Fabian Wagner]] serves as the cinematographer after previously serving as an additional cinematographer on ''Let There Be Carnage''.<ref name="Wagner" /> The start of the [[2023 SAG-AFTRA strike]] in mid-July 2023 resulted in filming being halted.<ref name="SAGAFTRAStrikeImpact" /> Later that month, the film was set to release on July 12, 2024.<ref name="Jul2024Release" /> When the actors' strike ended in early November 2023, Sony delayed the film to release on November 8, 2024, filling the November 2024 date that the studio had previously reserved for an untitled Marvel film. Production was preparing to resume at that time.<ref name="Nov2024Release" /> Filming resumed on November 16.<ref name="FilmingResume" /> In February 2024, [[Clark Backo]] joined the cast in an undisclosed role,<ref name="Backo" /> and Temple said at the end of the month that filming was nearly completed.<ref name="TempleFilmingAlmostDone" />
+
+=== Post-production ===
+In March 2024, the film was titled ''Venom: The Last Dance'' and its release date was moved forward to October 25, 2024.<ref name="LastDance" /> The first teaser trailer, released in June, confirmed [[Peggy Lu]] and [[Stephen Graham]] were reprising their respective roles as Mrs. Chen and [[Patrick Mulligan (character)|Patrick Mulligan]] from prior ''Venom'' films, as well as the castings of [[Rhys Ifans]], [[Alanna Ubach]], and [[Cristo Fernández]].<ref name="TrailerPolygon" /><ref name="TrailerGizmodo" /><ref name="TrailerDeadline" /> Ifans previously portrayed [[Curt Connors (The Amazing Spider-Man film series)|Curt Connors / Lizard]] in Sony's ''[[The Amazing Spider-Man (film)|The Amazing Spider-Man]]'' (2012) and ''No Way Home'', while Fernández appeared in ''No Way Home'' as a bartender who interacts with Brock after he is transported to the MCU via the multiverse. Germain Lussier at ''[[io9]]'' questioned if the appearances of Ifans and Ejiofor, who played [[Karl Mordo (Marvel Cinematic Universe)|Karl Mordo]] in the MCU, were less concerned about continuity with the MCU and were instead commentary on the multiverse, rather than being connected to their prior roles.<ref name="TrailerGizmodo" /> Molly Edwards of ''[[Total Film]]'' was also confused by the reference to the [[mid-credits scene]] of ''No Way Home'' in the trailer, since the ''Venom'' films are set in a separate universe from the MCU.<ref name="TrailerTotalFilm" /> John Moffatt and Aharon Bourland serve as the visual effects supervisors while Greg Baxter is the visual effects producer. Visual effects are provided by [[Industrial Light & Magic]] (ILM), [[DNEG]], [[Digital Domain]], [[Rodeo FX]], and [[Territory Studio]], while [[the Third Floor, Inc.]], Torchlight, and Host provided the [[previsualization]] and postvisualization work.<ref name="ArtOfVFX" /> [[Mark Sanger]] edited the film, which was completed at the Cary Grant Theatre at the [[Sony Pictures Studios]] lot in early October 2024.<ref name="Sanger" />
+
+== Music ==
+{{Main|Venom: The Last Dance (soundtrack){{!}}''Venom: The Last Dance'' (soundtrack)}}
+By August 2024, [[Dan Deacon]] composed the score for the film.<ref name="Deacon" />
+
+== Release ==
+=== Theatrical ===
+''Venom: The Last Dance'' held its world premiere at the [[Regal Cinemas|Regal]] Times Square theater in New York City on October 21, 2024,<ref name="Premiere" /> and was theatrically released by [[Sony Pictures Releasing]] in the United States on October 25, in [[IMAX]] and other [[premium large format]]s (PLFs).<ref name="LastDance" /> The film was originally expected to be released in October 2024 before it was given a release date of July 12, 2024, when Sony adjusted their release schedule due to the SAG-AFTRA strike.<ref name="Oct2024ReleaseTimeframe" /><ref name="Jul2024Release" /> After the strike ended, the film's release was delayed to November 8, 2024,<ref name="Nov2024Release" /> before it was moved forward and returned to the October 2024 timeframe.<ref name="LastDance" />
+
+=== Home media ===
+The film was released on digital download on December 10, 2024, and it was released on [[DVD]], [[Blu-ray]] and [[Ultra HD Blu-ray|4K UHD]] on January 21, 2025, by [[Sony Pictures Home Entertainment]].<ref>{{Cite web |author=de Oliveira, Weronika|date=October 25, 2024|title=When is Venom: The Last Dance available to stream, rent and buy? |url=https://www.techadvisor.com/article/2496139/when-is-venom-the-last-dance-available-to-stream-rent-and-buy.html |access-date=December 6, 2024 |website=Tech Advisor |language=en |archive-date=December 7, 2024 |archive-url=https://web.archive.org/web/20241207085833/https://www.techadvisor.com/article/2496139/when-is-venom-the-last-dance-available-to-stream-rent-and-buy.html |url-status=live }}</ref><ref>{{Cite web |last=DiVincenzo |first=Alex |date=December 9, 2024 |title='Venom: The Last Dance' Comes to Physical Media with SteelBook, Action Figure & More |url=https://bloody-disgusting.com/home-video/3847890/venom-the-last-dance-comes-home-in-january-with-steelbook-action-figure-more/ |access-date=December 10, 2024 |website=Bloody Disgusting! |language=en-US |archive-date=December 9, 2024 |archive-url=https://web.archive.org/web/20241209210455/https://bloody-disgusting.com/home-video/3847890/venom-the-last-dance-comes-home-in-january-with-steelbook-action-figure-more/ |url-status=live }}</ref>
+
+Sony signed deals with [[Netflix]] and [[Disney]] in April 2021 for the rights to their 2022 to 2026 film slate, following the films' theatrical and home media windows.<ref name="Netflix">{{Cite magazine |last=Galuppo |first=Mia |date=April 8, 2021 |title=Netflix Nabs Post-PVOD Streaming Rights to Sony's Feature Films in Multiyear Deal |url=https://www.hollywoodreporter.com/news/netflix-nabs-streaming-rights-to-sonys-feature-beginning-in-2022 |url-status=live |archive-url=https://web.archive.org/web/20210408204708/https://www.hollywoodreporter.com/news/netflix-nabs-streaming-rights-to-sonys-feature-beginning-in-2022 |archive-date=April 8, 2021 |access-date=April 9, 2021 |magazine=[[The Hollywood Reporter]]}}</ref><ref name="DisneyStreamingDeadline">{{Cite web |last=Hayes |first=Dade |date=April 21, 2021 |title=Disney And Sony Reach Windows Deal That Can Sling ''Spider-Man'' To Disney+ For First Time, Along With Reach Across Hulu, ABC, FX & More |url=https://deadline.com/2021/04/disney-sony-streaming-spider-man-disney-plus-1234741215/ |url-status=live |archive-url=https://web.archive.org/web/20210421230620/https://deadline.com/2021/04/disney-sony-streaming-spider-man-disney-plus-1234741215/ |archive-date=April 21, 2021 |access-date=April 21, 2021 |website=[[Deadline Hollywood]]}}</ref> Netflix signed for exclusive "pay 1 window" streaming rights, which is typically an 18-month window and included future ''Venom'' films following ''Venom: Let There Be Carnage''.<ref name="Netflix" /> Disney signed for "pay 2 window" rights for the films, which would be streamed on [[Disney+]] and [[Hulu]] as well as broadcast on Disney's linear television networks.<ref name="DisneyStreamingDeadline" /><ref name="DisneyStreamingTHR">{{Cite magazine |last=Couch |first=Aaron |date=April 21, 2021 |title=Sony Films Will Move to Disney After Netflix Window Expires |url=https://www.hollywoodreporter.com/news/disney-nabs-post-pay-1-rights-for-sonys-feature-films |url-status=live |archive-url=https://web.archive.org/web/20210421230835/https://www.hollywoodreporter.com/news/disney-nabs-post-pay-1-rights-for-sonys-feature-films |archive-date=April 21, 2021 |access-date=April 21, 2021 |magazine=[[The Hollywood Reporter]]}}</ref>
+
+==Reception==
+===Box office===
+''Venom: The Last Dance'' grossed $139.8{{nbsp}}million in the United States and Canada, and $339.2{{nbsp}}million in other territories, for a worldwide total of $478.9{{nbsp}}million.<ref name="NUM">{{Cite The Numbers |title=Venom: The Last Dance |id=Venom-The-Last-Dance-(2024) |access-date=January 13, 2025}}</ref><ref name="BOM">{{cite Box Office Mojo |id=16366836 |title= Venom: The Last Dance (2024) |access-date=February 17, 2025}}{{cbignore}}</ref>
+
+In the United States and Canada, ''Venom: The Last Dance'' was released alongside ''[[Conclave (film)|Conclave]]'', and was projected to gross around $65&nbsp;million from 4,125 theaters in its opening weekend.<ref name="Budget" /> The film made $22&nbsp;million on its first day, including $8.5&nbsp;million from Thursday night previews.<ref>{{cite web |last=Fuster |first=Jeremy |url=https://www.thewrap.com/venom-3-friday-box-office/ |title='Venom 3' Slithers Towards $52 Million Box Office Opening |website=[[TheWrap]] |date=October 26, 2024 |access-date=December 4, 2024}}</ref> It went onto debut to $51&nbsp;million, finishing in first but marking the lowest opening of the series. ''Deadline Hollywood'' attributed the underperformance to the ongoing [[2024 World Series|Yankees–Dodgers World Series]] and superhero genre fatigue.<ref name="opening">{{Cite web|last=D'Alessandro|first=Anthony|date=October 27, 2024|title='Venom: The Last Dance' Trips Stateside With $51M Opening, But Makes Up For Shortfall Abroad – Sunday AM Update|url=https://deadline.com/2024/10/box-office-venom-the-last-dance-1236158112/|access-date=October 27, 2024|website=[[Deadline Hollywood]]}}</ref> Nevertheless, the film's international box office gross would help offset its weaker performance at the North American box office.<ref>{{cite news|url=https://variety.com/2024/film/box-office/venom-3-box-office-global-opening-weekend-1236191839/|title='Venom: The Last Dance' Climbs to $986 Million at International Box Office, $317 Million Globally|first=Rebecca|last=Rubin|publisher=Variety|date=October 27, 2024|accessdate=October 28, 2024|archive-date=November 10, 2024|archive-url=https://web.archive.org/web/20241110100401/https://variety.com/2024/film/box-office/venom-3-box-office-global-opening-weekend-1236191839/|url-status=live}}</ref> The film then made $26.1&nbsp;million in its second weekend (dropping 49% from its first weekend),<ref>{{Cite web |last=D'Alessandro |first=Anthony |date=November 3, 2024 |title='Venom: The Last Dance' Has Great Second Weekend Hold With $26M; 'Forrest Gump' Reteam 'Here' Isn't Anywhere With $5M Opening – Box Office Update |url=https://deadline.com/2024/11/box-office-venom-the-last-dance-here-tom-hanks-1236164404/ |access-date=November 4, 2024 |website=Deadline |language=en-US |archive-date=November 9, 2024 |archive-url=https://web.archive.org/web/20241109223443/https://deadline.com/2024/11/box-office-venom-the-last-dance-here-tom-hanks-1236164404/ |url-status=live }}</ref> and $16.2&nbsp;million in its third weekend (dropping another 37%), retaining the top spot for three consecutive weeks.<ref>{{Cite web |last=D'Alessandro |first=Anthony |date=November 10, 2024 |title='Venom: The Last Dance' $16M, 'Christmas Pageant' & 'Heretic' In Fierce Battle For No. 2 With $11M+ Apiece — Veterans Day Box Office |url=https://deadline.com/2024/11/box-office-heretic-best-christmas-pageant-ever-1236170937/ |access-date=November 10, 2024 |website=Deadline |language=en-US |archive-date=December 1, 2024 |archive-url=https://web.archive.org/web/20241201143130/https://deadline.com/2024/11/box-office-heretic-best-christmas-pageant-ever-1236170937/ |url-status=live }}</ref> ''The Last Dance'' was finally dethroned in its fourth weekend, making $7.3&nbsp;million and finishing second behind newcomer ''[[Red One (film)|Red One]]''.<ref>{{cite web |last1=Rubin |first1=Rebecca |date=November 17, 2024 |title=Box Office: Dwayne Johnson's $250 Million-Budgeted 'Red One' Debuts to Chilly $34 Million |url=https://variety.com/2024/film/box-office/red-one-box-office-opening-weekend-disappoints-dwayne-the-rock-johnson-1236212370/ |website=Variety |language=en-US |access-date=November 18, 2024 |archive-date=November 17, 2024 |archive-url=https://web.archive.org/web/20241117234355/https://variety.com/2024/film/box-office/red-one-box-office-opening-weekend-disappoints-dwayne-the-rock-johnson-1236212370/ |url-status=live }}</ref>
+
+===Critical response===
+{{Rotten Tomatoes prose|40|4.7|219|The always watchable Tom Hardy injects ample charisma into ''Venom: The Last Dance'', but the offering buckles under its convoluted tonal ambitions.|ref=yes|access-date=February 4, 2025}} {{Metacritic film prose|41|47|ref=yes|access-date=December 28, 2024}} Audiences polled by [[CinemaScore]] gave the film an average grade of "B–" on an A+ to F scale (the lowest of the trilogy), while those surveyed by [[PostTrak]] gave it a 73% overall positive score, with 55% saying they would "definitely recommend" it.<ref name=opening/>
+
+[[Christy Lemire]] of ''[[RogerEbert.com]]'' gave the film 1.5 out of 4 stars, writing, "When it leans hard into the inherent absurdity of its wacky, mismatched buddy antics, ''Venom: The Last Dance'' can be a total blast. Unfortunately, that doesn't happen nearly as often as it should."<ref>{{Cite web |last=Lemire |first=Christy |date=October 23, 2024 |title=Venom: The Last Dance movie review (2024) |url=https://www.rogerebert.com/reviews/venom-3-the-last-dance-film-review |access-date=October 28, 2024 |website=[[RogerEbert.com]] |archive-date=November 10, 2024 |archive-url=https://web.archive.org/web/20241110100352/https://www.rogerebert.com/reviews/venom-3-the-last-dance-film-review |url-status=live }}</ref> ''[[The Daily Telegraph]]''{{'s}} [[Robbie Collin]] gave it 1 out of 5 stars, calling it "a yammeringly moronic, teenage-boy-pandering eyesore of the old school, with little to offer any viewer whose age or counting ability exceeds the low 20s." He concluded, "As last dances go, it's the [[Macarena]] in film form."<ref>{{Cite news |last=Collin |first=Robbie |date=October 23, 2024 |title=Venom: The Last Dance – a suitably moronic conclusion to Tom Hardy's awful superhero trilogy |url=https://www.telegraph.co.uk/films/0/venom-the-last-dance-review-tom-hardy/ |access-date=October 28, 2024 |newspaper=[[The Daily Telegraph]] |language=en-GB |issn=0307-1235}}</ref> [[Kevin Maher (writer)|Kevin Maher]] of ''[[The Times]]'' also gave it 1 out of 5 stars, saying, "it's hugely dispiriting to watch Hardy sink so low. From the elegant character work of ''[[Stuart: A Life Backwards]]'' and ''[[Tinker Tailor Soldier Spy (film)|Tinker Tailor Soldier Spy]]'' to a blank-eyed Marvel meathead whose greatest line is: 'We've got to get the codex as far away as possible!{{' "}}<ref>{{Cite web |last=Maher |first=Kevin |date=October 24, 2024 |title=Venom: The Last Dance review — it's dispiriting to see Tom Hardy sink so low |url=https://www.thetimes.com/culture/film/article/venom-the-last-dance-film-review-tom-hardy-hwz6sqczs |access-date=October 28, 2024 |newspaper=[[The Times]]}}</ref> Alci Rengifo of ''Entertainment Voice'' wrote, "''Venom'' as a franchise works as a comic book cousin of ''[[Lethal Weapon (franchise)|Lethal Weapon]]'' or any other popular series featuring an entertaining, mismatched duo."<ref>{{Cite web |last=Rengifo |first=Alci |date=October 24, 2024 |title='Venom: The Last Dance' Gives Tom Hardy One Final Absurdist Ride With His Alien Buddy |url=https://entertainmentvoice.com/2024/10/24/venom-the-last-dance-gives-tom-hardy-one-final-absurdist-ride-with-his-alien-buddy/ |access-date=October 29, 2024 |website=Entertainment Voice}}</ref> Amy Nicholson of ''[[The New York Times]]'' said, "Honestly, I'd rather watch Eddie and Venom dicker over pizza toppings than team up for something as banal as saving the planet."<ref>{{cite news |url=https://www.nytimes.com/2024/10/24/movies/venom-the-last-dance-review.html|title='Venom: The Last Dance' Review: A Long and Winding Tongue|newspaper=[[The New York Times]]|author=Nicholson, Amy|date=October 24, 2024}}</ref>
+
+Jake Cole of ''[[Slant Magazine]]'' gave the film 3 out of 4 stars, writing, "As the film progresses, it consistently escalates the stakes and scale of its action, which doesn't devolve into incomprehensible CG murk as it hurtles toward the climax."<ref>{{Cite magazine |last=Cole |first=Jake |date=October 23, 2024 |title='Venom: The Last Dance' Review: A Spirited Monster Mash |url=https://www.slantmagazine.com/film/venom-the-last-dance-review-tom-hardy/ |access-date=October 28, 2024 |magazine=[[Slant (magazine)|Slant]] |archive-date=November 10, 2024 |archive-url=https://web.archive.org/web/20241110082742/https://www.slantmagazine.com/film/venom-the-last-dance-review-tom-hardy/ |url-status=live }}</ref> ''[[The Independent]]''{{'s}} Clarisse Loughrey wrote, "It's hard to say how these films will be remembered in the grand scheme of comic book history, but, with ''The Last Dance'', we can at least be reminded that sometimes they actually managed to have fun with these things", and gave it 3 out of 5 stars.<ref>{{Cite news |last=Loughrey |first=Clarisse |date=October 24, 2024 |title=Venom: The Last Dance is a delight when it's not being a Madame Web rerun |url=https://www.independent.co.uk/arts-entertainment/films/reviews/venom-the-last-dance-review-b2634281.html |access-date=October 28, 2024 |newspaper=[[The Independent]]}}</ref>
+
+=== Accolades ===
+{{Table alignment}}
+{| class="wikitable sortable plainrowheaders col6center"
+|+ {{Screen reader-only|Accolades received by ''Venom: The Last Dance''}}
+|-
+! scope="col" | Award
+! scope="col" | {{nowrap|Date of ceremony}}
+! scope="col" | Category
+! scope="col" | Recipient
+! scope="col" | Result
+! scope="col" class="unsortable" | {{Ref heading}}
+|-
+! scope="row"  |[[Saturn Awards]]
+| [[52nd Saturn Awards|February 2, 2025]]
+| [[Saturn Award for Best Science Fiction Film|Best Science Fiction Film]]
+| ''Venom: The Last Dance''
+| {{nom}}
+|<ref>{{Cite web|url=https://www.fangoria.com/horror-saturn-awards-52/|title=BEETLEJUICE BEETLEJUICE, STRANGE DARLING Lead Saturn Awards Horror Nods|website=[[Fangoria]]|first=Amber|last=T|date=December 4, 2024|access-date=December 5, 2024|archive-date=December 5, 2024|archive-url=https://web.archive.org/web/20241205001447/https://www.fangoria.com/horror-saturn-awards-52/|url-status=live}}</ref>
+|-
+! scope=row | [[Visual Effects Society Awards]]
+| [[23rd Visual Effects Society Awards|{{dts|2025|2|11}}]]
+| [[Visual Effects Society Award for Outstanding Effects Simulations in a Photoreal Feature|Outstanding Effects Simulations in a Photoreal Feature]]
+|Xavi Martin Ramirez, Oscar Dahlen, Hedi Namar, Yuri Yang (for "Water, Fire & Symbiote Effects")
+|{{nom}}
+| align="center" |<ref>{{cite web|url=https://deadline.com/2025/01/ves-awards-2025-nominations-list-1236255921/|title=VES Awards Nominations: Sandworms, Apes, Felines & Tornadoes Vie For Top Film Prize|work=Deadline|first=Erik|last=Pederson|date=January 14, 2025|accessdate=January 14, 2025}}</ref> 
+|-
+! rowspan="2" scope="row" | [[Critics' Choice Super Awards]]
+| rowspan="2" | [[5th Critics' Choice Super Awards|August 7, 2025]]
+| Best Superhero Movie
+| ''Venom: The Last Dance''
+| {{nom}}
+| rowspan="2" align="center"| <ref>{{Cite web |title='Deadpool & Wolverine', 'Thunderbolts*', 'The Last Of Us' Lead Nominees For Critics Choice Super Awards |url=https://deadline.com/2025/06/2025-critics-choice-super-awards-nominations-1236430917/ |last=Hipes |first=Patrick |date=June 11, 2025 |url-status=live |archive-url=https://web.archive.org/web/20250611173638/https://deadline.com/2025/06/2025-critics-choice-super-awards-nominations-1236430917/ |archive-date=June 11, 2025 |access-date=June 21, 2025 |website=[[Deadline Hollywood]]}}</ref>
+|-
+| Best Actor in a Superhero Movie
+| [[Tom Hardy]]
+| {{nom}}
+|}
+
+== Viewership ==
+According to data from Showlabs, ''Venom: The Last Dance'' ranked first on Netflix in the United States during the week of 24 February–2 March 2025.<ref>{{cite web |title=Venom: The Last Dance – Title Insights |url=https://www.showlabs.tv/en/title/18783-venom-the-last-dance |website=Showlabs |access-date=2025-12-11}}</ref><ref>{{cite web |title=Netflix Top 10 – Week of February 24–March 2, 2025 |url=https://www.showlabs.tv/en/rankings/netflix/top-10/2025-february-24-2 |website=Showlabs |access-date=2025-12-11}}</ref>
+
+== Future ==
+Ahead of the film's release in October 2024, Kelly Marcel said that while ''The Last Dance'' concludes the story arc of Eddie Brock and Venom, it sets up the character Knull for future appearances within the [[Sony's Spider-Man Universe]] (SSU) and is the beginning of the character's story.<ref name="MarcelOctober2024" /> While the film was intended as the conclusion of the ''Venom'' trilogy, Hardy expressed interest in reprising his role in the future and having his character crossover with Spider-Man, saying "never say never".<ref name="HardysSpideyHopes" /> In December 2024, [[TheWrap]] claimed ''[[Kraven the Hunter (film)|Kraven the Hunter]]'' would be the final film in the SSU,<ref>{{Cite web |last=Gonzalez |first=Umberto |date=December 10, 2024 |title=As 'Kraven' Hunts for Audience, Sony's Marvel Universe Takes Final Bow for Now {{!}} Analysis |url=https://www.thewrap.com/kraven-the-hunter-sony-marvel-universe-spider-man-box-office/ |url-access=subscription |url-status=live |archive-url=https://web.archive.org/web/20260222181310/https://www.thewrap.com/kraven-the-hunter-sony-marvel-universe-spider-man-box-office/ |archive-date=February 22, 2026 |website=[[TheWrap]] |access-date=December 12, 2024 }}</ref><ref>{{Cite web |last=Dinsdale |first=Ryan |date=December 11, 2024 |title=Sony Spider-Man Universe Reportedly Done as Kraven the Hunter Targets Opening Worse Than Madame Web |url=https://www.ign.com/articles/sony-spider-man-universe-reportedly-done-as-kraven-the-hunter-targets-opening-worse-than-madame-web |website=[[IGN]] |access-date=December 12, 2024 |archive-date=December 11, 2024 |archive-url=https://web.archive.org/web/20241211192945/https://www.ign.com/articles/sony-spider-man-universe-reportedly-done-as-kraven-the-hunter-targets-opening-worse-than-madame-web |url-status=live }}</ref> but ''Variety'' disputed that claim and said that since Sony had not technically established a shared universe, they would continue to make films based on Spider-Man characters.<ref name="NoHollandDespitePermission" />
+
+In February 2026, it was revealed an animated ''Venom'' film, which is set to be directed by ''Final Destination Bloodlines'' directors [[Zach Lipovsky]] and [[Adam Stein]], was in pre-production with Tom Hardy attached as a producer, although it is unknown if he will be reprising the role of the title character or if it will be set in the same universe as the live-action films.<ref>{{Cite web |last=Lewis |first=George |date=February 23, 2026 |title=Venom is making a surprise comeback in unexpected new movie with Tom Hardy involved |url=https://www.digitalspy.com/movies/a70463537/venom-animation-tom-hardy/ |url-status=live |archive-url=https://web.archive.org/web/20260307225810/https://www.digitalspy.com/movies/a70463537/venom-animation-tom-hardy/ |archive-date=March 7, 2026 |website=[[Digital Spy]] |language=en}}</ref> However that August, Sony Pictures chairman [[Tom Rothman]] stated that there were no more spin-offs in development.<ref>{{cite web|url=https://variety.com/2026/film/news/sony-tom-rothman-spider-man-brand-new-day-box-office-record-1236826285/|title=‘Movies Aren’t Dead After All’: Sony Pictures Boss Tom Rothman on Historic ‘Spider-Man’ Box Office and Losing Tarantino’s Cliff Booth Sequel to Netflix|website=Variety|last=Rubin|first=Rebecca|date=August 3, 2026|access-date=August 3, 2026|archive-url=https://web.archive.org/web/20260803212614/https://variety.com/2026/film/news/sony-tom-rothman-spider-man-brand-new-day-box-office-record-1236826285/|archive-date=August 3, 2026|url-status=live}}</ref>
+
+== See also ==
+* [[List of comic-based films directed by women]]
+
+== Notes ==
+{{Notelist}}
+
+== References ==
+{{Reflist|refs=
+
+<ref name="Runtime">{{Cite web |title=''Venom: The Last Dance'' (15) |url=https://www.bbfc.co.uk/release/venom-the-last-dance-q29sbgvjdglvbjpwwc0xmdixntix |url-status=live |archive-url=https://archive.today/20241026072506/https://www.bbfc.co.uk/release/venom-the-last-dance-q29sbgvjdglvbjpwwc0xmdixntix |archive-date=October 26, 2024 |access-date=October 23, 2024 |publisher=[[British Board of Film Classification]]}}</ref>
+
+<ref name="Budget">{{Cite web |last1=D'Alessandro |first1=Anthony |last2=Tartaglione |first2=Nancy |date=October 22, 2024 |title=''Venom: The Last Dance'' Hopes To Boogie To $150 Million Global Opening – Box Office Preview |url=https://deadline.com/2024/10/venom-the-last-dance-box-office-1236144422/ |url-status=live |archive-url=https://archive.today/fdKJ |archive-date=October 23, 2024 |access-date=October 22, 2024 |website=[[Deadline Hollywood]]}}</ref>
+
+<!-- CAST -->
+
+<ref name="TrailerPolygon">{{Cite web |last=Patches |first=Matt |date=June 3, 2024 |title=''Venom: The Last Dance'' trailer picks up after all those wacky multiverse post-credits teases |url=https://www.polygon.com/24170373/venom-3-trailer-last-dance |url-status=live |archive-url=https://web.archive.org/web/20240603172459/https://www.polygon.com/24170373/venom-3-trailer-last-dance |archive-date=June 3, 2024 |access-date=June 3, 2024 |website=[[Polygon (website)|Polygon]]}}</ref>
+
+<ref name="TrailerAVClub">{{Cite web |last=Carr |first=Mary Kate |date=June 3, 2024 |title=''Venom: The Last Dance'' trailer wants you to believe Eddie's gonna die |url=https://www.avclub.com/venom-the-last-dance-trailer-tom-hardy-marvel-1851516052 |url-status=live |archive-url=https://web.archive.org/web/20240603175313/https://www.avclub.com/venom-the-last-dance-trailer-tom-hardy-marvel-1851516052 |archive-date=June 3, 2024 |access-date=June 3, 2024 |website=[[The A.V. Club]]}}</ref>
+
+<ref name="Knull">{{Cite web |last=Glazebrook |first=Lewis |date=September 12, 2024 |title=''Venom 3'' Villain: Knull Powers & Comics History Explained |url=https://screenrant.com/venom-3-villain-knull-powers-comics-explained/ |url-status=live |archive-url=https://web.archive.org/web/20240912164742/https://screenrant.com/venom-3-villain-knull-powers-comics-explained/ |archive-date=September 12, 2024 |access-date=September 12, 2024 |website=[[Screen Rant]]}}</ref>
+
+<ref name="NYCC2024">{{Cite web |last1=McPherson |first1=Chris |last2=Therese |first2=Lacson |date=October 20, 2024 |title=''Venom: The Last Dance''{{'s}} Action Scenes Will Blow Your Mind According to NYCC Footage |url=https://collider.com/venom-3-nycc-footage-description-action/ |url-status=live |archive-url=https://archive.today/20241023024527/https://collider.com/venom-3-nycc-footage-description-action/ |archive-date=October 23, 2024 |access-date=October 21, 2024 |website=[[Collider (website)|Collider]]}}</ref>
+
+<ref name="KnullActor">{{Cite web |last=Adams |first=Tim |date=October 23, 2024 |title=''Venom: The Last Dance'' Reveals Actor Playing Knull |url=https://comicbook.com/marvel/news/venom-the-last-dance-knull-andy-serkis-confirmed/ |url-status=live |archive-url=https://archive.today/20241023225344/https://comicbook.com/marvel/news/venom-the-last-dance-knull-andy-serkis-confirmed/ |archive-date=October 23, 2024 |access-date=October 23, 2024 |website=[[ComicBook.com]]}}</ref>
+
+<ref name="SerkisOptionKnull">{{Cite web |last=Davids |first=Brian |date=October 23, 2024 |title=''Venom: The Last Dance'' Director Kelly Marcel on Michelle Williams' Absence and Those James Bond Rumors |url=https://www.hollywoodreporter.com/movies/movie-features/venom-the-last-dance-director-tom-hardy-1236043127/ |url-status=live |archive-url=https://archive.today/20241024154437/https://www.hollywoodreporter.com/movies/movie-features/venom-the-last-dance-director-tom-hardy-1236043127/ |archive-date=October 24, 2024 |access-date=October 24, 2024 |website=[[The Hollywood Reporter]]}}</ref>
+
+<ref name="FinleyMcLoud">{{Cite web |last=Davids |first=Brian |date=October 23, 2024 |title='Venom: The Last Dance' Review: Tom Hardy Wraps up His Marvel Symbiote Trilogy With a Steroidal Buddy Movie |url=https://www.hollywoodreporter.com/movies/movie-reviews/venom-the-last-dance-review-tom-hardy-marvel-1236042242/ |url-status=live |archive-url=https://archive.today/20241028185327/https://www.hollywoodreporter.com/movies/movie-reviews/venom-the-last-dance-review-tom-hardy-marvel-1236042242/ |archive-date=October 28, 2024 |access-date=October 28, 2024 |website=[[The Hollywood Reporter]]}}</ref>
+
+<ref name="FernándezScott">{{Cite web |last=Morales |first=Carlos |date=October 25, 2024 |title=Venom: The Last Dance Ending and Post-Credits Scenes Explained – What Is the Future of Eddie Brock? |url=https://www.ign.com/articles/venom-the-last-dance-3-post-credits-scene-ending-explained |url-status=live |archive-url=https://archive.today/20241028154618/https://www.ign.com/articles/venom-the-last-dance-3-post-credits-scene-ending-explained |archive-date=October 28, 2024 |access-date=October 28, 2024 |website=[[IGN]]}}</ref>
+
+<!-- DEVELOPMENT -->
+
+<ref name="HardyTrilogy">{{Cite web |last=Outlaw |first=Kofi |date=August 24, 2018 |title=Tom Hardy Is Already Signed for ''Venom'' Movie Trilogy |url=https://comicbook.com/marvel/2018/08/24/tom-hardy-venom-movie-trilogy/ |url-status=live |archive-url=https://web.archive.org/web/20180824232504/https://comicbook.com/marvel/2018/08/24/tom-hardy-venom-movie-trilogy/ |archive-date=August 24, 2018 |access-date=August 31, 2018 |website=[[ComicBook.com]]}}</ref>
+
+<ref name="Holland">{{Cite web |last=Hermanns |first=Grant |date=October 28, 2021 |title=Tom Holland Pitched ''Venom'' & ''Kraven'' Movies To Sony After Marvel Split |url=https://screenrant.com/spiderman-venom-kraven-movies-tom-holland-pitch-details/ |url-status=live |archive-url=https://web.archive.org/web/20211028131114/https://screenrant.com/spiderman-venom-kraven-movies-tom-holland-pitch-details/ |archive-date=October 28, 2021 |access-date=October 28, 2021 |website=[[Screen Rant]]}}</ref>
+
+<ref name="HardyFutureSR">{{Cite web |last=LaBonte |first=Rachel |date=September 20, 2021 |title=Tom Hardy Wants To Explore The Multiverse In ''Venom'' Sequels |url=https://screenrant.com/venom-movie-future-marvel-multiverse-tom-hardy/ |url-status=live |archive-url=https://web.archive.org/web/20210930223941/https://screenrant.com/venom-movie-future-marvel-multiverse-tom-hardy/ |archive-date=September 30, 2021 |access-date=September 30, 2021 |website=[[Screen Rant]]}}</ref>
+
+<ref name="SerkisFutureSR">{{Cite web |last=Crossman |first=Ash |date=September 28, 2021 |title=Andy Serkis Interview: ''Venom 2'' |url=https://screenrant.com/venom-2-carnage-andy-serkis-interview/ |url-status=live |archive-url=https://web.archive.org/web/20210930223943/https://screenrant.com/venom-2-carnage-andy-serkis-interview/ |archive-date=September 30, 2021 |access-date=September 30, 2021 |website=[[Screen Rant]]}}</ref>
+
+<ref name="SerkisFutureJT">{{Cite AV media |url=https://www.youtube.com/watch?v=b2OplzUlNRw |title=''Venom 2'' Interview – Andy Serkis Talks Venom Joining MCU, Fighting Spider-Man, and Sinister Six |date=September 19, 2021 |last=Hamilton |first=Jake |publisher=Jake's Take |access-date=September 30, 2021 |archive-url=https://web.archive.org/web/20210930223941/https://www.youtube.com/watch?v=b2OplzUlNRw |archive-date=September 30, 2021 |url-status=live |via=[[YouTube]]}}</ref>
+
+<ref name="CinemaConV3">{{Cite web |last=D'Alessandro |first=Anthony |date=April 25, 2022 |title=''Venom 3'' Teased During Sony's Closing CinemaCon Reel |url=https://deadline.com/2022/04/venom-3-teased-during-sonys-closing-cinemacon-reel-1235009688/ |url-status=live |archive-url=https://web.archive.org/web/20220426033319/https://deadline.com/2022/04/venom-3-teased-during-sonys-closing-cinemacon-reel-1235009688/ |archive-date=April 26, 2022 |access-date=April 26, 2022 |website=[[Deadline Hollywood]]}}</ref>
+
+<ref name="HardyMarcelScript">{{Cite web |last=Tapp |first=Tom |date=June 16, 2022 |title=Tom Hardy Updates Fans On ''Venom 3'' Progress With Script Photo |url=https://deadline.com/2022/06/tom-hardy-venom-3-script-1235047403/ |url-status=live |archive-url=https://web.archive.org/web/20220617045310/https://deadline.com/2022/06/tom-hardy-venom-3-script-1235047403/ |archive-date=June 17, 2022 |access-date=June 16, 2022 |website=[[Deadline Hollywood]]}}</ref>
+
+<ref name="HardySalary">{{Cite magazine |last1=Lang |first1=Brent |last2=Donnelly |first2=Matt |last3=Rubin |first3=Rebecca |date=July 20, 2022 |title=Inside Movie Stars' Salaries: Joaquin Phoenix Nabs $20M for ''Joker 2'', Tom Cruise Heads to Over $100M and More |url=https://variety.com/2022/film/features/movie-star-salaries-joaquin-phoenix-joker-2-tom-cruise-1235320046/ |url-status=live |archive-url=https://web.archive.org/web/20220720160107/https://variety.com/2022/film/features/movie-star-salaries-joaquin-phoenix-joker-2-tom-cruise-1235320046/ |archive-date=July 20, 2022 |access-date=October 7, 2023 |magazine=[[Variety (magazine)|Variety]]}}</ref>
+
+<ref name="MarcelDirect">{{Cite web |last=Kroll |first=Justin |date=October 28, 2022 |title=''Venom 3'': Kelly Marcel Set to Direct Next Installment Starring Tom Hardy |url=https://deadline.com/2022/10/venom-3-kelly-marcel-set-to-direct-next-installment-starring-tom-hardy-1235157025/ |url-status=live |archive-url=https://web.archive.org/web/20221028161027/https://deadline.com/2022/10/venom-3-kelly-marcel-set-to-direct-next-installment-starring-tom-hardy-1235157025/ |archive-date=October 28, 2022 |access-date=October 28, 2022 |website=[[Deadline Hollywood]]}}</ref>
+
+<ref name="SerkisNov2022">{{Cite web |last=Scott |first=Ryan |date=November 3, 2022 |title=Andy Serkis Explains Why He Didn't Come Back To Direct ''Venom 3'' [Exclusive] |url=https://www.slashfilm.com/1084835/andy-serkis-explains-why-he-didnt-come-back-to-direct-venom-3-exclusive/ |url-status=live |archive-url=https://web.archive.org/web/20221109115855/https://www.slashfilm.com/1084835/andy-serkis-explains-why-he-didnt-come-back-to-direct-venom-3-exclusive/ |archive-date=November 9, 2022 |access-date=February 5, 2023 |website=[[/Film]]}}</ref>
+
+<ref name="ProductionWeeklyNov2022">{{Cite magazine |last=<!--prodweek--> |title=#1323 11/03 |url=https://www.productionweekly.com/110322dr.pdf |url-status=live |archive-url=https://web.archive.org/web/20230929012301/https://www.productionweekly.com/110322dr.pdf |archive-date=September 29, 2023 |access-date=January 18, 2024 |magazine=Production Weekly |page=34 |publication-date=November 3, 2022 |issue=1323}}</ref>
+
+<ref name="NoHollandDespitePermission">{{Cite web |last=Vary |first=Adam B. |date=December 13, 2024 |title=Even After 'Kraven the Hunter' and 'Madame Web,' Sony's Marvel Movies Aren't Dead (EXCLUSIVE) |url=https://variety.com/2024/film/news/kraven-sony-marvel-movies-not-dead-1236249221/ |url-status=live |archive-url=https://web.archive.org/web/20250106064155/https://variety.com/2024/film/news/kraven-sony-marvel-movies-not-dead-1236249221/ |archive-date=January 6, 2025 |access-date=February 9, 2025 |website=[[Variety (magazine)|Variety]]}}</ref>
+
+<!-- PRE-PRODUCTION -->
+
+<ref name="HardyPreprod">{{Cite web |last=Outlaw |first=Kofi |date=February 22, 2023 |title=''Venom 3'': Tom Hardy Announces The Start of Pre-Production |url=https://comicbook.com/marvel/news/venom-3-tom-hardy-announces-start-pre-production-filming/ |url-status=live |archive-url=https://web.archive.org/web/20230222180610/https://comicbook.com/marvel/news/venom-3-tom-hardy-announces-start-pre-production-filming/ |archive-date=February 22, 2023 |access-date=February 22, 2023 |website=[[ComicBook.com]]}}</ref>
+
+<ref name="Temple">{{Cite web |last=Kroll |first=Justin |date=April 20, 2023 |title=''Ted Lasso''{{'s}} Juno Temple Lands Lead Role in Sony and Marvel's ''Venom 3'' |url=https://deadline.com/2023/04/ted-lassos-juno-temple-sonys-venom-3-1235332908/ |url-status=live |archive-url=https://web.archive.org/web/20230420220337/https://deadline.com/2023/04/ted-lassos-juno-temple-sonys-venom-3-1235332908/ |archive-date=April 20, 2023 |access-date=April 20, 2023 |website=[[Deadline Hollywood]]}}</ref>
+
+<ref name="LondonFilmingStart">{{Cite magazine |last1=Kit |first1=Borys |last2=Couch |first2=Aaron |date=May 5, 2023 |title=Marvel Hits Pause on ''Blade'' Due to Writers Strike (Exclusive) |url=https://www.hollywoodreporter.com/movies/movie-news/marvels-blade-delayed-writers-strike-1235480828/ |url-status=live |archive-url=https://web.archive.org/web/20230505224102/https://www.hollywoodreporter.com/movies/movie-news/marvels-blade-delayed-writers-strike-1235480828/ |archive-date=May 5, 2023 |access-date=May 5, 2023 |magazine=[[The Hollywood Reporter]]}}</ref>
+
+<ref name="Ejiofor">{{Cite web |last=Kroll |first=Justin |date=May 16, 2023 |title=''Venom 3'': Chiwetel Ejiofor Joins Tom Hardy In Next Installment |url=https://deadline.com/2023/05/venom-3-chiwetel-ejiofor-tom-hardy-venom-3-1235369026/ |url-status=live |archive-url=https://web.archive.org/web/20230517020218/https://deadline.com/2023/05/venom-3-chiwetel-ejiofor-tom-hardy-venom-3-1235369026/ |archive-date=May 17, 2023 |access-date=May 16, 2023 |website=[[Deadline Hollywood]]}}</ref>
+
+<!-- FILMING -->
+
+<ref name="Wagner">{{Cite magazine |last=Giardina |first=Carolyn |date=May 23, 2023 |title=''Venom 3'' Enlists ''Justice League'' Cinematographer Fabian Wagner (Exclusive) |url=https://www.hollywoodreporter.com/movies/movie-news/venom-3-to-be-shot-by-justice-league-1235498118/ |url-status=live |archive-url=https://web.archive.org/web/20230523163538/https://www.hollywoodreporter.com/movies/movie-news/venom-3-to-be-shot-by-justice-league-1235498118/ |archive-date=May 23, 2023 |access-date=May 23, 2023 |magazine=[[The Hollywood Reporter]]}}</ref>
+
+<ref name="MurciaFilming">{{Cite web |date=June 23, 2023 |title=New Marvel blockbuster to be filmed in Cartagena |url=https://murciatoday.com/new-marvel-blockbuster-to-be-filmed-in-cartagena_2174509-a.html |url-status=live |archive-url=https://web.archive.org/web/20230624225840/https://murciatoday.com/new-marvel-blockbuster-to-be-filmed-in-cartagena_2174509-a.html |archive-date=June 24, 2023 |access-date=June 24, 2023 |website=Murcia Today}}</ref>
+
+<ref name="FilmingStart">{{Cite news |last=Duthie |first=Alex |date=June 26, 2023 |title=First ''Venom 3'' Set Images Potentially Reveal New Movie Setting Details |url=https://coveredgeekly.com/first-venom-3-set-images-potentially-reveal-new-movie-setting-details/ |url-status=live |archive-url=https://web.archive.org/web/20230626195521/https://coveredgeekly.com/first-venom-3-set-images-potentially-reveal-new-movie-setting-details/ |archive-date=June 26, 2023 |access-date=June 27, 2023 |newspaper=Coveredgeekly}}</ref>
+
+<ref name="SAGAFTRAStrikeImpact">{{Cite magazine |last1=Couch |first1=Aaron |last2=Giardina |first2=Carolyn |last3=Kit |first3=Borys |date=July 14, 2023 |title=''Deadpool 3'', ''Mission: Impossible 8'' and ''Venom 3'' Halted Amid Actors Strike |url=https://www.hollywoodreporter.com/movies/movie-news/deadpool-3-movies-shut-down-actors-strike-1235535421/ |url-status=live |archive-url=https://web.archive.org/web/20230714165939/https://www.hollywoodreporter.com/movies/movie-news/deadpool-3-movies-shut-down-actors-strike-1235535421/ |archive-date=July 14, 2023 |access-date=July 14, 2023 |magazine=[[The Hollywood Reporter]]}}</ref>
+
+<ref name="FilmingResume">{{Cite web |last=Freeman |first=Molly |date=November 16, 2023 |title=Tom Hardy Shares New ''Venom 3'' Set Photo As Filming Starts Again |url=https://screenrant.com/venom-3-set-photo-tom-hardy-filming-restart/ |url-status=live |archive-url=https://web.archive.org/web/20231116213940/https://screenrant.com/venom-3-set-photo-tom-hardy-filming-restart/ |archive-date=November 16, 2023 |access-date=November 16, 2023 |website=[[Screen Rant]]}}</ref>
+
+<ref name="WorkingTitle">{{Cite web |last=Coman |first=Monica |date=January 9, 2024 |title=Sony Pictures Unveils Official Logos for ''Venom 3'' and ''Karate Kid'' Reboot |url=https://www.cbr.com/sony-pictures-venom-3-karate-kid-logo/ |url-status=live |archive-url=https://web.archive.org/web/20240111231548/https://www.cbr.com/sony-pictures-venom-3-karate-kid-logo/ |archive-date=January 11, 2024 |access-date=January 18, 2024 |website=[[Comic Book Resources]]}}</ref>
+
+<ref name="Backo">{{Cite magazine |last=Jackson |first=Angelique |date=February 20, 2024 |title=''Venom 3'' Adds ''The Changeling'', ''Letterkenny'' Star Clark Backo (Exclusive) |url=https://variety.com/2024/film/news/venom-3-adds-clark-backo-cast-1235917139/ |url-status=live |archive-url=https://web.archive.org/web/20240220193601/https://variety.com/2024/film/news/venom-3-adds-clark-backo-cast-1235917139/ |archive-date=February 20, 2024 |access-date=February 20, 2024 |magazine=[[Variety (magazine)|Variety]]}}</ref>
+
+<ref name="TempleFilmingAlmostDone">{{Cite magazine |last=Sharf |first=Zack |date=February 24, 2024 |title=Making ''Venom 3'' Has Been a 'Wild' and 'Wonderful' Ride,' Says Juno Temple: Filming Is 'Coming Close to an End' |url=https://variety.com/2024/film/news/venom-3-end-filming-juno-temple-crazy-1235921648/ |url-status=live |archive-url=https://web.archive.org/web/20240225013733/https://variety.com/2024/film/news/venom-3-end-filming-juno-temple-crazy-1235921648/ |archive-date=February 25, 2024 |access-date=February 24, 2024 |magazine=[[Variety (magazine)|Variety]]}}</ref>
+
+<!-- POST-PRODUCTION -->
+
+<ref name="TrailerDeadline">{{Cite web |last=Evans |first=Greg |date=June 3, 2024 |title=''Venom: The Last Dance'' Trailer: Tom Hardy Brings The Alien One Last Time |url=https://deadline.com/2024/06/venom-the-last-dance-trailer-1235957586/ |url-status=live |archive-url=https://web.archive.org/web/20240603154934/https://deadline.com/2024/06/venom-the-last-dance-trailer-1235957586/ |archive-date=June 3, 2024 |access-date=June 3, 2024 |website=[[Deadline Hollywood]]}}</ref>
+
+<ref name="TrailerGizmodo">{{Cite web |last=Lussier |first=Germain |date=June 3, 2024 |title=Who Is Chiwetel Ejiofor Playing in ''Venom 3''? |url=https://gizmodo.com/chiwetel-ejiofor-venom-3-mordo-mcu-tom-hardy-last-dance-1851516092 |url-status=live |archive-url=https://web.archive.org/web/20240604080008/https://gizmodo.com/chiwetel-ejiofor-venom-3-mordo-mcu-tom-hardy-last-dance-1851516092 |archive-date=June 4, 2024 |access-date=June 3, 2024 |website=[[io9]] |publisher=[[Gizmodo]]}}</ref>
+
+<ref name="TrailerTotalFilm">{{Cite magazine |last=Edwards |first=Molly |date=June 3, 2024 |title=First ''Venom 3'' trailer sees Tom Hardy and the symbiote up against their biggest threat yet – and a call back to ''Spider-Man: No Way Home'' |url=https://www.gamesradar.com/entertainment/superhero-movies/venom-3-first-trailer-tom-hardy-sony-marvel/ |url-status=live |archive-url=https://web.archive.org/web/20240603165129/https://www.gamesradar.com/entertainment/superhero-movies/venom-3-first-trailer-tom-hardy-sony-marvel/ |archive-date=June 3, 2024 |access-date=June 3, 2024 |magazine=[[Total Film]] |publisher=[[GamesRadar+]]}}</ref>
+
+<ref name="ArtOfVFX">{{Cite web |last=Frei |first=Vincent |date=June 5, 2024 |title=''Venom: The Last Dance'' |url=https://www.artofvfx.com/venom-the-last-dance/ |url-status=live |archive-url=https://web.archive.org/web/20240605215604/https://www.artofvfx.com/venom-the-last-dance/ |archive-date=June 5, 2024 |access-date=July 14, 2024 |website=Art of VFX}}</ref>
+
+<ref name="Sanger">{{Cite Instagram |postid=DAmfp56y7gz |user=mark__sanger |title=[Kelly Marcel] Knocked it out the park. Congrats to the Genius Sound Team. @sony @venommovie |first=Mark |last=Sanger |author-link=Mark Sanger |date=October 2, 2024 |access-date=October 2, 2024 |location=Cary Grant Theatre, [[Sony Pictures Studios]] |archive-url=https://archive.today/20241002212443/https://www.instagram.com/p/DAmfp56y7gz/ |archive-date=October 2, 2024 |url-status=live |link=https://www.instagram.com/p/DAmfp56y7gz}}</ref>
+
+<!-- MUSIC -->
+
+<ref name="Deacon">{{Cite web |date=August 28, 2024 |title=Dan Deacon Scoring Kelly Marcel's ''Venom: The Last Dance'' |url=https://filmmusicreporter.com/2024/08/28/dan-deacon-scoring-kelly-marcels-venom-the-last-dance/ |url-status=live |archive-url=https://web.archive.org/web/20240828224544/https://filmmusicreporter.com/2024/08/28/dan-deacon-scoring-kelly-marcels-venom-the-last-dance/ |archive-date=August 28, 2024 |access-date=August 29, 2024 |website=Film Music Reporter}}</ref>
+
+<!-- RELEASE -->
+
+<ref name="Oct2024ReleaseTimeframe">{{Cite magazine |last=Bell |first=BreAnna |date=June 11, 2023 |title=''Ted Lasso'' Stars Hannah Waddingham and Juno Temple Offer Updates on ''Venom 3'' and ''Mission Impossible: Dead Reckoning Part Two'' |url=https://variety.com/2023/tv/news/ted-lasso-hannah-waddingham-juno-temple-venom-3-mission-impossible-dead-reckoning-part-two-1235639946/ |url-status=live |archive-url=https://web.archive.org/web/20230612013841/https://variety.com/2023/tv/news/ted-lasso-hannah-waddingham-juno-temple-venom-3-mission-impossible-dead-reckoning-part-two-1235639946/ |archive-date=June 12, 2023 |access-date=June 12, 2023 |magazine=[[Variety (magazine)|Variety]]}}</ref>
+
+<ref name="Jul2024Release">{{Cite magazine |last=Donnelly |first=Matt |date=July 28, 2023 |title=''Beyond the Spider-Verse'' Taken Off Sony Release Calendar as Strikes Delay ''Kraven'' and ''Ghostbusters'' Sequel to 2024 |url=https://variety.com/2023/film/news/spider-man-beyond-the-spider-verse-kraven-release-date-pushed-2024-strikes-1235682520/ |url-status=live |archive-url=https://web.archive.org/web/20230728210719/https://variety.com/2023/film/news/spider-man-beyond-the-spider-verse-kraven-release-date-pushed-2024-strikes-1235682520/ |archive-date=July 28, 2023 |access-date=July 29, 2023 |magazine=[[Variety (magazine)|Variety]]}}</ref>
+
+<ref name="Nov2024Release">{{Cite web |last=D'Alessandro |first=Anthony |date=November 8, 2023 |title=''Venom 3'' Stakes Out Late Fall 2024 Theatrical Release As Actors Strike Ends & Pic Resumes Production |url=https://deadline.com/2023/11/venom-3-theatrical-release-date-1235597918/ |url-status=live |archive-url=https://web.archive.org/web/20231109034301/https://deadline.com/2023/11/venom-3-theatrical-release-date-1235597918/ |archive-date=November 9, 2023 |access-date=November 8, 2023 |website=[[Deadline Hollywood]]}}</ref>
+
+<ref name="LastDance">{{Cite magazine |last=Murphy |first=Katcy |date=March 12, 2024 |title=''Venom 3'' Is Titled ''Venom: The Last Dance'': Tom Hardy Sequel Moves Up to October Date |url=https://variety.com/2024/film/news/venom-3-title-last-dance-release-date-tom-hardy-1235940273/ |url-status=live |archive-url=https://web.archive.org/web/20240313002953/https://variety.com/2024/film/news/venom-3-title-last-dance-release-date-tom-hardy-1235940273/ |archive-date=March 13, 2024 |access-date=March 12, 2024 |magazine=[[Variety (magazine)|Variety]]}}</ref>
+
+<ref name="Premiere">{{Cite web |last=Martin |first=Annie |date=October 22, 2024 |title=Tom Hardy, Juno Temple attend ''Venom: The Last Dance'' premiere |url=https://www.upi.com/Entertainment_News/Movies/2024/10/22/Venom-Last-Dance-premiere-Tom-Hardy-Juno-Temple/4171729605361/ |url-status=live |archive-url=https://archive.today/20241023030514/https://www.upi.com/Entertainment_News/Movies/2024/10/22/Venom-Last-Dance-premiere-Tom-Hardy-Juno-Temple/4171729605361/ |archive-date=October 23, 2024 |access-date=October 22, 2024 |publisher=[[United Press International]]}}</ref>
+
+<!-- FUTURE -->
+
+<ref name="MarcelOctober2024">{{Cite web |last=Vejvoda |first=Jim |date=October 14, 2024 |title=''Venom 3'' Director Says Knull Isn't ''The Last Dance''{{'s}} Main Villain, Film Is 'Just the Beginning' for Him |url=https://www.ign.com/articles/venom-3-director-says-knull-isnt-the-last-dances-main-villain-film-is-just-the-beginning-for-him |url-status=live |archive-url=https://archive.today/20241026071620/https://www.ign.com/articles/venom-3-director-says-knull-isnt-the-last-dances-main-villain-film-is-just-the-beginning-for-him |archive-date=October 26, 2024 |access-date=October 15, 2024 |website=[[IGN]]}}</ref>
+
+<ref name="HardysSpideyHopes">{{Cite web |last=Rangel |first=Felipe |date=October 18, 2024 |title="I Would Like To Fight Him Right Now": Tom Hardy Addresses Potential Venom Vs Spider-Man Fight In Future Marvel Movie |url=https://screenrant.com/venom-3-last-dance-spider-man-tom-hardy-comments/ |url-status=live |archive-url=https://archive.today/20241026072059/https://screenrant.com/venom-3-last-dance-spider-man-tom-hardy-comments/ |archive-date=October 26, 2024 |access-date=October 19, 2024 |website=[[Screen Rant]]}}</ref>
+
+}}
+
+== External links ==
+{{Wikiquote}}
+* {{Official website|https://www.sonypictures.com/movies/venomthelastdance}}
+* {{IMDb title}}
+
+{{Sony's Spider-Man Universe}}
+{{Marvel Comics films}}
+{{Spider-Man films}}
+{{Symbiote Family and Hosts}}
+{{Authority control}}
+{{Portal bar|2020s|Film|United States|Speculative fiction|Comics}}
+
+[[Category:2020s monster movies]]
+[[Category:2024 3D films]]
+[[Category:2024 American films]]
+[[Category:2024 directorial debut films]]
+[[Category:2024 English-language films]]
+[[Category:2024 science fiction action films]]
+[[Category:2024 superhero films]]
+[[Category:American 4DX films]]
+[[Category:American IMAX films]]
+[[Category:American science fiction action films]]
+[[Category:American sequel films]]
+[[Category:American superhero films]]
+[[Category:Columbia Pictures films]]
+[[Category:Dolby Cinema films]]
+[[Category:English-language science fiction action films]]
+[[Category:Films about alien invasions]]
+[[Category:Films about Area 51]]
+[[Category:Films about extraterrestrial life]]
+[[Category:Films affected by the 2023 SAG-AFTRA strike]]
+[[Category:Films based on works by Todd McFarlane]]
+[[Category:Films produced by Amy Pascal]]
+[[Category:Films produced by Avi Arad]]
+[[Category:Films produced by Matt Tolmach]]
+[[Category:Films scored by Dan Deacon]]
+[[Category:Films set in 2024]]
+[[Category:Films set in Mexico]]
+[[Category:Films set in Nevada]]
+[[Category:Films set in the Las Vegas Valley]]
+[[Category:Films shot at Warner Bros. Studios Leavesden]]
+[[Category:Films shot in London]]
+[[Category:Films shot in the Region of Murcia]]
+[[Category:Films using motion capture]]
+[[Category:Films with screenplays by Kelly Marcel]]
+[[Category:ScreenX films]]
+[[Category:Sony's Spider-Man Universe films]]
+[[Category:Superhero thriller films]]
+[[Category:Supervillain films]]
+[[Category:Venom (character)]]
+[[Category:Venom (film series)]]

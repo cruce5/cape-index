@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T14:51:15.759Z",
+  "generated": "2026-09-06T15:11:42.571Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "Iron Man": {
@@ -1983,6 +1983,43 @@
         }
       ]
     },
+    "Venom": {
+      "page": "Venom (2018 film)",
+      "universe": "SSU",
+      "date": "2018-10-05",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Hardy",
+          "character": "Eddie Brock / Venom"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michelle Williams",
+          "character": "Anne Weying"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Riz Ahmed",
+          "character": "Carlton Drake / Riot"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Scott Haze",
+          "character": "Roland Treece"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Reid Scott",
+          "character": "Dan Lewis"
+        }
+      ]
+    },
     "Aquaman": {
       "page": "Aquaman (film)",
       "universe": "DCEU",
@@ -2756,6 +2793,49 @@
         }
       ]
     },
+    "Venom: Let There Be Carnage": {
+      "page": "Venom: Let There Be Carnage",
+      "universe": "SSU",
+      "date": "2021-10-01",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Hardy",
+          "character": "Eddie Brock / Venom"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Michelle Williams",
+          "character": "Anne Weying"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Naomie Harris",
+          "character": "Frances Barrison / Shriek"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Reid Scott",
+          "character": "Dan Lewis"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Stephen Graham",
+          "character": "Patrick Mulligan"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Woody Harrelson",
+          "character": "Cletus Kasady / Carnage"
+        }
+      ]
+    },
     "Eternals": {
       "page": "Eternals (film)",
       "universe": "MCU",
@@ -2905,6 +2985,49 @@
           "minor": false,
           "actor": "Tobey Maguire",
           "character": "Peter Parker / Spider-Man"
+        }
+      ]
+    },
+    "Morbius": {
+      "page": "Morbius (film)",
+      "universe": "SSU",
+      "date": "2022-04-01",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Jared Leto",
+          "character": "Dr. Michael Morbius"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Matt Smith",
+          "character": "Lucien / Milo Morbius"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Adria Arjona",
+          "character": "Dr. Martine Bancroft"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Jared Harris",
+          "character": "Dr. Emil Nicholas"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Al Madrigal",
+          "character": "Al Rodriguez"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Tyrese Gibson",
+          "character": "Simon Stroud"
         }
       ]
     },
@@ -3579,6 +3702,79 @@
         }
       ]
     },
+    "Madame Web": {
+      "page": "Madame Web (film)",
+      "universe": "SSU",
+      "date": "2024-02-14",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Dakota Johnson",
+          "character": "Cassandra Webb"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Sydney Sweeney",
+          "character": "Julia Cornwall"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Isabela Merced",
+          "character": "Anya Corazón"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Celeste O'Connor",
+          "character": "Mattie Franklin"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Tahar Rahim",
+          "character": "Ezekiel Sims"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Mike Epps",
+          "character": "O'Neil"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Emma Roberts",
+          "character": "Mary Parker"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Adam Scott",
+          "character": "Ben Parker"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Kerry Bishé",
+          "character": "Constance Webb"
+        },
+        {
+          "order": 10,
+          "minor": false,
+          "actor": "Zosia Mamet",
+          "character": "Amaria"
+        },
+        {
+          "order": 11,
+          "minor": false,
+          "actor": "José María Yazpik",
+          "character": "Santiago"
+        }
+      ]
+    },
     "Deadpool & Wolverine": {
       "page": "Deadpool & Wolverine",
       "universe": "MCU",
@@ -3662,6 +3858,122 @@
           "minor": false,
           "actor": "Sharon Washington",
           "character": "Debra Kane, Arthur's former social worker"
+        }
+      ]
+    },
+    "Venom: The Last Dance": {
+      "page": "Venom: The Last Dance",
+      "universe": "SSU",
+      "date": "2024-10-25",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Hardy",
+          "character": "Eddie Brock / Venom"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Chiwetel Ejiofor",
+          "character": "General Rex Strickland"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Juno Temple",
+          "character": "Dr. Theodora Paine"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Rhys Ifans",
+          "character": "Martin Moon"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Stephen Graham",
+          "character": "Patrick Mulligan"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Peggy Lu",
+          "character": "Mrs. Chen"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Clark Backo",
+          "character": "Sadie"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Alanna Ubach",
+          "character": "Nova Moon"
+        },
+        {
+          "order": 9,
+          "minor": false,
+          "actor": "Andy Serkis",
+          "character": "Knull"
+        }
+      ]
+    },
+    "Kraven the Hunter": {
+      "page": "Kraven the Hunter (film)",
+      "universe": "SSU",
+      "date": "2024-12-13",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Aaron Taylor-Johnson",
+          "character": "Sergei Kravinoff / Kraven the Hunter"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Ariana DeBose",
+          "character": "Calypso Ezili"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "Fred Hechinger",
+          "character": "Dmitri Kravinoff / Chameleon"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Alessandro Nivola",
+          "character": "Aleksei Sytsevich / Rhino"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Christopher Abbott",
+          "character": "the Foreigner"
+        },
+        {
+          "order": 6,
+          "minor": false,
+          "actor": "Russell Crowe",
+          "character": "Nikolai Kravinoff"
+        },
+        {
+          "order": 7,
+          "minor": false,
+          "actor": "Murat Seven",
+          "character": "Ömer Ozdemir, a Turkish assassin hired by Aleksei"
+        },
+        {
+          "order": 8,
+          "minor": false,
+          "actor": "Tom Reed",
+          "character": "Bert, Aleksei's second-in-command"
         }
       ]
     },

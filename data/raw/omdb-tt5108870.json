@@ -1,0 +1,51 @@
+{
+  "Title": "Morbius",
+  "Year": "2022",
+  "Rated": "PG-13",
+  "Released": "01 Apr 2022",
+  "Runtime": "104 min",
+  "Genre": "Action, Adventure, Horror",
+  "Director": "Daniel Espinosa",
+  "Writer": "Matt Sazama, Burk Sharpless",
+  "Actors": "Jared Leto, Matt Smith, Adria Arjona",
+  "Plot": "Biochemist Michael Morbius tries to cure himself of a rare blood disease, but he inadvertently infects himself with a form of vampirism instead.",
+  "Language": "English, Spanish, Russian",
+  "Country": "United States",
+  "Awards": "3 wins & 4 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BY2UzYzFiZWUtOGU5ZC00YTIxLWFlNGUtMGU1YmI4OWUzN2FmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "5.1/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "15%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "35/100"
+    }
+  ],
+  "Metascore": "35",
+  "imdbRating": "5.1",
+  "imdbVotes": "171,808",
+  "imdbID": "tt5108870",
+  "Type": "movie",
+  "tomatoMeter": "N/A",
+  "tomatoImage": "N/A",
+  "tomatoRating": "N/A",
+  "tomatoReviews": "N/A",
+  "tomatoFresh": "N/A",
+  "tomatoRotten": "N/A",
+  "tomatoConsensus": "N/A",
+  "tomatoUserMeter": "N/A",
+  "tomatoUserRating": "N/A",
+  "tomatoUserReviews": "N/A",
+  "tomatoURL": "https://www.rottentomatoes.com/m/morbius",
+  "DVD": "N/A",
+  "BoxOffice": "$73,865,530",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
+}

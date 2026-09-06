@@ -1926,7 +1926,7 @@
       "genres": "Action Adventure Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:12:44.540Z"
+    "scraped_at": "2026-09-06T15:01:49.340Z"
   },
   "superman-2025": {
     "title": "Superman",
@@ -2031,7 +2031,7 @@
       "genres": "Horror Sci-Fi Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:12:44.542Z"
+    "scraped_at": "2026-09-06T15:01:49.342Z"
   },
   "joker-2019": {
     "title": "Joker",
@@ -2058,16 +2058,172 @@
     },
     "scraped_at": "2026-09-05T19:12:38.186Z"
   },
-  "joker-folie-a-deux-2024": {
-    "title": "Joker: Folie a Deux",
-    "year": "2024",
-    "release_date": "2024-10-04",
-    "universe": "Elseworlds",
+  "venom-2018": {
+    "title": "Venom",
+    "year": "2018",
+    "release_date": "2018-10-05",
+    "universe": "SSU",
     "source": "addition",
-    "bom_id": "tt11315808",
-    "bom_url": "https://www.boxofficemojo.com/title/tt11315808/",
+    "bom_id": "tt1270797",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1270797/",
     "matchedText": "(pinned id)",
     "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 213515506,
+      "international": 642569645,
+      "worldwide": 856085161,
+      "opening_weekend_domestic": 80255756,
+      "budget": 100000000,
+      "earliest_release_date": "October 3, 2018 (7 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 112,
+      "genres": "Action Adventure Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-06T14:59:18.057Z"
+  },
+  "venom-let-there-be-carnage-2021": {
+    "title": "Venom: Let There Be Carnage",
+    "year": "2021",
+    "release_date": "2021-10-01",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt7097896",
+    "bom_url": "https://www.boxofficemojo.com/title/tt7097896/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 213550366,
+      "international": 293263498,
+      "worldwide": 506813864,
+      "opening_weekend_domestic": 90033210,
+      "budget": null,
+      "earliest_release_date": "September 30, 2021 (Russia/CIS)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 97,
+      "genres": "Action Adventure Crime Fantasy Horror Sci-Fi Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-06T14:59:23.998Z"
+  },
+  "morbius-2022": {
+    "title": "Morbius",
+    "year": "2022",
+    "release_date": "2022-04-01",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt5108870",
+    "bom_url": "https://www.boxofficemojo.com/title/tt5108870/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 73865530,
+      "international": 93595431,
+      "worldwide": 167460961,
+      "opening_weekend_domestic": 39005895,
+      "budget": null,
+      "earliest_release_date": "March 30, 2022 (APAC, EMEA)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 104,
+      "genres": "Action Adventure Horror Sci-Fi Thriller",
+      "distributor": "Columbia Pictures"
+    },
+    "scraped_at": "2026-09-06T14:59:28.808Z"
+  },
+  "madame-web-2024": {
+    "title": "Madame Web",
+    "year": "2024",
+    "release_date": "2024-02-14",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt11057302",
+    "bom_url": "https://www.boxofficemojo.com/title/tt11057302/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 43817106,
+      "international": 56681658,
+      "worldwide": 100498764,
+      "opening_weekend_domestic": 15335860,
+      "budget": null,
+      "earliest_release_date": "February 14, 2024 (7 markets)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 116,
+      "genres": "Action Thriller",
+      "distributor": "Columbia Pictures"
+    },
+    "scraped_at": "2026-09-06T14:59:35.676Z"
+  },
+  "venom-the-last-dance-2024": {
+    "title": "Venom: The Last Dance",
+    "year": "2024",
+    "release_date": "2024-10-25",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt16366836",
+    "bom_url": "https://www.boxofficemojo.com/title/tt16366836/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 139755882,
+      "international": 339181736,
+      "worldwide": 478937618,
+      "opening_weekend_domestic": 51012404,
+      "budget": null,
+      "earliest_release_date": "October 23, 2024 (China, APAC)",
+      "mpaa": "PG-13",
+      "running_time_minutes": 110,
+      "genres": "Action Fantasy Horror Sci-Fi Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-06T14:59:42.109Z"
+  },
+  "kraven-the-hunter-2024": {
+    "title": "Kraven the Hunter",
+    "year": "2024",
+    "release_date": "2024-12-13",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt8790086",
+    "bom_url": "https://www.boxofficemojo.com/title/tt8790086/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 25026310,
+      "international": 37050223,
+      "worldwide": 62076533,
+      "opening_weekend_domestic": 11001109,
+      "budget": null,
+      "earliest_release_date": "December 11, 2024 (Mexico)",
+      "mpaa": "R",
+      "running_time_minutes": 127,
+      "genres": "Action Adventure Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-09-06T14:59:47.892Z"
+  },
+  "joker-folie-deux-2024": {
+    "title": "Joker: Folie à Deux",
+    "year": "2024",
+    "release_date": "2024-01-01",
+    "universe": "UNKNOWN",
+    "source": "baseline",
+    "bom_id": "tt11315808",
+    "bom_url": "https://www.boxofficemojo.com/title/tt11315808/",
+    "matchedText": "Joker: Folie à Deux (2024)",
+    "candidates": [
+      {
+        "id": "tt11315808",
+        "text": "Joker: Folie à Deux (2024)",
+        "score": 120
+      }
+    ],
     "status": "ok",
     "parsed": {
       "domestic": 58300287,
@@ -2081,6 +2237,6 @@
       "genres": "Drama Musical Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:12:44.536Z"
+    "scraped_at": "2026-09-06T15:01:49.337Z"
   }
 }
