@@ -5,3 +5,4 @@ node_modules/
 dist/
 data/raw/*.html
 !data/raw/.gitkeep
+build/

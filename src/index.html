@@ -230,6 +230,25 @@
   .note dd { margin: 0; color: var(--ink-2); }
   .note code { font-family: "IBM Plex Mono", monospace; font-size: 0.9em; background: var(--surface-2); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   @media (max-width: 620px) { .note dl { grid-template-columns: 1fr; gap: 2px; } .note dd { margin-bottom: 8px; } }
+
+  /* ============ MOBILE ============ */
+  @media (max-width: 760px) {
+    .masthead { padding: 40px 0 32px; }
+    .masthead h1 { font-size: clamp(40px, 13vw, 72px); }
+    section.view { padding: 40px 0; }
+    .thesis { grid-template-columns: 1fr; }
+    .scorecards { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .controls-inner { gap: 8px 14px; }
+    .clabel { font-size: 10px; }
+    .act h3 { letter-spacing: 0.1em; white-space: normal; }
+    /* wide charts pan horizontally instead of shrinking to an unreadable width */
+    main div[id^="chart-"] { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+    main div[id^="chart-"] > svg { min-width: 680px; }
+    #chart-profit > svg, #chart-legs > svg, #chart-split > svg { min-width: 760px; }
+  }
+  @media (max-width: 440px) {
+    .scorecards { grid-template-columns: 1fr; }
+  }
 </style>
 
 <div class="tip" id="tip" role="status" aria-live="polite"></div>

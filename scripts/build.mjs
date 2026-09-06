@@ -1,16 +1,45 @@
-// Inline data/web.json into src/index.html -> dist/index.html (one self-contained file).
+// Build two outputs from src/index.html (a head+body fragment) + data/web.json:
+//   dist/artifact.html  — the fragment, for the claude.ai Artifact (its host
+//                          supplies <!doctype>, <head>, charset + viewport).
+//   dist/index.html      — a complete standalone document with its own charset
+//                          and viewport meta, for Cloudflare / any static host.
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { ROOT } from "./lib-bom.mjs";
 
 const tpl = readFileSync(join(ROOT, "src/index.html"), "utf8");
 const data = readFileSync(join(ROOT, "data/web.json"), "utf8").trim();
-
 if (!tpl.includes("__DATA__")) throw new Error("src/index.html has no __DATA__ placeholder");
-// Guard against </script> inside the JSON breaking the tag.
-const safe = data.replace(/<\//g, "<\\/");
-const html = tpl.replace("__DATA__", safe);
+
+const safe = data.replace(/<\//g, "<\\/"); // don't let </...> in the JSON close the tag
+const fragment = tpl.replace("__DATA__", safe);
 
 mkdirSync(join(ROOT, "dist"), { recursive: true });
-writeFileSync(join(ROOT, "dist/index.html"), html);
-console.log(`dist/index.html — ${(html.length / 1024).toFixed(0)} KB (${JSON.parse(data).films.length} films inlined)`);
+mkdirSync(join(ROOT, "build"), { recursive: true });
+writeFileSync(join(ROOT, "build/artifact.html"), fragment); // kept out of dist/ so Cloudflare serves only index.html
+
+const marker = "</style>";
+const cut = fragment.indexOf(marker);
+if (cut === -1) throw new Error("src/index.html: no </style> to split head from body");
+const headInner = fragment.slice(0, cut + marker.length).trim();
+const bodyInner = fragment.slice(cut + marker.length).trim();
+
+const doc = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+${headInner}
+</head>
+<body>
+${bodyInner}
+</body>
+</html>
+`;
+writeFileSync(join(ROOT, "dist/index.html"), doc);
+console.log(
+  `dist/index.html — ${(doc.length / 1024).toFixed(0)} KB standalone · ` +
+  `build/artifact.html — ${(fragment.length / 1024).toFixed(0)} KB fragment · ` +
+  `${JSON.parse(data).films.length} films`
+);
