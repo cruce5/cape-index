@@ -9,10 +9,12 @@ import { ROOT } from "./lib-bom.mjs";
 
 const tpl = readFileSync(join(ROOT, "src/index.html"), "utf8");
 const data = readFileSync(join(ROOT, "data/web.json"), "utf8").trim();
+const castData = readFileSync(join(ROOT, "data/web-cast.json"), "utf8").trim();
 if (!tpl.includes("__DATA__")) throw new Error("src/index.html has no __DATA__ placeholder");
+if (!tpl.includes("__CAST__")) throw new Error("src/index.html has no __CAST__ placeholder");
 
-const safe = data.replace(/<\//g, "<\\/"); // don't let </...> in the JSON close the tag
-const fragment = tpl.replace("__DATA__", safe);
+const esc = (s) => s.replace(/<\//g, "<\\/"); // don't let </...> in the JSON close the tag
+const fragment = tpl.replace("__DATA__", esc(data)).replace("__CAST__", esc(castData));
 
 mkdirSync(join(ROOT, "dist"), { recursive: true });
 mkdirSync(join(ROOT, "build"), { recursive: true });

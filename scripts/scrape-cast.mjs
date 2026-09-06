@@ -268,15 +268,12 @@ for (const f of films) {
   const seen = new Set();
   for (const r of rows) {
     const cn = codenameOf(r.character);
+    const mapped = canonOf(r.character);           // most specific: real-name / alias -> canonical
     var name, real;
-    if (cn) { name = canon(cn.code); real = cn.real; }
-    else {
-      const c = canonOf(r.character);
-      if (!c) continue;
-      name = c;
-      real = r.character.split(/\s*\/\s*/)[0].trim();
-      if (real === name) real = null;
-    }
+    if (mapped) { name = mapped; real = r.character.split(/\s*\/\s*/)[0].trim(); }
+    else if (cn) { name = canon(cn.code); real = cn.real; }
+    else continue;
+    if (real === name || !real) real = null;
     if (DROP.has(name) || seen.has(name)) continue;
     seen.add(name);
     if (!chars.has(name)) chars.set(name, { name, real: real || null, universes: new Set(), actors: new Set(), films: [] });

@@ -1,93 +1,93 @@
 {
-  "generated": "2026-09-06T02:09:18.586Z",
+  "generated": "2026-09-06T02:10:49.003Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 139,
+  "count": 138,
   "characters": [
     {
-      "name": "Black Widow",
-      "real_name": "Natasha Romanoff",
+      "name": "Captain America",
+      "real_name": "Steve Rogers",
       "universes": [
         "MCU"
       ],
       "actors": [
-        "Scarlett Johansson",
-        "Florence Pugh"
+        "Chris Evans",
+        "Anthony Mackie"
       ],
       "appearances": 9,
       "films": [
         {
-          "title": "Iron Man 2",
+          "title": "Captain America: The First Avenger",
           "universe": "MCU",
-          "date": "2010-05-07",
-          "order": 4,
+          "date": "2011-07-22",
+          "order": 1,
           "minor": false,
-          "actor": "Scarlett Johansson"
+          "actor": "Chris Evans"
         },
         {
           "title": "The Avengers",
           "universe": "MCU",
           "date": "2012-05-12",
-          "order": 5,
+          "order": 2,
           "minor": false,
-          "actor": "Scarlett Johansson"
+          "actor": "Chris Evans"
         },
         {
           "title": "Captain America: The Winter Soldier",
           "universe": "MCU",
           "date": "2014-04-04",
-          "order": 2,
+          "order": 1,
           "minor": false,
-          "actor": "Scarlett Johansson"
+          "actor": "Chris Evans"
         },
         {
           "title": "Avengers: Age of Ultron",
           "universe": "MCU",
           "date": "2015-05-01",
-          "order": 5,
+          "order": 4,
           "minor": false,
-          "actor": "Scarlett Johansson"
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Ant-Man",
+          "universe": "MCU",
+          "date": "2015-07-17",
+          "order": 7,
+          "minor": false,
+          "actor": "Anthony Mackie"
         },
         {
           "title": "Captain America: Civil War",
           "universe": "MCU",
           "date": "2016-05-06",
-          "order": 3,
+          "order": 1,
           "minor": false,
-          "actor": "Scarlett Johansson"
+          "actor": "Chris Evans"
         },
         {
           "title": "Avengers: Infinity War",
           "universe": "MCU",
           "date": "2018-04-27",
-          "order": 5,
+          "order": 4,
           "minor": false,
-          "actor": "Scarlett Johansson"
+          "actor": "Chris Evans"
         },
         {
           "title": "Avengers: Endgame",
           "universe": "MCU",
           "date": "2019-04-26",
-          "order": 5,
+          "order": 2,
           "minor": false,
-          "actor": "Scarlett Johansson"
+          "actor": "Chris Evans"
         },
         {
-          "title": "Black Widow",
+          "title": "Captain America: Brave New World",
           "universe": "MCU",
-          "date": "2021-07-09",
+          "date": "2025-02-14",
           "order": 1,
           "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Spider-Man: Brand New Day",
-          "universe": "MCU",
-          "date": "2026-07-31",
-          "order": 6,
-          "minor": false,
-          "actor": "Florence Pugh"
+          "actor": "Anthony Mackie"
         }
       ]
     },
@@ -177,80 +177,79 @@
       ]
     },
     {
-      "name": "Captain America",
-      "real_name": "Steve Rogers",
+      "name": "Black Widow",
+      "real_name": "Natasha Romanoff",
       "universes": [
         "MCU"
       ],
       "actors": [
-        "Chris Evans",
-        "Anthony Mackie"
+        "Scarlett Johansson"
       ],
       "appearances": 8,
       "films": [
         {
-          "title": "Captain America: The First Avenger",
+          "title": "Iron Man 2",
           "universe": "MCU",
-          "date": "2011-07-22",
-          "order": 1,
+          "date": "2010-05-07",
+          "order": 4,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "The Avengers",
           "universe": "MCU",
           "date": "2012-05-12",
-          "order": 2,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Captain America: The Winter Soldier",
           "universe": "MCU",
           "date": "2014-04-04",
-          "order": 1,
+          "order": 2,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Avengers: Age of Ultron",
           "universe": "MCU",
           "date": "2015-05-01",
-          "order": 4,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Captain America: Civil War",
           "universe": "MCU",
           "date": "2016-05-06",
-          "order": 1,
+          "order": 3,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Avengers: Infinity War",
           "universe": "MCU",
           "date": "2018-04-27",
-          "order": 4,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Avengers: Endgame",
           "universe": "MCU",
           "date": "2019-04-26",
-          "order": 2,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
-          "title": "Captain America: Brave New World",
+          "title": "Black Widow",
           "universe": "MCU",
-          "date": "2025-02-14",
+          "date": "2021-07-09",
           "order": 1,
           "minor": false,
-          "actor": "Anthony Mackie"
+          "actor": "Scarlett Johansson"
         }
       ]
     },
@@ -537,68 +536,6 @@
           "order": 7,
           "minor": false,
           "actor": "Don Cheadle"
-        }
-      ]
-    },
-    {
-      "name": "Falcon",
-      "real_name": "Sam Wilson",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Anthony Mackie",
-        "Danny Ramirez"
-      ],
-      "appearances": 6,
-      "films": [
-        {
-          "title": "Captain America: The Winter Soldier",
-          "universe": "MCU",
-          "date": "2014-04-04",
-          "order": 4,
-          "minor": false,
-          "actor": "Anthony Mackie"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 12,
-          "minor": false,
-          "actor": "Anthony Mackie"
-        },
-        {
-          "title": "Ant-Man",
-          "universe": "MCU",
-          "date": "2015-07-17",
-          "order": 7,
-          "minor": false,
-          "actor": "Anthony Mackie"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 5,
-          "minor": false,
-          "actor": "Anthony Mackie"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 11,
-          "minor": false,
-          "actor": "Anthony Mackie"
-        },
-        {
-          "title": "Captain America: Brave New World",
-          "universe": "MCU",
-          "date": "2025-02-14",
-          "order": 2,
-          "minor": false,
-          "actor": "Danny Ramirez"
         }
       ]
     },
@@ -1421,6 +1358,43 @@
       ]
     },
     {
+      "name": "Black Widow (Yelena)",
+      "real_name": "Yelena Belova",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Florence Pugh"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Black Widow",
+          "universe": "MCU",
+          "date": "2021-07-09",
+          "order": 2,
+          "minor": false,
+          "actor": "Florence Pugh"
+        },
+        {
+          "title": "Thunderbolts*",
+          "universe": "MCU",
+          "date": "2025-05-02",
+          "order": 1,
+          "minor": false,
+          "actor": "Florence Pugh"
+        },
+        {
+          "title": "Spider-Man: Brand New Day",
+          "universe": "MCU",
+          "date": "2026-07-31",
+          "order": 6,
+          "minor": false,
+          "actor": "Florence Pugh"
+        }
+      ]
+    },
+    {
       "name": "Captain Marvel",
       "real_name": "Carol Danvers",
       "universes": [
@@ -1697,35 +1671,6 @@
           "order": 4,
           "minor": false,
           "actor": "Yahya Abdul-Mateen II"
-        }
-      ]
-    },
-    {
-      "name": "Black Widow (Yelena)",
-      "real_name": "Yelena Belova",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Florence Pugh"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "Black Widow",
-          "universe": "MCU",
-          "date": "2021-07-09",
-          "order": 2,
-          "minor": false,
-          "actor": "Florence Pugh"
-        },
-        {
-          "title": "Thunderbolts*",
-          "universe": "MCU",
-          "date": "2025-05-02",
-          "order": 1,
-          "minor": false,
-          "actor": "Florence Pugh"
         }
       ]
     },
@@ -2194,6 +2139,35 @@
           "order": 9,
           "minor": false,
           "actor": "Paul Bettany"
+        }
+      ]
+    },
+    {
+      "name": "Yellowjacket",
+      "real_name": "Darren Cross",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Corey Stoll"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Ant-Man",
+          "universe": "MCU",
+          "date": "2015-07-17",
+          "order": 3,
+          "minor": false,
+          "actor": "Corey Stoll"
+        },
+        {
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "universe": "MCU",
+          "date": "2023-02-17",
+          "order": 10,
+          "minor": false,
+          "actor": "Corey Stoll"
         }
       ]
     },
@@ -2681,6 +2655,27 @@
       ]
     },
     {
+      "name": "Falcon",
+      "real_name": "Joaquin Torres",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Danny Ramirez"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Captain America: Brave New World",
+          "universe": "MCU",
+          "date": "2025-02-14",
+          "order": 2,
+          "minor": false,
+          "actor": "Danny Ramirez"
+        }
+      ]
+    },
+    {
       "name": "Galactus",
       "real_name": null,
       "universes": [
@@ -3160,27 +3155,6 @@
           "order": 7,
           "minor": false,
           "actor": "Adewale Akinnuoye-Agbaje"
-        }
-      ]
-    },
-    {
-      "name": "M.O.D.O.K.",
-      "real_name": "Darren Cross",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Corey Stoll"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Ant-Man and the Wasp: Quantumania",
-          "universe": "MCU",
-          "date": "2023-02-17",
-          "order": 10,
-          "minor": false,
-          "actor": "Corey Stoll"
         }
       ]
     },
@@ -4021,27 +3995,6 @@
           "order": 3,
           "minor": false,
           "actor": "Meng'er Zhang"
-        }
-      ]
-    },
-    {
-      "name": "Yellowjacket",
-      "real_name": "Darren Cross",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Corey Stoll"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Ant-Man",
-          "universe": "MCU",
-          "date": "2015-07-17",
-          "order": 3,
-          "minor": false,
-          "actor": "Corey Stoll"
         }
       ]
     },
