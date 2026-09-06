@@ -803,6 +803,8 @@
           <li><b>&ldquo;Adversarial-audit the ever-living hell out of this.&rdquo;</b> That is where the cast scraper got caught.</li>
           <li>Collapse / expand on the four tallest charts, collapsed by default.</li>
           <li><b>&ldquo;Would a viz snob look at this and go &lsquo;hmm, nice&rsquo;?&rdquo;</b> Treemap labels and the budget markers got a polish pass.</li>
+          <li>Bought <em>capeindex.com</em>. Wired the custom domain, and a 301 from <em>thecapeindex.com</em>; every share URL now points there.</li>
+          <li><b>&ldquo;A profit-per-movie metric on the scoreboard, if the box office subreddit would like it.&rdquo;</b> Added as theatrical P/L per completed film, muted where too few films have finished to average one honestly.</li>
         </ol>
       </div>
 
@@ -1131,7 +1133,8 @@
       var gr = fs.map(function (f) { return val(f, "ww"); });
       var tot = gr.reduce(function (a, b) { return a + b; }, 0);
       // profit only from films that have finished their run — an in-release film's loss isn't real yet
-      var np = fs.filter(function (f) { return f.final; }).reduce(function (a, f) { return a + profitOf(f); }, 0);
+      var finals = fs.filter(function (f) { return f.final; });
+      var np = finals.reduce(function (a, f) { return a + profitOf(f); }, 0);
       var el = document.createElement("div");
       el.className = "sc";
       el.style.setProperty("--c", "var(" + COLORVAR[u.k] + ")");
@@ -1142,11 +1145,17 @@
         rowline("Films", fs.length) +
         rowline("Median", usd(median(gr))) +
         rowline("Biggest", usd(Math.max.apply(null, gr))) +
-        rowline("Profit", '<span style="color:var(' + (np >= 0 ? "--pos" : "--neg") + ')">' + (np >= 0 ? "+" : "−") + usd(Math.abs(np)) + "</span>") +
+        rowline("Profit", signed(np)) +
+        // per completed film; muted, not colour-coded, when too few finished runs to average honestly
+        rowline("Profit / film", finals.length ? signed(np / finals.length, finals.length < 3) : '<span style="color:var(--ink-muted)">n/a</span>') +
         "</div>";
       host.appendChild(el);
     });
     function rowline(k, v) { return '<div class="row"><span>' + k + "</span><span>" + v + "</span></div>"; }
+    function signed(v, muted) {
+      var c = muted ? "--ink-muted" : (v >= 0 ? "--pos" : "--neg");
+      return '<span style="color:var(' + c + ')">' + (v >= 0 ? "+" : "−") + usd(Math.abs(v)) + "</span>";
+    }
     var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
     var dc = FILMS.filter(function (f) { return f.u === "DCEU" || f.u === "DCU" || f.u === "Elseworlds"; });
     var ssu = FILMS.filter(function (f) { return f.u === "SSU"; });
@@ -1157,8 +1166,12 @@
     var am = tm / mcu.length, ad = td / dc.length;
     var bm = mcu.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     var bd = dc.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
+    var mFin = mcu.filter(function (f) { return f.final; }), dFin = dc.filter(function (f) { return f.final; });
+    var mpf = mFin.reduce(function (a, f) { return a + profitOf(f); }, 0) / mFin.length;
+    var dpf = dFin.reduce(function (a, f) { return a + profitOf(f); }, 0) / dFin.length;
+    var pfWord = function (v) { return (v >= 0 ? "clears about <b>" : "loses about <b>") + usd(Math.abs(v)) + "</b>"; };
     document.getElementById("d-scorecard").innerHTML =
-      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones (the Dark Knight trilogy, both Jokers, The Batman). The average Marvel Studios film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel Studios films have passed $1B; " + bd + " DC films have. Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; neither run has a billion-dollar title, though Raimi&rsquo;s <em>Spider-Man 3</em> came closest at $887M.";
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones (the Dark Knight trilogy, both Jokers, The Batman). The average Marvel Studios film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel Studios films have passed $1B; " + bd + " DC films have. Net of an estimated theatrical break-even of 2.5&times; production budget, the average completed Marvel Studios film " + pfWord(mpf) + "; the average completed DC film " + pfWord(dpf) + " (home video, streaming and TV not counted). Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; neither run has a billion-dollar title, though Raimi&rsquo;s <em>Spider-Man 3</em> came closest at $887M.";
   }
 
   /* ---------- §01 stacked columns by year ---------- */
