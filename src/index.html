@@ -1153,14 +1153,16 @@
         if (fy.length) rows.push({ y: y, films: fy.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }) });
       }
       var Hm = mT + rows.length * rowH + 4;
+      // one fixed slot width for every row, so row length reads as "how many films that year"
+      var maxK = Math.max.apply(null, rows.map(function (r) { return r.films.length; }).concat([1]));
+      var slotW = iw / maxK, rCap = Math.min(12, slotW / 2 - 2);
       var body = rows.map(function (row, i) {
         var cy = mT + i * rowH + rowH / 2, yb = mT + (i + 1) * rowH;
-        var k = row.films.length, slotW = iw / k;
         var g = '<text x="' + (mL - 6) + '" y="' + (cy + 3.5) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">&rsquo;' + String(row.y).slice(2) + '</text>' +
           '<line x1="' + mL + '" x2="' + (W - mR) + '" y1="' + yb + '" y2="' + yb + '" stroke="var(--grid)"/>';
         row.films.forEach(function (f, j) {
           var cx = mL + slotW * (j + 0.5);
-          var r = Math.min(12, Math.sqrt(val(f, "ww") / maxWW) * 13 + 2, slotW / 2 - 2);
+          var r = Math.min(rCap, Math.sqrt(val(f, "ww") / maxWW) * 14 + 2);
           g += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="var(' + COLORVAR[f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.3" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
         });
         return g;
