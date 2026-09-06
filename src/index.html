@@ -1138,12 +1138,12 @@
     if (vert) {
       // Blend date-fraction with rank-fraction so long empty stretches (2020) don't
       // waste vertical space while the timeline still reads chronologically.
-      W = 360; H = 19 * N + 46; m = { t: 24, r: 16, b: 14, l: 42 };
-      rS = function (v) { return 3 + Math.sqrt(v / maxWW) * 11; };
+      W = 360; H = 12 * N + 40; m = { t: 20, r: 14, b: 12, l: 40 };
+      rS = function (v) { return 2.5 + Math.sqrt(v / maxWW) * 8.5; };
       posOf = function (d, idx) {
         if (idx == null) idx = af.filter(function (f) { return f.date < d; }).length;
         var dFrac = (dateNum(d) - t0) / (t1 - t0), rFrac = idx / N;
-        return m.t + (0.32 * dFrac + 0.68 * rFrac) * (H - m.t - m.b);
+        return m.t + (0.26 * dFrac + 0.74 * rFrac) * (H - m.t - m.b);
       };
       mid = m.l + (W - m.l - m.r) / 2; lim0 = m.l; lim1 = W - m.r;
     } else {
@@ -1160,11 +1160,11 @@
         for (var j = 0; j < placed.length; j++) {
           var p = placed[j];
           var dp = pos - p.pos, ds = spread - p.spread;
-          if (dp * dp + ds * ds < (r + p.r + 1.4) * (r + p.r + 1.4)) { ok = false; break; }
+          if (dp * dp + ds * ds < (r + p.r + (vert ? 0.8 : 1.4)) * (r + p.r + (vert ? 0.8 : 1.4))) { ok = false; break; }
         }
         if (ok) break;
         step += 1;
-        spread = mid + dir * step * (vert ? 2.5 : 3.2);
+        spread = mid + dir * step * (vert ? 2.1 : 3.2);
         dir *= -1;
         if (spread - r < lim0) spread = lim0 + r;
         if (spread + r > lim1) spread = lim1 - r;
