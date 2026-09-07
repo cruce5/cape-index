@@ -1661,7 +1661,7 @@
     for (var y = YEAR0; y <= YEAR1; y += (mob ? 4 : 2)) {
       var p = xOf(y + "-01-01");
       ticks += '<line x1="' + p + '" x2="' + p + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
-      ticks += '<text x="' + p + '" y="' + (H - m.b + (mob ? 13 : 16)) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 11) + '" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(y).slice(2) : y) + "</text>";
+      ticks += '<text x="' + p + '" y="' + (H - m.b + (mob ? 13 : 16)) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 13) + '" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(y).slice(2) : y) + "</text>";
     }
     var circ = nodes.map(function (n) {
       return '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="' + (mob ? 1 : 1.5) + '" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
@@ -1718,7 +1718,7 @@
       pts += mark(cx, cy, f.u, FILMS.indexOf(f));
       if (top.indexOf(f) > -1) {
         var rightSide = cx > m.l + iw * 0.55;
-        labels += '<text x="' + (rightSide ? cx - 10 : cx + 10) + '" y="' + (cy + 3) + '" text-anchor="' + (rightSide ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 11) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 20) : f.t) + "</text>";
+        labels += '<text x="' + (rightSide ? cx - 10 : cx + 10) + '" y="' + (cy + 3) + '" text-anchor="' + (rightSide ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 13) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 20) : f.t) + "</text>";
       }
     });
     document.getElementById("chart-scatter").innerHTML =
@@ -1947,7 +1947,7 @@
       return '<circle cx="' + xS(p.yr) + '" cy="' + yS(p.med) + '" r="' + r + '" fill="var(--dceu)" stroke="var(--surface)" stroke-width="1.5" class="budDot" data-yr="' + p.yr + '" data-med="' + p.med + '" data-n="' + p.n + '"/>';
     }).join("");
     var xlab = "";
-    for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) xlab += '<text x="' + xS(yy) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 11) + '" fill="var(--ink-muted)">' + (mob ? "’" + String(yy).slice(2) : yy) + "</text>";
+    for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) xlab += '<text x="' + xS(yy) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 13) + '" fill="var(--ink-muted)">' + (mob ? "’" + String(yy).slice(2) : yy) + "</text>";
     var last = pts[pts.length - 1];
     document.getElementById("chart-budget").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Median production budget by year">' +
@@ -2166,11 +2166,11 @@
     if (mob) pick = pick.slice(0, 2);
     var labs = pick.map(function (f) {
       var x = xS(f.rt), right = f.rt > 55;
-      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 11) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 18) : f.t) + "</text>";
+      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 13) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 18) : f.t) + "</text>";
     }).join("");
     document.getElementById("chart-reviews").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Rotten Tomatoes critic score versus worldwide gross"><g class="grid">' + g + "</g>" + pts + labs +
-      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 11) + '">RT critic score</text></svg>';
+      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 13) + '">RT critic score</text></svg>';
     wireDots(document.querySelector("#chart-reviews svg"));
     legend("leg-rev", activeUnis(), false, true);
   }
@@ -2195,12 +2195,12 @@
     var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
     var labs = gap.map(function (f) {
       var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 55;
-      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 11) + '" style="pointer-events:none">' + esc(clip(f.t, mob ? 16 : 24)) + "</text>";
+      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 13) + '" style="pointer-events:none">' + esc(clip(f.t, mob ? 16 : 24)) + "</text>";
     }).join("");
     document.getElementById("chart-parity").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + diag + pts + labs +
-      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 11) + '">RT critic score &rarr;</text>' +
-      '<text transform="translate(' + (mob ? 9 : 12) + ',' + (m.t + ih / 2) + ') rotate(-90)" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 11) + '">IMDb rating &times;10 &rarr;</text></svg>';
+      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 13) + '">RT critic score &rarr;</text>' +
+      '<text transform="translate(' + (mob ? 9 : 12) + ',' + (m.t + ih / 2) + ') rotate(-90)" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 13) + '">IMDb rating &times;10 &rarr;</text></svg>';
     wireDots(document.querySelector("#chart-parity svg"));
     legend("leg-par", activeUnis(), false, true);
   }
