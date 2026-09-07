@@ -92,9 +92,12 @@ if (-not $SkipDeploy) {
 }
 
 if ($Commit) {
+  # only commit if something other than the generated/scraped_at stamps moved,
+  # otherwise every Monday lands a no-op "Weekly data refresh" on GitHub
+  node scripts/data-changed.mjs | ForEach-Object { Say $_ }
+  $realChange = ($LASTEXITCODE -ne 0)
   git add data 2>$null
-  git diff --cached --quiet
-  if ($LASTEXITCODE -ne 0) {
+  if ($realChange) {
     $stamp = Get-Date -Format "yyyy-MM-dd"
     git commit -m "Weekly data refresh $stamp" | Out-Null
     Say "committed refreshed data (Weekly data refresh $stamp)"

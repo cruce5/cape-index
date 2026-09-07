@@ -50,7 +50,7 @@ npm run build                # inline everything into dist/index.html + og.png
 Grosses are checked one title page at a time. Budgets are the **production**
 budget (r/boxoffice convention, not marketing-inclusive); break-even is estimated
 at 2.5× that. In-release films are marked and held out of the profit tallies.
-Roughly half the budgets are estimates, marked `est.` in the ledger.
+About a third of the budgets are estimates, marked `est.` in the ledger.
 
 ## Weekly refresh
 

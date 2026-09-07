@@ -448,7 +448,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Beyond the averages, how are each universe&rsquo;s grosses actually spread out?</dd>
           <dt>Why this form</dt><dd>A box plot shows the middle 50%, the median and the tails at once. An average alone would hide that DC&rsquo;s range is both wider and lower. The dots put every film back on the chart so the summary isn&rsquo;t a black box.</dd>
-          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean, one $2.8B film drags a mean around. DCU has two films and Elseworlds three, so they get dots and a median tick only; a quartile box on a handful of films is theatre.</dd>
+          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean, one $2.8B film drags a mean around. DCU has two films, so it gets dots and a median tick only; a quartile box on a handful of films is theatre. Elseworlds, at six, just clears the bar for a box, so read its quartiles loosely.</dd>
           <dt>Watch for</dt><dd>With this few films per group, a single film moves the quartiles a lot. Read it as &ldquo;roughly,&rdquo; not &ldquo;precisely.&rdquo;</dd>
         </dl></div>
       </div>
@@ -460,7 +460,7 @@
       <div class="view-head">
         <span class="num">§ 02 &nbsp;/&nbsp; TREEMAP</span>
         <h2>Only three films have passed $2 billion, and all three are Marvel</h2>
-        <p class="dek">Every film is a rectangle, sized by worldwide gross. The three biggest are all Marvel and all Avengers-scale. DC&rsquo;s ceiling, Aquaman at $1.15B, sits below ten separate Marvel films.</p>
+        <p class="dek">Every film is a rectangle, sized by worldwide gross. The three biggest are all Marvel: two Avengers films, and <em>Brand New Day</em>, which is still in theatres. DC&rsquo;s ceiling, Aquaman at $1.15B, sits below ten separate Marvel films.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -472,7 +472,7 @@
         <div id="table-treemap" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where is the money concentrated across all 92 films at once?</dd>
-          <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 57-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
+          <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 92-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
           <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
           <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
         </dl></div>
@@ -486,8 +486,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 03 &nbsp;/&nbsp; BY RELEASE DATE</span>
-        <h2>Since 2019, at most one film a year has cleared $1 billion</h2>
-        <p class="dek">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 there are more films and smaller ones, and the big bubbles thin out.</p>
+        <h2>Since 2020, no year has produced more than one billion-dollar film</h2>
+        <p class="dek">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 the output is about the same, six or seven films a year, but the films are smaller and the big bubbles thin out to one a year at most. <em>Brand New Day</em>, still in release, is 2026&rsquo;s.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -511,7 +511,7 @@
       <div class="view-head">
         <span class="num">§ 04 &nbsp;/&nbsp; SCATTER</span>
         <h2>Marvel has cleared $1 billion twelve times. DC four times, Fox and Sony never</h2>
-        <p class="dek">Worldwide gross by release date. Above the billion-dollar line sit four DC films (Aquaman, Joker, and both of Nolan&rsquo;s Dark Knight follow-ups); everything else up there is Marvel Studios. Below it, the whole cloud sinks after 2022.</p>
+        <p class="dek">Worldwide gross by release date. Above the billion-dollar line sit four DC films (Aquaman, Joker, and both of Nolan&rsquo;s Dark Knight follow-ups); everything else up there is Marvel Studios. Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -523,7 +523,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Is there a trend in film size over 25 years, and which films broke away from the pack?</dd>
           <dt>Why this form</dt><dd>Two continuous axes, date and gross, is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
-          <dt>Choices here</dt><dd>The palette is a colour-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of colour blindness, so a sixth is a non-starter. Elseworlds (three standalone films tied to no franchise engine) is drawn in grey, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labelled; a label on all 92 is noise.</dd>
+          <dt>Choices here</dt><dd>The palette is a colour-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of colour blindness, so a sixth is a non-starter. Elseworlds (DC&rsquo;s six films outside any shared universe) is drawn in grey, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labelled; a label on all 92 is noise.</dd>
           <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support, the story is the spread and the outliers, not a slope.</dd>
         </dl></div>
       </div>
@@ -535,7 +535,7 @@
       <div class="view-head">
         <span class="num">§ 05 &nbsp;/&nbsp; THE BUDGET ARMS RACE</span>
         <h2>Production budgets roughly doubled over the 2000s, then flattened near $200M</h2>
-        <p class="dek">The median production budget by release year. It climbed from about $110M in the early 2000s to $185M by 2012, and has drifted between $160M and $225M ever since. The first <em>X-Men</em> cost $75M in 2000; a mid-tier tentpole now runs $200M, and the biggest Avengers films clear $350M. Flip to 2025 dollars to see how much of that is real growth.</p>
+        <p class="dek">The median production budget by release year. It climbed from around $100M in the early 2000s to about $200M by 2012, and has mostly held between $150M and $225M since, dipping in years carried by cheaper films (2015, 2020, 2024). The first <em>X-Men</em> cost $75M in 2000; a mid-tier tentpole now runs $200M, and the biggest Avengers films clear $350M. Flip to 2025 dollars to see how much of that is real growth.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -631,7 +631,7 @@
         <div class="card-head">
           <div>
             <div class="card-title">Critics vs audiences</div>
-            <div class="card-note">RT critic score against IMDb user rating, both on 0&ndash;100. On the diagonal they agree; the widest splits are Sony&rsquo;s Venom-adjacent films and the early DCEU (Kraven, Batman v Superman, Morbius), where the critic score craters but the audience rating holds up.</div>
+            <div class="card-note">RT critic score against IMDb user rating, both on 0&ndash;100. On the diagonal they agree; the widest splits are Sony&rsquo;s Venom-adjacent films (Kraven, Morbius, Venom itself) plus Elektra, Batman v Superman and Dark Phoenix, where the critic score craters but the audience rating holds up.</div>
           </div>
           <div class="legend" id="leg-par"></div>
         </div>
@@ -666,7 +666,7 @@
         <div id="table-split" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>For each film, how much of the gross came from North America versus everywhere else?</dd>
-          <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 57 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
+          <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 92 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
           <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same colour at low opacity, one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalised so you compare shares directly.</dd>
           <dt>Watch for</dt><dd>&ldquo;Overseas&rdquo; lumps very different markets together. China alone swings some of these films by ten points.</dd>
         </dl></div>
@@ -774,8 +774,8 @@
       </div>
       <div class="card" style="margin-top:20px">
         <div class="card-title">Scope</div>
-        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, all three <em>Fantastic Four</em>s, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox.</p>
-        <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); and one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>. A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
+        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel released or in production. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, all three <em>Fantastic Four</em>s, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox.</p>
+        <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em> and its 2006 coda <em>Superman Returns</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>, both <em>Punisher</em>s (2008&rsquo;s is a reboot, not a sequel); and creator-owned books Marvel merely published (<em>Kick-Ass</em>). A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
       </div>
       <p class="smallprint" id="method-held"></p>
     </div>
@@ -1014,7 +1014,7 @@
         <dl class="ap-tear">
           <dt>Tempting</dt><dd>&ldquo;Heat&rdquo; looks like data density, and more colours feels like more information.</dd>
           <dt>But</dt><dd>A rainbow isn&rsquo;t ordered. Is yellow more than green? More than cyan? You keep rechecking the key, and the colour jumps imply thresholds that aren&rsquo;t there. It&rsquo;s also not colour-blind-safe.</dd>
-          <dt>Instead</dt><dd><span class="fix">One hue, light to dark.</span> Lightness carries magnitude on its own, which is what every ramp elsewhere on this page does.</dd>
+          <dt>Instead</dt><dd><span class="fix">One hue, light to dark.</span> Lightness is perceptually ordered, so magnitude reads without a key. It&rsquo;s also why this page never uses a colour ramp for a value at all: identity gets a hue, magnitude gets position or length.</dd>
         </dl>
       </div>
     </div>
@@ -1058,23 +1058,6 @@
     expand: {}
   };
 
-  // On mobile, long ranked lists show head + tail with the quiet middle folded.
-  // Returns { list, foldAt, hiddenCount, midLabelFn }. foldAt is the index the
-  // fold marker goes after; render() re-runs when the "show all" button flips the flag.
-  function foldList(af, key, headN, tailN, midLabel) {
-    if (!isMobile() || STATE.expand[key] || af.length <= headN + tailN + 2) {
-      return { rows: af, fold: -1, hidden: 0, label: "" };
-    }
-    var head = af.slice(0, headN), tail = af.slice(af.length - tailN);
-    return { rows: head.concat(tail), fold: headN, hidden: af.length - headN - tailN, label: midLabel(af[headN - 1], af[af.length - tailN]) };
-  }
-  function showAllBtn(host, key, total, noun) {
-    var b = document.createElement("button");
-    b.className = "minibtn showall";
-    b.textContent = "Show all " + total + " " + (noun || "films");
-    b.addEventListener("click", function () { STATE.expand[key] = true; renderAll(); });
-    host.appendChild(b);
-  }
   // Collapse a tall "one row per item" chart to a fixed height on both desktop and mobile,
   // defaulting to collapsed. The SVG always renders in full; this just clips it with a fade
   // and adds a Show all / Collapse toggle as a sibling (outside the clipped element).
@@ -2451,7 +2434,7 @@
 
   function apTrend() {
     var d = apDims(), W = d.W, H = d.H, m = d.m, iw = W - m.l - m.r, ih = H - m.t - m.b;
-    var fs = FILMS.filter(function (f) { return f.rt != null; });
+    var fs = FILMS.filter(function (f) { return f.rt != null && f.final; });
     var xs = fs.map(function (f) { return f.rt; }), ys = fs.map(function (f) { return f.ww; });
     var maxY = niceMax(Math.max.apply(null, ys));
     var xS = function (v) { return m.l + (v / 100) * iw; };
