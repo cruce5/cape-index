@@ -178,9 +178,14 @@
   .pg .pl { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); }
   .pg .pt { font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 700; font-size: 17px; line-height: 1.2; }
   .pg .pt .tn { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
+  /* contents is collapsed by default so a chart is closer to the top; the summary is the one-line toggle */
   .contents { margin-top: 16px; max-width: 58rem; }
-  .contents .ct { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
-  .contents ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+  .contents .ct { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  .contents .ct::-webkit-details-marker { display: none; }
+  .contents .ct::before { content: "\25B8"; font-size: 13px; letter-spacing: 0; transition: transform 0.15s; }
+  .contents[open] .ct::before { transform: rotate(90deg); }
+  .contents .ct:hover { color: var(--ink-2); }
+  .contents ol { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
   .contents li.ca { grid-column: 1 / -1; margin-top: 12px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
   .contents li.ca:first-child { margin-top: 0; }
   .contents li a { display: flex; gap: 10px; text-decoration: none; color: var(--ink-2); font-size: 14px; line-height: 1.35; padding: 3px 0; }
@@ -429,15 +434,15 @@
   <div class="wrap">
     <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2000&ndash;2026</p>
     <h1>The Cape Index</h1>
-    <p class="dek">Every live-action Marvel and DC superhero film since 2000 that is part of a franchise, and what each one made. Worldwide grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time. Any number on the page switches to 2025 dollars.</p>
+    <p class="dek">Every live-action Marvel and DC superhero film since 2000 that&rsquo;s part of a franchise, and what each one made. Grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time; any figure switches to 2025 dollars.</p>
     <p class="byline">By <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a></p>
     <p class="teach-hint">It also works as a set of worked examples. Turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is: the form, the colour, and what it can&rsquo;t tell you. The switch also lives in the control bar.</p>
     <div class="thesis" id="thesis"></div>
     <p class="smallprint" id="smallprint"></p>
-    <nav class="contents" aria-label="Contents">
-      <div class="ct">Contents &nbsp;&middot;&nbsp; fifteen findings, six tabs</div>
+    <details class="contents" aria-label="Contents">
+      <summary class="ct">Contents &nbsp;&middot;&nbsp; fifteen findings, seven tabs</summary>
       <ol id="contents-list"></ol>
-    </nav>
+    </details>
   </div>
 </header>
 
@@ -448,6 +453,7 @@
     <button class="tab" role="tab" data-tab="act3" aria-selected="false"><span class="tn">III</span>Beyond the gross</button>
     <button class="tab" role="tab" data-tab="act4" aria-selected="false"><span class="tn">IV</span>Roster</button>
     <button class="tab" role="tab" data-tab="mistakes" aria-selected="false"><span class="tn">&#10007;</span>The mistakes</button>
+    <button class="tab" role="tab" data-tab="ledger" aria-selected="false"><span class="tn">&#9638;</span>The ledger</button>
     <button class="tab" role="tab" data-tab="ref" aria-selected="false"><span class="tn">&sect;</span>Reference</button>
   </div>
 </nav>
@@ -575,7 +581,7 @@
       <div class="view-head">
         <span class="num">§ 03 &nbsp;/&nbsp; BY RELEASE DATE</span>
         <h2>Since 2020, no year has produced more than one billion-dollar film</h2>
-        <p class="dek">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 the output is about the same, six or seven films a year, but the films are smaller and the big bubbles thin out to one a year at most. <em>Brand New Day</em>, still in release, is 2026&rsquo;s.</p>
+        <p class="dek">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 the output is about the same, six or seven films a year, but the films are smaller and the big bubbles thin out to one a year at most. <em>Brand New Day</em>, still in release, is 2026&rsquo;s. Bubbles ringed in gold crossed $1&nbsp;billion.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -939,9 +945,9 @@
     </div>
   </section>
 
-  <div class="act" data-tab="ref"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the raw table &amp; the method</span></div></div>
+  <div class="act" data-tab="ledger"><div class="wrap"><h3>The ledger</h3><span class="rule"></span><span class="sub">every film, every field &middot; sortable</span></div></div>
 
-  <section class="view" id="v-data" data-tab="ref">
+  <section class="view" id="v-data" data-tab="ledger">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 13 &nbsp;/&nbsp; THE LEDGER</span>
@@ -958,6 +964,8 @@
       </div>
     </div>
   </section>
+
+  <div class="act" data-tab="ref"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the method &amp; the story</span></div></div>
 
   <section class="view" id="v-method" data-tab="ref">
     <div class="wrap">
@@ -1042,6 +1050,12 @@
           <li><b>&ldquo;I like the scorecards left to right instead of stacked. Do an entire viz audit of both desktop and mobile, with haste.&rdquo;</b> The three masthead tiles sit side by side on a phone. A script walked every chart at 412 and 1200 pixels measuring label boxes against each other and against the chart edge: ten collisions, from a /usr/bin/bash tick sitting on a &rsquo;00 year label to two bar labels printing on top of each other. All ten fixed; both widths now report zero.</li>
           <li><b>&ldquo;Design notes and the filters are too buried now. And the copy says &lsquo;up in the toolbar&rsquo; when the bar is below it.&rdquo;</b> The masthead line is now the switch itself; the phone bar carries a Notes pill outside the fold; the notes control turns gold when on, everywhere it appears.</li>
           <li><b>&ldquo;This chart is tough on mobile.&rdquo;</b> The characters-per-film chart drew 91 bars three pixels wide on a phone. It is a ranked list there now, top twelve and a fold; the wide screen keeps the timeline. Its note also still said Infinity War topped out at 22, from before the cast scraper was fixed, and the axis stopped at 20 under a bar that reached 33. The number is read from the data now.</li>
+          <li><b>&ldquo;At 100% zoom I am squinting. Never make anyone squint, ever.&rdquo;</b> The whole desktop type pass. It took six no-op commits to find why: on an SVG label, a CSS <code>font-size</code> silently beats the <code>font-size</code> attribute, so every per-chart number I was bumping stayed 11px. The fix moved to the stylesheet; every chart label is now a uniform 16px, verified against the live page rather than the source.</li>
+          <li><b>&ldquo;The labels are bleeding, and it&rsquo;s different across charts.&rdquo;</b> The bigger labels overran two charts&rsquo; name gutters (<em>Batman v Superman: Dawn of Justice</em> ran off the left) &rarr; wider gutters. Year labels were a mix of sizes and formats (<em>&rsquo;00</em> here, <em>2000</em> there) &rarr; one size, full years on every timeline.</li>
+          <li><b>&ldquo;Why are some years wider than others on the roster?&rdquo;</b> Because its x-axis is release order, one column per film, so the Avengers films line up as vertical stripes. Kept that, and labelled it, so the uneven gaps read as a choice, not a broken scale.</li>
+          <li><b>&ldquo;Too much scroll before you reach a chart.&rdquo;</b> Tightened the masthead and folded the contents to a single expandable line.</li>
+          <li><b>&ldquo;The sortable table should be its own tab.&rdquo;</b> The ledger moved out of Reference into its own tab, next to it.</li>
+          <li><b>&ldquo;Give the billion-dollar bubbles some pop.&rdquo;</b> On the &ldquo;since 2020&rdquo; chart, every film that crossed $1B gets a gold ring and full opacity, so the section&rsquo;s subject reads at a glance.</li>
 
         </ol>
       </div>
@@ -1678,7 +1692,10 @@
       ticks += '<text x="' + p + '" y="' + (H - m.b + (mob ? 13 : 16)) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 18) + '" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(y).slice(2) : y) + "</text>";
     }
     var circ = nodes.map(function (n) {
-      return '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="' + (mob ? 1 : 1.5) + '" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
+      // films that crossed $1B get a gold accent ring + full opacity so the section's subject pops out
+      var big = val(n.f, "ww") >= 1e9;
+      var halo = big ? '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + (n.r + (mob ? 2.5 : 3.5)) + '" fill="none" stroke="var(--note)" stroke-opacity="0.5" stroke-width="' + (mob ? 1.5 : 2) + '"/>' : "";
+      return halo + '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="' + (big ? "1" : "0.82") + '" stroke="' + (big ? "var(--note)" : "var(--surface)") + '" stroke-width="' + (big ? (mob ? 1.5 : 2) : (mob ? 1 : 1.5)) + '" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
     }).join("");
     document.getElementById("chart-beeswarm").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films placed by release date, sized by worldwide gross">' +
@@ -2851,7 +2868,7 @@
   /* ---------- section tabs ---------- */
   // Six tabs, one per act. Everything still renders at load; a tab just hides the other acts, so a
   // phone scrolls two to four sections instead of fifteen. Hashes deep-link into any section.
-  var TABS = ["act1", "act2", "act3", "act4", "mistakes", "ref"]; // reading order; drives the Back / Next pager
+  var TABS = ["act1", "act2", "act3", "act4", "mistakes", "ledger", "ref"]; // reading order; drives the Back / Next pager
   function setTab(key, opts) {
     opts = opts || {};
     if (TABS.indexOf(key) < 0) key = "act1";
