@@ -1,7 +1,7 @@
 # The Cape Index
 
 Every live-action Marvel or DC superhero film since 2000 that belongs to a
-multi-film franchise, its verified box office, and a dark-first single-file HTML
+multi-film franchise, its box office from Box Office Mojo, and a dark-first single-file HTML
 visualization of the lot.
 
 **Live:** https://capeindex.com
@@ -38,7 +38,7 @@ doesn't pull an excluded film back in.
 
 ## Data
 
-`data/films.json` is the canonical, hand-verified dataset. Everything else feeds it.
+`data/films.json` is the canonical dataset. Everything else feeds it.
 
 Adding a film: append it to `data/additions.json` with a pinned IMDb id, then
 
@@ -49,7 +49,7 @@ npm run cast                 # Wikipedia cast sections -> the roster
 npm run build                # inline everything into dist/index.html + og.png
 ```
 
-Grosses are checked one title page at a time. Budgets are the **production**
+Grosses are scraped from Box Office Mojo, one title page at a time, and the scraper matches each film to the right page automatically. Budgets are the **production**
 budget (r/boxoffice convention, not marketing-inclusive); break-even is estimated
 at 2.5× that. In-release films are marked and held out of the profit tallies.
 About a third of the budgets are estimates, marked `est.` in the ledger.
