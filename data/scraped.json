@@ -2825,31 +2825,6 @@
     },
     "scraped_at": "2026-09-06T18:24:16.385Z"
   },
-  "fantastic-four-2015-2015": {
-    "title": "Fantastic Four (2015)",
-    "year": "2015",
-    "release_date": "2015-08-07",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt1502712",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1502712/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 56117548,
-      "international": 111765333,
-      "worldwide": 167882881,
-      "opening_weekend_domestic": 25685737,
-      "budget": 120000000,
-      "earliest_release_date": "August 5, 2015 (EMEA, APAC)",
-      "mpaa": "PG-13",
-      "running_time_minutes": 100,
-      "genres": "Action Adventure Animation Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-09-06T18:24:16.387Z"
-  },
   "spider-man-brand-new-day-2026": {
     "title": "Spider-Man: Brand New Day",
     "year": "2026",

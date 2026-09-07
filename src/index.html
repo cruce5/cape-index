@@ -471,8 +471,8 @@
         <button class="minibtn" data-table="treemap" aria-pressed="false" style="margin-top:12px">Show data</button>
         <div id="table-treemap" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
-          <dt>Question</dt><dd>Where is the money concentrated across all 92 films at once?</dd>
-          <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 92-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
+          <dt>Question</dt><dd>Where is the money concentrated across all 91 films at once?</dd>
+          <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 91-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
           <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
           <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
         </dl></div>
@@ -523,7 +523,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Is there a trend in film size over 25 years, and which films broke away from the pack?</dd>
           <dt>Why this form</dt><dd>Two continuous axes, date and gross, is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
-          <dt>Choices here</dt><dd>The palette is a colour-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of colour blindness, so a sixth is a non-starter. Elseworlds (DC&rsquo;s six films outside any shared universe) is drawn in grey, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labelled; a label on all 92 is noise.</dd>
+          <dt>Choices here</dt><dd>The palette is a colour-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of colour blindness, so a sixth is a non-starter. Elseworlds (DC&rsquo;s six films outside any shared universe) is drawn in grey, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labelled; a label on all 91 is noise.</dd>
           <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support, the story is the spread and the outliers, not a slope.</dd>
         </dl></div>
       </div>
@@ -666,7 +666,7 @@
         <div id="table-split" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>For each film, how much of the gross came from North America versus everywhere else?</dd>
-          <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 92 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
+          <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 91 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
           <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same colour at low opacity, one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalised so you compare shares directly.</dd>
           <dt>Watch for</dt><dd>&ldquo;Overseas&rdquo; lumps very different markets together. China alone swings some of these films by ten points.</dd>
         </dl></div>
@@ -693,7 +693,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
           <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
-          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 92 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
+          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 91 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
           <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgement call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
         </dl></div>
       </div>
@@ -774,8 +774,8 @@
       </div>
       <div class="card" style="margin-top:20px">
         <div class="card-title">Scope</div>
-        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel released or in production. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, all three <em>Fantastic Four</em>s, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox.</p>
-        <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em> and its 2006 coda <em>Superman Returns</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>, both <em>Punisher</em>s (2008&rsquo;s is a reboot, not a sequel); and creator-owned books Marvel merely published (<em>Kick-Ass</em>). A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
+        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel released or in production. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, the 2005 <em>Fantastic Four</em> and <em>Rise of the Silver Surfer</em>, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox.</p>
+        <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em> and its 2006 coda <em>Superman Returns</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>, the 2015 <em>Fantastic Four</em> (a reboot that never got its sequel or its X-Men crossover), both <em>Punisher</em>s (2008&rsquo;s is a reboot, not a sequel); and creator-owned books Marvel merely published (<em>Kick-Ass</em>). A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
       </div>
       <p class="smallprint" id="method-held"></p>
     </div>
@@ -792,7 +792,7 @@
       <div class="card">
         <div class="card-title">The brief</div>
         <p>It started as a maintenance job. Verify a Tableau Public workbook, <em>Marvel / DC Box Office</em>, against Box Office Mojo: 50 films, six columns, movie / date / franchise / domestic / international / total. Then extend it with the films that had come out since, and rebuild the seven-tab Tableau suite as one self-contained dark-first HTML page.</p>
-        <p>It ended at <b>92 films across six groups</b>, twenty-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
+        <p>It ended at <b>91 films across six groups</b>, twenty-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
       </div>
 
       <div class="card">
@@ -828,6 +828,7 @@
           <li>Bought <em>capeindex.com</em>. Wired the custom domain, and a 301 from <em>thecapeindex.com</em>; every share URL now points there.</li>
           <li><b>&ldquo;A profit-per-movie metric on the scoreboard, if the box office subreddit would like it.&rdquo;</b> Added as theatrical P/L per completed film, muted where too few films have finished to average one honestly.</li>
           <li><b>&ldquo;A collection of anti-patterns. Beautiful charts that don&rsquo;t help.&rdquo;</b> §15: eight of them, built from the real data, each with what makes it tempting and what to do instead.</li>
+          <li><b>&ldquo;Adversarially audit this entire thing. Pull no punches.&rdquo;</b> Eight pieces of copy had rotted out from under the data (a headline that was false against its own chart, notes still describing a 57-film set). And the 2015 <em>Fantastic Four</em> turned out to be a one-and-done sitting in the Fox bucket, in breach of the rule. <b>&ldquo;Pull it.&rdquo;</b> 91 films.</li>
         </ol>
       </div>
 
@@ -910,7 +911,7 @@
       <div class="view-head">
         <span class="num">§ 15 &nbsp;/&nbsp; ANTI-PATTERNS</span>
         <h2>Every chart down here is accurate. Not one of them earns its place</h2>
-        <p class="dek">Eight charts, built from the same 92 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film and nominal dollars; the universe filter and the $ toggle up top don&rsquo;t reach them.</p>
+        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film and nominal dollars; the universe filter and the $ toggle up top don&rsquo;t reach them.</p>
         <div class="legend" id="ap-leg" style="margin-top:14px"></div>
       </div>
 
@@ -2304,7 +2305,7 @@
     }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
   }
 
-  /* ---------- §15 anti-patterns (teaching gallery; always all 92 films, nominal $) ---------- */
+  /* ---------- §15 anti-patterns (teaching gallery; always every film, nominal $) ---------- */
   var AP_ORDER = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
   function apDims(hMul) {
     var mob = isMobile();
@@ -2361,8 +2362,8 @@
       ang = a2;
     });
     document.getElementById("ap-pie").innerHTML =
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="A pie chart with 92 wedges, one per film, an anti-pattern">' + seg +
-      '<text x="' + cx + '" y="' + (H - 4) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">92 films, one wedge each</text>' +
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="A pie chart with ' + fs.length + ' wedges, one per film, an anti-pattern">' + seg +
+      '<text x="' + cx + '" y="' + (H - 4) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + fs.length + " films, one wedge each</text>" +
       "</svg>";
   }
 

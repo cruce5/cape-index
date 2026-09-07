@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T19:21:10.126Z",
+  "generated": "2026-09-07T01:27:27.598Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "X-Men": {
@@ -2591,85 +2591,6 @@
           "minor": false,
           "actor": "Michael Douglas",
           "character": "Hank Pym"
-        }
-      ]
-    },
-    "Fantastic Four (2015)": {
-      "page": "Fantastic Four (2015 film)",
-      "universe": "Fox",
-      "date": "2015-08-07",
-      "cast": [
-        {
-          "order": 1,
-          "minor": false,
-          "actor": "Miles Teller",
-          "character": "Reed Richards / Mister Fantastic"
-        },
-        {
-          "order": 2,
-          "minor": false,
-          "actor": "Michael B. Jordan",
-          "character": "Johnny Storm / Human Torch"
-        },
-        {
-          "order": 3,
-          "minor": false,
-          "actor": "Kate Mara",
-          "character": "Sue Storm / Invisible Woman"
-        },
-        {
-          "order": 4,
-          "minor": false,
-          "actor": "Jamie Bell",
-          "character": "Ben Grimm / The Thing"
-        },
-        {
-          "order": 5,
-          "minor": false,
-          "actor": "Toby Kebbell",
-          "character": "Victor Von Doom / Dr. Doom"
-        },
-        {
-          "order": 6,
-          "minor": false,
-          "actor": "Reg E. Cathey",
-          "character": "Dr. Franklin Storm"
-        },
-        {
-          "order": 7,
-          "minor": false,
-          "actor": "Tim Blake Nelson",
-          "character": "Dr. Harvey Allen"
-        },
-        {
-          "order": 8,
-          "minor": false,
-          "actor": "Tim Heidecker",
-          "character": "Mr. Richards"
-        },
-        {
-          "order": 9,
-          "minor": false,
-          "actor": "Dan Castellaneta",
-          "character": "Mr. Kenny"
-        },
-        {
-          "order": 10,
-          "minor": false,
-          "actor": "Wayne Péré",
-          "character": "Science Fair Judge"
-        },
-        {
-          "order": 11,
-          "minor": false,
-          "actor": "Chet Hanks",
-          "character": "Jimmy Grimm"
-        },
-        {
-          "order": 12,
-          "minor": false,
-          "actor": "Mary-Pat Green",
-          "character": "Elsie Grimm"
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T19:21:10.128Z",
+  "generated": "2026-09-07T01:27:27.600Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
@@ -1600,62 +1600,6 @@
       ]
     },
     {
-      "name": "Human Torch",
-      "real_name": "Johnny Storm",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Chris Evans",
-        "Michael B. Jordan",
-        "Joseph Quinn"
-      ],
-      "appearances": 5,
-      "films": [
-        {
-          "title": "Fantastic Four (2005)",
-          "universe": "Fox",
-          "date": "2005-07-08",
-          "order": 3,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Fantastic Four: Rise of the Silver Surfer",
-          "universe": "Fox",
-          "date": "2007-06-15",
-          "order": 3,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Fantastic Four (2015)",
-          "universe": "Fox",
-          "date": "2015-08-07",
-          "order": 2,
-          "minor": false,
-          "actor": "Michael B. Jordan"
-        },
-        {
-          "title": "Deadpool & Wolverine",
-          "universe": "MCU",
-          "date": "2024-07-26",
-          "order": null,
-          "minor": true,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "The Fantastic Four: First Steps",
-          "universe": "MCU",
-          "date": "2025-07-25",
-          "order": 4,
-          "minor": false,
-          "actor": "Joseph Quinn"
-        }
-      ]
-    },
-    {
       "name": "Nebula",
       "real_name": null,
       "universes": [
@@ -2259,6 +2203,53 @@
       ]
     },
     {
+      "name": "Human Torch",
+      "real_name": "Johnny Storm",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Chris Evans",
+        "Joseph Quinn"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Fantastic Four (2005)",
+          "universe": "Fox",
+          "date": "2005-07-08",
+          "order": 3,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Fantastic Four: Rise of the Silver Surfer",
+          "universe": "Fox",
+          "date": "2007-06-15",
+          "order": 3,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": null,
+          "minor": true,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 4,
+          "minor": false,
+          "actor": "Joseph Quinn"
+        }
+      ]
+    },
+    {
       "name": "Iceman",
       "real_name": "Bobby Drake",
       "universes": [
@@ -2300,54 +2291,6 @@
           "order": 8,
           "minor": false,
           "actor": "Shawn Ashmore"
-        }
-      ]
-    },
-    {
-      "name": "Invisible Woman",
-      "real_name": "Sue Storm",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Jessica Alba",
-        "Kate Mara",
-        "Vanessa Kirby"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "Fantastic Four (2005)",
-          "universe": "Fox",
-          "date": "2005-07-08",
-          "order": 2,
-          "minor": false,
-          "actor": "Jessica Alba"
-        },
-        {
-          "title": "Fantastic Four: Rise of the Silver Surfer",
-          "universe": "Fox",
-          "date": "2007-06-15",
-          "order": 2,
-          "minor": false,
-          "actor": "Jessica Alba"
-        },
-        {
-          "title": "Fantastic Four (2015)",
-          "universe": "Fox",
-          "date": "2015-08-07",
-          "order": 3,
-          "minor": false,
-          "actor": "Kate Mara"
-        },
-        {
-          "title": "The Fantastic Four: First Steps",
-          "universe": "MCU",
-          "date": "2025-07-25",
-          "order": 2,
-          "minor": false,
-          "actor": "Vanessa Kirby"
         }
       ]
     },
@@ -2445,54 +2388,6 @@
       ]
     },
     {
-      "name": "Mister Fantastic",
-      "real_name": "Reed Richards",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Ioan Gruffudd",
-        "Miles Teller",
-        "Pedro Pascal"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "Fantastic Four (2005)",
-          "universe": "Fox",
-          "date": "2005-07-08",
-          "order": 1,
-          "minor": false,
-          "actor": "Ioan Gruffudd"
-        },
-        {
-          "title": "Fantastic Four: Rise of the Silver Surfer",
-          "universe": "Fox",
-          "date": "2007-06-15",
-          "order": 1,
-          "minor": false,
-          "actor": "Ioan Gruffudd"
-        },
-        {
-          "title": "Fantastic Four (2015)",
-          "universe": "Fox",
-          "date": "2015-08-07",
-          "order": 1,
-          "minor": false,
-          "actor": "Miles Teller"
-        },
-        {
-          "title": "The Fantastic Four: First Steps",
-          "universe": "MCU",
-          "date": "2025-07-25",
-          "order": 1,
-          "minor": false,
-          "actor": "Pedro Pascal"
-        }
-      ]
-    },
-    {
       "name": "Nightcrawler",
       "real_name": "Kurt Wagner",
       "universes": [
@@ -2580,54 +2475,6 @@
           "order": 4,
           "minor": false,
           "actor": "Anna Paquin"
-        }
-      ]
-    },
-    {
-      "name": "The Thing",
-      "real_name": "Ben Grimm",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Michael Chiklis",
-        "Jamie Bell",
-        "Ebon Moss-Bachrach"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "Fantastic Four (2005)",
-          "universe": "Fox",
-          "date": "2005-07-08",
-          "order": 4,
-          "minor": false,
-          "actor": "Michael Chiklis"
-        },
-        {
-          "title": "Fantastic Four: Rise of the Silver Surfer",
-          "universe": "Fox",
-          "date": "2007-06-15",
-          "order": 4,
-          "minor": false,
-          "actor": "Michael Chiklis"
-        },
-        {
-          "title": "Fantastic Four (2015)",
-          "universe": "Fox",
-          "date": "2015-08-07",
-          "order": 4,
-          "minor": false,
-          "actor": "Jamie Bell"
-        },
-        {
-          "title": "The Fantastic Four: First Steps",
-          "universe": "MCU",
-          "date": "2025-07-25",
-          "order": 3,
-          "minor": false,
-          "actor": "Ebon Moss-Bachrach"
         }
       ]
     },
@@ -2879,44 +2726,6 @@
       ]
     },
     {
-      "name": "Doctor Doom",
-      "real_name": "Victor von Doom",
-      "universes": [
-        "Fox"
-      ],
-      "actors": [
-        "Julian McMahon",
-        "Toby Kebbell"
-      ],
-      "appearances": 3,
-      "films": [
-        {
-          "title": "Fantastic Four (2005)",
-          "universe": "Fox",
-          "date": "2005-07-08",
-          "order": 5,
-          "minor": false,
-          "actor": "Julian McMahon"
-        },
-        {
-          "title": "Fantastic Four: Rise of the Silver Surfer",
-          "universe": "Fox",
-          "date": "2007-06-15",
-          "order": 5,
-          "minor": false,
-          "actor": "Julian McMahon"
-        },
-        {
-          "title": "Fantastic Four (2015)",
-          "universe": "Fox",
-          "date": "2015-08-07",
-          "order": 5,
-          "minor": false,
-          "actor": "Toby Kebbell"
-        }
-      ]
-    },
-    {
       "name": "Elektra",
       "real_name": "Elektra Natchios",
       "universes": [
@@ -2951,6 +2760,84 @@
           "order": null,
           "minor": true,
           "actor": "Jennifer Garner"
+        }
+      ]
+    },
+    {
+      "name": "Invisible Woman",
+      "real_name": "Sue Storm",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Jessica Alba",
+        "Vanessa Kirby"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Fantastic Four (2005)",
+          "universe": "Fox",
+          "date": "2005-07-08",
+          "order": 2,
+          "minor": false,
+          "actor": "Jessica Alba"
+        },
+        {
+          "title": "Fantastic Four: Rise of the Silver Surfer",
+          "universe": "Fox",
+          "date": "2007-06-15",
+          "order": 2,
+          "minor": false,
+          "actor": "Jessica Alba"
+        },
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 2,
+          "minor": false,
+          "actor": "Vanessa Kirby"
+        }
+      ]
+    },
+    {
+      "name": "Mister Fantastic",
+      "real_name": "Reed Richards",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Ioan Gruffudd",
+        "Pedro Pascal"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Fantastic Four (2005)",
+          "universe": "Fox",
+          "date": "2005-07-08",
+          "order": 1,
+          "minor": false,
+          "actor": "Ioan Gruffudd"
+        },
+        {
+          "title": "Fantastic Four: Rise of the Silver Surfer",
+          "universe": "Fox",
+          "date": "2007-06-15",
+          "order": 1,
+          "minor": false,
+          "actor": "Ioan Gruffudd"
+        },
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 1,
+          "minor": false,
+          "actor": "Pedro Pascal"
         }
       ]
     },
@@ -3027,6 +2914,45 @@
           "order": 7,
           "minor": false,
           "actor": "Aaron Stanford"
+        }
+      ]
+    },
+    {
+      "name": "The Thing",
+      "real_name": "Ben Grimm",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Michael Chiklis",
+        "Ebon Moss-Bachrach"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Fantastic Four (2005)",
+          "universe": "Fox",
+          "date": "2005-07-08",
+          "order": 4,
+          "minor": false,
+          "actor": "Michael Chiklis"
+        },
+        {
+          "title": "Fantastic Four: Rise of the Silver Surfer",
+          "universe": "Fox",
+          "date": "2007-06-15",
+          "order": 4,
+          "minor": false,
+          "actor": "Michael Chiklis"
+        },
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 3,
+          "minor": false,
+          "actor": "Ebon Moss-Bachrach"
         }
       ]
     },
@@ -3294,6 +3220,35 @@
           "order": 2,
           "minor": false,
           "actor": "Zoë Kravitz"
+        }
+      ]
+    },
+    {
+      "name": "Doctor Doom",
+      "real_name": "Victor von Doom",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Julian McMahon"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Fantastic Four (2005)",
+          "universe": "Fox",
+          "date": "2005-07-08",
+          "order": 5,
+          "minor": false,
+          "actor": "Julian McMahon"
+        },
+        {
+          "title": "Fantastic Four: Rise of the Silver Surfer",
+          "universe": "Fox",
+          "date": "2007-06-15",
+          "order": 5,
+          "minor": false,
+          "actor": "Julian McMahon"
         }
       ]
     },

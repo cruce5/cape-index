@@ -1,6 +1,6 @@
 # Reconciliation — legacy sheet vs Box Office Mojo
 
-_Generated 2026-09-06. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
+_Generated 2026-09-07. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
 
 ## Summary
 
@@ -10,7 +10,7 @@ _Generated 2026-09-06. Source of truth: Box Office Mojo (boxofficemojo.com) titl
 | Exact match (no change) | 34 |
 | Minor drift (< $1M worldwide) | 11 |
 | **Material change (≥ $1M worldwide)** | **5** |
-| New films added (verified) | 42 |
+| New films added (verified) | 41 |
 | Held out (unreleased on BOM) | 2 |
 | Legacy total worldwide | $38,797,637,720 |
 | Verified total worldwide | $38,813,899,440 |
@@ -71,7 +71,6 @@ Iron Man · The Incredible Hulk · Iron Man 2 · Thor · Captain America: The Fi
 | The Wolverine | Fox | 2013-07-26 | $132,556,852 | $282,271,394 | $414,828,246 | yes |
 | The Amazing Spider-Man 2 | SSU | 2014-05-02 | $203,605,622 | $513,278,887 | $716,934,779 | yes |
 | X-Men: Days of Future Past | Fox | 2014-05-23 | $233,921,534 | $512,124,166 | $746,045,700 | yes |
-| Fantastic Four (2015) | Fox | 2015-08-07 | $56,117,548 | $111,765,333 | $167,882,881 | yes |
 | Deadpool | Fox | 2016-02-12 | $363,070,709 | $419,766,082 | $782,837,347 | yes |
 | X-Men: Apocalypse | Fox | 2016-05-27 | $155,442,489 | $388,491,616 | $543,934,105 | yes |
 | Logan | Fox | 2017-03-03 | $226,277,068 | $392,902,882 | $619,180,476 | yes |

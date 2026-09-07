@@ -18,12 +18,12 @@ continuity **began in 2000 or later** and that is **part of a multi-film
 continuity** — a shared universe, a trilogy, or a film with a theatrical sequel.
 One-and-done films with no sequel are out (no franchise arc to compare).
 
-**In (92 films):**
+**In (91 films):**
 
 | Code | Group | What it covers |
 |------|-------|----------------|
 | `MCU` | Marvel Cinematic Universe | Marvel Studios productions. *Deadpool & Wolverine* counts here, not Fox. |
-| `Fox` | 20th Century Fox's Marvel films | The X-Men series (2000–2020), all three *Fantastic Four*s, *Daredevil*, *Elektra*. |
+| `Fox` | 20th Century Fox's Marvel films | The X-Men series (2000–2020), the 2005 *Fantastic Four* and *Rise of the Silver Surfer*, *Daredevil*, *Elektra*. |
 | `SSU` | Sony's Marvel films | Raimi's *Spider-Man* trilogy, *The Amazing Spider-Man* 1–2, the Venom-led SSU, both *Ghost Rider*s. |
 | `DCEU` | DC Extended Universe | *Man of Steel* (2013) through *Aquaman and the Lost Kingdom* (2023). Closed continuity. |
 | `DCU` | DC Universe | James Gunn's relaunch, *Superman* (2025) on. Theatrical only. |
@@ -32,7 +32,9 @@ One-and-done films with no sequel are out (no franchise arc to compare).
 **Out:** continuities that began before 2000 (Burton's *Batman*, Donner's
 *Superman*, the *Blade* trilogy); anything animated; one-and-done films
 (*Catwoman*, *Constantine*, *Green Lantern*, *Jonah Hex*, *Watchmen*, Ang Lee's
-*Hulk*). A later multiverse cameo doesn't pull an excluded film back in.
+*Hulk*, the 2015 *Fantastic Four*, both *Punisher*s, *Superman Returns* as a coda
+to Donner's run, and *Kick-Ass* as creator-owned). A later multiverse cameo
+doesn't pull an excluded film back in.
 
 ## Data
 
