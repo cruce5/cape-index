@@ -337,13 +337,15 @@
     .controls { position: static; }
     .controls-inner { gap: 8px 14px; }
     .cgroup { flex-wrap: wrap; gap: 6px; }
-    .clabel { font-size: 10px; }
+    .clabel { font-size: 11px; }
+    .legend { font-size: 13.5px; }
+    .card-note { font-size: 14px; }
     .act { padding: 34px 0 2px; }
     .act h3 { letter-spacing: 0.1em; white-space: normal; font-size: 11px; }
     .act .rule { display: none; }
     .note dl { grid-template-columns: 1fr; gap: 2px; }
     .note dd { margin-bottom: 8px; }
-    table.data { font-size: 11px; }
+    table.data { font-size: 12px; }
     table.data th, table.data td { padding: 4px 6px; }
     table.data th:first-child, table.data td:first-child { position: static; }
     table.data td.name, table.data td:first-child { max-width: 30vw; overflow: hidden; text-overflow: ellipsis; }
@@ -829,7 +831,7 @@
           <li><b>&ldquo;A profit-per-movie metric on the scoreboard, if the box office subreddit would like it.&rdquo;</b> Added as theatrical P/L per completed film, muted where too few films have finished to average one honestly.</li>
           <li><b>&ldquo;A collection of anti-patterns. Beautiful charts that don&rsquo;t help.&rdquo;</b> §15: eight of them, built from the real data, each with what makes it tempting and what to do instead.</li>
           <li><b>&ldquo;Adversarially audit this entire thing. Pull no punches.&rdquo;</b> Eight pieces of copy had rotted out from under the data (a headline that was false against its own chart, notes still describing a 57-film set). And the 2015 <em>Fantastic Four</em> turned out to be a one-and-done sitting in the Fox bucket, in breach of the rule. <b>&ldquo;Pull it.&rdquo;</b> 91 films.</li>
-          <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel; nothing on a phone is under 10.</li>
+          <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel. <b>&ldquo;Still small. Bump everything a point or two.&rdquo;</b> Every chart label on a phone now gets two more points after render; nothing is under 12.</li>
         </ol>
       </div>
 
@@ -2334,7 +2336,9 @@
   function apYearOf(f) { return new Date(f.date).getFullYear(); }
 
   function apDual() {
-    var d = apDims(), W = d.W, H = d.H, m = d.m, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var d = apDims(), W = d.W, H = d.H, m = d.m;
+    m.r = d.mob ? 48 : 54; // room for the right-hand axis labels, the second axis being the whole point
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var years = []; for (var y = YEAR0; y <= YEAR1; y++) years.push(y);
     var bud = years.map(function (yr) { var b = FILMS.filter(function (f) { return apYearOf(f) === yr && f.budget; }).map(function (f) { return f.budget; }); return b.length ? median(b) : null; });
     var grs = years.map(function (yr) { var g = FILMS.filter(function (f) { return apYearOf(f) === yr; }).map(function (f) { return f.ww; }); return g.length ? median(g) : null; });
@@ -2495,7 +2499,7 @@
     }).join("");
     document.getElementById("ap-roi").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films ranked by return on budget, an anti-pattern">' + bars +
-      '<text x="' + m.l + '" y="' + (H - 3) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">worldwide gross ÷ production budget</text>' +
+      '<text x="' + m.l + '" y="' + (H - 3) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + (d.mob ? "gross ÷ budget" : "worldwide gross ÷ production budget") + "</text>" +
       "</svg>";
   }
 
@@ -2583,6 +2587,21 @@
     renderFootprint();
     renderAntipatterns();
     renderFullTable();
+    fitMobileText();
+  }
+  // On a phone every chart label gets two more points. The charts draw at one viewBox unit per
+  // CSS pixel on mobile (see MW), so this is a real +2px, applied after render so the ~90
+  // font-size literals across the renderers don't each need a mobile variant. Re-renders
+  // replace the SVG nodes, so it never double-applies.
+  var MOBILE_TEXT_BUMP = 2;
+  function fitMobileText() {
+    if (!isMobile()) return;
+    document.querySelectorAll("svg text").forEach(function (t) {
+      if (t.getAttribute("data-fit")) return;
+      var fs = parseFloat(getComputedStyle(t).fontSize);
+      if (fs) t.style.fontSize = (fs + MOBILE_TEXT_BUMP) + "px";
+      t.setAttribute("data-fit", "1");
+    });
   }
 
   /* ---------- controls ---------- */
