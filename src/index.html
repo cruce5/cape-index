@@ -128,10 +128,10 @@
   }
 
   /* ============ MASTHEAD ============ */
-  header.masthead { border-bottom: 1px solid var(--border); padding: 68px 0 46px; }
+  header.masthead { border-bottom: 1px solid var(--border); padding: 40px 0 26px; }
   .masthead h1 { font-size: clamp(48px, 9vw, 104px); letter-spacing: -0.028em; }
-  .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 20px 0 0; }
-  .byline { margin: 16px 0 0; font-size: 14px; color: var(--ink-muted); }
+  .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 14px 0 0; }
+  .byline { margin: 10px 0 0; font-size: 14px; color: var(--ink-muted); }
   .byline a { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
   .byline a:hover { text-decoration-color: var(--ink); }
   .thesis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 40px; max-width: 52rem; }
@@ -141,7 +141,7 @@
   .thesis .sub { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
   /* the three thesis tiles stay side by side on a phone; the values are short and the row reads as one line */
   @media (max-width: 640px) { .thesis { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  .smallprint { margin-top: 26px; font-size: 13px; color: var(--ink-muted); max-width: 52rem; }
+  .smallprint { margin-top: 14px; font-size: 13px; color: var(--ink-muted); max-width: 52rem; }
   .smallprint a { text-decoration-color: var(--border-strong); text-underline-offset: 2px; }
 
   /* ============ STICKY CONTROLS ============ */
@@ -178,7 +178,7 @@
   .pg .pl { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); }
   .pg .pt { font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 700; font-size: 17px; line-height: 1.2; }
   .pg .pt .tn { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
-  .contents { margin-top: 30px; max-width: 58rem; }
+  .contents { margin-top: 16px; max-width: 58rem; }
   .contents .ct { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
   .contents ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
   .contents li.ca { grid-column: 1 / -1; margin-top: 12px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
@@ -312,7 +312,7 @@
   @media (max-width: 640px) { .act .sub { display: none; } }
 
   /* ============ TEACHING NOTES ============ */
-  .teach-hint { margin-top: 14px; font-size: 13.5px; color: var(--ink-2); max-width: 52rem; }
+  .teach-hint { margin-top: 10px; font-size: 13.5px; color: var(--ink-2); max-width: 52rem; }
   .teach-hint b { color: var(--note); font-weight: 600; }
   .note { display: none; margin-top: 18px; border-top: 1px dashed var(--border-strong); padding-top: 15px; }
   body.notes-on .note { display: block; }
@@ -2031,7 +2031,7 @@
         '<text x="' + x0 + '" y="13" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">break&#8209;even</text>' +
         '<line x1="' + x0 + '" x2="' + x0 + '" y1="' + top + '" y2="' + H + '" stroke="var(--axis)" stroke-width="1"/>' + foldMark + body + "</svg>";
     } else {
-      var Wd = 1000, rh = 18, md = { t: 26, r: 112, b: 8, l: 222 }, foldHd = fi > -1 ? 26 : 0;
+      var Wd = 1000, rh = 18, md = { t: 26, r: 112, b: 8, l: 262 }, foldHd = fi > -1 ? 26 : 0;
       var Hd = md.t + md.b + rh * list.length + foldHd;
       var iwd = Wd - md.l - md.r;
       var scd = iwd / (maxPos + maxNeg);
@@ -2050,7 +2050,7 @@
         return '<g class="profRow" data-i="' + FILMS.indexOf(f) + '">' +
           '<rect x="0" y="' + yy + '" width="' + Wd + '" height="' + rh + '" fill="transparent"/>' +
           '<rect x="' + (md.l - 13) + '" y="' + (yy + rh / 2 - 4) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
-          '<text x="' + (md.l - 28) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" class="lbl" font-size="13" fill="var(--ink-2)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
+          '<text x="' + (md.l - 28) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" class="lbl" font-size="13" fill="var(--ink-2)">' + esc(clip(f.t, 26)) + (f.final ? "" : " ◉") + "</text>" +
           '<rect x="' + bx + '" y="' + (yy + 3.5) + '" width="' + w + '" height="' + (rh - 7) + '" rx="1.5" fill="' + c + '"/>' +
           '<text x="' + lblX + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="start" font-family="IBM Plex Mono" font-size="12" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</text>" +
           "</g>";
@@ -2094,7 +2094,7 @@
     var HT = headTail(af, hN, hN, !!STATE.expand.legs);
     var fold = { rows: HT.rows, fold: HT.foldIdx, label: HT.foldIdx > -1 ? (HT.hidden + " more · " + af[hN - 1].mult.toFixed(1) + "× down to " + af[af.length - hN].mult.toFixed(1) + "×") : "" };
     var W = mob ? MW : 1000, rowH = mob ? 31 : 16;
-    var m = mob ? { t: 18, r: 44, b: 6, l: 12 } : { t: 22, r: 66, b: 8, l: 218 };
+    var m = mob ? { t: 18, r: 44, b: 6, l: 12 } : { t: 22, r: 66, b: 8, l: 270 };
     var foldH = fold.fold > -1 ? 30 : 0;
     var H = m.t + m.b + rowH * fold.rows.length + foldH;
     var iw = W - m.l - m.r;
@@ -2124,7 +2124,7 @@
       var yy = m.t + i * rowH + rowH / 2 + off; // desktop rows below the fold need the fold slot too
       return '<g class="legRow" data-i="' + FILMS.indexOf(f) + '">' +
         '<rect x="0" y="' + (yy - rowH / 2) + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
-        '<text x="' + (m.l - 14) + '" y="' + (yy + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
+        '<text x="' + (m.l - 14) + '" y="' + (yy + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 28)) + (f.final ? "" : " ◉") + "</text>" +
         '<line x1="' + xo + '" x2="' + xd + '" y1="' + yy + '" y2="' + yy + '" stroke="' + c + '" stroke-width="2.5" stroke-opacity="0.5" stroke-linecap="round"/>' +
         '<circle cx="' + xo + '" cy="' + yy + '" r="3.2" fill="var(--surface)" stroke="' + c + '" stroke-width="1.6"/>' +
         '<circle cx="' + xd + '" cy="' + yy + '" r="3.8" fill="' + c + '"/>' +
