@@ -162,6 +162,18 @@
   .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
   .tab .tn { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
   [data-tab][hidden] { display: none !important; }
+  .tabs.can-scroll .tabs-inner { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); }
+  .tabs.can-scroll.at-end .tabs-inner { -webkit-mask-image: none; mask-image: none; }
+  .pager { padding: 26px 0 10px; }
+  .pager .wrap { display: flex; justify-content: space-between; gap: 12px; }
+  .pg { display: inline-flex; flex-direction: column; gap: 4px; padding: 12px 16px; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); color: var(--ink); text-decoration: none; cursor: pointer; font: inherit; text-align: left; max-width: 48%; transition: border-color 120ms; }
+  .pg:hover { border-color: var(--ink); }
+  .pg.next { margin-left: auto; text-align: right; align-items: flex-end; }
+  .pg .pl { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); }
+  .pg .pt { font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 700; font-size: 17px; line-height: 1.2; }
+  .pg .pt .tn { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
+  .pg.next .pt::after { content: " 92"; }
+  .pg.prev .pt::before { content: "90 "; }
   .contents { margin-top: 30px; max-width: 58rem; }
   .contents .ct { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
   .contents ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
@@ -360,6 +372,9 @@
     .contents { margin-top: 22px; }
     .contents ol { grid-template-columns: 1fr; }
     section.view { scroll-margin-top: 54px; }
+    .pager { padding: 18px 0 6px; }
+    .pg { padding: 11px 13px; }
+    .pg .pt { font-size: 15.5px; }
     .controls-inner { gap: 8px 14px; }
     .cgroup { flex-wrap: wrap; gap: 6px; }
     .clabel { font-size: 11px; }
@@ -991,6 +1006,7 @@
           <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel. <b>&ldquo;Still small. Bump everything a point or two.&rdquo;</b> Every chart label on a phone now gets two more points after render; nothing is under 12.</li>
           <li><b>&ldquo;Do all of our white / grey text hues pass contrast on the dark background?&rdquo;</b> They do: the greys sit at 5.0 to 8.4 to 1 on every dark surface, AA or better. The audit found the misses elsewhere: two coloured axis labels in §12, the light-theme profit and loss colours on tooltip backgrounds by a hair, a token the forced-light block had never received at all, and the treemap: white labels on the MCU green were 3 to 1. Each cell now picks dark or white ink by measuring its own fill.</li>
           <li><b>&ldquo;We are way too scrolly now. People will never go to the bottom. Implement some structure.&rdquo;</b> Fifteen sections became six tabs, one per act, with a contents list under the masthead that carries every finding as a headline. Someone who reads only the contents still gets all fifteen.</li>
+          <li><b>&ldquo;Put the mistakes before Reference.&rdquo;</b> Last is where things go to die. Sections renumbered to match. <b>&ldquo;I didn&rsquo;t know to swipe.&rdquo;</b> The tab strip clipped on a phone with nothing saying there was more. Now it fades at the edge while it can still scroll, and every tab ends in a Back and a Next button named for where they go.</li>
         </ol>
       </div>
 
@@ -1066,6 +1082,10 @@
     </div>
   </section>
 
+
+
+
+  <nav class="pager" id="pager" aria-label="Previous and next tab"></nav>
 </main>
 
 <footer class="foot">
@@ -2758,18 +2778,46 @@
   /* ---------- section tabs ---------- */
   // Six tabs, one per act. Everything still renders at load; a tab just hides the other acts, so a
   // phone scrolls two to four sections instead of fifteen. Hashes deep-link into any section.
-  var TABS = ["act1", "act2", "act3", "act4", "ref", "mistakes"];
+  var TABS = ["act1", "act2", "act3", "act4", "mistakes", "ref"]; // reading order; drives the Back / Next pager
   function setTab(key, opts) {
     opts = opts || {};
     if (TABS.indexOf(key) < 0) key = "act1";
     document.querySelectorAll("main [data-tab]").forEach(function (el) { el.hidden = el.getAttribute("data-tab") !== key; });
     document.querySelectorAll(".tab").forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-tab") === key ? "true" : "false"); });
     STATE.tab = key;
+    renderPager(key);
+    var active = document.querySelector('.tab[data-tab="' + key + '"]');
+    if (active && active.scrollIntoView) active.scrollIntoView({ block: "nearest", inline: "nearest" });
+    updateTabStrip();
     if (opts.push !== false) history.replaceState(null, "", "#" + key);
     // a tab opened first from a chart-less tab may never have been measured on this width
     if (booted) { var w = measureChartWidth(); if (w && Math.abs(w - MW) > 2) renderAll(); }
     if (opts.scroll) { var bar = document.querySelector(".tabs"); window.scrollTo({ top: bar.getBoundingClientRect().top + window.scrollY, behavior: "auto" }); }
   }
+  // the tab strip clips on a phone and nothing said "there is more to the right": a fade on the strip
+  // while it can still scroll, and a Back / Next pair at the bottom of every tab, named for where they go
+  function tabMeta(key) {
+    var b = document.querySelector('.tab[data-tab="' + key + '"]');
+    if (!b) return null;
+    var tn = b.querySelector(".tn");
+    return { key: key, num: tn ? tn.innerHTML : "", label: b.textContent.replace(tn ? tn.textContent : "", "").trim() };
+  }
+  function renderPager(key) {
+    var host = document.getElementById("pager"); if (!host) return;
+    var i = TABS.indexOf(key), prev = i > 0 ? tabMeta(TABS[i - 1]) : null, next = i < TABS.length - 1 ? tabMeta(TABS[i + 1]) : null;
+    var cell = function (m, cls, word) {
+      return '<button class="pg ' + cls + '" data-go="' + m.key + '"><span class="pl">' + word + '</span><span class="pt"><span class="tn">' + m.num + "</span>" + esc(m.label) + "</span></button>";
+    };
+    host.innerHTML = '<div class="wrap">' + (prev ? cell(prev, "prev", "Back") : "") + (next ? cell(next, "next", "Next") : "") + "</div>";
+    host.querySelectorAll("[data-go]").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-go"), { scroll: true }); }); });
+  }
+  function updateTabStrip() {
+    var bar = document.querySelector(".tabs"), strip = document.querySelector(".tabs-inner"); if (!bar || !strip) return;
+    var can = strip.scrollWidth > strip.clientWidth + 2;
+    bar.classList.toggle("can-scroll", can);
+    bar.classList.toggle("at-end", !can || strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2);
+  }
+  (function () { var strip = document.querySelector(".tabs-inner"); if (strip) strip.addEventListener("scroll", updateTabStrip, { passive: true }); window.addEventListener("resize", updateTabStrip); })();
   function goToHash(h) {
     h = (h || location.hash).replace("#", "");
     if (!h) return false;
