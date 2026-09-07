@@ -14,7 +14,8 @@
     "enrich:wiki": "node scripts/enrich-wikipedia.mjs",
     "data": "node scripts/parse-baseline.mjs && node scripts/promote.mjs && node scripts/enrich-omdb.mjs && node scripts/enrich-wikipedia.mjs && node scripts/derive.mjs && node scripts/reconcile.mjs && node scripts/build-web.mjs",
     "cast": "node scripts/scrape-cast.mjs && node scripts/build-cast-web.mjs",
-    "build": "node scripts/build-web.mjs && node scripts/build-cast-web.mjs && node scripts/build.mjs && node scripts/og-image.mjs",
+    "check": "node scripts/tie-out.mjs",
+    "build": "node scripts/build-web.mjs && node scripts/build-cast-web.mjs && node scripts/tie-out.mjs && node scripts/build.mjs && node scripts/og-image.mjs",
     "og": "node scripts/og-image.mjs",
     "deploy": "npm run build && wrangler deploy"
   },

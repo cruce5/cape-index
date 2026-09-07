@@ -26,8 +26,10 @@ const slim = src.films.map((f) => {
     genres: f.genres,
     rt: s.rt_critic, mc: s.metacritic, imdb: s.imdb,
     pctDom: m.pct_domestic, pctIntl: m.pct_international,
-    mult: m.domestic_multiplier,
-    roi: m.roi_worldwide,
+    // computed from raw box office at 4-decimal precision, not the 2-decimal metric:
+    // rounding the 2-decimal value again for a 1-decimal display double-rounds (1.547 -> 1.55 -> 1.6)
+    mult: b.opening_weekend_domestic ? Math.round((b.domestic / b.opening_weekend_domestic) * 1e4) / 1e4 : null,
+    roi: f.budget ? Math.round((b.worldwide / f.budget) * 1e4) / 1e4 : null,
     breakeven: m.breakeven_worldwide,
     profit: m.profit_vs_breakeven,
     profitable: m.profitable,

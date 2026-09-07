@@ -1062,6 +1062,7 @@
           <li><b>&ldquo;I don&rsquo;t think the budget chart is great, is there a better way?&rdquo;</b> A median of two or three films a year sawtoothed and buried the trend. Rebuilt as a five-year rolling median with a middle-50% band over every film&rsquo;s dot, so &ldquo;doubled, then flat&rdquo; reads as a shape instead of a zigzag.</li>
           <li><b>&ldquo;Turn Google Analytics on?&rdquo;</b> Went with Cloudflare Web Analytics instead: cookieless, no consent banner, no third-party sharing. A beacon in the head, nothing else.</li>
           <li><b>&ldquo;Are the scatterplots supreme? Anything to make them awesome?&rdquo;</b> The reviews scatter got median quadrant lines (acclaimed-and-huge, loved-but-flopped, panned-but-paid); the critic-vs-audience chart got faintly tinted halves with side labels; and all three scatters got a hover crosshair to both axes.</li>
+          <li><b>&ldquo;We&rsquo;ve got a tie-out problem. Check every hand-written number against the source, and build a check that runs on every refresh.&rdquo;</b> The legs dek said <em>Folie &agrave; Deux</em> ran 1.5&times; while the chart said 1.6&times; &mdash; a double-rounding bug (the multiplier was rounded twice). Fixed at the source, then wrote <code>scripts/tie-out.mjs</code>: it recomputes seventeen claims from the data &mdash; film counts, the $1B and $2B tallies, the legs multipliers, the roster records, the overseas range &mdash; and fails the build if a sentence has drifted. It runs on every data refresh now.</li>
 
         </ol>
       </div>
