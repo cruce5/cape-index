@@ -294,7 +294,7 @@
   .note code { font-family: "IBM Plex Mono", monospace; font-size: 0.9em; background: var(--surface-2); padding: 1px 5px; border-radius: 3px; color: var(--ink); }
   @media (max-width: 620px) { .note dl { grid-template-columns: 1fr; gap: 2px; } .note dd { margin-bottom: 8px; } }
 
-  /* ============ BUILD LOG (§14) ============ */
+  /* ============ BUILD LOG (§15) ============ */
   .log .card + .card { margin-top: 16px; }
   .log .card-title { margin-bottom: 10px; }
   .log p { font-size: 14px; color: var(--ink-2); margin: 0 0 10px; }
@@ -311,7 +311,7 @@
   .log ol.asks li b { color: var(--ink); }
   .log .lede { font-size: 15px; color: var(--ink-2); max-width: 52rem; }
 
-  /* ============ ANTI-PATTERNS (§15) ============ */
+  /* ============ ANTI-PATTERNS (§12) ============ */
   .ap .card + .card { margin-top: 20px; }
   .ap .ap-head { margin-bottom: 14px; }
   .ap .ap-tag {
@@ -402,8 +402,8 @@
     <button class="tab" role="tab" data-tab="act2" aria-selected="false"><span class="tn">II</span>Over time</button>
     <button class="tab" role="tab" data-tab="act3" aria-selected="false"><span class="tn">III</span>Beyond the gross</button>
     <button class="tab" role="tab" data-tab="act4" aria-selected="false"><span class="tn">IV</span>Roster</button>
-    <button class="tab" role="tab" data-tab="ref" aria-selected="false"><span class="tn">&sect;</span>Reference</button>
     <button class="tab" role="tab" data-tab="mistakes" aria-selected="false"><span class="tn">&#10007;</span>The mistakes</button>
+    <button class="tab" role="tab" data-tab="ref" aria-selected="false"><span class="tn">&sect;</span>Reference</button>
   </div>
 </nav>
 
@@ -776,185 +776,12 @@
     </div>
   </section>
 
-  <div class="act" data-tab="ref"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the raw table &amp; the method</span></div></div>
-
-  <section class="view" id="v-data" data-tab="ref">
-    <div class="wrap">
-      <div class="view-head">
-        <span class="num">§ 12 &nbsp;/&nbsp; THE LEDGER</span>
-        <h2>The whole thing, sortable</h2>
-        <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend: how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
-      </div>
-      <div class="card" style="padding:16px">
-        <div id="table-full"></div>
-        <div class="note" style="padding:0 6px"><div class="nlabel">Design note</div><dl>
-          <dt>Why this form</dt><dd>A sorted table is the most information-dense view there is, and it&rsquo;s the accessibility backbone: every value a chart encodes with position or colour is a plain number here.</dd>
-          <dt>Choices here</dt><dd>Click any header to sort. Money columns use a monospaced figure so the digits line up. Universe is a colour chip, not a colour-coded row, the text still has to work on its own.</dd>
-          <dt>Watch for</dt><dd>Sorting by a derived column (Mult., ROI) rewards small films with freak ratios. Read those next to the raw gross.</dd>
-        </dl></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="view" id="v-method" data-tab="ref">
-    <div class="wrap">
-      <div class="view-head">
-        <span class="num">§ 13 &nbsp;/&nbsp; METHOD</span>
-        <h2>How this was built</h2>
-      </div>
-      <div class="two-col">
-        <div class="card">
-          <div class="card-title">Sources</div>
-          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb.</p>
-          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. Box Office Mojo where it lists a clean one; otherwise the widely-cited number, marked <span class="mono">est.</span> Roughly half are estimates, and studios don&rsquo;t publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Definitions</div>
-          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
-          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">in release</span>) carry grosses as of early September 2026 and will climb; they are left out of the profit tallies until their runs end.</p>
-        </div>
-      </div>
-      <div class="card" style="margin-top:20px">
-        <div class="card-title">Scope</div>
-        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel released or in production. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, the 2005 <em>Fantastic Four</em> and <em>Rise of the Silver Surfer</em>, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox.</p>
-        <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em> and its 2006 coda <em>Superman Returns</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>, the 2015 <em>Fantastic Four</em> (a reboot that never got its sequel or its X-Men crossover), both <em>Punisher</em>s (2008&rsquo;s is a reboot, not a sequel); and creator-owned books Marvel merely published (<em>Kick-Ass</em>). A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
-      </div>
-      <p class="smallprint" id="method-held"></p>
-    </div>
-  </section>
-
-  <section class="view log" id="v-process" data-tab="ref">
-    <div class="wrap">
-      <div class="view-head">
-        <span class="num">§ 14 &nbsp;/&nbsp; BUILD LOG</span>
-        <h2>How this actually went</h2>
-        <p class="dek">The rest of the site is worked examples of finished charts. This is the messy one: the brief, every follow-up, every bug, and the design calls behind them. If you build data things, the useful part is usually the part nobody publishes.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-title">The brief</div>
-        <p>It started as a maintenance job. Verify a Tableau Public workbook, <em>Marvel / DC Box Office</em>, against Box Office Mojo: 50 films, six columns, movie / date / franchise / domestic / international / total. Then extend it with the films that had come out since, and rebuild the seven-tab Tableau suite as one self-contained dark-first HTML page.</p>
-        <p>It ended at <b>91 films across six groups</b>, twenty-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-title">The pipeline</div>
-        <p>Adding a film means appending it to a list with a pinned IMDb id, then: scrape Box Office Mojo for worldwide / domestic / overseas / opening weekend, one title page at a time; pull Rotten Tomatoes, Metacritic and IMDb from OMDb; read the Wikipedia <em>Cast</em> section for the roster; derive the rest (break-even at 2.5&times; budget, ROI, domestic multiplier, every figure also rescaled to 2025 dollars by CPI-U); slim it to a compact JSON; inline everything into the single HTML file.</p>
-        <p>Charts are hand-written inline <code>&lt;svg&gt;</code>. No charting library, so nothing on the page is a default that slipped through unquestioned.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Every follow-up, in order</div>
-        <ol class="asks">
-          <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
-          <li>Show which films a character appears in, from the hover card itself.</li>
-          <li><b>&ldquo;Get rid of all the em dashes everywhere. Pronto.&rdquo;</b></li>
-          <li>Dead space at the top of the mobile scorecards &rarr; a full mobile pass.</li>
-          <li>A launch-readiness audit, desktop and mobile treated as separate reviews. One brief: <span class="q">are all the hovercards as useful as they could be?</span></li>
-          <li>Add a System / Auto theme option. Add Iron Monger to the roster.</li>
-          <li>Add Sony&rsquo;s Spider-Man Universe. That made it a fifth category and broke the colour scheme.</li>
-          <li><b>&ldquo;Marvel being red isn&rsquo;t a hard rule. Is there a five-palette safe option?&rdquo;</b> Dropped the red/blue franchise convention entirely.</li>
-          <li>Add all-in profit to the §01 scorecards.</li>
-          <li><b>&ldquo;Weird spacing issue here&rdquo;</b>: an empty rectangle beside the masthead text.</li>
-          <li>The §03 bubble chart was rough on mobile. Several iterations before it landed.</li>
-          <li><b>&ldquo;Anything the box office subreddit would roast me for?&rdquo;</b></li>
-          <li>A byline linking to LinkedIn, and a footer credit.</li>
-          <li><b>&ldquo;AUDIT ALL THE THINGS&rdquo;</b>: two reference cards were misaligned and a studio was missing from the footer.</li>
-          <li><b>&ldquo;Should Fox&rsquo;s X-Men be in here?&rdquo;</b> Added the Fox era and <em>The Amazing Spider-Man</em> 1 &amp; 2.</li>
-          <li><b>&ldquo;Would reconsidering the 2008 start blow the view to hell?&rdquo;</b> Moved the whole set back to 2000.</li>
-          <li>The inclusion rule sprang a leak &rarr; the full-franchise rule. Nolan, Raimi, <em>Ghost Rider</em>, <em>Daredevil</em>, the 2005 <em>Fantastic Four</em>. 92 films.</li>
-          <li><b>&ldquo;Supergirl is out on digital, so it&rsquo;s basically done in theatres.&rdquo;</b> Marked it final; the DCU scorecard went from +$56M to &minus;$317M.</li>
-          <li><b>&ldquo;Adversarial-audit the ever-living hell out of this.&rdquo;</b> That is where the cast scraper got caught.</li>
-          <li>Collapse / expand on the four tallest charts, collapsed by default.</li>
-          <li><b>&ldquo;Would a viz snob look at this and go &lsquo;hmm, nice&rsquo;?&rdquo;</b> Treemap labels and the budget markers got a polish pass.</li>
-          <li>Bought <em>capeindex.com</em>. Wired the custom domain, and a 301 from <em>thecapeindex.com</em>; every share URL now points there.</li>
-          <li><b>&ldquo;A profit-per-movie metric on the scoreboard, if the box office subreddit would like it.&rdquo;</b> Added as theatrical P/L per completed film, muted where too few films have finished to average one honestly.</li>
-          <li><b>&ldquo;A collection of anti-patterns. Beautiful charts that don&rsquo;t help.&rdquo;</b> §15: eight of them, built from the real data, each with what makes it tempting and what to do instead.</li>
-          <li><b>&ldquo;Adversarially audit this entire thing. Pull no punches.&rdquo;</b> Eight pieces of copy had rotted out from under the data (a headline that was false against its own chart, notes still describing a 57-film set). And the 2015 <em>Fantastic Four</em> turned out to be a one-and-done sitting in the Fox bucket, in breach of the rule. <b>&ldquo;Pull it.&rdquo;</b> 91 films.</li>
-          <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel. <b>&ldquo;Still small. Bump everything a point or two.&rdquo;</b> Every chart label on a phone now gets two more points after render; nothing is under 12.</li>
-          <li><b>&ldquo;Do all of our white / grey text hues pass contrast on the dark background?&rdquo;</b> They do: the greys sit at 5.0 to 8.4 to 1 on every dark surface, AA or better. The audit found the misses elsewhere: two coloured axis labels in §15, the light-theme profit and loss colours on tooltip backgrounds by a hair, a token the forced-light block had never received at all, and the treemap: white labels on the MCU green were 3 to 1. Each cell now picks dark or white ink by measuring its own fill.</li>
-          <li><b>&ldquo;We are way too scrolly now. People will never go to the bottom. Implement some structure.&rdquo;</b> Fifteen sections became six tabs, one per act, with a contents list under the masthead that carries every finding as a headline. Someone who reads only the contents still gets all fifteen.</li>
-        </ol>
-      </div>
-
-      <div class="card">
-        <div class="card-title">The bugs</div>
-        <dl>
-          <dt>Red Hulk in four films</dt>
-          <dd>The canonicaliser counted every plain <span class="q">Thaddeus Ross</span> credit as the codename. Rule now: a character counts under a codename only from the film they take it up, and a later transformation identity (Red Hulk, Mighty Thor) needs the explicit <code>Name / Codename</code> alias in the credit. Ross is five films of a general and one of a monster, so he shows once.</dd>
-
-          <dt>A duplicate ghost film</dt>
-          <dd><em>Joker: Folie à Deux</em> was in the source list as <code>Folie a Deux</code> (plain a) and on Box Office Mojo as <code>Folie à Deux</code> (accented). Two records, one with no universe, showing up as an <code>UNKNOWN</code> entry. Fix: match the source of truth&rsquo;s spelling exactly, delete the stale scrape, re-run.</dd>
-
-          <dt>A find-and-replace that missed half the CSS</dt>
-          <dd>The dark-to-light colour overrides live in two rule blocks with different indentation: one under <code>@media (prefers-color-scheme: light)</code>, one under <code>[data-theme="light"]</code>. A &ldquo;replace all&rdquo; on a token value hit one and not the other, so the manual toggle and the OS setting disagreed about a colour until both were patched.</dd>
-
-          <dt>An unfinished film poisoning the profit math</dt>
-          <dd><em>Supergirl</em>, still in theatres at the time, sat at about $126M on a $200M budget and dragged the whole DCU scorecard to &minus;$317M, the single most roastable number on the page. Fix then: hold in-release films out of every profit tally. Fix now: once its run actually ended, put it back. The &minus;$317M is real.</dd>
-
-          <dt>A title collision, and a self-healing bug that wasn&rsquo;t</dt>
-          <dd>The 2005 and 2015 <em>Fantastic Four</em> films are both literally titled &ldquo;Fantastic Four&rdquo;, which collided on the join key, so both were disambiguated with a year. Worse: the scraper seeds its worklist from the <em>previous</em> build&rsquo;s output, so renaming a film silently regenerated the old key and produced a phantom <code>UNKNOWN</code> film until the stale key was deleted by hand.</dd>
-
-          <dt>The cast scraper was quietly dropping people</dt>
-          <dd>Found by asking a small question during the audit: why is the Joker credited in only one film? Five separate causes. (1) An HTML comment sitting between &ldquo;as&rdquo; and the character name, and a strip that was too greedy about it, so Doctor Strange vanished from four films. (2) <span class="q">the Joker</span>: the lowercase article meant the string never matched the canonical name, so Ledger&rsquo;s and Leto&rsquo;s Jokers went uncounted. (3) <span class="q">Dr. Stephen Strange</span>: an honorific the lookup didn&rsquo;t strip. (4) <span class="q">J.A.R.V.I.S. and Vision</span>: a dual credit where neither half matched alone. (5) The big one: pages that list returning cast in a prose sentence (<span class="q">Several actors reprise their roles&hellip;</span>) rather than a bullet list were never parsed, so Falcon, Scarlet Witch, Winter Soldier, Star-Lord and a dozen others were missing their <em>Endgame</em> appearance.</dd>
-
-          <dt>&hellip;and the fix</dt>
-          <dd>Strip HTML comments and citations before matching. A case-insensitive lookup that also drops articles and honorifics. Split credits on &ldquo;and&rdquo;. A guarded prose scan that only reads a paragraph if it carries a reprisal cue, only takes clean <code>[[Actor]] as [[Character]]</code> pairs, and skips anything preceded by &ldquo;footage of&rdquo; or &ldquo;was cast&rdquo;. A short, hand-checked overrides file for the last few stars buried in prose. Recovered counts: Joker 1&rarr;4, Magneto 5&rarr;7, Doctor Strange 2&rarr;5, and every <em>Endgame</em> reprisal.</dd>
-        </dl>
-      </div>
-
-      <div class="card">
-        <div class="card-title">The design calls</div>
-        <dl>
-          <dt>Titles state the finding</dt>
-          <dd>Every section headline is the takeaway, not a label. <span class="q">Marvel Studios has out-grossed every DC film combined, nearly three to one</span>, never <span class="q">Gross by universe</span>. If a title can&rsquo;t say something, the chart probably shouldn&rsquo;t exist.</dd>
-
-          <dt>The palette was computed, not chosen</dt>
-          <dd>The red/blue franchise convention is gone, because red read too close to pink for the person who has to look at this daily. The replacement is a colour-blind-safe set checked <em>with a script</em>, pair by pair, in both light and dark. Established along the way: five or more saturated categorical hues cannot pass an all-pairs colour-blindness test in both modes. Confirmed against two published palettes. Every universe also carries a shape, so identity is never colour alone.</dd>
-
-          <dt>The sixth colour is grey on purpose</dt>
-          <dd>Once the Fox films arrived, six distinct chromatic colours was not possible. Elseworlds, the standalone films attached to no franchise engine, is drawn in grey. It fails the palette validator&rsquo;s chroma floor by design: grey <em>is</em> the &ldquo;doesn&rsquo;t belong to a machine&rdquo; signal.</dd>
-
-          <dt>Things this site never does</dt>
-          <dd>No dual-axis charts: two measures of different scale become two charts. No trend line where the data doesn&rsquo;t support one (reviews vs. gross; film size over time), because fitting one invents a relationship. No mean where a median is honest; one $2.8B film drags a mean around.</dd>
-
-          <dt>Why the legs chart uses a log axis</dt>
-          <dd>On a linear dollar axis, the connector length would be <em>dollars added after opening weekend</em>, which flatters big films. On a log axis the pixel length equals the multiplier, which is the thing being ranked.</dd>
-
-          <dt>The treemap is a compromise, and says so</dt>
-          <dd>People judge area badly, and long thin rectangles worst of all. It stays because it delivers the &ldquo;wall of green&rdquo; in one glance. But a clipped title reads as a mistake, so a film&rsquo;s name appears only when it fits the cell uncut; otherwise you get the gross and the tooltip.</dd>
-
-          <dt>The budget line admits its weak spots</dt>
-          <dd>Each year&rsquo;s marker is sized by how many films sit behind its median. The early-2000s points often rest on a single film, so they&rsquo;re small, and the eye discounts that stretch without being told to.</dd>
-
-          <dt>The table is the backbone</dt>
-          <dd>Every value a chart encodes with position, length or colour is a plain sortable number in §12. The charts are the argument; the table is the receipts.</dd>
-        </dl>
-      </div>
-
-      <div class="card">
-        <div class="card-title">The scope question, which took three tries</div>
-        <p>This was the hardest editorial call, and the first two answers were wrong.</p>
-        <p><b>Try one: start at 2008</b>, the year the MCU launched. Clean, until the Fox X-Men run went in. <em>X-Men: Days of Future Past</em> is a direct sequel to the 2000 original, so keeping the sequel and cutting the original was indefensible. The start moved to 2000.</p>
-        <p><b>Try two: include an older continuity if an actor later reprised the role.</b> This collapsed within minutes. <em>Deadpool &amp; Wolverine</em>, <em>The Flash</em> and <em>No Way Home</em> have brought back nearly every dormant franchise on screen. A cameo can&rsquo;t be the test, or the scope is everything.</p>
-        <p><b>Try three, which held:</b> every live-action Marvel or DC superhero film whose continuity began in 2000 or later and that is part of a multi-film continuity, meaning a shared universe, a trilogy, or a film with a theatrical sequel. One-and-done films are out; with no sequel there is no franchise arc to compare. It&rsquo;s mechanical, it doesn&rsquo;t leak, and §13 names every exclusion so the argument is on the page, not in someone&rsquo;s head.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-title">How it&rsquo;s checked</div>
-        <p>Every change is verified by driving a headless browser and reading the rendered page (element counts, computed styles, the actual numbers in the actual DOM) rather than trusting that the code does what it looks like it does. That is how the &minus;$317M scorecard, the phantom <em>Fantastic Four</em>, and the one-film Joker were all caught: by looking at the output instead of the source.</p>
-        <p>None of this was in the plan. The plan was to check 50 numbers.</p>
-        <p>The whole thing, pipeline and page, is on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>.</p>
-      </div>
-    </div>
-  </section>
-
   <div class="act" data-tab="mistakes"><div class="wrap"><h3>The tempting mistakes</h3><span class="rule"></span><span class="sub">beautiful charts that don&rsquo;t help</span></div></div>
 
   <section class="view ap" id="v-antipatterns" data-tab="mistakes">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 15 &nbsp;/&nbsp; ANTI-PATTERNS</span>
+        <span class="num">§ 12 &nbsp;/&nbsp; ANTI-PATTERNS</span>
         <h2>Every chart down here is accurate. Not one of them earns its place</h2>
         <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film and nominal dollars; the universe filter and the $ toggle up top don&rsquo;t reach them.</p>
         <div class="legend" id="ap-leg" style="margin-top:14px"></div>
@@ -1065,6 +892,180 @@
       </div>
     </div>
   </section>
+
+  <div class="act" data-tab="ref"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the raw table &amp; the method</span></div></div>
+
+  <section class="view" id="v-data" data-tab="ref">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 13 &nbsp;/&nbsp; THE LEDGER</span>
+        <h2>The whole thing, sortable</h2>
+        <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend: how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
+      </div>
+      <div class="card" style="padding:16px">
+        <div id="table-full"></div>
+        <div class="note" style="padding:0 6px"><div class="nlabel">Design note</div><dl>
+          <dt>Why this form</dt><dd>A sorted table is the most information-dense view there is, and it&rsquo;s the accessibility backbone: every value a chart encodes with position or colour is a plain number here.</dd>
+          <dt>Choices here</dt><dd>Click any header to sort. Money columns use a monospaced figure so the digits line up. Universe is a colour chip, not a colour-coded row, the text still has to work on its own.</dd>
+          <dt>Watch for</dt><dd>Sorting by a derived column (Mult., ROI) rewards small films with freak ratios. Read those next to the raw gross.</dd>
+        </dl></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-method" data-tab="ref">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 14 &nbsp;/&nbsp; METHOD</span>
+        <h2>How this was built</h2>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-title">Sources</div>
+          <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. Box Office Mojo where it lists a clean one; otherwise the widely-cited number, marked <span class="mono">est.</span> Roughly half are estimates, and studios don&rsquo;t publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Definitions</div>
+          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">in release</span>) carry grosses as of early September 2026 and will climb; they are left out of the profit tallies until their runs end.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:20px">
+        <div class="card-title">Scope</div>
+        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel released or in production. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, the 2005 <em>Fantastic Four</em> and <em>Rise of the Silver Surfer</em>, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox.</p>
+        <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em> and its 2006 coda <em>Superman Returns</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>, the 2015 <em>Fantastic Four</em> (a reboot that never got its sequel or its X-Men crossover), both <em>Punisher</em>s (2008&rsquo;s is a reboot, not a sequel); and creator-owned books Marvel merely published (<em>Kick-Ass</em>). A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
+      </div>
+      <p class="smallprint" id="method-held"></p>
+    </div>
+  </section>
+
+  <section class="view log" id="v-process" data-tab="ref">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 15 &nbsp;/&nbsp; BUILD LOG</span>
+        <h2>How this actually went</h2>
+        <p class="dek">The rest of the site is worked examples of finished charts. This is the messy one: the brief, every follow-up, every bug, and the design calls behind them. If you build data things, the useful part is usually the part nobody publishes.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">The brief</div>
+        <p>It started as a maintenance job. Verify a Tableau Public workbook, <em>Marvel / DC Box Office</em>, against Box Office Mojo: 50 films, six columns, movie / date / franchise / domestic / international / total. Then extend it with the films that had come out since, and rebuild the seven-tab Tableau suite as one self-contained dark-first HTML page.</p>
+        <p>It ended at <b>91 films across six groups</b>, twenty-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">The pipeline</div>
+        <p>Adding a film means appending it to a list with a pinned IMDb id, then: scrape Box Office Mojo for worldwide / domestic / overseas / opening weekend, one title page at a time; pull Rotten Tomatoes, Metacritic and IMDb from OMDb; read the Wikipedia <em>Cast</em> section for the roster; derive the rest (break-even at 2.5&times; budget, ROI, domestic multiplier, every figure also rescaled to 2025 dollars by CPI-U); slim it to a compact JSON; inline everything into the single HTML file.</p>
+        <p>Charts are hand-written inline <code>&lt;svg&gt;</code>. No charting library, so nothing on the page is a default that slipped through unquestioned.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Every follow-up, in order</div>
+        <ol class="asks">
+          <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
+          <li>Show which films a character appears in, from the hover card itself.</li>
+          <li><b>&ldquo;Get rid of all the em dashes everywhere. Pronto.&rdquo;</b></li>
+          <li>Dead space at the top of the mobile scorecards &rarr; a full mobile pass.</li>
+          <li>A launch-readiness audit, desktop and mobile treated as separate reviews. One brief: <span class="q">are all the hovercards as useful as they could be?</span></li>
+          <li>Add a System / Auto theme option. Add Iron Monger to the roster.</li>
+          <li>Add Sony&rsquo;s Spider-Man Universe. That made it a fifth category and broke the colour scheme.</li>
+          <li><b>&ldquo;Marvel being red isn&rsquo;t a hard rule. Is there a five-palette safe option?&rdquo;</b> Dropped the red/blue franchise convention entirely.</li>
+          <li>Add all-in profit to the §01 scorecards.</li>
+          <li><b>&ldquo;Weird spacing issue here&rdquo;</b>: an empty rectangle beside the masthead text.</li>
+          <li>The §03 bubble chart was rough on mobile. Several iterations before it landed.</li>
+          <li><b>&ldquo;Anything the box office subreddit would roast me for?&rdquo;</b></li>
+          <li>A byline linking to LinkedIn, and a footer credit.</li>
+          <li><b>&ldquo;AUDIT ALL THE THINGS&rdquo;</b>: two reference cards were misaligned and a studio was missing from the footer.</li>
+          <li><b>&ldquo;Should Fox&rsquo;s X-Men be in here?&rdquo;</b> Added the Fox era and <em>The Amazing Spider-Man</em> 1 &amp; 2.</li>
+          <li><b>&ldquo;Would reconsidering the 2008 start blow the view to hell?&rdquo;</b> Moved the whole set back to 2000.</li>
+          <li>The inclusion rule sprang a leak &rarr; the full-franchise rule. Nolan, Raimi, <em>Ghost Rider</em>, <em>Daredevil</em>, the 2005 <em>Fantastic Four</em>. 92 films.</li>
+          <li><b>&ldquo;Supergirl is out on digital, so it&rsquo;s basically done in theatres.&rdquo;</b> Marked it final; the DCU scorecard went from +$56M to &minus;$317M.</li>
+          <li><b>&ldquo;Adversarial-audit the ever-living hell out of this.&rdquo;</b> That is where the cast scraper got caught.</li>
+          <li>Collapse / expand on the four tallest charts, collapsed by default.</li>
+          <li><b>&ldquo;Would a viz snob look at this and go &lsquo;hmm, nice&rsquo;?&rdquo;</b> Treemap labels and the budget markers got a polish pass.</li>
+          <li>Bought <em>capeindex.com</em>. Wired the custom domain, and a 301 from <em>thecapeindex.com</em>; every share URL now points there.</li>
+          <li><b>&ldquo;A profit-per-movie metric on the scoreboard, if the box office subreddit would like it.&rdquo;</b> Added as theatrical P/L per completed film, muted where too few films have finished to average one honestly.</li>
+          <li><b>&ldquo;A collection of anti-patterns. Beautiful charts that don&rsquo;t help.&rdquo;</b> §12: eight of them, built from the real data, each with what makes it tempting and what to do instead.</li>
+          <li><b>&ldquo;Adversarially audit this entire thing. Pull no punches.&rdquo;</b> Eight pieces of copy had rotted out from under the data (a headline that was false against its own chart, notes still describing a 57-film set). And the 2015 <em>Fantastic Four</em> turned out to be a one-and-done sitting in the Fox bucket, in breach of the rule. <b>&ldquo;Pull it.&rdquo;</b> 91 films.</li>
+          <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel. <b>&ldquo;Still small. Bump everything a point or two.&rdquo;</b> Every chart label on a phone now gets two more points after render; nothing is under 12.</li>
+          <li><b>&ldquo;Do all of our white / grey text hues pass contrast on the dark background?&rdquo;</b> They do: the greys sit at 5.0 to 8.4 to 1 on every dark surface, AA or better. The audit found the misses elsewhere: two coloured axis labels in §12, the light-theme profit and loss colours on tooltip backgrounds by a hair, a token the forced-light block had never received at all, and the treemap: white labels on the MCU green were 3 to 1. Each cell now picks dark or white ink by measuring its own fill.</li>
+          <li><b>&ldquo;We are way too scrolly now. People will never go to the bottom. Implement some structure.&rdquo;</b> Fifteen sections became six tabs, one per act, with a contents list under the masthead that carries every finding as a headline. Someone who reads only the contents still gets all fifteen.</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div class="card-title">The bugs</div>
+        <dl>
+          <dt>Red Hulk in four films</dt>
+          <dd>The canonicaliser counted every plain <span class="q">Thaddeus Ross</span> credit as the codename. Rule now: a character counts under a codename only from the film they take it up, and a later transformation identity (Red Hulk, Mighty Thor) needs the explicit <code>Name / Codename</code> alias in the credit. Ross is five films of a general and one of a monster, so he shows once.</dd>
+
+          <dt>A duplicate ghost film</dt>
+          <dd><em>Joker: Folie à Deux</em> was in the source list as <code>Folie a Deux</code> (plain a) and on Box Office Mojo as <code>Folie à Deux</code> (accented). Two records, one with no universe, showing up as an <code>UNKNOWN</code> entry. Fix: match the source of truth&rsquo;s spelling exactly, delete the stale scrape, re-run.</dd>
+
+          <dt>A find-and-replace that missed half the CSS</dt>
+          <dd>The dark-to-light colour overrides live in two rule blocks with different indentation: one under <code>@media (prefers-color-scheme: light)</code>, one under <code>[data-theme="light"]</code>. A &ldquo;replace all&rdquo; on a token value hit one and not the other, so the manual toggle and the OS setting disagreed about a colour until both were patched.</dd>
+
+          <dt>An unfinished film poisoning the profit math</dt>
+          <dd><em>Supergirl</em>, still in theatres at the time, sat at about $126M on a $200M budget and dragged the whole DCU scorecard to &minus;$317M, the single most roastable number on the page. Fix then: hold in-release films out of every profit tally. Fix now: once its run actually ended, put it back. The &minus;$317M is real.</dd>
+
+          <dt>A title collision, and a self-healing bug that wasn&rsquo;t</dt>
+          <dd>The 2005 and 2015 <em>Fantastic Four</em> films are both literally titled &ldquo;Fantastic Four&rdquo;, which collided on the join key, so both were disambiguated with a year. Worse: the scraper seeds its worklist from the <em>previous</em> build&rsquo;s output, so renaming a film silently regenerated the old key and produced a phantom <code>UNKNOWN</code> film until the stale key was deleted by hand.</dd>
+
+          <dt>The cast scraper was quietly dropping people</dt>
+          <dd>Found by asking a small question during the audit: why is the Joker credited in only one film? Five separate causes. (1) An HTML comment sitting between &ldquo;as&rdquo; and the character name, and a strip that was too greedy about it, so Doctor Strange vanished from four films. (2) <span class="q">the Joker</span>: the lowercase article meant the string never matched the canonical name, so Ledger&rsquo;s and Leto&rsquo;s Jokers went uncounted. (3) <span class="q">Dr. Stephen Strange</span>: an honorific the lookup didn&rsquo;t strip. (4) <span class="q">J.A.R.V.I.S. and Vision</span>: a dual credit where neither half matched alone. (5) The big one: pages that list returning cast in a prose sentence (<span class="q">Several actors reprise their roles&hellip;</span>) rather than a bullet list were never parsed, so Falcon, Scarlet Witch, Winter Soldier, Star-Lord and a dozen others were missing their <em>Endgame</em> appearance.</dd>
+
+          <dt>&hellip;and the fix</dt>
+          <dd>Strip HTML comments and citations before matching. A case-insensitive lookup that also drops articles and honorifics. Split credits on &ldquo;and&rdquo;. A guarded prose scan that only reads a paragraph if it carries a reprisal cue, only takes clean <code>[[Actor]] as [[Character]]</code> pairs, and skips anything preceded by &ldquo;footage of&rdquo; or &ldquo;was cast&rdquo;. A short, hand-checked overrides file for the last few stars buried in prose. Recovered counts: Joker 1&rarr;4, Magneto 5&rarr;7, Doctor Strange 2&rarr;5, and every <em>Endgame</em> reprisal.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="card-title">The design calls</div>
+        <dl>
+          <dt>Titles state the finding</dt>
+          <dd>Every section headline is the takeaway, not a label. <span class="q">Marvel Studios has out-grossed every DC film combined, nearly three to one</span>, never <span class="q">Gross by universe</span>. If a title can&rsquo;t say something, the chart probably shouldn&rsquo;t exist.</dd>
+
+          <dt>The palette was computed, not chosen</dt>
+          <dd>The red/blue franchise convention is gone, because red read too close to pink for the person who has to look at this daily. The replacement is a colour-blind-safe set checked <em>with a script</em>, pair by pair, in both light and dark. Established along the way: five or more saturated categorical hues cannot pass an all-pairs colour-blindness test in both modes. Confirmed against two published palettes. Every universe also carries a shape, so identity is never colour alone.</dd>
+
+          <dt>The sixth colour is grey on purpose</dt>
+          <dd>Once the Fox films arrived, six distinct chromatic colours was not possible. Elseworlds, the standalone films attached to no franchise engine, is drawn in grey. It fails the palette validator&rsquo;s chroma floor by design: grey <em>is</em> the &ldquo;doesn&rsquo;t belong to a machine&rdquo; signal.</dd>
+
+          <dt>Things this site never does</dt>
+          <dd>No dual-axis charts: two measures of different scale become two charts. No trend line where the data doesn&rsquo;t support one (reviews vs. gross; film size over time), because fitting one invents a relationship. No mean where a median is honest; one $2.8B film drags a mean around.</dd>
+
+          <dt>Why the legs chart uses a log axis</dt>
+          <dd>On a linear dollar axis, the connector length would be <em>dollars added after opening weekend</em>, which flatters big films. On a log axis the pixel length equals the multiplier, which is the thing being ranked.</dd>
+
+          <dt>The treemap is a compromise, and says so</dt>
+          <dd>People judge area badly, and long thin rectangles worst of all. It stays because it delivers the &ldquo;wall of green&rdquo; in one glance. But a clipped title reads as a mistake, so a film&rsquo;s name appears only when it fits the cell uncut; otherwise you get the gross and the tooltip.</dd>
+
+          <dt>The budget line admits its weak spots</dt>
+          <dd>Each year&rsquo;s marker is sized by how many films sit behind its median. The early-2000s points often rest on a single film, so they&rsquo;re small, and the eye discounts that stretch without being told to.</dd>
+
+          <dt>The table is the backbone</dt>
+          <dd>Every value a chart encodes with position, length or colour is a plain sortable number in §13. The charts are the argument; the table is the receipts.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="card-title">The scope question, which took three tries</div>
+        <p>This was the hardest editorial call, and the first two answers were wrong.</p>
+        <p><b>Try one: start at 2008</b>, the year the MCU launched. Clean, until the Fox X-Men run went in. <em>X-Men: Days of Future Past</em> is a direct sequel to the 2000 original, so keeping the sequel and cutting the original was indefensible. The start moved to 2000.</p>
+        <p><b>Try two: include an older continuity if an actor later reprised the role.</b> This collapsed within minutes. <em>Deadpool &amp; Wolverine</em>, <em>The Flash</em> and <em>No Way Home</em> have brought back nearly every dormant franchise on screen. A cameo can&rsquo;t be the test, or the scope is everything.</p>
+        <p><b>Try three, which held:</b> every live-action Marvel or DC superhero film whose continuity began in 2000 or later and that is part of a multi-film continuity, meaning a shared universe, a trilogy, or a film with a theatrical sequel. One-and-done films are out; with no sequel there is no franchise arc to compare. It&rsquo;s mechanical, it doesn&rsquo;t leak, and §14 names every exclusion so the argument is on the page, not in someone&rsquo;s head.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">How it&rsquo;s checked</div>
+        <p>Every change is verified by driving a headless browser and reading the rendered page (element counts, computed styles, the actual numbers in the actual DOM) rather than trusting that the code does what it looks like it does. That is how the &minus;$317M scorecard, the phantom <em>Fantastic Four</em>, and the one-film Joker were all caught: by looking at the output instead of the source.</p>
+        <p>None of this was in the plan. The plan was to check 50 numbers.</p>
+        <p>The whole thing, pipeline and page, is on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="foot">
@@ -2377,7 +2378,7 @@
     }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
   }
 
-  /* ---------- §15 anti-patterns (teaching gallery; always every film, nominal $) ---------- */
+  /* ---------- §12 anti-patterns (teaching gallery; always every film, nominal $) ---------- */
   var AP_ORDER = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
   function apDims(hMul) {
     var mob = isMobile();

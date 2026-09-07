@@ -9,7 +9,7 @@ visualization of the lot.
 Grew out of [Bill Yost's *Marvel / DC Box Office*](https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome)
 Tableau Public workbook — a rebuild that turned into a re-verification and a
 much wider scope. The full story of how it got made, with the wrong turns and
-the bugs, is section 14 of the site itself.
+the bugs, is section 15 of the site itself.
 
 ## Scope
 
