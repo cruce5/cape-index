@@ -829,6 +829,7 @@
           <li><b>&ldquo;A profit-per-movie metric on the scoreboard, if the box office subreddit would like it.&rdquo;</b> Added as theatrical P/L per completed film, muted where too few films have finished to average one honestly.</li>
           <li><b>&ldquo;A collection of anti-patterns. Beautiful charts that don&rsquo;t help.&rdquo;</b> §15: eight of them, built from the real data, each with what makes it tempting and what to do instead.</li>
           <li><b>&ldquo;Adversarially audit this entire thing. Pull no punches.&rdquo;</b> Eight pieces of copy had rotted out from under the data (a headline that was false against its own chart, notes still describing a 57-film set). And the 2015 <em>Fantastic Four</em> turned out to be a one-and-done sitting in the Fox bucket, in breach of the rule. <b>&ldquo;Pull it.&rdquo;</b> 91 films.</li>
+          <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel; nothing on a phone is under 10.</li>
         </ol>
       </div>
 
@@ -1149,6 +1150,15 @@
   function activeFilms() { return FILMS.filter(function (f) { return STATE.unis[f.u]; }); }
   function anyUni() { return Object.keys(STATE.unis).some(function (k) { return STATE.unis[k]; }); }
   function isMobile() { return window.matchMedia("(max-width: 640px)").matches; }
+  // Mobile SVG viewBox width. Charts used to draw into a fixed 480-unit box that the phone then
+  // shrank to ~350 CSS px, so every 11-unit label landed at ~8 px. Measuring the real container
+  // makes one viewBox unit one CSS pixel, so a font-size of 11 is actually 11 px.
+  var MW = 360;
+  function measureChartWidth() {
+    var host = document.getElementById("chart-year");
+    var w = host ? host.clientWidth : 0;
+    return Math.max(280, Math.min(640, w || 360));
+  }
   function isDarkMode() {
     var t = document.documentElement.getAttribute("data-theme");
     if (t === "dark") return true;
@@ -1301,7 +1311,7 @@
   /* ---------- §01 stacked columns by year ---------- */
   function renderYear() {
     var mob = isMobile();
-    var W = mob ? 480 : 1000, H = mob ? 300 : 430, m = mob ? { t: 12, r: 8, b: 28, l: 40 } : { t: 14, r: 12, b: 34, l: 46 };
+    var W = mob ? MW : 1000, H = mob ? 300 : 430, m = mob ? { t: 12, r: 8, b: 28, l: 40 } : { t: 14, r: 12, b: 34, l: 46 };
     var years = [];
     for (var y = YEAR0; y <= YEAR1; y++) years.push(y);
     var af = activeFilms();
@@ -1334,8 +1344,8 @@
         bars += '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="2" fill="var(' + COLORVAR[u] + ')"' + (partial ? ' fill-opacity="0.5"' : '') + ' data-y="' + yr + '" data-u="' + u + '" data-v="' + v + '"/>';
         acc += v;
       });
-      if (partial) bars += '<text x="' + x(i) + '" y="' + (yS(acc) - 6) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--ink-muted)">partial</text>';
-      if (!mob || i % 2 === 0) bars += '<text class="lbl" x="' + x(i) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 9 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
+      if (partial) bars += '<text x="' + x(i) + '" y="' + (yS(acc) - 6) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">partial</text>';
+      if (!mob || i % 2 === 0) bars += '<text class="lbl" x="' + x(i) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
     });
     document.getElementById("chart-year").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Stacked columns of worldwide gross by year and universe">' +
@@ -1371,7 +1381,7 @@
   /* ---------- §01 box-and-whisker ---------- */
   function renderBox() {
     var mob = isMobile();
-    var W = mob ? 460 : 1000, rowH = mob ? 82 : 92, m = mob ? { t: 10, r: 12, b: 28, l: 80 } : { t: 10, r: 20, b: 34, l: 96 };
+    var W = mob ? MW : 1000, rowH = mob ? 82 : 92, m = mob ? { t: 10, r: 12, b: 28, l: 80 } : { t: 10, r: 20, b: 34, l: 96 };
     var us = activeUnis();
     var H = m.t + m.b + rowH * us.length;
     var all = activeFilms().filter(function (f) { return !(STATE.outlierHide && val(f, "ww") >= 1e9); });
@@ -1390,7 +1400,7 @@
       var arr = fs.map(function (f) { return val(f, "ww"); }).sort(function (a, b) { return a - b; });
       var cy = m.t + rowH * i + rowH / 2;
       var c = "var(" + COLORVAR[u] + ")";
-      rows += '<text x="' + (m.l - 10) + '" y="' + (cy + 4) + '" text-anchor="end" class="lbl lbl-strong" font-size="' + (mob ? 10 : 12) + '">' + uLabel(u) + (mob ? " " : " · ") + fs.length + "</text>";
+      rows += '<text x="' + (m.l - 10) + '" y="' + (cy + 4) + '" text-anchor="end" class="lbl lbl-strong" font-size="' + (mob ? 12 : 12) + '">' + uLabel(u) + (mob ? " " : " · ") + fs.length + "</text>";
       if (arr.length < 4) {
         if (arr.length >= 2) {
           var md0 = quantile(arr, 0.5);
@@ -1471,7 +1481,7 @@
   }
   function renderTreemap() {
     var mob = isMobile();
-    var W = mob ? 390 : 1000, H = mob ? 620 : 560;
+    var W = mob ? MW : 1000, H = mob ? 620 : 560;
     var af = activeFilms().slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); });
     var items = af.map(function (f) { return { value: val(f, "ww"), f: f }; });
     var cells = squarify(items, 0, 0, W, H);
@@ -1512,7 +1522,7 @@
     var t0 = dateNum(YEAR0 + "-01-01"), t1 = dateNum(YEAR1 + "-12-31");
     var maxWW = Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1;
     var mob = isMobile();
-    var W = mob ? 360 : 1000, H = mob ? 232 : 460;
+    var W = mob ? MW : 1000, H = mob ? 232 : 460;
     var m = mob ? { t: 10, r: 10, b: 22, l: 10 } : { t: 20, r: 20, b: 34, l: 20 };
     var rS = mob
       ? function (v) { return 2 + Math.sqrt(v / maxWW) * 10; }
@@ -1546,7 +1556,7 @@
     for (var y = YEAR0; y <= YEAR1; y += (mob ? 4 : 2)) {
       var p = xOf(y + "-01-01");
       ticks += '<line x1="' + p + '" x2="' + p + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
-      ticks += '<text x="' + p + '" y="' + (H - m.b + (mob ? 13 : 16)) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 9 : 11) + '" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(y).slice(2) : y) + "</text>";
+      ticks += '<text x="' + p + '" y="' + (H - m.b + (mob ? 13 : 16)) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 11) + '" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(y).slice(2) : y) + "</text>";
     }
     var circ = nodes.map(function (n) {
       return '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="0.82" stroke="var(--surface)" stroke-width="' + (mob ? 1 : 1.5) + '" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
@@ -1562,7 +1572,7 @@
   /* ---------- §04 scatter ---------- */
   function renderScatter() {
     var mob = isMobile();
-    var W = mob ? 380 : 1000, H = mob ? 380 : 470;
+    var W = mob ? MW : 1000, H = mob ? 380 : 470;
     var m = mob ? { t: 16, r: 14, b: 30, l: 42 } : { t: 20, r: 24, b: 34, l: 46 };
     var mr = mob ? 4.5 : 6, topN = mob ? 3 : 6, yStep = mob ? 6 : 2;
     var af = activeFilms();
@@ -1603,7 +1613,7 @@
       pts += mark(cx, cy, f.u, FILMS.indexOf(f));
       if (top.indexOf(f) > -1) {
         var rightSide = cx > m.l + iw * 0.55;
-        labels += '<text x="' + (rightSide ? cx - 10 : cx + 10) + '" y="' + (cy + 3) + '" text-anchor="' + (rightSide ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 10 : 11) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 20) : f.t) + "</text>";
+        labels += '<text x="' + (rightSide ? cx - 10 : cx + 10) + '" y="' + (cy + 3) + '" text-anchor="' + (rightSide ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 11) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 20) : f.t) + "</text>";
       }
     });
     document.getElementById("chart-scatter").innerHTML =
@@ -1626,7 +1636,7 @@
     var mode = STATE.splitSort === "intl";
     var maxWW = Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1;
     var mob = isMobile();
-    var W = mob ? 360 : 1000, rowH = mob ? 38 : 20;
+    var W = mob ? MW : 1000, rowH = mob ? 38 : 20;
     var m = mob ? { t: 18, r: 8, b: 6, l: 8 } : { t: 26, r: 60, b: 10, l: 220 };
     var hN = mob ? 8 : 12;
     var HT = headTail(af, hN, hN, !!STATE.expand.split);
@@ -1803,7 +1813,7 @@
   /* ---------- §05 budget arms race ---------- */
   function renderBudget() {
     var mob = isMobile();
-    var W = mob ? 480 : 1000, H = mob ? 300 : 420, m = mob ? { t: 14, r: 10, b: 26, l: 42 } : { t: 16, r: 18, b: 34, l: 54 };
+    var W = mob ? MW : 1000, H = mob ? 300 : 420, m = mob ? { t: 14, r: 10, b: 26, l: 42 } : { t: 16, r: 18, b: 34, l: 54 };
     var af = activeFilms();
     var years = [];
     for (var y = YEAR0; y <= YEAR1; y++) years.push(y);
@@ -1832,7 +1842,7 @@
       return '<circle cx="' + xS(p.yr) + '" cy="' + yS(p.med) + '" r="' + r + '" fill="var(--dceu)" stroke="var(--surface)" stroke-width="1.5" class="budDot" data-yr="' + p.yr + '" data-med="' + p.med + '" data-n="' + p.n + '"/>';
     }).join("");
     var xlab = "";
-    for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) xlab += '<text x="' + xS(yy) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 9 : 11) + '" fill="var(--ink-muted)">' + (mob ? "’" + String(yy).slice(2) : yy) + "</text>";
+    for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) xlab += '<text x="' + xS(yy) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 11) + '" fill="var(--ink-muted)">' + (mob ? "’" + String(yy).slice(2) : yy) + "</text>";
     var last = pts[pts.length - 1];
     document.getElementById("chart-budget").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Median production budget by year">' +
@@ -1878,7 +1888,7 @@
       : "";
     var svg;
     if (mob) {
-      var W = 360, rowH = 31, top = 20, padX = 8, foldH = fi > -1 ? 30 : 0;
+      var W = MW, rowH = 31, top = 20, padX = 8, foldH = fi > -1 ? 30 : 0;
       var H = top + rowH * list.length + foldH;
       var iw = W - padX * 2;
       var sc = iw / (maxPos + maxNeg);
@@ -1964,13 +1974,13 @@
     var hN = mob ? 8 : 12;
     var HT = headTail(af, hN, hN, !!STATE.expand.legs);
     var fold = { rows: HT.rows, fold: HT.foldIdx, label: HT.foldIdx > -1 ? (HT.hidden + " more · " + af[hN - 1].mult.toFixed(1) + "× down to " + af[af.length - hN].mult.toFixed(1) + "×") : "" };
-    var W = mob ? 360 : 1000, rowH = mob ? 31 : 16;
+    var W = mob ? MW : 1000, rowH = mob ? 31 : 16;
     var m = mob ? { t: 18, r: 44, b: 6, l: 12 } : { t: 22, r: 66, b: 8, l: 218 };
     var foldH = fold.fold > -1 ? 26 : 0;
     var H = m.t + m.b + rowH * fold.rows.length + foldH;
     var iw = W - m.l - m.r;
     var xS = function (v) { return m.l + (Math.log10(Math.max(1, v)) - l0) / (l1 - l0) * iw; };
-    var g = mob ? "" : '<text x="2" y="13" text-anchor="start" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">domestic $ · log scale</text>';
+    var g = mob ? "" : '<text x="2" y="13" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">domestic $ · log scale</text>';
     [1e7, 3e7, 1e8, 3e8, 1e9].forEach(function (t) {
       if (t < lo || t > hi) return;
       g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
@@ -2025,7 +2035,7 @@
   /* ---------- §08 reviews vs revenue ---------- */
   function renderReviews() {
     var mob = isMobile();
-    var W = mob ? 380 : 1000, H = mob ? 380 : 440;
+    var W = mob ? MW : 1000, H = mob ? 380 : 440;
     var m = mob ? { t: 14, r: 12, b: 34, l: 40 } : { t: 18, r: 20, b: 40, l: 54 };
     var af = activeFilms().filter(function (f) { return f.rt != null; });
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
@@ -2051,17 +2061,17 @@
     if (mob) pick = pick.slice(0, 2);
     var labs = pick.map(function (f) {
       var x = xS(f.rt), right = f.rt > 55;
-      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 10 : 11) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 18) : f.t) + "</text>";
+      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 11) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 18) : f.t) + "</text>";
     }).join("");
     document.getElementById("chart-reviews").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Rotten Tomatoes critic score versus worldwide gross"><g class="grid">' + g + "</g>" + pts + labs +
-      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 10 : 11) + '">RT critic score</text></svg>';
+      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 11) + '">RT critic score</text></svg>';
     wireDots(document.querySelector("#chart-reviews svg"));
     legend("leg-rev", activeUnis(), false, true);
   }
   function renderParity() {
     var mob = isMobile();
-    var W = mob ? 360 : 1000, H = mob ? 360 : 440;
+    var W = mob ? MW : 1000, H = mob ? 360 : 440;
     var m = mob ? { t: 12, r: 12, b: 30, l: 34 } : { t: 18, r: 20, b: 40, l: 46 };
     var af = activeFilms().filter(function (f) { return f.rt != null && f.imdb != null; });
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
@@ -2080,12 +2090,12 @@
     var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
     var labs = gap.map(function (f) {
       var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 55;
-      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 10 : 11) + '" style="pointer-events:none">' + esc(clip(f.t, mob ? 16 : 24)) + "</text>";
+      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 11) + '" style="pointer-events:none">' + esc(clip(f.t, mob ? 16 : 24)) + "</text>";
     }).join("");
     document.getElementById("chart-parity").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + diag + pts + labs +
-      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 9 : 11) + '">RT critic score &rarr;</text>' +
-      '<text transform="translate(' + (mob ? 9 : 12) + ',' + (m.t + ih / 2) + ') rotate(-90)" text-anchor="middle" class="lbl" font-size="' + (mob ? 9 : 11) + '">IMDb rating &times;10 &rarr;</text></svg>';
+      '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 11) + '">RT critic score &rarr;</text>' +
+      '<text transform="translate(' + (mob ? 9 : 12) + ',' + (m.t + ih / 2) + ') rotate(-90)" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 11) + '">IMDb rating &times;10 &rarr;</text></svg>';
     wireDots(document.querySelector("#chart-parity svg"));
     legend("leg-par", activeUnis(), false, true);
   }
@@ -2122,7 +2132,7 @@
     var idxOf = {}; af.forEach(function (f, i) { idxOf[f.t] = i; });
     var rows = activeChars();
     if (mob) {
-      var W = 360, m = { t: 14, r: 10, b: 8, l: 8 }, rowH = 30;
+      var W = MW, m = { t: 14, r: 10, b: 8, l: 8 }, rowH = 30;
       var show = rows.slice(0, 20);
       var H = m.t + m.b + rowH * show.length;
       var iw = W - m.l - m.r;
@@ -2143,7 +2153,7 @@
       for (var y = YEAR0; y <= YEAR1; y += 6) {
         var fi = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= y; });
         if (fi < 0) continue;
-        yl += '<text x="' + xI(fi) + '" y="10" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--ink-muted)">’' + String(y).slice(2) + "</text>";
+        yl += '<text x="' + xI(fi) + '" y="10" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">’' + String(y).slice(2) + "</text>";
       }
       document.getElementById("chart-roster").innerHTML =
         '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Each character\'s film appearances over time">' + yl + body + "</svg>";
@@ -2163,7 +2173,7 @@
         if (f0 < 0) continue;
         var xx = md.l + f0 * colW;
         head += '<line x1="' + xx + '" x2="' + xx + '" y1="' + (md.t - 6) + '" y2="' + (Hd - md.b) + '" stroke="var(--grid)"/>';
-        head += '<text x="' + (xx + 2) + '" y="' + (md.t - 12) + '" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
+        head += '<text x="' + (xx + 2) + '" y="' + (md.t - 12) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
       }
       var grid = showD.map(function (x, r) {
         var yy = md.t + r * rh, c = "var(" + COLORVAR[x.c.u] + ")";
@@ -2209,7 +2219,7 @@
     var af = castFilms();
     var counts = af.map(function (f) { return (CAST.byFilm[f.t] || []).length; });
     var max = Math.max.apply(null, counts.concat([1]));
-    var W = mob ? 480 : 1000, H = mob ? 220 : 300, m = mob ? { t: 12, r: 8, b: 24, l: 26 } : { t: 16, r: 12, b: 28, l: 34 };
+    var W = mob ? MW : 1000, H = mob ? 220 : 300, m = mob ? { t: 12, r: 8, b: 24, l: 26 } : { t: 16, r: 12, b: 28, l: 34 };
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var bw = Math.min(mob ? 8 : 13, iw / af.length * 0.66);
     var x = function (i) { return m.l + (i + 0.5) * (iw / af.length); };
@@ -2218,19 +2228,19 @@
     [0, 5, 10, 15, 20].forEach(function (t) {
       if (t > max) return;
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
-      g += '<text x="' + (m.l - 6) + '" y="' + (yS(t) + 3) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="' + (mob ? 8 : 10) + '" fill="var(--ink-muted)">' + t + "</text>";
+      g += '<text x="' + (m.l - 6) + '" y="' + (yS(t) + 3) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="' + (mob ? 10 : 10) + '" fill="var(--ink-muted)">' + t + "</text>";
     });
     var bars = af.map(function (f, i) {
       var v = counts[i], y1 = yS(v), h = Math.max(0, yS(0) - y1 - 1.5);
       var lbl = "";
-      if (v >= (mob ? 13 : 11)) lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="' + (mob ? 8 : 10) + '">' + clip(f.t, 12) + " " + v + "</text>";
+      if (v >= (mob ? 13 : 11)) lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="' + (mob ? 10 : 10) + '">' + clip(f.t, 12) + " " + v + "</text>";
       return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + COLORVAR[f.u] + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
     }).join("");
     var yl = "";
     for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) {
       var fi = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= yy; });
       if (fi < 0) continue;
-      yl += '<text x="' + x(fi) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 8 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yy).slice(2)) + "</text>";
+      yl += '<text x="' + x(fi) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 10 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yy).slice(2)) + "</text>";
     }
     document.getElementById("chart-ensemble").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Number of codenamed characters per film, in release order">' +
@@ -2257,7 +2267,7 @@
     var rows = allRows;
     var hidden = 0;
     var max = Math.max.apply(null, rows.map(function (x) { return x.films.length; }).concat([1]));
-    var W = mob ? 360 : 1000, rowH = mob ? 26 : 15;
+    var W = mob ? MW : 1000, rowH = mob ? 26 : 15;
     var m = mob ? { t: 14, r: 30, b: 8, l: 8 } : { t: 16, r: 40, b: 8, l: 180 };
     var H = m.t + m.b + rowH * rows.length + (folded ? 22 : 0);
     var iw = W - m.l - m.r;
@@ -2265,7 +2275,7 @@
     var g = "";
     for (var t = 0; t <= max; t += (mob ? 3 : 2)) {
       g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
-      g += '<text x="' + xS(t) + '" y="10" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">' + t + "</text>";
+      g += '<text x="' + xS(t) + '" y="10" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + t + "</text>";
     }
     var body = rows.map(function (x, i) {
       var c = "var(" + COLORVAR[x.c.u] + ")", n = x.films.length;
@@ -2309,8 +2319,15 @@
   var AP_ORDER = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
   function apDims(hMul) {
     var mob = isMobile();
+    // the .ap-chart wrapper carries its own padding, so measure it rather than reuse MW
+    var host = document.getElementById("ap-dual"), inner = 0;
+    if (host && host.clientWidth) {
+      var cs = getComputedStyle(host); // clientWidth includes the padding; the SVG only gets the content box
+      inner = host.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    }
+    var w = mob ? Math.max(260, inner || MW - 24) : 1000;
     return {
-      mob: mob, W: mob ? 480 : 1000, H: Math.round((mob ? 240 : 300) * (hMul || 1)),
+      mob: mob, W: w, H: Math.round((mob ? 240 : 300) * (hMul || 1)),
       m: mob ? { t: 18, r: 16, b: 30, l: 46 } : { t: 22, r: 22, b: 36, l: 60 }
     };
   }
@@ -2338,7 +2355,7 @@
     years.forEach(function (yr, idx) { if (bud[idx] == null) return; var yy = yB(bud[idx]); bars += '<rect x="' + (xS(idx) - bw / 2) + '" y="' + yy + '" width="' + bw + '" height="' + Math.max(0, m.t + ih - yy) + '" rx="2" fill="var(--dceu)" fill-opacity="0.5"/>'; });
     var pts = []; years.forEach(function (yr, idx) { if (grs[idx] != null) pts.push([xS(idx), yG(grs[idx])]); });
     var path = pts.map(function (p, idx) { return (idx ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); }).join(" ");
-    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 9 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
+    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 11 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
     document.getElementById("ap-dual").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Dual-axis chart of median budget and median gross by year, an anti-pattern">' +
       "<g>" + g + xlab + "</g>" + bars +
@@ -2425,7 +2442,7 @@
       var dn = lower.map(function (v, i) { return xS(i).toFixed(1) + " " + yS(v).toFixed(1); }).reverse();
       areas += '<path d="M' + up.join(" L") + " L" + dn.join(" L") + ' Z" fill="var(' + COLORVAR[k] + ')" fill-opacity="0.82"/>';
     });
-    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 9 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
+    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 11 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
     document.getElementById("ap-cumul").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Cumulative stacked area of box office over time, an anti-pattern">' +
       "<g>" + g + xlab + "</g>" + areas +
@@ -2473,7 +2490,7 @@
     var bars = fs.map(function (f, i) {
       var yy = m.t + i * gap + (gap - bh) / 2, cap = d.mob ? 15 : 24;
       return '<rect x="' + m.l + '" y="' + yy + '" width="' + (xS(f.roi) - m.l) + '" height="' + bh + '" rx="2" fill="var(' + COLORVAR[f.u] + ')"/>' +
-        '<text x="' + (m.l - 8) + '" y="' + (yy + bh / 2 + 3.5) + '" text-anchor="end" font-family="IBM Plex Sans" font-size="' + (d.mob ? 9 : 10.5) + '" fill="var(--ink-2)">' + esc(f.t.length > cap ? f.t.slice(0, cap - 1) + "…" : f.t) + "</text>" +
+        '<text x="' + (m.l - 8) + '" y="' + (yy + bh / 2 + 3.5) + '" text-anchor="end" font-family="IBM Plex Sans" font-size="' + (d.mob ? 10.5 : 10.5) + '" fill="var(--ink-2)">' + esc(f.t.length > cap ? f.t.slice(0, cap - 1) + "…" : f.t) + "</text>" +
         '<text x="' + (xS(f.roi) + 5) + '" y="' + (yy + bh / 2 + 3.5) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + f.roi.toFixed(1) + "×</text>";
     }).join("");
     document.getElementById("ap-roi").innerHTML =
@@ -2509,7 +2526,7 @@
     metrics.forEach(function (mm, i) {
       var e = pt(i, 1), lp = pt(i, 1.17);
       web += '<line x1="' + cx + '" y1="' + cy + '" x2="' + e[0] + '" y2="' + e[1] + '" stroke="var(--grid)"/>';
-      web += '<text x="' + lp[0] + '" y="' + lp[1] + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">' + mm.name + "</text>";
+      web += '<text x="' + lp[0] + '" y="' + lp[1] + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + mm.name + "</text>";
     });
     var polys = AP_ORDER.map(function (k, ki) {
       return '<polygon points="' + metrics.map(function (_, i) { return pt(i, 0.08 + 0.92 * norm[i][ki]).join(" "); }).join(" ") + '" fill="var(' + COLORVAR[k] + ')" fill-opacity="0.16" stroke="var(' + COLORVAR[k] + ')" stroke-width="1.5"/>';
@@ -2533,7 +2550,7 @@
       });
     });
     var ylab = AP_ORDER.map(function (k, ri) { return '<text x="' + (m.l - 8) + '" y="' + (m.t + ri * chh + chh / 2 + 3.5) + '" text-anchor="end" font-family="IBM Plex Sans" font-size="10" fill="var(--ink-2)">' + uLabel(k) + "</text>"; }).join("");
-    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + (m.l + i * cw + cw / 2) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 8 : 9) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
+    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + (m.l + i * cw + cw / 2) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 10 : 9) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
     document.getElementById("ap-rainbow").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Year by universe heatmap on a rainbow colour scale, an anti-pattern">' + cells + ylab + xlab + "</svg>";
   }
@@ -2547,6 +2564,7 @@
   /* ---------- render all ---------- */
   function renderAll() {
     if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
+    MW = measureChartWidth();
     renderThesis();
     renderScorecards();
     renderYear();
@@ -2659,7 +2677,8 @@
   window.addEventListener("resize", function () {
     clearTimeout(rz);
     rz = setTimeout(function () {
-      if (isMobile() !== wasMobile) { wasMobile = isMobile(); renderAll(); }
+      // re-render on a desktop/mobile flip, or when a phone rotates far enough to change the chart width
+      if (isMobile() !== wasMobile || (isMobile() && Math.abs(measureChartWidth() - MW) > 24)) { wasMobile = isMobile(); renderAll(); }
     }, 200);
   });
 })();
