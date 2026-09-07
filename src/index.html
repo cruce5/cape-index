@@ -183,11 +183,13 @@
   .pg .pt .tn { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
   /* contents is collapsed by default so a chart is closer to the top; the summary is the one-line toggle */
   .contents { margin-top: 16px; max-width: 58rem; }
-  .contents .ct { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  /* the summary is styled as an obvious pill button (accent chevron, border, hover) so it
+     reads as tappable, not a static label */
+  .contents .ct { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--surface); transition: color 0.15s, border-color 0.15s, background 0.15s; }
   .contents .ct::-webkit-details-marker { display: none; }
-  .contents .ct::before { content: "\25B8"; font-size: 13px; letter-spacing: 0; transition: transform 0.15s; }
-  .contents[open] .ct::before { transform: rotate(90deg); }
-  .contents .ct:hover { color: var(--ink-2); }
+  .contents .ct::after { content: "\25BE"; font-size: 12px; letter-spacing: 0; color: var(--note); transition: transform 0.2s; }
+  .contents[open] .ct::after { transform: rotate(180deg); }
+  .contents .ct:hover, .contents .ct:focus-visible { color: var(--ink); border-color: var(--note); background: var(--surface-2); }
   .contents ol { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
   .contents li.ca { grid-column: 1 / -1; margin-top: 12px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
   .contents li.ca:first-child { margin-top: 0; }
@@ -439,10 +441,10 @@
     <h1>The Cape Index</h1>
     <p class="byline">By <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a></p>
     <p class="dek">Every live-action Marvel and DC superhero film since 2000 that&rsquo;s part of a franchise, and what each one made. Grosses come from Box&nbsp;Office&nbsp;Mojo, checked one film at a time; any figure switches to 2025 dollars.</p>
-    <p class="teach-hint">It also works as a set of worked examples. Turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is: the form, the color, and what it can&rsquo;t tell you. The switch also lives in the control bar.</p>
+    <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is.</p>
     <div class="thesis" id="thesis"></div>
     <details class="contents" aria-label="Contents">
-      <summary class="ct">Contents &nbsp;&middot;&nbsp; fifteen findings, seven tabs</summary>
+      <summary class="ct">Contents &middot; 15 findings, 7 tabs</summary>
       <ol id="contents-list"></ol>
     </details>
   </div>
