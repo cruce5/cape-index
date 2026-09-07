@@ -775,7 +775,7 @@
         <div class="card-head">
           <div>
             <div class="card-title">Codenamed characters per film</div>
-            <div class="card-note">How many heroes and villains each film puts on screen, in release order. Infinity War tops out at 22.</div>
+            <div class="card-note">How many heroes and villains each film puts on screen: in release order on a wide screen, ranked on a phone. <span id="ens-top">Avengers: Endgame tops out at 33.</span></div>
           </div>
           <div class="legend" id="leg-ensemble"></div>
         </div>
@@ -1027,6 +1027,8 @@
           <li><b>&ldquo;On mobile, can the filters collapse into an expandable bar that follows the scroll?&rdquo;</b> They stick under the tabs now, folded to one row that says what is selected, and open on tap.</li>
           <li><b>&ldquo;I like the scorecards left to right instead of stacked. Do an entire viz audit of both desktop and mobile, with haste.&rdquo;</b> The three masthead tiles sit side by side on a phone. A script walked every chart at 412 and 1200 pixels measuring label boxes against each other and against the chart edge: ten collisions, from a /usr/bin/bash tick sitting on a &rsquo;00 year label to two bar labels printing on top of each other. All ten fixed; both widths now report zero.</li>
           <li><b>&ldquo;Design notes and the filters are too buried now. And the copy says &lsquo;up in the toolbar&rsquo; when the bar is below it.&rdquo;</b> The masthead line is now the switch itself; the phone bar carries a Notes pill outside the fold; the notes control turns gold when on, everywhere it appears.</li>
+          <li><b>&ldquo;This chart is tough on mobile.&rdquo;</b> The characters-per-film chart drew 91 bars three pixels wide on a phone. It is a ranked list there now, top twelve and a fold; the wide screen keeps the timeline. Its note also still said Infinity War topped out at 22, from before the cast scraper was fixed, and the axis stopped at 20 under a bar that reached 33. The number is read from the data now.</li>
+
         </ol>
       </div>
 
@@ -2323,34 +2325,62 @@
     var af = castFilms();
     var counts = af.map(function (f) { return (CAST.byFilm[f.t] || []).length; });
     var max = Math.max.apply(null, counts.concat([1]));
-    var W = mob ? MW : 1000, H = mob ? 220 : 300, m = mob ? { t: 12, r: 8, b: 24, l: 26 } : { t: 16, r: 12, b: 28, l: 34 };
-    var iw = W - m.l - m.r, ih = H - m.t - m.b;
-    var bw = Math.min(mob ? 8 : 13, iw / af.length * 0.66);
-    var x = function (i) { return m.l + (i + 0.5) * (iw / af.length); };
-    var yS = function (v) { return m.t + ih - (v / max) * ih; };
-    var g = "";
-    [0, 5, 10, 15, 20].forEach(function (t) {
-      if (t > max) return;
-      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
-      g += '<text x="' + (m.l - 6) + '" y="' + (yS(t) + (t === 0 ? -2 : 3)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="' + (mob ? 10 : 10) + '" fill="var(--ink-muted)">' + t + "</text>";
-    });
-    var lastLbl = -1e9;
-    var bars = af.map(function (f, i) {
-      var v = counts[i], y1 = yS(v), h = Math.max(0, yS(0) - y1 - 1.5);
-      var lbl = "";
-      // two tall bars a column apart would print their labels on top of each other; keep the first
-      if (v >= (mob ? 13 : 11) && x(i) - lastLbl > (mob ? 60 : 88)) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="' + (mob ? 10 : 10) + '">' + clip(f.t, 12) + " " + v + "</text>"; }
-      return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + COLORVAR[f.u] + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
-    }).join("");
-    var yl = "", lastLab = -1e9;
-    for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) {
-      var fi = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= yy; });
-      if (fi < 0 || x(fi) - lastLab < 26) continue; lastLab = x(fi);
-      yl += '<text x="' + x(fi) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 10 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yy).slice(2)) + "</text>";
+    var host = document.getElementById("chart-ensemble");
+    // the "tops out at" clause in the card note follows the data instead of a typed number
+    var topI = counts.indexOf(max), topEl = document.getElementById("ens-top");
+    if (topEl && topI > -1) topEl.textContent = af[topI].t + " tops out at " + max + ".";
+    if (mob) {
+      // 91 bars three pixels wide is noise on a phone. Rank the films instead, fold the tail.
+      var order = af.map(function (f, i) { return { f: f, v: counts[i] }; }).sort(function (a, b) { return b.v - a.v || (a.f.date < b.f.date ? -1 : 1); });
+      var HT = headTail(order, 12, 0, !!STATE.expand.ensemble);
+      var rows = HT.rows, fi = HT.foldIdx;
+      var W = MW, rowH = 27, m = { t: 6, r: 34, b: 6, l: 8 }, foldH = fi > -1 ? 26 : 0;
+      var H = m.t + m.b + rowH * rows.length + foldH;
+      var iw = W - m.l - m.r;
+      var xS = function (v) { return m.l + (v / max) * iw; };
+      var body = rows.map(function (r, i) {
+        var yt = m.t + i * rowH + (fi > -1 && i >= fi ? foldH : 0);
+        var c = "var(" + COLORVAR[r.f.u] + ")";
+        return "<g>" +
+          '<rect x="0" y="' + yt + '" width="' + W + '" height="' + rowH + '" fill="transparent" class="ensBar" data-i="' + FILMS.indexOf(r.f) + '" data-v="' + r.v + '"/>' +
+          '<rect x="' + m.l + '" y="' + (yt + 6) + '" width="7" height="7" rx="1.5" fill="' + c + '"/>' +
+          '<text x="' + (m.l + 13) + '" y="' + (yt + 12.5) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(r.f.t, 28)) + "</text>" +
+          '<text x="' + (W - m.r + 30) + '" y="' + (yt + 12.5) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-2)">' + r.v + "</text>" +
+          '<rect x="' + m.l + '" y="' + (yt + 18) + '" width="' + Math.max(2, xS(r.v) - m.l) + '" height="5" rx="1.5" fill="' + c + '"/>' +
+          "</g>";
+      }).join("");
+      var mark = fi > -1 ? '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fi + 17) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">· ' + HT.hidden + " more · " + order[fi - 1].v + " down to " + order[order.length - 1].v + " ·</text>" : "";
+      host.innerHTML = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films ranked by number of codenamed characters">' + body + mark + "</svg>";
+      foldToggle("chart-ensemble", "ensemble", af.length);
+    } else {
+      var stray = host.nextElementSibling; if (stray && stray.classList.contains("collapse-toggle")) stray.remove();
+      var W = 1000, H = 300, m = { t: 16, r: 12, b: 28, l: 34 };
+      var iw = W - m.l - m.r, ih = H - m.t - m.b;
+      var step = max > 30 ? 10 : 5, top = Math.ceil(max / step) * step;
+      var bw = Math.min(13, iw / af.length * 0.66);
+      var x = function (i) { return m.l + (i + 0.5) * (iw / af.length); };
+      var yS = function (v) { return m.t + ih - (v / top) * ih; };
+      var g = "";
+      for (var t = 0; t <= top; t += step) {
+        g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
+        g += '<text x="' + (m.l - 6) + '" y="' + (yS(t) + (t === 0 ? -2 : 3)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + t + "</text>";
+      }
+      var lastLbl = -1e9;
+      var bars = af.map(function (f, i) {
+        var v = counts[i], y1 = yS(v), h = Math.max(0, yS(0) - y1 - 1.5);
+        var lbl = "";
+        if (v >= 11 && x(i) - lastLbl > 88) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="10">' + clip(f.t, 12) + " " + v + "</text>"; }
+        return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + COLORVAR[f.u] + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
+      }).join("");
+      var yl = "", lastLab = -1e9;
+      for (var yy = YEAR0; yy <= YEAR1; yy += 2) {
+        var fi2 = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= yy; });
+        if (fi2 < 0 || x(fi2) - lastLab < 26) continue; lastLab = x(fi2);
+        yl += '<text x="' + x(fi2) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + ("'" + String(yy).slice(2)) + "</text>";
+      }
+      host.innerHTML = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Number of codenamed characters per film, in release order">' +
+        '<g class="grid">' + g + yl + "</g>" + bars + "</svg>";
     }
-    document.getElementById("chart-ensemble").innerHTML =
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Number of codenamed characters per film, in release order">' +
-      '<g class="grid">' + g + yl + "</g>" + bars + "</svg>";
     document.querySelectorAll("#chart-ensemble .ensBar").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
       tipBind(el, function () {
@@ -2365,7 +2395,6 @@
     legend("leg-ensemble", activeUnis());
   }
 
-  /* ---------- §11 footprint (lollipop) ---------- */
   function renderFootprint() {
     var mob = isMobile();
     var allRows = activeChars().filter(function (x) { return x.films.length >= 2; });
