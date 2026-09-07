@@ -151,7 +151,8 @@
     border-bottom: 1px solid var(--border);
   }
   .controls-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding-top: 12px; padding-bottom: 12px; }
-  .controls { top: 45px; }
+  .controls { top: var(--tabs-h, 45px); }
+  .ctl-toggle { display: none; }
 
   /* ============ SECTION TABS + CONTENTS ============ */
   .tabs { position: sticky; top: 0; z-index: 51; background: color-mix(in srgb, var(--page) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
@@ -180,7 +181,7 @@
   .contents li a { display: flex; gap: 10px; text-decoration: none; color: var(--ink-2); font-size: 14px; line-height: 1.35; padding: 3px 0; }
   .contents li a:hover { color: var(--ink); }
   .contents .cn { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-muted); flex: none; padding-top: 3px; letter-spacing: 0.06em; }
-  section.view, .act { scroll-margin-top: 112px; }
+  section.view, .act { scroll-margin-top: calc(var(--sticky-h, 104px) + 8px); }
   .cgroup { display: flex; align-items: center; gap: 8px; }
   .clabel { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); font-family: "IBM Plex Mono", monospace; }
   .asof-group { margin-left: auto; }
@@ -365,11 +366,19 @@
     .sc .big { font-size: 20px; margin-top: 2px; }
     .sc .rows { margin-top: 8px; gap: 4px; }
     .sc .row { font-size: 12px; }
-    .controls { position: static; }
+    .controls { position: sticky; top: var(--tabs-h, 40px); z-index: 50; }
+    .ctl-toggle { display: block; width: 100%; appearance: none; border: 0; background: transparent; color: var(--ink); font: inherit; text-align: left; padding: 0; cursor: pointer; }
+    .ctl-row { display: flex; align-items: center; gap: 10px; padding: 9px 16px; min-height: 40px; }
+    .ctl-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); flex: none; }
+    .ctl-summary { flex: 1 1 auto; font-size: 13px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ctl-chev { flex: none; width: 8px; height: 8px; border-right: 1.5px solid var(--ink-2); border-bottom: 1.5px solid var(--ink-2); transform: rotate(45deg); margin: 0 4px 3px 0; transition: transform 120ms; }
+    .controls.open .ctl-chev { transform: rotate(225deg); margin-bottom: -3px; }
+    .controls-inner { display: none; padding-top: 4px; padding-bottom: 12px; border-top: 1px solid var(--border); }
+    .controls.open .controls-inner { display: flex; }
     .tab { padding: 12px 10px 10px; font-size: 13px; }
     .contents { margin-top: 22px; }
     .contents ol { grid-template-columns: 1fr; }
-    section.view, .act { scroll-margin-top: 54px; }
+    section.view, .act { scroll-margin-top: calc(var(--sticky-h, 80px) + 6px); }
     .pager { padding: 18px 0 6px; }
     .pg { padding: 11px 13px; }
     .pg .pt { font-size: 15.5px; }
@@ -421,7 +430,8 @@
 </nav>
 
 <nav class="controls" aria-label="Chart controls">
-  <div class="wrap controls-inner">
+  <button class="ctl-toggle" aria-expanded="false" aria-controls="controls-inner"><span class="wrap ctl-row"><span class="ctl-label">Filters</span><span class="ctl-summary" id="ctl-summary"></span><span class="ctl-chev" aria-hidden="true"></span></span></button>
+  <div class="wrap controls-inner" id="controls-inner">
     <div class="cgroup" role="group" aria-label="Filter by universe">
       <span class="clabel">Universe</span>
       <button class="pill" data-uni="MCU" style="--c:var(--mcu)" aria-pressed="true"><span class="dot"></span>MCU</button>
@@ -1005,6 +1015,7 @@
           <li><b>&ldquo;Do all of our white / grey text hues pass contrast on the dark background?&rdquo;</b> They do: the greys sit at 5.0 to 8.4 to 1 on every dark surface, AA or better. The audit found the misses elsewhere: two coloured axis labels in §12, the light-theme profit and loss colours on tooltip backgrounds by a hair, a token the forced-light block had never received at all, and the treemap: white labels on the MCU green were 3 to 1. Each cell now picks dark or white ink by measuring its own fill.</li>
           <li><b>&ldquo;We are way too scrolly now. People will never go to the bottom. Implement some structure.&rdquo;</b> Fifteen sections became six tabs, one per act, with a contents list under the masthead that carries every finding as a headline. Someone who reads only the contents still gets all fifteen.</li>
           <li><b>&ldquo;Put the mistakes before Reference.&rdquo;</b> Last is where things go to die. Sections renumbered to match. <b>&ldquo;I didn&rsquo;t know to swipe.&rdquo;</b> The tab strip clipped on a phone with nothing saying there was more. Now it fades at the edge while it can still scroll, and every tab ends in a Back and a Next button named for where they go.</li>
+          <li><b>&ldquo;On mobile, can the filters collapse into an expandable bar that follows the scroll?&rdquo;</b> They stick under the tabs now, folded to one row that says what is selected, and open on tap.</li>
         </ol>
       </div>
 
@@ -2671,6 +2682,7 @@
     renderAntipatterns();
     renderFullTable();
     fitMobileText();
+    updateCtlSummary();
   }
   // On a phone every chart label gets two more points. The charts draw at one viewBox unit per
   // CSS pixel on mobile (see MW), so this is a real +2px, applied after render so the ~90
@@ -2787,6 +2799,7 @@
     var active = document.querySelector('.tab[data-tab="' + key + '"]');
     if (active && active.scrollIntoView) active.scrollIntoView({ block: "nearest", inline: "nearest" });
     updateTabStrip();
+    updateStickyVars();
     if (opts.push !== false) history.replaceState(null, "", "#" + key);
     // a tab opened first from a chart-less tab may never have been measured on this width
     if (booted) { var w = measureChartWidth(); if (w && Math.abs(w - MW) > 2) renderAll(); }
@@ -2819,6 +2832,36 @@
     bar.classList.toggle("at-end", !can || strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2);
   }
   (function () { var strip = document.querySelector(".tabs-inner"); if (strip) strip.addEventListener("scroll", updateTabStrip, { passive: true }); window.addEventListener("resize", updateTabStrip); })();
+  /* ---------- collapsible sticky controls (mobile) ---------- */
+  // On a phone the controls used to scroll away. They now stick under the tab bar, collapsed to one
+  // row that names the current filter state, and open on tap. Desktop is unchanged.
+  function updateStickyVars() {
+    var tabs = document.querySelector(".tabs"), ctl = document.querySelector(".controls"), tog = document.querySelector(".ctl-toggle");
+    var th = tabs ? tabs.offsetHeight : 45;
+    var ch = isMobile() ? (tog ? tog.offsetHeight : 0) : (ctl ? ctl.offsetHeight : 0);
+    document.documentElement.style.setProperty("--tabs-h", th + "px");
+    document.documentElement.style.setProperty("--sticky-h", (th + ch) + "px");
+  }
+  function updateCtlSummary() {
+    var el = document.getElementById("ctl-summary"); if (!el) return;
+    var on = UNI.filter(function (u) { return STATE.unis[u.k]; });
+    var unis = on.length === UNI.length ? "All universes" : on.length === 0 ? "No universes" : on.map(function (u) { return u.label; }).join(", ");
+    var bits = [unis, STATE.money === "real" ? "2025 $" : "Nominal"];
+    if (document.body.classList.contains("notes-on")) bits.push("Notes on");
+    el.textContent = bits.join(" \u00b7 ");
+  }
+  (function () {
+    var tog = document.querySelector(".ctl-toggle"), ctl = document.querySelector(".controls");
+    if (!tog || !ctl) return;
+    tog.addEventListener("click", function () {
+      var open = !ctl.classList.contains("open");
+      ctl.classList.toggle("open", open);
+      tog.setAttribute("aria-expanded", open ? "true" : "false");
+      updateStickyVars();
+    });
+    window.addEventListener("resize", updateStickyVars);
+    updateStickyVars();
+  })();
   function goToHash(h) {
     h = (h || location.hash).replace("#", "");
     if (!h) return false;
