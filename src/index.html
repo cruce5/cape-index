@@ -719,7 +719,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Do better reviews go with bigger box office?</dd>
           <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter. The question is whether there&rsquo;s a pattern, and the honest answer is &ldquo;barely.&rdquo;</dd>
-          <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is weak; a line would imply something predictable, which this isn&rsquo;t. The spread is the finding.</dd>
+          <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is weak; a line would imply something predictable, which this isn&rsquo;t. The spread is the finding. Dashed lines mark the median score and median gross, so the four quadrants &mdash; acclaimed and huge, loved but flopped, panned but paid &mdash; read on their own. Hover a dot for guides to both axes.</dd>
           <dt>Watch for</dt><dd>Reviews and gross are both downstream of the same thing: franchise heat, timing, spend. A scatter shows association, never cause.</dd>
         </dl></div>
       </div>
@@ -735,7 +735,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where do critics and the audience disagree, and who liked it more?</dd>
           <dt>Why this form</dt><dd>Plot one score against the other and draw the 45&deg; line where they&rsquo;d match. Distance from the line is the size of the disagreement; the side tells you who was warmer.</dd>
-          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and grey. It&rsquo;s a reference, not data.</dd>
+          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and grey. It&rsquo;s a reference, not data. The two halves are tinted faintly and labelled &mdash; a dot above the line means the audience rated it higher, below means the critics did &mdash; so which side reads at a glance.</dd>
           <dt>Watch for</dt><dd>RT critic % (share of positive reviews) and an IMDb rating (average score) aren&rsquo;t the same kind of measure. The diagonal is a visual aid, not a claim that the scales are equivalent.</dd>
         </dl></div>
       </div>
@@ -1060,6 +1060,8 @@
           <li><b>&ldquo;The sortable table should be its own tab.&rdquo;</b> The ledger moved out of Reference into its own tab, next to it.</li>
           <li><b>&ldquo;Give the billion-dollar bubbles some pop.&rdquo;</b> On the &ldquo;since 2020&rdquo; chart, every film that crossed $1B gets a gold ring and full opacity, so the section&rsquo;s subject reads at a glance.</li>
           <li><b>&ldquo;I don&rsquo;t think the budget chart is great, is there a better way?&rdquo;</b> A median of two or three films a year sawtoothed and buried the trend. Rebuilt as a five-year rolling median with a middle-50% band over every film&rsquo;s dot, so &ldquo;doubled, then flat&rdquo; reads as a shape instead of a zigzag.</li>
+          <li><b>&ldquo;Turn Google Analytics on?&rdquo;</b> Went with Cloudflare Web Analytics instead: cookieless, no consent banner, no third-party sharing. A beacon in the head, nothing else.</li>
+          <li><b>&ldquo;Are the scatterplots supreme? Anything to make them awesome?&rdquo;</b> The reviews scatter got median quadrant lines (acclaimed-and-huge, loved-but-flopped, panned-but-paid); the critic-vs-audience chart got faintly tinted halves with side labels; and all three scatters got a hover crosshair to both axes.</li>
 
         </ol>
       </div>
@@ -1761,7 +1763,9 @@
       '<g class="grid">' + g + "</g>" + refs + pts + labels +
       '<line class="ax" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(0) + '" y2="' + yS(0) + '" stroke="var(--axis)"/>' + "</svg>";
     legend("leg-sc", activeUnis(), false, true);
-    wireDots(document.querySelector("#chart-scatter svg"));
+    var scsvg = document.querySelector("#chart-scatter svg");
+    wireDots(scsvg);
+    wireCrosshair(scsvg, m.l, yS(0));
     var rows = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).map(function (f) {
       return [f.t, uLabel(f.u), f.date, usd(val(f, "ww")), usd(f.open), (f.mult == null ? "&ndash;" : f.mult.toFixed(2) + "×")];
     });
@@ -1920,6 +1924,30 @@
     svg.querySelectorAll(sel).forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
       tipBind(el, function () { return filmTip(f); }, kb);
+    });
+  }
+  // hover a scatter dot -> faint dashed guides to both axes, so you can read where it
+  // falls on each scale at a glance (the tooltip gives the exact numbers)
+  function wireCrosshair(svg, x0, y0) {
+    var NS = "http://www.w3.org/2000/svg";
+    var layer = document.createElementNS(NS, "g");
+    layer.setAttribute("class", "xhair");
+    layer.style.pointerEvents = "none";
+    svg.appendChild(layer);
+    function line(x1, y1, x2, y2) {
+      var l = document.createElementNS(NS, "line");
+      l.setAttribute("x1", x1); l.setAttribute("y1", y1); l.setAttribute("x2", x2); l.setAttribute("y2", y2);
+      l.setAttribute("stroke", "var(--ink-muted)"); l.setAttribute("stroke-opacity", "0.55"); l.setAttribute("stroke-dasharray", "3 3");
+      layer.appendChild(l);
+    }
+    svg.querySelectorAll(".beeDot").forEach(function (el) {
+      el.addEventListener("mouseenter", function () {
+        var b = el.getBBox(), cx = b.x + b.width / 2, cy = b.y + b.height / 2;
+        layer.innerHTML = "";
+        line(cx, cy, cx, y0); // down to the x-axis
+        line(cx, cy, x0, cy); // across to the y-axis
+      });
+      el.addEventListener("mouseleave", function () { layer.innerHTML = ""; });
     });
   }
   function wireDots(svg) { wireFilmMarks(svg, ".beeDot", true); }
@@ -2210,6 +2238,14 @@
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
       g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
+    // median critic score and median gross split the cloud into four zones, so
+    // "acclaimed and huge", "loved but flopped", and "panned but paid" read spatially
+    var medRT = median(af.map(function (f) { return f.rt; }));
+    var medWW = median(af.map(function (f) { return val(f, "ww"); }));
+    var quad = '<line x1="' + xS(medRT) + '" y1="' + m.t + '" x2="' + xS(medRT) + '" y2="' + (H - m.b) + '" stroke="var(--ink-muted)" stroke-opacity="0.35" stroke-dasharray="4 4"/>' +
+      '<line x1="' + m.l + '" y1="' + yS(medWW) + '" x2="' + (W - m.r) + '" y2="' + yS(medWW) + '" stroke="var(--ink-muted)" stroke-opacity="0.35" stroke-dasharray="4 4"/>' +
+      '<text x="' + (xS(medRT) + 5) + '" y="' + (m.t + 15) + '" font-family="IBM Plex Mono" fill="var(--ink-muted)">median score</text>' +
+      '<text x="' + (m.l + 5) + '" y="' + (yS(medWW) - 5) + '" font-family="IBM Plex Mono" fill="var(--ink-muted)">median gross</text>';
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(val(f, "ww")), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
     // label the films that defy the pattern: a panned one that made a fortune,
     // and a well-reviewed one that flopped. That is the "reviews don't drive gross" story
@@ -2223,9 +2259,11 @@
       return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yS(val(f, "ww")) + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 18) + '" style="pointer-events:none">' + esc(mob ? clip(f.t, 18) : f.t) + "</text>";
     }).join("");
     document.getElementById("chart-reviews").innerHTML =
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Rotten Tomatoes critic score versus worldwide gross"><g class="grid">' + g + "</g>" + pts + labs +
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Rotten Tomatoes critic score versus worldwide gross"><g class="grid">' + g + "</g>" + quad + pts + labs +
       '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 18) + '">RT critic score</text></svg>';
-    wireDots(document.querySelector("#chart-reviews svg"));
+    var rsvg = document.querySelector("#chart-reviews svg");
+    wireDots(rsvg);
+    wireCrosshair(rsvg, m.l, H - m.b);
     legend("leg-rev", activeUnis(), false, true);
   }
   function renderParity() {
@@ -2243,8 +2281,14 @@
       g += '<text x="' + xS(t) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "</text>";
       g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "</text>";
     });
+    // faint tint + a label on each side of the diagonal, so which half a dot sits in
+    // tells you who liked it more without decoding the axes
+    var shade = '<path d="M' + xS(0) + " " + yS(0) + "L" + xS(0) + " " + yS(100) + "L" + xS(100) + " " + yS(100) + 'Z" fill="var(--dceu)" fill-opacity="0.05"/>' +
+      '<path d="M' + xS(0) + " " + yS(0) + "L" + xS(100) + " " + yS(0) + "L" + xS(100) + " " + yS(100) + 'Z" fill="var(--ssu)" fill-opacity="0.05"/>' +
+      '<text x="' + xS(5) + '" y="' + yS(93) + '" font-family="IBM Plex Mono" fill="var(--ink-muted)">audience rated higher</text>' +
+      '<text x="' + xS(95) + '" y="' + yS(6) + '" text-anchor="end" font-family="IBM Plex Mono" fill="var(--ink-muted)">critics rated higher</text>';
     var diag = '<line x1="' + xS(0) + '" y1="' + yS(0) + '" x2="' + xS(100) + '" y2="' + yS(100) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>' +
-      '<text x="' + xS(88) + '" y="' + (yS(88) - 6) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">they agree</text>';
+      '<text x="' + xS(80) + '" y="' + (yS(80) - 6) + '" text-anchor="end" font-family="IBM Plex Mono" fill="var(--ink-muted)">they agree</text>';
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(f.imdb * 10), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
     var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
     var labs = gap.map(function (f) {
@@ -2252,10 +2296,12 @@
       return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 18) + '" style="pointer-events:none">' + esc(clip(f.t, mob ? 16 : 24)) + "</text>";
     }).join("");
     document.getElementById("chart-parity").innerHTML =
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + diag + pts + labs +
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + shade + diag + pts + labs +
       '<text x="' + (m.l + iw / 2) + '" y="' + (H - 3) + '" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 18) + '">RT critic score &rarr;</text>' +
       '<text transform="translate(' + (mob ? 9 : 12) + ',' + (m.t + ih / 2) + ') rotate(-90)" text-anchor="middle" class="lbl" font-size="' + (mob ? 11 : 18) + '">IMDb rating &times;10 &rarr;</text></svg>';
-    wireDots(document.querySelector("#chart-parity svg"));
+    var psvg = document.querySelector("#chart-parity svg");
+    wireDots(psvg);
+    wireCrosshair(psvg, m.l, H - m.b);
     legend("leg-par", activeUnis(), false, true);
   }
 
