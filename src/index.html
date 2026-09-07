@@ -290,6 +290,28 @@
   .log ol.asks li b { color: var(--ink); }
   .log .lede { font-size: 15px; color: var(--ink-2); max-width: 52rem; }
 
+  /* ============ ANTI-PATTERNS (§15) ============ */
+  .ap .card + .card { margin-top: 20px; }
+  .ap .ap-head { margin-bottom: 14px; }
+  .ap .ap-tag {
+    display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--neg);
+    border: 1px solid color-mix(in srgb, var(--neg) 45%, transparent); border-radius: 999px;
+    padding: 2px 9px;
+  }
+  .ap .ap-name { font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 700; font-size: 17px; margin-top: 8px; text-wrap: balance; }
+  .ap .ap-chart { border: 1px solid var(--border); border-radius: 10px; padding: 12px 12px 6px; background: var(--surface-2); }
+  .ap dl.ap-tear { margin: 16px 0 0; display: grid; grid-template-columns: 7rem 1fr; gap: 8px 16px; }
+  .ap dl.ap-tear dt { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); padding-top: 2px; }
+  .ap dl.ap-tear dd { margin: 0; font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+  .ap dl.ap-tear dd b { color: var(--ink); font-weight: 600; }
+  .ap dl.ap-tear dd .fix { color: var(--pos); font-weight: 600; }
+  @media (max-width: 620px) {
+    .ap dl.ap-tear { grid-template-columns: 1fr; gap: 3px; }
+    .ap dl.ap-tear dt { margin-top: 10px; }
+    .ap dl.ap-tear dt:first-of-type { margin-top: 0; }
+  }
+
   /* ============ MOBILE ============ */
   @media (max-width: 760px) {
     .wrap { padding: 0 16px; }
@@ -805,6 +827,7 @@
           <li><b>&ldquo;Would a viz snob look at this and go &lsquo;hmm, nice&rsquo;?&rdquo;</b> Treemap labels and the budget markers got a polish pass.</li>
           <li>Bought <em>capeindex.com</em>. Wired the custom domain, and a 301 from <em>thecapeindex.com</em>; every share URL now points there.</li>
           <li><b>&ldquo;A profit-per-movie metric on the scoreboard, if the box office subreddit would like it.&rdquo;</b> Added as theatrical P/L per completed film, muted where too few films have finished to average one honestly.</li>
+          <li><b>&ldquo;A collection of anti-patterns. Beautiful charts that don&rsquo;t help.&rdquo;</b> §15: eight of them, built from the real data, each with what makes it tempting and what to do instead.</li>
         </ol>
       </div>
 
@@ -876,6 +899,123 @@
         <p>Every change is verified by driving a headless browser and reading the rendered page (element counts, computed styles, the actual numbers in the actual DOM) rather than trusting that the code does what it looks like it does. That is how the &minus;$317M scorecard, the phantom <em>Fantastic Four</em>, and the one-film Joker were all caught: by looking at the output instead of the source.</p>
         <p>None of this was in the plan. The plan was to check 50 numbers.</p>
         <p>The whole thing, pipeline and page, is on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="act"><div class="wrap"><h3>The tempting mistakes</h3><span class="rule"></span><span class="sub">beautiful charts that don&rsquo;t help</span></div></div>
+
+  <section class="view ap" id="v-antipatterns">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 15 &nbsp;/&nbsp; ANTI-PATTERNS</span>
+        <h2>Every chart down here is accurate. Not one of them earns its place</h2>
+        <p class="dek">Eight charts, built from the same 92 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film and nominal dollars; the universe filter and the $ toggle up top don&rsquo;t reach them.</p>
+        <div class="legend" id="ap-leg" style="margin-top:14px"></div>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Dual axis</span>
+          <div class="ap-name">Budget and gross on one chart, on two y-axes</div>
+        </div>
+        <div class="ap-chart" id="ap-dual"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>One picture, two related trends, and they seem to move with each other. It reads as a single, finished story.</dd>
+          <dt>But</dt><dd>Neither axis has a meaningful zero, and sliding either one moves where the bars and line cross. From the same numbers you can make budget appear to lead gross, lag it, or drive it.</dd>
+          <dt>Instead</dt><dd><span class="fix">Two panels</span>, or index both series to their year-2000 value so they share one scale. §05 keeps budget on its own axis for exactly this reason.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Pie chart</span>
+          <div class="ap-name">Every film a wedge, sized by worldwide gross</div>
+        </div>
+        <div class="ap-chart" id="ap-pie"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>A pie says &ldquo;here is the whole thing, carved up.&rdquo; Banded by universe, this one also happens to look great.</dd>
+          <dt>But</dt><dd>You can&rsquo;t compare two wedges that aren&rsquo;t adjacent, can&rsquo;t rank the small ones, and can&rsquo;t read a single value. Roughly half the films are slivers.</dd>
+          <dt>Instead</dt><dd>A <span class="fix">sorted bar</span>, or the treemap in §02: still area, but sorted, aligned to an edge, and labelled where a label fits.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Truncated axis</span>
+          <div class="ap-name">Average gross by universe, y-axis starting well above zero</div>
+        </div>
+        <div class="ap-chart" id="ap-trunc"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>The gap between Marvel and the rest finally &ldquo;pops.&rdquo; The chart looks decisive.</dd>
+          <dt>But</dt><dd>Bar length is the encoding. Chop the baseline and the proportions break: this chart shows Marvel around <b id="ap-trunc-fake">3&times;</b> DCEU; the real ratio is <b id="ap-trunc-real">1.9&times;</b>.</dd>
+          <dt>Instead</dt><dd><span class="fix">Bars start at zero</span>, always. If the small differences are the point, use a dot plot. §01 does this.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Cumulative total</span>
+          <div class="ap-name">Running total of worldwide gross, 2000 to 2026</div>
+        </div>
+        <div class="ap-chart" id="ap-cumul"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>It only goes up and to the right. It feels like momentum, an industry on a tear.</dd>
+          <dt>But</dt><dd>A running total <em>can&rsquo;t</em> go down. This shape is guaranteed no matter what the last five years looked like, and it buries the fact that annual output has fallen by two thirds since 2019.</dd>
+          <dt>Instead</dt><dd>Plot <span class="fix">each year&rsquo;s value</span>, not the running sum. §01&rsquo;s year chart shows the decline this view erases.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Trend line</span>
+          <div class="ap-name">Critic score against gross, with a fitted line</div>
+        </div>
+        <div class="ap-chart" id="ap-trend"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>The line turns a shapeless cloud into a claim: better reviews, bigger box office. The R&sup2; label looks like proof.</dd>
+          <dt>But</dt><dd>The fit is weak (<b id="ap-trend-r2">R&sup2;</b>) and most of it is a few films that are both acclaimed and enormous. The line still invites you to read &ldquo;reviews drive gross&rdquo; straight off the slope, which the spread doesn&rsquo;t support.</dd>
+          <dt>Instead</dt><dd><span class="fix">No line.</span> Let the scatter be a scatter. §04 and §08 leave it out for this reason.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Ratio ranking</span>
+          <div class="ap-name">Films ranked by gross divided by production budget</div>
+        </div>
+        <div class="ap-chart" id="ap-roi"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>&ldquo;Return on budget&rdquo; sounds like the grown-up, follow-the-money metric, and the leaderboard is full of surprises.</dd>
+          <dt>But</dt><dd>It&rsquo;s a ratio with budget on the bottom, so it rewards being cheap. A small film that does fine outranks a giant that prints money in actual dollars, and marketing spend isn&rsquo;t in it.</dd>
+          <dt>Instead</dt><dd>Rank by <span class="fix">absolute profit</span> (§06), or plot the ratio against budget so the small-budget tilt is visible.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Radar chart</span>
+          <div class="ap-name">A six-metric &ldquo;fingerprint&rdquo; per universe</div>
+        </div>
+        <div class="ap-chart" id="ap-radar"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>It looks like a character-select screen. You want to say one universe is more &ldquo;well-rounded&rdquo; than another.</dd>
+          <dt>But</dt><dd>The shape&rsquo;s area, the thing the eye compares, depends on the order of the spokes and how each was scaled. Reorder the axes and the &ldquo;winner&rdquo; changes. Six different units don&rsquo;t belong on shared radii.</dd>
+          <dt>Instead</dt><dd><span class="fix">Small multiples</span>: one plain bar chart per metric, same scale across universes.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <div class="ap-head">
+          <span class="ap-tag">&#10007; Rainbow ramp</span>
+          <div class="ap-name">Gross by universe and year, on a rainbow colour scale</div>
+        </div>
+        <div class="ap-chart" id="ap-rainbow"></div>
+        <dl class="ap-tear">
+          <dt>Tempting</dt><dd>&ldquo;Heat&rdquo; looks like data density, and more colours feels like more information.</dd>
+          <dt>But</dt><dd>A rainbow isn&rsquo;t ordered. Is yellow more than green? More than cyan? You keep rechecking the key, and the colour jumps imply thresholds that aren&rsquo;t there. It&rsquo;s also not colour-blind-safe.</dd>
+          <dt>Instead</dt><dd><span class="fix">One hue, light to dark.</span> Lightness carries magnitude on its own, which is what every ramp elsewhere on this page does.</dd>
+        </dl>
       </div>
     </div>
   </section>
@@ -2181,6 +2321,245 @@
     }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
   }
 
+  /* ---------- §15 anti-patterns (teaching gallery; always all 92 films, nominal $) ---------- */
+  var AP_ORDER = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
+  function apDims(hMul) {
+    var mob = isMobile();
+    return {
+      mob: mob, W: mob ? 480 : 1000, H: Math.round((mob ? 240 : 300) * (hMul || 1)),
+      m: mob ? { t: 18, r: 16, b: 30, l: 46 } : { t: 22, r: 22, b: 36, l: 60 }
+    };
+  }
+  function apYearOf(f) { return new Date(f.date).getFullYear(); }
+
+  function apDual() {
+    var d = apDims(), W = d.W, H = d.H, m = d.m, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var years = []; for (var y = YEAR0; y <= YEAR1; y++) years.push(y);
+    var bud = years.map(function (yr) { var b = FILMS.filter(function (f) { return apYearOf(f) === yr && f.budget; }).map(function (f) { return f.budget; }); return b.length ? median(b) : null; });
+    var grs = years.map(function (yr) { var g = FILMS.filter(function (f) { return apYearOf(f) === yr; }).map(function (f) { return f.ww; }); return g.length ? median(g) : null; });
+    var maxB = niceMax(Math.max.apply(null, bud.filter(Boolean)));
+    var maxG = niceMax(Math.max.apply(null, grs.filter(Boolean)));
+    var xS = function (i) { return m.l + (i + 0.5) * (iw / years.length); };
+    var yB = function (v) { return m.t + ih - (v / maxB) * ih; };
+    var yG = function (v) { return m.t + ih - (v / maxG) * ih; };
+    var bw = Math.min(20, iw / years.length * 0.55), g = "";
+    axisTicks(maxB).forEach(function (t) {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yB(t) + '" y2="' + yB(t) + '" stroke="var(--grid)"/>';
+      g += '<text x="' + (m.l - 8) + '" y="' + (yB(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--dceu)">' + usdAxis(t) + "</text>";
+    });
+    axisTicks(maxG).forEach(function (t) {
+      g += '<text x="' + (W - m.r + 8) + '" y="' + (yG(t) + 4) + '" text-anchor="start" font-family="IBM Plex Mono" font-size="10" fill="var(--mcu)">' + usdAxis(t) + "</text>";
+    });
+    var bars = "";
+    years.forEach(function (yr, idx) { if (bud[idx] == null) return; var yy = yB(bud[idx]); bars += '<rect x="' + (xS(idx) - bw / 2) + '" y="' + yy + '" width="' + bw + '" height="' + Math.max(0, m.t + ih - yy) + '" rx="2" fill="var(--dceu)" fill-opacity="0.5"/>'; });
+    var pts = []; years.forEach(function (yr, idx) { if (grs[idx] != null) pts.push([xS(idx), yG(grs[idx])]); });
+    var path = pts.map(function (p, idx) { return (idx ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); }).join(" ");
+    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 9 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
+    document.getElementById("ap-dual").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Dual-axis chart of median budget and median gross by year, an anti-pattern">' +
+      "<g>" + g + xlab + "</g>" + bars +
+      '<path d="' + path + '" fill="none" stroke="var(--mcu)" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '<text x="' + m.l + '" y="' + (m.t - 8) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--dceu)">bars: median budget (left)</text>' +
+      '<text x="' + (W - m.r) + '" y="' + (m.t - 8) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--mcu)">line: median gross (right)</text>' +
+      "</svg>";
+  }
+
+  function apPie() {
+    var d = apDims(1.05), W = d.W, H = d.H;
+    var cx = W / 2, cy = H / 2, r = Math.min(W, H) / 2 - (d.mob ? 16 : 22);
+    var fs = FILMS.slice().sort(function (a, b) { var oa = AP_ORDER.indexOf(a.u), ob = AP_ORDER.indexOf(b.u); return oa !== ob ? oa - ob : b.ww - a.ww; });
+    var total = fs.reduce(function (s, f) { return s + f.ww; }, 0), ang = -Math.PI / 2, seg = "";
+    fs.forEach(function (f) {
+      var a2 = ang + (f.ww / total) * Math.PI * 2;
+      var x1 = cx + r * Math.cos(ang), y1 = cy + r * Math.sin(ang);
+      var x2 = cx + r * Math.cos(a2), y2 = cy + r * Math.sin(a2);
+      var large = (a2 - ang) > Math.PI ? 1 : 0;
+      seg += '<path d="M' + cx + " " + cy + " L" + x1.toFixed(1) + " " + y1.toFixed(1) + " A" + r + " " + r + " 0 " + large + " 1 " + x2.toFixed(1) + " " + y2.toFixed(1) + ' Z" fill="var(' + COLORVAR[f.u] + ')" stroke="var(--surface-2)" stroke-width="0.6"/>';
+      ang = a2;
+    });
+    document.getElementById("ap-pie").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="A pie chart with 92 wedges, one per film, an anti-pattern">' + seg +
+      '<text x="' + cx + '" y="' + (H - 4) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">92 films, one wedge each</text>' +
+      "</svg>";
+  }
+
+  function apTrunc() {
+    var d = apDims(), W = d.W, H = d.H, m = d.m, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var rows = AP_ORDER.map(function (k) { var fs = FILMS.filter(function (f) { return f.u === k; }); return { k: k, avg: fs.reduce(function (s, f) { return s + f.ww; }, 0) / fs.length }; });
+    var lo = Math.min.apply(null, rows.map(function (r) { return r.avg; }));
+    var base = Math.floor((lo * 0.85) / 1e7) * 1e7;
+    var top = niceMax(Math.max.apply(null, rows.map(function (r) { return r.avg; })));
+    var yS = function (v) { return m.t + ih - ((v - base) / (top - base)) * ih; };
+    var bw = Math.min(78, iw / rows.length * 0.6);
+    var xS = function (i) { return m.l + (i + 0.5) * (iw / rows.length); };
+    var bars = "", labs = "";
+    rows.forEach(function (r, i) {
+      var yy = yS(r.avg);
+      bars += '<rect x="' + (xS(i) - bw / 2) + '" y="' + yy + '" width="' + bw + '" height="' + (m.t + ih - yy) + '" rx="3" fill="var(' + COLORVAR[r.k] + ')"/>';
+      labs += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" fill="var(--ink-2)">' + uLabel(r.k) + "</text>";
+      labs += '<text x="' + xS(i) + '" y="' + (yy - 6) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usd(r.avg) + "</text>";
+    });
+    var mcuAvg = rows[0].avg, dceuAvg = rows.filter(function (r) { return r.k === "DCEU"; })[0].avg;
+    var fake = document.getElementById("ap-trunc-fake"); if (fake) fake.textContent = ((mcuAvg - base) / (dceuAvg - base)).toFixed(1) + "×";
+    var real = document.getElementById("ap-trunc-real"); if (real) real.textContent = (mcuAvg / dceuAvg).toFixed(1) + "×";
+    document.getElementById("ap-trunc").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Bar chart with a truncated y-axis, an anti-pattern">' +
+      '<line x1="' + m.l + '" x2="' + m.l + '" y1="' + m.t + '" y2="' + (m.t + ih) + '" stroke="var(--axis)"/>' +
+      '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + (m.t + ih) + '" y2="' + (m.t + ih) + '" stroke="var(--axis)"/>' +
+      '<text x="' + (m.l - 8) + '" y="' + (m.t + ih + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--neg)">' + usdAxis(base) + "</text>" +
+      '<text x="' + (m.l - 8) + '" y="' + (m.t + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(top) + "</text>" +
+      bars + labs +
+      '<text x="' + (W - m.r) + '" y="' + (m.t - 8) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--neg)">y-axis starts at ' + usdAxis(base) + ", not $0</text>" +
+      "</svg>";
+  }
+
+  function apCumul() {
+    var d = apDims(), W = d.W, H = d.H, m = d.m, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var years = []; for (var y = YEAR0; y <= YEAR1; y++) years.push(y);
+    var run = {}; AP_ORDER.forEach(function (k) { run[k] = 0; });
+    var series = AP_ORDER.map(function () { return []; });
+    years.forEach(function (yr) {
+      AP_ORDER.forEach(function (k, ki) {
+        run[k] += FILMS.filter(function (f) { return f.u === k && apYearOf(f) === yr; }).reduce(function (s, f) { return s + f.ww; }, 0);
+        series[ki].push(run[k]);
+      });
+    });
+    var totals = years.map(function (_, i) { return AP_ORDER.reduce(function (s, k, ki) { return s + series[ki][i]; }, 0); });
+    var max = niceMax(totals[totals.length - 1]);
+    var xS = function (i) { return m.l + i * (iw / (years.length - 1)); };
+    var yS = function (v) { return m.t + ih - (v / max) * ih; };
+    var g = "";
+    axisTicks(max).forEach(function (t) {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+    });
+    var areas = "", acc = years.map(function () { return 0; });
+    AP_ORDER.forEach(function (k, ki) {
+      var lower = acc.slice();
+      acc = acc.map(function (v, i) { return v + series[ki][i]; });
+      var up = acc.map(function (v, i) { return xS(i).toFixed(1) + " " + yS(v).toFixed(1); });
+      var dn = lower.map(function (v, i) { return xS(i).toFixed(1) + " " + yS(v).toFixed(1); }).reverse();
+      areas += '<path d="M' + up.join(" L") + " L" + dn.join(" L") + ' Z" fill="var(' + COLORVAR[k] + ')" fill-opacity="0.82"/>';
+    });
+    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 9 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
+    document.getElementById("ap-cumul").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Cumulative stacked area of box office over time, an anti-pattern">' +
+      "<g>" + g + xlab + "</g>" + areas +
+      '<text x="' + (W - m.r) + '" y="' + (yS(max) + 2) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">' + usd(totals[totals.length - 1]) + ", and only ever up</text>" +
+      "</svg>";
+  }
+
+  function apTrend() {
+    var d = apDims(), W = d.W, H = d.H, m = d.m, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var fs = FILMS.filter(function (f) { return f.rt != null; });
+    var xs = fs.map(function (f) { return f.rt; }), ys = fs.map(function (f) { return f.ww; });
+    var maxY = niceMax(Math.max.apply(null, ys));
+    var xS = function (v) { return m.l + (v / 100) * iw; };
+    var yS = function (v) { return m.t + ih - (v / maxY) * ih; };
+    var n = fs.length, mx = xs.reduce(function (a, b) { return a + b; }, 0) / n, my = ys.reduce(function (a, b) { return a + b; }, 0) / n;
+    var sxy = 0, sxx = 0, syy = 0;
+    for (var i = 0; i < n; i++) { sxy += (xs[i] - mx) * (ys[i] - my); sxx += (xs[i] - mx) * (xs[i] - mx); syy += (ys[i] - my) * (ys[i] - my); }
+    var slope = sxy / sxx, intc = my - slope * mx, r2 = (sxy * sxy) / (sxx * syy);
+    var lab = "R² = " + r2.toFixed(2);
+    var pe = document.getElementById("ap-trend-r2"); if (pe) pe.textContent = lab;
+    var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
+    var dots = fs.map(function (f) { return '<circle cx="' + xS(f.rt).toFixed(1) + '" cy="' + yS(f.ww).toFixed(1) + '" r="3.2" fill="var(' + COLORVAR[f.u] + ')" fill-opacity="0.7"/>'; }).join("");
+    var g = "";
+    axisTicks(maxY).forEach(function (t) {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+    });
+    var xt = ""; [0, 25, 50, 75, 100].forEach(function (v) { xt += '<text x="' + xS(v) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + v + "</text>"; });
+    document.getElementById("ap-trend").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Scatter of critic score against gross with a fitted trend line, an anti-pattern">' +
+      "<g>" + g + xt + "</g>" + dots +
+      '<line x1="' + xS(x0).toFixed(1) + '" y1="' + yS(slope * x0 + intc).toFixed(1) + '" x2="' + xS(x1).toFixed(1) + '" y2="' + yS(slope * x1 + intc).toFixed(1) + '" stroke="var(--neg)" stroke-width="2.5"/>' +
+      '<text x="' + (W - m.r - 6) + '" y="' + (m.t + 15) + '" text-anchor="end" font-family="IBM Plex Sans Condensed" font-weight="700" font-size="15" fill="var(--ink)">' + lab + "</text>" +
+      '<text x="' + ((m.l + W - m.r) / 2) + '" y="' + (H - 3) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">Rotten Tomatoes critic score</text>' +
+      "</svg>";
+  }
+
+  function apRoi() {
+    var d = apDims(1.4), W = d.W, H = d.H;
+    var m = { t: 14, r: d.mob ? 40 : 54, b: 22, l: d.mob ? 112 : 156 }, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var fs = FILMS.filter(function (f) { return f.roi != null && f.final; }).sort(function (a, b) { return b.roi - a.roi; }).slice(0, 15);
+    var max = Math.ceil(Math.max.apply(null, fs.map(function (f) { return f.roi; })));
+    var xS = function (v) { return m.l + (v / max) * iw; };
+    var gap = ih / fs.length, bh = gap * 0.68;
+    var bars = fs.map(function (f, i) {
+      var yy = m.t + i * gap + (gap - bh) / 2, cap = d.mob ? 15 : 24;
+      return '<rect x="' + m.l + '" y="' + yy + '" width="' + (xS(f.roi) - m.l) + '" height="' + bh + '" rx="2" fill="var(' + COLORVAR[f.u] + ')"/>' +
+        '<text x="' + (m.l - 8) + '" y="' + (yy + bh / 2 + 3.5) + '" text-anchor="end" font-family="IBM Plex Sans" font-size="' + (d.mob ? 9 : 10.5) + '" fill="var(--ink-2)">' + esc(f.t.length > cap ? f.t.slice(0, cap - 1) + "…" : f.t) + "</text>" +
+        '<text x="' + (xS(f.roi) + 5) + '" y="' + (yy + bh / 2 + 3.5) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + f.roi.toFixed(1) + "×</text>";
+    }).join("");
+    document.getElementById("ap-roi").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films ranked by return on budget, an anti-pattern">' + bars +
+      '<text x="' + m.l + '" y="' + (H - 3) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">worldwide gross ÷ production budget</text>' +
+      "</svg>";
+  }
+
+  function apRadar() {
+    var d = apDims(1.18), W = d.W, H = d.H;
+    var cx = W / 2, cy = H / 2 + 6, R = Math.min(W, H) / 2 - (d.mob ? 38 : 46);
+    var metrics = [
+      { name: "Median gross", f: function (fs) { return median(fs.map(function (x) { return x.ww; })); } },
+      { name: "Avg profit", f: function (fs) { var v = fs.filter(function (x) { return x.final; }); return v.length ? v.reduce(function (s, x) { return s + x.profit; }, 0) / v.length : 0; } },
+      { name: "Critic score", f: function (fs) { var v = fs.filter(function (x) { return x.rt != null; }).map(function (x) { return x.rt; }); return v.length ? median(v) : 0; } },
+      { name: "Legs", f: function (fs) { var v = fs.filter(function (x) { return x.mult != null; }).map(function (x) { return x.mult; }); return v.length ? median(v) : 0; } },
+      { name: "Overseas %", f: function (fs) { return median(fs.map(function (x) { return x.pctIntl; })); } },
+      { name: "$1B rate", f: function (fs) { return fs.filter(function (x) { return x.ww >= 1e9; }).length / fs.length; } }
+    ];
+    var byU = AP_ORDER.map(function (k) { var fs = FILMS.filter(function (f) { return f.u === k; }); return metrics.map(function (mm) { return mm.f(fs); }); });
+    var norm = metrics.map(function (_, mi) {
+      var col = byU.map(function (row) { return row[mi]; });
+      var lo = Math.min.apply(null, col), hi = Math.max.apply(null, col);
+      return col.map(function (v) { return hi > lo ? (v - lo) / (hi - lo) : 0.5; });
+    });
+    var K = metrics.length;
+    var ang = function (i) { return -Math.PI / 2 + i * (Math.PI * 2 / K); };
+    var pt = function (i, rr) { return [(cx + R * rr * Math.cos(ang(i))).toFixed(1), (cy + R * rr * Math.sin(ang(i))).toFixed(1)]; };
+    var web = "";
+    [0.25, 0.5, 0.75, 1].forEach(function (rr) {
+      web += '<polygon points="' + metrics.map(function (_, i) { return pt(i, rr).join(" "); }).join(" ") + '" fill="none" stroke="var(--grid)"/>';
+    });
+    metrics.forEach(function (mm, i) {
+      var e = pt(i, 1), lp = pt(i, 1.17);
+      web += '<line x1="' + cx + '" y1="' + cy + '" x2="' + e[0] + '" y2="' + e[1] + '" stroke="var(--grid)"/>';
+      web += '<text x="' + lp[0] + '" y="' + lp[1] + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-muted)">' + mm.name + "</text>";
+    });
+    var polys = AP_ORDER.map(function (k, ki) {
+      return '<polygon points="' + metrics.map(function (_, i) { return pt(i, 0.08 + 0.92 * norm[i][ki]).join(" "); }).join(" ") + '" fill="var(' + COLORVAR[k] + ')" fill-opacity="0.16" stroke="var(' + COLORVAR[k] + ')" stroke-width="1.5"/>';
+    }).join("");
+    document.getElementById("ap-radar").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Radar chart comparing six metrics across universes, an anti-pattern">' + web + polys + "</svg>";
+  }
+
+  function apRainbow() {
+    var d = apDims(0.94), W = d.W, H = d.H, m = { t: 14, r: 14, b: 26, l: d.mob ? 56 : 66 };
+    var years = []; for (var y = YEAR0; y <= YEAR1; y++) years.push(y);
+    var iw = W - m.l - m.r, ih = H - m.t - m.b, cw = iw / years.length, chh = ih / AP_ORDER.length;
+    var grid = AP_ORDER.map(function (k) { return years.map(function (yr) { return FILMS.filter(function (f) { return f.u === k && apYearOf(f) === yr; }).reduce(function (s, f) { return s + f.ww; }, 0); }); });
+    var hi = Math.max.apply(null, grid.map(function (row) { return Math.max.apply(null, row); }));
+    var cells = "";
+    grid.forEach(function (row, ri) {
+      row.forEach(function (v, ci) {
+        var t = hi > 0 ? v / hi : 0;
+        var fill = v === 0 ? "var(--surface)" : "hsl(" + ((1 - t) * 240).toFixed(0) + ", 88%, 55%)";
+        cells += '<rect x="' + (m.l + ci * cw) + '" y="' + (m.t + ri * chh) + '" width="' + (cw - 1) + '" height="' + (chh - 1) + '" fill="' + fill + '"/>';
+      });
+    });
+    var ylab = AP_ORDER.map(function (k, ri) { return '<text x="' + (m.l - 8) + '" y="' + (m.t + ri * chh + chh / 2 + 3.5) + '" text-anchor="end" font-family="IBM Plex Sans" font-size="10" fill="var(--ink-2)">' + uLabel(k) + "</text>"; }).join("");
+    var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + (m.l + i * cw + cw / 2) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (d.mob ? 8 : 9) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
+    document.getElementById("ap-rainbow").innerHTML =
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Year by universe heatmap on a rainbow colour scale, an anti-pattern">' + cells + ylab + xlab + "</svg>";
+  }
+
+  function renderAntipatterns() {
+    var leg = document.getElementById("ap-leg");
+    if (leg) leg.innerHTML = AP_ORDER.map(function (k) { return '<span><i style="--c:var(' + COLORVAR[k] + ')"></i>' + uLabel(k) + "</span>"; }).join("");
+    apDual(); apPie(); apTrunc(); apCumul(); apTrend(); apRoi(); apRadar(); apRainbow();
+  }
+
   /* ---------- render all ---------- */
   function renderAll() {
     if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
@@ -2200,6 +2579,7 @@
     renderRoster();
     renderEnsemble();
     renderFootprint();
+    renderAntipatterns();
     renderFullTable();
   }
 
