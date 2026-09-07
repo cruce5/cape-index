@@ -73,7 +73,29 @@ const CLAIMS = [
   { name: "single-appearance characters (~130)", grab: /there are ~?([0-9]+) of them/i, want: String(singleAppear) },
   { name: "footprint range (§11 note)", grab: /small integers \(([0-9]+)&ndash;([0-9]+)\)/, want: String(minFootprint), want2: String(maxFootprint) },
   { name: "Marvel-to-DC ratio supports 'nearly three to one'", also: () => (ratio >= 2.4 && ratio < 3.4) || `ratio is ${ratio.toFixed(2)}x, re-word §01` },
+  // the §15 fold-out counts are hand-typed into their own summaries — count the markup
+  { name: "§15 follow-up count on the fold", grab: new RegExp('Every follow-up, in order<span class="cnt">([0-9]+) asks'), want: String(countItems("asks", "li")) },
+  { name: "§15 bug count on the fold", grab: new RegExp('The bugs<span class="cnt">([0-9]+) caught'), want: String(countAfter("The bugs", "dt")) },
+  { name: "§15 design-call count on the fold", grab: new RegExp('The design calls<span class="cnt">([0-9]+) calls'), want: String(countAfter("The design calls", "dt")) },
 ];
+
+// count <li>/<dt> inside one §15 card, so its hand-typed "N asks" can't drift
+function sliceCard(startNeedle) {
+  const i = html.indexOf(startNeedle);
+  if (i < 0) return "";
+  const end = html.indexOf("</details>", i);
+  return html.slice(i, end < 0 ? html.length : end);
+}
+function countItems(olClass, tag) {
+  const i = html.indexOf('<ol class="' + olClass + '">');
+  if (i < 0) return -1;
+  const end = html.indexOf("</ol>", i);
+  return (html.slice(i, end).match(new RegExp("<" + tag + ">", "g")) || []).length;
+}
+function countAfter(title, tag) {
+  const body = sliceCard(">" + title + "<span");
+  return (body.match(new RegExp("<" + tag + ">", "g")) || []).length;
+}
 
 // --- run ----------------------------------------------------------------------
 const fails = [];
