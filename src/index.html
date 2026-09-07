@@ -2290,10 +2290,14 @@
       '<path d="M' + xS(0) + " " + yS(0) + "L" + xS(100) + " " + yS(0) + "L" + xS(100) + " " + yS(100) + 'Z" fill="var(--ssu)" fill-opacity="0.05"/>' +
       '<text x="' + xS(5) + '" y="' + yS(93) + '" font-family="IBM Plex Mono" fill="var(--ink-muted)">audience rated higher</text>' +
       '<text x="' + xS(95) + '" y="' + yS(6) + '" text-anchor="end" font-family="IBM Plex Mono" fill="var(--ink-muted)">critics rated higher</text>';
-    // "they agree" sits low on the diagonal (critic < 40), where no films land, so a data
-    // point can't park on the label — the agree-y cluster is all up at 70-99
+    // "they agree" sits in the empty low-middle (no films land there) with a little leader
+    // arrow to the diagonal, so it labels the line, not the quadrant it happens to sit in
+    var pX = xS(40), pY = yS(40), aX = xS(45), aY = yS(32), lX = xS(46), lY = yS(30);
+    var ang = Math.atan2(pY - aY, pX - aX) * 180 / Math.PI;
     var diag = '<line x1="' + xS(0) + '" y1="' + yS(0) + '" x2="' + xS(100) + '" y2="' + yS(100) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>' +
-      '<text x="' + (xS(30) - 8) + '" y="' + (yS(30) - 7) + '" text-anchor="end" font-family="IBM Plex Mono" fill="var(--ink-muted)">they agree</text>';
+      '<line x1="' + aX + '" y1="' + aY + '" x2="' + pX + '" y2="' + pY + '" stroke="var(--ink-muted)" stroke-opacity="0.7"/>' +
+      '<path transform="translate(' + pX + ',' + pY + ') rotate(' + ang + ')" d="M0 0 L-7 -3 L-7 3 Z" fill="var(--ink-muted)" fill-opacity="0.7"/>' +
+      '<text x="' + lX + '" y="' + lY + '" font-family="IBM Plex Mono" fill="var(--ink-muted)">they agree</text>';
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(f.imdb * 10), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
     var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
     var labs = gap.map(function (f) {
