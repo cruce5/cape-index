@@ -2288,8 +2288,10 @@
       '<path d="M' + xS(0) + " " + yS(0) + "L" + xS(100) + " " + yS(0) + "L" + xS(100) + " " + yS(100) + 'Z" fill="var(--ssu)" fill-opacity="0.05"/>' +
       '<text x="' + xS(5) + '" y="' + yS(93) + '" font-family="IBM Plex Mono" fill="var(--ink-muted)">audience rated higher</text>' +
       '<text x="' + xS(95) + '" y="' + yS(6) + '" text-anchor="end" font-family="IBM Plex Mono" fill="var(--ink-muted)">critics rated higher</text>';
+    // "they agree" sits low on the diagonal (critic < 40), where no films land, so a data
+    // point can't park on the label — the agree-y cluster is all up at 70-99
     var diag = '<line x1="' + xS(0) + '" y1="' + yS(0) + '" x2="' + xS(100) + '" y2="' + yS(100) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>' +
-      '<text x="' + xS(80) + '" y="' + (yS(80) - 6) + '" text-anchor="end" font-family="IBM Plex Mono" fill="var(--ink-muted)">they agree</text>';
+      '<text x="' + (xS(30) - 8) + '" y="' + (yS(30) - 7) + '" text-anchor="end" font-family="IBM Plex Mono" fill="var(--ink-muted)">they agree</text>';
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(f.imdb * 10), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
     var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
     var labs = gap.map(function (f) {
