@@ -180,7 +180,7 @@
   .contents li a { display: flex; gap: 10px; text-decoration: none; color: var(--ink-2); font-size: 14px; line-height: 1.35; padding: 3px 0; }
   .contents li a:hover { color: var(--ink); }
   .contents .cn { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-muted); flex: none; padding-top: 3px; letter-spacing: 0.06em; }
-  section.view { scroll-margin-top: 112px; }
+  section.view, .act { scroll-margin-top: 112px; }
   .cgroup { display: flex; align-items: center; gap: 8px; }
   .clabel { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); font-family: "IBM Plex Mono", monospace; }
   .asof-group { margin-left: auto; }
@@ -369,7 +369,7 @@
     .tab { padding: 12px 10px 10px; font-size: 13px; }
     .contents { margin-top: 22px; }
     .contents ol { grid-template-columns: 1fr; }
-    section.view { scroll-margin-top: 54px; }
+    section.view, .act { scroll-margin-top: 54px; }
     .pager { padding: 18px 0 6px; }
     .pg { padding: 11px 13px; }
     .pg .pt { font-size: 15.5px; }
@@ -2790,7 +2790,9 @@
     if (opts.push !== false) history.replaceState(null, "", "#" + key);
     // a tab opened first from a chart-less tab may never have been measured on this width
     if (booted) { var w = measureChartWidth(); if (w && Math.abs(w - MW) > 2) renderAll(); }
-    if (opts.scroll) { var bar = document.querySelector(".tabs"); window.scrollTo({ top: bar.getBoundingClientRect().top + window.scrollY, behavior: "auto" }); }
+    // scroll to the start of the new tab: its act divider. (Scrolling to the sticky tab bar was a no-op
+    // once the bar was stuck, since a stuck element reports its position as wherever you already are.)
+    if (opts.scroll) { var first = document.querySelector('main .act[data-tab="' + key + '"]'); if (first) first.scrollIntoView({ block: "start" }); }
   }
   // the tab strip clips on a phone and nothing said "there is more to the right": a fade on the strip
   // while it can still scroll, and a Back / Next pair at the bottom of every tab, named for where they go
