@@ -151,6 +151,26 @@
     border-bottom: 1px solid var(--border);
   }
   .controls-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding-top: 12px; padding-bottom: 12px; }
+  .controls { top: 45px; }
+
+  /* ============ SECTION TABS + CONTENTS ============ */
+  .tabs { position: sticky; top: 0; z-index: 51; background: color-mix(in srgb, var(--page) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .tabs-inner { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .tabs-inner::-webkit-scrollbar { display: none; }
+  .tab { appearance: none; border: 0; background: transparent; color: var(--ink-muted); font: inherit; font-size: 13.5px; font-weight: 500; padding: 14px 12px 12px; cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tab:hover { color: var(--ink); }
+  .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+  .tab .tn { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
+  [data-tab][hidden] { display: none !important; }
+  .contents { margin-top: 30px; max-width: 58rem; }
+  .contents .ct { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
+  .contents ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+  .contents li.ca { grid-column: 1 / -1; margin-top: 12px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+  .contents li.ca:first-child { margin-top: 0; }
+  .contents li a { display: flex; gap: 10px; text-decoration: none; color: var(--ink-2); font-size: 14px; line-height: 1.35; padding: 3px 0; }
+  .contents li a:hover { color: var(--ink); }
+  .contents .cn { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-muted); flex: none; padding-top: 3px; letter-spacing: 0.06em; }
+  section.view { scroll-margin-top: 112px; }
   .cgroup { display: flex; align-items: center; gap: 8px; }
   .clabel { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); font-family: "IBM Plex Mono", monospace; }
   .asof-group { margin-left: auto; }
@@ -336,6 +356,10 @@
     .sc .rows { margin-top: 8px; gap: 4px; }
     .sc .row { font-size: 12px; }
     .controls { position: static; }
+    .tab { padding: 12px 10px 10px; font-size: 13px; }
+    .contents { margin-top: 22px; }
+    .contents ol { grid-template-columns: 1fr; }
+    section.view { scroll-margin-top: 54px; }
     .controls-inner { gap: 8px 14px; }
     .cgroup { flex-wrap: wrap; gap: 6px; }
     .clabel { font-size: 11px; }
@@ -365,8 +389,23 @@
     <p class="teach-hint">It also works as a set of worked examples. Flip <b>Design notes</b> on, up in the toolbar, and every chart explains why it&rsquo;s built the way it is, the form, the colour, and what it can&rsquo;t tell you.</p>
     <div class="thesis" id="thesis"></div>
     <p class="smallprint" id="smallprint"></p>
+    <nav class="contents" aria-label="Contents">
+      <div class="ct">Contents &nbsp;&middot;&nbsp; fifteen findings, six tabs</div>
+      <ol id="contents-list"></ol>
+    </nav>
   </div>
 </header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap tabs-inner" role="tablist">
+    <button class="tab" role="tab" data-tab="act1" aria-selected="true"><span class="tn">I</span>Scoreboard</button>
+    <button class="tab" role="tab" data-tab="act2" aria-selected="false"><span class="tn">II</span>Over time</button>
+    <button class="tab" role="tab" data-tab="act3" aria-selected="false"><span class="tn">III</span>Beyond the gross</button>
+    <button class="tab" role="tab" data-tab="act4" aria-selected="false"><span class="tn">IV</span>Roster</button>
+    <button class="tab" role="tab" data-tab="ref" aria-selected="false"><span class="tn">&sect;</span>Reference</button>
+    <button class="tab" role="tab" data-tab="mistakes" aria-selected="false"><span class="tn">&#10007;</span>The mistakes</button>
+  </div>
+</nav>
 
 <nav class="controls" aria-label="Chart controls">
   <div class="wrap controls-inner">
@@ -409,9 +448,9 @@
 </nav>
 
 <main>
-  <div class="act"><div class="wrap"><h3>Act I &nbsp;&middot;&nbsp; The scoreboard</h3><span class="rule"></span><span class="sub">how big, and who</span></div></div>
+  <div class="act" data-tab="act1"><div class="wrap"><h3>Act I &nbsp;&middot;&nbsp; The scoreboard</h3><span class="rule"></span><span class="sub">how big, and who</span></div></div>
 
-  <section class="view" id="v-scorecard">
+  <section class="view" id="v-scorecard" data-tab="act1">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 01 &nbsp;/&nbsp; MARVEL v DC</span>
@@ -458,7 +497,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-treemap">
+  <section class="view" id="v-treemap" data-tab="act1">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 02 &nbsp;/&nbsp; TREEMAP</span>
@@ -483,9 +522,9 @@
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>Act II &nbsp;&middot;&nbsp; Over time</h3><span class="rule"></span><span class="sub">cadence, scale, budgets</span></div></div>
+  <div class="act" data-tab="act2"><div class="wrap"><h3>Act II &nbsp;&middot;&nbsp; Over time</h3><span class="rule"></span><span class="sub">cadence, scale, budgets</span></div></div>
 
-  <section class="view" id="v-beeswarm">
+  <section class="view" id="v-beeswarm" data-tab="act2">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 03 &nbsp;/&nbsp; BY RELEASE DATE</span>
@@ -509,7 +548,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-scatter">
+  <section class="view" id="v-scatter" data-tab="act2">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 04 &nbsp;/&nbsp; SCATTER</span>
@@ -533,7 +572,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-budget">
+  <section class="view" id="v-budget" data-tab="act2">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 05 &nbsp;/&nbsp; THE BUDGET ARMS RACE</span>
@@ -557,9 +596,9 @@
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>Act III &nbsp;&middot;&nbsp; Beyond the gross</h3><span class="rule"></span><span class="sub">profit, legs, reviews, geography</span></div></div>
+  <div class="act" data-tab="act3"><div class="wrap"><h3>Act III &nbsp;&middot;&nbsp; Beyond the gross</h3><span class="rule"></span><span class="sub">profit, legs, reviews, geography</span></div></div>
 
-  <section class="view" id="v-profit">
+  <section class="view" id="v-profit" data-tab="act3">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 06 &nbsp;/&nbsp; DID IT MAKE MONEY?</span>
@@ -583,7 +622,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-legs">
+  <section class="view" id="v-legs" data-tab="act3">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 07 &nbsp;/&nbsp; LEGS</span>
@@ -607,7 +646,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-reviews">
+  <section class="view" id="v-reviews" data-tab="act3">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 08 &nbsp;/&nbsp; REVIEWS &amp; REVENUE</span>
@@ -649,7 +688,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-split">
+  <section class="view" id="v-split" data-tab="act3">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 09 &nbsp;/&nbsp; DOMESTIC v OVERSEAS</span>
@@ -677,9 +716,9 @@
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>Act IV &nbsp;&middot;&nbsp; The roster</h3><span class="rule"></span><span class="sub">who shows up where</span></div></div>
+  <div class="act" data-tab="act4"><div class="wrap"><h3>Act IV &nbsp;&middot;&nbsp; The roster</h3><span class="rule"></span><span class="sub">who shows up where</span></div></div>
 
-  <section class="view" id="v-roster">
+  <section class="view" id="v-roster" data-tab="act4">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 10 &nbsp;/&nbsp; WHO'S IN WHICH FILM</span>
@@ -713,7 +752,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-footprint">
+  <section class="view" id="v-footprint" data-tab="act4">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELLED</span>
@@ -737,9 +776,9 @@
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the raw table &amp; the method</span></div></div>
+  <div class="act" data-tab="ref"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the raw table &amp; the method</span></div></div>
 
-  <section class="view" id="v-data">
+  <section class="view" id="v-data" data-tab="ref">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 12 &nbsp;/&nbsp; THE LEDGER</span>
@@ -757,7 +796,7 @@
     </div>
   </section>
 
-  <section class="view" id="v-method">
+  <section class="view" id="v-method" data-tab="ref">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 13 &nbsp;/&nbsp; METHOD</span>
@@ -784,7 +823,7 @@
     </div>
   </section>
 
-  <section class="view log" id="v-process">
+  <section class="view log" id="v-process" data-tab="ref">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 14 &nbsp;/&nbsp; BUILD LOG</span>
@@ -834,6 +873,7 @@
           <li><b>&ldquo;Adversarially audit this entire thing. Pull no punches.&rdquo;</b> Eight pieces of copy had rotted out from under the data (a headline that was false against its own chart, notes still describing a 57-film set). And the 2015 <em>Fantastic Four</em> turned out to be a one-and-done sitting in the Fox bucket, in breach of the rule. <b>&ldquo;Pull it.&rdquo;</b> 91 films.</li>
           <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel. <b>&ldquo;Still small. Bump everything a point or two.&rdquo;</b> Every chart label on a phone now gets two more points after render; nothing is under 12.</li>
           <li><b>&ldquo;Do all of our white / grey text hues pass contrast on the dark background?&rdquo;</b> They do: the greys sit at 5.0 to 8.4 to 1 on every dark surface, AA or better. The audit found the misses elsewhere: two coloured axis labels in §15, the light-theme profit and loss colours on tooltip backgrounds by a hair, a token the forced-light block had never received at all, and the treemap: white labels on the MCU green were 3 to 1. Each cell now picks dark or white ink by measuring its own fill.</li>
+          <li><b>&ldquo;We are way too scrolly now. People will never go to the bottom. Implement some structure.&rdquo;</b> Fifteen sections became six tabs, one per act, with a contents list under the masthead that carries every finding as a headline. Someone who reads only the contents still gets all fifteen.</li>
         </ol>
       </div>
 
@@ -909,9 +949,9 @@
     </div>
   </section>
 
-  <div class="act"><div class="wrap"><h3>The tempting mistakes</h3><span class="rule"></span><span class="sub">beautiful charts that don&rsquo;t help</span></div></div>
+  <div class="act" data-tab="mistakes"><div class="wrap"><h3>The tempting mistakes</h3><span class="rule"></span><span class="sub">beautiful charts that don&rsquo;t help</span></div></div>
 
-  <section class="view ap" id="v-antipatterns">
+  <section class="view ap" id="v-antipatterns" data-tab="mistakes">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 15 &nbsp;/&nbsp; ANTI-PATTERNS</span>
@@ -1171,9 +1211,13 @@
   // makes one viewBox unit one CSS pixel, so a font-size of 11 is actually 11 px.
   var MW = 360;
   function measureChartWidth() {
-    var host = document.getElementById("chart-year");
-    var w = host ? host.clientWidth : 0;
-    return Math.max(280, Math.min(640, w || 360));
+    // first chart host that is actually laid out (sections on other tabs are display:none)
+    var ids = ["chart-year", "chart-beeswarm", "chart-profit", "chart-roster"];
+    for (var i = 0; i < ids.length; i++) {
+      var h = document.getElementById(ids[i]);
+      if (h && h.clientWidth) return Math.max(280, Math.min(640, h.clientWidth));
+    }
+    return 0; // nothing visible to measure; caller keeps the last value
   }
   function isDarkMode() {
     var t = document.documentElement.getAttribute("data-theme");
@@ -2588,7 +2632,7 @@
   /* ---------- render all ---------- */
   function renderAll() {
     if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
-    MW = measureChartWidth();
+    var mw = measureChartWidth(); if (mw) MW = mw;
     renderThesis();
     renderScorecards();
     renderYear();
@@ -2710,14 +2754,59 @@
     }
   } catch (e) {}
 
+  /* ---------- section tabs ---------- */
+  // Six tabs, one per act. Everything still renders at load; a tab just hides the other acts, so a
+  // phone scrolls two to four sections instead of fifteen. Hashes deep-link into any section.
+  var TABS = ["act1", "act2", "act3", "act4", "ref", "mistakes"];
+  function setTab(key, opts) {
+    opts = opts || {};
+    if (TABS.indexOf(key) < 0) key = "act1";
+    document.querySelectorAll("main [data-tab]").forEach(function (el) { el.hidden = el.getAttribute("data-tab") !== key; });
+    document.querySelectorAll(".tab").forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-tab") === key ? "true" : "false"); });
+    STATE.tab = key;
+    if (opts.push !== false) history.replaceState(null, "", "#" + key);
+    // a tab opened first from a chart-less tab may never have been measured on this width
+    if (booted) { var w = measureChartWidth(); if (w && Math.abs(w - MW) > 2) renderAll(); }
+    if (opts.scroll) { var bar = document.querySelector(".tabs"); window.scrollTo({ top: bar.getBoundingClientRect().top + window.scrollY, behavior: "auto" }); }
+  }
+  function goToHash(h) {
+    h = (h || location.hash).replace("#", "");
+    if (!h) return false;
+    if (TABS.indexOf(h) >= 0) { setTab(h, { push: false }); return true; }
+    var el = document.getElementById(h), t = el && el.closest("[data-tab]");
+    if (!t) return false;
+    setTab(t.getAttribute("data-tab"), { push: false });
+    el.scrollIntoView();
+    return true;
+  }
+  document.querySelectorAll(".tab").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-tab"), { scroll: true }); }); });
+  window.addEventListener("hashchange", function () { goToHash(); });
+  // the contents list is read off the sections themselves, so it can't drift from the headlines
+  (function buildContents() {
+    var ol = document.getElementById("contents-list"); if (!ol) return;
+    var html = "";
+    document.querySelectorAll("main > .act, main > section.view").forEach(function (el) {
+      if (el.classList.contains("act")) { html += '<li class="ca">' + el.querySelector("h3").innerHTML + "</li>"; return; }
+      var num = el.querySelector(".view-head .num"), h2 = el.querySelector(".view-head h2");
+      if (!h2) return;
+      var n = num ? num.textContent.split("/")[0].trim() : "";
+      html += '<li><a href="#' + el.id + '"><span class="cn">' + esc(n) + '</span><span>' + h2.innerHTML + "</span></a></li>";
+    });
+    ol.innerHTML = html;
+  })();
+
+  var booted = false;
+  if (!goToHash()) setTab("act1", { push: false });
   renderAll();
+  booted = true;
   var wasMobile = isMobile();
   var rz;
   window.addEventListener("resize", function () {
     clearTimeout(rz);
     rz = setTimeout(function () {
       // re-render on a desktop/mobile flip, or when a phone rotates far enough to change the chart width
-      if (isMobile() !== wasMobile || (isMobile() && Math.abs(measureChartWidth() - MW) > 24)) { wasMobile = isMobile(); renderAll(); }
+      var w = measureChartWidth();
+      if (isMobile() !== wasMobile || (isMobile() && w && Math.abs(w - MW) > 24)) { wasMobile = isMobile(); renderAll(); }
     }, 200);
   });
 })();
