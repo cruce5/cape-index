@@ -66,7 +66,7 @@ your OMDb key in it (gitignored).
 
 ## Design
 
-Dark mode is the primary target. The palette is a colour-blind-safe set
+Dark mode is the primary target. The palette is a color-blind-safe set
 ([Paul Tol "bright"](https://personal.sron.nl/~pault/) plus a grey), validated
 with a script rather than by eye, with a mark shape per group as a backstop.
 Section headlines state the finding, not the axis. No dual-axis charts, no trend
