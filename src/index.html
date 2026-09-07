@@ -1700,7 +1700,7 @@
     document.getElementById("chart-beeswarm").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films placed by release date, sized by worldwide gross">' +
       '<g class="grid">' + ticks + "</g>" + circ + "</svg>";
-    legend("leg-bee", activeUnis(), true);
+    legend("leg-bee", activeUnis(), true, false, true);
     wireDots(document.querySelector("#chart-beeswarm svg"));
     fillTable("table-beeswarm", af.map(function (f) { return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), f.date, usd(val(f, "ww"))]; }), ["Film", "Universe", "Release", "Worldwide"]);
   }
@@ -1891,7 +1891,7 @@
 
   /* ---------- shared: legend, tables, wiring ---------- */
   function activeUnis() { return UNI.map(function (u) { return u.k; }).filter(function (k) { return STATE.unis[k]; }); }
-  function legend(id, keys, withSize, withShape) {
+  function legend(id, keys, withSize, withShape, withRing) {
     var host = document.getElementById(id);
     if (!host) return;
     var shape = { MCU: "●", Fox: "◆", SSU: "✚", DCEU: "■", DCU: "▲", Elseworlds: "✕" };
@@ -1900,7 +1900,9 @@
     host.innerHTML = keys.map(function (k) {
       var mk = withShape ? '<span style="color:var(' + COLORVAR[k] + ');font-size:13px">' + shape[k] + "</span>" : '<i style="--c:var(' + COLORVAR[k] + ')"></i>';
       return "<span>" + mk + " " + (labelOf[k] || k) + "</span>";
-    }).join("") + (withSize ? '<span style="color:var(--ink-muted)">circle size = worldwide gross</span>' : "");
+    }).join("")
+      + (withSize ? '<span style="color:var(--ink-muted)">circle size = worldwide gross</span>' : "")
+      + (withRing ? '<span style="color:var(--ink-muted)"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--note);vertical-align:-1px;margin-right:2px"></span>crossed $1B</span>' : "");
   }
   function fillTable(id, rows, headers) {
     var host = document.getElementById(id);
