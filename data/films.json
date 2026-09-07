@@ -53,9 +53,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 157299718,
-        "international": 139039810,
-        "worldwide": 296339528
+        "domestic": 294229031,
+        "international": 260073884,
+        "worldwide": 554302915
       },
       "budget": 75000000,
       "runtime_minutes": 104,
@@ -88,7 +88,7 @@
         "breakeven_worldwide": 187500000,
         "profit_vs_breakeven": 108839528,
         "profitable": true,
-        "budget_real_2025": 75000000
+        "budget_real_2025": 140287456
       }
     },
     {
@@ -110,9 +110,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 408524875,
-        "international": 402400432,
-        "worldwide": 810925307
+        "domestic": 731438923,
+        "international": 720473481,
+        "worldwide": 1451912403
       },
       "budget": 139000000,
       "runtime_minutes": 121,
@@ -145,7 +145,7 @@
         "breakeven_worldwide": 347500000,
         "profit_vs_breakeven": 463425307,
         "profitable": true,
-        "budget_real_2025": 139000000
+        "budget_real_2025": 248871039
       }
     },
     {
@@ -167,9 +167,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 102543518,
-        "international": 76636200,
-        "worldwide": 179179718
+        "domestic": 179506887,
+        "international": 134155000,
+        "worldwide": 313661887
       },
       "budget": 78000000,
       "runtime_minutes": 103,
@@ -203,7 +203,7 @@
         "breakeven_worldwide": 195000000,
         "profit_vs_breakeven": -15820282,
         "profitable": false,
-        "budget_real_2025": 78000000
+        "budget_real_2025": 136542391
       }
     },
     {
@@ -225,9 +225,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 214949694,
-        "international": 192761855,
-        "worldwide": 407711549
+        "domestic": 376278785,
+        "international": 337438008,
+        "worldwide": 713716793
       },
       "budget": 110000000,
       "runtime_minutes": 134,
@@ -260,7 +260,7 @@
         "breakeven_worldwide": 275000000,
         "profit_vs_breakeven": 132711549,
         "profitable": true,
-        "budget_real_2025": 110000000
+        "budget_real_2025": 192559783
       }
     },
     {
@@ -282,9 +282,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 375087840,
-        "international": 413165651,
-        "worldwide": 788253491
+        "domestic": 639575401,
+        "international": 704503209,
+        "worldwide": 1344078610
       },
       "budget": 200000000,
       "runtime_minutes": 127,
@@ -317,7 +317,7 @@
         "breakeven_worldwide": 500000000,
         "profit_vs_breakeven": 288253491,
         "profitable": true,
-        "budget_real_2025": 200000000
+        "budget_real_2025": 341026998
       }
     },
     {
@@ -339,9 +339,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 24409722,
-        "international": 32585924,
-        "worldwide": 56995646
+        "domestic": 40257918,
+        "international": 53742581,
+        "worldwide": 94000500
       },
       "budget": 43000000,
       "runtime_minutes": 97,
@@ -375,7 +375,7 @@
         "breakeven_worldwide": 107500000,
         "profit_vs_breakeven": -50504354,
         "profitable": false,
-        "budget_real_2025": 43000000
+        "budget_real_2025": 70918075
       }
     },
     {
@@ -397,9 +397,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 206863479,
-        "international": 168701066,
-        "worldwide": 375591291
+        "domestic": 341171155,
+        "international": 278231507,
+        "worldwide": 619446773
       },
       "budget": 150000000,
       "runtime_minutes": 140,
@@ -430,7 +430,7 @@
         "breakeven_worldwide": 375000000,
         "profit_vs_breakeven": 591291,
         "profitable": true,
-        "budget_real_2025": 150000000
+        "budget_real_2025": 247388633
       }
     },
     {
@@ -452,9 +452,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 154696080,
-        "international": 178839854,
-        "worldwide": 333535934
+        "domestic": 255133678,
+        "international": 294952980,
+        "worldwide": 550086658
       },
       "budget": 100000000,
       "runtime_minutes": 106,
@@ -488,7 +488,7 @@
         "breakeven_worldwide": 250000000,
         "profit_vs_breakeven": 83535934,
         "profitable": true,
-        "budget_real_2025": 100000000
+        "budget_real_2025": 164925755
       }
     },
     {
@@ -510,9 +510,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 234362462,
-        "international": 226072829,
-        "worldwide": 460435291
+        "domestic": 374445184,
+        "international": 361200686,
+        "worldwide": 735645869
       },
       "budget": 210000000,
       "runtime_minutes": 104,
@@ -545,7 +545,7 @@
         "breakeven_worldwide": 525000000,
         "profit_vs_breakeven": -64564709,
         "profitable": false,
-        "budget_real_2025": 210000000
+        "budget_real_2025": 335520833
       }
     },
     {
@@ -567,9 +567,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 115802596,
-        "international": 112935797,
-        "worldwide": 228738393
+        "domestic": 179896095,
+        "international": 175442603,
+        "worldwide": 355338698
       },
       "budget": 110000000,
       "runtime_minutes": 110,
@@ -602,7 +602,7 @@
         "breakeven_worldwide": 275000000,
         "profit_vs_breakeven": -46261607,
         "profitable": false,
-        "budget_real_2025": 110000000
+        "budget_real_2025": 170881925
       }
     },
     {
@@ -624,9 +624,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 338032318,
-        "international": 549325104,
-        "worldwide": 887415130
+        "domestic": 525123755,
+        "international": 853361191,
+        "worldwide": 1378574594
       },
       "budget": 258000000,
       "runtime_minutes": 139,
@@ -659,7 +659,7 @@
         "breakeven_worldwide": 645000000,
         "profit_vs_breakeven": 242415130,
         "profitable": true,
-        "budget_real_2025": 258000000
+        "budget_real_2025": 400795787
       }
     },
     {
@@ -681,9 +681,9 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 131921738,
-        "international": 169991393,
-        "worldwide": 301913131
+        "domestic": 204936732,
+        "international": 264076876,
+        "worldwide": 469013608
       },
       "budget": 130000000,
       "runtime_minutes": 92,
@@ -717,7 +717,7 @@
         "breakeven_worldwide": 325000000,
         "profit_vs_breakeven": -23086869,
         "profitable": false,
-        "budget_real_2025": 130000000
+        "budget_real_2025": 201951365
       }
     },
     {
