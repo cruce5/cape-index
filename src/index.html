@@ -256,7 +256,16 @@
      pre-bump base so that stays 13px. */
   .lbl { fill: var(--ink-2); font-family: "IBM Plex Sans", sans-serif; font-size: 16px; }
   .lbl-strong { fill: var(--ink); font-weight: 600; }
-  @media (max-width: 640px) { .lbl { font-size: 11px; } .ax text { font-size: 11px; } }
+  /* EVERY classless chart label (axis numbers, "67 more" fold markers, value
+     annotations) honoured its own tiny font-size="10/11" attribute. This one rule
+     resizes all of them at once — CSS beats the attribute. Keep it above the media
+     query so mobile can pin the pre-fitMobileText base. */
+  svg text:not([class]) { font-size: 14px; }
+  @media (max-width: 640px) {
+    .lbl { font-size: 11px; }
+    .ax text { font-size: 11px; }
+    svg text:not([class]) { font-size: 11px; }
+  }
 
   /* tooltip */
   .tip {
