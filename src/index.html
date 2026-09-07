@@ -139,7 +139,8 @@
   .thesis .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
   .thesis .v { font-size: clamp(28px, 4.6vw, 44px); font-weight: 700; font-family: "IBM Plex Sans Condensed", sans-serif; margin-top: 6px; }
   .thesis .sub { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
-  @media (max-width: 640px) { .thesis { grid-template-columns: 1fr; } }
+  /* the three thesis tiles stay side by side on a phone; the values are short and the row reads as one line */
+  @media (max-width: 640px) { .thesis { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .smallprint { margin-top: 26px; font-size: 13px; color: var(--ink-muted); max-width: 52rem; }
   .smallprint a { text-decoration-color: var(--border-strong); text-underline-offset: 2px; }
 
@@ -354,10 +355,11 @@
     .view-head { margin-bottom: 22px; }
     .card { padding: 16px; border-radius: 12px; }
     .card-head { margin-bottom: 12px; }
-    .thesis { grid-template-columns: 1fr; margin-top: 24px; }
-    .thesis > div { padding: 12px 16px; }
-    .thesis .v { font-size: 25px; margin-top: 2px; }
-    .thesis .sub { font-size: 12px; }
+    .thesis { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; max-width: none; }
+    .thesis > div { padding: 12px 10px 12px 12px; min-width: 0; }
+    .thesis .k { font-size: 10px; letter-spacing: 0.05em; line-height: 1.3; }
+    .thesis .v { font-size: 21px; margin-top: 4px; letter-spacing: -0.01em; }
+    .thesis .sub { font-size: 11px; line-height: 1.3; }
     .scorecards { grid-template-columns: 1fr 1fr; gap: 8px; }
     .sc { padding: 12px 12px 13px; }
     .sc h3 .sc-full { display: none; }
@@ -1016,6 +1018,7 @@
           <li><b>&ldquo;We are way too scrolly now. People will never go to the bottom. Implement some structure.&rdquo;</b> Fifteen sections became six tabs, one per act, with a contents list under the masthead that carries every finding as a headline. Someone who reads only the contents still gets all fifteen.</li>
           <li><b>&ldquo;Put the mistakes before Reference.&rdquo;</b> Last is where things go to die. Sections renumbered to match. <b>&ldquo;I didn&rsquo;t know to swipe.&rdquo;</b> The tab strip clipped on a phone with nothing saying there was more. Now it fades at the edge while it can still scroll, and every tab ends in a Back and a Next button named for where they go.</li>
           <li><b>&ldquo;On mobile, can the filters collapse into an expandable bar that follows the scroll?&rdquo;</b> They stick under the tabs now, folded to one row that says what is selected, and open on tap.</li>
+          <li><b>&ldquo;I like the scorecards left to right instead of stacked. Do an entire viz audit of both desktop and mobile, with haste.&rdquo;</b> The three masthead tiles sit side by side on a phone. A script walked every chart at 412 and 1200 pixels measuring label boxes against each other and against the chart edge: ten collisions, from a /usr/bin/bash tick sitting on a &rsquo;00 year label to two bar labels printing on top of each other. All ten fixed; both widths now report zero.</li>
         </ol>
       </div>
 
@@ -1421,7 +1424,7 @@
     var g = "";
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
-      g += '<text class="lbl" x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+      g += '<text class="lbl" x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var bars = "";
     years.forEach(function (yr, i) {
@@ -1921,7 +1924,7 @@
     var g = "";
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
-      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var dots = af.filter(function (f) { return val(f, "budget"); }).map(function (f) {
       return '<circle cx="' + xS(new Date(f.date).getFullYear()) + '" cy="' + yS(val(f, "budget")) + '" r="3" fill="var(--ink-2)" fill-opacity="0.5" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
@@ -2068,7 +2071,7 @@
     var fold = { rows: HT.rows, fold: HT.foldIdx, label: HT.foldIdx > -1 ? (HT.hidden + " more · " + af[hN - 1].mult.toFixed(1) + "× down to " + af[af.length - hN].mult.toFixed(1) + "×") : "" };
     var W = mob ? MW : 1000, rowH = mob ? 31 : 16;
     var m = mob ? { t: 18, r: 44, b: 6, l: 12 } : { t: 22, r: 66, b: 8, l: 218 };
-    var foldH = fold.fold > -1 ? 26 : 0;
+    var foldH = fold.fold > -1 ? 30 : 0;
     var H = m.t + m.b + rowH * fold.rows.length + foldH;
     var iw = W - m.l - m.r;
     var xS = function (v) { return m.l + (Math.log10(Math.max(1, v)) - l0) / (l1 - l0) * iw; };
@@ -2078,7 +2081,7 @@
       g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
       g += '<text x="' + xS(t) + '" y="13" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
-    if (fold.fold > -1) g += '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fold.fold + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">· ' + fold.label + " ·</text>";
+    if (fold.fold > -1) g += '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fold.fold + 20) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">· ' + fold.label + " ·</text>";
     var rows = fold.rows.map(function (f, i) {
       var c = "var(" + COLORVAR[f.u] + ")";
       var xo = xS(f.open), xd = xS(val(f, "d"));
@@ -2094,7 +2097,7 @@
           '<circle cx="' + xo + '" cy="' + yb + '" r="3.6" fill="var(--surface)" stroke="' + c + '" stroke-width="1.8"/>' +
           '<circle cx="' + xd + '" cy="' + yb + '" r="4.2" fill="' + c + '"/>' + "</g>";
       }
-      var yy = m.t + i * rowH + rowH / 2;
+      var yy = m.t + i * rowH + rowH / 2 + off; // desktop rows below the fold need the fold slot too
       return '<g class="legRow" data-i="' + FILMS.indexOf(f) + '">' +
         '<rect x="0" y="' + (yy - rowH / 2) + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
         '<text x="' + (m.l - 14) + '" y="' + (yy + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
@@ -2128,7 +2131,7 @@
   function renderReviews() {
     var mob = isMobile();
     var W = mob ? MW : 1000, H = mob ? 380 : 440;
-    var m = mob ? { t: 14, r: 12, b: 34, l: 40 } : { t: 18, r: 20, b: 40, l: 54 };
+    var m = mob ? { t: 14, r: 12, b: 44, l: 40 } : { t: 18, r: 20, b: 40, l: 54 };
     var af = activeFilms().filter(function (f) { return f.rt != null; });
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var max = niceMax(Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1);
@@ -2141,7 +2144,7 @@
     });
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
-      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(val(f, "ww")), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
     // label the films that defy the pattern: a panned one that made a fortune,
@@ -2164,7 +2167,7 @@
   function renderParity() {
     var mob = isMobile();
     var W = mob ? MW : 1000, H = mob ? 360 : 440;
-    var m = mob ? { t: 12, r: 12, b: 30, l: 34 } : { t: 18, r: 20, b: 40, l: 46 };
+    var m = mob ? { t: 12, r: 12, b: 40, l: 34 } : { t: 18, r: 20, b: 40, l: 46 };
     var af = activeFilms().filter(function (f) { return f.rt != null && f.imdb != null; });
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var xS = function (v) { return m.l + (v / 100) * iw; };
@@ -2174,7 +2177,7 @@
       g += '<line x1="' + xS(t) + '" x2="' + xS(t) + '" y1="' + m.t + '" y2="' + (H - m.b) + '"/>';
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
       g += '<text x="' + xS(t) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "</text>";
-      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "</text>";
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + t + "</text>";
     });
     var diag = '<line x1="' + xS(0) + '" y1="' + yS(0) + '" x2="' + xS(100) + '" y2="' + yS(100) + '" stroke="var(--ink-muted)" stroke-opacity="0.45"/>' +
       '<text x="' + xS(88) + '" y="' + (yS(88) - 6) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">they agree</text>';
@@ -2259,12 +2262,13 @@
       var Hd = md.t + md.b + rh * showD.length;
       var iwd = Wd - md.l - md.r;
       var colW = iwd / af.length;
-      var head = "";
+      var head = "", lastLab = -1e9;
       for (var yr = YEAR0; yr <= YEAR1; yr++) {
         var f0 = af.findIndex(function (f) { return new Date(f.date).getFullYear() === yr; });
         if (f0 < 0) continue;
         var xx = md.l + f0 * colW;
         head += '<line x1="' + xx + '" x2="' + xx + '" y1="' + (md.t - 6) + '" y2="' + (Hd - md.b) + '" stroke="var(--grid)"/>';
+        if (xx - lastLab < 26) continue; lastLab = xx; // one film a year in the early 2000s puts columns 11px apart
         head += '<text x="' + (xx + 2) + '" y="' + (md.t - 12) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
       }
       var grid = showD.map(function (x, r) {
@@ -2320,18 +2324,20 @@
     [0, 5, 10, 15, 20].forEach(function (t) {
       if (t > max) return;
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
-      g += '<text x="' + (m.l - 6) + '" y="' + (yS(t) + 3) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="' + (mob ? 10 : 10) + '" fill="var(--ink-muted)">' + t + "</text>";
+      g += '<text x="' + (m.l - 6) + '" y="' + (yS(t) + (t === 0 ? -2 : 3)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="' + (mob ? 10 : 10) + '" fill="var(--ink-muted)">' + t + "</text>";
     });
+    var lastLbl = -1e9;
     var bars = af.map(function (f, i) {
       var v = counts[i], y1 = yS(v), h = Math.max(0, yS(0) - y1 - 1.5);
       var lbl = "";
-      if (v >= (mob ? 13 : 11)) lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="' + (mob ? 10 : 10) + '">' + clip(f.t, 12) + " " + v + "</text>";
+      // two tall bars a column apart would print their labels on top of each other; keep the first
+      if (v >= (mob ? 13 : 11) && x(i) - lastLbl > (mob ? 60 : 88)) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="' + (mob ? 10 : 10) + '">' + clip(f.t, 12) + " " + v + "</text>"; }
       return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + COLORVAR[f.u] + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
     }).join("");
-    var yl = "";
+    var yl = "", lastLab = -1e9;
     for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) {
       var fi = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= yy; });
-      if (fi < 0) continue;
+      if (fi < 0 || x(fi) - lastLab < 26) continue; lastLab = x(fi);
       yl += '<text x="' + x(fi) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 10 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(yy).slice(2)) + "</text>";
     }
     document.getElementById("chart-ensemble").innerHTML =
@@ -2359,7 +2365,7 @@
     var rows = allRows;
     var hidden = 0;
     var max = Math.max.apply(null, rows.map(function (x) { return x.films.length; }).concat([1]));
-    var W = mob ? MW : 1000, rowH = mob ? 26 : 15;
+    var W = mob ? MW : 1000, rowH = mob ? 30 : 15;
     var m = mob ? { t: 14, r: 30, b: 8, l: 8 } : { t: 16, r: 40, b: 8, l: 180 };
     var H = m.t + m.b + rowH * rows.length + (folded ? 22 : 0);
     var iw = W - m.l - m.r;
@@ -2377,9 +2383,9 @@
           '<rect x="0" y="' + yt + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
           '<rect x="' + m.l + '" y="' + (yt + 5) + '" width="7" height="7" rx="1.5" fill="' + c + '"/>' +
           '<text x="' + (m.l + 13) + '" y="' + (yt + 12) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(x.c.n, 26)) + "</text>" +
-          '<line x1="' + m.l + '" x2="' + xS(n) + '" y1="' + (yt + 20) + '" y2="' + (yt + 20) + '" stroke="' + c + '" stroke-width="2" stroke-opacity="0.5"/>' +
-          '<circle cx="' + xS(n) + '" cy="' + (yt + 20) + '" r="4" fill="' + c + '"/>' +
-          '<text x="' + (xS(n) + 9) + '" y="' + (yt + 24) + '" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-2)">' + n + "</text></g>";
+          '<line x1="' + m.l + '" x2="' + xS(n) + '" y1="' + (yt + 22) + '" y2="' + (yt + 22) + '" stroke="' + c + '" stroke-width="2" stroke-opacity="0.5"/>' +
+          '<circle cx="' + xS(n) + '" cy="' + (yt + 22) + '" r="4" fill="' + c + '"/>' +
+          '<text x="' + (xS(n) + 9) + '" y="' + (yt + 26) + '" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-2)">' + n + "</text></g>";
       }
       var yy = m.t + i * rowH + rowH / 2;
       return '<g class="fpRow" data-c="' + esc(x.c.n) + '">' +
@@ -2457,9 +2463,9 @@
       // series identity rides on a swatch, not on the text colour: the universe hues don't all clear
       // AA as small text on the chart background, and text stays in the ink tokens site-wide
       '<rect x="' + m.l + '" y="' + (m.t - 16) + '" width="10" height="10" rx="2" fill="var(--dceu)" fill-opacity="0.6"/>' +
-      '<text x="' + (m.l + 15) + '" y="' + (m.t - 8) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">bars: median budget (left)</text>' +
+      '<text x="' + (m.l + 15) + '" y="' + (m.t - 8) + '" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">' + (d.mob ? "bars: budget" : "bars: median budget (left)") + '</text>' +
       '<rect x="' + (W - m.r - 10) + '" y="' + (m.t - 16) + '" width="10" height="10" rx="2" fill="var(--mcu)"/>' +
-      '<text x="' + (W - m.r - 15) + '" y="' + (m.t - 8) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">line: median gross (right)</text>' +
+      '<text x="' + (W - m.r - 15) + '" y="' + (m.t - 8) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-2)">' + (d.mob ? "line: gross" : "line: median gross (right)") + '</text>' +
       "</svg>";
   }
 
@@ -2530,7 +2536,7 @@
     var g = "";
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
-      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var areas = "", acc = years.map(function () { return 0; });
     AP_ORDER.forEach(function (k, ki) {
@@ -2549,7 +2555,9 @@
   }
 
   function apTrend() {
-    var d = apDims(), W = d.W, H = d.H, m = d.m, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var d = apDims(), W = d.W, H = d.H, m = d.m;
+    m.b = d.mob ? 40 : 36; // the axis title sits under the tick row
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var fs = FILMS.filter(function (f) { return f.rt != null && f.final; });
     var xs = fs.map(function (f) { return f.rt; }), ys = fs.map(function (f) { return f.ww; });
     var maxY = niceMax(Math.max.apply(null, ys));
@@ -2566,7 +2574,7 @@
     var g = "";
     axisTicks(maxY).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
-      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
+      g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
     var xt = ""; [0, 25, 50, 75, 100].forEach(function (v) { xt += '<text x="' + xS(v) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + v + "</text>"; });
     document.getElementById("ap-trend").innerHTML =
