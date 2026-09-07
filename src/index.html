@@ -628,7 +628,7 @@
       <div class="view-head">
         <span class="num">§ 05 &nbsp;/&nbsp; THE BUDGET ARMS RACE</span>
         <h2>Production budgets roughly doubled over the 2000s, then flattened near $200M</h2>
-        <p class="dek">The median production budget by release year. It climbed from around $100M in the early 2000s to about $200M by 2012, and has mostly held between $150M and $225M since, dipping in years carried by cheaper films (2015, 2020, 2024). The first <em>X-Men</em> cost $75M in 2000; a mid-tier tentpole now runs $200M, and the biggest Avengers films clear $350M. Flip to 2025 dollars to see how much of that is real growth.</p>
+        <p class="dek">Every film&rsquo;s production budget at its release year (the dots), with a five-year rolling median (the line) and the middle 50% of budgets (the band). Budgets roughly doubled from about $100M in the early 2000s to near $200M by the early 2010s, then held there, with the odd $300M&#8209;plus tentpole stretching the top of the band. The first <em>X-Men</em> cost $75M in 2000; a mid-tier tentpole now runs $200M, and the biggest Avengers films clear $350M. Flip to 2025 dollars to see how much of that is real growth.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -639,9 +639,9 @@
         <div id="table-budget" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Have production budgets actually climbed once you strip out inflation?</dd>
-          <dt>Why this form</dt><dd>One measure over time is a line. The faint dots behind it are the individual films, so you can see the spread the line is summarising. Each year&rsquo;s marker is sized by how many films sit behind its median.</dd>
-          <dt>Choices here</dt><dd>The line is the <em>median</em> budget per year, the mean would swing with a single $350M Avengers. One line, not four: split by universe and the yearly counts get too small to read.</dd>
-          <dt>Watch for</dt><dd>The early-2000s points each rest on one or two films, so the line is noisy there, hence the small markers. And budgets are the softest number on the site: studios don&rsquo;t disclose them, so anything not straight from Box Office Mojo is an estimate, marked <code>est.</code> in the ledger.</dd>
+          <dt>Why this form</dt><dd>Every film is a dot at its budget and year. A single year holds only a few films, so a year-by-year median sawtooths and buries the trend; a <em>five-year rolling median</em> smooths it into the actual shape, and the band shows the middle 50% of budgets so the spread reads too, not just the center.</dd>
+          <dt>Choices here</dt><dd>Median, not mean, one $350M Avengers would drag a mean around. A centered &plusmn;2-year window instead of per-year points, because two or three films a year is too few for a stable median. One series, not four: split by universe and the counts get too small to read.</dd>
+          <dt>Watch for</dt><dd>The band is where the middle half of budgets sat, not a confidence interval, and the curve&rsquo;s ends lean on a shorter window. And budgets are the softest number on the site: studios don&rsquo;t disclose them, so anything not straight from Box Office Mojo is an estimate, marked <code>est.</code> in the ledger. Trust the shape, not any single dollar.</dd>
         </dl></div>
       </div>
     </div>
@@ -1056,6 +1056,7 @@
           <li><b>&ldquo;Too much scroll before you reach a chart.&rdquo;</b> Tightened the masthead and folded the contents to a single expandable line.</li>
           <li><b>&ldquo;The sortable table should be its own tab.&rdquo;</b> The ledger moved out of Reference into its own tab, next to it.</li>
           <li><b>&ldquo;Give the billion-dollar bubbles some pop.&rdquo;</b> On the &ldquo;since 2020&rdquo; chart, every film that crossed $1B gets a gold ring and full opacity, so the section&rsquo;s subject reads at a glance.</li>
+          <li><b>&ldquo;I don&rsquo;t think the budget chart is great, is there a better way?&rdquo;</b> A median of two or three films a year sawtoothed and buried the trend. Rebuilt as a five-year rolling median with a middle-50% band over every film&rsquo;s dot, so &ldquo;doubled, then flat&rdquo; reads as a shape instead of a zigzag.</li>
 
         </ol>
       </div>
@@ -1949,65 +1950,82 @@
   }
 
   /* ---------- §05 budget arms race ---------- */
+  // Catmull-Rom spline -> cubic bezier, for a smooth trend line through a few points
+  function smoothLine(pts) {
+    if (!pts.length) return "";
+    if (pts.length < 3) return "M" + pts.map(function (p) { return p.x + " " + p.y; }).join(" L");
+    var d = "M" + pts[0].x + " " + pts[0].y;
+    for (var i = 0; i < pts.length - 1; i++) {
+      var p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+      var c1x = p1.x + (p2.x - p0.x) / 6, c1y = p1.y + (p2.y - p0.y) / 6;
+      var c2x = p2.x - (p3.x - p1.x) / 6, c2y = p2.y - (p3.y - p1.y) / 6;
+      d += "C" + c1x + " " + c1y + " " + c2x + " " + c2y + " " + p2.x + " " + p2.y;
+    }
+    return d;
+  }
   function renderBudget() {
     var mob = isMobile();
     var W = mob ? MW : 1000, H = mob ? 300 : 420, m = mob ? { t: 14, r: 10, b: 26, l: 42 } : { t: 16, r: 18, b: 34, l: 54 };
-    var af = activeFilms();
-    var years = [];
-    for (var y = YEAR0; y <= YEAR1; y++) years.push(y);
+    var af = activeFilms().filter(function (f) { return val(f, "budget"); });
+    var yearOf = function (f) { return new Date(f.date).getFullYear(); };
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
-    var perYear = years.map(function (yr) {
-      var b = af.filter(function (f) { return new Date(f.date).getFullYear() === yr && val(f, "budget"); }).map(function (f) { return val(f, "budget"); });
-      return { yr: yr, n: b.length, med: b.length ? median(b) : null, min: b.length ? Math.min.apply(null, b) : null, max: b.length ? Math.max.apply(null, b) : null };
-    });
-    var allB = af.map(function (f) { return val(f, "budget"); }).filter(Boolean);
+    var allB = af.map(function (f) { return val(f, "budget"); });
     var max = niceMax(Math.max.apply(null, allB) || 1);
     var xS = function (yr) { return m.l + ((yr - YEAR0) / YEARSPAN) * iw; };
     var yS = function (v) { return m.t + ih - (v / max) * ih; };
+    // a single year holds only a few films, so a per-year median sawtooths; a centered
+    // multi-year window gives a stable median and a middle-50% band that read as the real trend
+    var WIN = 2;
+    var roll = [];
+    for (var yr = YEAR0; yr <= YEAR1; yr++) {
+      var b = af.filter(function (f) { var d = yearOf(f); return d >= yr - WIN && d <= yr + WIN; })
+        .map(function (f) { return val(f, "budget"); }).sort(function (a, b) { return a - b; });
+      if (b.length >= 3) roll.push({ yr: yr, med: median(b), q1: quantile(b, 0.25), q3: quantile(b, 0.75), n: b.length });
+    }
     var g = "";
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
       g += '<text x="' + (m.l - 8) + '" y="' + (yS(t) + (t === 0 ? -2 : 4)) + '" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-muted)">' + usdAxis(t) + "</text>";
     });
-    var dots = af.filter(function (f) { return val(f, "budget"); }).map(function (f) {
-      return '<circle cx="' + xS(new Date(f.date).getFullYear()) + '" cy="' + yS(val(f, "budget")) + '" r="3" fill="var(--ink-2)" fill-opacity="0.5" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
-    }).join("");
-    var pts = perYear.filter(function (p) { return p.med != null; });
-    var path = pts.map(function (p, i) { return (i ? "L" : "M") + xS(p.yr) + " " + yS(p.med); }).join(" ");
-    // endpoint radius encodes how many films the year's median rests on; the early-2000s dots are small on purpose
-    var ends = pts.map(function (p) {
-      var r = Math.min(7, 2.4 + p.n * 0.5);
-      return '<circle cx="' + xS(p.yr) + '" cy="' + yS(p.med) + '" r="' + r + '" fill="var(--dceu)" stroke="var(--surface)" stroke-width="1.5" class="budDot" data-yr="' + p.yr + '" data-med="' + p.med + '" data-n="' + p.n + '"/>';
-    }).join("");
     var xlab = "";
-    for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) xlab += '<text x="' + xS(yy) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="' + (mob ? 11 : 18) + '" fill="var(--ink-muted)">' + (mob ? "’" + String(yy).slice(2) : yy) + "</text>";
-    var last = pts[pts.length - 1];
+    for (var yy = YEAR0; yy <= YEAR1; yy += (mob ? 4 : 2)) xlab += '<text x="' + xS(yy) + '" y="' + (H - m.b + 15) + '" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(yy).slice(2) : yy) + "</text>";
+    // middle-50% band: q3 forward, q1 back
+    var band = "";
+    if (roll.length > 1) {
+      var topPts = roll.map(function (p) { return xS(p.yr) + " " + yS(p.q3); });
+      var botPts = roll.slice().reverse().map(function (p) { return xS(p.yr) + " " + yS(p.q1); });
+      band = '<path d="M' + topPts.join(" L") + " L" + botPts.join(" L") + ' Z" fill="var(--dceu)" fill-opacity="0.14" stroke="none"/>';
+    }
+    var medPath = smoothLine(roll.map(function (p) { return { x: xS(p.yr), y: yS(p.med) }; }));
+    var dots = af.map(function (f) {
+      return '<circle cx="' + xS(yearOf(f)) + '" cy="' + yS(val(f, "budget")) + '" r="3.2" fill="var(--ink-2)" fill-opacity="0.5" class="budFilm" data-i="' + FILMS.indexOf(f) + '"/>';
+    }).join("");
+    var last = roll[roll.length - 1];
     document.getElementById("chart-budget").innerHTML =
-      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Median production budget by year">' +
-      '<g class="grid">' + g + xlab + "</g>" + dots +
-      '<path d="' + path + '" fill="none" stroke="var(--dceu)" stroke-width="2" stroke-linejoin="round"/>' + ends +
-      (last ? '<text x="' + (xS(last.yr) - 6) + '" y="' + (yS(last.med) - 10) + '" text-anchor="end" class="lbl lbl-strong" font-size="11">median ' + usd(last.med) + "</text>" : "") +
+      '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Production budgets by year, a five-year rolling median with the middle-50% band">' +
+      '<g class="grid">' + g + xlab + "</g>" + band + dots +
+      '<path d="' + medPath + '" fill="none" stroke="var(--dceu)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>' +
+      (last ? '<text x="' + (xS(last.yr) - 4) + '" y="' + (yS(last.med) - 12) + '" text-anchor="end" class="lbl lbl-strong" font-size="11">median ' + usd(last.med) + "</text>" : "") +
       "</svg>";
     var svg = document.querySelector("#chart-budget svg");
-    svg.querySelectorAll(".budDot").forEach(function (el) {
+    svg.querySelectorAll(".budFilm").forEach(function (el) {
+      var f = FILMS[+el.getAttribute("data-i")];
       tipBind(el, function () {
-        var yr = +el.getAttribute("data-yr");
-        var p = perYear.find(function (q) { return q.yr === yr; }) || {};
-        var fs = af.filter(function (f) { return new Date(f.date).getFullYear() === yr && val(f, "budget"); })
-          .sort(function (a, b) { return val(b, "budget") - val(a, "budget"); });
-        return '<div class="tt">' + yr + '</div>' +
-          '<div class="tr"><span>Median budget</span><b>' + usd(p.med) + '</b></div>' +
-          '<div class="tr"><span>Range</span><b>' + usd(p.min) + "–" + usd(p.max) + '</b></div>' +
-          '<div class="flist">' + fs.map(function (f) {
-            return "<div><span>" + esc(f.t) + (f.budgetEst ? " (est)" : "") + ' &nbsp;<span class="fy">' + usd(val(f, "budget")) + "</span></span></div>";
-          }).join("") + "</div>";
+        return '<div class="tt">' + esc(f.t) + '</div>' +
+          '<div class="tr"><span>Production budget</span><b>' + usd(val(f, "budget")) + (f.budgetEst ? " est" : "") + '</b></div>' +
+          '<div class="tr"><span>Released</span><b>' + yearOf(f) + '</b></div>';
       });
     });
-    wireDots(svg);
-    document.getElementById("leg-budget").innerHTML = '<span><i style="--c:var(--dceu)"></i>Median budget' + (STATE.money === "real" ? " (2025 $)" : "") + '</span><span style="color:var(--ink-muted)">faint dot = one film</span>';
-    fillTable("table-budget", perYear.filter(function (p) { return p.n; }).map(function (p) {
-      return [String(p.yr), String(p.n), usd(p.med), usd(p.max)];
-    }), ["Year", "Films", "Median budget", "Biggest"]);
+    document.getElementById("leg-budget").innerHTML =
+      '<span><i style="--c:var(--dceu)"></i>Median budget, 5&#8209;yr' + (STATE.money === "real" ? " (2025 $)" : "") + '</span>'
+      + '<span><span style="display:inline-block;width:16px;height:9px;border-radius:2px;background:var(--dceu);opacity:0.28;vertical-align:-1px;margin-right:2px"></span>middle 50%</span>'
+      + '<span style="color:var(--ink-muted)">faint dot = one film</span>';
+    var perYear = [];
+    for (var yr2 = YEAR0; yr2 <= YEAR1; yr2++) {
+      var bb = af.filter(function (f) { return yearOf(f) === yr2; }).map(function (f) { return val(f, "budget"); });
+      if (bb.length) perYear.push([String(yr2), String(bb.length), usd(median(bb)), usd(Math.max.apply(null, bb))]);
+    }
+    fillTable("table-budget", perYear, ["Year", "Films", "Median budget", "Biggest"]);
   }
 
   /* ---------- §06 profitability (diverging) ---------- */
