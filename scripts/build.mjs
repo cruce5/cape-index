@@ -39,7 +39,9 @@ ${bodyInner}
 </body>
 </html>
 `;
-writeFileSync(join(ROOT, "dist/index.html"), doc);
+// Normalize CRLF -> LF: the served bytes are LF (whatever normalizes on the wire), so build-sidecars
+// must hash the same bytes the browser will execute or the CSP script hash will not match at runtime.
+writeFileSync(join(ROOT, "dist/index.html"), doc.replace(/\r\n/g, "\n"));
 // self-hosted IBM Plex: the Google stylesheet was the one render-blocking request on the page
 import { readdirSync, copyFileSync } from "node:fs";
 mkdirSync(join(ROOT, "dist/fonts"), { recursive: true });
