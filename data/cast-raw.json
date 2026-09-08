@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T15:06:18.013Z",
+  "generated": "2026-09-08T15:08:51.096Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "X-Men": {
@@ -3006,6 +3006,13 @@
       "universe": "Fox",
       "date": "2016-05-27",
       "cast": [
+        {
+          "actor": "Hugh Jackman",
+          "character": "Logan / Wolverine",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,

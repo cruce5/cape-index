@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T15:06:18.015Z",
+  "generated": "2026-09-08T15:08:51.099Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
@@ -306,6 +306,100 @@
       ]
     },
     {
+      "name": "Wolverine",
+      "real_name": "Logan",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Hugh Jackman"
+      ],
+      "appearances": 10,
+      "films": [
+        {
+          "title": "X-Men",
+          "universe": "Fox",
+          "date": "2000-07-14",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X2",
+          "universe": "Fox",
+          "date": "2003-05-02",
+          "order": 2,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men: The Last Stand",
+          "universe": "Fox",
+          "date": "2006-05-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men: First Class",
+          "universe": "Fox",
+          "date": "2011-06-03",
+          "order": -1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "The Wolverine",
+          "universe": "Fox",
+          "date": "2013-07-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men: Apocalypse",
+          "universe": "Fox",
+          "date": "2016-05-27",
+          "order": -1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "Logan",
+          "universe": "Fox",
+          "date": "2017-03-03",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": 2,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        }
+      ]
+    },
+    {
       "name": "Black Widow",
       "real_name": "Natasha Romanoff",
       "universes": [
@@ -557,92 +651,6 @@
           "order": 1,
           "minor": false,
           "actor": "Chris Hemsworth"
-        }
-      ]
-    },
-    {
-      "name": "Wolverine",
-      "real_name": "Logan",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Hugh Jackman"
-      ],
-      "appearances": 9,
-      "films": [
-        {
-          "title": "X-Men",
-          "universe": "Fox",
-          "date": "2000-07-14",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X2",
-          "universe": "Fox",
-          "date": "2003-05-02",
-          "order": 2,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X-Men: The Last Stand",
-          "universe": "Fox",
-          "date": "2006-05-26",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X-Men Origins: Wolverine",
-          "universe": "Fox",
-          "date": "2009-05-01",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X-Men: First Class",
-          "universe": "Fox",
-          "date": "2011-06-03",
-          "order": -1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "The Wolverine",
-          "universe": "Fox",
-          "date": "2013-07-26",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X-Men: Days of Future Past",
-          "universe": "Fox",
-          "date": "2014-05-23",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "Logan",
-          "universe": "Fox",
-          "date": "2017-03-03",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "Deadpool & Wolverine",
-          "universe": "MCU",
-          "date": "2024-07-26",
-          "order": 2,
-          "minor": false,
-          "actor": "Hugh Jackman"
         }
       ]
     },

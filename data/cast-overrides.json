@@ -278,7 +278,13 @@
         "actor": "Don Cheadle",
         "character": "James Rhodes / War Machine"
       }
+    ],
+    "X-Men: Apocalypse": [
+      {
+        "actor": "Hugh Jackman",
+        "character": "Logan / Wolverine"
+      }
     ]
   },
-  "speaking_rule": "2026-09-08, Bill: a cameo counts if the character speaks. The parser still drops anything Wikipedia calls a cameo, an uncredited appearance or a credits scene, because it cannot hear; the speaking ones are restored here by hand. Left out on the same rule: Wolverine in X-Men: Apocalypse (Weapon X, no line) and the X-Men door gag in Deadpool 2 (silent)."
+  "speaking_rule": "2026-09-08, Bill: a cameo counts if the character speaks, or slays a bunch. The parser still drops anything Wikipedia calls a cameo, an uncredited appearance or a credits scene, because it cannot hear or count bodies; the qualifying ones are restored here by hand. Wolverine in X-Men: Apocalypse is in on the second clause. Left out: the X-Men door gag in Deadpool 2 (silent, bloodless)."
 }
