@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T14:57:40.026Z",
+  "generated": "2026-09-08T15:06:18.013Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "X-Men": {
@@ -972,6 +972,13 @@
       "date": "2008-06-13",
       "cast": [
         {
+          "actor": "Robert Downey Jr.",
+          "character": "Tony Stark / Iron Man",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Edward Norton",
@@ -1026,6 +1033,13 @@
       "universe": "Elseworlds",
       "date": "2008-07-18",
       "cast": [
+        {
+          "actor": "Cillian Murphy",
+          "character": "Jonathan Crane / Scarecrow",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -1204,6 +1218,13 @@
       "date": "2011-05-06",
       "cast": [
         {
+          "actor": "Jeremy Renner",
+          "character": "Clint Barton / Hawkeye",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Chris Hemsworth",
@@ -1285,6 +1306,13 @@
         {
           "actor": "Michael Fassbender",
           "character": "Erik Lehnsherr / Magneto",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Hugh Jackman",
+          "character": "Logan / Wolverine",
           "order": -1,
           "minor": false,
           "fromOverride": true
@@ -1936,6 +1964,20 @@
       "universe": "Fox",
       "date": "2013-07-26",
       "cast": [
+        {
+          "actor": "Patrick Stewart",
+          "character": "Charles Xavier / Professor X",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Ian McKellen",
+          "character": "Erik Lehnsherr / Magneto",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -3162,6 +3204,13 @@
         {
           "actor": "Benedict Cumberbatch",
           "character": "Stephen Strange / Doctor Strange",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Chris Hemsworth",
+          "character": "Thor",
           "order": -1,
           "minor": false,
           "fromOverride": true
@@ -3446,6 +3495,13 @@
       "date": "2017-07-07",
       "cast": [
         {
+          "actor": "Chris Evans",
+          "character": "Steve Rogers / Captain America",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Tom Holland",
@@ -3633,6 +3689,20 @@
       "universe": "DCEU",
       "date": "2017-11-17",
       "cast": [
+        {
+          "actor": "Jesse Eisenberg",
+          "character": "Lex Luthor",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Joe Manganiello",
+          "character": "Slade Wilson / Deathstroke",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -4277,6 +4347,34 @@
       "universe": "MCU",
       "date": "2019-03-08",
       "cast": [
+        {
+          "actor": "Chris Evans",
+          "character": "Steve Rogers / Captain America",
+          "order": -4,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Scarlett Johansson",
+          "character": "Natasha Romanoff / Black Widow",
+          "order": -3,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Mark Ruffalo",
+          "character": "Bruce Banner / Hulk",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Don Cheadle",
+          "character": "James Rhodes / War Machine",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -5769,6 +5867,13 @@
       "date": "2022-04-01",
       "cast": [
         {
+          "actor": "Michael Keaton",
+          "character": "Adrian Toomes / Vulture",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Jared Leto",
@@ -6239,6 +6344,27 @@
         {
           "actor": "Zachary Levi",
           "character": "Billy Batson / Shazam",
+          "order": -4,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Gal Gadot",
+          "character": "Diana Prince / Wonder Woman",
+          "order": -3,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Mark Strong",
+          "character": "Thaddeus Sivana / Doctor Sivana",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "David F. Sandberg",
+          "character": "Mister Mind",
           "order": -1,
           "minor": false,
           "fromOverride": true
@@ -6727,13 +6853,20 @@
         {
           "actor": "Wesley Snipes",
           "character": "Eric Brooks / Blade",
-          "order": -2,
+          "order": -3,
           "minor": false,
           "fromOverride": true
         },
         {
           "actor": "Channing Tatum",
           "character": "Remy LeBeau / Gambit",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Mike Waters",
+          "character": "Fred Dukes / Blob",
           "order": -1,
           "minor": false,
           "fromOverride": true
@@ -7200,6 +7333,13 @@
         {
           "actor": "María Gabriela de Faría",
           "character": "Angela Spica / The Engineer",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Milly Alcock",
+          "character": "Kara Zor-El / Supergirl",
           "order": -1,
           "minor": false,
           "fromOverride": true

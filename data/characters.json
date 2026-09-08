@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-08T14:57:40.028Z",
+  "generated": "2026-09-08T15:06:18.015Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 255,
+  "count": 257,
   "characters": [
     {
       "name": "Spider-Man",
@@ -126,13 +126,21 @@
       "actors": [
         "Robert Downey Jr."
       ],
-      "appearances": 9,
+      "appearances": 10,
       "films": [
         {
           "title": "Iron Man",
           "universe": "MCU",
           "date": "2008-05-02",
           "order": 1,
+          "minor": false,
+          "actor": "Robert Downey Jr."
+        },
+        {
+          "title": "The Incredible Hulk",
+          "universe": "MCU",
+          "date": "2008-06-13",
+          "order": -1,
           "minor": false,
           "actor": "Robert Downey Jr."
         },
@@ -213,7 +221,7 @@
         "Patrick Stewart",
         "James McAvoy"
       ],
-      "appearances": 9,
+      "appearances": 10,
       "films": [
         {
           "title": "X-Men",
@@ -246,6 +254,14 @@
           "order": 1,
           "minor": false,
           "actor": "James McAvoy"
+        },
+        {
+          "title": "The Wolverine",
+          "universe": "Fox",
+          "date": "2013-07-26",
+          "order": -2,
+          "minor": false,
+          "actor": "Patrick Stewart"
         },
         {
           "title": "X-Men: Days of Future Past",
@@ -286,6 +302,347 @@
           "order": -6,
           "minor": false,
           "actor": "Patrick Stewart"
+        }
+      ]
+    },
+    {
+      "name": "Black Widow",
+      "real_name": "Natasha Romanoff",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Scarlett Johansson"
+      ],
+      "appearances": 9,
+      "films": [
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 4,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-04",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 2,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 3,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": -3,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 5,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        },
+        {
+          "title": "Black Widow",
+          "universe": "MCU",
+          "date": "2021-07-09",
+          "order": 1,
+          "minor": false,
+          "actor": "Scarlett Johansson"
+        }
+      ]
+    },
+    {
+      "name": "Captain America",
+      "real_name": "Steve Rogers",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chris Evans"
+      ],
+      "appearances": 9,
+      "films": [
+        {
+          "title": "Captain America: The First Avenger",
+          "universe": "MCU",
+          "date": "2011-07-22",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-04",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Spider-Man: Homecoming",
+          "universe": "MCU",
+          "date": "2017-07-07",
+          "order": -1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": -4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        }
+      ]
+    },
+    {
+      "name": "Thor",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chris Hemsworth"
+      ],
+      "appearances": 9,
+      "films": [
+        {
+          "title": "Thor",
+          "universe": "MCU",
+          "date": "2011-05-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-04",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Doctor Strange",
+          "universe": "MCU",
+          "date": "2016-11-04",
+          "order": -1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        },
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Hemsworth"
+        }
+      ]
+    },
+    {
+      "name": "Wolverine",
+      "real_name": "Logan",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Hugh Jackman"
+      ],
+      "appearances": 9,
+      "films": [
+        {
+          "title": "X-Men",
+          "universe": "Fox",
+          "date": "2000-07-14",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X2",
+          "universe": "Fox",
+          "date": "2003-05-02",
+          "order": 2,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men: The Last Stand",
+          "universe": "Fox",
+          "date": "2006-05-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men: First Class",
+          "universe": "Fox",
+          "date": "2011-06-03",
+          "order": -1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "The Wolverine",
+          "universe": "Fox",
+          "date": "2013-07-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "Logan",
+          "universe": "Fox",
+          "date": "2017-03-03",
+          "order": 1,
+          "minor": false,
+          "actor": "Hugh Jackman"
+        },
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": 2,
+          "minor": false,
+          "actor": "Hugh Jackman"
         }
       ]
     },
@@ -371,307 +728,6 @@
       ]
     },
     {
-      "name": "Black Widow",
-      "real_name": "Natasha Romanoff",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Scarlett Johansson"
-      ],
-      "appearances": 8,
-      "films": [
-        {
-          "title": "Iron Man 2",
-          "universe": "MCU",
-          "date": "2010-05-07",
-          "order": 4,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-04",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Captain America: The Winter Soldier",
-          "universe": "MCU",
-          "date": "2014-04-04",
-          "order": 2,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 3,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Black Widow",
-          "universe": "MCU",
-          "date": "2021-07-09",
-          "order": 1,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        }
-      ]
-    },
-    {
-      "name": "Thor",
-      "real_name": null,
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Chris Hemsworth"
-      ],
-      "appearances": 8,
-      "films": [
-        {
-          "title": "Thor",
-          "universe": "MCU",
-          "date": "2011-05-06",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-04",
-          "order": 4,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        },
-        {
-          "title": "Thor: The Dark World",
-          "universe": "MCU",
-          "date": "2013-11-08",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 2,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        },
-        {
-          "title": "Thor: Ragnarok",
-          "universe": "MCU",
-          "date": "2017-11-03",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 2,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 4,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        },
-        {
-          "title": "Thor: Love and Thunder",
-          "universe": "MCU",
-          "date": "2022-07-08",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Hemsworth"
-        }
-      ]
-    },
-    {
-      "name": "Wolverine",
-      "real_name": "Logan",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Hugh Jackman"
-      ],
-      "appearances": 8,
-      "films": [
-        {
-          "title": "X-Men",
-          "universe": "Fox",
-          "date": "2000-07-14",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X2",
-          "universe": "Fox",
-          "date": "2003-05-02",
-          "order": 2,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X-Men: The Last Stand",
-          "universe": "Fox",
-          "date": "2006-05-26",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X-Men Origins: Wolverine",
-          "universe": "Fox",
-          "date": "2009-05-01",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "The Wolverine",
-          "universe": "Fox",
-          "date": "2013-07-26",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "X-Men: Days of Future Past",
-          "universe": "Fox",
-          "date": "2014-05-23",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "Logan",
-          "universe": "Fox",
-          "date": "2017-03-03",
-          "order": 1,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        },
-        {
-          "title": "Deadpool & Wolverine",
-          "universe": "MCU",
-          "date": "2024-07-26",
-          "order": 2,
-          "minor": false,
-          "actor": "Hugh Jackman"
-        }
-      ]
-    },
-    {
-      "name": "Captain America",
-      "real_name": "Steve Rogers",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Chris Evans"
-      ],
-      "appearances": 7,
-      "films": [
-        {
-          "title": "Captain America: The First Avenger",
-          "universe": "MCU",
-          "date": "2011-07-22",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-04",
-          "order": 2,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Captain America: The Winter Soldier",
-          "universe": "MCU",
-          "date": "2014-04-04",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 4,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 1,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 4,
-          "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 2,
-          "minor": false,
-          "actor": "Chris Evans"
-        }
-      ]
-    },
-    {
       "name": "Hulk",
       "real_name": "Bruce Banner",
       "universes": [
@@ -681,7 +737,7 @@
         "Edward Norton",
         "Mark Ruffalo"
       ],
-      "appearances": 7,
+      "appearances": 8,
       "films": [
         {
           "title": "The Incredible Hulk",
@@ -724,6 +780,14 @@
           "actor": "Mark Ruffalo"
         },
         {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": -2,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
           "title": "Avengers: Endgame",
           "universe": "MCU",
           "date": "2019-04-26",
@@ -738,6 +802,84 @@
           "order": 9,
           "minor": false,
           "actor": "Mark Ruffalo"
+        }
+      ]
+    },
+    {
+      "name": "Magneto",
+      "real_name": "Erik Lehnsherr",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Ian McKellen",
+        "Michael Fassbender"
+      ],
+      "appearances": 8,
+      "films": [
+        {
+          "title": "X-Men",
+          "universe": "Fox",
+          "date": "2000-07-14",
+          "order": 3,
+          "minor": false,
+          "actor": "Ian McKellen"
+        },
+        {
+          "title": "X2",
+          "universe": "Fox",
+          "date": "2003-05-02",
+          "order": 9,
+          "minor": false,
+          "actor": "Ian McKellen"
+        },
+        {
+          "title": "X-Men: The Last Stand",
+          "universe": "Fox",
+          "date": "2006-05-26",
+          "order": 3,
+          "minor": false,
+          "actor": "Ian McKellen"
+        },
+        {
+          "title": "X-Men: First Class",
+          "universe": "Fox",
+          "date": "2011-06-03",
+          "order": -2,
+          "minor": false,
+          "actor": "Michael Fassbender"
+        },
+        {
+          "title": "The Wolverine",
+          "universe": "Fox",
+          "date": "2013-07-26",
+          "order": -1,
+          "minor": false,
+          "actor": "Ian McKellen"
+        },
+        {
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": -3,
+          "minor": false,
+          "actor": "Michael Fassbender"
+        },
+        {
+          "title": "X-Men: Apocalypse",
+          "universe": "Fox",
+          "date": "2016-05-27",
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Fassbender"
+        },
+        {
+          "title": "X-Men: Dark Phoenix",
+          "universe": "Fox",
+          "date": "2019-06-07",
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Fassbender"
         }
       ]
     },
@@ -814,76 +956,6 @@
       ]
     },
     {
-      "name": "Magneto",
-      "real_name": "Erik Lehnsherr",
-      "universes": [
-        "Fox"
-      ],
-      "actors": [
-        "Ian McKellen",
-        "Michael Fassbender"
-      ],
-      "appearances": 7,
-      "films": [
-        {
-          "title": "X-Men",
-          "universe": "Fox",
-          "date": "2000-07-14",
-          "order": 3,
-          "minor": false,
-          "actor": "Ian McKellen"
-        },
-        {
-          "title": "X2",
-          "universe": "Fox",
-          "date": "2003-05-02",
-          "order": 9,
-          "minor": false,
-          "actor": "Ian McKellen"
-        },
-        {
-          "title": "X-Men: The Last Stand",
-          "universe": "Fox",
-          "date": "2006-05-26",
-          "order": 3,
-          "minor": false,
-          "actor": "Ian McKellen"
-        },
-        {
-          "title": "X-Men: First Class",
-          "universe": "Fox",
-          "date": "2011-06-03",
-          "order": -1,
-          "minor": false,
-          "actor": "Michael Fassbender"
-        },
-        {
-          "title": "X-Men: Days of Future Past",
-          "universe": "Fox",
-          "date": "2014-05-23",
-          "order": -3,
-          "minor": false,
-          "actor": "Michael Fassbender"
-        },
-        {
-          "title": "X-Men: Apocalypse",
-          "universe": "Fox",
-          "date": "2016-05-27",
-          "order": 2,
-          "minor": false,
-          "actor": "Michael Fassbender"
-        },
-        {
-          "title": "X-Men: Dark Phoenix",
-          "universe": "Fox",
-          "date": "2019-06-07",
-          "order": 2,
-          "minor": false,
-          "actor": "Michael Fassbender"
-        }
-      ]
-    },
-    {
       "name": "Mystique",
       "real_name": null,
       "universes": [
@@ -950,6 +1022,75 @@
           "order": 3,
           "minor": false,
           "actor": "Jennifer Lawrence"
+        }
+      ]
+    },
+    {
+      "name": "War Machine",
+      "real_name": "James Rhodes",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Don Cheadle"
+      ],
+      "appearances": 7,
+      "films": [
+        {
+          "title": "Iron Man 2",
+          "universe": "MCU",
+          "date": "2010-05-07",
+          "order": 3,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Iron Man 3",
+          "universe": "MCU",
+          "date": "2013-05-03",
+          "order": 3,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 7,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 6,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 7,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": -1,
+          "minor": false,
+          "actor": "Don Cheadle"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 7,
+          "minor": false,
+          "actor": "Don Cheadle"
         }
       ]
     },
@@ -1443,67 +1584,6 @@
       ]
     },
     {
-      "name": "War Machine",
-      "real_name": "James Rhodes",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Don Cheadle"
-      ],
-      "appearances": 6,
-      "films": [
-        {
-          "title": "Iron Man 2",
-          "universe": "MCU",
-          "date": "2010-05-07",
-          "order": 3,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Iron Man 3",
-          "universe": "MCU",
-          "date": "2013-05-03",
-          "order": 3,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 7,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 6,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 7,
-          "minor": false,
-          "actor": "Don Cheadle"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 7,
-          "minor": false,
-          "actor": "Don Cheadle"
-        }
-      ]
-    },
-    {
       "name": "Wong",
       "real_name": null,
       "universes": [
@@ -1740,7 +1820,7 @@
           "title": "Doctor Strange",
           "universe": "MCU",
           "date": "2016-11-04",
-          "order": -1,
+          "order": -2,
           "minor": false,
           "actor": "Benedict Cumberbatch"
         },
@@ -1828,6 +1908,59 @@
           "order": 2,
           "minor": false,
           "actor": "Zoe Saldaña"
+        }
+      ]
+    },
+    {
+      "name": "Hawkeye",
+      "real_name": "Clint Barton",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jeremy Renner"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Thor",
+          "universe": "MCU",
+          "date": "2011-05-06",
+          "order": -1,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-04",
+          "order": 6,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 6,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 7,
+          "minor": false,
+          "actor": "Jeremy Renner"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 6,
+          "minor": false,
+          "actor": "Jeremy Renner"
         }
       ]
     },
@@ -2042,6 +2175,59 @@
           "order": 2,
           "minor": false,
           "actor": "Sebastian Stan"
+        }
+      ]
+    },
+    {
+      "name": "Wonder Woman",
+      "real_name": "Diana Prince",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Gal Gadot"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Batman v Superman: Dawn of Justice",
+          "universe": "DCEU",
+          "date": "2016-03-25",
+          "order": 9,
+          "minor": false,
+          "actor": "Gal Gadot"
+        },
+        {
+          "title": "Wonder Woman",
+          "universe": "DCEU",
+          "date": "2017-06-02",
+          "order": 1,
+          "minor": false,
+          "actor": "Gal Gadot"
+        },
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 3,
+          "minor": false,
+          "actor": "Gal Gadot"
+        },
+        {
+          "title": "Wonder Woman 1984",
+          "universe": "DCEU",
+          "date": "2020-12-25",
+          "order": 1,
+          "minor": false,
+          "actor": "Gal Gadot"
+        },
+        {
+          "title": "Shazam! Fury of the Gods",
+          "universe": "DCEU",
+          "date": "2023-03-17",
+          "order": -3,
+          "minor": false,
+          "actor": "Gal Gadot"
         }
       ]
     },
@@ -2271,51 +2457,6 @@
           "order": -1,
           "minor": false,
           "actor": "Lady Gaga"
-        }
-      ]
-    },
-    {
-      "name": "Hawkeye",
-      "real_name": "Clint Barton",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Jeremy Renner"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-04",
-          "order": 6,
-          "minor": false,
-          "actor": "Jeremy Renner"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 6,
-          "minor": false,
-          "actor": "Jeremy Renner"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 7,
-          "minor": false,
-          "actor": "Jeremy Renner"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 6,
-          "minor": false,
-          "actor": "Jeremy Renner"
         }
       ]
     },
@@ -2693,51 +2834,6 @@
       ]
     },
     {
-      "name": "Wonder Woman",
-      "real_name": "Diana Prince",
-      "universes": [
-        "DCEU"
-      ],
-      "actors": [
-        "Gal Gadot"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "Batman v Superman: Dawn of Justice",
-          "universe": "DCEU",
-          "date": "2016-03-25",
-          "order": 9,
-          "minor": false,
-          "actor": "Gal Gadot"
-        },
-        {
-          "title": "Wonder Woman",
-          "universe": "DCEU",
-          "date": "2017-06-02",
-          "order": 1,
-          "minor": false,
-          "actor": "Gal Gadot"
-        },
-        {
-          "title": "Justice League",
-          "universe": "DCEU",
-          "date": "2017-11-17",
-          "order": 3,
-          "minor": false,
-          "actor": "Gal Gadot"
-        },
-        {
-          "title": "Wonder Woman 1984",
-          "universe": "DCEU",
-          "date": "2020-12-25",
-          "order": 1,
-          "minor": false,
-          "actor": "Gal Gadot"
-        }
-      ]
-    },
-    {
       "name": "Black Widow (Yelena)",
       "real_name": "Yelena Belova",
       "universes": [
@@ -2885,6 +2981,45 @@
           "order": 2,
           "minor": false,
           "actor": "Vanessa Kirby"
+        }
+      ]
+    },
+    {
+      "name": "Lex Luthor",
+      "real_name": null,
+      "universes": [
+        "DCEU",
+        "DCU"
+      ],
+      "actors": [
+        "Jesse Eisenberg",
+        "Nicholas Hoult"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Batman v Superman: Dawn of Justice",
+          "universe": "DCEU",
+          "date": "2016-03-25",
+          "order": 4,
+          "minor": false,
+          "actor": "Jesse Eisenberg"
+        },
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": -2,
+          "minor": false,
+          "actor": "Jesse Eisenberg"
+        },
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": 3,
+          "minor": false,
+          "actor": "Nicholas Hoult"
         }
       ]
     },
@@ -3038,6 +3173,82 @@
           "order": null,
           "minor": true,
           "actor": "Tyler Mane"
+        }
+      ]
+    },
+    {
+      "name": "Scarecrow",
+      "real_name": "Dr. Jonathan Crane",
+      "universes": [
+        "Elseworlds"
+      ],
+      "actors": [
+        "Cillian Murphy"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Batman Begins",
+          "universe": "Elseworlds",
+          "date": "2005-06-15",
+          "order": 6,
+          "minor": false,
+          "actor": "Cillian Murphy"
+        },
+        {
+          "title": "The Dark Knight",
+          "universe": "Elseworlds",
+          "date": "2008-07-18",
+          "order": -1,
+          "minor": false,
+          "actor": "Cillian Murphy"
+        },
+        {
+          "title": "The Dark Knight Rises",
+          "universe": "Elseworlds",
+          "date": "2012-07-20",
+          "order": 18,
+          "minor": false,
+          "actor": "Cillian Murphy"
+        }
+      ]
+    },
+    {
+      "name": "Supergirl",
+      "real_name": "Kara Zor-El",
+      "universes": [
+        "DCEU",
+        "DCU"
+      ],
+      "actors": [
+        "Sasha Calle",
+        "Milly Alcock"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "The Flash",
+          "universe": "DCEU",
+          "date": "2023-06-16",
+          "order": 2,
+          "minor": false,
+          "actor": "Sasha Calle"
+        },
+        {
+          "title": "Superman",
+          "universe": "DCU",
+          "date": "2025-07-11",
+          "order": -1,
+          "minor": false,
+          "actor": "Milly Alcock"
+        },
+        {
+          "title": "Supergirl",
+          "universe": "DCU",
+          "date": "2026-06-26",
+          "order": 1,
+          "minor": false,
+          "actor": "Milly Alcock"
         }
       ]
     },
@@ -3391,6 +3602,37 @@
       ]
     },
     {
+      "name": "Blob",
+      "real_name": "Fred Dukes",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Kevin Durand",
+        "Mike Waters"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 6,
+          "minor": false,
+          "actor": "Kevin Durand"
+        },
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": -1,
+          "minor": false,
+          "actor": "Mike Waters"
+        }
+      ]
+    },
+    {
       "name": "Captain Boomerang",
       "real_name": "Digger Harkness",
       "universes": [
@@ -3538,6 +3780,35 @@
       ]
     },
     {
+      "name": "Doctor Sivana",
+      "real_name": "Dr. Thaddeus Sivana",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Mark Strong"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Shazam!",
+          "universe": "DCEU",
+          "date": "2019-04-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Mark Strong"
+        },
+        {
+          "title": "Shazam! Fury of the Gods",
+          "universe": "DCEU",
+          "date": "2023-03-17",
+          "order": -2,
+          "minor": false,
+          "actor": "Mark Strong"
+        }
+      ]
+    },
+    {
       "name": "Electro",
       "real_name": "Max Dillon",
       "universes": [
@@ -3621,7 +3892,7 @@
           "title": "Deadpool & Wolverine",
           "universe": "MCU",
           "date": "2024-07-26",
-          "order": -1,
+          "order": -2,
           "minor": false,
           "actor": "Channing Tatum"
         }
@@ -3828,37 +4099,6 @@
           "order": 5,
           "minor": false,
           "actor": "Taika Waititi"
-        }
-      ]
-    },
-    {
-      "name": "Lex Luthor",
-      "real_name": null,
-      "universes": [
-        "DCEU",
-        "DCU"
-      ],
-      "actors": [
-        "Jesse Eisenberg",
-        "Nicholas Hoult"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "Batman v Superman: Dawn of Justice",
-          "universe": "DCEU",
-          "date": "2016-03-25",
-          "order": 4,
-          "minor": false,
-          "actor": "Jesse Eisenberg"
-        },
-        {
-          "title": "Superman",
-          "universe": "DCU",
-          "date": "2025-07-11",
-          "order": 3,
-          "minor": false,
-          "actor": "Nicholas Hoult"
         }
       ]
     },
@@ -4158,35 +4398,6 @@
       ]
     },
     {
-      "name": "Scarecrow",
-      "real_name": "Dr. Jonathan Crane",
-      "universes": [
-        "Elseworlds"
-      ],
-      "actors": [
-        "Cillian Murphy"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "Batman Begins",
-          "universe": "Elseworlds",
-          "date": "2005-06-15",
-          "order": 6,
-          "minor": false,
-          "actor": "Cillian Murphy"
-        },
-        {
-          "title": "The Dark Knight Rises",
-          "universe": "Elseworlds",
-          "date": "2012-07-20",
-          "order": 18,
-          "minor": false,
-          "actor": "Cillian Murphy"
-        }
-      ]
-    },
-    {
       "name": "Shadowcat",
       "real_name": "Kitty Pryde",
       "universes": [
@@ -4238,7 +4449,7 @@
           "title": "Shazam! Fury of the Gods",
           "universe": "DCEU",
           "date": "2023-03-17",
-          "order": -1,
+          "order": -4,
           "minor": false,
           "actor": "Zachary Levi"
         }
@@ -4271,37 +4482,6 @@
           "order": 6,
           "minor": false,
           "actor": "Henrique Zaga"
-        }
-      ]
-    },
-    {
-      "name": "Supergirl",
-      "real_name": "Kara Zor-El",
-      "universes": [
-        "DCEU",
-        "DCU"
-      ],
-      "actors": [
-        "Sasha Calle",
-        "Milly Alcock"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "The Flash",
-          "universe": "DCEU",
-          "date": "2023-06-16",
-          "order": 2,
-          "minor": false,
-          "actor": "Sasha Calle"
-        },
-        {
-          "title": "Supergirl",
-          "universe": "DCU",
-          "date": "2026-06-26",
-          "order": 1,
-          "minor": false,
-          "actor": "Milly Alcock"
         }
       ]
     },
@@ -4418,6 +4598,36 @@
           "order": 25,
           "minor": false,
           "actor": "Benicio del Toro"
+        }
+      ]
+    },
+    {
+      "name": "Vulture",
+      "real_name": "Adrian Toomes",
+      "universes": [
+        "MCU",
+        "SSU"
+      ],
+      "actors": [
+        "Michael Keaton"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Spider-Man: Homecoming",
+          "universe": "MCU",
+          "date": "2017-07-07",
+          "order": 2,
+          "minor": false,
+          "actor": "Michael Keaton"
+        },
+        {
+          "title": "Morbius",
+          "universe": "SSU",
+          "date": "2022-04-01",
+          "order": -1,
+          "minor": false,
+          "actor": "Michael Keaton"
         }
       ]
     },
@@ -5051,7 +5261,7 @@
           "title": "Deadpool & Wolverine",
           "universe": "MCU",
           "date": "2024-07-26",
-          "order": -2,
+          "order": -3,
           "minor": false,
           "actor": "Wesley Snipes"
         }
@@ -5075,27 +5285,6 @@
           "order": 13,
           "minor": false,
           "actor": "Fan Bingbing"
-        }
-      ]
-    },
-    {
-      "name": "Blob",
-      "real_name": "Fred Dukes",
-      "universes": [
-        "Fox"
-      ],
-      "actors": [
-        "Kevin Durand"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "X-Men Origins: Wolverine",
-          "universe": "Fox",
-          "date": "2009-05-01",
-          "order": 6,
-          "minor": false,
-          "actor": "Kevin Durand"
         }
       ]
     },
@@ -5541,6 +5730,27 @@
       ]
     },
     {
+      "name": "Deathstroke",
+      "real_name": "Slade Wilson",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Joe Manganiello"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": -1,
+          "minor": false,
+          "actor": "Joe Manganiello"
+        }
+      ]
+    },
+    {
       "name": "Doctor Fate",
       "real_name": "Kent Nelson",
       "universes": [
@@ -5579,27 +5789,6 @@
           "order": 7,
           "minor": false,
           "actor": "Elena Anaya"
-        }
-      ]
-    },
-    {
-      "name": "Doctor Sivana",
-      "real_name": "Dr. Thaddeus Sivana",
-      "universes": [
-        "DCEU"
-      ],
-      "actors": [
-        "Mark Strong"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Shazam!",
-          "universe": "DCEU",
-          "date": "2019-04-05",
-          "order": 1,
-          "minor": false,
-          "actor": "Mark Strong"
         }
       ]
     },
@@ -6549,6 +6738,27 @@
       ]
     },
     {
+      "name": "Mister Mind",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "David F. Sandberg"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Shazam! Fury of the Gods",
+          "universe": "DCEU",
+          "date": "2023-03-17",
+          "order": -1,
+          "minor": false,
+          "actor": "David F. Sandberg"
+        }
+      ]
+    },
+    {
       "name": "Mister Terrific",
       "real_name": "Michael Holt",
       "universes": [
@@ -7298,7 +7508,7 @@
           "title": "Superman",
           "universe": "DCU",
           "date": "2025-07-11",
-          "order": -1,
+          "order": -2,
           "minor": false,
           "actor": "María Gabriela de Faría"
         }
@@ -7574,27 +7784,6 @@
           "order": 10,
           "minor": false,
           "actor": "Jessica Chastain"
-        }
-      ]
-    },
-    {
-      "name": "Vulture",
-      "real_name": "Adrian Toomes",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Michael Keaton"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Spider-Man: Homecoming",
-          "universe": "MCU",
-          "date": "2017-07-07",
-          "order": 2,
-          "minor": false,
-          "actor": "Michael Keaton"
         }
       ]
     },

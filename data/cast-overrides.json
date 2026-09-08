@@ -15,6 +15,10 @@
       {
         "actor": "Michael Fassbender",
         "character": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "actor": "Hugh Jackman",
+        "character": "Logan / Wolverine"
       }
     ],
     "X-Men: Days of Future Past": [
@@ -39,6 +43,10 @@
       {
         "actor": "Benedict Cumberbatch",
         "character": "Stephen Strange / Doctor Strange"
+      },
+      {
+        "actor": "Chris Hemsworth",
+        "character": "Thor"
       }
     ],
     "Doctor Strange in the Multiverse of Madness": [
@@ -85,6 +93,18 @@
       {
         "actor": "Zachary Levi",
         "character": "Billy Batson / Shazam"
+      },
+      {
+        "actor": "Gal Gadot",
+        "character": "Diana Prince / Wonder Woman"
+      },
+      {
+        "actor": "Mark Strong",
+        "character": "Thaddeus Sivana / Doctor Sivana"
+      },
+      {
+        "actor": "David F. Sandberg",
+        "character": "Mister Mind"
       }
     ],
     "Venom: Let There Be Carnage": [
@@ -151,6 +171,10 @@
       {
         "actor": "Channing Tatum",
         "character": "Remy LeBeau / Gambit"
+      },
+      {
+        "actor": "Mike Waters",
+        "character": "Fred Dukes / Blob"
       }
     ],
     "Spider-Man: No Way Home": [
@@ -181,7 +205,80 @@
       {
         "actor": "María Gabriela de Faría",
         "character": "Angela Spica / The Engineer"
+      },
+      {
+        "actor": "Milly Alcock",
+        "character": "Kara Zor-El / Supergirl"
+      }
+    ],
+    "Thor": [
+      {
+        "actor": "Jeremy Renner",
+        "character": "Clint Barton / Hawkeye"
+      }
+    ],
+    "The Incredible Hulk": [
+      {
+        "actor": "Robert Downey Jr.",
+        "character": "Tony Stark / Iron Man"
+      }
+    ],
+    "Spider-Man: Homecoming": [
+      {
+        "actor": "Chris Evans",
+        "character": "Steve Rogers / Captain America"
+      }
+    ],
+    "The Dark Knight": [
+      {
+        "actor": "Cillian Murphy",
+        "character": "Jonathan Crane / Scarecrow"
+      }
+    ],
+    "Justice League": [
+      {
+        "actor": "Jesse Eisenberg",
+        "character": "Lex Luthor"
+      },
+      {
+        "actor": "Joe Manganiello",
+        "character": "Slade Wilson / Deathstroke"
+      }
+    ],
+    "The Wolverine": [
+      {
+        "actor": "Patrick Stewart",
+        "character": "Charles Xavier / Professor X"
+      },
+      {
+        "actor": "Ian McKellen",
+        "character": "Erik Lehnsherr / Magneto"
+      }
+    ],
+    "Morbius": [
+      {
+        "actor": "Michael Keaton",
+        "character": "Adrian Toomes / Vulture"
+      }
+    ],
+    "Captain Marvel": [
+      {
+        "actor": "Chris Evans",
+        "character": "Steve Rogers / Captain America"
+      },
+      {
+        "actor": "Scarlett Johansson",
+        "character": "Natasha Romanoff / Black Widow"
+      },
+      {
+        "actor": "Mark Ruffalo",
+        "character": "Bruce Banner / Hulk"
+      },
+      {
+        "actor": "Don Cheadle",
+        "character": "James Rhodes / War Machine"
       }
     ]
-  }
+  },
+  "speaking_rule": "2026-09-08, Bill: a cameo counts if the character speaks. The parser still drops anything Wikipedia calls a cameo, an uncredited appearance or a credits scene, because it cannot hear; the speaking ones are restored here by hand. Left out on the same rule: Wolverine in X-Men: Apocalypse (Weapon X, no line) and the X-Men door gag in Deadpool 2 (silent)."
 }

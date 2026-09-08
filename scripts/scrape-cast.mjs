@@ -56,7 +56,7 @@ const CODE_KEEP = new Set([
   "Galactus", "Red Skull", "Zemo", "Baron Zemo", "Winter Soldier", "War Machine", "Scarlet Witch",
   "Star-Lord", "Doctor Strange", "Ancient One", "The Ancient One", "The Mandarin", "The Leader",
   "Aunt May", "Red Guardian", "Ghost Rider", "US Agent", "U.S. Agent", "John Walker",
-  "Red Hulk", "Mighty Thor", "Blade", "Captain Carter", "Black Bolt", "Mister Fantastic",
+  "Red Hulk", "Mighty Thor", "Blade", "Captain Carter", "Black Bolt", "Mister Fantastic", "Deathstroke",
   // DC
   "Doomsday", "Steppenwolf", "Darkseid", "Ares", "Starro", "Krypto", "Peacemaker", "Bloodsport",
   "Blackguard", "Mongal", "Javelin", "Weasel", "Savant", "T.D.K.", "Nanaue", "King Shark",
