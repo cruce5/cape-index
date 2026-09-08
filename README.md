@@ -15,7 +15,8 @@ the bugs, is section 15 of the site itself.
 
 One rule: every live-action theatrical **Marvel or DC superhero film** whose
 continuity **began in 2000 or later** and that is **part of a multi-film
-continuity**: a shared universe, a trilogy, or a film with a theatrical sequel.
+continuity**: a shared universe, a trilogy, or a film with a theatrical sequel
+released or in production.
 One-and-done films with no sequel are out (no franchise arc to compare).
 
 **In (91 films):**
@@ -32,8 +33,9 @@ One-and-done films with no sequel are out (no franchise arc to compare).
 **Out:** continuities that began before 2000 (Burton's *Batman*, Donner's
 *Superman*, the *Blade* trilogy); anything animated; one-and-done films
 (*Catwoman*, *Constantine*, *Green Lantern*, *Jonah Hex*, *Watchmen*, Ang Lee's
-*Hulk*, the 2015 *Fantastic Four*, both *Punisher*s, *Superman Returns* as a coda
-to Donner's run, and *Kick-Ass* as creator-owned). A later multiverse cameo
+*Hulk*, the 2015 *Fantastic Four*, both *Punisher*s, and *Superman Returns* as a coda
+to Donner's run). *Kick-Ass* is out for a different reason: it is creator-owned, published
+under Marvel's Icon imprint rather than being a Marvel character. A later multiverse cameo
 doesn't pull an excluded film back in.
 
 ## Data

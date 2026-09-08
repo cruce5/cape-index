@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { ROOT } from "./lib-bom.mjs";
+import { toReal2025 } from "./inflation.mjs";
 
 const src = JSON.parse(readFileSync(join(ROOT, "data/films.json"), "utf8"));
 
@@ -16,6 +17,8 @@ const slim = src.films.map((f) => {
     date: f.release_date,
     wd: b.domestic, wi: b.international, ww: b.worldwide,
     open: b.opening_weekend_domestic,
+    // every other dollar column has a 2025-$ twin; without this one the ledger mixed bases
+    ropen: b.opening_weekend_domestic ? toReal2025(b.opening_weekend_domestic, Number(f.release_date.slice(0, 4))) : null,
     final: b.is_final,
     rd: r.domestic, ri: r.international, rw: r.worldwide,
     budget: f.budget,

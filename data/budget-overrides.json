@@ -1,5 +1,5 @@
 {
-  "note": "PRODUCTION budgets (USD), r/boxoffice convention: the number used for break-even math, NOT studio 'all-in' / marketing-inclusive figures. Box Office Mojo now lists inflated all-in budgets for some recent films (Doctor Strange 2 $414.9M, Deadpool & Wolverine $537M) — those are overridden here to the widely-cited production figure. Applied last, after BOM and Wikipedia. Everything here is budget_estimated:true.",
+  "note": "PRODUCTION budgets (USD), r/boxoffice convention: the number used for break-even math, NOT studio 'all-in' / marketing-inclusive figures. Box Office Mojo now lists inflated all-in budgets for some recent films (Doctor Strange 2 $414.9M, Deadpool & Wolverine $537M) — those are overridden here to the widely-cited production figure. Aquaman ($160-200M) and Black Adam ($190-260M) are pinned to the lower bound after a range-parsing bug took the upper one. Applied last, after BOM and Wikipedia. Everything here is budget_estimated:true.",
   "budgets": {
     "Doctor Strange in the Multiverse of Madness": 200000000,
     "Deadpool & Wolverine": 200000000,
@@ -26,7 +26,9 @@
     "Venom: The Last Dance": 120000000,
     "Kraven the Hunter": 110000000,
     "The Amazing Spider-Man 2": 200000000,
-    "The New Mutants": 67000000
+    "The New Mutants": 67000000,
+    "Aquaman": 160000000,
+    "Black Adam": 190000000
   },
   "rt_critic_note": "Filled only where OMDb and Wikipedia both omit a literal RT %. From rottentomatoes.com.",
   "rt_critic": {

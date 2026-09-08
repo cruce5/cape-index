@@ -52,7 +52,11 @@ function parseBudget(wikitext, guardGross) {
     .replace(/[|}{*]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
-  const hits = [...s.matchAll(/(\d+(?:\.\d+)?)\s*(million|billion)/gi)].map(
+  // In "$160-200 million" only the upper bound carries the unit, so a plain
+  // number-then-unit match found a single hit of 200 and the Math.min below returned the TOP
+  // of the range - the opposite of the convention documented on the next line. Match an
+  // optional "- upper" between the number and its unit so the lower bound is a hit too.
+  const hits = [...s.matchAll(/(\d+(?:\.\d+)?)\s*(?:[‒-―-]\s*\d+(?:\.\d+)?\s*)?(million|billion)/gi)].map(
     (h) => Number(h[1]) * (/b/i.test(h[2]) ? 1000 : 1) * million
   );
   // production budget convention: lower end of a range, first entry of a list

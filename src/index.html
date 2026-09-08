@@ -120,8 +120,11 @@
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--sticky-h, 104px) + 8px); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .contents .ct::after, details.card > summary::after, .ctl-chev { transition: none; }
+  }
   body {
     margin: 0;
     background: var(--page);
@@ -198,7 +201,7 @@
   .tabs-inner::-webkit-scrollbar { display: none; }
   .tab { appearance: none; border: 0; background: transparent; color: var(--ink-muted); font: inherit; font-size: 13.5px; font-weight: 500; padding: 14px 12px 12px; cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
   .tab:hover { color: var(--ink); }
-  .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+  .tab[aria-current="true"] { color: var(--ink); border-bottom-color: var(--ink); }
   .tab .tn { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
   [data-tab][hidden] { display: none !important; }
   .tabs.can-scroll .tabs-inner { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); }
@@ -317,8 +320,8 @@
   .grid line { stroke: var(--grid); }
   /* NB: on SVG <text>, a CSS font-size WINS over the font-size="" attribute, so these
      rules are the real control for every .lbl / .ax label, not the per-chart attributes.
-     On mobile fitMobileText() adds +2 via inline style; the ≤640px block below pins the
-     pre-bump base so that stays 13px. */
+     The ≤640px block below sets the mobile size directly; there is no longer a JS pass
+     that walks every text node adding to it. */
   .lbl { fill: var(--ink-2); font-family: var(--font-body); font-size: 16px; }
   .lbl-strong { fill: var(--ink); font-weight: 600; }
   /* a figure keeps the mono face even when it takes .lbl for its size. Without this the
@@ -328,12 +331,13 @@
   /* EVERY classless chart label (axis numbers, "67 more" fold markers, value
      annotations) honored its own tiny font-size="10/11" attribute. This one rule
      resizes all of them at once - CSS beats the attribute. Keep it above the media
-     query so mobile can pin the pre-fitMobileText base. */
+     query so the mobile block can override it. */
   svg text:not([class]) { font-size: 16px; }
   @media (max-width: 640px) {
-    .lbl { font-size: 11px; }
-    .ax text { font-size: 11px; }
-    svg text:not([class]) { font-size: 11px; }
+    /* was 11px + a JS +2 bump applied per node on every render; same result, no recalcs */
+    .lbl { font-size: 13px; }
+    .ax text { font-size: 13px; }
+    svg text:not([class]) { font-size: 13px; }
   }
 
   /* tooltip */
@@ -364,11 +368,15 @@
   table.data { border-collapse: collapse; width: 100%; font-size: 14px; }
   table.data th, table.data td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
   table.data th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; user-select: none; }
-  #table-full table.data th { cursor: pointer; } /* the ledger is the only sortable table */
+  /* the ledger is the only sortable table, and its header is a real button */
+  #table-full table.data th { padding: 0; }
+  .sortbtn { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; padding: 8px 12px; width: 100%; text-align: inherit; cursor: pointer; }
+  .sortbtn:hover { color: var(--ink); }
   table.data th:first-child, table.data td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
   table.data th:first-child { background: var(--surface-2); z-index: 1; }
   table.data td { font-family: var(--font-mono); }
   table.data td.name { font-family: var(--font-body); }
+  .estflag { color: var(--ink-muted); font-size: 0.85em; letter-spacing: 0.02em; }
   /* left to itself the film column absorbed every pixel the others didn't claim and pushed
      the last four off the right edge; pinned, with the handful of long titles wrapping */
   #table-full table.data th:first-child { width: 250px; min-width: 240px; }
@@ -377,6 +385,8 @@
   /* the summary table headers do not sort, so they must not look like the ledgers do */
   #table-summary table.data th { cursor: default; }
   #table-summary tr.sumall td { border-top: 1px solid var(--border-strong); font-weight: 600; color: var(--ink); }
+  /* a "median" of two films is a midpoint, not a distribution summary - say so */
+  #table-summary tr.thin td { color: var(--ink-muted); }
   table.data .uchip { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 7px; vertical-align: middle; }
   .th-sorted { color: var(--ink); }
   .th-sorted::after { content: " " attr(data-arrow); }
@@ -494,6 +504,11 @@
     .pg .pt { font-size: 15.5px; }
     .controls-inner { gap: 8px 14px; }
     .cgroup { flex-wrap: wrap; gap: 6px; }
+    /* 44px minimum on every control a thumb has to hit */
+    .pill, .seg button, .minibtn { min-height: 44px; }
+    .minibtn { padding-left: 14px; padding-right: 14px; }
+    .notes-link { display: inline-block; padding: 6px 4px; }
+    .contents li a { padding: 8px 0; }
     .clabel { font-size: 11px; }
     .legend { font-size: 14px; width: 100%; }
     /* six keys have to clear a phone's width on one row, so this row alone runs tighter
@@ -536,14 +551,14 @@
 
 <nav class="tabs" aria-label="Sections">
   <div class="spectrum-bar" aria-hidden="true"><i></i></div>
-  <div class="wrap tabs-inner" role="tablist">
-    <button class="tab" role="tab" data-tab="act1" aria-selected="true"><span class="tn">I</span>Scoreboard</button>
-    <button class="tab" role="tab" data-tab="act2" aria-selected="false"><span class="tn">II</span>Over time</button>
-    <button class="tab" role="tab" data-tab="act3" aria-selected="false"><span class="tn">III</span>Beyond the gross</button>
-    <button class="tab" role="tab" data-tab="act4" aria-selected="false"><span class="tn">IV</span>Roster</button>
-    <button class="tab" role="tab" data-tab="mistakes" aria-selected="false"><span class="tn">&#10007;</span>The mistakes</button>
-    <button class="tab" role="tab" data-tab="ledger" aria-selected="false"><span class="tn">&#9638;</span>The ledger</button>
-    <button class="tab" role="tab" data-tab="ref" aria-selected="false"><span class="tn">&sect;</span>Reference</button>
+  <div class="wrap tabs-inner">
+    <button class="tab" data-tab="act1" aria-current="true"><span class="tn">I</span>Scoreboard</button>
+    <button class="tab" data-tab="act2"><span class="tn">II</span>Over time</button>
+    <button class="tab" data-tab="act3"><span class="tn">III</span>Beyond the gross</button>
+    <button class="tab" data-tab="act4"><span class="tn">IV</span>Roster</button>
+    <button class="tab" data-tab="mistakes"><span class="tn">&#10007;</span>The mistakes</button>
+    <button class="tab" data-tab="ledger"><span class="tn">&#9638;</span>The ledger</button>
+    <button class="tab" data-tab="ref"><span class="tn">&sect;</span>Reference</button>
   </div>
 </nav>
 
@@ -552,6 +567,7 @@
   <div class="wrap controls-inner" id="controls-inner">
     <div class="cgroup" role="group" aria-label="Filter by universe">
       <span class="clabel">Universe</span>
+      <button class="pill pill-all" data-uni-all aria-pressed="true">All</button>
       <button class="pill" data-uni="MCU" style="--c:var(--mcu)" aria-pressed="true"><span class="dot"></span>MCU</button>
       <button class="pill" data-uni="Fox" style="--c:var(--fox)" aria-pressed="true"><span class="dot"></span>Fox</button>
       <button class="pill" data-uni="SSU" style="--c:var(--ssu)" aria-pressed="true"><span class="dot"></span>Sony</button>
@@ -642,7 +658,7 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 02 &nbsp;/&nbsp; TREEMAP</span>
-        <h2>Only three films have passed $2 billion, and all three are Marvel</h2>
+        <h2 id="h-treemap">Only three films have passed $2 billion, and all three are Marvel</h2>
         <p class="dek">Every film is a rectangle, sized by worldwide gross. The three biggest are all Marvel: two Avengers films, and <em>Brand New Day</em>, which is still in theaters. DC&rsquo;s ceiling, Aquaman at $1.15B, sits below ten separate Marvel films.</p>
       </div>
       <div class="card">
@@ -694,8 +710,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 04 &nbsp;/&nbsp; SCATTER</span>
-        <h2>Marvel has cleared $1 billion twelve times. DC four times, Fox and Sony never</h2>
-        <p class="dek">Worldwide gross by release date. Above the billion-dollar line sit four DC films (Aquaman, Joker, and both of Nolan&rsquo;s Dark Knight follow-ups); everything else up there is Marvel Studios. Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far.</p>
+        <h2 id="h-scatter">Marvel has cleared $1 billion twelve times. DC four times, Fox and Sony never</h2>
+        <p class="dek" id="d-scatter">Worldwide gross by release date. Above the billion-dollar line sit four DC films (Aquaman, Joker, and both of Nolan&rsquo;s Dark Knight follow-ups); everything else up there is Marvel Studios. Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -804,6 +820,8 @@
           <div class="legend" id="leg-rev"></div>
         </div>
         <div id="chart-reviews"></div>
+        <button class="minibtn" data-table="reviews" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-reviews" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Do better reviews go with bigger box office?</dd>
           <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter. The question is whether there&rsquo;s a pattern, and the honest answer is &ldquo;barely.&rdquo;</dd>
@@ -820,6 +838,8 @@
           <div class="legend" id="leg-par"></div>
         </div>
         <div id="chart-parity"></div>
+        <button class="minibtn" data-table="parity" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-parity" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where do critics and the audience disagree, and who liked it more?</dd>
           <dt>Why this form</dt><dd>Plot one score against the other and draw the 45&deg; line where they&rsquo;d match. Distance from the line is the size of the disagreement; the side tells you who was warmer.</dd>
@@ -890,6 +910,8 @@
           <div class="legend" id="leg-ensemble"></div>
         </div>
         <div id="chart-ensemble"></div>
+        <button class="minibtn" data-table="ensemble" aria-pressed="false" style="margin-top:12px">Show data</button>
+        <div id="table-ensemble" hidden></div>
       </div>
     </div>
   </section>
@@ -1047,7 +1069,7 @@
       </div>
       <div class="card" style="padding:16px">
         <div class="card-title">By universe</div>
-        <p class="card-note" style="margin:6px 0 0">One row per group, on the same filters and dollars as the table below. Medians, not averages: a couple of billion-dollar films drag a mean somewhere no actual film sits.</p>
+        <p class="card-note" style="margin:6px 0 0">One row per group, on the same filters and dollars as the table below. Medians, not averages: a couple of billion-dollar films drag a mean somewhere no actual film sits. Med. ROI is the median of each film&rsquo;s own ratio, not Med. WW divided by Med. budget; on a skewed set those differ by up to a third. Rows under four films are greyed, because the midpoint of two numbers is not a distribution.</p>
         <div id="table-summary"></div>
       </div>
       <div class="card" style="padding:16px;margin-top:20px">
@@ -1078,7 +1100,7 @@
         <div class="card">
           <div class="card-title">Definitions</div>
           <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. That is a purchasing-power adjustment (what those dollars are worth today), not the ticket-price or admissions adjustment the box-office world usually reaches for, and it applies US&nbsp;CPI even to the overseas share. Read it as rough real-terms scale, not a tickets-sold count. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
-          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">in release</span>) carry grosses as of early September 2026 and will climb; they are left out of the profit tallies until their runs end.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">&#9678;</span>) carry grosses as of early September 2026 and will climb. The rule, applied everywhere: they are <b>held out of anything that needs a finished number</b> (profit, break-even, the ROI ranking, the reviews scatter) and <b>counted in anything that describes the slate as it stands</b> (totals, medians, the $1B and $2B clubs, the treemap). So <em>Brand New Day</em> is in &sect;02&rsquo;s $2B count and out of &sect;06 entirely; without it the Marvel-to-DC ratio reads 2.60 rather than 2.80.</p>
         </div>
       </div>
       <div class="card" style="margin-top:20px">
@@ -1111,7 +1133,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">76 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">83 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1190,6 +1212,13 @@
           <li><b>The palette claim was writing a check the repo couldn&rsquo;t cash.</b> The site said the colors were &ldquo;checked with a script, pair by pair&rdquo;; no such script existed. It does now (<code>npm run check:palette</code>), it simulates all three dichromacies, and it gates the build. First run failed on 22 counts. Elseworlds grey sat at <b>1.8</b> separation from Fox under light deuteranopia, and the two light themes disagreed about what grey even was. Both greys retuned against the validator, &sect;06&rsquo;s universe chip removed (no neutral can clear six hues without simply being the ink color), and the beeswarm finally got the mark shapes the rest of the page claimed every chart had.</li>
           <li><b>The roster was missing two dozen characters.</b> <code>CODE_KEEP</code> listed them as mononyms while Wikipedia credits them in full, so the lookup never fired: Drax, Yondu, Ronan and Korath were absent from all five Guardians films, Groot from Vol. 2, Gambit, Psylocke, Jubilee and eleven more from theirs. Sabretooth was filed as a one-film MCU character. A bit part called &ldquo;Mr. Sherman/Rafke&rdquo; had been promoted to a superhero named Rafke. The Leader and Toxin were counted from films where the credit is a bare real name, which is the Thaddeus Ross bug again. 223 characters became 247.</li>
           <li><b>A stored-XSS path, and a robots.txt serving 361KB of HTML.</b> The data-table renderer wrote scraped Wikipedia strings into <code>innerHTML</code> unescaped; nothing in the data carries markup today, but the roster columns come from a scraper. The Worker also answered every unknown path with a 200 and the whole page, so <em>/robots.txt</em> came back as HTML labelled <code>text/plain</code>. Escaped, and the site now ships a real robots, sitemap, 404 and a CSP.</li>
+          <li><b>&ldquo;Fix it all.&rdquo;</b> The rest of what the eight auditors found, worked through.</li>
+          <li><b>The 2025&nbsp;$ toggle used to falsify its own headlines.</b> &ldquo;Fox and Sony never&rdquo; sat above a chart showing three Fox films and five Sony ones over the line, because the counts were typed and the chart recomputes. &sect;02 and &sect;04 write those sentences from the data now, so flipping the toggle changes the claim with the chart: seventeen Marvel films clear a billion in real terms, and five films have passed $2B rather than three.</li>
+          <li><b>Opening weekend was the one dollar column with no 2025&nbsp;$ twin</b>, so in real-dollar mode the ledger printed a real Domestic beside a nominal Opening and Mult. stopped being domestic over opening. Worse, &sect;07 plotted both on the same log axis, stretching every connector. It converts now, everywhere.</li>
+          <li><b>A budget range parser was taking the top of the range</b> while its own comment said the bottom: in &ldquo;$160&ndash;200 million&rdquo; only the upper bound carries the unit, so the lower one was never a match. It bit two films, both DC, both in the direction that flattered the thesis. <em>Aquaman</em> was carrying $200M against Box Office Mojo&rsquo;s $160M; <em>Black Adam</em> $260M against a widely reported $190M, which had it sixth-worst on &sect;06 at &minus;$257M. It is &minus;$82M. And <em>The Avengers</em> was dated to a Saturday.</li>
+          <li><b>Eleven charts had a data table; three didn&rsquo;t</b>, and the per-film character count existed in no table anywhere, while &sect;13&rsquo;s note called the tables &ldquo;the accessibility backbone: every value a chart encodes is a plain number here.&rdquo; All fourteen have one now, which let the 455 focusable-but-silent chart marks go: they sat inside <code>role="img"</code> SVGs that prune their own subtree, so tabbing 91 times through a chart announced nothing.</li>
+          <li><b>The tab bar declared an ARIA pattern it never implemented</b>, <code>role="tab"</code> with no tabpanel, no <code>aria-controls</code>, no arrow keys. Declared-and-broken is worse than absent, so it is a plain nav with <code>aria-current</code>. The ledger&rsquo;s sort was a click handler on a <code>&lt;th&gt;</code>, which no keyboard can reach; it is a button with <code>aria-sort</code>, and focus returns to the column you just sorted.</li>
+          <li><b>A per-node style pass ran on every render.</b> The mobile type bump walked every SVG text node reading and writing computed styles, forcing a style recalc each time, on every filter click. The bump was uniform, so it is two lines of CSS and no JavaScript.</li>
         </ol>
       </details>
 
@@ -1313,6 +1342,11 @@
   // Collapse a tall "one row per item" chart to a fixed height on both desktop and mobile,
   // defaulting to collapsed. The SVG always renders in full; this just clips it with a fade
   // and adds a Show all / Collapse toggle as a sibling (outside the clipped element).
+  function stripToggle(id) {
+    var host = document.getElementById(id);
+    var sib = host && host.nextElementSibling;
+    if (sib && sib.classList.contains("collapse-toggle")) sib.remove();
+  }
   function collapseChart(id, key, total) {
     var host = document.getElementById(id);
     if (!host) return;
@@ -1372,6 +1406,9 @@
     if (which === "d") return real ? f.rd : f.wd;
     if (which === "i") return real ? f.ri : f.wi;
     if (which === "budget") return real ? f.rbudget : f.budget;
+    // opening weekend used to have no real twin, so in 2025-$ mode the ledger printed a real
+    // Domestic next to a nominal Opening and Mult. stopped equalling domestic / opening
+    if (which === "open") return real ? f.ropen : f.open;
     return f[which];
   }
   function usd(n) {
@@ -1462,7 +1499,11 @@
     tip.style.left = px + "px";
     tip.style.top = py + "px";
   }
-  function hideTip() { if (!tipPinned) tip.style.opacity = "0"; }
+  var TIP_IDS = new WeakMap(), tipSeq = 0;
+  function idFor(el) { if (!TIP_IDS.has(el)) TIP_IDS.set(el, ++tipSeq); return TIP_IDS.get(el); }
+  // hidden, not just transparent: a role="status" div left in the tree keeps announcing the
+  // last film's numbers to a screen reader long after the pointer has moved on
+  function hideTip() { if (!tipPinned) { tip.style.opacity = "0"; tip.setAttribute("aria-hidden", "true"); } }
   // Bind a mark to the tooltip for mouse (hover) and touch (tap to pin), and,
   // when keyboardable, for focus. htmlFn returns the markup; position comes
   // from the pointer or the element box.
@@ -1478,7 +1519,8 @@
     el.addEventListener("mouseleave", hideTip);
     el.addEventListener("click", function (e) {
       e.stopPropagation();
-      tipPinned = false; at(e); tipPinned = true;
+      if (tipPinned && tip.dataset.owner === String(idFor(el))) { tipPinned = false; hideTip(); return; }
+      tipPinned = false; at(e); tipPinned = true; tip.dataset.owner = String(idFor(el));
     });
     if (keyboardable) {
       if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "0");
@@ -1487,7 +1529,7 @@
     }
   }
   document.addEventListener("click", function () { if (tipPinned) { tipPinned = false; hideTip(); } });
-  window.addEventListener("keydown", function (e) { if (e.key === "Escape" && tipPinned) { tipPinned = false; hideTip(); } });
+  window.addEventListener("keydown", function (e) { if (e.key === "Escape") { tipPinned = false; hideTip(); } });
   function filmTip(f) {
     var flag = f.final ? "" : '<div class="flag">◉ still in release, gross will climb</div>';
     return '<div class="tt">' + esc(f.t) + '</div>' +
@@ -1495,7 +1537,7 @@
       '<div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div>' +
       '<div class="tr"><span>Domestic</span><b>' + usd(val(f, "d")) + " (" + pct(f.pctDom) + ')</b></div>' +
       '<div class="tr"><span>Overseas</span><b>' + usd(val(f, "i")) + " (" + pct(f.pctIntl) + ')</b></div>' +
-      '<div class="tr"><span>Opening wknd</span><b>' + usd(f.open) + '</b></div>' +
+      '<div class="tr"><span>Opening weekend</span><b>' + usd(val(f, "open")) + '</b></div>' +
       '<div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div>' +
       '<div class="tr"><span>RT / MC / IMDb</span><b>' + (f.rt == null ? "&ndash;" : f.rt + "%") + " / " + f.mc + " / " + f.imdb + '</b></div>' +
       flag;
@@ -1949,7 +1991,7 @@
     wireDots(scsvg);
     wireCrosshair(scsvg, m.l, yS(0));
     var rows = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).map(function (f) {
-      return [f.t, uLabel(f.u), f.date, usd(val(f, "ww")), usd(f.open), (f.mult == null ? "&ndash;" : f.mult.toFixed(2) + "×")];
+      return [f.t, uLabel(f.u), f.date, usd(val(f, "ww")), usd(val(f, "open")), (f.mult == null ? "&ndash;" : f.mult.toFixed(2) + "×")];
     });
     fillTable("table-scatter", rows, ["Film", "Universe", "Release", "Worldwide", "Opening", "Multiplier"]);
   }
@@ -2009,7 +2051,7 @@
       : "";
     document.getElementById("chart-split").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Domestic and international split per film">' + foldMark + bars + "</svg>";
-    if (af.length > 26) foldToggle("chart-split", "split", af.length);
+    stripToggle("chart-split"); if (af.length > 26) foldToggle("chart-split", "split", af.length);
     document.getElementById("leg-split").innerHTML = '<span class="lg-keys">' +
       '<span><i style="--c:var(--ink-2);background:var(--ink-2)"></i>Solid&nbsp;= domestic</span>' +
       '<span><i style="--c:var(--ink-2);background:color-mix(in srgb,var(--ink-2) 30%,transparent);border:1px solid var(--ink-2)"></i>Pale&nbsp;= overseas</span>' +
@@ -2049,7 +2091,7 @@
       var total = fs.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
       var cells = [
         usd(total), usd(med(fs, function (f) { return val(f, "ww"); })),
-        usd(med(fs, function (f) { return f.open; })),
+        usd(med(fs, function (f) { return val(f, "open"); })),
         fmtX(med(fs, function (f) { return f.mult; })),
         usd(med(fs, function (f) { return val(f, "budget"); })),
         fmtX(med(fs, function (f) { return f.roi; })),
@@ -2057,7 +2099,10 @@
         fmtN(med(fs, function (f) { return f.mc; }), "")
       ];
       var chip = chipVar ? '<span class="uchip" style="background:var(' + chipVar + ')"></span>' : "";
-      return "<tr" + (chipVar ? "" : ' class="sumall"') + '><td class="name">' + chip + label + "</td><td>" + fs.length + "</td>" +
+      // §01 won't draw a quartile box under four films; a median of two is the same problem
+      var thin = fs.length < 4;
+      return "<tr" + (chipVar ? (thin ? ' class="thin"' : "") : ' class="sumall"') + '><td class="name">' + chip + label +
+        (thin ? ' <span class="estflag">n=' + fs.length + ', midpoint</span>' : "") + "</td><td>" + fs.length + "</td>" +
         cells.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>";
     }
     function fmtX(v) { return v == null ? "&ndash;" : v.toFixed(2) + "×"; }
@@ -2069,7 +2114,7 @@
     document.getElementById("table-summary").innerHTML =
       '<div class="scrollhint" id="hint-sum">' + (mob ? "Swipe" : "Scroll") + ' for the rest of the columns <span class="arw">&rarr;</span></div>' +
       '<div class="tablewrap"><table class="data"><thead><tr>' +
-      heads.map(function (h) { return "<th>" + h + "</th>"; }).join("") + "</tr></thead><tbody>" + body + "</tbody></table></div>";
+      heads.map(function (h) { return '<th scope="col">' + h + "</th>"; }).join("") + "</tr></thead><tbody>" + body + "</tbody></table></div>";
     wireScrollHint(document.querySelector("#table-summary .tablewrap"), document.getElementById("hint-sum"));
   }
 
@@ -2089,14 +2134,17 @@
     var thead = "<tr>" + cols.map(function (c) {
       var sorted = s.key === c.k ? " th-sorted" : "";
       var arrow = s.key === c.k ? (s.dir === 1 ? "▲" : "▼") : "";
-      return '<th class="' + sorted.trim() + '" data-sort="' + c.k + '" data-arrow="' + arrow + '">' + ((mob && mlbl[c.k]) || c.label) + "</th>";
+      // a th is not focusable and carries no state; the sort is a button with aria-sort on its header
+      var dir = s.key === c.k ? (s.dir === 1 ? "ascending" : "descending") : "none";
+      return '<th scope="col" aria-sort="' + dir + '" class="' + sorted.trim() + '" data-arrow="' + arrow + '">' +
+        '<button type="button" class="sortbtn" data-sort="' + c.k + '">' + ((mob && mlbl[c.k]) || c.label) + "</button></th>";
     }).join("") + "</tr>";
     var tbody = af.map(function (f) {
       return "<tr>" + cols.map(function (c) {
         var raw = c.g ? val(f, c.g) : f[c.k];
         var disp;
         if (c.k === "t") disp = '<span class="uchip" style="background:var(' + COLORVAR[f.u] + ')"></span>' + esc(mob ? clip(f.t, 16) : f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
-        else if (c.t === "$") disp = usd(raw);
+        else if (c.t === "$") disp = usd(raw) + (c.k === "budget" && f.budgetEst ? ' <span class="estflag">est.</span>' : "");
         else if (c.t === "p") disp = raw == null ? "&ndash;" : Math.round(raw) + "%";
         else if (c.t === "x") disp = raw == null ? "&ndash;" : raw.toFixed(2) + "×";
         else if (c.t === "n") disp = raw == null ? "&ndash;" : raw;
@@ -2108,12 +2156,14 @@
       '<div class="scrollhint" id="hint-full">' + (mob ? "Swipe" : "Scroll") + ' for the rest of the columns <span class="arw">&rarr;</span></div>' +
       '<div class="tablewrap"><table class="data"><thead>' + thead + "</thead><tbody>" + tbody + "</tbody></table></div>";
     wireScrollHint(document.querySelector("#table-full .tablewrap"), document.getElementById("hint-full"));
-    document.querySelectorAll("#table-full th").forEach(function (th) {
+    document.querySelectorAll("#table-full th button[data-sort]").forEach(function (th) {
       th.addEventListener("click", function () {
         var k = th.getAttribute("data-sort");
         if (STATE.sort.key === k) STATE.sort.dir *= -1;
         else STATE.sort = { key: k, dir: k === "t" || k === "u" || k === "date" ? 1 : -1 };
         renderFullTable();
+        var again = document.querySelector('#table-full button[data-sort="' + k + '"]');
+        if (again) again.focus();
       });
     });
   }
@@ -2175,7 +2225,7 @@
   function fillTable(id, rows, headers) {
     var host = document.getElementById(id);
     host.innerHTML = '<div class="tablewrap"><table class="data"><thead><tr>' +
-      headers.map(function (h) { return "<th>" + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      headers.map(function (h) { return '<th scope="col">' + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
       rows.map(function (r) { return "<tr>" + r.map(function (c, i) { return '<td class="' + (i === 0 ? "name" : "") + '">' + safeCell(c) + "</td>"; }).join("") + "</tr>"; }).join("") +
       "</tbody></table></div>";
   }
@@ -2389,7 +2439,7 @@
         head + foldMarkD + rows + '<line x1="' + x0d + '" x2="' + x0d + '" y1="' + md.t + '" y2="' + (Hd - md.b) + '" stroke="var(--axis)" stroke-width="1.5"/></svg>';
     }
     document.getElementById("chart-profit").innerHTML = svg;
-    if (af.length > 26) foldToggle("chart-profit", "profit", af.length);
+    stripToggle("chart-profit"); if (af.length > 26) foldToggle("chart-profit", "profit", af.length);
     document.querySelectorAll("#chart-profit .profRow").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
       tipBind(el, function () {
@@ -2403,7 +2453,7 @@
       });
     });
     var np = af.filter(function (f) { return profitOf(f) < 0; }).length;
-    document.getElementById("leg-profit").innerHTML = '<span class="lg-keys"><span><i style="--c:var(--pl-clear)"></i>Cleared break-even</span><span><i style="--c:var(--neg)"></i>Fell short (' + np + ')</span></span><span class="lg-notes"><span>break-even = 2.5&times; budget</span></span>';
+    document.getElementById("leg-profit").innerHTML = '<span class="lg-keys"><span><i style="--c:var(--pl-clear)"></i>Cleared break-even</span><span><i style="--c:var(--neg)"></i>Fell short (' + np + ')</span></span><span class="lg-notes"><span>break-even = 2.5&times; budget</span><span>&#9678; still in release, held out</span></span>';
     fillTable("table-profit", af.map(function (f) {
       var p = profitOf(f);
       return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), usd(val(f, "ww")), usd(val(f, "budget")), usd(val(f, "budget") * 2.5), (p >= 0 ? "+" : "−") + usd(Math.abs(p))];
@@ -2414,7 +2464,7 @@
   function renderLegs() {
     var af = activeFilms().slice().filter(function (f) { return f.open && f.mult != null; }).sort(function (a, b) { return b.mult - a.mult; });
     var lo = 8e6, hi = 1e9;
-    af.forEach(function (f) { lo = Math.min(lo, f.open); hi = Math.max(hi, val(f, "d")); });
+    af.forEach(function (f) { lo = Math.min(lo, val(f, "open")); hi = Math.max(hi, val(f, "d")); });
     var l0 = Math.log10(lo), l1 = Math.log10(hi);
     var mob = isMobile();
     var hN = mob ? 8 : 12;
@@ -2435,7 +2485,7 @@
     if (fold.fold > -1) g += '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fold.fold + 20) + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="10" fill="var(--ink-muted)">· ' + fold.label + " ·</text>";
     var rows = fold.rows.map(function (f, i) {
       var c = "var(" + COLORVAR[f.u] + ")";
-      var xo = xS(f.open), xd = xS(val(f, "d"));
+      var xo = xS(val(f, "open")), xd = xS(val(f, "d"));
       var off = (fold.fold > -1 && i >= fold.fold ? foldH : 0);
       if (mob) {
         var yt = m.t + i * rowH + off, yb = yt + rowH / 2 + 6;
@@ -2461,20 +2511,20 @@
     document.getElementById("chart-legs").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Opening weekend to lifetime domestic, per film, on a log scale">' +
       '<g class="grid">' + g + "</g>" + rows + "</svg>";
-    if (af.length > 26) foldToggle("chart-legs", "legs", af.length);
+    stripToggle("chart-legs"); if (af.length > 26) foldToggle("chart-legs", "legs", af.length);
     document.querySelectorAll("#chart-legs .legRow").forEach(function (el) {
       var f = FILMS[+el.getAttribute("data-i")];
       tipBind(el, function () {
         return '<div class="tt">' + esc(f.t) + '</div>' +
-          '<div class="tr"><span>Opening weekend</span><b>' + usd(f.open) + '</b></div>' +
+          '<div class="tr"><span>Opening weekend</span><b>' + usd(val(f, "open")) + '</b></div>' +
           '<div class="tr"><span>Lifetime domestic</span><b>' + usd(val(f, "d")) + '</b></div>' +
           '<div class="tr"><span>Multiplier</span><b>' + f.mult.toFixed(2) + '×</b></div>' +
-          '<div class="tr"><span>Opening share</span><b>' + Math.round(f.open / val(f, "d") * 100) + "%</b></div>";
+          '<div class="tr"><span>Opening share</span><b>' + Math.round(val(f, "open") / val(f, "d") * 100) + "%</b></div>";
       });
     });
-    document.getElementById("leg-legs").innerHTML = '<span class="lg-keys"><span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span></span><span class="lg-notes"><span>log scale, line length = the multiplier</span></span>';
+    document.getElementById("leg-legs").innerHTML = '<span class="lg-keys"><span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span></span><span class="lg-notes"><span>Dot color = universe</span><span>log scale, line length = the multiplier</span></span>';
     fillTable("table-legs", af.map(function (f) {
-      return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), usd(f.open), usd(val(f, "d")), f.mult.toFixed(2) + "×"];
+      return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), usd(val(f, "open")), usd(val(f, "d")), f.mult.toFixed(2) + "×"];
     }), ["Film", "Universe", "Opening", "Lifetime domestic", "Multiplier"]);
   }
 
@@ -2528,6 +2578,9 @@
     wireDots(rsvg);
     wireCrosshair(rsvg, m.l, H - m.b);
     legend("leg-rev", activeUnis(), false, true);
+    fillTable("table-reviews", af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).map(function (f) {
+      return [f.t, uLabel(f.u), (f.rt == null ? "&ndash;" : f.rt + "%"), (f.mc == null ? "&ndash;" : f.mc), usd(val(f, "ww"))];
+    }), ["Film", "Universe", "RT critic", "Metacritic", "Worldwide"]);
   }
   function renderParity() {
     var mob = isMobile();
@@ -2560,9 +2613,16 @@
       '<text x="' + lX + '" y="' + lY + '" font-family="IBM Plex Sans, system-ui, sans-serif" fill="var(--ink-muted)">they agree</text>';
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(f.imdb * 10), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
     var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
+    // the three widest gaps all cluster in the same low-RT corner, which is exactly the case
+    // the placer exists for; the two side labels are blocked out first
+    var place = labelPlacer();
+    place.block(xS(5), xS(5) + 190, yS(93));
+    place.block(xS(95) - 180, xS(95), yS(6));
     var labs = gap.map(function (f) {
       var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 55;
-      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + (yv + 3) + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 18) + '" style="pointer-events:none">' + esc(clip(f.t, mob ? 16 : 24)) + "</text>";
+      var st = mob ? clip(shortT(f.t), 16) : shortT(f.t);
+      var ly = place.place(x, yv, st, mob ? 11 : 18, right);
+      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 18) + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
     }).join("");
     document.getElementById("chart-parity").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + shade + diag + pts + labs +
@@ -2572,6 +2632,10 @@
     wireDots(psvg);
     wireCrosshair(psvg, m.l, H - m.b);
     legend("leg-par", activeUnis(), false, true);
+    fillTable("table-parity", af.slice().sort(function (a, b) { return (b.imdb * 10 - b.rt) - (a.imdb * 10 - a.rt); }).map(function (f) {
+      var gap = f.imdb * 10 - f.rt;
+      return [f.t, uLabel(f.u), f.rt + "%", f.imdb.toFixed(1), (gap >= 0 ? "+" : "−") + Math.abs(gap).toFixed(1)];
+    }), ["Film", "Universe", "RT critic", "IMDb", "Audience lead"]);
   }
 
   /* ---------- §10 roster grid (character × film) ---------- */
@@ -2723,7 +2787,7 @@
       }).join("");
       var mark = fi > -1 ? '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fi + 17) + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="10" fill="var(--ink-muted)">· ' + HT.hidden + " more · " + order[fi - 1].v + " down to " + order[order.length - 1].v + " ·</text>" : "";
       host.innerHTML = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films ranked by number of codenamed characters">' + body + mark + "</svg>";
-      foldToggle("chart-ensemble", "ensemble", af.length);
+      stripToggle("chart-ensemble"); if (af.length > 26) foldToggle("chart-ensemble", "ensemble", af.length);
     } else {
       var stray = host.nextElementSibling; if (stray && stray.classList.contains("collapse-toggle")) stray.remove();
       var W = 1000, H = 300, m = { t: 16, r: 12, b: 28, l: 34 };
@@ -2767,6 +2831,11 @@
       });
     });
     legend("leg-ensemble", activeUnis());
+    // the per-film character count lived in no table anywhere on the page until now
+    fillTable("table-ensemble", af.map(function (f, i) { return [f, counts[i]]; })
+      .sort(function (x, y) { return y[1] - x[1]; })
+      .map(function (p) { return [p[0].t, uLabel(p[0].u), new Date(p[0].date).getFullYear(), p[1]]; }),
+      ["Film", "Universe", "Year", "Codenamed characters"]);
   }
 
   function renderFootprint() {
@@ -2813,7 +2882,7 @@
     document.getElementById("chart-footprint").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Characters ranked by number of film appearances">' +
       '<g class="grid">' + g + "</g>" + body + foldMark + "</svg>";
-    if (allRows.length > 22) collapseChart("chart-footprint", "footprint", allRows.length);
+    stripToggle("chart-footprint"); if (allRows.length > 22) collapseChart("chart-footprint", "footprint", allRows.length);
     document.querySelectorAll("#chart-footprint .fpRow").forEach(function (el) {
       var x = allRows.find(function (y) { return y.c.n === el.getAttribute("data-c"); });
       if (x) tipBind(el, function () { return charFilmTip(x.c, x.films); });
@@ -3087,10 +3156,54 @@
   }
 
   /* ---------- render all ---------- */
+
+
+// §02 and §04 headline the $1B / $2B clubs. Those counts move with the dollar basis, so
+  // they are written from the data rather than typed, and the sentence follows the toggle.
+  function renderClubCopy() {
+    var WORDS = ["never", "once", "twice", "three times", "four times", "five times", "six times",
+      "seven times", "eight times", "nine times", "ten times", "eleven times", "twelve times",
+      "thirteen times", "fourteen times", "fifteen times", "sixteen times", "seventeen times"];
+    var NUM = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+      "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen"];
+    var word = function (n) { return WORDS[n] || n + " times"; };
+    var num = function (n) { return NUM[n] || String(n); };
+    var over = function (list, t) { return list.filter(function (f) { return val(f, "ww") >= t; }).length; };
+    var real = STATE.money === "real";
+    var basis = real ? " in 2025 dollars" : "";
+    var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
+    var dc = FILMS.filter(function (f) { return f.u === "DCEU" || f.u === "DCU" || f.u === "Elseworlds"; });
+    var fox = FILMS.filter(function (f) { return f.u === "Fox"; });
+    var ssu = FILMS.filter(function (f) { return f.u === "SSU"; });
+    var h4 = document.getElementById("h-scatter");
+    if (h4) {
+      var fx = over(fox, 1e9), sn = over(ssu, 1e9);
+      var tail = (fx === 0 && sn === 0) ? "Fox and Sony never" : "Fox " + word(fx) + ", Sony " + word(sn);
+      h4.textContent = "Marvel has cleared $1 billion " + word(over(mcu, 1e9)) + basis + ". DC " + word(over(dc, 1e9)) + ", " + tail;
+    }
+    var d4 = document.getElementById("d-scatter");
+    if (d4) {
+      var dcN = over(dc, 1e9), others = over(fox, 1e9) + over(ssu, 1e9);
+      d4.innerHTML = "Worldwide gross by release date" + (real ? ", rescaled to 2025 dollars" : "") +
+        ". Above the billion-dollar line sit " + num(dcN) + " DC film" + (dcN === 1 ? "" : "s") +
+        (others ? ", " + num(others) + " from Fox and Sony," : "") +
+        " and " + num(over(mcu, 1e9)) + " from Marvel Studios. Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far." +
+        (real ? " The billion-dollar club is a nominal milestone by convention; this is what it looks like in real terms." : "");
+    }
+    var h2 = document.getElementById("h-treemap");
+    if (h2) {
+      var all2 = FILMS.filter(function (f) { return val(f, "ww") >= 2e9; });
+      var allMarvel = all2.every(function (f) { return f.u === "MCU" || f.u === "Fox" || f.u === "SSU"; });
+      h2.textContent = num(all2.length).charAt(0).toUpperCase() + num(all2.length).slice(1) +
+        " film" + (all2.length === 1 ? " has" : "s have") + " passed $2 billion" + basis +
+        (allMarvel ? (all2.length === 1 ? ", and it is Marvel" : ", and all of them are Marvel") : "");
+    }
+  }
   function renderAll() {
     if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
     var mw = measureChartWidth(); if (mw) MW = mw;
     renderThesis();
+    renderClubCopy();
     renderScorecards();
     renderYear();
     renderBox();
@@ -3108,26 +3221,12 @@
     renderFootprint();
     renderAntipatterns();
     renderFullTable();
-    fitMobileText();
     updateCtlSummary();
     syncNotesUI();
   }
-  // On a phone every chart label gets two more points. The charts draw at one viewBox unit per
-  // CSS pixel on mobile (see MW), so this is a real +2px, applied after render so the ~90
-  // font-size literals across the renderers don't each need a mobile variant. Re-renders
-  // replace the SVG nodes, so it never double-applies.
-  var MOBILE_TEXT_BUMP = 2;
-  function fitMobileText() {
-    if (!isMobile()) return;
-    document.querySelectorAll("svg text").forEach(function (t) {
-      if (t.getAttribute("data-fit")) return;
-      var fs = parseFloat(getComputedStyle(t).fontSize);
-      if (fs) t.style.fontSize = (fs + MOBILE_TEXT_BUMP) + "px";
-      t.setAttribute("data-fit", "1");
-    });
-  }
 
   /* ---------- controls ---------- */
+
   function syncPills() {
     document.querySelectorAll(".pill[data-uni]").forEach(function (b) {
       b.setAttribute("aria-pressed", STATE.unis[b.getAttribute("data-uni")] ? "true" : "false");
@@ -3141,6 +3240,14 @@
       renderAll();
     });
   });
+  (function () {
+    var all = document.querySelector("[data-uni-all]");
+    if (!all) return;
+    all.addEventListener("click", function () {
+      UNI.forEach(function (u) { STATE.unis[u.k] = true; });
+      syncPills(); renderAll();
+    });
+  })();
   document.querySelectorAll(".seg [data-money]").forEach(function (b) {
     b.addEventListener("click", function () {
       STATE.money = b.getAttribute("data-money");
@@ -3223,7 +3330,7 @@
     opts = opts || {};
     if (TABS.indexOf(key) < 0) key = "act1";
     document.querySelectorAll("main [data-tab]").forEach(function (el) { el.hidden = el.getAttribute("data-tab") !== key; });
-    document.querySelectorAll(".tab").forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-tab") === key ? "true" : "false"); });
+    document.querySelectorAll(".tab").forEach(function (b) { if (b.getAttribute("data-tab") === key) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current"); });
     STATE.tab = key;
     renderPager(key);
     var active = document.querySelector('.tab[data-tab="' + key + '"]');

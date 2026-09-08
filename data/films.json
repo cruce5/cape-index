@@ -1251,7 +1251,7 @@
     },
     {
       "title": "The Avengers",
-      "release_date": "2012-05-12",
+      "release_date": "2012-05-04",
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
@@ -1313,7 +1313,7 @@
       "title": "The Amazing Spider-Man",
       "release_date": "2012-07-03",
       "universe": "SSU",
-      "universe_label": "Sony's Spider-Man Universe",
+      "universe_label": "Sony Pictures (Amazing Spider-Man)",
       "studio_label": "Sony Pictures",
       "bom": {
         "id": "tt0948470",
@@ -1728,7 +1728,7 @@
       "title": "The Amazing Spider-Man 2",
       "release_date": "2014-05-02",
       "universe": "SSU",
-      "universe_label": "Sony's Spider-Man Universe",
+      "universe_label": "Sony Pictures (Amazing Spider-Man)",
       "studio_label": "Sony Pictures",
       "bom": {
         "id": "tt1872181",
@@ -3073,7 +3073,7 @@
         "international": 1047884949,
         "worldwide": 1477729993
       },
-      "budget": 200000000,
+      "budget": 160000000,
       "runtime_minutes": 143,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -3106,11 +3106,11 @@
         "pct_international": 70.91,
         "domestic_multiplier": 4.94,
         "opening_share_worldwide": 5.89,
-        "roi_worldwide": 5.76,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": 652028393,
+        "roi_worldwide": 7.2,
+        "breakeven_worldwide": 400000000,
+        "profit_vs_breakeven": 752028393,
         "profitable": true,
-        "budget_real_2025": 256544023
+        "budget_real_2025": 205235218
       }
     },
     {
@@ -4296,7 +4296,7 @@
         "international": 247968188,
         "worldwide": 433038646
       },
-      "budget": 260000000,
+      "budget": 190000000,
       "runtime_minutes": 125,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -4329,11 +4329,11 @@
         "pct_international": 57.26,
         "domestic_multiplier": 2.51,
         "opening_share_worldwide": 17.03,
-        "roi_worldwide": 1.51,
-        "breakeven_worldwide": 650000000,
-        "profit_vs_breakeven": -256547889,
+        "roi_worldwide": 2.07,
+        "breakeven_worldwide": 475000000,
+        "profit_vs_breakeven": -81547889,
         "profitable": false,
-        "budget_real_2025": 286159471
+        "budget_real_2025": 209116537
       }
     },
     {

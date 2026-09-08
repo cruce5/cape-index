@@ -12,7 +12,7 @@ createServer(async (req, res) => {
   let p = req.url.split("?")[0];
   if (p === "/") p = "/index.html";
   try {
-    const buf = await readFile(join(DIR, p));
+    const buf = await readFile(safeJoin(DIR, p));
     res.writeHead(200, { "content-type": TYPES[extname(p)] || "application/octet-stream" });
     res.end(buf);
   } catch {
