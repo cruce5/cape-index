@@ -69,7 +69,9 @@ your OMDb key in it (gitignored).
 Dark mode is the primary target. The palette is a color-blind-safe set
 ([Paul Tol "bright"](https://personal.sron.nl/~pault/) plus a grey), validated
 with a script rather than by eye, with a mark shape per group as a backstop.
-Section headlines state the finding, not the axis. No dual-axis charts, no trend
+Type is three faces with one job each: IBM Plex Sans Condensed for headings and hero
+numbers, Sans for every word a reader reads, Mono for figures and metadata, each declared
+once as a token with a real fallback. Section headlines state the finding, not the axis. No dual-axis charts, no trend
 lines where the data doesn't support one, median over mean. Every chart carries a
 "why this form / what it can't tell you" note behind a toggle, and every encoded
 value is a plain number in the data table.
