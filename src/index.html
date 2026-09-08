@@ -554,8 +554,14 @@
     .note dd { margin-bottom: 8px; }
     table.data { font-size: 12px; }
     table.data th, table.data td { padding: 4px 6px; }
-    table.data th:first-child, table.data td:first-child { position: static; }
-    table.data td.name, table.data td:first-child { max-width: 30vw; overflow: hidden; text-overflow: ellipsis; }
+    /* the film name stays put while the rest scrolls under it; without this, scrolling
+       right left every row anonymous */
+    table.data th:first-child, table.data td:first-child {
+      width: 118px; max-width: 118px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      box-shadow: 5px 0 6px -5px rgba(0, 0, 0, 0.5);
+    }
+    #table-full table.data th:first-child { width: 118px; min-width: 118px; }
+    #table-full table.data td.name { white-space: nowrap; }
     table.data .uchip { margin-right: 5px; }
   }
 </style>
@@ -1172,7 +1178,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">90 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">91 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1265,6 +1271,7 @@
           <li><b>&ldquo;The Marvel v DC toggle might be more important than the design notes one now.&rdquo;</b> It was, and it had a third of the surface area. Design notes had three ways in: a button in the masthead, a chip that stays visible on a phone when the filter panel is folded, and its row in the control bar. The lens had one, buried inside that folded panel. It has all three now, it reads first in the control bar (it decides what the universe pills even are), and the collapsed filter summary says which lens is on. Both masthead buttons sit in the same sentence, gold and blue, so they read as the pair they are.</li>
           <li><b>&ldquo;The case for the progress bar spanning the document, not the page.&rdquo;</b> It&rsquo;s a good case. Inside a tab the native scrollbar already says the same thing, so a per-tab bar was spending a whole design element on information the browser gives away, and it was misleading in the worst direction: finishing the Scoreboard filled it to 100%, which reads as <em>done</em> when you are one seventh in. A bar that claims you have finished six times before you finish is worse than no bar. It is tab-weighted rather than measured in pixels, because a hidden tab has no height and &sect;15&rsquo;s fold-outs move the total while you stand on it: completed tabs plus your fraction of this one, over seven. Fixed denominator, nothing measured off-screen, and jumping to Reference honestly puts you near the end.</li>
           <li><b>&ldquo;I don&rsquo;t know if I like starting and ending with green on the colorful one.&rdquo;</b> Neither do I, and it was measurably the wrong order as well as the wrong look: green appeared twice while every other hue appeared once, and the wrap back to it was the biggest single jump in the bar. Solved by brute force instead of taste - all 720 orderings scored in OKLab for total blend distance, worst single step, and how far apart the two ends land, in both themes at once. The winner is magenta, gray, blue, cyan, green, gold: <b>19% smoother</b> overall, worst step down from 33 to 21, and the two ends now differ by 33 rather than 21. Stops are spaced by how far each step actually travels, so no transition gets squeezed.</li>
+          <li><b>&ldquo;I can&rsquo;t scroll this table any farther, and should we freeze the first column?&rdquo;</b> Both, and they were the same bug wearing two faces. The mobile stylesheet was explicitly turning the frozen first column <em>off</em>, so scrolling right left every row anonymous, and the ledger was shipping five of its fourteen columns on a phone, so there was nothing much to scroll to. That also made the section&rsquo;s own dek false: it promises every field, and its design note calls the table the accessibility backbone. All fourteen columns on every width now, with the film name pinned at 118px under a soft edge so you always know which row you are reading.</li>
         </ol>
       </details>
 
@@ -2231,14 +2238,17 @@
     var af = activeFilms().slice();
     var s = STATE.sort;
     var mob = isMobile();
-    var cols = mob ? COLS.filter(function (c) { return ["t", "ww", "mult", "roi", "rt"].indexOf(c.k) > -1; }) : COLS;
+    // every column on every width: the dek promises every field, and dropping nine of them
+    // on a phone made that false. The frozen name column plus the scroll hint carry it.
+    var cols = COLS;
     af.sort(function (a, b) {
       var av = a[s.key], bv = b[s.key];
       if (s.key === "ww" || s.key === "wd" || s.key === "wi" || s.key === "budget") { av = val(a, COLS.find(function (c) { return c.k === s.key; }).g); bv = val(b, COLS.find(function (c) { return c.k === s.key; }).g); }
       if (typeof av === "string") return av.localeCompare(bv) * s.dir;
       return ((av || 0) - (bv || 0)) * s.dir;
     });
-    var mlbl = { ww: "WW", mult: "Mult", roi: "ROI", rt: "RT" };
+    var mlbl = { t: "Film", u: "Univ", date: "Date", ww: "WW", wd: "Dom", wi: "OS", pctIntl: "OS%",
+      open: "Open", mult: "Mult", budget: "Budget", roi: "ROI", rt: "RT", mc: "MC", imdb: "IMDb" };
     var thead = "<tr>" + cols.map(function (c) {
       var sorted = s.key === c.k ? " th-sorted" : "";
       var arrow = s.key === c.k ? (s.dir === 1 ? "▲" : "▼") : "";
