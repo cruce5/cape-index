@@ -139,18 +139,27 @@
   header.masthead { border-bottom: 1px solid var(--border); padding: 40px 0 26px; }
   .masthead h1 { font-size: clamp(48px, 9vw, 104px); letter-spacing: -0.028em; }
   .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 14px 0 0; text-wrap: pretty; }
-  .byline { margin: 10px 0 0; font-size: 14px; color: var(--ink-muted); }
+  /* the six universe hues in the order Bill drew them, grey carried in the middle as a
+     transition rather than left to end the run. Built from the tokens, so it re-mixes
+     itself for the light theme instead of being a second, stale copy of the palette. */
+  .spectrum {
+    height: 7px; border-radius: 999px; margin: 16px 0 0;
+    background: linear-gradient(90deg,
+      var(--mcu) 0%, var(--else) 19%, var(--fox) 36%,
+      var(--ssu) 54%, var(--dceu) 74%, var(--dcu) 92%, var(--mcu) 100%);
+  }
+  .byline { margin: 14px 0 0; font-size: 14px; color: var(--ink-muted); }
   .byline a { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
   .byline a:hover { text-decoration-color: var(--ink); }
-  /* 1.15/1.15/0.85: the third value ("2.80x") is half the width of the two money figures,
-     so an equal third left it sitting in a mostly empty tile */
-  .thesis { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 22px; max-width: 52rem; }
+  /* Each tile is exactly as wide as its own widest line, and the strip shrink-wraps them.
+     Equal columns gave three different amounts of trailing air, because "$34.91B",
+     "$12.49B" and "2.80x" are three different widths; this way the only space after a
+     value is the tile's own padding, which is the same in all three. */
+  .thesis { display: grid; grid-template-columns: repeat(3, max-content); width: max-content; max-width: 100%; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 22px; }
   .thesis > div { background: var(--surface); padding: 20px 22px; }
   .thesis .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
   .thesis .v { font-size: clamp(28px, 4.6vw, 44px); font-weight: 700; font-family: "IBM Plex Sans Condensed", sans-serif; margin-top: 6px; }
   .thesis .sub { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
-  /* the three thesis tiles stay side by side on a phone; the values are short and the row reads as one line */
-  @media (max-width: 640px) { .thesis { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .smallprint { margin-top: 14px; font-size: 13px; color: var(--ink-muted); max-width: 52rem; }
   .smallprint a { text-decoration-color: var(--border-strong); text-underline-offset: 2px; }
 
@@ -420,7 +429,8 @@
     .view-head { margin-bottom: 22px; }
     .card { padding: 16px; border-radius: 12px; }
     .card-head { margin-bottom: 12px; }
-    .thesis { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; max-width: none; }
+    .thesis { margin-top: 24px; }
+    .spectrum { height: 6px; margin-top: 13px; }
     .thesis > div { padding: 12px 10px 12px 12px; min-width: 0; }
     .thesis .k { font-size: 10px; letter-spacing: 0.05em; line-height: 1.3; }
     .thesis .v { font-size: 21px; margin-top: 4px; letter-spacing: -0.01em; }
@@ -482,6 +492,7 @@
   <div class="wrap">
     <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2000&ndash;2026</p>
     <h1>The Cape Index</h1>
+    <div class="spectrum" aria-hidden="true"></div>
     <p class="byline">By <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a></p>
     <p class="dek">Every live-action Marvel and DC superhero film since 2000 that&rsquo;s in a franchise, and what each made. Grosses come straight from Box&nbsp;Office&nbsp;Mojo; any figure switches to 2025 dollars.</p>
     <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is.</p>
@@ -1069,7 +1080,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">64 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">66 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1136,6 +1147,8 @@
           <li><b>&ldquo;Column A is really wide, in favour of seeing more data.&rdquo;</b> The ledger&rsquo;s film column was absorbing every pixel the other thirteen didn&rsquo;t claim, about 450px of it. Pinned at 240, long titles wrap, and four more columns fit before you have to scroll. The scroll itself now says so, and stops saying it once you reach the end.</li>
           <li><b>&ldquo;Should there be aggregate line-level data per universe?&rdquo;</b> A summary table above the ledger: films, total gross, then median worldwide, opening, multiplier, budget, ROI, RT and Metacritic, on the same filters and dollars, with an all-films row under a rule. Medians, because two dozen billion-dollar films put a mean where no actual film sits.</li>
           <li><b>&ldquo;No em dashes anywhere.&rdquo;</b> One had crept back into the Scope card.</li>
+          <li><b>&ldquo;I made this gradient bar, could we put it under the title for a splash of colour?&rdquo;</b> Rebuilt from the palette tokens rather than pasted as hex, so it re-mixes itself for the light theme instead of being a second, stale copy of the colours. Same order he drew: green, grey, magenta, gold, blue, cyan, with the grey carried in the middle as a transition rather than left to end the run.</li>
+          <li><b>&ldquo;The inconsistent white space on these scorecards is BOTHERSOME.&rdquo;</b> Three equal columns holding three values of different widths gives three different amounts of trailing air. Each tile is now sized to its own widest line and the strip shrink-wraps them, so the only space after a value is the tile&rsquo;s own padding: 22px in all three, 10px on a phone.</li>
         </ol>
       </details>
 
