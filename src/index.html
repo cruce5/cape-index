@@ -1178,7 +1178,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">92 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">93 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1273,6 +1273,7 @@
           <li><b>&ldquo;I don&rsquo;t know if I like starting and ending with green on the colorful one.&rdquo;</b> Neither do I, and it was measurably wrong as well as ugly: green appeared twice. Brute-forced all 720 orderings in OKLab; the winner is <b>19% smoother</b>.</li>
           <li><b>&ldquo;I can&rsquo;t scroll this table any farther, and should we freeze the first column?&rdquo;</b> Both, the same bug twice: the mobile stylesheet was turning the frozen column <em>off</em>, and only five of fourteen columns shipped on a phone. All fourteen now, name pinned at 118px.</li>
           <li><b>&ldquo;Hitting Next makes the progress bar bounce forward and then come back.&rdquo;</b> The tab index flips before the scroll catches up, so the bar was pairing the new tab with the old position. Pinning the within-tab fraction to zero mid-transition fixed it.</li>
+          <li><b>&ldquo;The commentary around every follow-up is&hellip; intense. Should we pare it down? Emphasize where I was funny, of course.&rdquo;</b> Trimmed 20% first. <b>&ldquo;Didn&rsquo;t work.&rdquo;</b> Cut 47 entries in half instead: the quote is the content, the rationale behind each fix isn&rsquo;t.</li>
         </ol>
       </details>
 
