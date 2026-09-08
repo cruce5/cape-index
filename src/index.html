@@ -1,32 +1,49 @@
 <title>The Cape Index</title>
-<meta name="description" content="Every live-action Marvel and DC superhero film since 2000 that is part of a franchise, and what each one made. Grosses from Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
+<meta name="description" content="Every live-action Marvel and DC superhero film since 2000 that's in a franchise, and what each made. Grosses from Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
 <meta name="author" content="Bill Yost" />
 
 <link rel="canonical" href="https://capeindex.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Cape Index" />
-<meta property="og:title" content="The Cape Index" />
-<meta property="og:description" content="Every live-action Marvel and DC superhero film since 2000 that is part of a franchise, and what each one made. Grosses from Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
+<meta property="og:title" content="The Cape Index: Marvel v DC at the box office, 2000 on" />
+<meta property="og:description" content="Every live-action Marvel and DC superhero film since 2000 that's in a franchise, and what each made. Grosses from Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
 <meta property="og:url" content="https://capeindex.com/" />
 <meta property="og:image" content="https://capeindex.com/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Cape Index" />
-<meta name="twitter:description" content="Every live-action Marvel and DC superhero film since 2000 that is part of a franchise, and what each one made. Grosses from Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
+<meta name="twitter:title" content="The Cape Index: Marvel v DC at the box office, 2000 on" />
+<meta name="twitter:description" content="Every live-action Marvel and DC superhero film since 2000 that's in a franchise, and what each made. Grosses from Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
 <meta name="twitter:image" content="https://capeindex.com/og.png" />
 <meta name="theme-color" content="#0d0f14" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0f14'/%3E%3Crect x='7' y='17' width='5' height='9' rx='1' fill='%233ba152'/%3E%3Crect x='13.5' y='11' width='5' height='15' rx='1' fill='%234a86c8'/%3E%3Crect x='20' y='14' width='5' height='12' rx='1' fill='%2363c6e4'/%3E%3C/svg%3E" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" />
+<!-- IBM Plex, self-hosted (assets/fonts): the Google stylesheet was the one render-blocking request on the page. The three faces the first screen needs are preloaded; the rest arrive on demand by unicode-range -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plex-sans-400-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plex-cond-600-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plex-mono-400-latin.woff2" crossorigin />
 
 <!-- Cloudflare Web Analytics: cookieless, privacy-first (no consent banner needed) -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d395922c40854a1fa8d18db10f3de54e"}'></script>
 
+<!-- the saved theme, applied before the stylesheet so a Dark reader on a light OS never sees a light frame -->
+<script>try{var t=localStorage.getItem("capeindex-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+
 <style>
+  /* ============ FONTS - self-hosted IBM Plex, latin + latin-ext ============ */
+  @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/plex-sans-400-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/plex-sans-400-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 600 700; font-display: swap; src: url(/fonts/plex-cond-600-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/plex-cond-600-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/plex-cond-700-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/plex-mono-400-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/plex-mono-400-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/plex-mono-500-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/plex-mono-500-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/plex-mono-600-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/plex-mono-600-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
   /* ============ TOKENS - dark-first ============ */
   :root {
     color-scheme: dark;
@@ -152,7 +169,9 @@
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
   @media (max-width: 720px) { .wrap { padding: 0 18px; } }
 
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0; line-height: 1.08; text-wrap: balance; letter-spacing: -0.01em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; margin: 0; line-height: 1.08; text-wrap: balance; letter-spacing: -0.01em; }
+  /* off-screen but read aloud: table captions, the filter status line, the count separators */
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   a { color: inherit; }
   .mono { font-family: var(--font-mono); }
   .eyebrow {
@@ -250,7 +269,7 @@
   .contents { margin-top: 16px; max-width: 58rem; }
   /* the summary is styled as an obvious pill button (accent chevron, border, hover) so it
      reads as tappable, not a static label */
-  .contents .ct { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--surface); transition: color 0.15s, border-color 0.15s, background 0.15s; }
+  .contents .ct { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; min-height: 44px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--surface); transition: color 0.15s, border-color 0.15s, background 0.15s; }
   .contents .ct::-webkit-details-marker { display: none; }
   .contents .ct::after { content: "\25BE"; font-size: 12px; letter-spacing: 0; color: var(--note); transition: transform 0.2s; }
   .contents[open] .ct::after { transform: rotate(180deg); }
@@ -277,7 +296,7 @@
   /* .pill sets display, which outranks the hidden attribute on its own */
   .pill[hidden] { display: none !important; }
   .pill[aria-pressed="true"] { color: var(--ink); border-color: var(--c, var(--ink)); background: color-mix(in srgb, var(--c, var(--ink)) 15%, transparent); }
-  .pill[aria-pressed="false"] .dot { opacity: 0.35; }
+  .pill[aria-pressed="false"] .dot { opacity: 0.55; }   /* 0.35 fell under 3:1 against the page */
   .seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 999px; overflow: hidden; }
   .seg button { appearance: none; border: 0; background: transparent; color: var(--ink-2); font: inherit; font-size: 13px; padding: 5px 13px; cursor: pointer; }
   .seg button[aria-pressed="true"] { background: var(--ink); color: var(--page); }
@@ -289,7 +308,7 @@
   section.view:last-of-type { border-bottom: 0; }
   .view-head { margin-bottom: 30px; max-width: 45rem; }
   .view-head .num { display: block; font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); letter-spacing: 0.14em; }
-  .view-head h2 { font-size: clamp(27px, 3.6vw, 37px); margin-top: 8px; }
+  .view-head h3 { font-size: clamp(27px, 3.6vw, 37px); margin-top: 8px; }
   .view-head .dek { color: var(--ink-2); margin-top: 12px; font-size: 15.5px; }
 
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; box-shadow: var(--shadow); }
@@ -302,8 +321,8 @@
   .scorecards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
   @media (max-width: 860px) { .scorecards { grid-template-columns: repeat(2, 1fr); } }
   .sc { background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--c); border-radius: 12px; padding: 16px 16px 18px; }
-  .sc h3 { font-size: 14px; font-family: var(--font-body); font-weight: 600; color: var(--ink); }
-  .sc h3 .sc-short { display: none; }
+  .sc h4 { font-size: 14px; font-family: var(--font-body); font-weight: 600; color: var(--ink); }
+  .sc h4 .sc-short { display: none; }
   .sc .rows { margin-top: 12px; display: grid; gap: 7px; }
   .sc .row { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
   .sc .row span:first-child { color: var(--ink-muted); }
@@ -393,12 +412,14 @@
   @media (prefers-reduced-motion: reduce) { .scrollhint .arw { animation: none; } }
   table.data { border-collapse: collapse; width: 100%; font-size: 14px; }
   table.data th, table.data td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
-  table.data th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; user-select: none; }
+  table.data th { position: sticky; top: var(--sticky-h, 0px); background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; user-select: none; }
   /* the ledger is the only sortable table, and its header is a real button */
   #table-full table.data th { padding: 0; }
-  .sortbtn { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; padding: 8px 12px; width: 100%; text-align: inherit; cursor: pointer; }
+  .sortbtn { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; padding: 8px 12px; min-height: 44px; width: 100%; text-align: inherit; cursor: pointer; }
   .sortbtn:hover { color: var(--ink); }
   table.data th:first-child, table.data td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
+  /* a row header is a th for the reader's sake; it must not pick up the column-header styling */
+  table.data th[scope="row"] { top: auto; text-transform: none; letter-spacing: 0; font-size: inherit; font-weight: 500; color: inherit; background: var(--surface); }
   table.data th:first-child { background: var(--surface-2); z-index: 1; }
   table.data td { font-family: var(--font-mono); }
   table.data td.name { font-family: var(--font-body); }
@@ -429,7 +450,7 @@
   /* ============ ACT DIVIDERS ============ */
   .act { padding: 52px 0 4px; }
   .act .wrap { display: flex; align-items: baseline; gap: 16px; }
-  .act h3 { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+  .act h2 { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
   .act .rule { flex: 1 1 auto; height: 1px; background: var(--border); }
   .act .sub { font-size: 12px; color: var(--ink-muted); white-space: nowrap; font-family: var(--font-mono); }
   @media (max-width: 640px) { .act .sub { display: none; } }
@@ -487,7 +508,9 @@
   }
 
   /* ============ MOBILE ============ */
-  @media (max-width: 760px) {
+  /* a phone turned sideways is 812 wide and 375 tall; the desktop control panel, forced open
+     under the tab strip, ate 224 of those 375 pixels, so the phone layout is keyed on height too */
+  @media (max-width: 760px), (max-height: 500px) {
     .wrap { padding: 0 16px; }
     .masthead { padding: 36px 0 28px; }
     .masthead h1 { font-size: clamp(38px, 12.5vw, 66px); }
@@ -504,19 +527,20 @@
     .thesis .sub { font-size: 11px; line-height: 1.3; }
     .scorecards { grid-template-columns: 1fr 1fr; gap: 8px; }
     .sc { padding: 12px 12px 13px; }
-    .sc h3 .sc-full { display: none; }
-    .sc h3 .sc-short { display: inline; }
-    .sc h3 { font-size: 13px; }
+    .sc h4 .sc-full { display: none; }
+    .sc h4 .sc-short { display: inline; }
+    .sc h4 { font-size: 13px; }
     .sc .big { font-size: 20px; margin-top: 2px; }
     .sc .rows { margin-top: 8px; gap: 4px; }
     .sc .row { font-size: 12px; }
     .controls { position: sticky; top: var(--tabs-h, 40px); z-index: 50; }
-    .ctl-bar { display: flex; align-items: stretch; gap: 8px; min-height: 40px; }
+    /* 44px is the site's own floor for anything a thumb has to hit; these were 40 */
+    .ctl-bar { display: flex; align-items: stretch; gap: 8px; min-height: 44px; }
     .ctl-toggle { flex: 1 1 auto; min-width: 0; appearance: none; border: 0; background: transparent; color: var(--ink); font: inherit; text-align: left; padding: 0; cursor: pointer; }
-    .ctl-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; min-height: 40px; }
-    .ctl-lens { flex: none; align-self: center; min-height: 40px; appearance: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--dceu) 55%, transparent); background: transparent; color: var(--dceu); cursor: pointer; white-space: nowrap; }
+    .ctl-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; min-height: 44px; }
+    .ctl-lens { flex: none; align-self: center; min-height: 44px; appearance: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--dceu) 55%, transparent); background: transparent; color: var(--dceu); cursor: pointer; white-space: nowrap; }
     .ctl-lens[aria-pressed="true"] { background: var(--dceu); color: var(--page); border-color: var(--dceu); }
-    .ctl-notes { flex: none; align-self: center; min-height: 40px; appearance: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--note) 55%, transparent); background: transparent; color: var(--note); cursor: pointer; }
+    .ctl-notes { flex: none; align-self: center; min-height: 44px; appearance: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--note) 55%, transparent); background: transparent; color: var(--note); cursor: pointer; }
     .ctl-notes[aria-pressed="true"] { background: var(--note); color: var(--page); border-color: var(--note); }
     .ctl-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); flex: none; }
     .ctl-summary { flex: 1 1 auto; font-size: 13px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -536,7 +560,8 @@
     /* 44px minimum on every control a thumb has to hit */
     .pill, .seg button, .minibtn { min-height: 44px; }
     .minibtn { padding-left: 14px; padding-right: 14px; }
-    .notes-link { display: inline-block; padding: 6px 2px; margin: 0 -2px; }
+    .notes-link { display: inline-block; padding: 11px 2px; margin: -5px -2px; }
+    footer.foot a { display: inline-block; padding: 8px 0; margin: -8px 0; }
     .contents li a { padding: 8px 0; }
     .clabel { font-size: 11px; }
     .legend { font-size: 14px; width: 100%; }
@@ -548,7 +573,7 @@
     .legend .lg-keys i { width: 9px; height: 9px; }
     .card-note { font-size: 14px; }
     .act { padding: 34px 0 2px; }
-    .act h3 { letter-spacing: 0.1em; white-space: normal; font-size: 11px; }
+    .act h2 { letter-spacing: 0.1em; white-space: normal; font-size: 11px; }
     .act .rule { display: none; }
     .note dl { grid-template-columns: 1fr; gap: 2px; }
     .note dd { margin-bottom: 8px; }
@@ -578,7 +603,7 @@
     <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six groups back to the two the project started as.</p>
     <div class="thesis" id="thesis"></div>
     <details class="contents" aria-label="Contents">
-      <summary class="ct">Contents &middot; 15 findings, 7 tabs</summary>
+      <summary class="ct">Contents &middot; 15 sections, 7 tabs</summary>
       <ol id="contents-list"></ol>
     </details>
   </div>
@@ -587,18 +612,19 @@
 <nav class="tabs" aria-label="Sections">
   <div class="spectrum-bar" aria-hidden="true"><i></i></div>
   <div class="wrap tabs-inner">
-    <button class="tab" data-tab="act1" aria-current="true"><span class="tn">I</span>Scoreboard</button>
-    <button class="tab" data-tab="act2"><span class="tn">II</span>Over time</button>
-    <button class="tab" data-tab="act3"><span class="tn">III</span>Beyond the gross</button>
-    <button class="tab" data-tab="act4"><span class="tn">IV</span>Roster</button>
-    <button class="tab" data-tab="mistakes"><span class="tn">&#10007;</span>The mistakes</button>
-    <button class="tab" data-tab="ledger"><span class="tn">&#9638;</span>The ledger</button>
-    <button class="tab" data-tab="ref"><span class="tn">&sect;</span>Reference</button>
+    <button class="tab" data-tab="act1" aria-current="true"><span class="tn" aria-hidden="true">I</span>Scoreboard</button>
+    <button class="tab" data-tab="act2"><span class="tn" aria-hidden="true">II</span>Over time</button>
+    <button class="tab" data-tab="act3"><span class="tn" aria-hidden="true">III</span>Beyond the gross</button>
+    <button class="tab" data-tab="act4"><span class="tn" aria-hidden="true">IV</span>Roster</button>
+    <button class="tab" data-tab="mistakes"><span class="tn" aria-hidden="true">&#10007;</span>The mistakes</button>
+    <button class="tab" data-tab="ledger"><span class="tn" aria-hidden="true">&#9638;</span>The ledger</button>
+    <button class="tab" data-tab="ref"><span class="tn" aria-hidden="true">&sect;</span>Reference</button>
   </div>
 </nav>
 
 <nav class="controls" aria-label="Chart controls">
-  <div class="wrap ctl-bar"><button class="ctl-toggle" aria-expanded="false" aria-controls="controls-inner"><span class="ctl-row"><span class="ctl-label">Filters</span><span class="ctl-summary" id="ctl-summary"></span><span class="ctl-chev" aria-hidden="true"></span></span></button><button class="ctl-lens" aria-pressed="false">M v DC</button><button class="ctl-notes" aria-pressed="false">Notes</button></div>
+  <div class="wrap ctl-bar"><button class="ctl-toggle" aria-expanded="false" aria-controls="controls-inner"><span class="ctl-row"><span class="ctl-label">Filters</span><span class="ctl-summary" id="ctl-summary"></span><span class="ctl-chev" aria-hidden="true"></span></span></button><button class="ctl-lens" aria-pressed="false" aria-label="Marvel v DC lens">M v DC</button><button class="ctl-notes" aria-pressed="false">Notes</button></div>
+  <p class="sr-only" role="status" id="ctl-status"></p>
   <div class="wrap controls-inner" id="controls-inner">
     <div class="cgroup" role="group" aria-label="Color by">
       <span class="clabel">Color by</span>
@@ -633,7 +659,7 @@
         <button data-notes="on" aria-pressed="false">On</button>
       </div>
     </div>
-    <div class="cgroup">
+    <div class="cgroup" role="group" aria-label="Theme">
       <span class="clabel">Theme</span>
       <div class="seg">
         <button data-theme-set="auto" aria-pressed="true">Auto</button>
@@ -649,21 +675,21 @@
 </nav>
 
 <main>
-  <div class="act" data-tab="act1"><div class="wrap"><h3>Act I &nbsp;&middot;&nbsp; The scoreboard</h3><span class="rule"></span><span class="sub">how big, and who</span></div></div>
+  <div class="act" data-tab="act1"><div class="wrap"><h2>Act I &nbsp;&middot;&nbsp; The scoreboard</h2><span class="rule"></span><span class="sub">how big, and who</span></div></div>
 
   <section class="view" id="v-scorecard" data-tab="act1">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 01 &nbsp;/&nbsp; MARVEL v DC</span>
-        <h2 id="h-scorecard">Marvel Studios has out-grossed every DC film combined, nearly three to one</h2>
+        <h3 id="h-scorecard">Marvel Studios has out-grossed every DC film combined, nearly three to one</h3>
         <p class="dek" id="d-scorecard"></p>
       </div>
       <div class="scorecards" id="scorecards"></div>
       <div class="card" style="margin-top:20px">
         <div class="card-head">
           <div>
-            <div class="card-title">Worldwide gross by release year</div>
-            <div class="card-note">Stacked by universe. 2018 and 2019 were the high-water mark, near $6.8B each. The 2021&ndash;22 rebound stopped around $3.9B; 2023 onward has settled near $2.3B, roughly a third of the peak.</div>
+            <h4 class="card-title">Worldwide gross by release year</h4>
+            <div class="card-note" id="n-year">Stacked by universe. 2018 and 2019 were the high-water mark, near $6.82B and $6.76B. The 2021&ndash;22 rebound stopped around $3.86B; 2023 onward has slid from $2.50B to $1.94B, roughly a third of the peak.</div>
           </div>
           <div class="legend" id="leg-year"></div>
         </div>
@@ -681,7 +707,7 @@
       <div class="card">
         <div class="card-head">
           <div>
-            <div class="card-title">Spread of worldwide grosses, by universe</div>
+            <h4 class="card-title">Spread of worldwide grosses, by universe</h4>
             <div class="card-note" id="n-box">Box spans the 25th&ndash;75th percentile; the line is the median; dots are individual films. Marvel&rsquo;s median film out-grosses roughly seven of every ten DC films.</div>
           </div>
           <button class="minibtn" data-outlier aria-pressed="false">Hide &ge; $1B</button>
@@ -691,8 +717,8 @@
         <div id="table-box" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Beyond the averages, how are each universe&rsquo;s grosses actually spread out?</dd>
-          <dt>Why this form</dt><dd>A box plot shows the middle 50%, the median and the tails at once. An average alone would hide that DC&rsquo;s range is both wider and lower. The dots put every film back on the chart so the summary isn&rsquo;t a black box.</dd>
-          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean, one $2.8B film drags a mean around. DCU has two films, so it gets dots and a median tick only; a quartile box on a handful of films is theater. Elseworlds, at six, just clears the bar for a box, so read its quartiles loosely.</dd>
+          <dt>Why this form</dt><dd>A box plot shows the middle 50%, the median and the tails at once. An average alone would hide how much lower DC&rsquo;s whole distribution sits. The dots put every film back on the chart so the summary isn&rsquo;t a black box.</dd>
+          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean, one $2.8B film drags a mean around. Whiskers run min to max. Any group under four films gets dots and a median tick only; a quartile box on a handful of films is theater. Elseworlds, at six, just clears the bar for a box, so read its quartiles loosely.</dd>
           <dt>Watch for</dt><dd>With this few films per group, a single film moves the quartiles a lot. Read it as &ldquo;roughly,&rdquo; not &ldquo;precisely.&rdquo;</dd>
         </dl></div>
       </div>
@@ -703,8 +729,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 02 &nbsp;/&nbsp; TREEMAP</span>
-        <h2 id="h-treemap">Only three films have passed $2 billion, and all three are Marvel</h2>
-        <p class="dek">Every film is a rectangle, sized by worldwide gross. The three biggest are all Marvel: two Avengers films, and <em>Brand New Day</em>, which is still in theaters. DC&rsquo;s ceiling, Aquaman at $1.15B, sits below ten separate Marvel films.</p>
+        <h3 id="h-treemap">Only three films have passed $2 billion, and all three are Marvel</h3>
+        <p class="dek" id="d-treemap">Every film is a rectangle, sized by worldwide gross. The three biggest are all Marvel: two Avengers films, and <em>Brand New Day</em>, which is still in release. DC&rsquo;s ceiling, Aquaman at $1.15B, sits below ten separate Marvel films.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -724,19 +750,19 @@
     </div>
   </section>
 
-  <div class="act" data-tab="act2"><div class="wrap"><h3>Act II &nbsp;&middot;&nbsp; Over time</h3><span class="rule"></span><span class="sub">cadence, scale, budgets</span></div></div>
+  <div class="act" data-tab="act2"><div class="wrap"><h2>Act II &nbsp;&middot;&nbsp; Over time</h2><span class="rule"></span><span class="sub">cadence, scale, budgets</span></div></div>
 
   <section class="view" id="v-beeswarm" data-tab="act2">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 03 &nbsp;/&nbsp; BY RELEASE DATE</span>
-        <h2>Since 2020, no year has produced more than one billion-dollar film</h2>
-        <p class="dek">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 the count has held up, four to seven films a year, but the films are smaller and the big bubbles thin out to one a year at most. <em>Brand New Day</em>, still in release, is 2026&rsquo;s. Bubbles ringed in gold crossed $1&nbsp;billion.</p>
+        <h3>Since 2020, no year has produced more than one billion-dollar film</h3>
+        <p class="dek" id="d-bee">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 the count has held up, four to seven films a year, but the films are smaller and the big bubbles thin out to one a year at most. <em>Brand New Day</em>, still in release, is 2026&rsquo;s. Bubbles ringed in gold crossed $1&nbsp;billion.</p>
       </div>
       <div class="card">
         <div class="card-head">
           <div class="legend" id="leg-bee"></div>
-          <div class="seg" aria-label="Dollar basis"><button data-money="nominal" aria-pressed="true">Nominal</button><button data-money="real" aria-pressed="false">2025&nbsp;$</button></div>
+          <div class="seg" role="group" aria-label="Dollar basis"><button data-money="nominal" aria-pressed="true">Nominal</button><button data-money="real" aria-pressed="false">2025&nbsp;$</button></div>
         </div>
         <div id="chart-beeswarm"></div>
         <button class="minibtn" data-table="beeswarm" aria-pressed="false" style="margin-top:12px">Show data</button>
@@ -755,8 +781,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 04 &nbsp;/&nbsp; SCATTER</span>
-        <h2 id="h-scatter">Marvel has cleared $1 billion twelve times. DC four times, Fox and Sony never</h2>
-        <p class="dek" id="d-scatter">Worldwide gross by release date. Above the billion-dollar line sit four DC films (Aquaman, Joker, and both of Nolan&rsquo;s Dark Knight follow-ups); everything else up there is Marvel Studios. Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far.</p>
+        <h3 id="h-scatter">Marvel has cleared $1 billion twelve times. DC four times, Fox and Sony never</h3>
+        <p class="dek" id="d-scatter">Worldwide gross by release date. Above the billion-dollar line sit four DC films (Aquaman, Joker, and both of Nolan&rsquo;s Dark Knight follow-ups); everything else up there is Marvel Studios. Below it, the whole cloud sinks after 2022, and only <em>Deadpool &amp; Wolverine</em> and <em>Spider-Man: Brand New Day</em> have cleared the line since (<em>Spider-Man: Brand New Day</em> still in release).</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -779,8 +805,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 05 &nbsp;/&nbsp; THE BUDGET ARMS RACE</span>
-        <h2>Production budgets roughly doubled over the 2000s, then flattened near $200M</h2>
-        <p class="dek">Every film&rsquo;s production budget at its release year (the dots), with a five-year rolling median (the line) and the middle 50% of budgets (the band). Budgets roughly doubled from about $100M in the early 2000s to near $200M by the early 2010s, then held there, with the odd $300M&#8209;plus tentpole stretching the top of the band. The first <em>X-Men</em> cost $75M in 2000; a mid-tier tentpole now runs $200M, and the biggest Avengers films clear $350M. Flip to 2025 dollars to see how much of that is real growth.</p>
+        <h3 id="h-budget">Production budgets roughly doubled over the 2000s, then flattened near $200M</h3>
+        <p class="dek" id="d-budget">Every film&rsquo;s production budget at its release year (the dots), with a five-year rolling median (the line) and the middle 50% of budgets (the band). The rolling median went from $110M in 2002 to $200M by 2021 and has held there, with the odd $300M&#8209;plus tentpole stretching the top of the band. The first <em>X-Men</em> cost $75M in 2000; the two biggest budgets on the page are <em>Avengers: Endgame</em> at $356M and <em>Avengers: Infinity War</em> at $350M. Flip to 2025 dollars to see how much of that is real growth.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -792,21 +818,21 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Have production budgets actually climbed once you strip out inflation?</dd>
           <dt>Why this form</dt><dd>Every film is a dot at its budget and year. A single year holds only a few films, so a year-by-year median sawtooths and buries the trend; a <em>five-year rolling median</em> smooths it into the actual shape, and the band shows the middle 50% of budgets so the spread reads too, not just the center.</dd>
-          <dt>Choices here</dt><dd>Median, not mean, one $350M Avengers would drag a mean around. A centered &plusmn;2-year window instead of per-year points, because two or three films a year is too few for a stable median. One series, not four: split by universe and the counts get too small to read.</dd>
+          <dt>Choices here</dt><dd>Median, not mean, one $350M Avengers would drag a mean around. A centered five-year window (two years either side) instead of per-year points, because two or three films a year is too few for a stable median. One series, not six: split by universe and the counts get too small to read. Since 2021 most budgets are estimates parked at $200M, so the band&rsquo;s top edge and the median coincide there.</dd>
           <dt>Watch for</dt><dd>The band is where the middle half of budgets sat, not a confidence interval, and the curve&rsquo;s ends lean on a shorter window. And budgets are the softest number on the site: studios don&rsquo;t disclose them, so anything not straight from Box Office Mojo is an estimate, marked <code>est.</code> in the ledger. Trust the shape, not any single dollar.</dd>
         </dl></div>
       </div>
     </div>
   </section>
 
-  <div class="act" data-tab="act3"><div class="wrap"><h3>Act III &nbsp;&middot;&nbsp; Beyond the gross</h3><span class="rule"></span><span class="sub">profit, legs, reviews, geography</span></div></div>
+  <div class="act" data-tab="act3"><div class="wrap"><h2>Act III &nbsp;&middot;&nbsp; Beyond the gross</h2><span class="rule"></span><span class="sub">profit, legs, reviews, geography</span></div></div>
 
   <section class="view" id="v-profit" data-tab="act3">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 06 &nbsp;/&nbsp; DID IT MAKE MONEY?</span>
-        <h2>A third of these films never cleared their break-even point</h2>
-        <p class="dek">Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. <em>The Marvels</em> is the widest miss at &minus;$481M; <em>Avengers: Endgame</em> the widest hit at +$1.91B. <em>Joker</em> is the widest hit per dollar spent, at nearly 20&times; its $55M budget, which is a different question and the one &sect;12 warns about.</p>
+        <h3>A third of these films never cleared their break-even point</h3>
+        <p class="dek" id="d-profit">Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. <em>The Marvels</em> is the widest miss at &minus;$562M; <em>Avengers: Endgame</em> the widest hit at +$1.91B. <em>Joker</em> is the widest hit per dollar spent, at nearly 20&times; its $55M budget, which is a different question and the one &sect;12 warns about.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -829,7 +855,7 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 07 &nbsp;/&nbsp; LEGS</span>
-        <h2>Some films made most of their money in three days; others kept selling for months</h2>
+        <h3>Some films made most of their money in three days; others kept selling for months</h3>
         <p class="dek">For each film, its opening weekend and its full domestic run, connected. A long line is a film with legs: <em>Aquaman</em> finished at 4.9&times; its opening. A short one is front-loaded: <em>Joker: Folie &agrave; Deux</em> managed 1.5&times;.</p>
       </div>
       <div class="card">
@@ -853,13 +879,13 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 08 &nbsp;/&nbsp; REVIEWS &amp; REVENUE</span>
-        <h2>Better-reviewed films do gross more. That still doesn&rsquo;t mean reviews sell tickets</h2>
+        <h3>Better-reviewed films do gross more. That still doesn&rsquo;t mean reviews sell tickets</h3>
         <p class="dek">Two questions: do better-reviewed films make more money, and where do critics and audiences split? On the first, the honest answer is yes and it is not small, about $9M of worldwide gross per point of critic score, and the best-reviewed quarter of the slate has a median film out-grossing the worst-reviewed quarter roughly two and a half to one. The catch is that reviews and grosses are both downstream of how big the franchise already was.</p>
       </div>
       <div class="card">
         <div class="card-head">
           <div>
-            <div class="card-title">Rotten Tomatoes critic score vs worldwide gross</div>
+            <h4 class="card-title">Rotten Tomatoes critic score vs worldwide gross</h4>
             <div class="card-note">One point per film. It slopes up, and reliably. What the slope can&rsquo;t tell you is which way the arrow points.</div>
           </div>
           <div class="legend" id="leg-rev"></div>
@@ -869,7 +895,7 @@
         <div id="table-reviews" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Do better reviews go with bigger box office?</dd>
-          <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter. The question is whether there&rsquo;s a pattern, and the honest answer is &ldquo;barely.&rdquo;</dd>
+          <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter. The pattern is real (r&nbsp;=&nbsp;0.48); the question the chart cannot answer is which way it runs.</dd>
           <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is real but moderate (r&nbsp;=&nbsp;0.48, so about three quarters of the variation in gross is something else), and a line would imply a precision and a direction of cause the data can&rsquo;t carry. The spread is the finding. Dashed lines mark the median score and median gross, so the four quadrants read on their own: acclaimed and huge, loved but flopped, panned but paid. Hover a dot for guides to both axes.</dd>
           <dt>Watch for</dt><dd>Reviews and gross are both downstream of the same thing: franchise heat, timing, spend. A scatter shows association, never cause.</dd>
         </dl></div>
@@ -877,7 +903,7 @@
       <div class="card">
         <div class="card-head">
           <div>
-            <div class="card-title">Critics vs audiences</div>
+            <h4 class="card-title">Critics vs audiences</h4>
             <div class="card-note">RT critic score against IMDb user rating, both on 0&ndash;100. On the diagonal they agree; the widest splits are Sony&rsquo;s Venom-adjacent films (Kraven, Morbius, Venom itself) plus Elektra, Batman v Superman and Dark Phoenix, where the critic score craters but the audience rating holds up.</div>
           </div>
           <div class="legend" id="leg-par"></div>
@@ -899,8 +925,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 09 &nbsp;/&nbsp; DOMESTIC v OVERSEAS</span>
-        <h2>Overseas is the majority, but the split swings from 43% to 75%</h2>
-        <p class="dek">Each film split into domestic and overseas gross, sortable by the overseas share. The most domestic are recent DC films, Superman and Supergirl, at 43% overseas; the furthest-traveled is the first Venom at 75%.</p>
+        <h3>Overseas is the majority, but the split swings from 43% to 75%</h3>
+        <p class="dek">Each film split into domestic and overseas gross, sortable by the overseas share. The most domestic are Supergirl, Superman and 2003&rsquo;s Daredevil, all at 43% overseas; the furthest-traveled is the first Venom at 75%.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -923,13 +949,13 @@
     </div>
   </section>
 
-  <div class="act" data-tab="act4"><div class="wrap"><h3>Act IV &nbsp;&middot;&nbsp; The roster</h3><span class="rule"></span><span class="sub">who shows up where</span></div></div>
+  <div class="act" data-tab="act4"><div class="wrap"><h2>Act IV &nbsp;&middot;&nbsp; The roster</h2><span class="rule"></span><span class="sub">who shows up where</span></div></div>
 
   <section class="view" id="v-roster" data-tab="act4">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 10 &nbsp;/&nbsp; WHO'S IN WHICH FILM</span>
-        <h2>Marvel built a shared cast; DC kept starting over</h2>
+        <h3>Marvel built a shared cast; DC kept starting over</h3>
         <p class="dek">Every costumed hero and villain, and the films they appear in, in release order. A filled cell is an appearance. The Avengers films are the vertical stripes; DC&rsquo;s rows barely connect.</p>
       </div>
       <div class="card">
@@ -942,14 +968,14 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
           <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
-          <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 91 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
-          <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgment call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
+          <dt>Choices here</dt><dd><span id="n-roster-rows">Rows are every character in six or more films, 23 of them, ordered by appearance count.</span> Columns are all 91 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
+          <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgment call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. A mantle a character already holds when we meet them (Janet van Dyne&rsquo;s Wasp, Yelena&rsquo;s Widow) counts from their first credit. A few named antagonists without a codename (Lex Luthor, Zod, Amanda Waller) are admitted by hand. Cast lists are from Wikipedia and skew to billed roles; anything Wikipedia calls a cameo is left out.</dd>
         </dl></div>
       </div>
       <div class="card">
         <div class="card-head">
           <div>
-            <div class="card-title">Codenamed characters per film</div>
+            <h4 class="card-title">Codenamed characters per film</h4>
             <div class="card-note">How many heroes and villains each film puts on screen: in release order on a wide screen, ranked on a phone. <span id="ens-top">Avengers: Endgame tops out at 34.</span></div>
           </div>
           <div class="legend" id="leg-ensemble"></div>
@@ -965,8 +991,8 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELED</span>
-        <h2>Spider-Man has been in twelve films, more than any other character by a clear margin</h2>
-        <p class="dek">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man is next at nine, Wolverine at eight; Batman, at seven across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 151 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
+        <h3>Spider-Man has been in twelve films, more than any other character by a clear margin</h3>
+        <p class="dek" id="d-foot">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Black Widow, Iron Man and Professor X are next at nine, then five characters at eight; Batman, at eight across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 151 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -985,14 +1011,14 @@
     </div>
   </section>
 
-  <div class="act" data-tab="mistakes"><div class="wrap"><h3>The tempting mistakes</h3><span class="rule"></span><span class="sub">beautiful charts that don&rsquo;t help</span></div></div>
+  <div class="act" data-tab="mistakes"><div class="wrap"><h2>The tempting mistakes</h2><span class="rule"></span><span class="sub">beautiful charts that don&rsquo;t help</span></div></div>
 
   <section class="view ap" id="v-antipatterns" data-tab="mistakes">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 12 &nbsp;/&nbsp; ANTI-PATTERNS</span>
-        <h2>Every chart down here is accurate. Not one of them earns its place</h2>
-        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every completed film, nominal dollars and the six-universe palette; nothing in the control bar reaches them.</p>
+        <h3>Every chart down here is accurate. Not one of them earns its place</h3>
+        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film, nominal dollars and the six-universe palette; nothing in the control bar reaches them.</p>
         <div class="legend" id="ap-leg" style="margin-top:14px"></div>
       </div>
 
@@ -1102,18 +1128,18 @@
     </div>
   </section>
 
-  <div class="act" data-tab="ledger"><div class="wrap"><h3>The ledger</h3><span class="rule"></span><span class="sub">every film, every field &middot; sortable</span></div></div>
+  <div class="act" data-tab="ledger"><div class="wrap"><h2>The ledger</h2><span class="rule"></span><span class="sub">every film, every field &middot; sortable</span></div></div>
 
   <section class="view" id="v-data" data-tab="ledger">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 13 &nbsp;/&nbsp; THE LEDGER</span>
-        <h2>The whole thing, sortable</h2>
+        <h3>The whole thing, sortable</h3>
         <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend: how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
         <p class="smallprint" id="smallprint"></p>
       </div>
       <div class="card" style="padding:16px">
-        <div class="card-title">By universe</div>
+        <h4 class="card-title">By universe</h4>
         <p class="card-note" style="margin:6px 0 0">One row per group, on the same filters and dollars as the table below. Medians, not averages: a couple of billion-dollar films drag a mean somewhere no actual film sits. Med. ROI is the median of each film&rsquo;s own ratio, not Med. WW divided by Med. budget; on a skewed set those differ by up to a third. Rows under four films are greyed, because the midpoint of two numbers is not a distribution.</p>
         <div id="table-summary"></div>
       </div>
@@ -1128,28 +1154,28 @@
     </div>
   </section>
 
-  <div class="act" data-tab="ref"><div class="wrap"><h3>Reference</h3><span class="rule"></span><span class="sub">the method &amp; the story</span></div></div>
+  <div class="act" data-tab="ref"><div class="wrap"><h2>Reference</h2><span class="rule"></span><span class="sub">the method &amp; the story</span></div></div>
 
   <section class="view" id="v-method" data-tab="ref">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 14 &nbsp;/&nbsp; METHOD</span>
-        <h2>How this was built</h2>
+        <h3>How this was built</h3>
       </div>
       <div class="two-col">
         <div class="card">
-          <div class="card-title">Sources</div>
+          <h4 class="card-title">Sources</h4>
           <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb.</p>
-          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. Box Office Mojo where it lists a clean one; otherwise the widely-cited number, marked <span class="mono">est.</span> A third are estimates, and they are not spread evenly: none before 2010, four in five since 2021. Studios don&rsquo;t publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. The studio&rsquo;s own filing, net of rebates, where one has surfaced (six recent Marvel Studios films, from $236M to $429M); otherwise Box Office Mojo where it lists a clean one; otherwise the widely-cited number, lower bound of a range, marked <span class="mono">est.</span> A third are estimates, and they are not spread evenly: none before 2010, four in five since 2021. Studios rarely publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
         </div>
         <div class="card">
-          <div class="card-title">Definitions</div>
+          <h4 class="card-title">Definitions</h4>
           <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. That is a purchasing-power adjustment (what those dollars are worth today), not the ticket-price or admissions adjustment the box-office world usually reaches for, and it applies US&nbsp;CPI even to the overseas share. Read it as rough real-terms scale, not a tickets-sold count. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
-          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">&#9678;</span>) carry grosses as of early September 2026 and will climb. The rule, applied everywhere: they are <b>held out of anything that needs a finished number</b> (profit, break-even, the ROI ranking, the reviews scatter) and <b>counted in anything that describes the slate as it stands</b> (totals, medians, the $1B and $2B clubs, the treemap). So <em>Brand New Day</em> is in &sect;02&rsquo;s $2B count and out of &sect;06 entirely; without it the Marvel-to-DC ratio reads 2.60 rather than 2.80.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">&#9678;</span>) carry grosses as of <span id="asof">September 2026</span> and will climb. The rule, applied everywhere: they are <b>held out of anything that needs a finished number</b> (profit, break-even, the ROI ranking, the reviews scatter, the legs chart, and the ledger&rsquo;s opening and multiplier medians) and <b>counted in anything that describes the slate as it stands</b> (totals, gross medians, the $1B and $2B clubs, the treemap). <span id="ratio-pair">So <em>Brand New Day</em> is in &sect;02&rsquo;s $2B count and out of &sect;06 entirely; without it the Marvel-to-DC ratio reads 2.60 rather than 2.80.</span></p>
         </div>
       </div>
       <div class="card" style="margin-top:20px">
-        <div class="card-title">Scope</div>
+        <h4 class="card-title">Scope</h4>
         <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel released or in production. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, the 2005 <em>Fantastic Four</em> and <em>Rise of the Silver Surfer</em>, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox. The charts label those standalone DC films <b>Elseworlds</b>, the banner DC itself now uses for one-offs outside its shared universes, though Nolan&rsquo;s trilogy came a decade before the label and wears it loosest.</p>
         <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em> and its 2006 coda <em>Superman Returns</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>, the 2015 <em>Fantastic Four</em> (a reboot that never got its sequel or its X-Men crossover), both <em>Punisher</em>s (2008&rsquo;s is a reboot, not a sequel); and creator-owned books Marvel merely published (<em>Kick-Ass</em>). A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
       </div>
@@ -1161,24 +1187,24 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 15 &nbsp;/&nbsp; BUILD LOG</span>
-        <h2>How this actually went</h2>
+        <h3>How this actually went</h3>
         <p class="dek">The rest of the site is worked examples of finished charts. This is the messy one: the brief, every follow-up, every bug, and the design calls behind them. If you build data things, the useful part is usually the part nobody publishes.</p>
       </div>
 
       <div class="card">
-        <div class="card-title">The brief</div>
+        <h4 class="card-title">The brief</h4>
         <p>It started as a maintenance job. Verify a Tableau Public workbook, <em>Marvel / DC Box Office</em>, against Box Office Mojo: 50 films, six columns, movie / date / franchise / domestic / international / total. Then extend it with the films that had come out since, and rebuild the seven-tab Tableau suite as one self-contained dark-first HTML page.</p>
-        <p>It ended at <b>91 films across six groups</b>, twenty-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
+        <p>It ended at <b>91 films across six universes</b>, ninety-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
       </div>
 
       <div class="card">
-        <div class="card-title">The pipeline</div>
+        <h4 class="card-title">The pipeline</h4>
         <p>Adding a film means appending it to a list with a pinned IMDb id, then: scrape Box Office Mojo for worldwide / domestic / overseas / opening weekend, one title page at a time; pull Rotten Tomatoes, Metacritic and IMDb from OMDb; read the Wikipedia <em>Cast</em> section for the roster; derive the rest (break-even at 2.5&times; budget, ROI, domestic multiplier, every figure also rescaled to 2025 dollars by CPI-U); slim it to a compact JSON; inline everything into the single HTML file.</p>
         <p>Charts are hand-written inline <code>&lt;svg&gt;</code>. No charting library, so nothing on the page is a default that slipped through unquestioned.</p>
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">93 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>94 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1274,14 +1300,15 @@
           <li><b>&ldquo;I can&rsquo;t scroll this table any farther, and should we freeze the first column?&rdquo;</b> Both, the same bug twice: the mobile stylesheet was turning the frozen column <em>off</em>, and only five of fourteen columns shipped on a phone. All fourteen now, name pinned at 118px.</li>
           <li><b>&ldquo;Hitting Next makes the progress bar bounce forward and then come back.&rdquo;</b> The tab index flips before the scroll catches up, so the bar was pairing the new tab with the old position. Pinning the within-tab fraction to zero mid-transition fixed it.</li>
           <li><b>&ldquo;The commentary around every follow-up is&hellip; intense. Should we pare it down? Emphasize where I was funny, of course.&rdquo;</b> Trimmed 20% first. <b>&ldquo;Didn&rsquo;t work.&rdquo;</b> Cut 47 entries in half instead: the quote is the content, the rationale behind each fix isn&rsquo;t.</li>
+          <li><b>&ldquo;We have to eat our own dog food. Send this superteam at our product and audit in parallel.&rdquo;</b> Eight auditors, one lane each, 78 findings, 44 once the overlaps merged. The worst: the Marvel v DC lens had blanked every legend and emptied the box plot since the day it shipped, the scorecards&rsquo; profit per film was a mean under a dek that promised medians, and <em>Love and Thunder</em> credited zero Guardians. All 44 fixed; the tie-out went from twenty claims to thirty.</li>
         </ol>
       </details>
 
       <details class="card">
-        <summary class="card-title">The bugs<span class="cnt">7 caught</span></summary>
+        <summary class="card-title">The bugs<span class="cnt"><span class="sr-only">, </span>8 caught</span></summary>
         <dl>
           <dt>Red Hulk in four films</dt>
-          <dd>The canonicalizer counted every plain <span class="q">Thaddeus Ross</span> credit as the codename. Rule now: a character counts under a codename only from the film they take it up, and a later transformation identity (Red Hulk, Mighty Thor) needs the explicit <code>Name / Codename</code> alias in the credit. Ross is five films of a general and one of a monster, so he shows once.</dd>
+          <dd>The canonicalizer counted every plain <span class="q">Thaddeus Ross</span> credit as the codename. Rule now: a character counts under a codename only from the film they take it up, and a later transformation identity (Red Hulk, Mighty Thor) needs the explicit <code>Name / Codename</code> alias in the credit; a mantle already held on first sight (Janet&rsquo;s Wasp) does not. Ross is five films of a general and one of a monster, so he shows once.</dd>
 
           <dt>A duplicate ghost film</dt>
           <dd><em>Joker: Folie à Deux</em> was in the source list as <code>Folie a Deux</code> (plain a) and on Box Office Mojo as <code>Folie à Deux</code> (accented). Two records, one with no universe, showing up as an <code>UNKNOWN</code> entry. Fix: match the source of truth&rsquo;s spelling exactly, delete the stale scrape, re-run.</dd>
@@ -1298,13 +1325,16 @@
           <dt>The cast scraper was quietly dropping people</dt>
           <dd>Found by asking a small question during the audit: why is the Joker credited in only one film? Five separate causes. (1) An HTML comment sitting between &ldquo;as&rdquo; and the character name, and a strip that was too greedy about it, so Doctor Strange vanished from four films. (2) <span class="q">the Joker</span>: the lowercase article meant the string never matched the canonical name, so Ledger&rsquo;s and Leto&rsquo;s Jokers went uncounted. (3) <span class="q">Dr. Stephen Strange</span>: an honorific the lookup didn&rsquo;t strip. (4) <span class="q">J.A.R.V.I.S. and Vision</span>: a dual credit where neither half matched alone. (5) The big one: pages that list returning cast in a prose sentence (<span class="q">Several actors reprise their roles&hellip;</span>) rather than a bullet list were never parsed, so Falcon, Scarlet Witch, Winter Soldier, Star-Lord and a dozen others were missing their <em>Endgame</em> appearance.</dd>
 
+          <dt>A lens that colored nothing</dt>
+          <dd>Under Marvel v DC, <code>hueVar("Marvel")</code> looked up <code>BRANDVAR[BRAND["Marvel"]]</code>. <code>BRAND</code> maps universes to brands and has no brand keys, so every legend swatch became <code>var(undefined)</code> and the box plot filtered for films whose universe was literally &ldquo;Marvel&rdquo;, which is none. The charts recolored, the copy re-wrote itself, the claims were audited, and the one function that hands out colors to a legend was never called with a brand key in a test. Fix: <code>BRAND[u] || u</code>.</dd>
+
           <dt>&hellip;and the fix</dt>
           <dd>Strip HTML comments and citations before matching. A case-insensitive lookup that also drops articles and honorifics. Split credits on &ldquo;and&rdquo;. A guarded prose scan that only reads a paragraph if it carries a reprisal cue, only takes clean <code>[[Actor]] as [[Character]]</code> pairs, and skips anything preceded by &ldquo;footage of&rdquo; or &ldquo;was cast&rdquo;. A short, hand-checked overrides file for the last few stars buried in prose. Recovered counts: Joker 1&rarr;4, Magneto 5&rarr;7, Doctor Strange 2&rarr;5, and every <em>Endgame</em> reprisal.</dd>
         </dl>
       </details>
 
       <details class="card">
-        <summary class="card-title">The design calls<span class="cnt">9 calls</span></summary>
+        <summary class="card-title">The design calls<span class="cnt"><span class="sr-only">, </span>9 calls</span></summary>
         <dl>
           <dt>Three faces, one job each</dt>
           <dd>Condensed sets headings and hero numbers, Sans sets every word a reader reads, Mono sets figures and metadata, so a column of dollars lines up on its digits and a sentence never comes out typewritten. Each is declared once as a token with a real fallback behind it. The rule is easy to break by accident: a chart label that carries a class gets its family from the CSS, not from its own <code>font-family</code> attribute, which had left some axis numbers set in the body face and the identical numbers one chart over set in Mono.</dd>
@@ -1335,7 +1365,7 @@
       </details>
 
       <div class="card">
-        <div class="card-title">The scope question, which took three tries</div>
+        <h4 class="card-title">The scope question, which took three tries</h4>
         <p>This was the hardest editorial call, and the first two answers were wrong.</p>
         <p><b>Try one: start at 2008</b>, the year the MCU launched. Clean, until the Fox X-Men run went in. <em>X-Men: Days of Future Past</em> is a direct sequel to the 2000 original, so keeping the sequel and cutting the original was indefensible. The start moved to 2000.</p>
         <p><b>Try two: include an older continuity if an actor later reprised the role.</b> This collapsed within minutes. <em>Deadpool &amp; Wolverine</em>, <em>The Flash</em> and <em>No Way Home</em> have brought back nearly every dormant franchise on screen. A cameo can&rsquo;t be the test, or the scope is everything.</p>
@@ -1343,7 +1373,7 @@
       </div>
 
       <div class="card">
-        <div class="card-title">How it&rsquo;s checked</div>
+        <h4 class="card-title">How it&rsquo;s checked</h4>
         <p>Every change is verified by driving a headless browser and reading the rendered page (element counts, computed styles, the actual numbers in the actual DOM) rather than trusting that the code does what it looks like it does. That is how the &minus;$317M scorecard, the phantom <em>Fantastic Four</em>, and the one-film Joker were all caught: by looking at the output instead of the source.</p>
         <p>None of this was in the plan. The plan was to check 50 numbers.</p>
         <p>The whole thing, pipeline and page, is on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -1359,7 +1389,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    Built by <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a>, rebuilt from his <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a>. Box office from Box Office Mojo, read September 2026. Source on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>. Spotted a wrong number? <a href="https://github.com/cruce5/cape-index/issues" target="_blank" rel="noopener">Open an issue</a> or <a href="mailto:hello@capeindex.com">email</a>. Not affiliated with Marvel, DC, Disney, Warner Bros. or Sony.
+    Built by <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a>, rebuilt from his <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a>. Box office from Box Office Mojo, read <span id="foot-date">September 2026</span>. Source on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>. Spotted a wrong number? <a href="https://github.com/cruce5/cape-index/issues" target="_blank" rel="noopener">Open an issue</a> or <a href="mailto:hello@capeindex.com">email</a>. Not affiliated with Marvel, DC, Disney, Warner Bros. or Sony.
   </div>
 </footer>
 
@@ -1390,9 +1420,23 @@
   var BRANDS = [{ k: "Marvel", label: "Marvel" }, { k: "DC", label: "DC" }];
   function brandLens() { return STATE.lens === "brand"; }
   function keyOf(u) { return brandLens() ? BRAND[u] : u; }        // the group a film is drawn as
-  function hueVar(u) { return brandLens() ? BRANDVAR[BRAND[u]] : COLORVAR[u]; }
+  // accepts a universe key or, under the lens, a brand key: legend() and the box plot iterate
+  // activeUnis(), which returns brand keys when the lens is on
+  function hueVar(u) { return brandLens() ? BRANDVAR[BRAND[u] || u] : COLORVAR[u]; }
+  // the smallest group any aggregate is shown solid for; under it the number is muted or held
+  var MIN_N = 4;
+  // small numbers in prose are words; shared by every generated sentence
+  var NUM = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+    "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+  var WORDS = ["never", "once", "twice", "three times", "four times", "five times", "six times",
+    "seven times", "eight times", "nine times", "ten times", "eleven times", "twelve times",
+    "thirteen times", "fourteen times", "fifteen times", "sixteen times", "seventeen times"];
+  function num(n) { return NUM[n] || String(n); }
+  function Num(n) { var w = num(n); return w.charAt(0).toUpperCase() + w.slice(1); }
+  function word(n) { return WORDS[n] || n + " times"; }
+  function yearOf(f) { return +f.date.slice(0, 4); }
+  function plural(n, s) { return n === 1 ? s : s + "s"; }
   function groups() { return brandLens() ? BRANDS : UNI; }
-  function cvar(k) { return getComputedStyle(document.body).getPropertyValue(BRANDVAR[k] || COLORVAR[k]).trim(); }
   function uLabel(k) { var g = groups(); for (var i = 0; i < g.length; i++) if (g[i].k === k) return g[i].label; return k; }
 
   var STATE = {
@@ -1460,6 +1504,9 @@
         var s = document.getElementById(id).closest("section.view");
         if (s) { if (STATE.freezeRead) STATE.freezeRead(); s.scrollIntoView({ block: "start" }); }
       }
+      // renderAll rebuilt this button; a keyboard reader would otherwise land on <body>
+      var nb = document.getElementById(id) && document.getElementById(id).nextElementSibling;
+      if (nb && nb.classList.contains("collapse-toggle")) nb.focus({ preventScroll: true });
     });
     host.parentNode.insertBefore(b, host.nextSibling);
   }
@@ -1510,10 +1557,23 @@
     return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
   }
   function contrastRatio(a, b) { var l1 = relLum(a), l2 = relLum(b); return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05); }
-  function cellWantsDarkInk(tokenVar) {
-    var fill = getComputedStyle(document.documentElement).getPropertyValue(tokenVar).trim();
-    if (!/^#[0-9a-f]{3,6}$/i.test(fill)) return false;
-    return contrastRatio("#12151b", fill) >= contrastRatio("#ffffff", fill);
+  // Answers "dark or white ink on this fill?" for the fill the reader actually sees: the token
+  // drawn at alpha over the surface, not the raw token. Memoised per token; the treemap asks 91
+  // times per render for six answers, and each ask is a style flush. Cleared on theme change.
+  var INK_CACHE = {};
+  function cellWantsDarkInk(tokenVar, alpha) {
+    var key = tokenVar + "@" + alpha;
+    if (key in INK_CACHE) return INK_CACHE[key];
+    var cs = getComputedStyle(document.documentElement);
+    var fill = cs.getPropertyValue(tokenVar).trim(), surf = cs.getPropertyValue("--surface").trim();
+    if (!/^#[0-9a-f]{3,6}$/i.test(fill)) return (INK_CACHE[key] = false);
+    if (alpha != null && alpha < 1 && /^#[0-9a-f]{6}$/i.test(surf)) {
+      var mix = function (a, b) { return Math.round(a * alpha + b * (1 - alpha)); };
+      var h = function (s, i) { return parseInt(s.slice(i, i + 2), 16); };
+      var f6 = fill.length === 4 ? "#" + fill[1] + fill[1] + fill[2] + fill[2] + fill[3] + fill[3] : fill;
+      fill = "#" + [0, 2, 4].map(function (i) { return ("0" + mix(h(f6, 1 + i), h(surf, 1 + i)).toString(16)).slice(-2); }).join("");
+    }
+    return (INK_CACHE[key] = contrastRatio("#12151b", fill) >= contrastRatio("#ffffff", fill));
   }
   // Mobile SVG viewBox width. Charts used to draw into a fixed 480-unit box that the phone then
   // shrank to ~350 CSS px, so every 11-unit label landed at ~8 px. Measuring the real container
@@ -1527,12 +1587,6 @@
       if (h && h.clientWidth) return Math.max(280, Math.min(640, h.clientWidth));
     }
     return 0; // nothing visible to measure; caller keeps the last value
-  }
-  function isDarkMode() {
-    var t = document.documentElement.getAttribute("data-theme");
-    if (t === "dark") return true;
-    if (t === "light") return false;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
   function dateNum(d) { return new Date(d + "T00:00:00").getTime(); }
   function niceMax(v) {
@@ -1556,6 +1610,7 @@
   var tip = document.getElementById("tip");
   var tipPinned = false;
   function showTip(html, x, y) {
+    tip.removeAttribute("aria-hidden");   // hideTip sets it; without this the status region went silent after the first hover
     tip.innerHTML = html;
     tip.style.opacity = "1";
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -1658,8 +1713,7 @@
     function block(k, v, sub) {
       return '<div><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="sub">' + sub + "</div></div>";
     }
-    document.getElementById("smallprint").innerHTML =
-      FILMS.length + " films with a worldwide gross to verify. <b>Avengers: Doomsday</b> and <b>Clayface</b> aren&rsquo;t out yet, so there&rsquo;s nothing to check. <b>Spider-Man: Brand New Day</b> is still in theaters. Box Office Mojo, read " + new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) + ".";
+    // the smallprint (held-out and in-release names) is written in renderClubCopy from the data
     document.getElementById("method-held").innerHTML =
       "Not in the data until they open: " + DB.meta.held_out.map(function (h) { return "<b>" + esc(h.t) + "</b> (" + h.date + ", " + h.u + ")"; }).join(" · ") + ".";
     var asof = document.getElementById("asof-date");
@@ -1689,19 +1743,22 @@
       el.className = "sc";
       el.style.setProperty("--c", "var(" + hueVar(u.hue) + ")");
       el.innerHTML =
-        '<h3><span class="sc-full">' + u.full + '</span><span class="sc-short">' + u.label + "</span></h3>" +
+        '<h4><span class="sc-full">' + u.full + '</span><span class="sc-short">' + u.label + "</span></h4>" +
         '<div class="big">' + usd(tot) + "</div>" +
         '<div class="rows">' +
         rowline("Films", fs.length) +
-        rowline("Median", usd(median(gr))) +
+        // the dek says medians throughout; under MIN_N the median is a midpoint of two, so it is muted
+        rowline("Median", fs.length < MIN_N ? mute(usd(median(gr))) : usd(median(gr))) +
         rowline("Biggest", usd(Math.max.apply(null, gr))) +
         rowline("Profit", signed(np)) +
-        // per completed film; muted, not color-coded, when too few finished runs to average honestly
-        rowline("Profit / film", finals.length ? signed(np / finals.length, finals.length < 3) : '<span style="color:var(--ink-muted)">n/a</span>') +
+        // the median completed film's profit, not total over count: on the DCEU the mean is +$36M
+        // and the median is -$72M, which is exactly the case the dek warns about
+        rowline("Median profit", finals.length ? signed(median(finals.map(profitOf)), finals.length < MIN_N) : mute("n/a")) +
         "</div>";
       host.appendChild(el);
     });
     function rowline(k, v) { return '<div class="row"><span>' + k + "</span><span>" + v + "</span></div>"; }
+    function mute(html) { return '<span style="color:var(--ink-muted)">' + html + "</span>"; }
     function signed(v, muted) {
       // --pos is a shade off --mcu, and on the MCU scorecard this text sits directly under
       // an --mcu rule. §06 moved off green for the same collision; this is the other half.
@@ -1725,11 +1782,19 @@
     var mpf = median(mFin.map(profitOf)), dpf = median(dFin.map(profitOf));
     var pfWord = function (v) { return (v >= 0 ? "clears about <b>" : "loses about <b>") + usd(Math.abs(v)) + "</b>"; };
     document.getElementById("d-scorecard").innerHTML =
-      "<b>" + usd(tm) + "</b> across " + mcu.length + " " + side.name + " films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones (the Dark Knight trilogy, both Jokers, The Batman). The median " + side.name + " film makes <b>" + usd(am) + "</b> worldwide; the median DC film, <b>" + usd(ad) + "</b>. " + bm + " " + side.name + " films have passed $1B; " + bd + " DC films have. Net of an estimated theatrical break-even of 2.5&times; production budget, the median completed " + side.name + " film " + pfWord(mpf) + "; the median completed DC film " + pfWord(dpf) + " (home video, streaming and TV not counted). Medians throughout, not averages: on a slate this skewed a mean lands where no actual film sits. " +
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " " + side.name + " films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones. The median " + side.name + " film makes <b>" + usd(am) + "</b> worldwide; the median DC film, <b>" + usd(ad) + "</b>. " + bm + " " + side.name + " films have passed $1B; " + bd + " DC films have. Net of an estimated theatrical break-even of 2.5&times; production budget, the median completed " + side.name + " film " + pfWord(mpf) + "; the median completed DC film " + pfWord(dpf) + " (home video, streaming and TV not counted). Medians throughout: on a slate this skewed a mean lands where no film sits. " +
       // under the lens Fox and Sony are inside the fight, so the closing clause changes sides
       (brandLens()
         ? "That Marvel total is three studios, not one: Marvel Studios at <b>" + usd(FILMS.filter(function (f) { return f.u === "MCU"; }).reduce(function (x, f) { return x + val(f, "ww"); }, 0)) + "</b>, Fox&rsquo;s " + fox.length + " at <b>" + usd(tfx) + "</b> and Sony&rsquo;s " + ssu.length + " at <b>" + usd(tss) + "</b>. Switch to the six-universe view to split them."
-        : "Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; neither run has a billion-dollar title, though Raimi&rsquo;s <em>Spider-Man 3</em> came closest at $887M.");
+        : "Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; " + outsideClub(fox.concat(ssu)));
+    // the closing clause follows the dollar basis: nominal, no Fox or Sony film has cleared $1B;
+    // in 2025 dollars eight of them have
+    function outsideClub(fs) {
+      var over = fs.filter(function (f) { return val(f, "ww") >= 1e9; }).sort(function (a, b) { return val(b, "ww") - val(a, "ww"); });
+      var top = fs.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); })[0];
+      if (!over.length) return "neither run has a billion-dollar title, though <em>" + esc(top.t) + "</em> came closest at " + usd(val(top, "ww")) + ".";
+      return "in 2025 dollars " + num(over.length) + " of those films clear $1B, led by " + top.date.slice(0, 4) + "&rsquo;s <em>" + esc(top.t) + "</em> at " + usd(val(top, "ww")) + ".";
+    }
   }
 
   /* ---------- §01 stacked columns by year ---------- */
@@ -1741,9 +1806,10 @@
     var af = activeFilms();
     var byYear = {};
     years.forEach(function (y) { byYear[y] = {}; });
+    // under the lens a year is two segments, Marvel and DC, not six in two colors
     af.forEach(function (f) {
-      var y = new Date(f.date).getFullYear();
-      byYear[y][f.u] = (byYear[y][f.u] || 0) + val(f, "ww");
+      var y = new Date(f.date).getFullYear(), k = keyOf(f.u);
+      byYear[y][k] = (byYear[y][k] || 0) + val(f, "ww");
     });
     var totals = years.map(function (y) { return Object.keys(byYear[y]).reduce(function (s, k) { return s + byYear[y][k]; }, 0); });
     var max = niceMax(Math.max.apply(null, totals) || 1);
@@ -1751,7 +1817,7 @@
     var bw = Math.min(34, iw / years.length * 0.62);
     var x = function (i) { return m.l + (i + 0.5) * (iw / years.length); };
     var yS = function (v) { return m.t + ih - (v / max) * ih; };
-    var order = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
+    var order = brandLens() ? ["Marvel", "DC"] : ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
     var g = "";
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
@@ -1799,7 +1865,9 @@
     return years.map(function (y) {
       var r = byYear[y] || {};
       var tot = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"].reduce(function (s, k) { return s + (r[k] || 0); }, 0);
-      return [String(y), usd(r.MCU || 0), usd(r.Fox || 0), usd(r.SSU || 0), usd(r.DCEU || 0), usd(r.DCU || 0), usd(r.Elseworlds || 0), usd(tot)];
+      // the chart draws a year with an in-release film at half opacity and says "partial"; the table must too
+      var open = FILMS.some(function (f) { return yearOf(f) === y && !f.final; });
+      return [String(y) + (open ? " (partial)" : ""), usd(r.MCU || 0), usd(r.Fox || 0), usd(r.SSU || 0), usd(r.DCEU || 0), usd(r.DCU || 0), usd(r.Elseworlds || 0), usd(tot)];
     });
   }
 
@@ -1821,12 +1889,12 @@
     function jit(s) { var h = 0; for (var k = 0; k < s.length; k++) h = (h * 31 + s.charCodeAt(k)) | 0; return (Math.abs(h) % 15) - 7; }
     var rows = "";
     us.forEach(function (u, i) {
-      var fs = all.filter(function (f) { return f.u === u; });
+      var fs = all.filter(function (f) { return keyOf(f.u) === u; });
       var arr = fs.map(function (f) { return val(f, "ww"); }).sort(function (a, b) { return a - b; });
       var cy = m.t + rowH * i + rowH / 2;
       var c = "var(" + hueVar(u) + ")";
       rows += '<text x="' + (m.l - 10) + '" y="' + (cy + 4) + '" text-anchor="end" class="lbl lbl-strong" font-size="' + (mob ? 12 : 12) + '">' + uLabel(u) + (mob ? " " : " · ") + fs.length + "</text>";
-      if (arr.length < 4) {
+      if (arr.length < MIN_N) {
         if (arr.length >= 2) {
           var md0 = quantile(arr, 0.5);
           rows += '<line x1="' + xS(md0) + '" x2="' + xS(md0) + '" y1="' + (cy - 13) + '" y2="' + (cy + 13) + '" stroke="' + c + '" stroke-width="2"/>';
@@ -1919,16 +1987,21 @@
       // the Elseworlds gray is light in dark mode only, dark in light mode
       // label ink is whichever of dark or white contrasts better with this cell's actual fill, read
       // from the live token so it follows the theme; white on the MCU green was only 3:1 in dark mode
-      var lightFill = cellWantsDarkInk(hueVar(f.u));
-      var ink = lightFill ? "#12151b" : "#fff", ink2 = lightFill ? "rgba(18,21,27,0.78)" : "rgba(255,255,255,0.92)";
+      var lightFill = cellWantsDarkInk(hueVar(f.u), 0.88);
+      var ink = lightFill ? "#12151b" : "#fff", ink2 = lightFill ? "rgba(18,21,27,0.9)" : "#fff";
       var halo = ' paint-order="stroke" stroke="' + (lightFill ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)") + '" stroke-width="3.5" stroke-linejoin="round"';
+      // the universe rides on the gross line wherever it fits: this is the one chart with no
+      // shape channel and no row name, so without it identity was hue alone
+      var tag = " · " + uLabel(keyOf(f.u));
+      var fits = function (s, x) { return s.length <= Math.floor((c.w - x) / 6.6); };
+      var grossLine = usd(val(f, "ww")) + (fits(usd(val(f, "ww")) + tag, 16) ? tag : "");
       // a clipped title reads as a mistake, so only show the name when it fits the cell uncut, else just the gross
-      var titleFits = big && f.t.length <= Math.floor((c.w - 16) / 6.6);
+      var titleFits = big && fits(f.t, 16);
       if (titleFits) {
         label = '<text x="' + (c.x + 8) + '" y="' + (c.y + 18) + '" fill="' + ink + '"' + halo + ' font-family="IBM Plex Sans, system-ui, sans-serif" font-size="12" font-weight="600" style="pointer-events:none">' + esc(f.t) + '</text>' +
-          '<text x="' + (c.x + 8) + '" y="' + (c.y + 34) + '" fill="' + ink2 + '"' + halo + ' font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
+          '<text x="' + (c.x + 8) + '" y="' + (c.y + 34) + '" fill="' + ink2 + '"' + halo + ' font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" style="pointer-events:none">' + grossLine + "</text>";
       } else if (big || med) {
-        label = '<text x="' + (c.x + (big ? 8 : 6)) + '" y="' + (c.y + 15) + '" fill="' + ink + '"' + halo + ' font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" style="pointer-events:none">' + usd(val(f, "ww")) + "</text>";
+        label = '<text x="' + (c.x + (big ? 8 : 6)) + '" y="' + (c.y + 15) + '" fill="' + ink + '"' + halo + ' font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" style="pointer-events:none">' + grossLine + "</text>";
       }
       return '<g class="tmCell" data-i="' + FILMS.indexOf(f) + '">' +
         '<rect x="' + (c.x + 1) + '" y="' + (c.y + 1) + '" width="' + Math.max(0, c.w - 2) + '" height="' + Math.max(0, c.h - 2) + '" fill="' + col + '" fill-opacity="0.88" rx="2"/>' +
@@ -1967,17 +2040,24 @@
   // Callouts are placed one at a time and nudged vertically off anything already down.
   // Two titles on top of each other is worse than a title sitting a line off its own dot,
   // and the dot it belongs to is never ambiguous at these distances.
+  // Callouts dodge two things: other labels, and every data mark on the chart. The second
+  // matters because a label carries a surface-colored halo, so a label printed over a mark
+  // does not just cover it, it erases it. Sizes passed in must be the RENDERED size (the CSS
+  // sets .lbl to 16px desktop / 13px phone whatever the attribute says).
   function labelPlacer() {
-    var placed = [];
+    var placed = [], marks = [];
     function add(x0, x1, y) { placed.push({ x0: x0, x1: x1, y: y }); }
     return {
       block: function (x0, x1, y) { add(x0, x1, y); },
-      // returns the y to draw at
-      place: function (cx, cy, txt, size, right) {
+      mark: function (cx, cy, r, id) { marks.push({ cx: cx, cy: cy, r: r, id: id }); },
+      // returns the y to draw at; id is the labeled film's own mark, which it may sit beside
+      place: function (cx, cy, txt, size, right, id) {
         var w = txt.length * size * 0.56, lh = size + 3;
         var x0 = right ? cx - 10 - w : cx + 10, x1 = x0 + w, y = cy + size / 3;
-        for (var k = 1; k <= 8; k++) {
-          var clash = placed.some(function (p) { return x0 < p.x1 + 5 && p.x0 < x1 + 5 && Math.abs(p.y - y) < lh; });
+        for (var k = 1; k <= 12; k++) {
+          var yc = y - size * 0.35;   // the glyph box's vertical centre
+          var clash = placed.some(function (p) { return x0 < p.x1 + 5 && p.x0 < x1 + 5 && Math.abs(p.y - y) < lh; })
+            || marks.some(function (mk) { return mk.id !== id && x0 < mk.cx + mk.r + 2 && mk.cx - mk.r - 2 < x1 && Math.abs(mk.cy - yc) < mk.r + size * 0.5; });
           if (!clash) break;
           y = cy + size / 3 + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * lh;
         }
@@ -1986,6 +2066,8 @@
       }
     };
   }
+  // what the CSS actually renders chart labels at (see the .lbl rules); the placer needs it
+  function lblSize() { return isMobile() ? 13 : 16; }
 
   /* ---------- §03 beeswarm by date (horizontal; smaller on mobile) ---------- */
   function renderBeeswarm() {
@@ -1995,9 +2077,13 @@
     var mob = isMobile();
     var W = mob ? MW : 1000, H = mob ? 232 : 460;
     var m = mob ? { t: 10, r: 10, b: 22, l: 10 } : { t: 20, r: 20, b: 34, l: 20 };
+    // area proportional to gross means r = k * sqrt(v), with no constant added to r: an added
+    // 4px drew a $49M film at a quarter of Endgame's area when the true ratio is 1 to 57.
+    // The smallest films are floored at 2% of the biggest so they stay visible
+    var FLOOR = 0.02;
     var rS = mob
-      ? function (v) { return 2 + Math.sqrt(v / maxWW) * 10; }
-      : function (v) { return 4 + Math.sqrt(v / maxWW) * 25; };
+      ? function (v) { return Math.sqrt(Math.max(v / maxWW, FLOOR)) * 12; }
+      : function (v) { return Math.sqrt(Math.max(v / maxWW, FLOOR)) * 29; };
     var iw = W - m.l - m.r;
     var xOf = function (d) { return m.l + ((dateNum(d) - t0) / (t1 - t0)) * iw; };
     var mid = m.t + (H - m.t - m.b) / 2, lim0 = m.t, lim1 = H - m.b;
@@ -2089,13 +2175,14 @@
     var pts = "", labels = "";
     var top = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).slice(0, topN);
     af.forEach(function (f) { pts += mark(xS(f.date), yS(val(f, "ww")), f.u, FILMS.indexOf(f)); });
-    var lsz = mob ? 11 : 18, place = labelPlacer();
+    var lsz = lblSize(), place = labelPlacer();
     // reference-line labels are already on the canvas, so the placer has to know about them
     [1e9, 2e9].forEach(function (r) { if (r <= maxWW) place.block(m.l + 6, m.l + 6 + 70, yS(r) + 13); });
+    af.forEach(function (f) { place.mark(xS(f.date), yS(val(f, "ww")), mr, FILMS.indexOf(f)); });
     top.forEach(function (f) {
       var cx = xS(f.date), cy = yS(val(f, "ww")), rightSide = cx > m.l + iw * 0.55;
       var st = mob ? clip(shortT(f.t), 20) : shortT(f.t);
-      var ly = place.place(cx, cy, st, lsz, rightSide);
+      var ly = place.place(cx, cy, st, lsz, rightSide, FILMS.indexOf(f));
       labels += '<text x="' + (rightSide ? cx - 10 : cx + 10) + '" y="' + ly + '" text-anchor="' + (rightSide ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + lsz + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
     });
     document.getElementById("chart-scatter").innerHTML =
@@ -2147,7 +2234,7 @@
           '<text x="' + (m.l + 14) + '" y="' + (y + 12) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(f.t, 30)) + (f.final ? "" : " ◉") + "</text>" +
           '<text x="' + (W - m.r) + '" y="' + (y + 12) + '" text-anchor="end" class="lbl num" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="var(--ink-muted)">' + (mode ? pct(f.pctIntl) + " overseas" : usd(tot)) + "</text>" +
           '<rect x="' + m.l + '" y="' + (y + 20) + '" width="' + Math.max(0, dw - 2) + '" height="11" rx="2" fill="' + c + '"/>' +
-          '<rect x="' + (m.l + dw) + '" y="' + (y + 20) + '" width="' + Math.max(0, wpx - dw) + '" height="11" rx="2" fill="' + c + '" fill-opacity="0.42"/>' +
+          '<rect x="' + (m.l + dw) + '" y="' + (y + 20) + '" width="' + Math.max(0, wpx - dw) + '" height="11" rx="2" fill="' + c + '" fill-opacity="0.55"/>' +
           "</g>";
       }
       var wpxd = mode ? iw : (tot / maxWW) * iw;
@@ -2158,7 +2245,7 @@
         '<rect x="0" y="' + y + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
         '<text x="' + (m.l - 12) + '" y="' + (y + rowH / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11" fill="var(--ink-2)">' + esc(name) + "</text>" +
         '<rect x="' + m.l + '" y="' + (y + 3) + '" width="' + Math.max(0, dwd - 2) + '" height="' + (rowH - 6) + '" fill="' + c + '" rx="1.5"/>' +
-        '<rect x="' + (m.l + dwd) + '" y="' + (y + 3) + '" width="' + Math.max(0, iwdd) + '" height="' + (rowH - 6) + '" fill="' + c + '" fill-opacity="0.42" rx="1.5"/>' +
+        '<rect x="' + (m.l + dwd) + '" y="' + (y + 3) + '" width="' + Math.max(0, iwdd) + '" height="' + (rowH - 6) + '" fill="' + c + '" fill-opacity="0.55" rx="1.5"/>' +
         '<text x="' + (m.l + wpxd + 8) + '" y="' + (y + rowH / 2 + 4) + '" class="lbl num" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)">' + (mode ? pct(f.pctIntl) + " OS" : usd(tot)) + "</text>" +
         "</g>";
     }).join("");
@@ -2168,10 +2255,14 @@
     document.getElementById("chart-split").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Domestic and international split per film">' + foldMark + bars + "</svg>";
     stripToggle("chart-split"); if (af.length > 26) foldToggle("chart-split", "split", af.length);
-    document.getElementById("leg-split").innerHTML = '<span class="lg-keys">' +
+    // the identity keys come first: "bar color = universe" with no universes listed asked the
+    // reader to remember six hues from another tab
+    legend("leg-split", activeUnis());
+    var lsp = document.getElementById("leg-split");
+    lsp.querySelector(".lg-keys").insertAdjacentHTML("beforeend",
       '<span><i style="--c:var(--ink-2);background:var(--ink-2)"></i>Solid&nbsp;= domestic</span>' +
-      '<span><i style="--c:var(--ink-2);background:color-mix(in srgb,var(--ink-2) 30%,transparent);border:1px solid var(--ink-2)"></i>Pale&nbsp;= overseas</span>' +
-      '</span><span class="lg-notes"><span>Bar color = universe</span><span>◉ still in release</span></span>';
+      '<span><i style="--c:var(--ink-2);background:color-mix(in srgb,var(--ink-2) 30%,transparent);border:1px solid var(--ink-2)"></i>Pale&nbsp;= overseas</span>');
+    lsp.insertAdjacentHTML("beforeend", '<span class="lg-notes"><span>◉ still in release</span></span>');
     wireSplit(document.querySelector("#chart-split svg"));
     fillTable("table-split", af.map(function (f) {
       return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), usd(val(f, "d")), usd(val(f, "i")), pct(f.pctIntl)];
@@ -2207,8 +2298,9 @@
       var total = fs.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
       var cells = [
         usd(total), usd(med(fs, function (f) { return val(f, "ww"); })),
-        usd(med(fs, function (f) { return val(f, "open"); })),
-        fmtX(med(fs, function (f) { return f.mult; })),
+        // opening and multiplier from completed runs only, as §14 promises
+        usd(med(fs.filter(function (f) { return f.final; }), function (f) { return val(f, "open"); })),
+        fmtX(med(fs.filter(function (f) { return f.final; }), function (f) { return f.mult; })),
         usd(med(fs, function (f) { return val(f, "budget"); })),
         fmtX(med(fs, function (f) { return f.roi; })),
         fmtN(med(fs, function (f) { return f.rt; }), "%"),
@@ -2216,9 +2308,9 @@
       ];
       var chip = chipVar ? '<span class="uchip" style="background:var(' + chipVar + ')"></span>' : "";
       // §01 won't draw a quartile box under four films; a median of two is the same problem
-      var thin = fs.length < 4;
-      return "<tr" + (chipVar ? (thin ? ' class="thin"' : "") : ' class="sumall"') + '><td class="name">' + chip + label +
-        (thin ? ' <span class="estflag">n=' + fs.length + ', midpoint</span>' : "") + "</td><td>" + fs.length + "</td>" +
+      var thin = fs.length < MIN_N;
+      return "<tr" + (chipVar ? (thin ? ' class="thin"' : "") : ' class="sumall"') + '><th scope="row" class="name">' + chip + label +
+        (thin ? ' <span class="estflag">n=' + fs.length + ', midpoint</span>' : "") + "</th><td>" + fs.length + "</td>" +
         cells.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>";
     }
     function fmtX(v) { return v == null ? "&ndash;" : v.toFixed(2) + "×"; }
@@ -2230,12 +2322,14 @@
     var heads = [brandLens() ? "Brand" : "Universe", "Films", "Worldwide", "Med. WW", "Med. open", "Med. mult.", "Med. budget", "Med. ROI", "Med. RT", "Med. MC"];
     document.getElementById("table-summary").innerHTML =
       '<div class="scrollhint" id="hint-sum">' + (mob ? "Swipe" : "Scroll") + ' for the rest of the columns <span class="arw">&rarr;</span></div>' +
-      '<div class="tablewrap"><table class="data"><thead><tr>' +
+      '<div class="tablewrap"><table class="data"><caption class="sr-only">Data table: summary by ' + (brandLens() ? "brand" : "universe") + '</caption><thead><tr>' +
       heads.map(function (h) { return '<th scope="col">' + h + "</th>"; }).join("") + "</tr></thead><tbody>" + body + "</tbody></table></div>";
     wireScrollHint(document.querySelector("#table-summary .tablewrap"), document.getElementById("hint-sum"));
   }
 
   function renderFullTable() {
+    // both tables are rebuilt below; drop the observers and closures the previous build left
+    resetScrollHints();
     renderSummary();
     var af = activeFilms().slice();
     var s = STATE.sort;
@@ -2263,13 +2357,13 @@
       return "<tr>" + cols.map(function (c) {
         var raw = c.g ? val(f, c.g) : f[c.k];
         var disp;
-        if (c.k === "t") disp = '<span class="uchip" style="background:var(' + hueVar(f.u) + ')"></span>' + esc(mob ? clip(f.t, 16) : f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
+        if (c.k === "t") disp = '<span class="uchip" style="background:var(' + hueVar(f.u) + ')"></span>' + esc(mob ? clip(f.t, 16) : f.t) + (f.final ? "" : ' <span class="inrelease" role="img" aria-label="still in release">◉</span>');
         else if (c.t === "$") disp = usd(raw) + (c.k === "budget" && f.budgetEst ? ' <span class="estflag">est.</span>' : "");
         else if (c.t === "p") disp = raw == null ? "&ndash;" : Math.round(raw) + "%";
         else if (c.t === "x") disp = raw == null ? "&ndash;" : raw.toFixed(2) + "×";
         else if (c.t === "n") disp = raw == null ? "&ndash;" : raw;
         else disp = esc(raw);
-        return '<td class="' + (c.k === "t" ? "name" : "") + '">' + disp + "</td>";
+        return c.k === "t" ? '<th scope="row" class="name">' + disp + "</th>" : "<td>" + disp + "</td>";
       }).join("") + "</tr>";
     }).join("");
     document.getElementById("table-full").innerHTML =
@@ -2346,14 +2440,20 @@
     c = String(c);
     var rest = c
       .split(/<span class="uchip" style="background:var\(--[a-z0-9-]+\)"><\/span>/).join("")
-      .split(/<span class="inrelease">[^<]*<\/span>/).join("");
+      .split(/<span class="inrelease"[^>]*>[^<]*<\/span>/).join("");
     return /[<>]/.test(rest) ? esc(c) : c;
+  }
+  // the table's name, for a screen reader: the card title if it sits in one, else the section
+  function tableCaption(host) {
+    var card = host.closest(".card"), sec = host.closest("section.view");
+    var t = (card && card.querySelector(".card-title")) || (sec && sec.querySelector(".view-head h3, .view-head h2"));
+    return t ? "Data table: " + t.textContent.trim() : "Data table";
   }
   function fillTable(id, rows, headers) {
     var host = document.getElementById(id);
-    host.innerHTML = '<div class="tablewrap"><table class="data"><thead><tr>' +
+    host.innerHTML = '<div class="tablewrap"><table class="data"><caption class="sr-only">' + esc(tableCaption(host)) + '</caption><thead><tr>' +
       headers.map(function (h) { return '<th scope="col">' + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
-      rows.map(function (r) { return "<tr>" + r.map(function (c, i) { return '<td class="' + (i === 0 ? "name" : "") + '">' + safeCell(c) + "</td>"; }).join("") + "</tr>"; }).join("") +
+      rows.map(function (r) { return "<tr>" + r.map(function (c, i) { return i === 0 ? '<th scope="row" class="name">' + safeCell(c) + "</th>" : "<td>" + safeCell(c) + "</td>"; }).join("") + "</tr>"; }).join("") +
       "</tbody></table></div>";
   }
   function tableToggleFill(id, rows, headers) { fillTable(id, rows, headers); }
@@ -2436,11 +2536,34 @@
     }
     return d;
   }
+  // the §05 headline states the shape of the rolling median, which is a different shape in
+  // 2025 dollars (a rise to a 2014 peak, then a slide) than in nominal ones (a doubling, then flat)
+  function renderBudgetCopy(roll, af) {
+    var h = document.getElementById("h-budget"), d = document.getElementById("d-budget");
+    if (!h || !d || roll.length < 3) return;
+    var real = STATE.money === "real";
+    var first = roll[0], last = roll[roll.length - 1];
+    var peak = roll.slice().sort(function (a, b) { return b.med - a.med; })[0];
+    var flat = last.med >= peak.med * 0.9;
+    // flat: the rise is start to finish; peaked: start to the peak
+    var ratio = (flat ? last.med : peak.med) / first.med;
+    var rise = ratio >= 1.8 ? "roughly doubled" : "rose about " + Math.round((ratio - 1) * 100) + "%";
+    h.textContent = flat
+      ? "Production budgets " + rise + " over the 2000s, then flattened near " + usd(last.med) + (real ? " in 2025 dollars" : "")
+      : (real ? "In 2025 dollars, production budgets " : "Production budgets ") + rise + " to a " + usd(peak.med) + " peak in " + peak.yr + ", and have slipped " + Math.round((1 - last.med / peak.med) * 100) + "% since";
+    var byB = af.slice().sort(function (a, b) { return val(b, "budget") - val(a, "budget"); });
+    var firstFilm = af.slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; })[0];
+    var top2 = byB.slice(0, 2);
+    d.innerHTML = "Every film&rsquo;s production budget at its release year (the dots), with a five-year rolling median (the line) and the middle 50% of budgets (the band). The rolling median went from " +
+      usd(first.med) + " in " + first.yr + " to " + (flat ? usd(peak.med) + " by " + peak.yr + " and has held there" : "a " + usd(peak.med) + " peak in " + peak.yr + " and has slipped to " + usd(last.med)) +
+      ", with the odd $300M&#8209;plus tentpole stretching the top of the band. The first <em>" + esc(firstFilm.t) + "</em> cost " + usd(val(firstFilm, "budget")) + " in " + yearOf(firstFilm) +
+      "; the two biggest budgets on the page are <em>" + esc(top2[0].t) + "</em> at " + usd(val(top2[0], "budget")) + " and <em>" + esc(top2[1].t) + "</em> at " + usd(val(top2[1], "budget")) + ". " +
+      (real ? "In nominal dollars the line reads as a doubling; most of that is inflation." : "Flip to 2025 dollars to see how much of that is real growth.");
+  }
   function renderBudget() {
     var mob = isMobile();
     var W = mob ? MW : 1000, H = mob ? 300 : 420, m = mob ? { t: 14, r: 10, b: 26, l: 42 } : { t: 16, r: 18, b: 34, l: 54 };
     var af = activeFilms().filter(function (f) { return val(f, "budget"); });
-    var yearOf = function (f) { return new Date(f.date).getFullYear(); };
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var allB = af.map(function (f) { return val(f, "budget"); });
     var max = niceMax(Math.max.apply(null, allB) || 1);
@@ -2453,8 +2576,9 @@
     for (var yr = YEAR0; yr <= YEAR1; yr++) {
       var b = af.filter(function (f) { var d = yearOf(f); return d >= yr - WIN && d <= yr + WIN; })
         .map(function (f) { return val(f, "budget"); }).sort(function (a, b) { return a - b; });
-      if (b.length >= 3) roll.push({ yr: yr, med: median(b), q1: quantile(b, 0.25), q3: quantile(b, 0.75), n: b.length });
+      if (b.length >= MIN_N) roll.push({ yr: yr, med: median(b), q1: quantile(b, 0.25), q3: quantile(b, 0.75), n: b.length });
     }
+    renderBudgetCopy(roll, af);
     var g = "";
     axisTicks(max).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '"/>';
@@ -2467,7 +2591,7 @@
     if (roll.length > 1) {
       var topPts = roll.map(function (p) { return xS(p.yr) + " " + yS(p.q3); });
       var botPts = roll.slice().reverse().map(function (p) { return xS(p.yr) + " " + yS(p.q1); });
-      band = '<path d="M' + topPts.join(" L") + " L" + botPts.join(" L") + ' Z" fill="var(--dceu)" fill-opacity="0.14" stroke="none"/>';
+      band = '<path d="M' + topPts.join(" L") + " L" + botPts.join(" L") + ' Z" fill="var(--ink-2)" fill-opacity="0.14" stroke="none"/>';
     }
     var medPath = smoothLine(roll.map(function (p) { return { x: xS(p.yr), y: yS(p.med) }; }));
     var dots = af.map(function (f) {
@@ -2477,7 +2601,7 @@
     document.getElementById("chart-budget").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Production budgets by year, a five-year rolling median with the middle-50% band">' +
       '<g class="grid">' + g + xlab + "</g>" + band + dots +
-      '<path d="' + medPath + '" fill="none" stroke="var(--dceu)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>' +
+      '<path d="' + medPath + '" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>' +
       (last ? '<text x="' + (xS(last.yr) - 4) + '" y="' + (yS(last.med) - 12) + '" text-anchor="end" class="lbl lbl-strong" font-size="11">median ' + usd(last.med) + "</text>" : "") +
       "</svg>";
     var svg = document.querySelector("#chart-budget svg");
@@ -2490,8 +2614,8 @@
       });
     });
     document.getElementById("leg-budget").innerHTML = '<span class="lg-keys">' +
-      '<span><i style="--c:var(--dceu)"></i>Median budget, 5&#8209;yr' + (STATE.money === "real" ? " (2025 $)" : "") + '</span>'
-      + '<span><span style="display:inline-block;width:16px;height:9px;border-radius:2px;background:var(--dceu);opacity:0.28;vertical-align:-1px;margin-right:2px"></span>middle 50%</span>'
+      '<span><i style="--c:var(--ink)"></i>Median budget, 5&#8209;yr' + (STATE.money === "real" ? " (2025 $)" : "") + '</span>'
+      + '<span><span style="display:inline-block;width:16px;height:9px;border-radius:2px;background:var(--ink-2);opacity:0.28;vertical-align:-1px;margin-right:2px"></span>middle 50%</span>'
       + '</span><span class="lg-notes"><span>faint dot = one film</span></span>';
     var perYear = [];
     for (var yr2 = YEAR0; yr2 <= YEAR1; yr2++) {
@@ -2549,7 +2673,7 @@
       [0.25, 0.5, 0.75, 1].forEach(function (frac) {
         var v = maxPos * frac, x = x0d + v * scd;
         head += '<line x1="' + x + '" x2="' + x + '" y1="' + md.t + '" y2="' + (Hd - md.b) + '" stroke="var(--grid)"/>';
-        head += '<text x="' + x + '" y="15" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="var(--ink-muted)">' + '+' + usd(v) + "</text>";
+        head += '<text x="' + x + '" y="15" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="var(--ink-muted)">' + '+' + usdAxis(v) + "</text>";
       });
       var rows = list.map(function (f, i) {
         var p = profitOf(f), yy = md.t + i * rh + (fi > -1 && i >= fi ? foldHd : 0);
@@ -2576,6 +2700,8 @@
       tipBind(el, function () {
         var p = profitOf(f), be = val(f, "budget") * 2.5;
         return '<div class="tt">' + esc(f.t) + '</div>' +
+          // this chart dropped its universe chip, so the card is where the universe lives
+          '<div class="tr"><span>' + uLabel(keyOf(f.u)) + " &nbsp;·&nbsp; " + yearOf(f) + '</span></div>' +
           '<div class="tr"><span>Worldwide</span><b>' + usd(val(f, "ww")) + '</b></div>' +
           '<div class="tr"><span>Budget ' + (f.budgetEst ? "(est)" : "") + '</span><b>' + usd(val(f, "budget")) + '</b></div>' +
           '<div class="tr"><span>Break-even (2.5&times;)</span><b>' + usd(be) + '</b></div>' +
@@ -2593,7 +2719,8 @@
 
   /* ---------- §07 legs (dumbbell, log x) ---------- */
   function renderLegs() {
-    var af = activeFilms().slice().filter(function (f) { return f.open && f.mult != null; }).sort(function (a, b) { return b.mult - a.mult; });
+    // a multiplier is domestic over opening, and domestic is still climbing on an in-release film
+    var af = activeFilms().slice().filter(function (f) { return f.open && f.mult != null && f.final; }).sort(function (a, b) { return b.mult - a.mult; });
     var lo = 8e6, hi = 1e9;
     af.forEach(function (f) { lo = Math.min(lo, val(f, "open")); hi = Math.max(hi, val(f, "d")); });
     var l0 = Math.log10(lo), l1 = Math.log10(hi);
@@ -2653,7 +2780,10 @@
           '<div class="tr"><span>Opening share</span><b>' + Math.round(val(f, "open") / val(f, "d") * 100) + "%</b></div>";
       });
     });
-    document.getElementById("leg-legs").innerHTML = '<span class="lg-keys"><span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span></span><span class="lg-notes"><span>Dot color = universe</span><span>log scale, line length = the multiplier</span></span>';
+    legend("leg-legs", activeUnis());
+    var llg = document.getElementById("leg-legs");
+    llg.querySelector(".lg-keys").insertAdjacentHTML("beforeend", '<span><i class="hollow" style="--c:var(--ink-2);border-radius:50%"></i>Opening weekend</span><span><i style="--c:var(--ink-2);border-radius:50%"></i>Lifetime domestic</span>');
+    llg.insertAdjacentHTML("beforeend", '<span class="lg-notes"><span>log scale, line length = the multiplier</span></span>');
     fillTable("table-legs", af.map(function (f) {
       return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), usd(val(f, "open")), usd(val(f, "d")), f.mult.toFixed(2) + "×"];
     }), ["Film", "Universe", "Opening", "Lifetime domestic", "Multiplier"]);
@@ -2664,7 +2794,8 @@
     var mob = isMobile();
     var W = mob ? MW : 1000, H = mob ? 380 : 440;
     var m = mob ? { t: 14, r: 12, b: 44, l: 40 } : { t: 18, r: 20, b: 40, l: 54 };
-    var af = activeFilms().filter(function (f) { return f.rt != null; });
+    // completed runs only: an in-release gross would sit on the chart as a finished number
+    var af = activeFilms().filter(function (f) { return f.rt != null && f.final; });
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var max = niceMax(Math.max.apply(null, af.map(function (f) { return val(f, "ww"); })) || 1);
     var xS = function (v) { return m.l + (v / 100) * iw; };
@@ -2694,12 +2825,13 @@
     var biggest = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); })[0];
     var pick = [biggest, panHit, likedMiss].filter(function (f, i, a) { return f && a.indexOf(f) === i; });
     if (mob) pick = pick.slice(0, 2);
-    var lsz = mob ? 11 : 18, place = labelPlacer();
+    var lsz = lblSize(), place = labelPlacer(), mr8 = mob ? 4.5 : 5.5;
     place.block(mob ? xS(medRT) - 110 : xS(medRT) + 5, mob ? xS(medRT) - 5 : xS(medRT) + 110, m.t + 15); // "median score"
     place.block(m.l + 5, m.l + 110, yS(medWW) - 5);          // "median gross"
+    af.forEach(function (f) { place.mark(xS(f.rt), yS(val(f, "ww")), mr8, FILMS.indexOf(f)); });
     var labs = pick.map(function (f) {
       var x = xS(f.rt), right = f.rt > 55, st = mob ? clip(shortT(f.t), 18) : shortT(f.t);
-      var ly = place.place(x, yS(val(f, "ww")), st, lsz, right);
+      var ly = place.place(x, yS(val(f, "ww")), st, lsz, right, FILMS.indexOf(f));
       return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + lsz + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
     }).join("");
     document.getElementById("chart-reviews").innerHTML =
@@ -2731,7 +2863,7 @@
     // faint tint + a label on each side of the diagonal, so which half a dot sits in
     // tells you who liked it more without decoding the axes
     var shade = '<path d="M' + xS(0) + " " + yS(0) + "L" + xS(0) + " " + yS(100) + "L" + xS(100) + " " + yS(100) + 'Z" fill="var(--dceu)" fill-opacity="0.05"/>' +
-      '<path d="M' + xS(0) + " " + yS(0) + "L" + xS(100) + " " + yS(0) + "L" + xS(100) + " " + yS(100) + 'Z" fill="var(--ssu)" fill-opacity="0.05"/>' +
+      '<path d="M' + xS(0) + " " + yS(0) + "L" + xS(100) + " " + yS(0) + "L" + xS(100) + " " + yS(100) + 'Z" fill="var(--ink)" fill-opacity="0.035"/>' +
       '<text x="' + xS(5) + '" y="' + yS(93) + '" font-family="IBM Plex Sans, system-ui, sans-serif" fill="var(--ink-muted)"' + HALO + '>audience rated higher</text>' +
       '<text x="' + xS(95) + '" y="' + yS(6) + '" text-anchor="end" font-family="IBM Plex Sans, system-ui, sans-serif" fill="var(--ink-muted)"' + HALO + '>critics rated higher</text>';
     // "they agree" sits in the empty low-middle (no films land there) with a little leader
@@ -2746,13 +2878,14 @@
     var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
     // the three widest gaps all cluster in the same low-RT corner, which is exactly the case
     // the placer exists for; the two side labels are blocked out first
-    var place = labelPlacer();
+    var place = labelPlacer(), mrP = mob ? 4.5 : 5.5;
     place.block(xS(5), xS(5) + 190, yS(93));
     place.block(xS(95) - 180, xS(95), yS(6));
+    af.forEach(function (f) { place.mark(xS(f.rt), yS(f.imdb * 10), mrP, FILMS.indexOf(f)); });
     var labs = gap.map(function (f) {
       var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 55;
       var st = mob ? clip(shortT(f.t), 16) : shortT(f.t);
-      var ly = place.place(x, yv, st, mob ? 11 : 18, right);
+      var ly = place.place(x, yv, st, lblSize(), right, FILMS.indexOf(f));
       return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 18) + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
     }).join("");
     document.getElementById("chart-parity").innerHTML =
@@ -2788,7 +2921,12 @@
       return "<div><span class=\"fy\">&rsquo;" + f.date.slice(2, 4) + "</span><span>" + esc(f.t) + "</span></div>";
     }).join("") + "</div>";
   }
-  function charByName(n) { return CAST.characters.find(function (c) { return c.n === n; }); }
+  // plain text for a table cell: the same list, oldest first, year in front of each title
+  function filmTitlesInOrder(titles) {
+    return titles.map(function (t) { return FILMS.find(function (f) { return f.t === t; }); }).filter(Boolean)
+      .sort(function (a, b) { return a.date.localeCompare(b.date); })
+      .map(function (f) { return yearOf(f) + " " + f.t; }).join("; ");
+  }
   function charFilmTip(c, films) {
     return '<div class="tt">' + esc(c.n) + '</div>' +
       '<div class="tr"><span>' + (c.real ? esc(c.real) + " &nbsp;·&nbsp; " : "") + c.u + '</span></div>' +
@@ -2802,7 +2940,8 @@
     var rows = activeChars();
     if (mob) {
       var W = MW, m = { t: 30, r: 10, b: 8, l: 8 }, rowH = 30;
-      var show = rows.slice(0, 20);
+      // a count, not a row cap: 26 rows was an alphabetical coin toss among twelve characters at 5
+      var show = rows.filter(function (x) { return x.films.length >= ROSTER_MIN; });
       var H = m.t + m.b + rowH * show.length;
       var iw = W - m.l - m.r;
       var xI = function (i) { return m.l + (af.length < 2 ? iw / 2 : (i / (af.length - 1)) * iw); };
@@ -2822,7 +2961,7 @@
       for (var y = YEAR0; y <= YEAR1; y += 6) {
         var fi = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= y; });
         if (fi < 0) continue;
-        yl += '<text x="' + xI(fi) + '" y="26" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)">’' + String(y).slice(2) + "</text>";
+        yl += '<text x="' + xI(fi) + '" y="26" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)">' + (mob ? "’" + String(y).slice(2) : y) + "</text>";
       }
       document.getElementById("chart-roster").innerHTML =
         '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Each character\'s film appearances over time">' + yl + body + "</svg>";
@@ -2831,8 +2970,8 @@
         if (rec) tipBind(el, function () { return charFilmTip(rec.c, rec.films); });
       });
     } else {
-      var Wd = 1000, md = { t: 52, r: 44, b: 10, l: 152 }, rh = 19, N = 26;
-      var showD = rows.slice(0, N);
+      var Wd = 1000, md = { t: 52, r: 44, b: 10, l: 152 }, rh = 19;
+      var showD = rows.filter(function (x) { return x.films.length >= ROSTER_MIN; });
       var Hd = md.t + md.b + rh * showD.length;
       var iwd = Wd - md.l - md.r;
       var colW = iwd / af.length;
@@ -2861,7 +3000,7 @@
           cells + "</g>";
       }).join("");
       document.getElementById("chart-roster").innerHTML =
-        '<svg viewBox="0 0 ' + Wd + " " + Hd + '" role="img" aria-label="Grid of the 26 most-recurring characters against every film in release order">' + head + grid + "</svg>";
+        '<svg viewBox="0 0 ' + Wd + " " + Hd + '" role="img" aria-label="Grid of the ' + showD.length + ' characters in ' + ROSTER_MIN + ' or more films against every film in release order">' + head + grid + "</svg>";
       document.querySelectorAll("#chart-roster .rc").forEach(function (el) {
         var name = el.getAttribute("data-c"), title = el.getAttribute("data-f");
         var f = FILMS.find(function (x) { return x.t === title; });
@@ -2881,9 +3020,10 @@
       });
     }
     legend("leg-roster", activeUnis());
+    // the film list used to live only in the hover card, which a screen reader never meets
     fillTable("table-roster", activeChars().map(function (x) {
-      return [x.c.n, x.c.real || "&ndash;", x.c.u, String(x.films.length), x.c.actors.join(", ")];
-    }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
+      return [x.c.n, x.c.real || "&ndash;", x.c.u, String(x.films.length), filmTitlesInOrder(x.films), x.c.actors.join(", ")];
+    }), ["Character", "Real name", "Universe", "Films", "Films (release order)", "Actor(s)"]);
   }
 
   /* ---------- §10b codenamed characters per film ---------- */
@@ -2938,14 +3078,14 @@
         var lbl = "";
         // the peak is the point of the chart, so it is labeled whatever its neighbors do
         // a label near the left edge collides with the y-axis tick column, so keep clear of it
-        if ((v === max || (v >= 11 && x(i) - lastLbl > 150)) && x(i) > m.l + 46) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="12">' + esc(clip(shortT(f.t), 16)) + " " + v + "</text>"; }
+        if ((v === max || (v >= 11 && x(i) - lastLbl > 150)) && x(i) > m.l + 46) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="12">' + esc(mob ? clip(shortT(f.t), 16) : shortT(f.t)) + " " + v + "</text>"; }
         return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + hueVar(f.u) + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
       }).join("");
       var yl = "", lastLab = -1e9;
       for (var yy = YEAR0; yy <= YEAR1; yy += 2) {
         var fi2 = af.findIndex(function (f) { return new Date(f.date).getFullYear() >= yy; });
         if (fi2 < 0 || x(fi2) - lastLab < 26) continue; lastLab = x(fi2);
-        yl += '<text x="' + x(fi2) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="var(--ink-muted)">' + (mob ? "'" + String(yy).slice(2) : yy) + "</text>";
+        yl += '<text x="' + x(fi2) + '" y="' + (H - m.b + 14) + '" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="var(--ink-muted)">' + (mob ? "’" + String(yy).slice(2) : yy) + "</text>";
       }
       host.innerHTML = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Number of codenamed characters per film, in release order">' +
         '<g class="grid">' + g + yl + "</g>" + bars + "</svg>";
@@ -2969,8 +3109,32 @@
       ["Film", "Universe", "Year", "Codenamed characters"]);
   }
 
+  // the §10 grid rule and the §11 dek are written from the roster, not typed: the previous
+  // dek had Iron Man alone at nine and Batman at seven, both of which the cast fix moved
+  function renderRosterCopy() {
+    var rows = activeChars();
+    var nr = document.getElementById("n-roster-rows");
+    var grid = rows.filter(function (x) { return x.films.length >= ROSTER_MIN; });
+    if (nr) nr.textContent = "Rows are every character in " + num(ROSTER_MIN) + " or more films, " + grid.length + " of them, ordered by appearance count (ties alphabetical).";
+    var d = document.getElementById("d-foot");
+    if (!d || rows.length < 3) return;
+    var top = rows[0];
+    var tiers = [];
+    rows.slice(1).forEach(function (x) { var t = tiers[tiers.length - 1]; if (t && t.n === x.films.length) t.rows.push(x); else tiers.push({ n: x.films.length, rows: [x] }); });
+    var names = function (rs) { var n = rs.map(function (x) { return x.c.n; }); return n.length < 2 ? n.join("") : n.slice(0, -1).join(", ") + " and " + n[n.length - 1]; };
+    var t1 = tiers[0], t2 = tiers[1];
+    var dcTop = rows.filter(function (x) { return BRAND[x.c.u] === "DC"; })[0];
+    var singles = CAST.characters.filter(function (c) { return c.films.length === 1; }).length;
+    var lead = "Characters ranked by how many films they turn up in" + (top.c.n === "Spider-Man" ? ", from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run" : "") + ". ";
+    var next = t1 ? (t1.rows.length <= 3 ? esc(names(t1.rows)) + (t1.rows.length === 1 ? " is" : " are") + " next at " + num(t1.n) : num(t1.rows.length) + " characters are next at " + num(t1.n)) : "";
+    if (t2) next += ", then " + (t2.rows.length <= 2 ? esc(names(t2.rows)) : num(t2.rows.length) + " characters") + " at " + num(t2.n);
+    var dc = dcTop ? "; " + esc(dcTop.c.n) + ", at " + num(dcTop.films.length) + (dcTop.c.n === "Batman" ? " across the Nolan, DCEU and Reeves continuities" : "") + ", tops DC" : "";
+    d.innerHTML = lead + next + dc + ". The long tail, " + singles + " characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.";
+  }
+  var ROSTER_MIN = 6;
   function renderFootprint() {
     var mob = isMobile();
+    renderRosterCopy();
     var allRows = activeChars().filter(function (x) { return x.films.length >= 2; });
     var folded = false;
     var rows = allRows;
@@ -3020,22 +3184,27 @@
     });
     legend("leg-fp", activeUnis());
     fillTable("table-footprint", activeChars().map(function (x) {
-      return [x.c.n, x.c.real || "&ndash;", x.c.u, String(x.films.length), x.c.actors.join(", ")];
-    }), ["Character", "Real name", "Universe", "Films", "Actor(s)"]);
+      return [x.c.n, x.c.real || "&ndash;", x.c.u, String(x.films.length), filmTitlesInOrder(x.films), x.c.actors.join(", ")];
+    }), ["Character", "Real name", "Universe", "Films", "Films (release order)", "Actor(s)"]);
   }
 
   /* ---------- §12 anti-patterns (teaching gallery; always every film, nominal $) ---------- */
   function apHue(u) { return COLORVAR[u]; }
   var AP_ORDER = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
-  function apDims(hMul) {
-    var mob = isMobile();
-    // the .ap-chart wrapper carries its own padding, so measure it rather than reuse MW
+  // measured once per renderAntipatterns, before any panel writes to the DOM: eight panels each
+  // measuring after the previous one's innerHTML was eight forced layouts per click
+  var AP_INNER = 0;
+  function measureApInner() {
     var host = document.getElementById("ap-dual"), inner = 0;
     if (host && host.clientWidth) {
       var cs = getComputedStyle(host); // clientWidth includes the padding; the SVG only gets the content box
       inner = host.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
     }
-    var w = mob ? Math.max(260, inner || MW - 24) : 1000;
+    AP_INNER = inner;
+  }
+  function apDims(hMul) {
+    var mob = isMobile();
+    var w = mob ? Math.max(260, AP_INNER || MW - 24) : 1000;
     return {
       mob: mob, W: w, H: Math.round((mob ? 272 : 340) * (hMul || 1)),
       m: mob ? { t: 30, r: 18, b: 46, l: 54 } : { t: 36, r: 30, b: 54, l: 72 }
@@ -3282,6 +3451,7 @@
   }
 
   function renderAntipatterns() {
+    measureApInner();
     var leg = document.getElementById("ap-leg");
     if (leg) leg.innerHTML = '<span class="lg-keys">' + AP_ORDER.map(function (k) { return '<span><i style="--c:var(' + apHue(k) + ')"></i>' + uLabel(k) + "</span>"; }).join("") + "</span>";
     apDual(); apPie(); apTrunc(); apCumul(); apTrend(); apRoi(); apRadar(); apRainbow();
@@ -3293,13 +3463,6 @@
 // §02 and §04 headline the $1B / $2B clubs. Those counts move with the dollar basis, so
   // they are written from the data rather than typed, and the sentence follows the toggle.
   function renderClubCopy() {
-    var WORDS = ["never", "once", "twice", "three times", "four times", "five times", "six times",
-      "seven times", "eight times", "nine times", "ten times", "eleven times", "twelve times",
-      "thirteen times", "fourteen times", "fifteen times", "sixteen times", "seventeen times"];
-    var NUM = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-      "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen"];
-    var word = function (n) { return WORDS[n] || n + " times"; };
-    var num = function (n) { return NUM[n] || String(n); };
     var over = function (list, t) { return list.filter(function (f) { return val(f, "ww") >= t; }).length; };
     var real = STATE.money === "real";
     var basis = real ? " in 2025 dollars" : "";
@@ -3307,6 +3470,55 @@
     var dc = FILMS.filter(function (f) { return f.u === "DCEU" || f.u === "DCU" || f.u === "Elseworlds"; });
     var fox = FILMS.filter(function (f) { return f.u === "Fox"; });
     var ssu = FILMS.filter(function (f) { return f.u === "SSU"; });
+    var marvelAll = mcu.concat(fox, ssu);
+    var byWW = function (a, b) { return val(b, "ww") - val(a, "ww"); };
+    var em = function (f) { return "<em>" + esc(f.t) + "</em>"; };
+    var list = function (fs) { var n = fs.map(em); return n.length < 2 ? n.join("") : n.slice(0, -1).join(", ") + " and " + n[n.length - 1]; };
+    // §01 year card: the peak years, the rebound, and where it has settled, all from the totals
+    var nYear = document.getElementById("n-year");
+    if (nYear) {
+      var tot = {};
+      FILMS.forEach(function (f) { var y = yearOf(f); tot[y] = (tot[y] || 0) + val(f, "ww"); });
+      var yrs = Object.keys(tot).map(Number).sort();
+      var done = yrs.filter(function (y) { return FILMS.filter(function (f) { return yearOf(f) === y; }).every(function (f) { return f.final; }); });
+      var peakY = done.slice().sort(function (a, b) { return tot[b] - tot[a]; })[0];
+      var peak = tot[peakY];
+      var recent = done.filter(function (y) { return y >= 2023; });
+      var rFirst = tot[recent[0]], rLast = tot[recent[recent.length - 1]];
+      var rMean = recent.reduce(function (a, y) { return a + tot[y]; }, 0) / recent.length;
+      var frac = rMean / peak;
+      var fracWord = frac < 0.28 ? "a quarter" : frac < 0.4 ? "a third" : frac < 0.6 ? "half" : "two thirds";
+      nYear.innerHTML = "Stacked by universe. 2018 and 2019 were the high-water mark, near " + usd(tot[2018]) + " and " + usd(tot[2019]) +
+        ". The 2021&ndash;22 rebound stopped around " + usd((tot[2021] + tot[2022]) / 2) + "; " + recent[0] + " onward has " +
+        (rLast < rFirst * 0.9 ? "slid from " + usd(rFirst) + " to " + usd(rLast) : "settled near " + usd(rMean)) + ", roughly " + fracWord + " of the peak.";
+    }
+    // §02 dek: DC's ceiling and how many Marvel films sit above it
+    var d2 = document.getElementById("d-treemap");
+    if (d2) {
+      var top3 = FILMS.slice().sort(byWW).slice(0, 3);
+      var dcTop = dc.slice().sort(byWW)[0];
+      var above = marvelAll.filter(function (f) { return val(f, "ww") > val(dcTop, "ww"); }).length;
+      var open3 = top3.filter(function (f) { return !f.final; });
+      d2.innerHTML = "Every film is a rectangle, sized by worldwide gross" + (real ? " in 2025 dollars" : "") + ". The three biggest are " +
+        (top3.every(function (f) { return BRAND[f.u] === "Marvel"; }) ? "all Marvel: " : "") + list(top3) +
+        (open3.length ? " (" + list(open3) + " still in release)" : "") + ". DC&rsquo;s ceiling, " + em(dcTop) + " at " + usd(val(dcTop, "ww")) +
+        ", sits below " + num(above) + " separate Marvel films.";
+    }
+    // §03 dek: the 2018-19 count and this year's billion-dollar film, if any
+    var d3 = document.getElementById("d-bee");
+    if (d3) {
+      var big1819 = FILMS.filter(function (f) { var y = yearOf(f); return (y === 2018 || y === 2019) && val(f, "ww") >= 1e9; }).length;
+      var thisYear = Math.max.apply(null, FILMS.map(yearOf));
+      var open1B = FILMS.filter(function (f) { return !f.final && val(f, "ww") >= 1e9; });
+      var perYear = {};
+      FILMS.filter(function (f) { return yearOf(f) >= 2021 && f.final; }).forEach(function (f) { perYear[yearOf(f)] = (perYear[yearOf(f)] || 0) + 1; });
+      var counts = Object.keys(perYear).map(function (y) { return perYear[y]; });
+      d3.innerHTML = "Each film on its release date, sized by worldwide gross" + (real ? " in 2025 dollars" : "") +
+        ". Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had " + num(big1819) +
+        " billion-dollar films between them. Since 2021 the count has held up, " + num(Math.min.apply(null, counts)) + " to " + num(Math.max.apply(null, counts)) +
+        " films a year, but the films are smaller and the big bubbles thin out to one a year at most." +
+        (open1B.length ? " " + list(open1B) + ", still in release, is " + thisYear + "&rsquo;s." : "") + " Bubbles ringed in gold crossed $1&nbsp;billion" + basis + ".";
+    }
     var h4 = document.getElementById("h-scatter");
     if (h4) {
       // under the lens Fox and Sony are folded into Marvel, so naming them would point at
@@ -3324,21 +3536,65 @@
     if (d4) {
       var dcN = over(dc, 1e9), others = over(fox, 1e9) + over(ssu, 1e9);
       var marvelWord = brandLens() ? "Marvel" : "Marvel Studios";
+      // the post-2022 exceptions are read off the data: it was "Brand New Day, the lone exception"
+      // while Deadpool & Wolverine sat above the line in plain view
+      var late = FILMS.filter(function (f) { return yearOf(f) > 2022 && val(f, "ww") >= 1e9; }).sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+      var lateOpen = late.filter(function (f) { return !f.final; });
+      var lateTxt = !late.length ? " with nothing back over the line since" :
+        ", and only " + list(late) + (late.length === 1 ? " has" : " have") + " cleared the line since" + (lateOpen.length ? " (" + list(lateOpen) + " still in release)" : "");
       d4.innerHTML = "Worldwide gross by release date" + (real ? ", rescaled to 2025 dollars" : "") +
         ". Above the billion-dollar line sit " + num(dcN) + " DC film" + (dcN === 1 ? "" : "s") +
         (!brandLens() && others ? ", " + num(others) + " from Fox and Sony," : "") +
-        " and " + num(over(mcu, 1e9) + (brandLens() ? over(fox, 1e9) + over(ssu, 1e9) : 0)) + " from " + marvelWord + ". Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far." +
+        " and " + num(over(mcu, 1e9) + (brandLens() ? over(fox, 1e9) + over(ssu, 1e9) : 0)) + " from " + marvelWord + ". Below it, the whole cloud sinks after 2022" + lateTxt + "." +
         (real ? " The billion-dollar club is a nominal milestone by convention; this is what it looks like in real terms." : "");
     }
     var h2 = document.getElementById("h-treemap");
     if (h2) {
       var all2 = FILMS.filter(function (f) { return val(f, "ww") >= 2e9; });
-      var allMarvel = all2.every(function (f) { return f.u === "MCU" || f.u === "Fox" || f.u === "SSU"; });
-      h2.textContent = num(all2.length).charAt(0).toUpperCase() + num(all2.length).slice(1) +
+      var allMarvel = all2.every(function (f) { return BRAND[f.u] === "Marvel"; });
+      // "Only" is the word that makes this a finding rather than a count
+      h2.textContent = "Only " + num(all2.length) +
         " film" + (all2.length === 1 ? " has" : "s have") + " passed $2 billion" + basis +
-        (allMarvel ? (all2.length === 1 ? ", and it is Marvel" : ", and all of them are Marvel") : "");
+        (allMarvel ? (all2.length === 1 ? ", and it is Marvel" : ", and all " + num(all2.length) + " are Marvel") : "");
+    }
+    // §14: the as-of date, the in-release list and the ratio with and without them
+    var asof = document.getElementById("asof");
+    if (asof) asof.textContent = new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    var rp = document.getElementById("ratio-pair");
+    if (rp) {
+      var open = FILMS.filter(function (f) { return !f.final; });
+      var side = marvelSide(), dcs = dcSide();
+      var sum = function (fs) { return fs.reduce(function (a, f) { return a + val(f, "ww"); }, 0); };
+      var withR = sum(side.films) / sum(dcs);
+      var without = sum(side.films.filter(function (f) { return f.final; })) / sum(dcs.filter(function (f) { return f.final; }));
+      rp.innerHTML = open.length
+        ? "So " + list(open) + (open.length === 1 ? " is" : " are") + " in &sect;02&rsquo;s $2B count and out of &sect;06 entirely; without " + (open.length === 1 ? "it" : "them") + " the " + side.name + "-to-DC ratio reads " + without.toFixed(2) + " rather than " + withR.toFixed(2) + "."
+        : "Every film in the set has finished its run.";
+    }
+    var sp = document.getElementById("smallprint");
+    if (sp) {
+      var held = DB.meta.held_out || [], openF = FILMS.filter(function (f) { return !f.final; });
+      sp.innerHTML = FILMS.length + " films with a worldwide gross to verify." +
+        (held.length ? " " + held.map(function (h) { return "<b>" + esc(h.t) + "</b>"; }).join(" and ") + (held.length === 1 ? " isn&rsquo;t" : " aren&rsquo;t") + " out yet, so there&rsquo;s nothing to check." : "") +
+        (openF.length ? " " + openF.map(function (f) { return "<b>" + esc(f.t) + "</b>"; }).join(" and ") + (openF.length === 1 ? " is" : " are") + " still in release." : "") +
+        " Box Office Mojo, read " + new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) + ".";
+    }
+    var fd = document.getElementById("foot-date");
+    if (fd) fd.textContent = new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    // §06 dek: the widest miss, the widest hit, and the best return per dollar, from completed runs
+    var d6 = document.getElementById("d-profit");
+    if (d6) {
+      var done = FILMS.filter(function (f) { return f.final && val(f, "budget"); });
+      var byP = done.slice().sort(function (a, b) { return profitOf(a) - profitOf(b); });
+      var miss = byP[0], hit = byP[byP.length - 1];
+      var roi = done.slice().sort(function (a, b) { return val(b, "ww") / val(b, "budget") - val(a, "ww") / val(a, "budget"); })[0];
+      var x = val(roi, "ww") / val(roi, "budget");
+      d6.innerHTML = "Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. " +
+        em(miss) + " is the widest miss at &minus;" + usd(Math.abs(profitOf(miss))) + "; " + em(hit) + " the widest hit at +" + usd(profitOf(hit)) + ". " +
+        em(roi) + " is the widest hit per dollar spent, at " + (x >= 19.5 && x < 20.5 ? "nearly 20" : Math.round(x)) + "&times; its " + usd(val(roi, "budget")) + " budget, which is a different question and the one &sect;12 warns about.";
     }
   }
+  var AP_LAST = null;
   function renderAll() {
     if (!anyUni()) { STATE.unis.MCU = true; syncPills(); }
     var mw = measureChartWidth(); if (mw) MW = mw;
@@ -3360,10 +3616,13 @@
     renderRoster();
     renderEnsemble();
     renderFootprint();
-    renderAntipatterns();
+    // §12 ignores every control by design, so it only needs drawing again when the width class changes
+    var apKey = isMobile() + ":" + MW;
+    if (apKey !== AP_LAST) { renderAntipatterns(); AP_LAST = apKey; }
     renderFullTable();
     updateCtlSummary();
     syncNotesUI();
+    buildContents();
   }
 
   /* ---------- controls ---------- */
@@ -3449,13 +3708,15 @@
         if (t === "auto") localStorage.removeItem("capeindex-theme");
         else localStorage.setItem("capeindex-theme", t);
       } catch (e) {}
-      renderAll();
+      onThemeChange();
     });
   });
-  // re-render charts if the OS theme flips while on Auto (colors are read from CSS vars)
+  // every fill on the page is a CSS variable, so a theme flip needs no re-render at all except
+  // the treemap, which picks dark or white ink per cell from the computed fill
+  function onThemeChange() { INK_CACHE = {}; renderTreemap(); }
   try {
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
-      if (!document.documentElement.hasAttribute("data-theme")) renderAll();
+      if (!document.documentElement.hasAttribute("data-theme")) onThemeChange();
     });
   } catch (e) {}
   document.querySelectorAll("[data-table]").forEach(function (b) {
@@ -3464,9 +3725,13 @@
       var el = document.getElementById(id);
       var open = el.hidden;
       el.hidden = !open;
-      b.setAttribute("aria-pressed", open ? "true" : "false");
+      // a show/hide is a disclosure, not a toggle button: expanded plus what it controls
+      b.setAttribute("aria-expanded", open ? "true" : "false");
       b.textContent = open ? "Hide data" : "Show data";
     });
+    b.removeAttribute("aria-pressed");
+    b.setAttribute("aria-expanded", "false");
+    b.setAttribute("aria-controls", "table-" + b.getAttribute("data-table"));
   });
   document.querySelector("[data-outlier]").addEventListener("click", function () {
     STATE.outlierHide = !STATE.outlierHide;
@@ -3503,6 +3768,10 @@
   // Six tabs, one per act. Everything still renders at load; a tab just hides the other acts, so a
   // phone scrolls two to four sections instead of fifteen. Hashes deep-link into any section.
   var TABS = ["act1", "act2", "act3", "act4", "mistakes", "ledger", "ref"]; // reading order; drives the Back / Next pager
+  // sections per tab, for the read-progress bar: a tab is worth what it holds, not one seventh
+  var SEC_IN = TABS.map(function (k) { return document.querySelectorAll('section.view[data-tab="' + k + '"]').length || 1; });
+  var SEC_BEFORE = SEC_IN.map(function (_, i) { return SEC_IN.slice(0, i).reduce(function (a, b) { return a + b; }, 0); });
+  var SEC_TOTAL = SEC_IN.reduce(function (a, b) { return a + b; }, 0);
   function setTab(key, opts) {
     opts = opts || {};
     // Freeze first, before anything below can repaint. The tab index changes on the next
@@ -3544,12 +3813,19 @@
     var cell = function (m, cls, word) {
       var arrow = '<span class="pa" aria-hidden="true">' + (cls === "next" ? "&rarr;" : "&larr;") + "</span>";
       var body = cls === "next"
-        ? '<span class="tn">' + m.num + "</span><span>" + esc(m.label) + "</span>" + arrow
-        : arrow + '<span class="tn">' + m.num + "</span><span>" + esc(m.label) + "</span>";
+        ? '<span class="tn" aria-hidden="true">' + m.num + "</span><span>" + esc(m.label) + "</span>" + arrow
+        : arrow + '<span class="tn" aria-hidden="true">' + m.num + "</span><span>" + esc(m.label) + "</span>";
       return '<button class="pg ' + cls + '" data-go="' + m.key + '"><span class="pl">' + word + '</span><span class="pt">' + body + "</span></button>";
     };
     host.innerHTML = '<div class="wrap">' + (prev ? cell(prev, "prev", "Back") : "") + (next ? cell(next, "next", "Next") : "") + "</div>";
-    host.querySelectorAll("[data-go]").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-go"), { scroll: true }); }); });
+    host.querySelectorAll("[data-go]").forEach(function (b) { b.addEventListener("click", function () {
+      var key = b.getAttribute("data-go");
+      setTab(key, { scroll: true });
+      // the pager is rebuilt by setTab, so the button that was pressed is gone; put focus on the
+      // destination's tab, which is where the reader has just been scrolled to
+      var t = document.querySelector('.tab[data-tab="' + key + '"]');
+      if (t) t.focus({ preventScroll: true });
+    }); });
   }
   function updateTabStrip() {
     var bar = document.querySelector(".tabs"), strip = document.querySelector(".tabs-inner"); if (!bar || !strip) return;
@@ -3585,7 +3861,9 @@
       // A tab that fits the viewport has been read in full the moment you land on it.
       var within = settling ? 0 : (h > 8 ? Math.min(1, Math.max(0, window.scrollY / h)) : 1);
       var i = TABS.indexOf(STATE.tab); if (i < 0) i = 0;
-      var p = Math.min(1, (i + within) / TABS.length);
+      // weighted by sections, not tabs: Act III is four sections and the ledger is one, and a
+      // tab-weighted bar told a reader who had finished Act III (10 of 14 charts) they were at 43%
+      var p = Math.min(1, (SEC_BEFORE[i] + within * SEC_IN[i]) / SEC_TOTAL);
       fill.style.width = (p * 100).toFixed(2) + "%";
     }
     function onScroll() { if (!queued) { queued = true; requestAnimationFrame(paint); } }
@@ -3608,8 +3886,9 @@
       settling = true;
       var mine = ++settleToken;
       var thaw = function () {
-        if (mine !== settleToken) return;   // a newer transition has taken over
+        // detach first: a superseded transition must not leave its four listeners behind
         THAW_ON.forEach(function (ev) { window.removeEventListener(ev, thaw); });
+        if (mine !== settleToken) return;   // a newer transition has taken over
         settling = false; queued = false; paint();
       };
       THAW_ON.forEach(function (ev) { window.addEventListener(ev, thaw, { passive: true }); });
@@ -3617,23 +3896,41 @@
     };
     paint();
   })();
-  (function () { var strip = document.querySelector(".tabs-inner"); if (strip) strip.addEventListener("scroll", updateTabStrip, { passive: true }); window.addEventListener("resize", updateTabStrip); })();
+  (function () { var strip = document.querySelector(".tabs-inner"); if (strip) strip.addEventListener("scroll", updateTabStrip, { passive: true }); })();
   /* ---------- collapsible sticky controls (mobile) ---------- */
   // On a phone the controls used to scroll away. They now stick under the tab bar, collapsed to one
   // row that names the current filter state, and open on tap. Desktop is unchanged.
+  var STICKY_LAST = "";
   function updateStickyVars() {
     var tabs = document.querySelector(".tabs"), ctl = document.querySelector(".controls"), tog = document.querySelector(".ctl-bar");
     var th = tabs ? tabs.offsetHeight : 45;
     var ch = isMobile() ? (tog ? tog.offsetHeight : 0) : (ctl ? ctl.offsetHeight : 0);
+    // writing a :root custom property is a document-wide recalc; only do it when the answer changed
+    var key = th + "/" + ch;
+    if (key === STICKY_LAST) return;
+    STICKY_LAST = key;
     document.documentElement.style.setProperty("--tabs-h", th + "px");
     document.documentElement.style.setProperty("--sticky-h", (th + ch) + "px");
   }
+  // one resize listener for the chrome, coalesced to a frame: a phone fires resize on every
+  // address-bar pixel while scrolling, and each of these used to run on every one
+  var chromeQueued = false;
+  function scheduleChrome() {
+    if (chromeQueued) return;
+    chromeQueued = true;
+    requestAnimationFrame(function () { chromeQueued = false; updateTabStrip(); updateStickyVars(); });
+  }
   function updateCtlSummary() {
     var el = document.getElementById("ctl-summary"); if (!el) return;
-    var on = UNI.filter(function (u) { return STATE.unis[u.k]; });
+    var on = UNI.filter(function (u) { return STATE.unis[u.k]; }), off = UNI.filter(function (u) { return !STATE.unis[u.k]; });
     var unis = on.length === UNI.length ? "All universes" : on.length === 0 ? "No universes" : on.map(function (u) { return u.label; }).join(", ");
-    var bits = [brandLens() ? "Marvel v DC" : unis, STATE.money === "real" ? "2025 $" : "Nominal"];
+    // the lens must not hide an exclusion: "Marvel v DC" with DCEU switched off says so
+    var minus = off.length && off.length < UNI.length ? " minus " + off.map(function (u) { return u.label; }).join(", ") : "";
+    var bits = [brandLens() ? "Marvel v DC" + minus : unis, STATE.money === "real" ? "2025 $" : "Nominal"];
     el.textContent = bits.join(" \u00b7 ");
+    // the same words, announced: every filter change rewrites 14 charts without a sound otherwise
+    var st = document.getElementById("ctl-status");
+    if (st) st.textContent = "Showing " + activeFilms().length + " films \u00b7 " + bits.join(" \u00b7 ") + (notesOn() ? " \u00b7 Design notes on" : "");
   }
   (function () {
     var tog = document.querySelector(".ctl-toggle"), ctl = document.querySelector(".controls");
@@ -3644,7 +3941,7 @@
       tog.setAttribute("aria-expanded", open ? "true" : "false");
       updateStickyVars();
     });
-    window.addEventListener("resize", updateStickyVars);
+    window.addEventListener("resize", scheduleChrome);
     updateStickyVars();
   })();
   /* ---------- design notes: one state, three switches ---------- */
@@ -3669,6 +3966,9 @@
     opts = opts || {};
     var h = location.hash.replace("#", "");
     if (!h) return false;
+    // the tab keys are act1..act4; the names a person would type are aliases
+    var ALIAS = { scoreboard: "act1", time: "act2", beyond: "act3", roster: "act4", reference: "ref", table: "ledger" };
+    if (ALIAS[h]) h = ALIAS[h];
     if (TABS.indexOf(h) >= 0) { setTab(h, { push: false }); return true; }
     var el = document.getElementById(h), t = el && el.closest("[data-tab]");
     if (!t) return false;
@@ -3679,18 +3979,20 @@
   document.querySelectorAll(".tab").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-tab"), { scroll: true }); }); });
   window.addEventListener("hashchange", function () { goToHash(); });
   // the contents list is read off the sections themselves, so it can't drift from the headlines
-  (function buildContents() {
+  // called at the end of every renderAll, so the contents follows the generated headlines
+  // (it used to be built once at boot, from the static text, and never again)
+  function buildContents() {
     var ol = document.getElementById("contents-list"); if (!ol) return;
     var html = "";
     document.querySelectorAll("main > .act, main > section.view").forEach(function (el) {
-      if (el.classList.contains("act")) { html += '<li class="ca">' + el.querySelector("h3").innerHTML + "</li>"; return; }
-      var num = el.querySelector(".view-head .num"), h2 = el.querySelector(".view-head h2");
+      if (el.classList.contains("act")) { html += '<li class="ca">' + el.querySelector("h2").innerHTML + "</li>"; return; }
+      var num = el.querySelector(".view-head .num"), h2 = el.querySelector(".view-head h3");
       if (!h2) return;
       var n = num ? num.textContent.split("/")[0].trim() : "";
       html += '<li><a href="#' + el.id + '"><span class="cn">' + esc(n) + '</span><span>' + h2.innerHTML + "</span></a></li>";
     });
     ol.innerHTML = html;
-  })();
+  }
 
   var booted = false;
   if (!goToHash({ scroll: false })) setTab("act1", { push: false });

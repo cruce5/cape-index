@@ -56,7 +56,7 @@ const CODE_KEEP = new Set([
   "Galactus", "Red Skull", "Zemo", "Baron Zemo", "Winter Soldier", "War Machine", "Scarlet Witch",
   "Star-Lord", "Doctor Strange", "Ancient One", "The Ancient One", "The Mandarin", "The Leader",
   "Aunt May", "Red Guardian", "Ghost Rider", "US Agent", "U.S. Agent", "John Walker",
-  "Red Hulk", "Mighty Thor",
+  "Red Hulk", "Mighty Thor", "Blade", "Captain Carter", "Black Bolt", "Mister Fantastic",
   // DC
   "Doomsday", "Steppenwolf", "Darkseid", "Ares", "Starro", "Krypto", "Peacemaker", "Bloodsport",
   "Blackguard", "Mongal", "Javelin", "Weasel", "Savant", "T.D.K.", "Nanaue", "King Shark",
@@ -94,12 +94,17 @@ function parseCast(wt, filmTitle) {
       .replace(/\{\{(?:sfn|efn|refn)[^{}]*\}\}/gi, "") // citation templates
       .replace(/'''?/g, "")                          // bold/italic wiki markup
       .trim();
-    // must look like "<actor> as <character>"
-    const am = body.match(/^\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\s+as\s+(.+)$/i)
-      || body.match(/^([A-ZÀ-Ý][\wÀ-ÿ.'’-]+(?:\s+[A-ZÀ-Ý][\wÀ-ÿ.'’-]+){0,3})\s+as\s+(.+)$/);
+    // must look like "<actor> as <character>". Wikipedia also writes "appears as", "plays",
+    // "reprises his role as" and "as the voice of" for credited, non-cameo roles; the plain
+    // "as" match dropped Colossus from five films, Sandman and Lizard from No Way Home, the
+    // Last Stand X-Men and the 2025 Engineer
+    const AS = String.raw`(?:as|appears as|plays|portrays|voices|repris\w+ (?:his|her|their) (?:respective )?roles? as|return\w* as)`;
+    const am = body.match(new RegExp(String.raw`^\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\s+` + AS + String.raw`\s+(.+)$`, "i"))
+      || body.match(new RegExp(String.raw`^([A-ZÀ-Ý][\wÀ-ÿ.'’-]+(?:\s+[A-Za-zÀ-ÿ][\wÀ-ÿ.'’-]+){0,4})\s+` + AS + String.raw`\s+(.+)$`));
     if (!am) continue;
     const actor = strip(unlink(am[1])).replace(/\s*\([^)]*\)\s*$/, "");
     let character = strip(unlink(am[2].split(/<br|\n/)[0].replace(/<!--[\s\S]*/, "")));
+    character = character.replace(/^the\s+voice\s+of\s+/i, "");
     character = character.split(/:(?:\s|$)|:</)[0].trim();           // role separator colon
     character = character.replace(/\.\s+[A-Z][a-z]+\s+[a-z].*$/, ""); // trailing prose sentence
     character = character.replace(/\s*\((?:voiced by|voice|uncredited|cameo|archive footage|photo|young|older)[^)]*\)\s*$/i, "");
@@ -113,21 +118,50 @@ function parseCast(wt, filmTitle) {
   // paragraphs that explicitly signal a cast list ("reprise/reprising their roles", "also
   // appear", "return as"), and only take clean "[[Actor]] as [[…|Character]]" wikilink pairs.
   const haveActors = new Set(rows.map((r) => (r.actor || "").toLowerCase()));
+  const CAMEO = /\b(footage|archiv|stock photo|photo of|clip|deleted|cut from|unused|cameo|likeness|was cast|originally|rumou?red|reportedly|would have|set to)\b/i;
+  // The clause a match sits in, split on ". " and "; ", read from the clause start to the
+  // match plus the match's own tail up to the next actor pair. Wide enough that "for a brief
+  // cameo are A as X, B as Y, C as Z" drops all three (a 40-character lookback dropped A and
+  // kept B and C), narrow enough that a cameo named three clauses later does not take out a
+  // credited Black Order
+  const clauseAround = (text, i, len) => {
+    const starts = [text.lastIndexOf(". ", i), text.lastIndexOf("; ", i), text.lastIndexOf("\n", i)];
+    const s = Math.max(...starts);
+    const after = text.slice(i + len);
+    const ends = [after.indexOf(". "), after.indexOf("; "), after.indexOf("\n"), after.search(/\[\[[^\]]+\]\]\s+(?:as|appears as|plays)\s/)].filter((x) => x >= 0);
+    const e = ends.length ? i + len + Math.min(...ends) : text.length;
+    return text.slice(s < 0 ? 0 : s + 2, e);
+  };
+  const addProse = (actor, character) => {
+    if (!actor || !/^[A-ZÀ-Ý]/.test(actor) || haveActors.has(actor.toLowerCase())) return;
+    character = character.replace(/\s*\([^)]*\)\s*$/, "").replace(/[.,;:]+$/, "").replace(/\s+/g, " ").trim();
+    if (!character || character.length > 60) return;
+    haveActors.add(actor.toLowerCase());
+    rows.push({ order: null, minor: true, actor, character, fromProse: true });
+  };
   for (const para of section.split(/\n/)) {
     if (/^\s*[*:]/.test(para)) continue;
-    if (!/\b(repris\w+ (?:their|his|her) roles?|also (?:appear|star|reprise)|return(?:ing)? as|from previous .{0,20}films?)\b/i.test(para)) continue;
+    if (!/\b(repris\w+ (?:their|his|her) (?:respective )?(?:MCU |DCEU )?roles?|also (?:appear|star|reprise|include)|are introduced as|return(?:ing)? as|from previous .{0,20}films?)\b/i.test(para)) continue;
     const clean = para.replace(/<!--[\s\S]*?-->/g, "").replace(/<ref[^>]*\/>/gi, "").replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, "");
-    const RX = /\[\[([^\]|]+?)(?:\|[^\]]+?)?\]\]\s+as\s+(?:the\s+|an?\s+)?(?:Dr\.?\s+|Doctor\s+)?\[\[([^\]|]+?)(?:\|([^\]]+?))?\]\]/gi;
+    // 1. "A, B, and C reprising their respective roles as X, Y, and Z": zip the two lists by
+    //    position. Love and Thunder credits all seven Guardians this way and the pairwise scan
+    //    below found none of them
+    const ZIP = /((?:\[\[[^\]]+\]\](?:,?\s*(?:and\s+)?)){2,})(?:are introduced as|repris\w+\s+(?:their|his|her)\s+(?:respective\s+)?(?:MCU\s+|DCEU\s+)?roles?\s+as|return\w*\s+as)\s+(.+?)(?=\.\s|\.$|;| respectively| in brief|$)/gi;
+    let zm;
+    while ((zm = ZIP.exec(clean))) {
+      if (CAMEO.test(clauseAround(clean, zm.index, zm[0].length))) continue;
+      const actors = [...zm[1].matchAll(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g)].map((m) => strip(unlink(m[0])).replace(/\s*\([^)]*\)\s*$/, ""));
+      const chars = strip(unlink(zm[2].replace(/\s+respectively.*$/i, ""))).split(/,\s*(?:and\s+)?|\s+and\s+/).map((c) => c.trim()).filter(Boolean);
+      if (actors.length !== chars.length) continue;
+      actors.forEach((a, i) => addProse(a, chars[i]));
+    }
+    // 2. clean "[[Actor]] as [[…|Character]]" pairs
+    const RX = /\[\[([^\]|]+?)(?:\|[^\]]+?)?\]\]\s+as\s+(?:the\s+)?(?:voice\s+of\s+)?(?:the\s+|an?\s+)?(?:Dr\.?\s+|Doctor\s+)?\[\[([^\]|]+?)(?:\|([^\]]+?))?\]\]/gi;
     let pm;
     while ((pm = RX.exec(clean))) {
-      const before = clean.slice(Math.max(0, pm.index - 40), pm.index).toLowerCase();
-      if (/\b(footage|archiv|stock photo|photo of|clip|deleted|cut from|unused|cameo|likeness|voice(d)? of|was cast|originally|rumou?red|reportedly|would have|set to)\b/.test(before)) continue;
+      if (CAMEO.test(clauseAround(clean, pm.index, pm[0].length))) continue;
       const actor = strip(unlink(pm[1])).replace(/\s*\([^)]*\)\s*$/, "");
-      if (!actor || !/^[A-ZÀ-Ý]/.test(actor) || haveActors.has(actor.toLowerCase())) continue;
-      let character = strip(unlink(pm[3] || pm[2])).replace(/\s*\([^)]*\)\s*$/, "").replace(/[.,;:]+$/, "").replace(/\s+/g, " ").trim();
-      if (!character || character.length > 60) continue;
-      haveActors.add(actor.toLowerCase());
-      rows.push({ order: null, minor: true, actor, character, fromProse: true });
+      addProse(actor, strip(unlink(pm[3] || pm[2])));
     }
   }
 
@@ -212,6 +246,11 @@ const CANON = {
   "Doctor Octopus": "Doctor Octopus", "Otto Octavius": "Doctor Octopus",
   "Electro": "Electro", "Max Dillon": "Electro",
   "Yellowjacket": "Yellowjacket", "M.O.D.O.K.": "M.O.D.O.K.", "M.O.D.O.K": "M.O.D.O.K.", "Darren Cross": "Yellowjacket",
+  // Cross is Yellowjacket in one film and M.O.D.O.K. in another; the slash credit names the later identity
+  "Darren Cross / M.O.D.O.K.": "M.O.D.O.K.", "Darren Cross / M.O.D.O.K": "M.O.D.O.K.",
+  "Karl Mordo": "Mordo", "Eric Brooks / Blade": "Blade", "Reed Richards / Mister Fantastic": "Mister Fantastic",
+  "Peggy Carter / Captain Carter": "Captain Carter", "Blackagar Boltagon / Black Bolt": "Black Bolt",
+  "Maria Rambeau / Captain Marvel": "Captain Marvel (Rambeau)", "Captain Marvel (Rambeau)": "Captain Marvel (Rambeau)",
   "Kang": "Kang", "Kang the Conqueror": "Kang", "He Who Remains": "Kang", "Victor Timely": "Kang",
   "Red Skull": "Red Skull", "Johann Schmidt": "Red Skull",
   "Abomination": "Abomination", "Emil Blonsky": "Abomination",
@@ -409,7 +448,7 @@ DROP.add("Rafke"); DROP.add("Mr. Sherman");
 const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)", "New Goblin", "Green Goblin (Harry Osborn)", "Silver Surfer (Shalla-Bal)", "Wasp", "Ant-Man (Hank Pym)"]);
 // Wikipedia credits one performer under two billings across a series; the roll-up should not
 // show her twice in the same actor list.
-const ACTOR_ALIAS = { "Rebecca Romijn-Stamos": "Rebecca Romijn" };
+const ACTOR_ALIAS = { "Rebecca Romijn-Stamos": "Rebecca Romijn", "UK Pitbulls": "Mike Waters" }; // the Blob link resolved to a wrestling promotion
 const canon = (c) => CANON[c] || c;
 const CANON_LC = {};
 for (const [k, v] of Object.entries(CANON)) CANON_LC[k.toLowerCase()] = v;

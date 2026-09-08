@@ -1,34 +1,187 @@
 {
-  "note": "Top-billed cast the Wikipedia Cast-section parser misses because those pages lead with a prose paragraph instead of a bullet for the stars (verified by hand against each film's Wikipedia cast section). Merged ahead of the scraped rows in scrape-cast.mjs, then canonicalised like any other credit.",
+  "note": "Top-billed cast the Wikipedia Cast-section parser misses because those pages lead with a prose paragraph instead of a bullet for the stars (verified by hand against each film's Wikipedia cast section). Merged ahead of the scraped rows in scrape-cast.mjs, then canonicalised like any other credit. The 2026-09-08 audit added credits the parser could not read: a list-to-list sentence (Love and Thunder's Guardians), \"are introduced as\" (the BvS League), an uncredited-but-supporting Batman in Suicide Squad, the Illuminati paragraph, and bullets phrased \"reprises his role as\" / \"appears as\" / \"plays\". The parser now reads those forms too; these rows are the belt to its braces.",
   "add": {
     "Joker: Folie à Deux": [
-      { "actor": "Joaquin Phoenix", "character": "Arthur Fleck / Joker" },
-      { "actor": "Lady Gaga", "character": "Lee Quinzel / Harley Quinn" }
+      {
+        "actor": "Joaquin Phoenix",
+        "character": "Arthur Fleck / Joker"
+      },
+      {
+        "actor": "Lady Gaga",
+        "character": "Lee Quinzel / Harley Quinn"
+      }
     ],
     "X-Men: First Class": [
-      { "actor": "Michael Fassbender", "character": "Erik Lehnsherr / Magneto" }
+      {
+        "actor": "Michael Fassbender",
+        "character": "Erik Lehnsherr / Magneto"
+      }
     ],
     "X-Men: Days of Future Past": [
-      { "actor": "James McAvoy", "character": "Charles Xavier / Professor X" },
-      { "actor": "Michael Fassbender", "character": "Erik Lehnsherr / Magneto" },
-      { "actor": "Patrick Stewart", "character": "Charles Xavier / Professor X" },
-      { "actor": "Ian McKellen", "character": "Erik Lehnsherr / Magneto" }
+      {
+        "actor": "James McAvoy",
+        "character": "Charles Xavier / Professor X"
+      },
+      {
+        "actor": "Michael Fassbender",
+        "character": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "actor": "Patrick Stewart",
+        "character": "Charles Xavier / Professor X"
+      },
+      {
+        "actor": "Ian McKellen",
+        "character": "Erik Lehnsherr / Magneto"
+      }
     ],
     "Doctor Strange": [
-      { "actor": "Benedict Cumberbatch", "character": "Stephen Strange / Doctor Strange" }
+      {
+        "actor": "Benedict Cumberbatch",
+        "character": "Stephen Strange / Doctor Strange"
+      }
     ],
     "Doctor Strange in the Multiverse of Madness": [
-      { "actor": "Benedict Cumberbatch", "character": "Stephen Strange / Doctor Strange" }
+      {
+        "actor": "Benedict Cumberbatch",
+        "character": "Stephen Strange / Doctor Strange"
+      },
+      {
+        "actor": "Patrick Stewart",
+        "character": "Charles Xavier / Professor X"
+      },
+      {
+        "actor": "John Krasinski",
+        "character": "Reed Richards / Mister Fantastic"
+      },
+      {
+        "actor": "Hayley Atwell",
+        "character": "Peggy Carter / Captain Carter"
+      },
+      {
+        "actor": "Lashana Lynch",
+        "character": "Maria Rambeau / Captain Marvel"
+      },
+      {
+        "actor": "Anson Mount",
+        "character": "Blackagar Boltagon / Black Bolt"
+      },
+      {
+        "actor": "Charlize Theron",
+        "character": "Clea"
+      }
     ],
     "Shazam!": [
-      { "actor": "Zachary Levi", "character": "Shazam" },
-      { "actor": "Asher Angel", "character": "Billy Batson" }
+      {
+        "actor": "Zachary Levi",
+        "character": "Shazam"
+      },
+      {
+        "actor": "Asher Angel",
+        "character": "Billy Batson"
+      }
     ],
     "Shazam! Fury of the Gods": [
-      { "actor": "Zachary Levi", "character": "Billy Batson / Shazam" }
+      {
+        "actor": "Zachary Levi",
+        "character": "Billy Batson / Shazam"
+      }
     ],
     "Venom: Let There Be Carnage": [
-      { "actor": "Woody Harrelson", "character": "Cletus Kasady / Carnage" }
+      {
+        "actor": "Woody Harrelson",
+        "character": "Cletus Kasady / Carnage"
+      }
+    ],
+    "Thor: Love and Thunder": [
+      {
+        "actor": "Chris Pratt",
+        "character": "Peter Quill / Star-Lord"
+      },
+      {
+        "actor": "Karen Gillan",
+        "character": "Nebula"
+      },
+      {
+        "actor": "Dave Bautista",
+        "character": "Drax the Destroyer"
+      },
+      {
+        "actor": "Pom Klementieff",
+        "character": "Mantis"
+      },
+      {
+        "actor": "Sean Gunn",
+        "character": "Kraglin Obfonteri"
+      },
+      {
+        "actor": "Vin Diesel",
+        "character": "Groot"
+      },
+      {
+        "actor": "Bradley Cooper",
+        "character": "Rocket"
+      }
+    ],
+    "Batman v Superman: Dawn of Justice": [
+      {
+        "actor": "Ezra Miller",
+        "character": "Barry Allen / The Flash"
+      },
+      {
+        "actor": "Jason Momoa",
+        "character": "Arthur Curry / Aquaman"
+      },
+      {
+        "actor": "Ray Fisher",
+        "character": "Victor Stone / Cyborg"
+      }
+    ],
+    "Suicide Squad": [
+      {
+        "actor": "Ben Affleck",
+        "character": "Bruce Wayne / Batman"
+      }
+    ],
+    "Deadpool & Wolverine": [
+      {
+        "actor": "Wesley Snipes",
+        "character": "Eric Brooks / Blade"
+      },
+      {
+        "actor": "Channing Tatum",
+        "character": "Remy LeBeau / Gambit"
+      }
+    ],
+    "Spider-Man: No Way Home": [
+      {
+        "actor": "Thomas Haden Church",
+        "character": "Flint Marko / Sandman"
+      },
+      {
+        "actor": "Rhys Ifans",
+        "character": "Curt Connors / Lizard"
+      }
+    ],
+    "X-Men: The Last Stand": [
+      {
+        "actor": "Ben Foster",
+        "character": "Warren Worthington III / Angel"
+      },
+      {
+        "actor": "Elliot Page",
+        "character": "Kitty Pryde"
+      },
+      {
+        "actor": "Daniel Cudmore",
+        "character": "Peter Rasputin / Colossus"
+      }
+    ],
+    "Superman": [
+      {
+        "actor": "María Gabriela de Faría",
+        "character": "Angela Spica / The Engineer"
+      }
     ]
   }
 }

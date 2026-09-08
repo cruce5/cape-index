@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-07T15:00:52.653Z",
+    "generated": "2026-09-08T13:18:36.642Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -3677,7 +3677,7 @@
         "international": 233102594,
         "worldwide": 451407935
       },
-      "budget": 200000000,
+      "budget": 288500000,
       "runtime_minutes": 134,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -3709,11 +3709,11 @@
         "pct_international": 51.64,
         "domestic_multiplier": 2.29,
         "opening_share_worldwide": 21.16,
-        "roi_worldwide": 1.9,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": -120248345,
+        "roi_worldwide": 1.32,
+        "breakeven_worldwide": 721250000,
+        "profit_vs_breakeven": -341498345,
         "profitable": false,
-        "budget_real_2025": 237738495
+        "budget_real_2025": 342937779
       }
     },
     {
@@ -3926,7 +3926,7 @@
         "international": 281951513,
         "worldwide": 477931520
       },
-      "budget": 200000000,
+      "budget": 236200000,
       "runtime_minutes": 156,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -3959,11 +3959,11 @@
         "pct_international": 58.99,
         "domestic_multiplier": 2.31,
         "opening_share_worldwide": 17.73,
-        "roi_worldwide": 2.01,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": -97935101,
+        "roi_worldwide": 1.7,
+        "breakeven_worldwide": 590500000,
+        "profit_vs_breakeven": -188435101,
         "profitable": false,
-        "budget_real_2025": 237738495
+        "budget_real_2025": 280769163
       }
     },
     {
@@ -4169,7 +4169,7 @@
         "international": 599222552,
         "worldwide": 1051939610
       },
-      "budget": 200000000,
+      "budget": 350600000,
       "runtime_minutes": 126,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -4202,11 +4202,11 @@
         "pct_international": 56.96,
         "domestic_multiplier": 2.19,
         "opening_share_worldwide": 19.61,
-        "roi_worldwide": 4.78,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": 455775804,
+        "roi_worldwide": 2.73,
+        "breakeven_worldwide": 876500000,
+        "profit_vs_breakeven": 79275804,
         "profitable": true,
-        "budget_real_2025": 220122670
+        "budget_real_2025": 385875041
       }
     },
     {
@@ -4421,7 +4421,7 @@
         "international": 276501289,
         "worldwide": 503254088
       },
-      "budget": 200000000,
+      "budget": 330100000,
       "runtime_minutes": 124,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -4454,11 +4454,11 @@
         "pct_international": 54.94,
         "domestic_multiplier": 2.02,
         "opening_share_worldwide": 22.29,
-        "roi_worldwide": 2.38,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": -23928820,
+        "roi_worldwide": 1.44,
+        "breakeven_worldwide": 825250000,
+        "profit_vs_breakeven": -349178820,
         "profitable": false,
-        "budget_real_2025": 211419682
+        "budget_real_2025": 348948185
       }
     },
     {
@@ -4737,7 +4737,7 @@
         "international": 128581859,
         "worldwide": 217906910
       },
-      "budget": 274800000,
+      "budget": 307300000,
       "runtime_minutes": 105,
       "mpaa": "PG-13",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -4769,11 +4769,11 @@
         "pct_international": 59.01,
         "domestic_multiplier": 1.83,
         "opening_share_worldwide": 22.37,
-        "roi_worldwide": 0.75,
-        "breakeven_worldwide": 687000000,
-        "profit_vs_breakeven": -480863175,
+        "roi_worldwide": 0.67,
+        "breakeven_worldwide": 768250000,
+        "profit_vs_breakeven": -562113175,
         "profitable": false,
-        "budget_real_2025": 290490643
+        "budget_real_2025": 324846342
       }
     },
     {
@@ -4919,7 +4919,7 @@
         "international": 720132616,
         "worldwide": 1373951656
       },
-      "budget": 200000000,
+      "budget": 429000000,
       "runtime_minutes": 128,
       "mpaa": "R",
       "distributor": "Walt Disney Studios Motion Pictures",
@@ -4952,11 +4952,11 @@
         "pct_international": 52.41,
         "domestic_multiplier": 3.01,
         "opening_share_worldwide": 15.8,
-        "roi_worldwide": 6.69,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": 838073645,
+        "roi_worldwide": 3.12,
+        "breakeven_worldwide": 1072500000,
+        "profit_vs_breakeven": 265573645,
         "profitable": true,
-        "budget_real_2025": 205362636
+        "budget_real_2025": 440502855
       }
     },
     {
@@ -5396,7 +5396,7 @@
         "international": 54000000,
         "worldwide": 126366532
       },
-      "budget": 200000000,
+      "budget": 186000000,
       "runtime_minutes": 108,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -5425,11 +5425,11 @@
         "pct_international": 42.73,
         "domestic_multiplier": 1.95,
         "opening_share_worldwide": 29.36,
-        "roi_worldwide": 0.63,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": -373633468,
+        "roi_worldwide": 0.68,
+        "breakeven_worldwide": 465000000,
+        "profit_vs_breakeven": -338633468,
         "profitable": false,
-        "budget_real_2025": 200000000
+        "budget_real_2025": 186000000
       }
     },
     {
@@ -5455,7 +5455,7 @@
         "international": 1485000000,
         "worldwide": 2408062495
       },
-      "budget": 200000000,
+      "budget": 225000000,
       "runtime_minutes": 145,
       "mpaa": "PG-13",
       "distributor": "Sony Pictures Releasing",
@@ -5483,11 +5483,11 @@
         "pct_international": 61.67,
         "domestic_multiplier": 2.56,
         "opening_share_worldwide": 14.95,
-        "roi_worldwide": 12.04,
-        "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": 1908062495,
+        "roi_worldwide": 10.7,
+        "breakeven_worldwide": 562500000,
+        "profit_vs_breakeven": 1845562495,
         "profitable": true,
-        "budget_real_2025": 200000000
+        "budget_real_2025": 225000000
       }
     }
   ]

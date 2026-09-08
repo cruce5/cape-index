@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T00:53:42.170Z",
+  "generated": "2026-09-08T13:23:10.963Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "X-Men": {
@@ -616,6 +616,27 @@
       "date": "2006-05-26",
       "cast": [
         {
+          "actor": "Ben Foster",
+          "character": "Warren Worthington III / Angel",
+          "order": -3,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Elliot Page",
+          "character": "Kitty Pryde",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Daniel Cudmore",
+          "character": "Peter Rasputin / Colossus",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Hugh Jackman",
@@ -955,6 +976,12 @@
           "minor": false,
           "actor": "Edward Norton",
           "character": "Bruce Banner"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Lou Ferrigno",
+          "character": "the Hulk"
         },
         {
           "order": 2,
@@ -1486,7 +1513,7 @@
     "The Avengers": {
       "page": "The Avengers (2012 film)",
       "universe": "MCU",
-      "date": "2012-05-12",
+      "date": "2012-05-04",
       "cast": [
         {
           "order": 1,
@@ -1541,6 +1568,20 @@
           "minor": false,
           "actor": "Samuel L. Jackson",
           "character": "Nick Fury"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Gwyneth Paltrow",
+          "character": "Pepper Potts",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Maximiliano Hernández",
+          "character": "Jasper Sitwell",
+          "fromProse": true
         }
       ]
     },
@@ -2397,6 +2438,13 @@
           "minor": false,
           "actor": "Benicio del Toro",
           "character": "Taneleer Tivan / The Collector"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Seth Green",
+          "character": "Howard the Duck",
+          "fromProse": true
         }
       ]
     },
@@ -2512,6 +2560,20 @@
           "minor": false,
           "actor": "Samuel L. Jackson",
           "character": "Nick Fury"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Thomas Kretschmann",
+          "character": "Baron Wolfgang von Strucker",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Henry Goodman",
+          "character": "[[Dr",
+          "fromProse": true
         }
       ]
     },
@@ -2591,6 +2653,20 @@
           "minor": false,
           "actor": "Michael Douglas",
           "character": "Hank Pym"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "John Slattery",
+          "character": "Howard Stark",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Hayley Atwell",
+          "character": "Peggy Carter",
+          "fromProse": true
         }
       ]
     },
@@ -2657,7 +2733,7 @@
           "order": 10,
           "minor": false,
           "actor": "Stefan Kapičić",
-          "character": "the voice of Colossus"
+          "character": "Colossus"
         }
       ]
     },
@@ -2743,6 +2819,27 @@
           "minor": true,
           "actor": "Kevin Costner",
           "character": "Jonathan Kent",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ezra Miller",
+          "character": "Barry Allen / The Flash",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Jason Momoa",
+          "character": "Arthur Curry / Aquaman",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ray Fisher",
+          "character": "Victor Stone / Cyborg",
           "fromProse": true
         }
       ]
@@ -2859,6 +2956,20 @@
           "minor": false,
           "actor": "Daniel Brühl",
           "character": "Helmut Zemo"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "John Slattery",
+          "character": "Howard Stark",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Kerry Condon",
+          "character": "the voice of [[F.R.I.D.A.Y",
+          "fromProse": true
         }
       ]
     },
@@ -2970,6 +3081,13 @@
       "universe": "DCEU",
       "date": "2016-08-05",
       "cast": [
+        {
+          "actor": "Ben Affleck",
+          "character": "Bruce Wayne / Batman",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -3224,6 +3342,13 @@
           "minor": true,
           "actor": "Laura Haddock",
           "character": "Meredith Quill",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Seth Green",
+          "character": "Howard the Duck",
           "fromProse": true
         },
         {
@@ -3492,6 +3617,27 @@
           "minor": false,
           "actor": "Anthony Hopkins",
           "character": "Odin"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Tadanobu Asano",
+          "character": "Hogun",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Ray Stevenson",
+          "character": "Volstagg",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Zachary Levi",
+          "character": "Fandral",
+          "fromProse": true
         }
       ]
     },
@@ -3831,6 +3977,34 @@
           "minor": false,
           "actor": "Chris Pratt",
           "character": "Peter Quill / Star-Lord"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Danai Gurira",
+          "character": "Okoye",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "William Hurt",
+          "character": "Thaddeus Ross",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Winston Duke",
+          "character": "M'Baku",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Florence Kasumba",
+          "character": "Ayo",
+          "fromProse": true
         }
       ]
     },
@@ -3904,36 +4078,8 @@
         {
           "order": null,
           "minor": true,
-          "actor": "Nicholas Hoult",
-          "character": "Beast",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Evan Peters",
-          "character": "Quicksilver",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Tye Sheridan",
-          "character": "Cyclops",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Alexandra Shipp",
-          "character": "Storm",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Kodi Smit-McPhee",
-          "character": "Nightcrawler",
+          "actor": "Stefan Kapičić",
+          "character": "Colossus",
           "fromProse": true
         }
       ]
@@ -4203,6 +4349,34 @@
           "minor": false,
           "actor": "Jude Law",
           "character": "Yon-Rogg"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Chris Evans",
+          "character": "Steve Rogers",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Scarlett Johansson",
+          "character": "Natasha Romanoff",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Mark Ruffalo",
+          "character": "Bruce Banner",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Don Cheadle",
+          "character": "James \"Rhodey\" Rhodes",
+          "fromProse": true
         }
       ]
     },
@@ -4226,16 +4400,34 @@
           "fromOverride": true
         },
         {
+          "order": null,
+          "minor": true,
+          "actor": "David Kohlsmith",
+          "character": "the four-year-old Billy"
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Mark Strong",
           "character": "Dr. Thaddeus Sivana"
         },
         {
+          "order": null,
+          "minor": true,
+          "actor": "Ethan Pugiotto",
+          "character": "the young Thaddeus"
+        },
+        {
           "order": 2,
           "minor": false,
           "actor": "Jack Dylan Grazer",
           "character": "Freddy Freeman"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Adam Brody",
+          "character": "the character's adult superhero form"
         },
         {
           "order": 3,
@@ -4250,10 +4442,22 @@
           "character": "Darla Dudley"
         },
         {
+          "order": null,
+          "minor": true,
+          "actor": "Meagan Good",
+          "character": "the character's adult superhero form"
+        },
+        {
           "order": 5,
           "minor": false,
           "actor": "Grace Fulton",
           "character": "Mary Bromfield"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Michelle Borth",
+          "character": "the character's adult superhero form"
         },
         {
           "order": 6,
@@ -4262,10 +4466,22 @@
           "character": "Eugene Choi"
         },
         {
+          "order": null,
+          "minor": true,
+          "actor": "Ross Butler",
+          "character": "the character's adult superhero form"
+        },
+        {
           "order": 7,
           "minor": false,
           "actor": "Jovan Armand",
           "character": "Pedro Peña"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "D. J. Cotrona",
+          "character": "the character's adult superhero form"
         },
         {
           "order": 8,
@@ -5044,6 +5260,20 @@
           "minor": false,
           "actor": "Connie Nielsen",
           "character": "Hippolyta"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Amr Waked",
+          "character": "Emir",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Oliver Cotton",
+          "character": "Simon Stagg",
+          "fromProse": true
         }
       ]
     },
@@ -5135,7 +5365,7 @@
           "order": 5,
           "minor": false,
           "actor": "Sylvester Stallone",
-          "character": "the voice of Nanaue / King Shark"
+          "character": "Nanaue / King Shark"
         },
         {
           "order": 6,
@@ -5258,6 +5488,13 @@
           "actor": "Andy Le",
           "character": "Death Dealer",
           "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Dee Bradley Baker",
+          "character": "Morris",
+          "fromProse": true
         }
       ]
     },
@@ -5301,13 +5538,6 @@
           "minor": false,
           "actor": "Woody Harrelson",
           "character": "Cletus Kasady / Carnage"
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "J. K. Simmons",
-          "character": "J. Jonah Jameson",
-          "fromProse": true
         }
       ]
     },
@@ -5389,6 +5619,20 @@
       "universe": "MCU",
       "date": "2021-12-17",
       "cast": [
+        {
+          "actor": "Thomas Haden Church",
+          "character": "Flint Marko / Sandman",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Rhys Ifans",
+          "character": "Curt Connors / Lizard",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -5608,6 +5852,48 @@
       "date": "2022-05-06",
       "cast": [
         {
+          "actor": "Patrick Stewart",
+          "character": "Charles Xavier / Professor X",
+          "order": -7,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "John Krasinski",
+          "character": "Reed Richards / Mister Fantastic",
+          "order": -6,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Hayley Atwell",
+          "character": "Peggy Carter / Captain Carter",
+          "order": -5,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Lashana Lynch",
+          "character": "Maria Rambeau / Captain Marvel",
+          "order": -4,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Anson Mount",
+          "character": "Blackagar Boltagon / Black Bolt",
+          "order": -3,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Charlize Theron",
+          "character": "Clea",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Benedict Cumberbatch",
@@ -5654,6 +5940,13 @@
           "minor": true,
           "actor": "Sheila Atim",
           "character": "Sara",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Adam Hugill",
+          "character": "Rintrah",
           "fromProse": true
         }
       ]
@@ -5708,6 +6001,55 @@
         {
           "order": null,
           "minor": true,
+          "actor": "Chris Pratt",
+          "character": "Peter Quill / Star-Lord",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Karen Gillan",
+          "character": "Nebula",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Dave Bautista",
+          "character": "Drax the Destroyer",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Pom Klementieff",
+          "character": "Mantis",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Sean Gunn",
+          "character": "Kraglin Obfonteri",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Vin Diesel",
+          "character": "Groot",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Bradley Cooper",
+          "character": "Rocket",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
           "actor": "Ben Falcone",
           "character": "stage manager",
           "fromProse": true
@@ -5717,34 +6059,6 @@
           "minor": true,
           "actor": "Idris Elba",
           "character": "Heimdall",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Rene Russo",
-          "character": "Frigga",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Ray Stevenson",
-          "character": "Volstagg",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Tadanobu Asano",
-          "character": "Hogun",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Zachary Levi",
-          "character": "Fandral",
           "fromProse": true
         }
       ]
@@ -6004,6 +6318,41 @@
           "minor": false,
           "actor": "Helen Mirren",
           "character": "Hespera"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Cooper Andrews",
+          "character": "Rosa",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Jennifer Holland",
+          "character": "Emilia Harcourt",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Steve Agee",
+          "character": "John Economos",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Mark Strong",
+          "character": "Dr. Thaddeus Sivana",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "David F. Sandberg",
+          "character": "Mister Mind",
+          "fromProse": true
         }
       ]
     },
@@ -6102,6 +6451,13 @@
           "minor": true,
           "actor": "Michael Rosenbaum",
           "character": "Martinex",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Seth Green",
+          "character": "Howard the Duck",
           "fromProse": true
         },
         {
@@ -6366,12 +6722,6 @@
         {
           "order": 8,
           "minor": false,
-          "actor": "Martin Short",
-          "character": "the voice of"
-        },
-        {
-          "order": 9,
-          "minor": false,
           "actor": "Nicole Kidman",
           "character": "Atlanna"
         }
@@ -6455,6 +6805,13 @@
       "universe": "MCU",
       "date": "2024-07-26",
       "cast": [
+        {
+          "actor": "Channing Tatum",
+          "character": "Remy LeBeau / Gambit",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -6571,6 +6928,27 @@
           "minor": true,
           "actor": "UK Pitbulls",
           "character": "Fred Dukes / Blob",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Blake Lively",
+          "character": "Ladypool",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Nathan Fillion",
+          "character": "Headpool",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Matthew McConaughey",
+          "character": "Cowboypool",
           "fromProse": true
         }
       ]
@@ -6693,16 +7071,34 @@
           "character": "Sergei Kravinoff / Kraven the Hunter"
         },
         {
+          "order": null,
+          "minor": true,
+          "actor": "Levi Miller",
+          "character": "a young Sergei"
+        },
+        {
           "order": 2,
           "minor": false,
           "actor": "Ariana DeBose",
           "character": "Calypso Ezili"
         },
         {
+          "order": null,
+          "minor": true,
+          "actor": "Diaana Babnicova",
+          "character": "young Calypso"
+        },
+        {
           "order": 3,
           "minor": false,
           "actor": "Fred Hechinger",
           "character": "Dmitri Kravinoff / Chameleon"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Billy Barratt",
+          "character": "a young Dmitri"
         },
         {
           "order": 4,
@@ -6794,6 +7190,20 @@
           "minor": false,
           "actor": "Harrison Ford",
           "character": "Thaddeus Ross / Red Hulk"
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Jóhannes Haukur Jóhannesson",
+          "character": "Copperhead",
+          "fromProse": true
+        },
+        {
+          "order": null,
+          "minor": true,
+          "actor": "Takehiro Hira",
+          "character": "Japanese prime minister",
+          "fromProse": true
         }
       ]
     },
@@ -6875,6 +7285,13 @@
       "universe": "DCU",
       "date": "2025-07-11",
       "cast": [
+        {
+          "actor": "María Gabriela de Faría",
+          "character": "Angela Spica / The Engineer",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,

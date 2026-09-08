@@ -1,0 +1,57 @@
+[
+ {
+  "family": "IBM Plex Sans",
+  "weight": "400 700",
+  "file": "plex-sans-400-latin.woff2"
+ },
+ {
+  "family": "IBM Plex Sans",
+  "weight": "400 700",
+  "file": "plex-sans-400-latin-ext.woff2"
+ },
+ {
+  "family": "IBM Plex Sans Condensed",
+  "weight": "600 700",
+  "file": "plex-cond-600-latin.woff2"
+ },
+ {
+  "family": "IBM Plex Sans Condensed",
+  "weight": "600",
+  "file": "plex-cond-600-latin-ext.woff2"
+ },
+ {
+  "family": "IBM Plex Sans Condensed",
+  "weight": "700",
+  "file": "plex-cond-700-latin-ext.woff2"
+ },
+ {
+  "family": "IBM Plex Mono",
+  "weight": "400",
+  "file": "plex-mono-400-latin.woff2"
+ },
+ {
+  "family": "IBM Plex Mono",
+  "weight": "400",
+  "file": "plex-mono-400-latin-ext.woff2"
+ },
+ {
+  "family": "IBM Plex Mono",
+  "weight": "500",
+  "file": "plex-mono-500-latin.woff2"
+ },
+ {
+  "family": "IBM Plex Mono",
+  "weight": "500",
+  "file": "plex-mono-500-latin-ext.woff2"
+ },
+ {
+  "family": "IBM Plex Mono",
+  "weight": "600",
+  "file": "plex-mono-600-latin.woff2"
+ },
+ {
+  "family": "IBM Plex Mono",
+  "weight": "600",
+  "file": "plex-mono-600-latin-ext.woff2"
+ }
+]

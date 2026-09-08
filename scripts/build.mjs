@@ -40,6 +40,10 @@ ${bodyInner}
 </html>
 `;
 writeFileSync(join(ROOT, "dist/index.html"), doc);
+// self-hosted IBM Plex: the Google stylesheet was the one render-blocking request on the page
+import { readdirSync, copyFileSync } from "node:fs";
+mkdirSync(join(ROOT, "dist/fonts"), { recursive: true });
+for (const f of readdirSync(join(ROOT, "assets/fonts"))) if (f.endsWith(".woff2")) copyFileSync(join(ROOT, "assets/fonts", f), join(ROOT, "dist/fonts", f));
 console.log(
   `dist/index.html — ${(doc.length / 1024).toFixed(0)} KB standalone · ` +
   `build/artifact.html — ${(fragment.length / 1024).toFixed(0)} KB fragment · ` +

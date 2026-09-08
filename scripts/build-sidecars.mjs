@@ -4,16 +4,36 @@
 // every crawl, and every scanner probing paths pulled the full document.
 //
 // This writes the real sidecars next to dist/index.html. wrangler.jsonc now uses "404-page".
-import { readFileSync, writeFileSync } from "node:fs";
+// It runs last in the build, so it can also read the finished dist/index.html: the CSP's
+// script-src is the sha256 of each inline script (no 'unsafe-inline'), and the share image
+// gets a content-hashed name so a year-long immutable cache can't serve last week's totals.
+import { readFileSync, writeFileSync, existsSync, unlinkSync, readdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { join } from "node:path";
 import { ROOT } from "./lib-bom.mjs";
 
 const meta = JSON.parse(readFileSync(join(ROOT, "data/web.json"), "utf8")).meta;
 const lastmod = new Date(meta.generated).toISOString().slice(0, 10);
+const htmlPath = join(ROOT, "dist/index.html");
+let html = readFileSync(htmlPath, "utf8");
+
+// --- og.png -> og.<hash>.png, and the two meta tags that point at it ------------------------
+const ogPath = join(ROOT, "dist/og.png");
+if (existsSync(ogPath)) {
+  const png = readFileSync(ogPath);
+  const h = createHash("sha256").update(png).digest("hex").slice(0, 10);
+  const name = `og.${h}.png`;
+  for (const f of readdirSync(join(ROOT, "dist"))) if (/^og\.[0-9a-f]{10}\.png$/.test(f) && f !== name) unlinkSync(join(ROOT, "dist", f));
+  writeFileSync(join(ROOT, "dist", name), png);
+  unlinkSync(ogPath);
+  html = html.split("https://capeindex.com/og.png").join("https://capeindex.com/" + name);
+  writeFileSync(htmlPath, html);
+  console.log(`dist/${name} — share image, content-hashed`);
+}
 
 writeFileSync(
   join(ROOT, "dist/robots.txt"),
-  ["User-agent: *", "Allow: /", "Sitemap: https://capeindex.com/sitemap.xml", ""].join("\n")
+  ["User-agent: *", "Allow: /", "Disallow: /404", "Sitemap: https://capeindex.com/sitemap.xml", ""].join("\n")
 );
 
 writeFileSync(
@@ -48,13 +68,21 @@ writeFileSync(
   ].join("\n")
 );
 
-// Workers static assets honours dist/_headers. There was no CSP, no nosniff, no
-// Referrer-Policy and no HSTS on the live site, and og.png was served must-revalidate.
+// --- headers ------------------------------------------------------------------------------
+// script-src: one hash per inline <script> (the theme pre-paint line and the page itself).
+// JSON data blocks are type="application/json" and never execute, so they are not hashed.
+const inlineScripts = [...html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*type="application\/json")[^>]*>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
+if (inlineScripts.length < 2) throw new Error("expected the theme script and the page script inline; found " + inlineScripts.length);
+const hashes = inlineScripts.map((s) => "'sha256-" + createHash("sha256").update(s, "utf8").digest("base64") + "'");
+if (/\son[a-z]+="/i.test(html) || /href="javascript:/i.test(html)) throw new Error("inline event handler or javascript: URL found; a hash CSP would block it");
+
+// fonts: self-hosted when the page carries @font-face for /fonts/, Google's origins otherwise
+const selfFonts = html.includes("/fonts/") && !html.includes("fonts.googleapis.com");
 const CSP = [
   "default-src 'none'",
-  "script-src 'unsafe-inline' https://static.cloudflareinsights.com",
-  "style-src 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src https://fonts.gstatic.com",
+  "script-src " + hashes.join(" ") + " https://static.cloudflareinsights.com",
+  "style-src 'unsafe-inline'" + (selfFonts ? "" : " https://fonts.googleapis.com"),
+  "font-src " + (selfFonts ? "'self'" : "https://fonts.gstatic.com"),
   "img-src 'self' data:",
   "connect-src https://cloudflareinsights.com",
   "base-uri 'none'",
@@ -68,13 +96,26 @@ writeFileSync(
     "/*",
     "  X-Content-Type-Options: nosniff",
     "  Referrer-Policy: strict-origin-when-cross-origin",
+    // preload is deliberately absent until the zone redirects http:// to https:// (a zone
+    // setting, not a repo one); browsers ignore HSTS delivered over plain HTTP anyway
     "  Strict-Transport-Security: max-age=31536000; includeSubDomains",
+    "  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()",
+    "  Cross-Origin-Opener-Policy: same-origin",
     "  Content-Security-Policy: " + CSP,
     "",
-    "/og.png",
+    "/",
+    "  Content-Type: text/html; charset=utf-8",
+    "",
+    "/index.html",
+    "  Content-Type: text/html; charset=utf-8",
+    "",
+    "/og.*.png",
+    "  Cache-Control: public, max-age=31536000, immutable",
+    "",
+    "/fonts/*",
     "  Cache-Control: public, max-age=31536000, immutable",
     "",
   ].join("\n")
 );
 
-console.log("dist sidecars — robots.txt · sitemap.xml (" + lastmod + ") · 404.html · _headers");
+console.log("dist sidecars — robots.txt · sitemap.xml (" + lastmod + ") · 404.html · _headers (" + inlineScripts.length + " script hashes" + (selfFonts ? ", self-hosted fonts" : "") + ")");

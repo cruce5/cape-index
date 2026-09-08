@@ -21,8 +21,6 @@ const characters = chars.map((c) => {
     n: c.name,
     real: c.real_name || null,
     u: primaryUniverse(c),
-    us: c.universes,
-    apps: c.appearances,
     actors: c.actors,
     films: films.map((f) => f.title),
     fa, // film title -> actor in that film

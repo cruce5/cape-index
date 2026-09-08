@@ -37,7 +37,8 @@ const dcTotal = F.filter((f) => DC.has(f.u)).reduce((s, f) => s + f.ww, 0);
 const ratio = mcuTotal / dcTotal;
 const mult = (t) => { const f = F.find((x) => x.t === t); return f ? f.mult.toFixed(1) : "?"; };
 
-const counts = cast.characters.map((x) => ({ n: x.n, f: (x.films || []).length })).sort((a, b) => b.f - a.f);
+const counts = cast.characters.map((x) => ({ n: x.n, f: (x.films || []).length })).sort((a, b) => b.f - a.f || a.n.localeCompare(b.n));
+const yearTotal = (y) => (F.filter((f) => f.date.slice(0, 4) === String(y)).reduce((s, f) => s + f.ww, 0) / 1e9).toFixed(2);
 const topChar = counts[0];
 const singleAppear = counts.filter((x) => x.f === 1).length;
 const maxFootprint = counts[0].f;
@@ -73,10 +74,26 @@ const CLAIMS = [
   { name: "single-appearance characters (~130)", grab: /there are ~?([0-9]+) of them/i, want: String(singleAppear) },
   { name: "footprint range (§11 note)", grab: /small integers \(([0-9]+)&ndash;([0-9]+)\)/, want: String(minFootprint), want2: String(maxFootprint) },
   { name: "Marvel-to-DC ratio supports 'nearly three to one'", also: () => (ratio >= 2.4 && ratio < 3.4) || `ratio is ${ratio.toFixed(2)}x, re-word §01` },
+  // --- added after the 2026-09-08 eight-lane audit: the static prose is the no-JS fallback and
+  // what an editor reads, so it is held to the same numbers the generators produce at runtime
+  { name: "§04 dek names every post-2022 $1B film",
+    also: () => { const late = F.filter((f) => +f.date.slice(0, 4) > 2022 && f.ww >= 1e9); const dek = (html.match(/<p class="dek" id="d-scatter">([\s\S]*?)<\/p>/) || [])[1] || "";
+      const missing = late.filter((f) => !dek.includes("<em>" + f.t.replace(/&/g, "&amp;") + "</em>")); return missing.length === 0 || `missing from the dek: ${missing.map((f) => f.t).join(", ")}`; } },
+  { name: "§06 dek widest miss (static)", grab: /widest miss at &minus;\$([0-9]+)M/, want: String(Math.round(-Math.min(...F.filter((f) => f.final && f.budget).map((f) => f.ww - 2.5 * f.budget)) / 1e6)) },
+  { name: "§06 dek widest hit (static)", grab: /widest hit at \+\$([0-9.]+)B/, want: (Math.max(...F.filter((f) => f.final && f.budget).map((f) => f.ww - 2.5 * f.budget)) / 1e9).toFixed(2) },
+  { name: "§01 year note peaks", grab: /high-water mark, near \$([0-9.]+)B and \$([0-9.]+)B/, want: yearTotal(2018), want2: yearTotal(2019) },
+  { name: "§10 note roster row count", grab: /in six or more films, ([0-9]+) of them/, want: String(cast.characters.filter((c) => (c.films || []).length >= 6).length) },
+  { name: "§11 dek second tier", grab: /are next at ([a-z]+), then/, want: WORD[counts[1].f],
+    also: () => { const t = counts.filter((c) => c.f === counts[1].f).map((c) => c.n); const dek = (html.match(/<p class="dek" id="d-foot">([\s\S]*?)<\/p>/) || [])[1] || ""; const miss = t.filter((n) => !dek.includes(n)); return miss.length === 0 || `second tier names missing: ${miss.join(", ")}`; } },
+  { name: "§14 budget estimate share is 'a third'", also: () => { const s = F.filter((f) => f.budgetEst).length / N; return (s >= 0.27 && s <= 0.4) || `estimate share is ${(s * 100).toFixed(0)}%`; }, has: "A third are estimates" },
+  { name: "§14 'none before 2010'", also: () => F.every((f) => !f.budgetEst || +f.date.slice(0, 4) >= 2010) || "an estimated budget sits before 2010", has: "none before 2010" },
+  { name: "in-release films are held out of the reviews scatter and the legs chart (source filters)",
+    also: () => (html.includes("return f.rt != null && f.final") && html.includes("f.mult != null && f.final")) || "a final filter was removed from renderReviews or renderLegs" },
+  { name: "one MIN_N constant governs small-n muting", also: () => ((html.match(/MIN_N/g) || []).length >= 6) || "MIN_N is referenced fewer than 6 times; a threshold was hard-coded again" },
   // the §15 fold-out counts are hand-typed into their own summaries — count the markup
-  { name: "§15 follow-up count on the fold", grab: new RegExp('Every follow-up, in order<span class="cnt">([0-9]+) asks'), want: String(countItems("asks", "li")) },
-  { name: "§15 bug count on the fold", grab: new RegExp('The bugs<span class="cnt">([0-9]+) caught'), want: String(countAfter("The bugs", "dt")) },
-  { name: "§15 design-call count on the fold", grab: new RegExp('The design calls<span class="cnt">([0-9]+) calls'), want: String(countAfter("The design calls", "dt")) },
+  { name: "§15 follow-up count on the fold", grab: new RegExp('Every follow-up, in order<span class="cnt">(?:<span class="sr-only">[^<]*</span>)?([0-9]+) asks'), want: String(countItems("asks", "li")) },
+  { name: "§15 bug count on the fold", grab: new RegExp('The bugs<span class="cnt">(?:<span class="sr-only">[^<]*</span>)?([0-9]+) caught'), want: String(countAfter("The bugs", "dt")) },
+  { name: "§15 design-call count on the fold", grab: new RegExp('The design calls<span class="cnt">(?:<span class="sr-only">[^<]*</span>)?([0-9]+) calls'), want: String(countAfter("The design calls", "dt")) },
 ];
 
 // count <li>/<dt> inside one §15 card, so its hand-typed "N asks" can't drift
