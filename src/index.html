@@ -168,6 +168,12 @@
      transition rather than left to end the run. Built from the tokens, so it re-mixes
      itself for the light theme instead of being a second, stale copy of the palette. */
   .spectrum { height: 7px; border-radius: 999px; margin: 16px 0 0; background: var(--spectrum); }
+  /* Under the Marvel v DC lens the rule and the read line follow it: Marvel red held on the
+     left, DC blue held on the right, blending through the middle. Both elements read the one
+     --spectrum token, so redefining it here re-paints both. */
+  body.lens-brand {
+    --spectrum: linear-gradient(90deg, var(--marvel) 0%, var(--marvel) 20%, var(--dc) 80%, var(--dc) 100%);
+  }
 
   /* The same gradient rides the top edge of the sticky tab bar and fills left to right as
      you read the tab you're on: dim for what's below the fold, saturated for what you've
@@ -1157,7 +1163,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">85 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">86 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1245,6 +1251,7 @@
           <li><b>A per-node style pass ran on every render.</b> The mobile type bump walked every SVG text node reading and writing computed styles, forcing a style recalc each time, on every filter click. The bump was uniform, so it is two lines of CSS and no JavaScript.</li>
           <li><b>&ldquo;Should Ryan Reynolds&rsquo; Green Lantern be in here? Watchmen? Jonah Hex?&rdquo;</b> No, and for the same reason all three are already in the Out list: no sequel, no shared universe. The instinct that Green Lantern feels closer to scope is about the <em>character</em> being a Justice League name, and that isn&rsquo;t the test. Make it the test and <em>Catwoman</em> and <em>Constantine</em> come with it, and the rule stops being mechanical, which is the only thing making it defensible.</li>
           <li><b>&ldquo;This started as Marvel v DC and spun out. String up a binary mode, red and blue again.&rdquo;</b> A <b>Marvel v DC</b> lens in the control bar collapses the six groups to two: Marvel&rsquo;s three studios, DC&rsquo;s three continuities, everything on the page recolored and regrouped. It is the comparison the project began as, and it reads hard: <b>$48.4B across 68 films against $12.5B across 23</b>, and $266M of profit per completed film against $94M. The red/blue convention was dropped at six categories because five saturated hues plus a gray can&rsquo;t all stay apart under color blindness. Two can: this pair measures <b>21.7</b> apart under deuteranopia against a floor of 10, and <code>npm run check:palette</code> now holds it to a higher bar than the six-way set.</li>
+          <li><b>&ldquo;In Marvel v DC mode the gradient bars should go red and blue too.&rdquo;</b> They do. Both the masthead rule and the sticky read line take their colors from one <code>--spectrum</code> token, so the lens only has to redefine that token: Marvel red held on the left, DC blue on the right, blending through the middle. It was worth building them off a single token for exactly this.</li>
         </ol>
       </details>
 
