@@ -63,7 +63,11 @@
     /* one definition for both the masthead rule and the sticky read line. The var()s inside
        resolve against whichever theme block won, so it re-mixes itself rather than needing
        a second copy per theme. */
-    --spectrum: linear-gradient(90deg, var(--mcu) 0%, var(--else) 19%, var(--fox) 36%, var(--ssu) 54%, var(--dceu) 74%, var(--dcu) 92%, var(--mcu) 100%);
+    /* Order and stops are computed, not chosen: the shortest path through the six hues in
+       OKLab (smoothest blends, no muddy transitions), with each stop placed by how far that
+       step actually travels so a long jump gets the room it needs. It no longer starts and
+       ends on the same green - the ends are the two furthest-apart hues in the set. */
+    --spectrum: linear-gradient(90deg, var(--fox) 0%, var(--else) 22%, var(--dceu) 39%, var(--dcu) 59%, var(--mcu) 80%, var(--ssu) 100%);
     /* Three faces, one job each: Condensed sets headings and hero numbers, Sans sets
        every word a reader reads, Mono sets figures and metadata. Declared once, with a
        real fallback on each - a webfont that fails to load shouldn't drop a chart label
@@ -1168,7 +1172,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">89 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">90 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1260,6 +1264,7 @@
           <li><b>&ldquo;Do all the claims hold up in Marvel v DC mode?&rdquo;</b> Three didn&rsquo;t. Under the lens &ldquo;Marvel&rdquo; stops meaning Marvel Studios and starts meaning all three of its studios, which moves every Marvel-to-DC number on the page: the ratio goes from <b>2.80&times;</b> to <b>3.87&times;</b>, the total from $34.91B across 38 films to $48.37B across 68, and the median Marvel film from out-grossing seven of every ten DC films to six. &sect;01&rsquo;s headline, its opening paragraph and the spread chart&rsquo;s caption are all written from whichever side the lens is showing now, and &sect;04 stops saying &ldquo;Fox and Sony never&rdquo; when the lens has folded Fox and Sony into Marvel. &sect;12 was the opposite problem: it was following the lens when its own copy says nothing in the control bar reaches it, so its legend listed six universes in two colors. It keeps the six-hue palette whatever the lens is doing.</li>
           <li><b>&ldquo;The Marvel v DC toggle might be more important than the design notes one now.&rdquo;</b> It was, and it had a third of the surface area. Design notes had three ways in: a button in the masthead, a chip that stays visible on a phone when the filter panel is folded, and its row in the control bar. The lens had one, buried inside that folded panel. It has all three now, it reads first in the control bar (it decides what the universe pills even are), and the collapsed filter summary says which lens is on. Both masthead buttons sit in the same sentence, gold and blue, so they read as the pair they are.</li>
           <li><b>&ldquo;The case for the progress bar spanning the document, not the page.&rdquo;</b> It&rsquo;s a good case. Inside a tab the native scrollbar already says the same thing, so a per-tab bar was spending a whole design element on information the browser gives away, and it was misleading in the worst direction: finishing the Scoreboard filled it to 100%, which reads as <em>done</em> when you are one seventh in. A bar that claims you have finished six times before you finish is worse than no bar. It is tab-weighted rather than measured in pixels, because a hidden tab has no height and &sect;15&rsquo;s fold-outs move the total while you stand on it: completed tabs plus your fraction of this one, over seven. Fixed denominator, nothing measured off-screen, and jumping to Reference honestly puts you near the end.</li>
+          <li><b>&ldquo;I don&rsquo;t know if I like starting and ending with green on the colorful one.&rdquo;</b> Neither do I, and it was measurably the wrong order as well as the wrong look: green appeared twice while every other hue appeared once, and the wrap back to it was the biggest single jump in the bar. Solved by brute force instead of taste - all 720 orderings scored in OKLab for total blend distance, worst single step, and how far apart the two ends land, in both themes at once. The winner is magenta, gray, blue, cyan, green, gold: <b>19% smoother</b> overall, worst step down from 33 to 21, and the two ends now differ by 33 rather than 21. Stops are spaced by how far each step actually travels, so no transition gets squeezed.</li>
         </ol>
       </details>
 
