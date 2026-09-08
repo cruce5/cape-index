@@ -115,6 +115,17 @@ writeFileSync(
     "/fonts/*",
     "  Cache-Control: public, max-age=31536000, immutable",
     "",
+    // Payload's audit: robots and sitemap shouldn't revalidate on every hit; an hour is polite
+    "/robots.txt",
+    "  Cache-Control: public, max-age=3600",
+    "",
+    "/sitemap.xml",
+    "  Cache-Control: public, max-age=3600",
+    "",
+    // 404 body was served text/html with no charset (nosniff plus the meta save it in practice)
+    "/404.html",
+    "  Content-Type: text/html; charset=utf-8",
+    "",
   ].join("\n")
 );
 

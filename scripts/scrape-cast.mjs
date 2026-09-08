@@ -432,7 +432,7 @@ Object.assign(CANON, {
   "Angel Salvadore": "Angel Salvadore", "Angel Dust": "Angel Dust",
   "Typhoid": "Typhoid Mary",
   "Kayla Silverfox": "Silver Fox", "Agent Zero": "Agent Zero",
-  "Kraglin": "Kraglin", "Ayesha": "Ayesha", "Namora": "Namora",
+  "Kraglin": "Kraglin", "Kraglin Obfonteri": "Kraglin", "Ayesha": "Ayesha", "Namora": "Namora",
   "the Foreigner": "The Foreigner", "Foreigner": "The Foreigner",
   "Hank Pym / Ant-Man": "Ant-Man (Hank Pym)", "Dr. Hank Pym / Ant-Man": "Ant-Man (Hank Pym)",
 });

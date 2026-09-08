@@ -1,5 +1,5 @@
 {
-  "note": "PRODUCTION budgets (USD), r/boxoffice convention: the number used for break-even math, NOT a marketing-inclusive figure. Source order per film: the studio's own filing (UK Companies House / Disney disclosures) net of rebates where one exists; otherwise Box Office Mojo's production figure; otherwise the widely cited figure, lower bound of a range. Every entry here is budget_estimated:true. Applied last, after BOM and Wikipedia. The 2026-09-08 audit found six MCU films pinned to $200M pre-release guesses while filings showed $236M to $534M; those now carry the filed net figure.",
+  "note": "PRODUCTION budgets (USD), r/boxoffice convention: the number used for break-even math, NOT a marketing-inclusive figure. Source order per film: the studio's own filing (UK Companies House / Disney disclosures) net of rebates where one exists; otherwise Box Office Mojo's production figure; otherwise the widely cited figure, lower bound of a range. Every entry here is budget_estimated:true. Applied last, after BOM and Wikipedia. The 2026-09-08 audit found six MCU films pinned to $200M pre-release guesses while filings showed $236M to $534M; those now carry the filed net figure. Superman was pinned at $225M which matches BOM verbatim, so the override was a no-op and Ledger flagged the discrepancy; removed 2026-09-08.",
   "sources": {
     "Deadpool & Wolverine": "Disney filing: $533.7M gross, $429M net of rebates (Wikipedia infobox); BOM $537M all-in",
     "Doctor Strange in the Multiverse of Madness": "UK filing: $414.9M gross, $350.6M net",
@@ -28,7 +28,6 @@
     "Joker: Folie à Deux": 200000000,
     "The Fantastic Four: First Steps": 200000000,
     "Thunderbolts*": 180000000,
-    "Superman": 225000000,
     "Supergirl": 170000000,
     "Captain America: Brave New World": 180000000,
     "Spider-Man: Brand New Day": 225000000,

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T15:08:51.096Z",
+  "generated": "2026-09-08T16:53:30.905Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "X-Men": {
@@ -2396,6 +2396,20 @@
       "date": "2014-08-01",
       "cast": [
         {
+          "actor": "Josh Brolin",
+          "character": "Thanos",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Sean Gunn",
+          "character": "Kraglin Obfonteri",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Chris Pratt",
@@ -2481,6 +2495,13 @@
       "universe": "MCU",
       "date": "2015-05-01",
       "cast": [
+        {
+          "actor": "Josh Brolin",
+          "character": "Thanos",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -3321,6 +3342,13 @@
       "date": "2017-05-05",
       "cast": [
         {
+          "actor": "Sean Gunn",
+          "character": "Kraglin Obfonteri",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Chris Pratt",
@@ -3614,6 +3642,13 @@
       "universe": "MCU",
       "date": "2017-11-03",
       "cast": [
+        {
+          "actor": "Benedict Cumberbatch",
+          "character": "Stephen Strange / Doctor Strange",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -4077,6 +4112,13 @@
       "universe": "Fox",
       "date": "2018-05-18",
       "cast": [
+        {
+          "actor": "Shioli Kutsuna",
+          "character": "Yukio",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,
@@ -5486,6 +5528,20 @@
       "universe": "MCU",
       "date": "2021-09-03",
       "cast": [
+        {
+          "actor": "Mark Ruffalo",
+          "character": "Bruce Banner / Hulk",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Brie Larson",
+          "character": "Carol Danvers / Captain Marvel",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
         {
           "order": 1,
           "minor": false,

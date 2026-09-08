@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T15:08:51.099Z",
+  "generated": "2026-09-08T16:53:30.907Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
@@ -570,6 +570,92 @@
       ]
     },
     {
+      "name": "Hulk",
+      "real_name": "Bruce Banner",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Edward Norton",
+        "Mark Ruffalo"
+      ],
+      "appearances": 9,
+      "films": [
+        {
+          "title": "The Incredible Hulk",
+          "universe": "MCU",
+          "date": "2008-06-13",
+          "order": 1,
+          "minor": false,
+          "actor": "Edward Norton"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-04",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 8,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": -2,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Shang-Chi and the Legend of the Ten Rings",
+          "universe": "MCU",
+          "date": "2021-09-03",
+          "order": -2,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Spider-Man: Brand New Day",
+          "universe": "MCU",
+          "date": "2026-07-31",
+          "order": 9,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        }
+      ]
+    },
+    {
       "name": "Thor",
       "real_name": null,
       "universes": [
@@ -732,84 +818,6 @@
           "order": 8,
           "minor": false,
           "actor": "Michael Keaton"
-        }
-      ]
-    },
-    {
-      "name": "Hulk",
-      "real_name": "Bruce Banner",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Edward Norton",
-        "Mark Ruffalo"
-      ],
-      "appearances": 8,
-      "films": [
-        {
-          "title": "The Incredible Hulk",
-          "universe": "MCU",
-          "date": "2008-06-13",
-          "order": 1,
-          "minor": false,
-          "actor": "Edward Norton"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-04",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Thor: Ragnarok",
-          "universe": "MCU",
-          "date": "2017-11-03",
-          "order": 8,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Captain Marvel",
-          "universe": "MCU",
-          "date": "2019-03-08",
-          "order": -2,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Spider-Man: Brand New Day",
-          "universe": "MCU",
-          "date": "2026-07-31",
-          "order": 9,
-          "minor": false,
-          "actor": "Mark Ruffalo"
         }
       ]
     },
@@ -1099,6 +1107,67 @@
           "order": 7,
           "minor": false,
           "actor": "Don Cheadle"
+        }
+      ]
+    },
+    {
+      "name": "Doctor Strange",
+      "real_name": "Stephen Strange",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Benedict Cumberbatch"
+      ],
+      "appearances": 6,
+      "films": [
+        {
+          "title": "Doctor Strange",
+          "universe": "MCU",
+          "date": "2016-11-04",
+          "order": -2,
+          "minor": false,
+          "actor": "Benedict Cumberbatch"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": -1,
+          "minor": false,
+          "actor": "Benedict Cumberbatch"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 6,
+          "minor": false,
+          "actor": "Benedict Cumberbatch"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": null,
+          "minor": true,
+          "actor": "Benedict Cumberbatch"
+        },
+        {
+          "title": "Spider-Man: No Way Home",
+          "universe": "MCU",
+          "date": "2021-12-17",
+          "order": 3,
+          "minor": false,
+          "actor": "Benedict Cumberbatch"
+        },
+        {
+          "title": "Doctor Strange in the Multiverse of Madness",
+          "universe": "MCU",
+          "date": "2022-05-06",
+          "order": -7,
+          "minor": false,
+          "actor": "Benedict Cumberbatch"
         }
       ]
     },
@@ -1814,59 +1883,6 @@
       ]
     },
     {
-      "name": "Doctor Strange",
-      "real_name": "Stephen Strange",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Benedict Cumberbatch"
-      ],
-      "appearances": 5,
-      "films": [
-        {
-          "title": "Doctor Strange",
-          "universe": "MCU",
-          "date": "2016-11-04",
-          "order": -2,
-          "minor": false,
-          "actor": "Benedict Cumberbatch"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 6,
-          "minor": false,
-          "actor": "Benedict Cumberbatch"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": null,
-          "minor": true,
-          "actor": "Benedict Cumberbatch"
-        },
-        {
-          "title": "Spider-Man: No Way Home",
-          "universe": "MCU",
-          "date": "2021-12-17",
-          "order": 3,
-          "minor": false,
-          "actor": "Benedict Cumberbatch"
-        },
-        {
-          "title": "Doctor Strange in the Multiverse of Madness",
-          "universe": "MCU",
-          "date": "2022-05-06",
-          "order": -7,
-          "minor": false,
-          "actor": "Benedict Cumberbatch"
-        }
-      ]
-    },
-    {
       "name": "Gamora",
       "real_name": null,
       "universes": [
@@ -2330,6 +2346,51 @@
       ]
     },
     {
+      "name": "Captain Marvel",
+      "real_name": "Carol Danvers",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Brie Larson"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": 1,
+          "minor": false,
+          "actor": "Brie Larson"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 9,
+          "minor": false,
+          "actor": "Brie Larson"
+        },
+        {
+          "title": "Shang-Chi and the Legend of the Ten Rings",
+          "universe": "MCU",
+          "date": "2021-09-03",
+          "order": -1,
+          "minor": false,
+          "actor": "Brie Larson"
+        },
+        {
+          "title": "The Marvels",
+          "universe": "MCU",
+          "date": "2023-11-10",
+          "order": 1,
+          "minor": false,
+          "actor": "Brie Larson"
+        }
+      ]
+    },
+    {
       "name": "Colossus",
       "real_name": "Peter Rasputin",
       "universes": [
@@ -2609,6 +2670,51 @@
       ]
     },
     {
+      "name": "Kraglin",
+      "real_name": "Kraglin Obfonteri",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Sean Gunn"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": -1,
+          "minor": false,
+          "actor": "Sean Gunn"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": -1,
+          "minor": false,
+          "actor": "Sean Gunn"
+        },
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": -3,
+          "minor": false,
+          "actor": "Sean Gunn"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 9,
+          "minor": false,
+          "actor": "Sean Gunn"
+        }
+      ]
+    },
+    {
       "name": "Mister Fantastic",
       "real_name": "Reed Richards",
       "universes": [
@@ -2749,6 +2855,51 @@
       ]
     },
     {
+      "name": "Thanos",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Josh Brolin"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": -2,
+          "minor": false,
+          "actor": "Josh Brolin"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": -1,
+          "minor": false,
+          "actor": "Josh Brolin"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 26,
+          "minor": false,
+          "actor": "Josh Brolin"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 16,
+          "minor": false,
+          "actor": "Josh Brolin"
+        }
+      ]
+    },
+    {
       "name": "Venom",
       "real_name": "Edward Brock Jr.",
       "universes": [
@@ -2875,43 +3026,6 @@
           "order": 6,
           "minor": false,
           "actor": "Florence Pugh"
-        }
-      ]
-    },
-    {
-      "name": "Captain Marvel",
-      "real_name": "Carol Danvers",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Brie Larson"
-      ],
-      "appearances": 3,
-      "films": [
-        {
-          "title": "Captain Marvel",
-          "universe": "MCU",
-          "date": "2019-03-08",
-          "order": 1,
-          "minor": false,
-          "actor": "Brie Larson"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 9,
-          "minor": false,
-          "actor": "Brie Larson"
-        },
-        {
-          "title": "The Marvels",
-          "universe": "MCU",
-          "date": "2023-11-10",
-          "order": 1,
-          "minor": false,
-          "actor": "Brie Larson"
         }
       ]
     },
@@ -3518,6 +3632,45 @@
           "order": null,
           "minor": true,
           "actor": "Michael Rooker"
+        }
+      ]
+    },
+    {
+      "name": "Yukio",
+      "real_name": null,
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Rila Fukushima",
+        "Shioli Kutsuna"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "The Wolverine",
+          "universe": "Fox",
+          "date": "2013-07-26",
+          "order": 3,
+          "minor": false,
+          "actor": "Rila Fukushima"
+        },
+        {
+          "title": "Deadpool 2",
+          "universe": "Fox",
+          "date": "2018-05-18",
+          "order": -1,
+          "minor": false,
+          "actor": "Shioli Kutsuna"
+        },
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": null,
+          "minor": true,
+          "actor": "Shioli Kutsuna"
         }
       ]
     },
@@ -4523,35 +4676,6 @@
       ]
     },
     {
-      "name": "Thanos",
-      "real_name": null,
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Josh Brolin"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 26,
-          "minor": false,
-          "actor": "Josh Brolin"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 16,
-          "minor": false,
-          "actor": "Josh Brolin"
-        }
-      ]
-    },
-    {
       "name": "The Ancient One",
       "real_name": "Ancient One",
       "universes": [
@@ -4695,37 +4819,6 @@
           "order": null,
           "minor": true,
           "actor": "Dafne Keen"
-        }
-      ]
-    },
-    {
-      "name": "Yukio",
-      "real_name": null,
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Rila Fukushima",
-        "Shioli Kutsuna"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "The Wolverine",
-          "universe": "Fox",
-          "date": "2013-07-26",
-          "order": 3,
-          "minor": false,
-          "actor": "Rila Fukushima"
-        },
-        {
-          "title": "Deadpool & Wolverine",
-          "universe": "MCU",
-          "date": "2024-07-26",
-          "order": null,
-          "minor": true,
-          "actor": "Shioli Kutsuna"
         }
       ]
     },
@@ -6469,27 +6562,6 @@
           "order": 9,
           "minor": false,
           "actor": "Andy Serkis"
-        }
-      ]
-    },
-    {
-      "name": "Kraglin",
-      "real_name": null,
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Sean Gunn"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Guardians of the Galaxy Vol. 3",
-          "universe": "MCU",
-          "date": "2023-05-05",
-          "order": 9,
-          "minor": false,
-          "actor": "Sean Gunn"
         }
       ]
     },

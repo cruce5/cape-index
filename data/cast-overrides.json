@@ -284,7 +284,51 @@
         "actor": "Hugh Jackman",
         "character": "Logan / Wolverine"
       }
+    ],
+    "Guardians of the Galaxy": [
+      {
+        "actor": "Josh Brolin",
+        "character": "Thanos"
+      },
+      {
+        "actor": "Sean Gunn",
+        "character": "Kraglin Obfonteri"
+      }
+    ],
+    "Avengers: Age of Ultron": [
+      {
+        "actor": "Josh Brolin",
+        "character": "Thanos"
+      }
+    ],
+    "Thor: Ragnarok": [
+      {
+        "actor": "Benedict Cumberbatch",
+        "character": "Stephen Strange / Doctor Strange"
+      }
+    ],
+    "Shang-Chi and the Legend of the Ten Rings": [
+      {
+        "actor": "Mark Ruffalo",
+        "character": "Bruce Banner / Hulk"
+      },
+      {
+        "actor": "Brie Larson",
+        "character": "Carol Danvers / Captain Marvel"
+      }
+    ],
+    "Guardians of the Galaxy Vol. 2": [
+      {
+        "actor": "Sean Gunn",
+        "character": "Kraglin Obfonteri"
+      }
+    ],
+    "Deadpool 2": [
+      {
+        "actor": "Shioli Kutsuna",
+        "character": "Yukio"
+      }
     ]
   },
-  "speaking_rule": "2026-09-08, Bill: a cameo counts if the character speaks, or slays a bunch. The parser still drops anything Wikipedia calls a cameo, an uncredited appearance or a credits scene, because it cannot hear or count bodies; the qualifying ones are restored here by hand. Wolverine in X-Men: Apocalypse is in on the second clause. Left out: the X-Men door gag in Deadpool 2 (silent, bloodless)."
+  "speaking_rule": "2026-09-08 (round 2): a cameo counts if the character speaks or slays a bunch. Wolverine in Apocalypse counts (rampage). Rows here restore roles the parser drops on phrasing (Wikipedia says cameo, mid-credits scene, uncredited, brief appearance) that the reader would see. Also patches specific CANON gaps (Kraglin Obfonteri to Kraglin) that dropped a match."
 }
