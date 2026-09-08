@@ -349,7 +349,7 @@
   .tip .tt { font-weight: 600; font-family: var(--font-display); font-size: 13.5px; margin-bottom: 3px; }
   .tip .tr { display: flex; justify-content: space-between; gap: 18px; color: var(--ink-2); }
   .tip .tr b { color: var(--ink); font-family: var(--font-mono); font-weight: 500; }
-  .tip .flag { color: var(--neg); font-size: 11px; margin-top: 4px; }
+  .tip .flag { color: var(--note); font-size: 11px; margin-top: 4px; }
   .tip .flist { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); display: grid; gap: 2px; }
   .tip .flist div { display: flex; gap: 8px; color: var(--ink-2); font-size: 11.5px; line-height: 1.35; }
   .tip .flist .fy { color: var(--ink-muted); font-family: var(--font-mono); flex: none; }
@@ -391,7 +391,8 @@
   .th-sorted { color: var(--ink); }
   .th-sorted::after { content: " " attr(data-arrow); }
 
-  .inrelease { color: var(--neg); font-weight: 600; }
+  /* not --neg: orange is the loss color on this page, and an unfinished run is not a loss */
+  .inrelease { color: var(--note); font-weight: 600; }
   footer.foot { padding: 44px 0 72px; color: var(--ink-muted); font-size: 13px; }
   footer.foot a { text-underline-offset: 2px; }
 
@@ -905,7 +906,7 @@
         <div class="card-head">
           <div>
             <div class="card-title">Codenamed characters per film</div>
-            <div class="card-note">How many heroes and villains each film puts on screen: in release order on a wide screen, ranked on a phone. <span id="ens-top">Avengers: Endgame tops out at 33.</span></div>
+            <div class="card-note">How many heroes and villains each film puts on screen: in release order on a wide screen, ranked on a phone. <span id="ens-top">Avengers: Endgame tops out at 34.</span></div>
           </div>
           <div class="legend" id="leg-ensemble"></div>
         </div>
@@ -1272,7 +1273,7 @@
           <dd>People judge area badly, and long thin rectangles worst of all. It stays because it delivers the &ldquo;wall of green&rdquo; in one glance. But a clipped title reads as a mistake, so a film&rsquo;s name appears only when it fits the cell uncut; otherwise you get the gross and the tooltip.</dd>
 
           <dt>The budget line admits its weak spots</dt>
-          <dd>Each year&rsquo;s marker is sized by how many films sit behind its median. The early-2000s points often rest on a single film, so they&rsquo;re small, and the eye discounts that stretch without being told to.</dd>
+          <dd>Years with fewer than three films in their window are left out of the line entirely rather than drawn thin, so it starts where the data can carry a median instead of where the axis starts. The band is the middle 50% of budgets, which says &ldquo;spread&rdquo; without implying a confidence interval.</dd>
 
           <dt>The table is the backbone</dt>
           <dd>Every value a chart encodes with position, length or color is a plain sortable number in §13. The charts are the argument; the table is the receipts.</dd>
@@ -2205,7 +2206,7 @@
     }).join("");
     // identity keys stay on one row; the encoding notes are a separate, quieter line
     var notes = (withSize ? "<span>circle size = worldwide gross</span>" : "")
-      + (withRing ? '<span><span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--note);vertical-align:-1px;margin-right:2px"></span>crossed $1B</span>' : "");
+      + (withRing ? '<span><span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--note);vertical-align:-1px;margin-right:2px"></span>crossed $1B</span><span>height = packing only</span>' : "");
     host.innerHTML = '<span class="lg-keys">' + ks + "</span>" + (notes ? '<span class="lg-notes">' + notes + "</span>" : "");
   }
   // Table cells legitimately carry a little markup the renderers build themselves (the
@@ -2260,7 +2261,10 @@
       el.addEventListener("mouseleave", function () { layer.innerHTML = ""; });
     });
   }
-  function wireDots(svg) { wireFilmMarks(svg, ".beeDot", true); }
+  // no tabindex on marks: inside a role="img" SVG they are focus stops with no accessible
+  // name, 91 per chart. The "Show data" table is the keyboard and screen-reader path, and
+  // every chart on the page now has one.
+  function wireDots(svg) { wireFilmMarks(svg, ".beeDot", false); }
   function wireCells(svg) { wireFilmMarks(svg, ".tmCell", false); }
   function wireSplit(svg) { wireFilmMarks(svg, ".splitRow", false); }
 
