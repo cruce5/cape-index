@@ -55,6 +55,10 @@
        can't be misread as the MCU green sitting in the same row; the loss keeps orange. */
     --pl-clear: #8b95a8;
     --note: #caa25e;
+    /* one definition for both the masthead rule and the sticky read line. The var()s inside
+       resolve against whichever theme block won, so it re-mixes itself rather than needing
+       a second copy per theme. */
+    --spectrum: linear-gradient(90deg, var(--mcu) 0%, var(--else) 19%, var(--fox) 36%, var(--ssu) 54%, var(--dceu) 74%, var(--dcu) 92%, var(--mcu) 100%);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px -12px rgba(0, 0, 0, 0.45);
   }
   @media (prefers-color-scheme: light) {
@@ -142,12 +146,17 @@
   /* the six universe hues in the order Bill drew them, grey carried in the middle as a
      transition rather than left to end the run. Built from the tokens, so it re-mixes
      itself for the light theme instead of being a second, stale copy of the palette. */
-  .spectrum {
-    height: 7px; border-radius: 999px; margin: 16px 0 0;
-    background: linear-gradient(90deg,
-      var(--mcu) 0%, var(--else) 19%, var(--fox) 36%,
-      var(--ssu) 54%, var(--dceu) 74%, var(--dcu) 92%, var(--mcu) 100%);
-  }
+  .spectrum { height: 7px; border-radius: 999px; margin: 16px 0 0; background: var(--spectrum); }
+
+  /* The same gradient rides the top edge of the sticky tab bar and fills left to right as
+     you read the tab you're on: dim for what's below the fold, saturated for what you've
+     passed. The fill is a window onto a 100vw copy of the gradient, not a squashed one, so
+     the colours stay put instead of sliding as the bar grows. */
+  .spectrum-bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; overflow: hidden; pointer-events: none; }
+  .spectrum-bar::before { content: ""; position: absolute; inset: 0; background: var(--spectrum); opacity: 0.22; }
+  .spectrum-bar i { position: absolute; top: 0; left: 0; height: 100%; width: var(--read, 0%); overflow: hidden; }
+  .spectrum-bar i::before { content: ""; position: absolute; top: 0; left: 0; height: 100%; width: 100vw; background: var(--spectrum); }
+  @media (prefers-reduced-motion: no-preference) { .spectrum-bar i { transition: width 90ms linear; } }
   .byline { margin: 14px 0 0; font-size: 14px; color: var(--ink-muted); }
   .byline a { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
   .byline a:hover { text-decoration-color: var(--ink); }
@@ -503,6 +512,7 @@
 </header>
 
 <nav class="tabs" aria-label="Sections">
+  <div class="spectrum-bar" aria-hidden="true"><i></i></div>
   <div class="wrap tabs-inner" role="tablist">
     <button class="tab" role="tab" data-tab="act1" aria-selected="true"><span class="tn">I</span>Scoreboard</button>
     <button class="tab" role="tab" data-tab="act2" aria-selected="false"><span class="tn">II</span>Over time</button>
@@ -1078,7 +1088,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">66 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">67 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1147,6 +1157,7 @@
           <li><b>&ldquo;No em dashes anywhere.&rdquo;</b> One had crept back into the Scope card.</li>
           <li><b>&ldquo;I made this gradient bar, could we put it under the title for a splash of colour?&rdquo;</b> Rebuilt from the palette tokens rather than pasted as hex, so it re-mixes itself for the light theme instead of being a second, stale copy of the colours. Same order he drew: green, grey, magenta, gold, blue, cyan, with the grey carried in the middle as a transition rather than left to end the run.</li>
           <li><b>&ldquo;The inconsistent white space on these scorecards is BOTHERSOME.&rdquo;</b> Read the wrong way round first: the tiles were sized to their own content, which made the space after each value identical and the tiles three different widths. <b>&ldquo;I STILL want them evenly distributed width wise.&rdquo;</b> The tiles are the repeated object, so they are three equal columns; the air after a value differs because the values do.</li>
+          <li><b>&ldquo;Would it be cool if the gradient bar stuck at the top and followed the scroll?&rdquo;</b> It rides the top edge of the sticky tab bar and fills left to right as you read: dim for what&rsquo;s still below the fold, saturated for what you&rsquo;ve passed. Each tab is its own page length, so switching tabs re-measures. The fill is a window onto a 100vw copy of the gradient rather than a squashed one, so the colours stay put instead of sliding as the bar grows.</li>
         </ol>
       </details>
 
@@ -3162,6 +3173,7 @@
     updateTabStrip();
     updateStickyVars();
     syncScrollHints(); // the tables measure 0 wide until their tab is the visible one
+    if (STATE.repaintRead) requestAnimationFrame(STATE.repaintRead); // each tab is its own page length
     if (opts.push !== false) history.replaceState(null, "", "#" + key);
     // a tab opened first from a chart-less tab may never have been measured on this width
     if (booted) { var w = measureChartWidth(); if (w && Math.abs(w - MW) > 2) renderAll(); }
@@ -3193,6 +3205,27 @@
     bar.classList.toggle("can-scroll", can);
     bar.classList.toggle("at-end", !can || strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2);
   }
+  // read progress for the tab you are on, painted into the gradient across the tab bar
+  (function () {
+    var fill = document.querySelector(".spectrum-bar i"); if (!fill) return;
+    var queued = false;
+    function paint() {
+      queued = false;
+      var doc = document.documentElement;
+      var h = doc.scrollHeight - window.innerHeight;
+      var p = h > 8 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0;
+      fill.style.width = (p * 100).toFixed(2) + "%";
+    }
+    function onScroll() { if (!queued) { queued = true; requestAnimationFrame(paint); } }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    window.addEventListener("hashchange", onScroll);
+    // a hidden tab stops servicing rAF, which would otherwise leave "queued" latched and the
+    // bar frozen at whatever it read when the tab went away
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) { queued = false; paint(); } });
+    STATE.repaintRead = function () { queued = false; paint(); };
+    paint();
+  })();
   (function () { var strip = document.querySelector(".tabs-inner"); if (strip) strip.addEventListener("scroll", updateTabStrip, { passive: true }); window.addEventListener("resize", updateTabStrip); })();
   /* ---------- collapsible sticky controls (mobile) ---------- */
   // On a phone the controls used to scroll away. They now stick under the tab bar, collapsed to one
