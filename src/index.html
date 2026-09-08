@@ -487,6 +487,45 @@
   .hero.villain { border-color: color-mix(in srgb, var(--neg) 60%, transparent); }
   .hero.villain h5 { color: var(--neg); }
   .callcmd { font-family: var(--font-mono); font-size: 14px; background: var(--page); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; overflow-x: auto; }
+
+  /* ============ §16 Reconcilers carousel ============ */
+  /* Ten hero + one villain trading cards. Each slide is a scroll-snap point in a horizontal
+     scroller; prev/next buttons and dots drive it, a play/pause chip runs the auto-advance,
+     everything gates on prefers-reduced-motion. On a phone the layout stacks portrait over prose. */
+  .rec-shell { margin-top: 20px; }
+  .rec-carousel { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+  .rec-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
+  .rec-track::-webkit-scrollbar { display: none; }
+  .rec-slide { flex: 0 0 100%; scroll-snap-align: start; display: grid; grid-template-columns: 320px 1fr; gap: 24px; padding: 24px 28px; min-height: 440px; }
+  .rec-portrait { align-self: center; }
+  .rec-portrait svg { display: block; width: 100%; height: auto; border-radius: 12px; }
+  .rec-info h5 { font-family: var(--font-display); font-size: 34px; font-weight: 700; margin: 0; letter-spacing: -0.01em; line-height: 1; }
+  .rec-info .lane { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-top: 6px; }
+  .rec-info .model-chip { display: inline-block; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; margin-left: 8px; padding: 2px 8px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--ink-2); vertical-align: 2px; }
+  .rec-info dl { margin: 14px 0 0; }
+  .rec-info dt { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); margin-top: 12px; }
+  .rec-info dd { margin: 3px 0 0; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+  .rec-slide.villain { background: linear-gradient(135deg, var(--surface) 60%, color-mix(in srgb, var(--neg) 12%, var(--surface))); }
+  .rec-slide.villain .rec-info h5 { color: var(--neg); }
+  .rec-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--border-strong); background: color-mix(in srgb, var(--page) 90%, transparent); color: var(--ink); font-family: var(--font-display); font-size: 20px; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+  .rec-nav:hover { background: var(--surface-2); }
+  .rec-nav:focus-visible { outline: 2px solid var(--dceu); outline-offset: 2px; }
+  .rec-prev { left: 10px; }
+  .rec-next { right: 10px; }
+  .rec-below { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 14px; flex-wrap: wrap; }
+  .rec-dots { display: flex; gap: 8px; }
+  .rec-dot { width: 14px; height: 14px; border-radius: 999px; border: 1px solid var(--border-strong); background: transparent; cursor: pointer; padding: 0; }
+  .rec-dot[aria-current="true"] { background: var(--ink); border-color: var(--ink); }
+  .rec-dot:focus-visible { outline: 2px solid var(--dceu); outline-offset: 2px; }
+  .rec-play { appearance: none; border: 1px solid var(--border-strong); background: transparent; color: var(--ink-2); font: inherit; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; min-height: 44px; cursor: pointer; }
+  .rec-play:hover { color: var(--ink); }
+  @media (prefers-reduced-motion: reduce) { .rec-track { scroll-behavior: auto; } }
+  @media (max-width: 760px) {
+    .rec-slide { grid-template-columns: 1fr; gap: 16px; padding: 18px 18px 22px; min-height: 0; }
+    .rec-portrait { max-width: 240px; margin: 0 auto; }
+    .rec-info h5 { font-size: 26px; }
+    .rec-nav { top: 200px; transform: none; }
+  }
   .log p { font-size: 14px; color: var(--ink-2); margin: 0 0 10px; }
   .log p:last-child { margin-bottom: 0; }
   .log b { color: var(--ink); font-weight: 600; }
@@ -621,7 +660,7 @@
     <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six universes back to the two the project started as.</p>
     <div class="thesis" id="thesis"></div>
     <details class="contents" aria-label="Contents">
-      <summary class="ct">Contents &middot; 16 sections, 7 tabs</summary>
+      <summary class="ct">Contents &middot; 16 sections, 8 tabs</summary>
       <ol id="contents-list"></ol>
     </details>
   </div>
@@ -637,6 +676,7 @@
     <button class="tab" data-tab="mistakes"><span class="tn" aria-hidden="true">&#10007;</span>The mistakes</button>
     <button class="tab" data-tab="ledger"><span class="tn" aria-hidden="true">&#9638;</span>The ledger</button>
     <button class="tab" data-tab="ref"><span class="tn" aria-hidden="true">§</span>Reference</button>
+    <button class="tab" data-tab="reconcilers"><span class="tn" aria-hidden="true">🦇</span>The Reconcilers</button>
   </div>
 </nav>
 
@@ -1222,7 +1262,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>99 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>100 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1324,6 +1364,7 @@
           <li><b>&ldquo;Bro, of COURSE the Apocalypse cameo would count. Extend the rule to speaking or &lsquo;slays a bunch.&rsquo;&rdquo;</b> Extended. Wolverine is at ten, level with Iron Man and Professor X.</li>
           <li><b>&ldquo;Reconcilers. I want a bundled package with instructions, a ninth hero, Meld, who reads the local stack cold, and I want running it to feel like watching Adam West Batman.&rdquo;</b> §16 and <span class="mono">reconcilers.zip</span>: a Claude Code skill plus ten agent files, one per hero and one for the villain, each on the model that suits its lane. Meld goes in first and writes the map. The episode has title cards, a narrator, sound effects, and a cliffhanger before the Doctor.</li>
           <li><b>&ldquo;Let's run it with Opus 4.7 so we don&rsquo;t blow the usage.&rdquo;</b> <b>The Cape Index Cover-Up!</b> Meld read the room, the eight went in in parallel, sixty-five findings came back across two rounds, Doctor Missedit walked in uninvited and downgraded six, marked three as artifacts of the hero&rsquo;s own method, and caught the compiler (me) fabricating a summary miscount. Real bites: &sect;12&rsquo;s radar was silently NaN on one spoke and every universe rendered identically; the cast scraper had lost Kraglin, Thanos and Doctor Strange to Wikipedia phrasing; the contents pill and deep links landed on the masthead not the section; filter state died on reload; the light-theme treemap missed AA where a source comment said it passed. All fixed same episode.</li>
+          <li><b>&ldquo;Reconcilers is a big feature. Give it a top-level tab, a rotating carousel with a generated image for each hero, a diverse and eccentric cast, and make it extendible to non-Claude platforms like Codex.&rdquo;</b> &sect;16 is its own tab now, at the end of the reading order. The card grid became a scroll-snap carousel of ten hero portraits (stylized SVGs, one per lane), with prev / next, dots, a play-pause chip, keyboard nav, and an auto-advance that stops on hover or focus and pauses when the carousel scrolls off-screen. The cast picked up eccentricities: Meld with a shoulder braid and lockpick, Ledger with a monocle and a red flashlight, Median with an interquartile-range tattoo, Chartjunk with a magenta streak, Redline&rsquo;s red pen tucked into a silver bun. And the bundle now ships a Codex adapter (<span class="mono">adapters/codex/AGENTS.md</span> that runs the same ten lanes sequentially in a single agent) plus <span class="mono">adapters/PORTING.md</span>, a one-page protocol so any runtime (Cursor, Aider, Cline, a shell script) can host the team.</li>
         </ol>
       </details>
 
@@ -1404,66 +1445,272 @@
     </div>
   </section>
 
-  <section class="view log" id="v-reconcilers" data-tab="ref">
+  <section class="view reconcilers" id="v-reconcilers" data-tab="reconcilers">
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 16 &nbsp;/&nbsp; THE RECONCILERS</span>
-        <h3>Eight auditors, a Context hero, and a villain, in a folder you can point at any data product</h3>
+        <h3>Nine auditors and a villain, in a folder you can point at any data product</h3>
         <p class="dek">The eight-lane audit in &sect;15 was run by a team, and the team is packaged. Each hero owns one lane, they work in parallel and don&rsquo;t compare notes until the end, and every finding has to point at a line, a cell, or a screen. Meld reads the local stack first and writes the map the others follow. When the findings are in, Doctor Missedit turns up uninvited and audits the auditors: he may only remove confidence, never add findings. On this site the heroes filed 65 findings across two runs; the Doctor downgraded a handful and marked three as artifacts of their own method.</p>
       </div>
 
       <div class="card">
         <h4 class="card-title">Call the Reconcilers</h4>
-        <p>They run inside <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> as a skill plus ten agent files, scoped to whatever directory you install them in. Download the bundle, run the installer from the folder that holds your product, start Claude Code there, and say the words.</p>
-        <p class="callcmd">/reconcilers</p>
+        <p>They run inside <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> as a skill plus ten agent files. Codex users get an <span class="mono">AGENTS.md</span> adapter that runs the same episode sequentially in a single agent. Download the bundle, run the installer from the folder that holds your product, and say the words.</p>
+        <p class="callcmd">/reconcilers &nbsp; <span style="color:var(--ink-muted)">(Claude Code)</span> &nbsp;/&nbsp; codex &nbsp;: "run the Reconcilers episode" &nbsp; <span style="color:var(--ink-muted)">(Codex)</span></p>
         <p>The skill asks three things before anyone moves: what the product is, which model roster (standard issue, or every hero on the biggest model available), and whether it may drive a browser. Then Meld reads the room, the eight go in, the compiled report lands, and the surprise happens. Every report is written to <span class="mono">.reconcilers/</span> in your directory. The team is read-only: it never edits, commits or deploys. Fixing is a separate conversation, and you start it.</p>
-        <p><a href="/reconcilers.zip">Download the bundle (zip)</a> &nbsp;·&nbsp; <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers" target="_blank" rel="noopener">Read it on GitHub</a></p>
+        <p><a href="/reconcilers.zip">Download the bundle (zip)</a> &nbsp;&middot;&nbsp; <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers" target="_blank" rel="noopener">Read it on GitHub</a></p>
+      </div>
+
+      <!-- Portrait symbol library. Every slide below <use>s one of these; keeping them in
+           one <defs> block halves the bytes on the wire vs repeating each portrait per slide. -->
+      <svg class="rec-defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="g-meld" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2ea6c4"/><stop offset="1" stop-color="#0e5468"/></linearGradient>
+          <linearGradient id="g-ledger" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3fa057"/><stop offset="1" stop-color="#1e5c30"/></linearGradient>
+          <linearGradient id="g-doppel" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#3f2a80"/></linearGradient>
+          <linearGradient id="g-median" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4a86c8"/><stop offset="1" stop-color="#20416b"/></linearGradient>
+          <linearGradient id="g-chart" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ea823a"/><stop offset="1" stop-color="#8c3d13"/></linearGradient>
+          <linearGradient id="g-thumb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ec6d90"/><stop offset="1" stop-color="#8a2547"/></linearGradient>
+          <linearGradient id="g-grey" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4a4a52"/><stop offset="1" stop-color="#161618"/></linearGradient>
+          <linearGradient id="g-red" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c33e3e"/><stop offset="1" stop-color="#5e1414"/></linearGradient>
+          <linearGradient id="g-payload" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3fbcd4"/><stop offset="1" stop-color="#12586a"/></linearGradient>
+          <linearGradient id="g-doc" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#242028"/><stop offset="1" stop-color="#0a080c"/></linearGradient>
+          <radialGradient id="g-doc-spot" cx="0.5" cy="0.4" r="0.55"><stop offset="0" stop-color="rgba(194,60,60,0.4)"/><stop offset="1" stop-color="rgba(194,60,60,0)"/></radialGradient>
+        </defs>
+
+        <!-- MELD: cartographer, translucent map overlay, dark-skin silhouette with a shoulder braid, compass-rose emblem -->
+        <symbol id="p-meld" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-meld)"/>
+          <g stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none"><path d="M0 80H320M0 160H320M0 240H320M0 320H320M60 0V400M140 0V400M220 0V400M300 0V400"/><path d="M0 220 C 80 180 160 260 240 210 S 320 250 320 240" stroke="rgba(255,255,255,0.32)" stroke-width="3"/><circle cx="90" cy="210" r="4" fill="rgba(255,255,255,0.55)"/><circle cx="240" cy="210" r="4" fill="rgba(255,255,255,0.55)"/></g>
+          <g fill="#2f1f14"><ellipse cx="160" cy="150" rx="50" ry="56"/><path d="M60 360 L60 320 Q160 240 260 320 L260 360 Z"/><path d="M215 205 Q240 250 232 320 Q228 350 220 360" stroke="#2f1f14" stroke-width="20" fill="none" stroke-linecap="round"/></g>
+          <g transform="translate(160 300)" stroke="#fff" fill="none" stroke-width="2"><circle r="18"/><path d="M0 -14 L4 0 L0 14 L-4 0 Z" fill="#fff" stroke="none"/><path d="M-14 0 L0 -4 L14 0 L0 4 Z" fill="rgba(255,255,255,0.45)" stroke="none"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(6,40,50,0.9)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">MELD</text>
+        </symbol>
+
+        <!-- LEDGER: elder auditor, silver bun, spectacles low on nose, open ledger with columns -->
+        <symbol id="p-ledger" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-ledger)"/>
+          <g fill="rgba(255,255,255,0.08)"><text x="18" y="60" font-family="IBM Plex Mono, monospace" font-size="12">$1,908,442,000</text><text x="18" y="80" font-family="IBM Plex Mono, monospace" font-size="12">$   867,300,000</text><text x="18" y="100" font-family="IBM Plex Mono, monospace" font-size="12">$   374,000,000</text></g>
+          <g fill="#f0d6b6"><ellipse cx="160" cy="150" rx="46" ry="52"/><ellipse cx="160" cy="105" rx="30" ry="24" fill="#dcdcdc"/></g>
+          <g fill="#233c22"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/><path d="M118 260 L118 340 L202 340 L202 260 Q160 240 118 260 Z" fill="#f5efe3"/></g>
+          <g stroke="#7b5a25" stroke-width="1" opacity="0.55"><line x1="130" y1="278" x2="192" y2="278"/><line x1="130" y1="292" x2="192" y2="292"/><line x1="130" y1="306" x2="192" y2="306"/><line x1="130" y1="320" x2="192" y2="320"/><line x1="160" y1="270" x2="160" y2="336"/></g>
+          <g stroke="#1a1a1a" stroke-width="2" fill="none"><circle cx="145" cy="150" r="12"/><path d="M157 152 L170 148"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(20,50,28,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">LEDGER</text>
+        </symbol>
+
+        <!-- DOPPEL: two silhouettes facing each other (bob + fade), Venn overlap -->
+        <symbol id="p-doppel" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-doppel)"/>
+          <g opacity="0.85"><circle cx="118" cy="200" r="80" fill="rgba(240,220,255,0.15)"/><circle cx="202" cy="200" r="80" fill="rgba(240,220,255,0.15)"/><path d="M160 122 A 78 78 0 0 1 160 278 A 78 78 0 0 1 160 122 Z" fill="rgba(240,220,255,0.2)"/></g>
+          <g fill="#5a3d1c"><path d="M40 340 Q100 220 120 200 Q115 155 128 130 L155 130 Q158 155 152 200 L160 220 L100 340 Z"/><circle cx="128" cy="115" r="30"/></g>
+          <g fill="#f0d0c0"><path d="M280 340 Q220 220 200 200 Q205 155 192 130 L165 130 Q162 155 168 200 L160 220 L220 340 Z"/><circle cx="192" cy="115" r="30"/></g>
+          <g fill="#5a3d1c" opacity="0.9"><path d="M105 100 Q128 78 150 92 Q140 106 128 108 Q112 108 105 100 Z"/></g>
+          <g fill="#3a1a0a" opacity="0.9"><rect x="170" y="82" width="45" height="14" rx="2"/><rect x="175" y="96" width="35" height="6"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(45,25,80,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">DOPPEL</text>
+        </symbol>
+
+        <!-- MEDIAN: androgynous, oversized round glasses, headphones, bell curve behind -->
+        <symbol id="p-median" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-median)"/>
+          <path d="M20 300 Q80 300 130 220 Q160 175 190 220 Q240 300 300 300" stroke="rgba(255,255,255,0.35)" stroke-width="3" fill="none"/>
+          <line x1="160" y1="180" x2="160" y2="320" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-dasharray="4 4"/>
+          <text x="164" y="196" font-family="IBM Plex Mono, monospace" font-size="12" fill="rgba(255,255,255,0.7)">median</text>
+          <g fill="#c9a684"><ellipse cx="160" cy="150" rx="48" ry="54"/><path d="M112 106 Q160 60 208 106 L208 130 Q195 118 178 118 L142 118 Q125 118 112 130 Z" fill="#2a1e14"/></g>
+          <g fill="#111"><rect x="94" y="132" width="30" height="26" rx="6" ry="6"/><rect x="196" y="132" width="30" height="26" rx="6" ry="6"/></g>
+          <g fill="none" stroke="#111" stroke-width="4"><path d="M108 142 A 22 22 0 0 1 152 148"/><path d="M212 142 A 22 22 0 0 1 168 148"/><line x1="128" y1="148" x2="146" y2="148"/><line x1="208" y1="148" x2="190" y2="148"/></g>
+          <g fill="#e33"><circle cx="128" cy="148" r="7"/><circle cx="208" cy="148" r="7"/></g>
+          <g fill="#111"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(15,30,55,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">MEDIAN</text>
+        </symbol>
+
+        <!-- CHARTJUNK: reformed art director, magenta hair streak, paint-splattered smock, X-marked pie -->
+        <symbol id="p-chart" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-chart)"/>
+          <g transform="translate(60 80)" opacity="0.42"><circle r="30" fill="#fff"/><path d="M0 -30 A 30 30 0 0 1 26 -15 L0 0 Z" fill="#c33"/><path d="M26 -15 A 30 30 0 0 1 26 15 L0 0 Z" fill="#3c3"/><path d="M26 15 A 30 30 0 1 1 0 -30 L0 0 Z" fill="#39c"/><line x1="-38" y1="-38" x2="38" y2="38" stroke="#900" stroke-width="6"/><line x1="-38" y1="38" x2="38" y2="-38" stroke="#900" stroke-width="6"/></g>
+          <g fill="#f4d4a8"><ellipse cx="160" cy="150" rx="48" ry="54"/><path d="M112 108 Q125 62 165 68 Q210 74 208 118 L200 128 L192 108 Q175 100 158 106 Q142 112 132 122 L112 128 Z" fill="#181818"/><path d="M155 68 Q168 60 178 66 L172 108 L164 108 Z" fill="#d6337a"/></g>
+          <g fill="#2b2b2b"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
+          <g fill="#fff" opacity="0.75"><circle cx="90" cy="336" r="5"/><circle cx="130" cy="352" r="3"/><circle cx="200" cy="336" r="4"/><circle cx="240" cy="348" r="6"/></g>
+          <g fill="#e33" opacity="0.85"><circle cx="110" cy="346" r="4"/><circle cx="180" cy="330" r="5"/><circle cx="230" cy="336" r="3"/></g>
+          <g transform="translate(230 250) rotate(35)"><rect x="0" y="-2" width="60" height="4" rx="1" fill="#111"/><path d="M60 -3 L72 0 L60 3 Z" fill="#c33"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(80,30,10,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">CHARTJUNK</text>
+        </symbol>
+
+        <!-- THUMB: subway commuter, cap sideways, giant foam thumb, phone -->
+        <symbol id="p-thumb" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-thumb)"/>
+          <g fill="#8e5a3d"><ellipse cx="160" cy="150" rx="44" ry="50"/></g>
+          <g fill="#1c1c1c"><path d="M112 128 Q160 96 208 128 L208 100 Q160 78 112 100 Z"/><path d="M208 100 L228 110 L228 122 L208 118 Z"/></g>
+          <g fill="#111"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
+          <g transform="translate(216 240)"><rect x="0" y="0" width="46" height="80" rx="8" fill="#0d0d0d"/><rect x="4" y="6" width="38" height="60" rx="2" fill="#1e88ff"/><rect x="4" y="14" width="38" height="4" fill="rgba(255,255,255,0.7)"/><rect x="4" y="22" width="26" height="4" fill="rgba(255,255,255,0.5)"/><rect x="4" y="30" width="34" height="4" fill="rgba(255,255,255,0.5)"/></g>
+          <g fill="#f4c99f"><path d="M80 350 Q90 240 130 220 Q170 200 210 250 Q200 260 175 258 Q168 280 158 300 Q155 310 165 316 L215 316 Q212 330 205 344 L100 344 Z"/></g>
+          <g fill="#c88060" opacity="0.7"><path d="M158 300 Q170 296 178 288"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(80,20,40,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">THUMB</text>
+        </symbol>
+
+        <!-- GREYSCALE: dark visor, red-and-white cane, high-contrast strips, keyboard slung over shoulder -->
+        <symbol id="p-grey" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-grey)"/>
+          <g fill="rgba(255,255,255,0.06)"><rect x="0" y="70" width="320" height="4"/><rect x="0" y="130" width="320" height="4"/><rect x="0" y="200" width="320" height="4"/><rect x="0" y="270" width="320" height="4"/></g>
+          <g fill="#d8c8b6"><ellipse cx="160" cy="150" rx="46" ry="52"/></g>
+          <g fill="#111"><rect x="108" y="130" width="104" height="26" rx="6"/></g>
+          <g fill="#e8e8e8"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
+          <g><rect x="248" y="240" width="8" height="120" fill="#f5f5f5"/><rect x="248" y="260" width="8" height="14" fill="#e33"/><rect x="248" y="292" width="8" height="14" fill="#e33"/><rect x="248" y="324" width="8" height="14" fill="#e33"/><circle cx="252" cy="230" r="7" fill="#f5f5f5"/></g>
+          <g transform="translate(70 260)"><rect x="0" y="0" width="60" height="34" rx="3" fill="#2a2a2a"/><g fill="#e8e8e8"><rect x="4" y="4" width="6" height="6"/><rect x="12" y="4" width="6" height="6"/><rect x="20" y="4" width="6" height="6"/><rect x="28" y="4" width="6" height="6"/><rect x="36" y="4" width="6" height="6"/><rect x="44" y="4" width="6" height="6"/><rect x="52" y="4" width="6" height="6"/><rect x="4" y="12" width="6" height="6"/><rect x="12" y="12" width="6" height="6"/><rect x="20" y="12" width="6" height="6"/><rect x="28" y="12" width="6" height="6"/><rect x="36" y="12" width="6" height="6"/><rect x="44" y="12" width="6" height="6"/><rect x="52" y="12" width="6" height="6"/><rect x="12" y="20" width="30" height="8"/></g></g>
+          <rect y="360" width="320" height="40" fill="rgba(0,0,0,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">GREYSCALE</text>
+        </symbol>
+
+        <!-- REDLINE: Black woman, silver bun with red pen tucked, cat-eye glasses, cardigan collar -->
+        <symbol id="p-red" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-red)"/>
+          <g fill="rgba(255,255,255,0.06)"><text x="18" y="60" font-family="Georgia, serif" font-size="16" font-style="italic">nearly three</text><text x="18" y="82" font-family="Georgia, serif" font-size="16" font-style="italic">to one</text></g>
+          <g fill="#3d251a"><ellipse cx="160" cy="150" rx="48" ry="54"/><ellipse cx="160" cy="90" rx="34" ry="28" fill="#d8d8d8"/><path d="M126 88 Q130 68 160 66 Q190 68 194 88 Q194 74 160 72 Q126 74 126 88 Z" fill="#d8d8d8"/></g>
+          <g transform="translate(178 68) rotate(28)"><rect x="0" y="0" width="34" height="6" rx="1" fill="#111"/><rect x="0" y="0" width="34" height="6" rx="1" fill="#e33"/><path d="M34 0 L42 3 L34 6 Z" fill="#c00"/></g>
+          <g fill="none" stroke="#111" stroke-width="3"><path d="M120 148 Q130 130 148 138 Q148 155 130 155 Q118 155 120 148 Z"/><path d="M172 138 Q190 130 200 148 Q202 155 190 155 Q172 155 172 138 Z"/><line x1="148" y1="145" x2="172" y2="145"/></g>
+          <g fill="#e8dcc0"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
+          <g fill="#111" opacity="0.75"><path d="M136 320 L136 348 M184 320 L184 348" stroke="#111" stroke-width="2"/><rect x="130" y="318" width="60" height="4"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(70,10,10,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">REDLINE</text>
+        </symbol>
+
+        <!-- PAYLOAD: hoodie, headphones, network topology halo of nodes and edges -->
+        <symbol id="p-payload" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-payload)"/>
+          <g stroke="rgba(255,255,255,0.35)" stroke-width="1.4" fill="none"><path d="M60 90 L110 60 L160 40 L210 60 L260 90"/><path d="M60 90 L120 130 L180 130 L260 90"/><path d="M120 130 L160 40 L200 130"/></g>
+          <g fill="rgba(255,255,255,0.85)"><circle cx="60" cy="90" r="5"/><circle cx="110" cy="60" r="5"/><circle cx="160" cy="40" r="6"/><circle cx="210" cy="60" r="5"/><circle cx="260" cy="90" r="5"/><circle cx="120" cy="130" r="4"/><circle cx="200" cy="130" r="4"/></g>
+          <g fill="#7a4e2e"><ellipse cx="160" cy="180" rx="42" ry="46"/></g>
+          <g fill="#111"><path d="M100 200 Q118 130 160 130 Q202 130 220 200 L220 260 L100 260 Z"/></g>
+          <g fill="#333"><rect x="102" y="180" width="20" height="34" rx="6"/><rect x="198" y="180" width="20" height="34" rx="6"/></g>
+          <g fill="#0aa" opacity="0.85"><rect x="106" y="188" width="12" height="4" rx="1"/><rect x="202" y="188" width="12" height="4" rx="1"/></g>
+          <g fill="#141414"><path d="M60 360 L60 320 Q160 260 260 320 L260 360 Z"/></g>
+          <g fill="#3fbcd4" opacity="0.6"><rect x="150" y="270" width="20" height="20" rx="2"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(10,50,60,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">PAYLOAD</text>
+        </symbol>
+
+        <!-- DOCTOR MISSEDIT: top hat, monocle, red cape, red pen wand, red spotlight -->
+        <symbol id="p-doc" viewBox="0 0 320 400">
+          <rect width="320" height="400" rx="12" fill="url(#g-doc)"/>
+          <rect width="320" height="400" fill="url(#g-doc-spot)"/>
+          <g fill="#0a0a0a"><rect x="112" y="30" width="96" height="70" rx="2"/><rect x="96" y="94" width="128" height="10" rx="2"/></g>
+          <g fill="#a01818"><rect x="112" y="52" width="96" height="10"/></g>
+          <g fill="#e6c8a0"><ellipse cx="160" cy="150" rx="42" ry="48"/></g>
+          <g stroke="#0a0a0a" stroke-width="3" fill="none"><circle cx="176" cy="150" r="14"/><path d="M190 156 L214 168"/></g>
+          <g fill="#0a0a0a"><path d="M148 128 L172 130 L170 138 L146 136 Z"/></g>
+          <g fill="#181818"><path d="M50 360 L60 260 L160 218 L260 260 L270 360 Z"/></g>
+          <g fill="#8c1a1a"><path d="M118 236 L160 220 L202 236 L200 360 L120 360 Z"/></g>
+          <g fill="#c33"><rect x="148" y="248" width="24" height="14" rx="1"/></g>
+          <g transform="translate(224 250) rotate(-38)"><rect x="0" y="-3" width="72" height="6" rx="1" fill="#c33"/><path d="M72 -5 L86 0 L72 5 Z" fill="#900"/><rect x="0" y="-3" width="18" height="6" rx="1" fill="#1a1a1a"/></g>
+          <rect y="360" width="320" height="40" fill="rgba(0,0,0,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#c33" letter-spacing="3">DR MISSEDIT</text>
+        </symbol>
+      </svg>
+
+      <!-- The carousel. Ten hero cards plus the villain, in reading order (Meld first because
+           he goes in first; Missedit last, obviously). Each slide is a scroll-snap point. -->
+      <div class="rec-shell">
+        <div class="rec-carousel" role="region" aria-roledescription="carousel" aria-label="The Reconcilers roster">
+          <button class="rec-nav rec-prev" type="button" aria-label="Previous hero" data-rec-dir="-1">&larr;</button>
+          <div class="rec-track" id="rec-track" aria-live="polite">
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Meld, hero 1 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Meld: hooded cartographer overlaid with a translucent city grid, compass rose on the chest"><use href="#p-meld"/></svg></div>
+              <div class="rec-info"><h5>Meld <span class="model-chip">Sonnet</span></h5><div class="lane">Context &middot; not an audit lane &middot; goes in first</div><dl>
+                <dt>Powers</dt><dd>Walks into any codebase cold and comes out with the map: what it is, how it builds, where the data lives, where the numbers on the screen come from. The other nine read it before they move, so nobody audits a notebook for missing webpack.</dd>
+                <dt>Weakness</dt><dd>Sees the whole system and wants to explain all of it. Will draw the map of a room asked to be checked for a chair.</dd>
+                <dt>Origin</dt><dd>Woke up in someone else&rsquo;s monorepo at three in the morning with no README, in the dark. Has been drawing the map for whoever walks in next ever since. Carries a compass and a lockpick set.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Ledger, hero 2 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Ledger: silver-bunned elder in a green cardigan, monocle low on the nose, open leather-bound ledger between the hands"><use href="#p-ledger"/></svg></div>
+              <div class="rec-info"><h5>Ledger <span class="model-chip">Opus</span></h5><div class="lane">Data integrity</div><dl>
+                <dt>Powers</dt><dd>Touches a number and sees where it came from. Can smell a hand-typed figure from across the room. Nothing gets on the page without a source it can be walked back to.</dd>
+                <dt>Weakness</dt><dd>Cannot accept an estimate. Applies one rule to the number in front of them and another to the one a paragraph up. Has been known to audit their own dinner receipt at the table.</dd>
+                <dt>Origin</dt><dd>Started as a precise figure in a source system. Copy-pasted into a slide, rounded, and cited back as fact three quarters later. Has been hunting that slide with a red flashlight ever since.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Doppel, hero 3 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Doppel: two overlapping silhouettes facing each other, one with a bob, one with a fade, over a purple Venn diagram"><use href="#p-doppel"/></svg></div>
+              <div class="rec-info"><h5>Doppel <span class="model-chip">Opus</span></h5><div class="lane">Entities and consistency</div><dl>
+                <dt>Powers</dt><dd>Sees every record that is secretly the same thing, and every thing that is secretly two records. The accented and the unaccented. The alias claimed a period early. The renamed category that now counts twice. Knows what the key was supposed to be.</dd>
+                <dt>Weakness</dt><dd>Sees duplicates everywhere, including in people. Will not let a join through without a grudge. Introduces themselves twice.</dd>
+                <dt>Origin</dt><dd>Was two people in a CRM for six years. Merged themselves. Refuses to say which one gets the plus-one.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Median, hero 4 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Median: bell curve behind, oversized round glasses, big headphones, calm face with an IQR tattoo peeking above the collar"><use href="#p-median"/></svg></div>
+              <div class="rec-info"><h5>Median <span class="model-chip">Opus</span></h5><div class="lane">Statistics</div><dl>
+                <dt>Powers</dt><dd>Immune to outliers. Sees the n behind every average, the denominator behind every rate, the &ldquo;significant&rdquo; with no &ldquo;against what.&rdquo; Asks what the top ten do to the fit before anyone says the word trend.</dd>
+                <dt>Weakness</dt><dd>Boring at parties. Loses all power when n is under five, and says so loudly. Has an interquartile-range tattoo on one forearm.</dd>
+                <dt>Origin</dt><dd>Sibling of Mean, who got the press. Watched one whale account drag Mean across a boardroom by the hair. Chose differently.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Chartjunk, hero 5 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Chartjunk: magenta streak in dark hair, paint-splattered smock, an X-marked 3D pie chart floating in the background"><use href="#p-chart"/></svg></div>
+              <div class="rec-info"><h5>Chartjunk <span class="model-chip">Opus</span></h5><div class="lane">Visualization craft &middot; reformed, allegedly</div><dl>
+                <dt>Powers</dt><dd>Has personally made every misleading chart at least once. The truncated axis, the dual scale, the rainbow ramp, the pie with fourteen slices, the bubble scaled by radius, the label sitting on the point it labels. Sees the anti-pattern before the render finishes.</dd>
+                <dt>Weakness</dt><dd>Relapses near a gradient. Cannot be left alone with a 3D bar chart. Wears a &ldquo;one day at a time&rdquo; chip on their smock, hand-painted.</dd>
+                <dt>Origin</dt><dd>Built a visualization so beautiful it won an award and said nothing. Read the comments. Now runs a support group for recovering pie charts.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Thumb, hero 6 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Thumb: subway commuter with a cap turned sideways, phone in one hand, an oversized foam finger on the other"><use href="#p-thumb"/></svg></div>
+              <div class="rec-info"><h5>Thumb <span class="model-chip">Sonnet</span></h5><div class="lane">UX &middot; the only member who actually uses the thing</div><dl>
+                <dt>Powers</dt><dd>Shrinks to the size of a phone screen and reads the product the way a stranger does: one thumb, on a train, no onboarding. Finds the scroll nobody knew to do, the control three taps deep, the filter that resets when you rotate.</dd>
+                <dt>Weakness</dt><dd>Will not read the docs. Ever. Has been fooled by a hidden browser tab more than once. Owns exactly one shirt.</dd>
+                <dt>Origin</dt><dd>Rode a train, opened a dashboard, missed their stop trying to scroll the table. Has been small and angry about it since.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Greyscale, hero 7 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Greyscale: dark visor, high-contrast strip in the background, red-and-white cane, mechanical keyboard slung over one shoulder like a guitar"><use href="#p-grey"/></svg></div>
+              <div class="rec-info"><h5>Greyscale <span class="model-chip">Sonnet</span></h5><div class="lane">Accessibility</div><dl>
+                <dt>Powers</dt><dd>Perceives the product through every channel except color: shape, order, text, and what the screen reader actually announces. If identity is carried by hue alone they cannot see it, and neither can eight percent of men or anyone who printed it. Keyboard only: if it cannot be tabbed to, it does not exist.</dd>
+                <dt>Weakness</dt><dd>Will tab through all four hundred marks to prove they say nothing, and rank a spec threshold beside a real loss. Ships everywhere by keyboard.</dd>
+                <dt>Origin</dt><dd>Woke up one morning seeing in greyscale and found half the world&rsquo;s dashboards had gone blank. Decided that was the dashboards&rsquo; problem.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Redline, hero 8 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Redline: silver hair pulled up in a bun with a red pen tucked in, cat-eye glasses, cardigan over ink-stained cuffs, proofreading marks floating"><use href="#p-red"/></svg></div>
+              <div class="rec-info"><h5>Redline <span class="model-chip">Opus</span></h5><div class="lane">Editorial</div><dl>
+                <dt>Powers</dt><dd>The Red Pen. Draw it under a headline and the sentence has to say the finding, not the label. Catches the claim that rotted out from under its chart, the footnote describing last quarter&rsquo;s dataset, the hedge doing a number&rsquo;s job, the &ldquo;insight&rdquo; that is only a noun.</dd>
+                <dt>Weakness</dt><dd>No tolerance for &ldquo;nearly.&rdquo; Cuts it, and sometimes the truth goes with it. Removes em dashes on sight.</dd>
+                <dt>Origin</dt><dd>Raised in a newsroom where the headline was the story and the chart was the proof. Took a job somewhere it was the other way round. Kept the red pen.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Payload, hero 9 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Payload: hood up, big headphones, a glowing network topology halo above the head, a small cyan packet in the pocket"><use href="#p-payload"/></svg></div>
+              <div class="rec-info"><h5>Payload <span class="model-chip">Sonnet</span></h5><div class="lane">Engineering, security, performance</div><dl>
+                <dt>Powers</dt><dd>Is the network tab. Reads the headers, the policy, the innerHTML a pasted string could walk straight through, the style recalc on every click, the observer created on every render and never released. Sees what the product does that nobody asked it to.</dd>
+                <dt>Weakness</dt><dd>Cannot stop seeing it. Will flag a 30ms paint on a page that loads in 400. Prefers to introduce themselves via their JIRA history.</dd>
+                <dt>Origin</dt><dd>A code review fused them to the production config. It was not reversible.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide villain" role="group" aria-roledescription="slide" aria-label="Doctor Missedit, the villain, slide 10 of 10">
+              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Doctor Missedit: top hat with a red band, monocle glinting, black-and-red cape, red fountain pen held aloft, spotlit in red"><use href="#p-doc"/></svg></div>
+              <div class="rec-info"><h5>Doctor Missedit <span class="model-chip">Fable</span></h5><div class="lane">The audit itself &middot; arrives uninvited</div><dl>
+                <dt>Powers</dt><dd>Encyclopedic knowledge of each hero&rsquo;s weakness, which is the same thing as knowing each lane&rsquo;s characteristic false positive. May only remove confidence from a finding, never add one. Verdicts: <b>stands</b>, <b>downgraded</b>, <b>artifact</b>, <b>fix mismatch</b>.</dd>
+                <dt>Weakness</dt><dd>Produces nothing on his own. Cannot resist &ldquo;well, actually,&rdquo; and a team that was mostly right makes him irritable rather than useful.</dd>
+                <dt>Origin</dt><dd>Was the ninth hero, codename Second Opinion. Cut from the team because nobody wanted the meeting. Read the eight reports anyway, found four errors, and was never invited back. Turned. Attends the audits uninvited, and expects a monologue.</dd>
+              </dl></div>
+            </article>
+
+          </div>
+          <button class="rec-nav rec-next" type="button" aria-label="Next hero" data-rec-dir="1">&rarr;</button>
+        </div>
+        <div class="rec-below">
+          <div class="rec-dots" id="rec-dots" role="tablist" aria-label="Choose a hero"></div>
+          <button class="rec-play" id="rec-play" type="button" aria-pressed="true" aria-label="Pause auto-advance">Pause &#9612;&#9612;</button>
+        </div>
       </div>
 
       <div class="card">
-        <h4 class="card-title">The roster</h4>
-        <div class="heroes">
-          <div class="hero"><h5>Meld</h5><div class="lane">Context &middot; not an audit lane &middot; goes in first</div><dl>
-            <dt>Powers</dt><dd>Walks into any codebase cold and comes out with the map: what it is, how it builds, where the data lives, where the numbers on the screen come from. The other eight read it before they move, so nobody audits a notebook for missing webpack.</dd>
-            <dt>Weakness</dt><dd>Sees the whole system and wants to explain all of it. Will draw the map of a room asked to be checked for a chair.</dd>
-            <dt>Origin</dt><dd>Woke up in someone else&rsquo;s codebase with no README, in the dark. Has been drawing the map for whoever walks in next ever since.</dd></dl></div>
-          <div class="hero"><h5>Ledger</h5><div class="lane">Data integrity</div><dl>
-            <dt>Powers</dt><dd>Touches a number and sees where it came from. Can smell a hand-typed figure from across the room. Nothing gets on the page without a source it can be walked back to.</dd>
-            <dt>Weakness</dt><dd>Cannot accept an estimate. Applies one rule to the number in front of it and another to the one a paragraph up.</dd>
-            <dt>Origin</dt><dd>Born a precise figure in a source system. Copy-pasted into a slide, rounded, and cited back as fact three quarters later. Has been hunting that slide ever since.</dd></dl></div>
-          <div class="hero"><h5>Doppel</h5><div class="lane">Entities and consistency</div><dl>
-            <dt>Powers</dt><dd>Sees every record that is secretly the same thing, and every thing that is secretly two records. Knows what the key was supposed to be.</dd>
-            <dt>Weakness</dt><dd>Sees duplicates everywhere, including in people. Will not let a join through without a grudge.</dd>
-            <dt>Origin</dt><dd>Was two people in a CRM for six years. Merged themselves. Now does it for others.</dd></dl></div>
-          <div class="hero"><h5>Median</h5><div class="lane">Statistics</div><dl>
-            <dt>Powers</dt><dd>Immune to outliers. Sees the n behind every average, the denominator behind every rate, the &ldquo;significant&rdquo; with no &ldquo;against what.&rdquo;</dd>
-            <dt>Weakness</dt><dd>Boring at parties. Loses all power when n is under five, and says so loudly, on the slide.</dd>
-            <dt>Origin</dt><dd>Sibling of Mean, who got the press. Watched one whale account drag Mean across a boardroom by the hair. Chose differently.</dd></dl></div>
-          <div class="hero"><h5>Chartjunk</h5><div class="lane">Visualization craft</div><dl>
-            <dt>Powers</dt><dd>Has personally made every misleading chart at least once, so recognizes them on sight. Sees the anti-pattern before the render finishes. Reformed, allegedly.</dd>
-            <dt>Weakness</dt><dd>Relapses near a 3D bar chart. Cannot be left alone with a gradient.</dd>
-            <dt>Origin</dt><dd>Built a visualization so beautiful it won an award and said nothing. Read the comments. Turned.</dd></dl></div>
-          <div class="hero"><h5>Thumb</h5><div class="lane">UX</div><dl>
-            <dt>Powers</dt><dd>Shrinks to the size of a phone screen and reads the product the way a stranger does: one thumb, on a train, no onboarding. The only member of the team who uses the thing.</dd>
-            <dt>Weakness</dt><dd>Will not read the docs. Ever. Has been fooled by a hidden browser tab more than once.</dd>
-            <dt>Origin</dt><dd>A normal person who opened a dashboard on a phone, in a hurry, once. Couldn&rsquo;t scroll the table any farther. Has been small and angry about it since.</dd></dl></div>
-          <div class="hero"><h5>Greyscale</h5><div class="lane">Accessibility</div><dl>
-            <dt>Powers</dt><dd>Perceives the product through every channel except color. Keyboard only: if it can&rsquo;t be tabbed to, it doesn&rsquo;t exist.</dd>
-            <dt>Weakness</dt><dd>Will tab through all four hundred marks to prove they say nothing, and rank a spec beside a real loss.</dd>
-            <dt>Origin</dt><dd>Woke up one morning seeing in greyscale and found half the world&rsquo;s dashboards had gone blank. Decided that was the dashboards&rsquo; problem.</dd></dl></div>
-          <div class="hero"><h5>Redline</h5><div class="lane">Editorial</div><dl>
-            <dt>Powers</dt><dd>The Red Pen. Draw it under a headline and the sentence has to say the finding, not the label. Catches the claim that rotted out from under its chart.</dd>
-            <dt>Weakness</dt><dd>No tolerance for &ldquo;nearly.&rdquo; Cuts it, and sometimes the truth goes with it.</dd>
-            <dt>Origin</dt><dd>Raised in a newsroom where the headline was the story and the chart was the proof. Took a job somewhere it was the other way round.</dd></dl></div>
-          <div class="hero"><h5>Payload</h5><div class="lane">Engineering, security, performance</div><dl>
-            <dt>Powers</dt><dd>Is the network tab. Reads the headers, the policy, the innerHTML a pasted string could walk through, the observer created on every render and never released.</dd>
-            <dt>Weakness</dt><dd>Can&rsquo;t stop seeing it. Will flag a 30ms paint on a page that loads in 400.</dd>
-            <dt>Origin</dt><dd>A code review fused them to the production config. It was not reversible.</dd></dl></div>
-          <div class="hero villain"><h5>Doctor Missedit</h5><div class="lane">The audit itself · arrives uninvited</div><dl>
-            <dt>Powers</dt><dd>Encyclopedic knowledge of each hero&rsquo;s weakness, which is the same thing as knowing each lane&rsquo;s characteristic false positive. May only remove confidence from a finding, never add one. Verdicts: stands, downgraded, artifact, fix mismatch.</dd>
-            <dt>Weakness</dt><dd>Produces nothing on his own. Cannot resist &ldquo;well, actually,&rdquo; and a team that was mostly right makes him irritable rather than useful.</dd>
-            <dt>Origin</dt><dd>Was the ninth hero, codename Second Opinion. Cut from the team because nobody wanted the meeting. Read the eight reports anyway, found four errors, and was never invited back. Turned.</dd></dl></div>
-        </div>
+        <h4 class="card-title">Ports to other agent runtimes</h4>
+        <p>The Claude Code install (<span class="mono">install.sh</span> or <span class="mono">install.ps1</span>, default) copies the ten agent files to <span class="mono">.claude/agents/</span> and the skill to <span class="mono">.claude/skills/reconcilers/</span>. The bundle also ships an <span class="mono">adapters/</span> folder with a Codex adapter (<span class="mono">AGENTS.md</span> at the repo root: one agent runs the ten lanes sequentially, the exact same briefs) and a porting guide that describes the protocol in one page so a Cursor, Aider or Cline user can drop in an equivalent rules file. Install with a flag: <span class="mono">install.sh --platform codex</span>. Read-only in every adapter.</p>
       </div>
 
       <div class="card">
@@ -3926,7 +4173,7 @@
   /* ---------- section tabs ---------- */
   // Six tabs, one per act. Everything still renders at load; a tab just hides the other acts, so a
   // phone scrolls two to four sections instead of fifteen. Hashes deep-link into any section.
-  var TABS = ["act1", "act2", "act3", "act4", "mistakes", "ledger", "ref"]; // reading order; drives the Back / Next pager
+  var TABS = ["act1", "act2", "act3", "act4", "mistakes", "ledger", "ref", "reconcilers"]; // reading order; drives the Back / Next pager
   // sections per tab, for the read-progress bar: a tab is worth what it holds, not one seventh
   var SEC_IN = TABS.map(function (k) { return document.querySelectorAll('section.view[data-tab="' + k + '"]').length || 1; });
   var SEC_BEFORE = SEC_IN.map(function (_, i) { return SEC_IN.slice(0, i).reduce(function (a, b) { return a + b; }, 0); });
@@ -4161,6 +4408,98 @@
     });
     ol.innerHTML = html;
   }
+
+  // §16 carousel: scroll-snap track, prev/next, dots, auto-advance, keyboard, reduced-motion.
+  // Pauses when the reader hovers or focuses inside, and when the carousel scrolls out of view.
+  (function () {
+    var track = document.getElementById("rec-track");
+    var dotsHost = document.getElementById("rec-dots");
+    var playBtn = document.getElementById("rec-play");
+    if (!track || !dotsHost || !playBtn) return;
+    var slides = track.querySelectorAll(".rec-slide");
+    if (!slides.length) return;
+    var idx = 0, timer = null, paused = false;
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Build the dot row from the slide count
+    for (var i = 0; i < slides.length; i++) {
+      var d = document.createElement("button");
+      d.type = "button"; d.className = "rec-dot";
+      d.setAttribute("role", "tab");
+      var name = (slides[i].querySelector(".rec-info h5") || {}).textContent || ("Slide " + (i + 1));
+      // strip a trailing model chip like "Ledger Opus" back to "Ledger"
+      name = name.replace(/\s+(Sonnet|Opus|Fable|Haiku)\s*$/i, "").trim();
+      d.setAttribute("aria-label", "Go to " + name);
+      d.dataset.i = i;
+      dotsHost.appendChild(d);
+    }
+    var dots = dotsHost.querySelectorAll(".rec-dot");
+    function paint() {
+      for (var i = 0; i < dots.length; i++) dots[i].setAttribute("aria-current", i === idx ? "true" : "false");
+    }
+    function goTo(i, opts) {
+      opts = opts || {};
+      idx = ((i % slides.length) + slides.length) % slides.length;
+      var s = slides[idx];
+      track.scrollTo({ left: s.offsetLeft - track.offsetLeft, behavior: opts.jump ? "auto" : (reduced ? "auto" : "smooth") });
+      paint();
+    }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function start() {
+      if (paused || reduced) return;
+      stop();
+      timer = setInterval(function () { goTo(idx + 1); }, 6500);
+    }
+    playBtn.addEventListener("click", function () {
+      paused = !paused;
+      playBtn.setAttribute("aria-pressed", paused ? "false" : "true");
+      playBtn.setAttribute("aria-label", paused ? "Resume auto-advance" : "Pause auto-advance");
+      playBtn.innerHTML = paused ? "Play &#9654;" : "Pause &#9612;&#9612;";
+      if (paused) stop(); else start();
+    });
+    document.querySelectorAll("[data-rec-dir]").forEach(function (b) {
+      b.addEventListener("click", function () { goTo(idx + parseInt(b.getAttribute("data-rec-dir"), 10)); });
+    });
+    dotsHost.addEventListener("click", function (e) {
+      var d = e.target.closest(".rec-dot"); if (!d) return;
+      goTo(parseInt(d.dataset.i, 10));
+    });
+    // keyboard: left/right when focus is inside the carousel
+    track.parentNode.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); goTo(idx - 1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); goTo(idx + 1); }
+      else if (e.key === "Home") { e.preventDefault(); goTo(0); }
+      else if (e.key === "End") { e.preventDefault(); goTo(slides.length - 1); }
+    });
+    // sync when the reader swipes/scrolls the track by hand
+    var scrollT;
+    track.addEventListener("scroll", function () {
+      clearTimeout(scrollT);
+      scrollT = setTimeout(function () {
+        var best = 0, bestD = Infinity;
+        for (var i = 0; i < slides.length; i++) {
+          var d = Math.abs(slides[i].offsetLeft - track.scrollLeft);
+          if (d < bestD) { bestD = d; best = i; }
+        }
+        idx = best; paint();
+      }, 90);
+    });
+    // pause while the reader is interacting; only auto-advance while the carousel is on screen
+    var host = track.closest(".rec-carousel");
+    ["mouseenter", "focusin"].forEach(function (ev) { host.addEventListener(ev, stop); });
+    ["mouseleave", "focusout"].forEach(function (ev) { host.addEventListener(ev, function () { if (!paused) start(); }); });
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting && !paused) start(); else stop(); });
+      }, { threshold: 0.25 });
+      io.observe(host);
+    } else {
+      start();
+    }
+    // land at slide 0 on first paint even if the reader arrives on the reconcilers tab via hash
+    goTo(0, { jump: true });
+    // if a resize changes the slide width, re-snap to the current idx
+    window.addEventListener("resize", function () { goTo(idx, { jump: true }); });
+  })();
 
   var booted = false;
   if (!goToHash({ scroll: false })) setTab("act1", { push: false });

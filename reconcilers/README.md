@@ -27,27 +27,42 @@ There are two model rosters. **Standard issue** is the table above. **Flamethrow
 
 ## Install
 
-You need [Claude Code](https://claude.com/claude-code). Then, from the folder that holds the product you want audited:
-
-**Windows (PowerShell)**
-
-```powershell
-& "<path-to-this-folder>\install.ps1"
-```
-
-**macOS / Linux**
+**Claude Code** (default). From the folder that holds the product you want audited:
 
 ```bash
-bash <path-to-this-folder>/install.sh
+bash <path-to-this-folder>/install.sh                        # macOS / Linux
+& "<path-to-this-folder>\install.ps1"                        # Windows PowerShell
 ```
 
-Either one copies `agents/*.md` into `.claude/agents/` and `SKILL.md` into `.claude/skills/reconcilers/` in the current directory. Nothing is installed globally; the team is scoped to the repo you called them for. To uninstall, delete those two paths.
+Copies `agents/*.md` into `.claude/agents/` and `SKILL.md` into `.claude/skills/reconcilers/`. Nothing is installed globally; the team is scoped to the repo you called them for.
+
+**Codex.** Same folder, pass `--platform codex`:
+
+```bash
+bash <path-to-this-folder>/install.sh --platform codex       # macOS / Linux
+& "<path-to-this-folder>\install.ps1" -Platform codex        # Windows PowerShell
+```
+
+Copies `adapters/codex/AGENTS.md` to `AGENTS.md` at the repo root. Codex reads it on startup. If an `AGENTS.md` was already there, it is backed up to `AGENTS.md.bak` first.
+
+**Any other runtime.** Read `adapters/PORTING.md`: it defines the protocol in one page so a Cursor rules file, an Aider `CONVENTIONS.md`, a Cline `CLAUDE.md`, or a shell script can host the team. The mandates travel unchanged; only the surrounding metadata (dispatcher, model choice, tools) is per-runtime.
+
+To uninstall, delete whatever the installer copied.
 
 ## Call them
+
+Claude Code:
 
 ```
 claude
 /reconcilers
+```
+
+Codex:
+
+```
+codex
+> run the Reconcilers episode against this repo
 ```
 
 The skill asks three things: what the product is (one line), which model roster, and whether it may use the browser. Then Meld goes in, then the eight, then the report, then the surprise.
