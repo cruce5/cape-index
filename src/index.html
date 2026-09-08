@@ -1178,7 +1178,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">91 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">92 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1272,6 +1272,7 @@
           <li><b>&ldquo;The case for the progress bar spanning the document, not the page.&rdquo;</b> It&rsquo;s a good case. Inside a tab the native scrollbar already says the same thing, so a per-tab bar was spending a whole design element on information the browser gives away, and it was misleading in the worst direction: finishing the Scoreboard filled it to 100%, which reads as <em>done</em> when you are one seventh in. A bar that claims you have finished six times before you finish is worse than no bar. It is tab-weighted rather than measured in pixels, because a hidden tab has no height and &sect;15&rsquo;s fold-outs move the total while you stand on it: completed tabs plus your fraction of this one, over seven. Fixed denominator, nothing measured off-screen, and jumping to Reference honestly puts you near the end.</li>
           <li><b>&ldquo;I don&rsquo;t know if I like starting and ending with green on the colorful one.&rdquo;</b> Neither do I, and it was measurably the wrong order as well as the wrong look: green appeared twice while every other hue appeared once, and the wrap back to it was the biggest single jump in the bar. Solved by brute force instead of taste - all 720 orderings scored in OKLab for total blend distance, worst single step, and how far apart the two ends land, in both themes at once. The winner is magenta, gray, blue, cyan, green, gold: <b>19% smoother</b> overall, worst step down from 33 to 21, and the two ends now differ by 33 rather than 21. Stops are spaced by how far each step actually travels, so no transition gets squeezed.</li>
           <li><b>&ldquo;I can&rsquo;t scroll this table any farther, and should we freeze the first column?&rdquo;</b> Both, and they were the same bug wearing two faces. The mobile stylesheet was explicitly turning the frozen first column <em>off</em>, so scrolling right left every row anonymous, and the ledger was shipping five of its fourteen columns on a phone, so there was nothing much to scroll to. That also made the section&rsquo;s own dek false: it promises every field, and its design note calls the table the accessibility backbone. All fourteen columns on every width now, with the film name pinned at 118px under a soft edge so you always know which row you are reading.</li>
+          <li><b>&ldquo;Hitting Next makes the progress bar bounce forward and then come back.&rdquo;</b> It did: the tab index flips at the top of the switch while the scroll is still deep in the tab you are leaving, so for a few hundred milliseconds the bar was pairing the new tab with the old position. Two dead ends before the fix. Suppressing repaints was order-dependent, so anything that painted before the suppression still lurched. Detecting &ldquo;the smooth scroll has stopped&rdquo; was worse, because it pauses for a frame mid-flight and every threshold either fired early or held too long. What works is dropping the scroll out of it entirely: during a transition the within-tab fraction is pinned to zero, which lands exactly on the boundary between the two tabs, and that is the same number the outgoing tab ended on, so nothing moves whatever repaints. It resumes on the reader&rsquo;s first wheel, touch or key, because a programmatic jump to the top of a tab is not reading.</li>
         </ol>
       </details>
 
@@ -1428,7 +1429,7 @@
       apply(!!STATE.expand[key]);
       if (!STATE.expand[key]) {
         var s = host.closest("section.view");
-        if (s) s.scrollIntoView({ block: "start" });
+        if (s) { if (STATE.freezeRead) STATE.freezeRead(); s.scrollIntoView({ block: "start" }); }
       }
     });
     host.parentNode.insertBefore(b, host.nextSibling);
@@ -1456,7 +1457,7 @@
       renderAll();
       if (!STATE.expand[key]) {
         var s = document.getElementById(id).closest("section.view");
-        if (s) s.scrollIntoView({ block: "start" });
+        if (s) { if (STATE.freezeRead) STATE.freezeRead(); s.scrollIntoView({ block: "start" }); }
       }
     });
     host.parentNode.insertBefore(b, host.nextSibling);
@@ -3503,6 +3504,10 @@
   var TABS = ["act1", "act2", "act3", "act4", "mistakes", "ledger", "ref"]; // reading order; drives the Back / Next pager
   function setTab(key, opts) {
     opts = opts || {};
+    // Freeze first, before anything below can repaint. The tab index changes on the next
+    // line while the scroll position is still deep in the OUTGOING tab, so any paint in
+    // between pairs the new index with the old position and lurches the bar forward.
+    if (opts.scroll && STATE.freezeRead) STATE.freezeRead();
     if (TABS.indexOf(key) < 0) key = "act1";
     document.querySelectorAll("main [data-tab]").forEach(function (el) { el.hidden = el.getAttribute("data-tab") !== key; });
     document.querySelectorAll(".tab").forEach(function (b) { if (b.getAttribute("data-tab") === key) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current"); });
@@ -3519,7 +3524,10 @@
     if (booted) { var w = measureChartWidth(); if (w && Math.abs(w - MW) > 2) renderAll(); }
     // scroll to the start of the new tab: its act divider. (Scrolling to the sticky tab bar was a no-op
     // once the bar was stuck, since a stuck element reports its position as wherever you already are.)
-    if (opts.scroll) { var first = document.querySelector('main .act[data-tab="' + key + '"]'); if (first) first.scrollIntoView({ block: "start" }); }
+    if (opts.scroll) {
+      var first = document.querySelector('main .act[data-tab="' + key + '"]');
+      if (first) first.scrollIntoView({ block: "start" });
+    }
   }
   // the tab strip clips on a phone and nothing said "there is more to the right": a fade on the strip
   // while it can still scroll, and a Back / Next pair at the bottom of every tab, named for where they go
@@ -3562,13 +3570,19 @@
   // who jumps to Reference honestly near the end.
   (function () {
     var fill = document.querySelector(".spectrum-bar i"); if (!fill) return;
-    var queued = false;
+    var queued = false, settling = false, settleToken = 0;
     function paint() {
       queued = false;
+
       var doc = document.documentElement;
       var h = doc.scrollHeight - window.innerHeight;
-      // a tab that fits the viewport has been read in full the moment you land on it
-      var within = h > 8 ? Math.min(1, Math.max(0, window.scrollY / h)) : 1;
+      // Next/Back flip the tab index while the scroll is still deep in the OUTGOING tab, so
+      // a paint in that window pairs the new index with the old position and lurches the bar
+      // forward before it walks back. While the transition settles the fraction is pinned to
+      // 0, which lands exactly on the boundary - the same number the previous tab ended on -
+      // so the bar holds still no matter what repaints or in what order.
+      // A tab that fits the viewport has been read in full the moment you land on it.
+      var within = settling ? 0 : (h > 8 ? Math.min(1, Math.max(0, window.scrollY / h)) : 1);
       var i = TABS.indexOf(STATE.tab); if (i < 0) i = 0;
       var p = Math.min(1, (i + within) / TABS.length);
       fill.style.width = (p * 100).toFixed(2) + "%";
@@ -3581,6 +3595,25 @@
     // bar frozen at whatever it read when the tab went away
     document.addEventListener("visibilitychange", function () { if (!document.hidden) { queued = false; paint(); } });
     STATE.repaintRead = function () { queued = false; paint(); };
+    // Thaw on the reader, not on the scroll. Detecting "the smooth scroll has stopped" was
+    // unreliable - it pauses for a frame mid-flight and every stillness threshold either
+    // fired early or held too long. But the thing being measured is reading, and a
+    // programmatic jump to the top of a tab is not reading: pin the fraction to 0 until the
+    // reader actually moves the page themselves, with a time cap so it can never stick.
+    var THAW_ON = ["wheel", "touchstart", "keydown", "pointerdown"];
+    STATE.freezeRead = function () {
+      // no paint here: setTab has not flipped STATE.tab yet, so painting now would use the
+      // outgoing index with a pinned 0 and blip the bar backwards
+      settling = true;
+      var mine = ++settleToken;
+      var thaw = function () {
+        if (mine !== settleToken) return;   // a newer transition has taken over
+        THAW_ON.forEach(function (ev) { window.removeEventListener(ev, thaw); });
+        settling = false; queued = false; paint();
+      };
+      THAW_ON.forEach(function (ev) { window.addEventListener(ev, thaw, { passive: true }); });
+      setTimeout(thaw, 1500);
+    };
     paint();
   })();
   (function () { var strip = document.querySelector(".tabs-inner"); if (strip) strip.addEventListener("scroll", updateTabStrip, { passive: true }); window.addEventListener("resize", updateTabStrip); })();
@@ -3639,7 +3672,7 @@
     var el = document.getElementById(h), t = el && el.closest("[data-tab]");
     if (!t) return false;
     setTab(t.getAttribute("data-tab"), { push: false });
-    if (opts.scroll !== false) el.scrollIntoView();
+    if (opts.scroll !== false) { if (STATE.freezeRead) STATE.freezeRead(); el.scrollIntoView(); }
     return true;
   }
   document.querySelectorAll(".tab").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-tab"), { scroll: true }); }); });
