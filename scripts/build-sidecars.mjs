@@ -96,9 +96,9 @@ writeFileSync(
     "/*",
     "  X-Content-Type-Options: nosniff",
     "  Referrer-Policy: strict-origin-when-cross-origin",
-    // preload is deliberately absent until the zone redirects http:// to https:// (a zone
-    // setting, not a repo one); browsers ignore HSTS delivered over plain HTTP anyway
-    "  Strict-Transport-Security: max-age=31536000; includeSubDomains",
+    // preload is only honest once the zone redirects http:// to https:// (Always Use HTTPS,
+    // switched on 2026-09-08) and www 301s to the apex; both do now
+    "  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
     "  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()",
     "  Cross-Origin-Opener-Policy: same-origin",
     "  Content-Security-Policy: " + CSP,
