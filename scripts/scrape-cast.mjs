@@ -200,7 +200,15 @@ const CANON = {
   "Killmonger": "Killmonger", "Erik Killmonger": "Killmonger", "Erik Killmonger Stevens": "Killmonger", "Erik Stevens": "Killmonger", "N'Jadaka": "Killmonger",
   "Vulture": "Vulture", "Adrian Toomes": "Vulture",
   "Mysterio": "Mysterio", "Quentin Beck": "Mysterio",
-  "Green Goblin": "Green Goblin", "Norman Osborn": "Green Goblin",
+  "Green Goblin": "Green Goblin",
+  // Two Osborns, three goblin identities. Norman is the Green Goblin (Dafoe, 2002 + NWH).
+  // Harry is the *New* Goblin in Raimi's trilogy and a second Green Goblin in Webb's, so the
+  // mantle splits the way Steve / Sam Wilson Captain America does. Neither Osborn is mapped
+  // from his bare real name: Harry is credited plain "Harry Osborn" in Spider-Man and
+  // Spider-Man 2 (no goblin yet) and Chris Cooper's Norman never becomes one in TASM2.
+  "Norman Osborn / Green Goblin": "Green Goblin",
+  "New Goblin": "New Goblin", "Harry Osborn / New Goblin": "New Goblin",
+  "Harry Osborn / Green Goblin": "Green Goblin (Harry Osborn)",
   "Doctor Octopus": "Doctor Octopus", "Otto Octavius": "Doctor Octopus",
   "Electro": "Electro", "Max Dillon": "Electro",
   "Yellowjacket": "Yellowjacket", "M.O.D.O.K.": "M.O.D.O.K.", "M.O.D.O.K": "M.O.D.O.K.", "Darren Cross": "Yellowjacket",
@@ -226,7 +234,8 @@ const CANON = {
   "Invisible Woman": "Invisible Woman", "Sue Storm": "Invisible Woman", "Susan Storm": "Invisible Woman",
   "Human Torch": "Human Torch", "Johnny Storm": "Human Torch", "Jonathan Storm": "Human Torch",
   "The Thing": "The Thing", "Ben Grimm": "The Thing", "Benjamin Grimm": "The Thing",
-  "Silver Surfer": "Silver Surfer", "Shalla-Bal": "Silver Surfer",
+  "Silver Surfer": "Silver Surfer", "Norrin Radd": "Silver Surfer",
+  "Shalla-Bal": "Silver Surfer (Shalla-Bal)", "Shalla-Bal / Silver Surfer": "Silver Surfer (Shalla-Bal)",
   "Mole Man": "Mole Man", "Harvey Elder": "Mole Man",
   "Shang-Chi": "Shang-Chi", "Xu Shang-Chi": "Shang-Chi", "Shaun": "Shang-Chi",
   "Xialing": "Xialing", "Xu Xialing": "Xialing",
@@ -331,7 +340,6 @@ const CANON = {
   "Victor von Doom": "Doctor Doom", "Doctor Doom": "Doctor Doom", "Victor Domashev": "Doctor Doom", "Dr. Doom": "Doctor Doom", "Doom": "Doctor Doom",
   // The Amazing Spider-Man 1 & 2 (Garfield Spider-Man merges into the Spider-Man row)
   "Curt Connors": "Lizard", "The Lizard": "Lizard", "Lizard": "Lizard",
-  "Harry Osborn": "Green Goblin",
   // Raimi Spider-Man trilogy (2002–2007) — Maguire's Peter merges into the Spider-Man row
   "Flint Marko": "Sandman", "Sandman": "Sandman",
   "Eddie Brock": "Venom",
@@ -359,7 +367,12 @@ const CANON = {
 const DROP = new Set(["Anne", "Isis", "Sol Soria", "Grid", "The Kid", "Girl", "Milo Morbius", "Milo", "Lucien"]);
 // Identities that are a later transformation, not a through-line: only count a film
 // where the credit actually carries the alias ("Real Name / Codename"), never a bare real name.
-const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)"]);
+// Hope van Dyne is credited plainly in Ant-Man and gets the suit in its mid-credits scene;
+// the other three films slash the credit. Same shape as Red Hulk.
+const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)", "New Goblin", "Green Goblin (Harry Osborn)", "Silver Surfer (Shalla-Bal)", "Wasp"]);
+// Wikipedia credits one performer under two billings across a series; the roll-up should not
+// show her twice in the same actor list.
+const ACTOR_ALIAS = { "Rebecca Romijn-Stamos": "Rebecca Romijn" };
 const canon = (c) => CANON[c] || c;
 const CANON_LC = {};
 for (const [k, v] of Object.entries(CANON)) CANON_LC[k.toLowerCase()] = v;
@@ -427,8 +440,9 @@ for (const f of films) {
     if (!chars.has(name)) chars.set(name, { name, real: real || null, universes: new Set(), actors: new Set(), films: [] });
     const rec = chars.get(name);
     rec.universes.add(f.universe);
-    if (r.actor) rec.actors.add(r.actor);
-    rec.films.push({ title: f.title, universe: f.universe, date: f.release_date, order: r.order, minor: r.minor, actor: r.actor });
+    const actor = ACTOR_ALIAS[r.actor] || r.actor;
+    if (actor) rec.actors.add(actor);
+    rec.films.push({ title: f.title, universe: f.universe, date: f.release_date, order: r.order, minor: r.minor, actor: actor });
   }
   console.log(rows.length + " credited, " + seen.size + " codenamed");
 }

@@ -876,7 +876,7 @@
       <div class="view-head">
         <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELLED</span>
         <h2>Spider-Man has been in twelve films, more than any other character by a clear margin</h2>
-        <p class="dek">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man is next at nine, Wolverine at eight; Batman, at seven across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 130-odd characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
+        <p class="dek">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man is next at nine, Wolverine at eight; Batman, at seven across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 134 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -888,8 +888,8 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Who carries the most cross-film weight?</dd>
           <dt>Why this form</dt><dd>A lollipop, not a bar: the counts are small integers (2&ndash;12), so a dot on a light stem reads the value cleanly without a heavy block of ink for &ldquo;3&rdquo;.</dd>
-          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are ~130 of them and they&rsquo;d bury the signal.</dd>
-          <dt>Watch for</dt><dd>Each identity is one person here. &ldquo;Captain America&rdquo; is Steve Rogers; Sam Wilson&rsquo;s turn is its own row, as are Yelena&rsquo;s Black Widow and Shuri&rsquo;s Black Panther. A codename counts from the film the character takes it up, not before, so Red Hulk and Mighty Thor sit at one film each.</dd>
+          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are 134 of them and they&rsquo;d bury the signal.</dd>
+          <dt>Watch for</dt><dd>Each identity is one person here. &ldquo;Captain America&rdquo; is Steve Rogers; Sam Wilson&rsquo;s turn is its own row, as are Yelena&rsquo;s Black Widow and Shuri&rsquo;s Black Panther. A codename counts from the film the character takes it up, not before, so Red Hulk and Mighty Thor sit at one film each, and Harry Osborn doesn&rsquo;t appear at all until he puts a mask on. Where two people have worn one name, the rows split: Norman Osborn is the Green Goblin, Harry is the New Goblin in Raimi&rsquo;s trilogy and a second Green Goblin in Webb&rsquo;s, and Shalla-Bal is a second Silver Surfer.</dd>
         </dl></div>
       </div>
     </div>
@@ -1088,7 +1088,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">67 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">68 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1158,6 +1158,7 @@
           <li><b>&ldquo;I made this gradient bar, could we put it under the title for a splash of colour?&rdquo;</b> Rebuilt from the palette tokens rather than pasted as hex, so it re-mixes itself for the light theme instead of being a second, stale copy of the colours. Same order he drew: green, grey, magenta, gold, blue, cyan, with the grey carried in the middle as a transition rather than left to end the run.</li>
           <li><b>&ldquo;The inconsistent white space on these scorecards is BOTHERSOME.&rdquo;</b> Read the wrong way round first: the tiles were sized to their own content, which made the space after each value identical and the tiles three different widths. <b>&ldquo;I STILL want them evenly distributed width wise.&rdquo;</b> The tiles are the repeated object, so they are three equal columns; the air after a value differs because the values do.</li>
           <li><b>&ldquo;Would it be cool if the gradient bar stuck at the top and followed the scroll?&rdquo;</b> It rides the top edge of the sticky tab bar and fills left to right as you read: dim for what&rsquo;s still below the fold, saturated for what you&rsquo;ve passed. Each tab is its own page length, so switching tabs re-measures. The fill is a window onto a 100vw copy of the gradient rather than a squashed one, so the colours stay put instead of sliding as the bar grows.</li>
+          <li><b>&ldquo;James Franco is tagged as Green Goblin. Wasn&rsquo;t he the New Goblin? Is my data rock solid?&rdquo;</b> It wasn&rsquo;t. One line in the canonicaliser, <code>"Harry Osborn": "Green Goblin"</code>, broke both of the roster&rsquo;s own rules at once: it counted Franco in <em>Spider-Man 2</em>, where Harry has no goblin identity at all, called his <em>Spider-Man 3</em> turn Green Goblin when the credit says New Goblin, and folded two Harrys and a Norman into one row. Green Goblin is Norman&rsquo;s, at two films; New Goblin and Webb&rsquo;s Green Goblin are their own rows. The same audit found Shalla-Bal folded into Norrin Radd&rsquo;s Silver Surfer, Hope van Dyne counted as the Wasp a film before she gets the suit, and one actor listed twice under two spellings of her own name. The scraped credits were right the whole time; the mapping on top of them wasn&rsquo;t.</li>
         </ol>
       </details>
 

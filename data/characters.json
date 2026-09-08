@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-07T01:27:27.600Z",
+  "generated": "2026-09-08T00:21:10.250Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 223,
+  "count": 226,
   "characters": [
     {
       "name": "Spider-Man",
@@ -945,7 +945,6 @@
       ],
       "actors": [
         "Rebecca Romijn",
-        "Rebecca Romijn-Stamos",
         "Jennifer Lawrence"
       ],
       "appearances": 7,
@@ -964,7 +963,7 @@
           "date": "2003-05-02",
           "order": 10,
           "minor": false,
-          "actor": "Rebecca Romijn-Stamos"
+          "actor": "Rebecca Romijn"
         },
         {
           "title": "X-Men: The Last Stand",
@@ -1540,62 +1539,6 @@
           "order": 2,
           "minor": false,
           "actor": "Zoe Saldaña"
-        }
-      ]
-    },
-    {
-      "name": "Green Goblin",
-      "real_name": "Norman Osborn",
-      "universes": [
-        "SSU",
-        "MCU"
-      ],
-      "actors": [
-        "Willem Dafoe",
-        "James Franco",
-        "Dane DeHaan"
-      ],
-      "appearances": 5,
-      "films": [
-        {
-          "title": "Spider-Man",
-          "universe": "SSU",
-          "date": "2002-05-03",
-          "order": 2,
-          "minor": false,
-          "actor": "Willem Dafoe"
-        },
-        {
-          "title": "Spider-Man 2",
-          "universe": "SSU",
-          "date": "2004-06-30",
-          "order": 3,
-          "minor": false,
-          "actor": "James Franco"
-        },
-        {
-          "title": "Spider-Man 3",
-          "universe": "SSU",
-          "date": "2007-05-04",
-          "order": 3,
-          "minor": false,
-          "actor": "James Franco"
-        },
-        {
-          "title": "The Amazing Spider-Man 2",
-          "universe": "SSU",
-          "date": "2014-05-02",
-          "order": 4,
-          "minor": false,
-          "actor": "Dane DeHaan"
-        },
-        {
-          "title": "Spider-Man: No Way Home",
-          "universe": "MCU",
-          "date": "2021-12-17",
-          "order": 7,
-          "minor": false,
-          "actor": "Willem Dafoe"
         }
       ]
     },
@@ -2525,51 +2468,6 @@
       ]
     },
     {
-      "name": "Wasp",
-      "real_name": "Hope van Dyne",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Evangeline Lilly"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "Ant-Man",
-          "universe": "MCU",
-          "date": "2015-07-17",
-          "order": 2,
-          "minor": false,
-          "actor": "Evangeline Lilly"
-        },
-        {
-          "title": "Ant-Man and the Wasp",
-          "universe": "MCU",
-          "date": "2018-07-06",
-          "order": 2,
-          "minor": false,
-          "actor": "Evangeline Lilly"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": null,
-          "minor": true,
-          "actor": "Evangeline Lilly"
-        },
-        {
-          "title": "Ant-Man and the Wasp: Quantumania",
-          "universe": "MCU",
-          "date": "2023-02-17",
-          "order": 2,
-          "minor": false,
-          "actor": "Evangeline Lilly"
-        }
-      ]
-    },
-    {
       "name": "Wonder Woman",
       "real_name": "Diana Prince",
       "universes": [
@@ -3031,6 +2929,43 @@
       ]
     },
     {
+      "name": "Wasp",
+      "real_name": "Hope van Dyne",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Evangeline Lilly"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Ant-Man and the Wasp",
+          "universe": "MCU",
+          "date": "2018-07-06",
+          "order": 2,
+          "minor": false,
+          "actor": "Evangeline Lilly"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": null,
+          "minor": true,
+          "actor": "Evangeline Lilly"
+        },
+        {
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "universe": "MCU",
+          "date": "2023-02-17",
+          "order": 2,
+          "minor": false,
+          "actor": "Evangeline Lilly"
+        }
+      ]
+    },
+    {
       "name": "Wasp (Janet)",
       "real_name": "Janet van Dyne",
       "universes": [
@@ -3429,6 +3364,36 @@
       ]
     },
     {
+      "name": "Green Goblin",
+      "real_name": "Norman Osborn",
+      "universes": [
+        "SSU",
+        "MCU"
+      ],
+      "actors": [
+        "Willem Dafoe"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Spider-Man",
+          "universe": "SSU",
+          "date": "2002-05-03",
+          "order": 2,
+          "minor": false,
+          "actor": "Willem Dafoe"
+        },
+        {
+          "title": "Spider-Man: No Way Home",
+          "universe": "MCU",
+          "date": "2021-12-17",
+          "order": 7,
+          "minor": false,
+          "actor": "Willem Dafoe"
+        }
+      ]
+    },
+    {
       "name": "Havok",
       "real_name": "Alex Summers",
       "universes": [
@@ -3749,37 +3714,6 @@
           "order": -1,
           "minor": false,
           "actor": "Zachary Levi"
-        }
-      ]
-    },
-    {
-      "name": "Silver Surfer",
-      "real_name": null,
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Doug Jones",
-        "Julia Garner"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "Fantastic Four: Rise of the Silver Surfer",
-          "universe": "Fox",
-          "date": "2007-06-15",
-          "order": 9,
-          "minor": false,
-          "actor": "Doug Jones"
-        },
-        {
-          "title": "The Fantastic Four: First Steps",
-          "universe": "MCU",
-          "date": "2025-07-25",
-          "order": 5,
-          "minor": false,
-          "actor": "Julia Garner"
         }
       ]
     },
@@ -5259,6 +5193,27 @@
       ]
     },
     {
+      "name": "Green Goblin (Harry Osborn)",
+      "real_name": "Harry Osborn",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Dane DeHaan"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Amazing Spider-Man 2",
+          "universe": "SSU",
+          "date": "2014-05-02",
+          "order": 4,
+          "minor": false,
+          "actor": "Dane DeHaan"
+        }
+      ]
+    },
+    {
       "name": "Green Lantern",
       "real_name": "Guy Gardner",
       "universes": [
@@ -6015,6 +5970,27 @@
       ]
     },
     {
+      "name": "New Goblin",
+      "real_name": "Harry Osborn",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "James Franco"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Spider-Man 3",
+          "universe": "SSU",
+          "date": "2007-05-04",
+          "order": 3,
+          "minor": false,
+          "actor": "James Franco"
+        }
+      ]
+    },
+    {
       "name": "OMAC",
       "real_name": "Ignacio Carapax",
       "universes": [
@@ -6494,6 +6470,48 @@
           "order": 6,
           "minor": false,
           "actor": "Giancarlo Esposito"
+        }
+      ]
+    },
+    {
+      "name": "Silver Surfer",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Doug Jones"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Fantastic Four: Rise of the Silver Surfer",
+          "universe": "Fox",
+          "date": "2007-06-15",
+          "order": 9,
+          "minor": false,
+          "actor": "Doug Jones"
+        }
+      ]
+    },
+    {
+      "name": "Silver Surfer (Shalla-Bal)",
+      "real_name": "Shalla-Bal",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Julia Garner"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "The Fantastic Four: First Steps",
+          "universe": "MCU",
+          "date": "2025-07-25",
+          "order": 5,
+          "minor": false,
+          "actor": "Julia Garner"
         }
       ]
     },
