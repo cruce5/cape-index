@@ -472,6 +472,17 @@
   /* ============ BUILD LOG (§15) ============ */
   .log .card + .card { margin-top: 16px; }
   .log .card-title { margin-bottom: 10px; }
+  /* §16: the Reconcilers roster */
+  .heroes { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; margin-top: 4px; }
+  .hero { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 14px; }
+  .hero h5 { font-family: var(--font-display); font-size: 19px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .hero .lane { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-top: 4px; }
+  .hero dl { margin: 10px 0 0; }
+  .hero dt { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); margin-top: 9px; }
+  .hero dd { margin: 2px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--ink-2); }
+  .hero.villain { border-color: color-mix(in srgb, var(--neg) 60%, transparent); }
+  .hero.villain h5 { color: var(--neg); }
+  .callcmd { font-family: var(--font-mono); font-size: 14px; background: var(--page); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; overflow-x: auto; }
   .log p { font-size: 14px; color: var(--ink-2); margin: 0 0 10px; }
   .log p:last-child { margin-bottom: 0; }
   .log b { color: var(--ink); font-weight: 600; }
@@ -604,7 +615,7 @@
     <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six universes back to the two the project started as.</p>
     <div class="thesis" id="thesis"></div>
     <details class="contents" aria-label="Contents">
-      <summary class="ct">Contents &middot; 15 sections, 7 tabs</summary>
+      <summary class="ct">Contents &middot; 16 sections, 7 tabs</summary>
       <ol id="contents-list"></ol>
     </details>
   </div>
@@ -1205,7 +1216,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>97 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>98 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1305,6 +1316,7 @@
           <li><b>&ldquo;The supervillain of the audit team. Doctor Missedit. He pokes apart the findings with his encyclopedic knowledge of the heroes&rsquo; weaknesses.&rdquo;</b> <b>&ldquo;Unleash the doctor.&rdquo;</b> He may only remove confidence, never add findings. Of 55: 43 stand, 4 downgraded, 1 an artifact of a hidden browser, and 7 where the hero was right and the fix was not. Every headline had been rendered a weight too light since the fonts moved in-house, a credits scene had made Black Widow a nine-film character, and a sentence about the budget band was written into the page by the same commit that made it false. All seven fixed.</li>
           <li><b>&ldquo;So Wolverine&rsquo;s First Class and Apocalypse cameos don&rsquo;t count as appearances?&rdquo;</b> They didn&rsquo;t; Wikipedia calls both cameos. <b>&ldquo;I feel like if they speak, it counts. Wolverine&rsquo;s line in First Class is a high point of the movie.&rdquo;</b> New rule, applied everywhere: a cameo counts if the character speaks. Eighteen speaking cameos went back in by hand, from Stark at the end of <em>The Incredible Hulk</em> to Supergirl in <em>Superman</em>. Apocalypse stayed out: he roars.</li>
           <li><b>&ldquo;Bro, of COURSE the Apocalypse cameo would count. Extend the rule to speaking or &lsquo;slays a bunch.&rsquo;&rdquo;</b> Extended. Wolverine is at ten, level with Iron Man and Professor X.</li>
+          <li><b>&ldquo;Reconcilers. I want a bundled package with instructions, a ninth hero, Meld, who reads the local stack cold, and I want running it to feel like watching Adam West Batman.&rdquo;</b> §16 and <span class="mono">reconcilers.zip</span>: a Claude Code skill plus ten agent files, one per hero and one for the villain, each on the model that suits its lane. Meld goes in first and writes the map. The episode has title cards, a narrator, sound effects, and a cliffhanger before the Doctor.</li>
         </ol>
       </details>
 
@@ -1381,6 +1393,76 @@
         <p>Every change is verified by driving a headless browser and reading the rendered page (element counts, computed styles, the actual numbers in the actual DOM) rather than trusting that the code does what it looks like it does. That is how the &minus;$317M scorecard, the phantom <em>Fantastic Four</em>, and the one-film Joker were all caught: by looking at the output instead of the source.</p>
         <p>None of this was in the plan. The plan was to check 50 numbers.</p>
         <p>The whole thing, pipeline and page, is on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="view log" id="v-reconcilers" data-tab="ref">
+    <div class="wrap">
+      <div class="view-head">
+        <span class="num">§ 16 &nbsp;/&nbsp; THE RECONCILERS</span>
+        <h3>Nine auditors and a villain, in a folder you can point at any data product</h3>
+        <p class="dek">The eight-lane audit in §15 was run by a team, and the team is packaged. Each hero owns one lane, they work in parallel and don&rsquo;t compare notes until the end, and every finding has to point at a line, a cell, or a screen. When the findings are in, Doctor Missedit turns up uninvited and audits the auditors. On this site they found 78 things, 55 after the overlaps merged; he found seven places the fixes had missed.</p>
+      </div>
+
+      <div class="card">
+        <h4 class="card-title">Call the Reconcilers</h4>
+        <p>They run inside <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> as a skill plus ten agent files, scoped to whatever directory you install them in. Download the bundle, run the installer from the folder that holds your product, start Claude Code there, and say the words.</p>
+        <p class="callcmd">/reconcilers</p>
+        <p>The skill asks three things before anyone moves: what the product is, which model roster (standard issue, or every hero on the biggest model available), and whether it may drive a browser. Then Meld reads the room, the eight go in, the compiled report lands, and the surprise happens. Every report is written to <span class="mono">.reconcilers/</span> in your directory. The team is read-only: it never edits, commits or deploys. Fixing is a separate conversation, and you start it.</p>
+        <p><a href="/reconcilers.zip">Download the bundle (zip)</a> &nbsp;·&nbsp; <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers" target="_blank" rel="noopener">Read it on GitHub</a></p>
+      </div>
+
+      <div class="card">
+        <h4 class="card-title">The roster</h4>
+        <div class="heroes">
+          <div class="hero"><h5>Meld</h5><div class="lane">Context · goes in first</div><dl>
+            <dt>Powers</dt><dd>Walks into any codebase cold and comes out with the map: what it is, how it builds, where the data lives, where the numbers on the screen come from. The other eight read it before they move, so nobody audits a notebook for missing webpack.</dd>
+            <dt>Weakness</dt><dd>Sees the whole system and wants to explain all of it. Will draw the map of a room asked to be checked for a chair.</dd>
+            <dt>Origin</dt><dd>Woke up in someone else&rsquo;s codebase with no README, in the dark. Has been drawing the map for whoever walks in next ever since.</dd></dl></div>
+          <div class="hero"><h5>Ledger</h5><div class="lane">Data integrity</div><dl>
+            <dt>Powers</dt><dd>Touches a number and sees where it came from. Can smell a hand-typed figure from across the room. Nothing gets on the page without a source it can be walked back to.</dd>
+            <dt>Weakness</dt><dd>Cannot accept an estimate. Applies one rule to the number in front of it and another to the one a paragraph up.</dd>
+            <dt>Origin</dt><dd>Born a precise figure in a source system. Copy-pasted into a slide, rounded, and cited back as fact three quarters later. Has been hunting that slide ever since.</dd></dl></div>
+          <div class="hero"><h5>Doppel</h5><div class="lane">Entities and consistency</div><dl>
+            <dt>Powers</dt><dd>Sees every record that is secretly the same thing, and every thing that is secretly two records. Knows what the key was supposed to be.</dd>
+            <dt>Weakness</dt><dd>Sees duplicates everywhere, including in people. Will not let a join through without a grudge.</dd>
+            <dt>Origin</dt><dd>Was two people in a CRM for six years. Merged themselves. Now does it for others.</dd></dl></div>
+          <div class="hero"><h5>Median</h5><div class="lane">Statistics</div><dl>
+            <dt>Powers</dt><dd>Immune to outliers. Sees the n behind every average, the denominator behind every rate, the &ldquo;significant&rdquo; with no &ldquo;against what.&rdquo;</dd>
+            <dt>Weakness</dt><dd>Boring at parties. Loses all power when n is under five, and says so loudly, on the slide.</dd>
+            <dt>Origin</dt><dd>Sibling of Mean, who got the press. Watched one whale account drag Mean across a boardroom by the hair. Chose differently.</dd></dl></div>
+          <div class="hero"><h5>Chartjunk</h5><div class="lane">Visualization craft</div><dl>
+            <dt>Powers</dt><dd>Has personally made every misleading chart at least once, so recognizes them on sight. Sees the anti-pattern before the render finishes. Reformed, allegedly.</dd>
+            <dt>Weakness</dt><dd>Relapses near a 3D bar chart. Cannot be left alone with a gradient.</dd>
+            <dt>Origin</dt><dd>Built a visualization so beautiful it won an award and said nothing. Read the comments. Turned.</dd></dl></div>
+          <div class="hero"><h5>Thumb</h5><div class="lane">UX</div><dl>
+            <dt>Powers</dt><dd>Shrinks to the size of a phone screen and reads the product the way a stranger does: one thumb, on a train, no onboarding. The only member of the team who uses the thing.</dd>
+            <dt>Weakness</dt><dd>Will not read the docs. Ever. Has been fooled by a hidden browser tab more than once.</dd>
+            <dt>Origin</dt><dd>A normal person who opened a dashboard on a phone, in a hurry, once. Couldn&rsquo;t scroll the table any farther. Has been small and angry about it since.</dd></dl></div>
+          <div class="hero"><h5>Greyscale</h5><div class="lane">Accessibility</div><dl>
+            <dt>Powers</dt><dd>Perceives the product through every channel except color. Keyboard only: if it can&rsquo;t be tabbed to, it doesn&rsquo;t exist.</dd>
+            <dt>Weakness</dt><dd>Will tab through all four hundred marks to prove they say nothing, and rank a spec beside a real loss.</dd>
+            <dt>Origin</dt><dd>Woke up one morning seeing in greyscale and found half the world&rsquo;s dashboards had gone blank. Decided that was the dashboards&rsquo; problem.</dd></dl></div>
+          <div class="hero"><h5>Redline</h5><div class="lane">Editorial</div><dl>
+            <dt>Powers</dt><dd>The Red Pen. Draw it under a headline and the sentence has to say the finding, not the label. Catches the claim that rotted out from under its chart.</dd>
+            <dt>Weakness</dt><dd>No tolerance for &ldquo;nearly.&rdquo; Cuts it, and sometimes the truth goes with it.</dd>
+            <dt>Origin</dt><dd>Raised in a newsroom where the headline was the story and the chart was the proof. Took a job somewhere it was the other way round.</dd></dl></div>
+          <div class="hero"><h5>Payload</h5><div class="lane">Engineering, security, performance</div><dl>
+            <dt>Powers</dt><dd>Is the network tab. Reads the headers, the policy, the innerHTML a pasted string could walk through, the observer created on every render and never released.</dd>
+            <dt>Weakness</dt><dd>Can&rsquo;t stop seeing it. Will flag a 30ms paint on a page that loads in 400.</dd>
+            <dt>Origin</dt><dd>A code review fused them to the production config. It was not reversible.</dd></dl></div>
+          <div class="hero villain"><h5>Doctor Missedit</h5><div class="lane">The audit itself · arrives uninvited</div><dl>
+            <dt>Powers</dt><dd>Encyclopedic knowledge of each hero&rsquo;s weakness, which is the same thing as knowing each lane&rsquo;s characteristic false positive. May only remove confidence from a finding, never add one. Verdicts: stands, downgraded, artifact, fix mismatch.</dd>
+            <dt>Weakness</dt><dd>Produces nothing on his own. Cannot resist &ldquo;well, actually,&rdquo; and a team that was mostly right makes him irritable rather than useful.</dd>
+            <dt>Origin</dt><dd>Was the ninth hero, codename Second Opinion. Cut from the team because nobody wanted the meeting. Read the eight reports anyway, found four errors, and was never invited back. Turned.</dd></dl></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-title">How an episode runs</h4>
+        <p>It is meant to feel like calling a superhero team, and specifically like 1966. The title card names the episode after your product. Meld goes in first and reads the room. Then the narrator says <em>Meanwhile, in the Hall of Reconciliation</em> and eight heroes are dispatched in one breath, each on the model that suits the lane (Opus for the recompute-heavy lanes, Sonnet for the browser-driving ones, Fable for the villain, or Fable for everyone if you said so and were warned). Each report lands with a sound effect. The compiled report is ranked, deduplicated and cross-checked. Then: <em>HOLD IT!</em> A shadow falls across the Hall, and Doctor Missedit does his thing. Roll credits, three fixes to make first, same Bat-time, same Bat-channel.</p>
+        <p>House rules the theatre never overrides: read-only; only verified findings in the ranking; every finding cites a location; every report ends with what was checked clean; no em dashes, which is a team quirk you should not fight.</p>
       </div>
     </div>
   </section>

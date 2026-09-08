@@ -89,6 +89,8 @@ const CLAIMS = [
   { name: "§14 'none before 2010'", also: () => F.every((f) => !f.budgetEst || +f.date.slice(0, 4) >= 2010) || "an estimated budget sits before 2010", has: "none before 2010" },
   { name: "in-release films are held out of the reviews scatter and the legs chart (source filters)",
     also: () => (html.includes("return f.rt != null && f.final") && html.includes("f.mult != null && f.final")) || "a final filter was removed from renderReviews or renderLegs" },
+  { name: "contents pill section count", grab: /Contents &middot; ([0-9]+) sections, ([0-9]+) tabs/, want: String((html.match(/<section class="view[^"]*" id="v-[^"]+" data-tab=/g) || []).length),
+    want2: String(new Set([...html.matchAll(/<section class="view[^"]*" id="v-[^"]+" data-tab="([^"]+)"/g)].map((m) => m[1])).size) },
   { name: "one MIN_N constant governs small-n muting", also: () => ((html.match(/MIN_N/g) || []).length >= 6) || "MIN_N is referenced fewer than 6 times; a threshold was hard-coded again" },
   // the §15 fold-out counts are hand-typed into their own summaries — count the markup
   { name: "§15 follow-up count on the fold", grab: new RegExp('Every follow-up, in order<span class="cnt">(?:<span class="sr-only">[^<]*</span>)?([0-9]+) asks'), want: String(countItems("asks", "li")) },
