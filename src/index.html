@@ -204,13 +204,21 @@
   .tabs.can-scroll .tabs-inner { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent); }
   .tabs.can-scroll.at-end .tabs-inner { -webkit-mask-image: none; mask-image: none; }
   .pager { padding: 26px 0 10px; }
-  .pager .wrap { display: flex; justify-content: space-between; gap: 12px; }
-  .pg { display: inline-flex; flex-direction: column; gap: 4px; padding: 12px 16px; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); color: var(--ink); text-decoration: none; cursor: pointer; font: inherit; text-align: left; max-width: 48%; transition: border-color 120ms; }
+  .pager .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
+  .pg { display: flex; flex-direction: column; gap: 6px; padding: 14px 18px; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); color: var(--ink); text-decoration: none; cursor: pointer; font: inherit; text-align: left; transition: border-color 120ms; }
+  .pg.prev { grid-column: 1; }
+  .pg.next { grid-column: 2; text-align: right; }
   .pg:hover { border-color: var(--ink); }
-  .pg.next { margin-left: auto; text-align: right; align-items: flex-end; }
-  .pg .pl { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); }
-  .pg .pt { font-family: var(--font-display); font-weight: 700; font-size: 17px; line-height: 1.2; }
-  .pg .pt .tn { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-muted); margin-right: 7px; }
+  .pg .pl { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); }
+  .pg .pt { display: flex; align-items: baseline; gap: 9px; font-family: var(--font-display); font-weight: 700; font-size: 17px; line-height: 1.2; }
+  .pg.next .pt { justify-content: flex-end; }
+  .pg .pt .tn { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.1em; color: var(--ink-muted); flex: none; }
+  /* the arrow is the direction cue: it sits on the outer edge and never wraps away from it */
+  .pg .pa { flex: none; font-size: 15px; line-height: 1; color: var(--ink-muted); transition: transform 120ms, color 120ms; }
+  .pg:hover .pa { color: var(--ink); }
+  .pg.prev:hover .pa { transform: translateX(-3px); }
+  .pg.next:hover .pa { transform: translateX(3px); }
+  @media (prefers-reduced-motion: reduce) { .pg .pa { transition: color 120ms; } .pg:hover .pa { transform: none; } }
   /* contents is collapsed by default so a chart is closer to the top; the summary is the one-line toggle */
   .contents { margin-top: 16px; max-width: 58rem; }
   /* the summary is styled as an obvious pill button (accent chevron, border, hover) so it
@@ -1099,7 +1107,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">69 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">70 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1171,6 +1179,7 @@
           <li><b>&ldquo;Would it be cool if the gradient bar stuck at the top and followed the scroll?&rdquo;</b> It rides the top edge of the sticky tab bar and fills left to right as you read: dim for what&rsquo;s still below the fold, saturated for what you&rsquo;ve passed. Each tab is its own page length, so switching tabs re-measures. The fill is a window onto a 100vw copy of the gradient rather than a squashed one, so the colours stay put instead of sliding as the bar grows.</li>
           <li><b>&ldquo;James Franco is tagged as Green Goblin. Wasn&rsquo;t he the New Goblin? Is my data rock solid?&rdquo;</b> It wasn&rsquo;t. One line in the canonicaliser, <code>"Harry Osborn": "Green Goblin"</code>, broke both of the roster&rsquo;s own rules at once: it counted Franco in <em>Spider-Man 2</em>, where Harry has no goblin identity at all, called his <em>Spider-Man 3</em> turn Green Goblin when the credit says New Goblin, and folded two Harrys and a Norman into one row. Green Goblin is Norman&rsquo;s, at two films; New Goblin and Webb&rsquo;s Green Goblin are their own rows. The same audit found Shalla-Bal folded into Norrin Radd&rsquo;s Silver Surfer, Hope van Dyne counted as the Wasp a film before she gets the suit, and one actor listed twice under two spellings of her own name. The scraped credits were right the whole time; the mapping on top of them wasn&rsquo;t.</li>
           <li><b>&ldquo;Lots of different fonts going around here. Are we abiding by best practice?&rdquo;</b> Mostly, with two real holes. Seventy chart labels named <code>IBM Plex Mono</code> with no fallback behind it, so a failed webfont would have dropped them to the browser&rsquo;s default. And twenty-one labels were English sentences set in monospace &mdash; <em>break-even</em>, the fold markers, the axis titles &mdash; while a handful of axis <em>numbers</em> were coming out in the body face, because a label that carries a class takes its family from the CSS and not from its own attribute. Three faces are now tokens with real stacks, words are Sans, figures are Mono, and the sweep is clean at 375px and 1400px.</li>
+          <li><b>&ldquo;How do we feel about the spacing and sizing on the Back / Next pair?&rdquo;</b> Two problems with one cause. The arrow was the last word of the title, so on the longer tab name it wrapped to a line of its own &mdash; which is why one card was taller than the other as well as wider. The pair is now two halves of one grid row, and the arrow is its own cell pinned to the outer edge, where it nudges outward on hover. Equal at every tab and both widths; when a long name wraps on a phone, both cards grow together.</li>
         </ol>
       </details>
 
@@ -3209,8 +3218,11 @@
     var host = document.getElementById("pager"); if (!host) return;
     var i = TABS.indexOf(key), prev = i > 0 ? tabMeta(TABS[i - 1]) : null, next = i < TABS.length - 1 ? tabMeta(TABS[i + 1]) : null;
     var cell = function (m, cls, word) {
-      var arrow = cls === "next" ? " →" : "", lead = cls === "prev" ? "← " : "";
-      return '<button class="pg ' + cls + '" data-go="' + m.key + '"><span class="pl">' + word + '</span><span class="pt">' + lead + '<span class="tn">' + m.num + "</span>" + esc(m.label) + arrow + "</span></button>";
+      var arrow = '<span class="pa" aria-hidden="true">' + (cls === "next" ? "&rarr;" : "&larr;") + "</span>";
+      var body = cls === "next"
+        ? '<span class="tn">' + m.num + "</span><span>" + esc(m.label) + "</span>" + arrow
+        : arrow + '<span class="tn">' + m.num + "</span><span>" + esc(m.label) + "</span>";
+      return '<button class="pg ' + cls + '" data-go="' + m.key + '"><span class="pl">' + word + '</span><span class="pt">' + body + "</span></button>";
     };
     host.innerHTML = '<div class="wrap">' + (prev ? cell(prev, "prev", "Back") : "") + (next ? cell(next, "next", "Next") : "") + "</div>";
     host.querySelectorAll("[data-go]").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-go"), { scroll: true }); }); });
