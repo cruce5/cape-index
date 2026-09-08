@@ -118,7 +118,9 @@ function parseCast(wt, filmTitle) {
   // paragraphs that explicitly signal a cast list ("reprise/reprising their roles", "also
   // appear", "return as"), and only take clean "[[Actor]] as [[…|Character]]" wikilink pairs.
   const haveActors = new Set(rows.map((r) => (r.actor || "").toLowerCase()));
-  const CAMEO = /\b(footage|archiv|stock photo|photo of|clip|deleted|cut from|unused|cameo|likeness|was cast|originally|rumou?red|reportedly|would have|set to)\b/i;
+  // "credits scene" and "uncredited" are cameo words too: without them the widened cue took
+  // Captain Marvel's mid-credits scene as a ninth Black Widow film
+  const CAMEO = /\b(footage|archiv|stock photo|photo of|clip|deleted|cut from|unused|cameo|likeness|was cast|originally|rumou?red|reportedly|would have|set to|(?:mid|post)-credits|credits scene|uncredited)\b/i;
   // The clause a match sits in, split on ". " and "; ", read from the clause start to the
   // match plus the match's own tail up to the next actor pair. Wide enough that "for a brief
   // cameo are A as X, B as Y, C as Z" drops all three (a 40-character lookback dropped A and
@@ -489,10 +491,12 @@ for (const f of films) {
   let { rows, missing: miss } = parseCast(wt, f.title);
   const ov = OVERRIDES[f.title];
   if (ov) {
-    const have = new Set(rows.map((r) => (r.actor || "").toLowerCase()));
-    const add = ov
-      .filter((o) => !have.has((o.actor || "").toLowerCase()))
-      .map((o, i) => ({ actor: o.actor, character: o.character, order: -ov.length + i, minor: false, fromOverride: true }));
+    // a hand-verified credit replaces whatever the parser read for the same actor: the prose
+    // scan had Wesley Snipes as "half-vampire" in Deadpool & Wolverine, and the override's
+    // "Eric Brooks / Blade" was being skipped because the actor was already "present"
+    const ovActors = new Set(ov.map((o) => (o.actor || "").toLowerCase()));
+    rows = rows.filter((r) => !ovActors.has((r.actor || "").toLowerCase()));
+    const add = ov.map((o, i) => ({ actor: o.actor, character: o.character, order: -ov.length + i, minor: false, fromOverride: true }));
     rows = [...add, ...rows];
     if (add.length) miss = false;
   }

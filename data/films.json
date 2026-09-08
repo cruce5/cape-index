@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-08T13:18:36.642Z",
+    "generated": "2026-09-08T14:57:40.352Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -5396,7 +5396,7 @@
         "international": 54000000,
         "worldwide": 126366532
       },
-      "budget": 186000000,
+      "budget": 170000000,
       "runtime_minutes": 108,
       "mpaa": "PG-13",
       "distributor": "Warner Bros.",
@@ -5425,11 +5425,11 @@
         "pct_international": 42.73,
         "domestic_multiplier": 1.95,
         "opening_share_worldwide": 29.36,
-        "roi_worldwide": 0.68,
-        "breakeven_worldwide": 465000000,
-        "profit_vs_breakeven": -338633468,
+        "roi_worldwide": 0.74,
+        "breakeven_worldwide": 425000000,
+        "profit_vs_breakeven": -298633468,
         "profitable": false,
-        "budget_real_2025": 186000000
+        "budget_real_2025": 170000000
       }
     },
     {

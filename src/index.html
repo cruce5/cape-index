@@ -21,7 +21,7 @@
 
 <!-- IBM Plex, self-hosted (assets/fonts): the Google stylesheet was the one render-blocking request on the page. The three faces the first screen needs are preloaded; the rest arrive on demand by unicode-range -->
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plex-sans-400-latin.woff2" crossorigin />
-<link rel="preload" as="font" type="font/woff2" href="/fonts/plex-cond-600-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plex-cond-700-latin.woff2" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="/fonts/plex-mono-400-latin.woff2" crossorigin />
 
 <!-- Cloudflare Web Analytics: cookieless, privacy-first (no consent banner needed) -->
@@ -34,7 +34,8 @@
   /* ============ FONTS - self-hosted IBM Plex, latin + latin-ext ============ */
   @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/plex-sans-400-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
   @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/plex-sans-400-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-  @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 600 700; font-display: swap; src: url(/fonts/plex-cond-600-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/plex-cond-600-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/plex-cond-700-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
   @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/plex-cond-600-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
   @font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/plex-cond-700-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
   @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/plex-mono-400-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
@@ -600,7 +601,7 @@
     <div class="spectrum" aria-hidden="true"></div>
     <p class="byline">By <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a></p>
     <p class="dek">Every live-action Marvel and DC superhero film since 2000 that&rsquo;s in a franchise, and what each made. Grosses come straight from Box&nbsp;Office&nbsp;Mojo; any figure switches to 2025 dollars.</p>
-    <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six groups back to the two the project started as.</p>
+    <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six universes back to the two the project started as.</p>
     <div class="thesis" id="thesis"></div>
     <details class="contents" aria-label="Contents">
       <summary class="ct">Contents &middot; 15 sections, 7 tabs</summary>
@@ -618,7 +619,7 @@
     <button class="tab" data-tab="act4"><span class="tn" aria-hidden="true">IV</span>Roster</button>
     <button class="tab" data-tab="mistakes"><span class="tn" aria-hidden="true">&#10007;</span>The mistakes</button>
     <button class="tab" data-tab="ledger"><span class="tn" aria-hidden="true">&#9638;</span>The ledger</button>
-    <button class="tab" data-tab="ref"><span class="tn" aria-hidden="true">&sect;</span>Reference</button>
+    <button class="tab" data-tab="ref"><span class="tn" aria-hidden="true">§</span>Reference</button>
   </div>
 </nav>
 
@@ -700,7 +701,7 @@
           <dt>Question</dt><dd>How has total superhero box office moved year to year, and how does each year split between the studios?</dd>
           <dt>Why this form</dt><dd>A stacked column reads as one total per year (the height) and a split within it (the segments). Separate lines would bury the &ldquo;how big was the whole year&rdquo; question; a grouped column would make the year total hard to see.</dd>
           <dt>Choices here</dt><dd>Segments are held apart by a 2&nbsp;px gap in the page color, not a stroke, a border is ink that isn&rsquo;t data. Universe order is fixed, so a color never jumps position between years. Y-axis labels sit flush left, close to the title.</dd>
-          <dt>The lens</dt><dd><b>Marvel v DC</b> in the control bar collapses the six groups to two and colors them red and blue. That is the comparison this project started as, and the one the six-way split had buried: Marvel’s three studios against DC’s three continuities. Nothing in the data changes, only how it is grouped and colored. Six saturated hues can’t all stay apart under color blindness, which is why the six-way view is green/magenta/yellow/blue/cyan/gray; two can, so the lens gets the convention back.</dd>
+          <dt>The lens</dt><dd><b>Marvel v DC</b> in the control bar collapses the six universes to two and colors them red and blue. That is the comparison this project started as, and the one the six-way split had buried: Marvel’s three studios against DC’s three continuities. Nothing in the data changes, only how it is grouped and colored. Six saturated hues can’t all stay apart under color blindness, which is why the six-way view is green/magenta/yellow/blue/cyan/gray; two can, so the lens gets the convention back.</dd>
           <dt>Watch for</dt><dd>Stacking hides the individual films. Good for the total and rough shares; useless for &ldquo;which 2021 Marvel film was that.&rdquo; That&rsquo;s what the table is for.</dd>
         </dl></div>
       </div>
@@ -818,7 +819,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Have production budgets actually climbed once you strip out inflation?</dd>
           <dt>Why this form</dt><dd>Every film is a dot at its budget and year. A single year holds only a few films, so a year-by-year median sawtooths and buries the trend; a <em>five-year rolling median</em> smooths it into the actual shape, and the band shows the middle 50% of budgets so the spread reads too, not just the center.</dd>
-          <dt>Choices here</dt><dd>Median, not mean, one $350M Avengers would drag a mean around. A centered five-year window (two years either side) instead of per-year points, because two or three films a year is too few for a stable median. One series, not six: split by universe and the counts get too small to read. Since 2021 most budgets are estimates parked at $200M, so the band&rsquo;s top edge and the median coincide there.</dd>
+          <dt>Choices here</dt><dd>Median, not mean, one $350M Avengers would drag a mean around. A centered five-year window (two years either side) instead of per-year points, because two or three films a year is too few for a stable median. One series, not six: split by universe and the counts get too small to read. <span id="n-band"></span></dd>
           <dt>Watch for</dt><dd>The band is where the middle half of budgets sat, not a confidence interval, and the curve&rsquo;s ends lean on a shorter window. And budgets are the softest number on the site: studios don&rsquo;t disclose them, so anything not straight from Box Office Mojo is an estimate, marked <code>est.</code> in the ledger. Trust the shape, not any single dollar.</dd>
         </dl></div>
       </div>
@@ -832,7 +833,7 @@
       <div class="view-head">
         <span class="num">§ 06 &nbsp;/&nbsp; DID IT MAKE MONEY?</span>
         <h3>A third of these films never cleared their break-even point</h3>
-        <p class="dek" id="d-profit">Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. <em>The Marvels</em> is the widest miss at &minus;$562M; <em>Avengers: Endgame</em> the widest hit at +$1.91B. <em>Joker</em> is the widest hit per dollar spent, at nearly 20&times; its $55M budget, which is a different question and the one &sect;12 warns about.</p>
+        <p class="dek" id="d-profit">Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. <em>The Marvels</em> is the widest miss at &minus;$562M; <em>Avengers: Endgame</em> the widest hit at +$1.91B. <em>Joker</em> is the widest hit per dollar spent, at nearly 20&times; its $55M budget, which is a different question and the one §12 warns about.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -844,7 +845,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which films actually cleared their break-even point, and by how much?</dd>
           <dt>Why this form</dt><dd>A diverging bar anchored at zero puts profit right, loss left, and sorts the whole slate best to worst in one read. Gross alone can&rsquo;t answer &ldquo;did it make money&rdquo;, a $400M film is a hit or a bomb depending on its budget.</dd>
-          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Which side of the line a bar runs on already carries the outcome, so the color doesn&rsquo;t have to: films that cleared break-even are a neutral slate, and the orange is spent only on the ones that didn&rsquo;t. A green here would have sat a shade off the MCU green in the chip beside it, and half these bars would have read as &ldquo;Marvel.&rdquo; Every value label sits in one column clear of the film names. No universe chip here: it would put a categorical hue beside a neutral bar in every row, and there is no neutral that stays distinct from six hues under color blindness without simply being the ink color. The title names the film, the tooltip names the universe, and &sect;13 has both.</dd>
+          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Which side of the line a bar runs on already carries the outcome, so the color doesn&rsquo;t have to: films that cleared break-even are a neutral slate, and the orange is spent only on the ones that didn&rsquo;t. A green here would have sat a shade off the MCU green in the chip beside it, and half these bars would have read as &ldquo;Marvel.&rdquo; Every value label sits in one column clear of the film names. No universe chip here: it would put a categorical hue beside a neutral bar in every row, and there is no neutral that stays distinct from six hues under color blindness without simply being the ink color. The title names the film, the tooltip names the universe, and §13 has both.</dd>
           <dt>Watch for</dt><dd>Break-even is a rule of thumb, not studio accounting, home video, streaming and TV deals aren&rsquo;t in it. Trust the ranking more than the exact dollar figure.</dd>
         </dl></div>
       </div>
@@ -968,7 +969,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
           <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
-          <dt>Choices here</dt><dd><span id="n-roster-rows">Rows are every character in six or more films, 23 of them, ordered by appearance count.</span> Columns are all 91 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
+          <dt>Choices here</dt><dd><span id="n-roster-rows">Rows are every character in six or more films, 22 of them, ordered by appearance count (ties alphabetical).</span> Columns are all 91 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
           <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgment call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. A mantle a character already holds when we meet them (Janet van Dyne&rsquo;s Wasp, Yelena&rsquo;s Widow) counts from their first credit. A few named antagonists without a codename (Lex Luthor, Zod, Amanda Waller) are admitted by hand. Cast lists are from Wikipedia and skew to billed roles; anything Wikipedia calls a cameo is left out.</dd>
         </dl></div>
       </div>
@@ -992,7 +993,7 @@
       <div class="view-head">
         <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELED</span>
         <h3>Spider-Man has been in twelve films, more than any other character by a clear margin</h3>
-        <p class="dek" id="d-foot">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Black Widow, Iron Man and Professor X are next at nine, then five characters at eight; Batman, at eight across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 151 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
+        <p class="dek" id="d-foot">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man and Professor X are next at nine, then four characters at eight; Batman, at eight across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 153 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -1004,7 +1005,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Who carries the most cross-film weight?</dd>
           <dt>Why this form</dt><dd>A lollipop, not a bar: the counts are small integers (2&ndash;12), so a dot on a light stem reads the value cleanly without a heavy block of ink for &ldquo;3&rdquo;.</dd>
-          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are 151 of them and they&rsquo;d bury the signal.</dd>
+          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are 153 of them and they&rsquo;d bury the signal.</dd>
           <dt>Watch for</dt><dd>Each identity is one person here. &ldquo;Captain America&rdquo; is Steve Rogers; Sam Wilson&rsquo;s turn is its own row, as are Yelena&rsquo;s Black Widow and Shuri&rsquo;s Black Panther. A codename counts from the film the character takes it up, not before, so Red Hulk and Mighty Thor sit at one film each, and Harry Osborn doesn&rsquo;t appear at all until he puts a mask on. Where two people have worn one name, the rows split: Norman Osborn is the Green Goblin, Harry is the New Goblin in Raimi&rsquo;s trilogy and a second Green Goblin in Webb&rsquo;s, and Shalla-Bal is a second Silver Surfer.</dd>
         </dl></div>
       </div>
@@ -1140,7 +1141,7 @@
       </div>
       <div class="card" style="padding:16px">
         <h4 class="card-title">By universe</h4>
-        <p class="card-note" style="margin:6px 0 0">One row per group, on the same filters and dollars as the table below. Medians, not averages: a couple of billion-dollar films drag a mean somewhere no actual film sits. Med. ROI is the median of each film&rsquo;s own ratio, not Med. WW divided by Med. budget; on a skewed set those differ by up to a third. Rows under four films are greyed, because the midpoint of two numbers is not a distribution.</p>
+        <p class="card-note" style="margin:6px 0 0">One row per universe, on the same filters and dollars as the table below. Medians, not averages: a couple of billion-dollar films drag a mean somewhere no actual film sits. Med. ROI is the median of each film&rsquo;s own ratio, not Med. WW divided by Med. budget; on a skewed set those differ by up to a third. Rows under four films are greyed, because the midpoint of two numbers is not a distribution.</p>
         <div id="table-summary"></div>
       </div>
       <div class="card" style="padding:16px;margin-top:20px">
@@ -1166,12 +1167,12 @@
         <div class="card">
           <h4 class="card-title">Sources</h4>
           <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb.</p>
-          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. The studio&rsquo;s own filing, net of rebates, where one has surfaced (six recent Marvel Studios films, from $236M to $429M); otherwise Box Office Mojo where it lists a clean one; otherwise the widely-cited number, lower bound of a range, marked <span class="mono">est.</span> A third are estimates, and they are not spread evenly: none before 2010, four in five since 2021. Studios rarely publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. The studio&rsquo;s own filing, net of rebates, where one has surfaced (four recent Marvel Studios films, $307M to $429M); otherwise Box Office Mojo where it lists a clean one; otherwise the widely-cited number, lower bound of a range, marked <span class="mono">est.</span> A third are estimates, and they are not spread evenly: none before 2010, four in five since 2021. Studios rarely publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
         </div>
         <div class="card">
           <h4 class="card-title">Definitions</h4>
           <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. That is a purchasing-power adjustment (what those dollars are worth today), not the ticket-price or admissions adjustment the box-office world usually reaches for, and it applies US&nbsp;CPI even to the overseas share. Read it as rough real-terms scale, not a tickets-sold count. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
-          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">&#9678;</span>) carry grosses as of <span id="asof">September 2026</span> and will climb. The rule, applied everywhere: they are <b>held out of anything that needs a finished number</b> (profit, break-even, the ROI ranking, the reviews scatter, the legs chart, and the ledger&rsquo;s opening and multiplier medians) and <b>counted in anything that describes the slate as it stands</b> (totals, gross medians, the $1B and $2B clubs, the treemap). <span id="ratio-pair">So <em>Brand New Day</em> is in &sect;02&rsquo;s $2B count and out of &sect;06 entirely; without it the Marvel-to-DC ratio reads 2.60 rather than 2.80.</span></p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">&#9678;</span>) carry grosses as of <span id="asof">September 2026</span> and will climb. The rule, applied everywhere: they are <b>held out of anything that needs a finished number</b> (profit, break-even, the ROI ranking, the reviews scatter, the legs chart, and the ledger&rsquo;s opening and multiplier medians) and <b>counted in anything that describes the slate as it stands</b> (totals, gross medians, the $1B and $2B clubs, the treemap). <span id="ratio-pair">So <em>Brand New Day</em> is in §02&rsquo;s $2B count and out of §06 entirely; without it the Marvel-to-DC ratio reads 2.60 rather than 2.80.</span></p>
         </div>
       </div>
       <div class="card" style="margin-top:20px">
@@ -1204,7 +1205,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>94 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>95 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1278,29 +1279,30 @@
           <li><b>&ldquo;Lots of different fonts going around here. Are we abiding by best practice?&rdquo;</b> Two holes: seventy chart labels named <code>IBM Plex Mono</code> with no fallback behind it, and twenty-one English sentences set in monospace. Words are Sans and figures are Mono now.</li>
           <li><b>&ldquo;How do we feel about the spacing and sizing on the Back / Next pair?&rdquo;</b> The arrow was the last word of the title, so on a longer tab name it wrapped to its own line and took the card&rsquo;s height with it. It&rsquo;s its own grid cell now.</li>
           <li><b>&ldquo;Final brand audit. Eight skeptical personas, in parallel.&rdquo;</b> A box-office snob, a comics continuity snob, a statistician, a viz-craft snob, a UX critic, an accessibility specialist, an editor and a front-end engineer. The worst of it was in the copy, not the code.</li>
-          <li><b>&sect;08 had its finding backwards.</b> The headline said reviews barely move with box office. Recomputed: r&nbsp;=&nbsp;0.48, about $9M of gross per point of critic score. It was never about size; it&rsquo;s about direction.</li>
-          <li><b>&sect;01 led with four averages on the most skewed slate on the page</b>, two cards above a note that says medians, not means. The average completed DC film was reported clearing break-even by $82M. The median clears it by <b>$1M</b>.</li>
+          <li><b>§08 had its finding backwards.</b> The headline said reviews barely move with box office. Recomputed: r&nbsp;=&nbsp;0.48, about $9M of gross per point of critic score. It was never about size; it&rsquo;s about direction.</li>
+          <li><b>§01 led with four averages on the most skewed slate on the page</b>, two cards above a note that says medians, not means. The average completed DC film was reported clearing break-even by $82M. The median clears it by <b>$1M</b>.</li>
           <li><b>The palette claim was writing a check the repo couldn&rsquo;t cash.</b> The site said the colors were &ldquo;checked with a script, pair by pair&rdquo;; no such script existed. It does now, it gates the build, and its first run failed on 22 counts.</li>
           <li><b>The roster was missing two dozen characters.</b> They were listed as mononyms while Wikipedia credits them in full, so Drax, Yondu and Ronan were absent from all five Guardians films. And a bit part called &ldquo;Mr. Sherman/Rafke&rdquo; had been promoted to a superhero named Rafke. 223 became 247.</li>
           <li><b>A stored-XSS path, and a robots.txt serving 361KB of HTML.</b> Scraped Wikipedia strings went into <code>innerHTML</code> unescaped, and every unknown path answered with the whole page. Escaped, and there&rsquo;s a real robots, sitemap, 404 and CSP now.</li>
           <li><b>&ldquo;Fix it all.&rdquo;</b> The rest of what the eight auditors found, worked through.</li>
           <li><b>The 2025&nbsp;$ toggle used to falsify its own headlines.</b> &ldquo;Fox and Sony never&rdquo; sat above a chart showing three Fox films and five Sony ones over the line, because the counts were typed and the chart recomputes. They come from the data now.</li>
           <li><b>Opening weekend was the one dollar column with no 2025&nbsp;$ twin</b>, so in real-dollar mode the ledger printed a real Domestic beside a nominal Opening. It converts now, everywhere.</li>
-          <li><b>A budget range parser was taking the top of a range</b> while its own comment said the bottom: in &ldquo;$160&ndash;200 million&rdquo; only the upper bound carries the unit. It bit two films, both DC, both flattering the thesis. <em>Black Adam</em> was &minus;$257M on &sect;06; it&rsquo;s &minus;$82M.</li>
-          <li><b>Eleven charts had a data table; three didn&rsquo;t</b>, while &sect;13&rsquo;s note called the tables &ldquo;the accessibility backbone&rdquo; anyway. All fourteen have one now.</li>
+          <li><b>A budget range parser was taking the top of a range</b> while its own comment said the bottom: in &ldquo;$160&ndash;200 million&rdquo; only the upper bound carries the unit. It bit two films, both DC, both flattering the thesis. <em>Black Adam</em> was &minus;$257M on §06; it&rsquo;s &minus;$82M.</li>
+          <li><b>Eleven charts had a data table; three didn&rsquo;t</b>, while §13&rsquo;s note called the tables &ldquo;the accessibility backbone&rdquo; anyway. All fourteen have one now.</li>
           <li><b>The tab bar declared an ARIA pattern it never implemented</b>, <code>role="tab"</code> with no tabpanel, no <code>aria-controls</code>, no arrow keys. Declared-and-broken is worse than absent, so it&rsquo;s a plain nav with <code>aria-current</code>.</li>
           <li><b>A per-node style pass ran on every render.</b> The mobile type bump walked every SVG text node reading computed styles, on every filter click. It&rsquo;s two lines of CSS now.</li>
           <li><b>&ldquo;Should Ryan Reynolds&rsquo; Green Lantern be in here? Watchmen? Jonah Hex?&rdquo;</b> No, all three, for the reason already on the Out list: no sequel, no shared universe. Make it about the character and <em>Catwoman</em> comes with it.</li>
-          <li><b>&ldquo;This started as Marvel v DC and spun out. String up a binary mode, red and blue again.&rdquo;</b> It collapses the six groups to two, and it reads hard: <b>$48.4B across 68 films against $12.5B across 23</b>.</li>
+          <li><b>&ldquo;This started as Marvel v DC and spun out. String up a binary mode, red and blue again.&rdquo;</b> It collapses the six universes to two, and it reads hard: <b>$48.4B across 68 films against $12.5B across 23</b>.</li>
           <li><b>&ldquo;In Marvel v DC mode the gradient bars should go red and blue too.&rdquo;</b> They do. Both bars take their colors from one <code>--spectrum</code> token, so the lens only has to redefine that token.</li>
-          <li><b>&ldquo;Do all the claims hold up in Marvel v DC mode?&rdquo;</b> Three didn&rsquo;t. Under the lens &ldquo;Marvel&rdquo; means all three of its studios, which moves the ratio from <b>2.80&times;</b> to <b>3.87&times;</b>. &sect;01 and &sect;04 write those lines from whichever side is showing now.</li>
+          <li><b>&ldquo;Do all the claims hold up in Marvel v DC mode?&rdquo;</b> Three didn&rsquo;t. Under the lens &ldquo;Marvel&rdquo; means all three of its studios, which moves the ratio from <b>2.80&times;</b> to <b>3.87&times;</b>. §01 and §04 write those lines from whichever side is showing now.</li>
           <li><b>&ldquo;The Marvel v DC toggle might be more important than the design notes one now.&rdquo;</b> It was, and it had a third of the surface area. It has all three ways in now, and reads first in the control bar.</li>
           <li><b>&ldquo;The case for the progress bar spanning the document, not the page.&rdquo;</b> Fair case: finishing the Scoreboard used to fill it to 100%, which reads as <em>done</em> when you&rsquo;re one seventh in. It&rsquo;s tab-weighted now.</li>
           <li><b>&ldquo;I don&rsquo;t know if I like starting and ending with green on the colorful one.&rdquo;</b> Neither do I, and it was measurably wrong as well as ugly: green appeared twice. Brute-forced all 720 orderings in OKLab; the winner is <b>19% smoother</b>.</li>
           <li><b>&ldquo;I can&rsquo;t scroll this table any farther, and should we freeze the first column?&rdquo;</b> Both, the same bug twice: the mobile stylesheet was turning the frozen column <em>off</em>, and only five of fourteen columns shipped on a phone. All fourteen now, name pinned at 118px.</li>
           <li><b>&ldquo;Hitting Next makes the progress bar bounce forward and then come back.&rdquo;</b> The tab index flips before the scroll catches up, so the bar was pairing the new tab with the old position. Pinning the within-tab fraction to zero mid-transition fixed it.</li>
           <li><b>&ldquo;The commentary around every follow-up is&hellip; intense. Should we pare it down? Emphasize where I was funny, of course.&rdquo;</b> Trimmed 20% first. <b>&ldquo;Didn&rsquo;t work.&rdquo;</b> Cut 47 entries in half instead: the quote is the content, the rationale behind each fix isn&rsquo;t.</li>
-          <li><b>&ldquo;We have to eat our own dog food. Send this superteam at our product and audit in parallel.&rdquo;</b> Eight auditors, one lane each, 78 findings, 44 once the overlaps merged. The worst: the Marvel v DC lens had blanked every legend and emptied the box plot since the day it shipped, the scorecards&rsquo; profit per film was a mean under a dek that promised medians, and <em>Love and Thunder</em> credited zero Guardians. All 44 fixed; the tie-out went from twenty claims to thirty.</li>
+          <li><b>&ldquo;We have to eat our own dog food. Send this superteam at our product and audit in parallel.&rdquo;</b> Eight auditors, one lane each, 78 findings, 55 once the overlaps merged. The worst: the Marvel v DC lens had blanked every legend and emptied the box plot since the day it shipped, the scorecards&rsquo; profit per film was a mean under a dek that promised medians, and <em>Love and Thunder</em> credited zero Guardians. All 55 fixed; the tie-out went from twenty claims to thirty.</li>
+          <li><b>&ldquo;The supervillain of the audit team. Doctor Missedit. He pokes apart the findings with his encyclopedic knowledge of the heroes&rsquo; weaknesses.&rdquo;</b> <b>&ldquo;Unleash the doctor.&rdquo;</b> He may only remove confidence, never add findings. Of 55: 43 stand, 4 downgraded, 1 an artifact of a hidden browser, and 7 where the hero was right and the fix was not. Every headline had been rendered a weight too light since the fonts moved in-house, a credits scene had made Black Widow a nine-film character, and a sentence about the budget band was written into the page by the same commit that made it false. All seven fixed.</li>
         </ol>
       </details>
 
@@ -1317,7 +1319,7 @@
           <dd>The dark-to-light color overrides live in two rule blocks with different indentation: one under <code>@media (prefers-color-scheme: light)</code>, one under <code>[data-theme="light"]</code>. A &ldquo;replace all&rdquo; on a token value hit one and not the other, so the manual toggle and the OS setting disagreed about a color until both were patched.</dd>
 
           <dt>An unfinished film poisoning the profit math</dt>
-          <dd><em>Supergirl</em>, still in theaters at the time, sat at about $126M on a $200M budget and dragged the whole DCU scorecard to &minus;$317M, the single most roastable number on the page. Fix then: hold in-release films out of every profit tally. Fix now: once its run actually ended, put it back. The &minus;$317M is real.</dd>
+          <dd><em>Supergirl</em>, still in theaters at the time, sat at about $126M on a $200M budget and dragged the whole DCU scorecard to &minus;$317M, the single most roastable number on the page. Fix then: hold in-release films out of every profit tally. Fix now: once its run actually ended, put it back. The &minus;$317M was real at the time; Supergirl&rsquo;s budget was later corrected to the reported range, and the card carries the live number.</dd>
 
           <dt>A title collision, and a self-healing bug that wasn&rsquo;t</dt>
           <dd>The 2005 and 2015 <em>Fantastic Four</em> films are both literally titled &ldquo;Fantastic Four&rdquo;, which collided on the join key, so both were disambiguated with a year. Worse: the scraper seeds its worklist from the <em>previous</em> build&rsquo;s output, so renaming a film silently regenerated the old key and produced a phantom <code>UNKNOWN</code> film until the stale key was deleted by hand.</dd>
@@ -2551,6 +2553,19 @@
     h.textContent = flat
       ? "Production budgets " + rise + " over the 2000s, then flattened near " + usd(last.med) + (real ? " in 2025 dollars" : "")
       : (real ? "In 2025 dollars, production budgets " : "Production budgets ") + rise + " to a " + usd(peak.med) + " peak in " + peak.yr + ", and have slipped " + Math.round((1 - last.med / peak.med) * 100) + "% since";
+    // the band note is read off the windows, not typed: the sentence that said the band's top
+    // edge and the median coincide since 2021 was true until the budget corrections landed in
+    // the same commit and stopped being true
+    var nb = document.getElementById("n-band");
+    if (nb) {
+      var recent = roll.filter(function (p) { return p.yr >= 2021; });
+      var flatTop = recent.length && recent.every(function (p) { return p.q3 === p.med; });
+      var atPark = af.filter(function (f) { return yearOf(f) >= 2021 && val(f, "budget") === 2e8; }).length;
+      var since = af.filter(function (f) { return yearOf(f) >= 2021; }).length;
+      nb.textContent = flatTop
+        ? "Since 2021 most budgets are estimates parked at " + usd(recent[0].med) + ", so the band’s top edge and the median coincide there."
+        : (atPark >= since / 3 ? num(atPark) + " of the " + since + " budgets since 2021 are estimates parked at $200M, which is why the median sits on a round number." : "");
+    }
     var byB = af.slice().sort(function (a, b) { return val(b, "budget") - val(a, "budget"); });
     var firstFilm = af.slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; })[0];
     var top2 = byB.slice(0, 2);
@@ -3568,7 +3583,7 @@
       var withR = sum(side.films) / sum(dcs);
       var without = sum(side.films.filter(function (f) { return f.final; })) / sum(dcs.filter(function (f) { return f.final; }));
       rp.innerHTML = open.length
-        ? "So " + list(open) + (open.length === 1 ? " is" : " are") + " in &sect;02&rsquo;s $2B count and out of &sect;06 entirely; without " + (open.length === 1 ? "it" : "them") + " the " + side.name + "-to-DC ratio reads " + without.toFixed(2) + " rather than " + withR.toFixed(2) + "."
+        ? "So " + list(open) + (open.length === 1 ? " is" : " are") + " in §02&rsquo;s $2B count and out of §06 entirely; without " + (open.length === 1 ? "it" : "them") + " the " + side.name + "-to-DC ratio reads " + without.toFixed(2) + " rather than " + withR.toFixed(2) + "."
         : "Every film in the set has finished its run.";
     }
     var sp = document.getElementById("smallprint");
@@ -3591,7 +3606,7 @@
       var x = val(roi, "ww") / val(roi, "budget");
       d6.innerHTML = "Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. " +
         em(miss) + " is the widest miss at &minus;" + usd(Math.abs(profitOf(miss))) + "; " + em(hit) + " the widest hit at +" + usd(profitOf(hit)) + ". " +
-        em(roi) + " is the widest hit per dollar spent, at " + (x >= 19.5 && x < 20.5 ? "nearly 20" : Math.round(x)) + "&times; its " + usd(val(roi, "budget")) + " budget, which is a different question and the one &sect;12 warns about.";
+        em(roi) + " is the widest hit per dollar spent, at " + (x >= 19.5 && x < 20.5 ? "nearly 20" : Math.round(x)) + "&times; its " + usd(val(roi, "budget")) + " budget, which is a different question and the one §12 warns about.";
     }
   }
   var AP_LAST = null;

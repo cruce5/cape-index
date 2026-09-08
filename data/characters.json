@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T13:23:10.965Z",
+  "generated": "2026-09-08T14:57:40.028Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
@@ -114,91 +114,6 @@
           "order": 1,
           "minor": false,
           "actor": "Tom Holland"
-        }
-      ]
-    },
-    {
-      "name": "Black Widow",
-      "real_name": "Natasha Romanoff",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Scarlett Johansson"
-      ],
-      "appearances": 9,
-      "films": [
-        {
-          "title": "Iron Man 2",
-          "universe": "MCU",
-          "date": "2010-05-07",
-          "order": 4,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-04",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Captain America: The Winter Soldier",
-          "universe": "MCU",
-          "date": "2014-04-04",
-          "order": 2,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Captain America: Civil War",
-          "universe": "MCU",
-          "date": "2016-05-06",
-          "order": 3,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Captain Marvel",
-          "universe": "MCU",
-          "date": "2019-03-08",
-          "order": null,
-          "minor": true,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 5,
-          "minor": false,
-          "actor": "Scarlett Johansson"
-        },
-        {
-          "title": "Black Widow",
-          "universe": "MCU",
-          "date": "2021-07-09",
-          "order": 1,
-          "minor": false,
-          "actor": "Scarlett Johansson"
         }
       ]
     },
@@ -368,7 +283,7 @@
           "title": "Doctor Strange in the Multiverse of Madness",
           "universe": "MCU",
           "date": "2022-05-06",
-          "order": -7,
+          "order": -6,
           "minor": false,
           "actor": "Patrick Stewart"
         }
@@ -456,157 +371,79 @@
       ]
     },
     {
-      "name": "Captain America",
-      "real_name": "Steve Rogers",
+      "name": "Black Widow",
+      "real_name": "Natasha Romanoff",
       "universes": [
         "MCU"
       ],
       "actors": [
-        "Chris Evans"
+        "Scarlett Johansson"
       ],
       "appearances": 8,
       "films": [
         {
-          "title": "Captain America: The First Avenger",
+          "title": "Iron Man 2",
           "universe": "MCU",
-          "date": "2011-07-22",
-          "order": 1,
+          "date": "2010-05-07",
+          "order": 4,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "The Avengers",
           "universe": "MCU",
           "date": "2012-05-04",
-          "order": 2,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Captain America: The Winter Soldier",
           "universe": "MCU",
           "date": "2014-04-04",
-          "order": 1,
+          "order": 2,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Avengers: Age of Ultron",
           "universe": "MCU",
           "date": "2015-05-01",
-          "order": 4,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Captain America: Civil War",
           "universe": "MCU",
           "date": "2016-05-06",
-          "order": 1,
+          "order": 3,
           "minor": false,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Avengers: Infinity War",
           "universe": "MCU",
           "date": "2018-04-27",
-          "order": 4,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
-        },
-        {
-          "title": "Captain Marvel",
-          "universe": "MCU",
-          "date": "2019-03-08",
-          "order": null,
-          "minor": true,
-          "actor": "Chris Evans"
+          "actor": "Scarlett Johansson"
         },
         {
           "title": "Avengers: Endgame",
           "universe": "MCU",
           "date": "2019-04-26",
-          "order": 2,
+          "order": 5,
           "minor": false,
-          "actor": "Chris Evans"
-        }
-      ]
-    },
-    {
-      "name": "Hulk",
-      "real_name": "Bruce Banner",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Edward Norton",
-        "Mark Ruffalo"
-      ],
-      "appearances": 8,
-      "films": [
+          "actor": "Scarlett Johansson"
+        },
         {
-          "title": "The Incredible Hulk",
+          "title": "Black Widow",
           "universe": "MCU",
-          "date": "2008-06-13",
+          "date": "2021-07-09",
           "order": 1,
           "minor": false,
-          "actor": "Edward Norton"
-        },
-        {
-          "title": "The Avengers",
-          "universe": "MCU",
-          "date": "2012-05-04",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Avengers: Age of Ultron",
-          "universe": "MCU",
-          "date": "2015-05-01",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Thor: Ragnarok",
-          "universe": "MCU",
-          "date": "2017-11-03",
-          "order": 8,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Captain Marvel",
-          "universe": "MCU",
-          "date": "2019-03-08",
-          "order": null,
-          "minor": true,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": 3,
-          "minor": false,
-          "actor": "Mark Ruffalo"
-        },
-        {
-          "title": "Spider-Man: Brand New Day",
-          "universe": "MCU",
-          "date": "2026-07-31",
-          "order": 9,
-          "minor": false,
-          "actor": "Mark Ruffalo"
+          "actor": "Scarlett Johansson"
         }
       ]
     },
@@ -762,6 +599,145 @@
           "order": 2,
           "minor": false,
           "actor": "Hugh Jackman"
+        }
+      ]
+    },
+    {
+      "name": "Captain America",
+      "real_name": "Steve Rogers",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Chris Evans"
+      ],
+      "appearances": 7,
+      "films": [
+        {
+          "title": "Captain America: The First Avenger",
+          "universe": "MCU",
+          "date": "2011-07-22",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-04",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: The Winter Soldier",
+          "universe": "MCU",
+          "date": "2014-04-04",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Captain America: Civil War",
+          "universe": "MCU",
+          "date": "2016-05-06",
+          "order": 1,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 4,
+          "minor": false,
+          "actor": "Chris Evans"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 2,
+          "minor": false,
+          "actor": "Chris Evans"
+        }
+      ]
+    },
+    {
+      "name": "Hulk",
+      "real_name": "Bruce Banner",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Edward Norton",
+        "Mark Ruffalo"
+      ],
+      "appearances": 7,
+      "films": [
+        {
+          "title": "The Incredible Hulk",
+          "universe": "MCU",
+          "date": "2008-06-13",
+          "order": 1,
+          "minor": false,
+          "actor": "Edward Norton"
+        },
+        {
+          "title": "The Avengers",
+          "universe": "MCU",
+          "date": "2012-05-04",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 8,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 3,
+          "minor": false,
+          "actor": "Mark Ruffalo"
+        },
+        {
+          "title": "Spider-Man: Brand New Day",
+          "universe": "MCU",
+          "date": "2026-07-31",
+          "order": 9,
+          "minor": false,
+          "actor": "Mark Ruffalo"
         }
       ]
     },
@@ -978,69 +954,6 @@
       ]
     },
     {
-      "name": "Beast",
-      "real_name": "Dr. Henry McCoy",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Kelsey Grammer",
-        "Nicholas Hoult"
-      ],
-      "appearances": 6,
-      "films": [
-        {
-          "title": "X-Men: The Last Stand",
-          "universe": "Fox",
-          "date": "2006-05-26",
-          "order": 6,
-          "minor": false,
-          "actor": "Kelsey Grammer"
-        },
-        {
-          "title": "X-Men: First Class",
-          "universe": "Fox",
-          "date": "2011-06-03",
-          "order": 10,
-          "minor": false,
-          "actor": "Nicholas Hoult"
-        },
-        {
-          "title": "X-Men: Days of Future Past",
-          "universe": "Fox",
-          "date": "2014-05-23",
-          "order": 7,
-          "minor": false,
-          "actor": "Nicholas Hoult"
-        },
-        {
-          "title": "X-Men: Apocalypse",
-          "universe": "Fox",
-          "date": "2016-05-27",
-          "order": 4,
-          "minor": false,
-          "actor": "Nicholas Hoult"
-        },
-        {
-          "title": "X-Men: Dark Phoenix",
-          "universe": "Fox",
-          "date": "2019-06-07",
-          "order": 4,
-          "minor": false,
-          "actor": "Nicholas Hoult"
-        },
-        {
-          "title": "The Marvels",
-          "universe": "MCU",
-          "date": "2023-11-10",
-          "order": null,
-          "minor": true,
-          "actor": "Kelsey Grammer"
-        }
-      ]
-    },
-    {
       "name": "Drax",
       "real_name": "Drax the Destroyer",
       "universes": [
@@ -1087,8 +1000,8 @@
           "title": "Thor: Love and Thunder",
           "universe": "MCU",
           "date": "2022-07-08",
-          "order": null,
-          "minor": true,
+          "order": -5,
+          "minor": false,
           "actor": "Dave Bautista"
         },
         {
@@ -1209,8 +1122,8 @@
           "title": "Thor: Love and Thunder",
           "universe": "MCU",
           "date": "2022-07-08",
-          "order": null,
-          "minor": true,
+          "order": -2,
+          "minor": false,
           "actor": "Vin Diesel"
         },
         {
@@ -1331,8 +1244,8 @@
           "title": "Thor: Love and Thunder",
           "universe": "MCU",
           "date": "2022-07-08",
-          "order": null,
-          "minor": true,
+          "order": -6,
+          "minor": false,
           "actor": "Karen Gillan"
         },
         {
@@ -1392,8 +1305,8 @@
           "title": "Thor: Love and Thunder",
           "universe": "MCU",
           "date": "2022-07-08",
-          "order": null,
-          "minor": true,
+          "order": -1,
+          "minor": false,
           "actor": "Bradley Cooper"
         },
         {
@@ -1453,8 +1366,8 @@
           "title": "Thor: Love and Thunder",
           "universe": "MCU",
           "date": "2022-07-08",
-          "order": null,
-          "minor": true,
+          "order": -7,
+          "minor": false,
           "actor": "Chris Pratt"
         },
         {
@@ -1705,6 +1618,60 @@
       ]
     },
     {
+      "name": "Beast",
+      "real_name": "Dr. Henry McCoy",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Kelsey Grammer",
+        "Nicholas Hoult"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "X-Men: The Last Stand",
+          "universe": "Fox",
+          "date": "2006-05-26",
+          "order": 6,
+          "minor": false,
+          "actor": "Kelsey Grammer"
+        },
+        {
+          "title": "X-Men: First Class",
+          "universe": "Fox",
+          "date": "2011-06-03",
+          "order": 10,
+          "minor": false,
+          "actor": "Nicholas Hoult"
+        },
+        {
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": 7,
+          "minor": false,
+          "actor": "Nicholas Hoult"
+        },
+        {
+          "title": "X-Men: Apocalypse",
+          "universe": "Fox",
+          "date": "2016-05-27",
+          "order": 4,
+          "minor": false,
+          "actor": "Nicholas Hoult"
+        },
+        {
+          "title": "X-Men: Dark Phoenix",
+          "universe": "Fox",
+          "date": "2019-06-07",
+          "order": 4,
+          "minor": false,
+          "actor": "Nicholas Hoult"
+        }
+      ]
+    },
+    {
       "name": "Cyclops",
       "real_name": "Scott Summers",
       "universes": [
@@ -1760,7 +1727,7 @@
     },
     {
       "name": "Doctor Strange",
-      "real_name": "Dr. Stephen Strange",
+      "real_name": "Stephen Strange",
       "universes": [
         "MCU"
       ],
@@ -1773,7 +1740,7 @@
           "title": "Doctor Strange",
           "universe": "MCU",
           "date": "2016-11-04",
-          "order": 1,
+          "order": -1,
           "minor": false,
           "actor": "Benedict Cumberbatch"
         },
@@ -1805,7 +1772,7 @@
           "title": "Doctor Strange in the Multiverse of Madness",
           "universe": "MCU",
           "date": "2022-05-06",
-          "order": 1,
+          "order": -7,
           "minor": false,
           "actor": "Benedict Cumberbatch"
         }
@@ -1903,8 +1870,8 @@
           "title": "Thor: Love and Thunder",
           "universe": "MCU",
           "date": "2022-07-08",
-          "order": null,
-          "minor": true,
+          "order": -4,
+          "minor": false,
           "actor": "Pom Klementieff"
         },
         {
@@ -2093,8 +2060,8 @@
           "title": "Batman v Superman: Dawn of Justice",
           "universe": "DCEU",
           "date": "2016-03-25",
-          "order": null,
-          "minor": true,
+          "order": -2,
+          "minor": false,
           "actor": "Jason Momoa"
         },
         {
@@ -2526,7 +2493,7 @@
           "title": "Doctor Strange in the Multiverse of Madness",
           "universe": "MCU",
           "date": "2022-05-06",
-          "order": -6,
+          "order": -5,
           "minor": false,
           "actor": "John Krasinski"
         },
@@ -3089,8 +3056,8 @@
           "title": "Batman v Superman: Dawn of Justice",
           "universe": "DCEU",
           "date": "2016-03-25",
-          "order": null,
-          "minor": true,
+          "order": -3,
+          "minor": false,
           "actor": "Ezra Miller"
         },
         {
@@ -3424,37 +3391,6 @@
       ]
     },
     {
-      "name": "Blob",
-      "real_name": "Fred Dukes",
-      "universes": [
-        "Fox",
-        "MCU"
-      ],
-      "actors": [
-        "Kevin Durand",
-        "Mike Waters"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "X-Men Origins: Wolverine",
-          "universe": "Fox",
-          "date": "2009-05-01",
-          "order": 6,
-          "minor": false,
-          "actor": "Kevin Durand"
-        },
-        {
-          "title": "Deadpool & Wolverine",
-          "universe": "MCU",
-          "date": "2024-07-26",
-          "order": null,
-          "minor": true,
-          "actor": "Mike Waters"
-        }
-      ]
-    },
-    {
       "name": "Captain Boomerang",
       "real_name": "Digger Harkness",
       "universes": [
@@ -3528,8 +3464,8 @@
           "title": "Batman v Superman: Dawn of Justice",
           "universe": "DCEU",
           "date": "2016-03-25",
-          "order": null,
-          "minor": true,
+          "order": -1,
+          "minor": false,
           "actor": "Ray Fisher"
         },
         {
@@ -3598,35 +3534,6 @@
           "order": 8,
           "minor": false,
           "actor": "Alfred Molina"
-        }
-      ]
-    },
-    {
-      "name": "Doctor Sivana",
-      "real_name": "Dr. Thaddeus Sivana",
-      "universes": [
-        "DCEU"
-      ],
-      "actors": [
-        "Mark Strong"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "Shazam!",
-          "universe": "DCEU",
-          "date": "2019-04-05",
-          "order": 1,
-          "minor": false,
-          "actor": "Mark Strong"
-        },
-        {
-          "title": "Shazam! Fury of the Gods",
-          "universe": "DCEU",
-          "date": "2023-03-17",
-          "order": null,
-          "minor": true,
-          "actor": "Mark Strong"
         }
       ]
     },
@@ -3714,7 +3621,7 @@
           "title": "Deadpool & Wolverine",
           "universe": "MCU",
           "date": "2024-07-26",
-          "order": -2,
+          "order": -1,
           "minor": false,
           "actor": "Channing Tatum"
         }
@@ -4997,7 +4904,7 @@
           "title": "Doctor Strange in the Multiverse of Madness",
           "universe": "MCU",
           "date": "2022-05-06",
-          "order": -3,
+          "order": -2,
           "minor": false,
           "actor": "Anson Mount"
         }
@@ -5130,6 +5037,27 @@
       ]
     },
     {
+      "name": "Blade",
+      "real_name": "Eric Brooks",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Wesley Snipes"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": -2,
+          "minor": false,
+          "actor": "Wesley Snipes"
+        }
+      ]
+    },
+    {
       "name": "Blink",
       "real_name": null,
       "universes": [
@@ -5147,6 +5075,27 @@
           "order": 13,
           "minor": false,
           "actor": "Fan Bingbing"
+        }
+      ]
+    },
+    {
+      "name": "Blob",
+      "real_name": "Fred Dukes",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Kevin Durand"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 6,
+          "minor": false,
+          "actor": "Kevin Durand"
         }
       ]
     },
@@ -5312,7 +5261,7 @@
           "title": "Doctor Strange in the Multiverse of Madness",
           "universe": "MCU",
           "date": "2022-05-06",
-          "order": -5,
+          "order": -4,
           "minor": false,
           "actor": "Hayley Atwell"
         }
@@ -5333,7 +5282,7 @@
           "title": "Doctor Strange in the Multiverse of Madness",
           "universe": "MCU",
           "date": "2022-05-06",
-          "order": -4,
+          "order": -3,
           "minor": false,
           "actor": "Lashana Lynch"
         }
@@ -5354,7 +5303,7 @@
           "title": "Venom: Let There Be Carnage",
           "universe": "SSU",
           "date": "2021-10-01",
-          "order": 6,
+          "order": -1,
           "minor": false,
           "actor": "Woody Harrelson"
         }
@@ -5438,7 +5387,7 @@
           "title": "Doctor Strange in the Multiverse of Madness",
           "universe": "MCU",
           "date": "2022-05-06",
-          "order": -2,
+          "order": -1,
           "minor": false,
           "actor": "Charlize Theron"
         }
@@ -5630,6 +5579,27 @@
           "order": 7,
           "minor": false,
           "actor": "Elena Anaya"
+        }
+      ]
+    },
+    {
+      "name": "Doctor Sivana",
+      "real_name": "Dr. Thaddeus Sivana",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Mark Strong"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Shazam!",
+          "universe": "DCEU",
+          "date": "2019-04-05",
+          "order": 1,
+          "minor": false,
+          "actor": "Mark Strong"
         }
       ]
     },
@@ -6575,27 +6545,6 @@
           "order": 5,
           "minor": false,
           "actor": "Blu Hunt"
-        }
-      ]
-    },
-    {
-      "name": "Mister Mind",
-      "real_name": null,
-      "universes": [
-        "DCEU"
-      ],
-      "actors": [
-        "David F. Sandberg"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Shazam! Fury of the Gods",
-          "universe": "DCEU",
-          "date": "2023-03-17",
-          "order": null,
-          "minor": true,
-          "actor": "David F. Sandberg"
         }
       ]
     },

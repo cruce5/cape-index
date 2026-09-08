@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T13:23:10.963Z",
+  "generated": "2026-09-08T14:57:40.026Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "X-Men": {
@@ -2220,20 +2220,6 @@
           "minor": false,
           "actor": "Sally Field",
           "character": "May Parker"
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Chris Cooper",
-          "character": "Norman Osborn",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Denis Leary",
-          "character": "George Stacy",
-          "fromProse": true
         }
       ]
     },
@@ -2743,6 +2729,27 @@
       "date": "2016-03-25",
       "cast": [
         {
+          "actor": "Ezra Miller",
+          "character": "Barry Allen / The Flash",
+          "order": -3,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Jason Momoa",
+          "character": "Arthur Curry / Aquaman",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Ray Fisher",
+          "character": "Victor Stone / Cyborg",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Ben Affleck",
@@ -2819,27 +2826,6 @@
           "minor": true,
           "actor": "Kevin Costner",
           "character": "Jonathan Kent",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Ezra Miller",
-          "character": "Barry Allen / The Flash",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Jason Momoa",
-          "character": "Arthur Curry / Aquaman",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Ray Fisher",
-          "character": "Victor Stone / Cyborg",
           "fromProse": true
         }
       ]
@@ -3174,10 +3160,11 @@
       "date": "2016-11-04",
       "cast": [
         {
-          "order": 1,
-          "minor": false,
           "actor": "Benedict Cumberbatch",
-          "character": "Dr. Stephen Strange"
+          "character": "Stephen Strange / Doctor Strange",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
         },
         {
           "order": 2,
@@ -4349,34 +4336,6 @@
           "minor": false,
           "actor": "Jude Law",
           "character": "Yon-Rogg"
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Chris Evans",
-          "character": "Steve Rogers",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Scarlett Johansson",
-          "character": "Natasha Romanoff",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Mark Ruffalo",
-          "character": "Bruce Banner",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Don Cheadle",
-          "character": "James \"Rhodey\" Rhodes",
-          "fromProse": true
         }
       ]
     },
@@ -5504,6 +5463,13 @@
       "date": "2021-10-01",
       "cast": [
         {
+          "actor": "Woody Harrelson",
+          "character": "Cletus Kasady / Carnage",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Tom Hardy",
@@ -5532,12 +5498,6 @@
           "minor": false,
           "actor": "Stephen Graham",
           "character": "Patrick Mulligan"
-        },
-        {
-          "order": 6,
-          "minor": false,
-          "actor": "Woody Harrelson",
-          "character": "Cletus Kasady / Carnage"
         }
       ]
     },
@@ -5852,52 +5812,53 @@
       "date": "2022-05-06",
       "cast": [
         {
+          "actor": "Benedict Cumberbatch",
+          "character": "Stephen Strange / Doctor Strange",
+          "order": -7,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "actor": "Patrick Stewart",
           "character": "Charles Xavier / Professor X",
-          "order": -7,
+          "order": -6,
           "minor": false,
           "fromOverride": true
         },
         {
           "actor": "John Krasinski",
           "character": "Reed Richards / Mister Fantastic",
-          "order": -6,
+          "order": -5,
           "minor": false,
           "fromOverride": true
         },
         {
           "actor": "Hayley Atwell",
           "character": "Peggy Carter / Captain Carter",
-          "order": -5,
+          "order": -4,
           "minor": false,
           "fromOverride": true
         },
         {
           "actor": "Lashana Lynch",
           "character": "Maria Rambeau / Captain Marvel",
-          "order": -4,
+          "order": -3,
           "minor": false,
           "fromOverride": true
         },
         {
           "actor": "Anson Mount",
           "character": "Blackagar Boltagon / Black Bolt",
-          "order": -3,
+          "order": -2,
           "minor": false,
           "fromOverride": true
         },
         {
           "actor": "Charlize Theron",
           "character": "Clea",
-          "order": -2,
+          "order": -1,
           "minor": false,
           "fromOverride": true
-        },
-        {
-          "order": 1,
-          "minor": false,
-          "actor": "Benedict Cumberbatch",
-          "character": "Dr. Stephen Strange"
         },
         {
           "order": 2,
@@ -5957,6 +5918,55 @@
       "date": "2022-07-08",
       "cast": [
         {
+          "actor": "Chris Pratt",
+          "character": "Peter Quill / Star-Lord",
+          "order": -7,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Karen Gillan",
+          "character": "Nebula",
+          "order": -6,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Dave Bautista",
+          "character": "Drax the Destroyer",
+          "order": -5,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Pom Klementieff",
+          "character": "Mantis",
+          "order": -4,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Sean Gunn",
+          "character": "Kraglin Obfonteri",
+          "order": -3,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Vin Diesel",
+          "character": "Groot",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
+          "actor": "Bradley Cooper",
+          "character": "Rocket",
+          "order": -1,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "order": 1,
           "minor": false,
           "actor": "Chris Hemsworth",
@@ -6001,64 +6011,8 @@
         {
           "order": null,
           "minor": true,
-          "actor": "Chris Pratt",
-          "character": "Peter Quill / Star-Lord",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Karen Gillan",
-          "character": "Nebula",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Dave Bautista",
-          "character": "Drax the Destroyer",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Pom Klementieff",
-          "character": "Mantis",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Sean Gunn",
-          "character": "Kraglin Obfonteri",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Vin Diesel",
-          "character": "Groot",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Bradley Cooper",
-          "character": "Rocket",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
           "actor": "Ben Falcone",
           "character": "stage manager",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Idris Elba",
-          "character": "Heimdall",
           "fromProse": true
         }
       ]
@@ -6324,34 +6278,6 @@
           "minor": true,
           "actor": "Cooper Andrews",
           "character": "Rosa",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Jennifer Holland",
-          "character": "Emilia Harcourt",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Steve Agee",
-          "character": "John Economos",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Mark Strong",
-          "character": "Dr. Thaddeus Sivana",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "David F. Sandberg",
-          "character": "Mister Mind",
           "fromProse": true
         }
       ]
@@ -6662,13 +6588,6 @@
           "minor": false,
           "actor": "Samuel L. Jackson",
           "character": "Nick Fury"
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "Kelsey Grammer",
-          "character": "Dr. Hank McCoy / Beast",
-          "fromProse": true
         }
       ]
     },
@@ -6806,9 +6725,16 @@
       "date": "2024-07-26",
       "cast": [
         {
+          "actor": "Wesley Snipes",
+          "character": "Eric Brooks / Blade",
+          "order": -2,
+          "minor": false,
+          "fromOverride": true
+        },
+        {
           "actor": "Channing Tatum",
           "character": "Remy LeBeau / Gambit",
-          "order": -2,
+          "order": -1,
           "minor": false,
           "fromOverride": true
         },
@@ -6912,22 +6838,8 @@
         {
           "order": null,
           "minor": true,
-          "actor": "Wesley Snipes",
-          "character": "half-vampire",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
           "actor": "Chris Evans",
           "character": "Johnny Storm / Human Torch",
-          "fromProse": true
-        },
-        {
-          "order": null,
-          "minor": true,
-          "actor": "UK Pitbulls",
-          "character": "Fred Dukes / Blob",
           "fromProse": true
         },
         {
