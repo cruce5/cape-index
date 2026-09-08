@@ -640,7 +640,7 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 01 &nbsp;/&nbsp; MARVEL v DC</span>
-        <h2>Marvel Studios has out-grossed every DC film combined, nearly three to one</h2>
+        <h2 id="h-scorecard">Marvel Studios has out-grossed every DC film combined, nearly three to one</h2>
         <p class="dek" id="d-scorecard"></p>
       </div>
       <div class="scorecards" id="scorecards"></div>
@@ -667,7 +667,7 @@
         <div class="card-head">
           <div>
             <div class="card-title">Spread of worldwide grosses, by universe</div>
-            <div class="card-note">Box spans the 25th&ndash;75th percentile; the line is the median; dots are individual films. Marvel&rsquo;s median film out-grosses roughly seven of every ten DC films.</div>
+            <div class="card-note" id="n-box">Box spans the 25th&ndash;75th percentile; the line is the median; dots are individual films. Marvel&rsquo;s median film out-grosses roughly seven of every ten DC films.</div>
           </div>
           <button class="minibtn" data-outlier aria-pressed="false">Hide &ge; $1B</button>
         </div>
@@ -977,7 +977,7 @@
       <div class="view-head">
         <span class="num">§ 12 &nbsp;/&nbsp; ANTI-PATTERNS</span>
         <h2>Every chart down here is accurate. Not one of them earns its place</h2>
-        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every completed film and nominal dollars; the universe filter and the $ toggle in the control bar don&rsquo;t reach them.</p>
+        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every completed film, nominal dollars and the six-universe palette; nothing in the control bar reaches them.</p>
         <div class="legend" id="ap-leg" style="margin-top:14px"></div>
       </div>
 
@@ -1163,7 +1163,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">86 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">87 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1252,6 +1252,7 @@
           <li><b>&ldquo;Should Ryan Reynolds&rsquo; Green Lantern be in here? Watchmen? Jonah Hex?&rdquo;</b> No, and for the same reason all three are already in the Out list: no sequel, no shared universe. The instinct that Green Lantern feels closer to scope is about the <em>character</em> being a Justice League name, and that isn&rsquo;t the test. Make it the test and <em>Catwoman</em> and <em>Constantine</em> come with it, and the rule stops being mechanical, which is the only thing making it defensible.</li>
           <li><b>&ldquo;This started as Marvel v DC and spun out. String up a binary mode, red and blue again.&rdquo;</b> A <b>Marvel v DC</b> lens in the control bar collapses the six groups to two: Marvel&rsquo;s three studios, DC&rsquo;s three continuities, everything on the page recolored and regrouped. It is the comparison the project began as, and it reads hard: <b>$48.4B across 68 films against $12.5B across 23</b>, and $266M of profit per completed film against $94M. The red/blue convention was dropped at six categories because five saturated hues plus a gray can&rsquo;t all stay apart under color blindness. Two can: this pair measures <b>21.7</b> apart under deuteranopia against a floor of 10, and <code>npm run check:palette</code> now holds it to a higher bar than the six-way set.</li>
           <li><b>&ldquo;In Marvel v DC mode the gradient bars should go red and blue too.&rdquo;</b> They do. Both the masthead rule and the sticky read line take their colors from one <code>--spectrum</code> token, so the lens only has to redefine that token: Marvel red held on the left, DC blue on the right, blending through the middle. It was worth building them off a single token for exactly this.</li>
+          <li><b>&ldquo;Do all the claims hold up in Marvel v DC mode?&rdquo;</b> Three didn&rsquo;t. Under the lens &ldquo;Marvel&rdquo; stops meaning Marvel Studios and starts meaning all three of its studios, which moves every Marvel-to-DC number on the page: the ratio goes from <b>2.80&times;</b> to <b>3.87&times;</b>, the total from $34.91B across 38 films to $48.37B across 68, and the median Marvel film from out-grossing seven of every ten DC films to six. &sect;01&rsquo;s headline, its opening paragraph and the spread chart&rsquo;s caption are all written from whichever side the lens is showing now, and &sect;04 stops saying &ldquo;Fox and Sony never&rdquo; when the lens has folded Fox and Sony into Marvel. &sect;12 was the opposite problem: it was following the lens when its own copy says nothing in the control bar reaches it, so its legend listed six universes in two colors. It keeps the six-hue palette whatever the lens is doing.</li>
         </ol>
       </details>
 
@@ -1588,14 +1589,49 @@
   }
 
   /* ---------- masthead ---------- */
+
+  // Under the Marvel v DC lens "Marvel" stops meaning Marvel Studios and starts meaning all
+  // three of its studios, which moves every Marvel-vs-DC number on the page. These sentences
+  // are written from whichever side the lens is showing rather than typed for one of them.
+  function marvelSide() {
+    return brandLens()
+      ? { films: FILMS.filter(function (f) { return BRAND[f.u] === "Marvel"; }), name: "Marvel", poss: "Marvel&rsquo;s" }
+      : { films: FILMS.filter(function (f) { return f.u === "MCU"; }), name: "Marvel Studios", poss: "Marvel Studios&rsquo;" };
+  }
+  function dcSide() { return FILMS.filter(function (f) { return BRAND[f.u] === "DC"; }); }
+  var ORD = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+  function ratioPhrase(r) {
+    var whole = Math.floor(r), frac = r - whole;
+    if (frac >= 0.72) return "nearly " + (ORD[whole + 1] || whole + 1) + " to one";
+    if (frac <= 0.28) return "just over " + (ORD[whole] || whole) + " to one";
+    return "about " + (ORD[whole] || whole) + " and a half to one";
+  }
+  function renderLensCopy() {
+    var M = marvelSide(), D = dcSide();
+    var sum = function (a) { return a.reduce(function (s, f) { return s + val(f, "ww"); }, 0); };
+    var mt = sum(M.films), dt = sum(D);
+    var h = document.getElementById("h-scorecard");
+    if (h) h.textContent = M.name + " has out-grossed every DC film combined, " + ratioPhrase(mt / dt);
+    var n = document.getElementById("n-box");
+    if (n) {
+      // "out-grosses N of every ten" is a share of DC films below Marvel's median, so it
+      // moves when the lens changes which films make up that median
+      var med = median(M.films.map(function (f) { return val(f, "ww"); }));
+      var dg = D.map(function (f) { return val(f, "ww"); });
+      var below = dg.filter(function (g) { return g < med; }).length;
+      var outOfTen = Math.round((below / dg.length) * 10);
+      n.innerHTML = "Box spans the 25th&ndash;75th percentile; the line is the median; dots are individual films. " +
+        M.poss + " median film out-grosses roughly " + (ORD[outOfTen] || outOfTen) + " of every ten DC films.";
+    }
+  }
   function renderThesis() {
-    var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
-    var dc = FILMS.filter(function (f) { return f.u === "DCEU" || f.u === "DCU" || f.u === "Elseworlds"; });
+    var side = marvelSide();
+    var mcu = side.films, dc = dcSide();
     var sum = function (a, w) { return a.reduce(function (s, f) { return s + val(f, w); }, 0); };
     var m = sum(mcu, "ww"), d = sum(dc, "ww");
     var el = document.getElementById("thesis");
     el.innerHTML =
-      block("Marvel Studios", usd(m), mcu.length + " films" + (STATE.money === "real" ? " · 2025 $" : "")) +
+      block(side.name, usd(m), mcu.length + " films" + (STATE.money === "real" ? " · 2025 $" : "")) +
       block("All of DC", usd(d), dc.length + " films" + (STATE.money === "real" ? " · 2025 $" : "")) +
       block("The gap", (m / d).toFixed(2) + "×", "Marvel to DC");
     function block(k, v, sub) {
@@ -1651,8 +1687,10 @@
       var c = muted ? "--ink-muted" : (v >= 0 ? "--pl-clear" : "--neg");
       return '<span style="color:var(' + c + ')">' + (v >= 0 ? "+" : "−") + usd(Math.abs(v)) + "</span>";
     }
-    var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
-    var dc = FILMS.filter(function (f) { return f.u === "DCEU" || f.u === "DCU" || f.u === "Elseworlds"; });
+    // the Marvel side of this paragraph is whichever side the lens is showing
+    var side = marvelSide();
+    var mcu = side.films;
+    var dc = dcSide();
     var ssu = FILMS.filter(function (f) { return f.u === "SSU"; });
     var fox = FILMS.filter(function (f) { return f.u === "Fox"; });
     var tm = mcu.reduce(function (a, f) { return a + val(f, "ww"); }, 0), td = dc.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
@@ -1666,7 +1704,11 @@
     var mpf = median(mFin.map(profitOf)), dpf = median(dFin.map(profitOf));
     var pfWord = function (v) { return (v >= 0 ? "clears about <b>" : "loses about <b>") + usd(Math.abs(v)) + "</b>"; };
     document.getElementById("d-scorecard").innerHTML =
-      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones (the Dark Knight trilogy, both Jokers, The Batman). The median Marvel Studios film makes <b>" + usd(am) + "</b> worldwide; the median DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel Studios films have passed $1B; " + bd + " DC films have. Net of an estimated theatrical break-even of 2.5&times; production budget, the median completed Marvel Studios film " + pfWord(mpf) + "; the median completed DC film " + pfWord(dpf) + " (home video, streaming and TV not counted). Medians throughout, not averages: on a slate this skewed a mean lands where no actual film sits. Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; neither run has a billion-dollar title, though Raimi&rsquo;s <em>Spider-Man 3</em> came closest at $887M.";
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " " + side.name + " films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones (the Dark Knight trilogy, both Jokers, The Batman). The median " + side.name + " film makes <b>" + usd(am) + "</b> worldwide; the median DC film, <b>" + usd(ad) + "</b>. " + bm + " " + side.name + " films have passed $1B; " + bd + " DC films have. Net of an estimated theatrical break-even of 2.5&times; production budget, the median completed " + side.name + " film " + pfWord(mpf) + "; the median completed DC film " + pfWord(dpf) + " (home video, streaming and TV not counted). Medians throughout, not averages: on a slate this skewed a mean lands where no actual film sits. " +
+      // under the lens Fox and Sony are inside the fight, so the closing clause changes sides
+      (brandLens()
+        ? "That Marvel total is three studios, not one: Marvel Studios at <b>" + usd(FILMS.filter(function (f) { return f.u === "MCU"; }).reduce(function (x, f) { return x + val(f, "ww"); }, 0)) + "</b>, Fox&rsquo;s " + fox.length + " at <b>" + usd(tfx) + "</b> and Sony&rsquo;s " + ssu.length + " at <b>" + usd(tss) + "</b>. Switch to the six-universe view to split them."
+        : "Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; neither run has a billion-dollar title, though Raimi&rsquo;s <em>Spider-Man 3</em> came closest at $887M.");
   }
 
   /* ---------- §01 stacked columns by year ---------- */
@@ -2959,6 +3001,7 @@
   }
 
   /* ---------- §12 anti-patterns (teaching gallery; always every film, nominal $) ---------- */
+  function apHue(u) { return COLORVAR[u]; }
   var AP_ORDER = ["MCU", "Fox", "SSU", "DCEU", "DCU", "Elseworlds"];
   function apDims(hMul) {
     var mob = isMobile();
@@ -3025,7 +3068,7 @@
       var x1 = cx + r * Math.cos(ang), y1 = cy + r * Math.sin(ang);
       var x2 = cx + r * Math.cos(a2), y2 = cy + r * Math.sin(a2);
       var large = (a2 - ang) > Math.PI ? 1 : 0;
-      seg += '<path d="M' + cx + " " + cy + " L" + x1.toFixed(1) + " " + y1.toFixed(1) + " A" + r + " " + r + " 0 " + large + " 1 " + x2.toFixed(1) + " " + y2.toFixed(1) + ' Z" fill="var(' + hueVar(f.u) + ')" stroke="var(--surface-2)" stroke-width="0.6"/>';
+      seg += '<path d="M' + cx + " " + cy + " L" + x1.toFixed(1) + " " + y1.toFixed(1) + " A" + r + " " + r + " 0 " + large + " 1 " + x2.toFixed(1) + " " + y2.toFixed(1) + ' Z" fill="var(' + apHue(f.u) + ')" stroke="var(--surface-2)" stroke-width="0.6"/>';
       ang = a2;
     });
     document.getElementById("ap-pie").innerHTML =
@@ -3048,7 +3091,7 @@
     var bars = "", labs = "";
     rows.forEach(function (r, i) {
       var yy = yS(r.avg);
-      bars += '<rect x="' + (xS(i) - bw / 2) + '" y="' + yy + '" width="' + bw + '" height="' + (m.t + ih - yy) + '" rx="3" fill="var(' + hueVar(r.k) + ')"/>';
+      bars += '<rect x="' + (xS(i) - bw / 2) + '" y="' + yy + '" width="' + bw + '" height="' + (m.t + ih - yy) + '" rx="3" fill="var(' + apHue(r.k) + ')"/>';
       // "Elseworlds" is 10 characters into a 45px column on a phone; the short code holds
       labs += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="11" fill="var(--ink-2)">' + (d.mob && r.k === "Elseworlds" ? "Else" : uLabel(r.k)) + "</text>";
       // six values into six 36px columns don't fit on a phone. Keep the two the tear-down
@@ -3097,7 +3140,7 @@
       acc = acc.map(function (v, i) { return v + series[ki][i]; });
       var up = acc.map(function (v, i) { return xS(i).toFixed(1) + " " + yS(v).toFixed(1); });
       var dn = lower.map(function (v, i) { return xS(i).toFixed(1) + " " + yS(v).toFixed(1); }).reverse();
-      areas += '<path d="M' + up.join(" L") + " L" + dn.join(" L") + ' Z" fill="var(' + hueVar(k) + ')" fill-opacity="0.82"/>';
+      areas += '<path d="M' + up.join(" L") + " L" + dn.join(" L") + ' Z" fill="var(' + apHue(k) + ')" fill-opacity="0.82"/>';
     });
     var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="' + (d.mob ? 11 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
     document.getElementById("ap-cumul").innerHTML =
@@ -3123,7 +3166,7 @@
     var lab = "R² = " + r2.toFixed(2);
     var pe = document.getElementById("ap-trend-r2"); if (pe) pe.textContent = lab;
     var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
-    var dots = fs.map(function (f) { return '<circle cx="' + xS(f.rt).toFixed(1) + '" cy="' + yS(f.ww).toFixed(1) + '" r="3.2" fill="var(' + hueVar(f.u) + ')" fill-opacity="0.7"/>'; }).join("");
+    var dots = fs.map(function (f) { return '<circle cx="' + xS(f.rt).toFixed(1) + '" cy="' + yS(f.ww).toFixed(1) + '" r="3.2" fill="var(' + apHue(f.u) + ')" fill-opacity="0.7"/>'; }).join("");
     var g = "";
     axisTicks(maxY).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
@@ -3148,7 +3191,7 @@
     var gap = ih / fs.length, bh = gap * 0.68;
     var bars = fs.map(function (f, i) {
       var yy = m.t + i * gap + (gap - bh) / 2, cap = d.mob ? 15 : 22;
-      return '<rect x="' + m.l + '" y="' + yy + '" width="' + (xS(f.roi) - m.l) + '" height="' + bh + '" rx="2" fill="var(' + hueVar(f.u) + ')"/>' +
+      return '<rect x="' + m.l + '" y="' + yy + '" width="' + (xS(f.roi) - m.l) + '" height="' + bh + '" rx="2" fill="var(' + apHue(f.u) + ')"/>' +
         '<text x="' + (m.l - 8) + '" y="' + (yy + bh / 2 + 3.5) + '" text-anchor="end" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="' + (d.mob ? 10.5 : 10.5) + '" fill="var(--ink-2)">' + esc(f.t.length > cap ? f.t.slice(0, cap - 1) + "…" : f.t) + "</text>" +
         '<text x="' + (xS(f.roi) + 5) + '" y="' + (yy + bh / 2 + 3.5) + '" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)">' + f.roi.toFixed(1) + "×</text>";
     }).join("");
@@ -3188,7 +3231,7 @@
       web += '<text x="' + lp[0] + '" y="' + lp[1] + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="10" fill="var(--ink-muted)">' + mm.name + "</text>";
     });
     var polys = AP_ORDER.map(function (k, ki) {
-      return '<polygon points="' + metrics.map(function (_, i) { return pt(i, 0.08 + 0.92 * norm[i][ki]).join(" "); }).join(" ") + '" fill="var(' + hueVar(k) + ')" fill-opacity="0.16" stroke="var(' + hueVar(k) + ')" stroke-width="1.5"/>';
+      return '<polygon points="' + metrics.map(function (_, i) { return pt(i, 0.08 + 0.92 * norm[i][ki]).join(" "); }).join(" ") + '" fill="var(' + apHue(k) + ')" fill-opacity="0.16" stroke="var(' + apHue(k) + ')" stroke-width="1.5"/>';
     }).join("");
     document.getElementById("ap-radar").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Radar chart comparing six metrics across universes, an anti-pattern">' + web + polys + "</svg>";
@@ -3216,7 +3259,7 @@
 
   function renderAntipatterns() {
     var leg = document.getElementById("ap-leg");
-    if (leg) leg.innerHTML = '<span class="lg-keys">' + AP_ORDER.map(function (k) { return '<span><i style="--c:var(' + hueVar(k) + ')"></i>' + uLabel(k) + "</span>"; }).join("") + "</span>";
+    if (leg) leg.innerHTML = '<span class="lg-keys">' + AP_ORDER.map(function (k) { return '<span><i style="--c:var(' + apHue(k) + ')"></i>' + uLabel(k) + "</span>"; }).join("") + "</span>";
     apDual(); apPie(); apTrunc(); apCumul(); apTrend(); apRoi(); apRadar(); apRainbow();
   }
 
@@ -3242,17 +3285,25 @@
     var ssu = FILMS.filter(function (f) { return f.u === "SSU"; });
     var h4 = document.getElementById("h-scatter");
     if (h4) {
-      var fx = over(fox, 1e9), sn = over(ssu, 1e9);
-      var tail = (fx === 0 && sn === 0) ? "Fox and Sony never" : "Fox " + word(fx) + ", Sony " + word(sn);
-      h4.textContent = "Marvel has cleared $1 billion " + word(over(mcu, 1e9)) + basis + ". DC " + word(over(dc, 1e9)) + ", " + tail;
+      // under the lens Fox and Sony are folded into Marvel, so naming them would point at
+      // groups the page is no longer showing
+      if (brandLens()) {
+        var allM = mcu.concat(fox, ssu);
+        h4.textContent = "Marvel has cleared $1 billion " + word(over(allM, 1e9)) + basis + ". DC " + word(over(dc, 1e9));
+      } else {
+        var fx = over(fox, 1e9), sn = over(ssu, 1e9);
+        var tail = (fx === 0 && sn === 0) ? "Fox and Sony never" : "Fox " + word(fx) + ", Sony " + word(sn);
+        h4.textContent = "Marvel Studios has cleared $1 billion " + word(over(mcu, 1e9)) + basis + ". DC " + word(over(dc, 1e9)) + ", " + tail;
+      }
     }
     var d4 = document.getElementById("d-scatter");
     if (d4) {
       var dcN = over(dc, 1e9), others = over(fox, 1e9) + over(ssu, 1e9);
+      var marvelWord = brandLens() ? "Marvel" : "Marvel Studios";
       d4.innerHTML = "Worldwide gross by release date" + (real ? ", rescaled to 2025 dollars" : "") +
         ". Above the billion-dollar line sit " + num(dcN) + " DC film" + (dcN === 1 ? "" : "s") +
-        (others ? ", " + num(others) + " from Fox and Sony," : "") +
-        " and " + num(over(mcu, 1e9)) + " from Marvel Studios. Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far." +
+        (!brandLens() && others ? ", " + num(others) + " from Fox and Sony," : "") +
+        " and " + num(over(mcu, 1e9) + (brandLens() ? over(fox, 1e9) + over(ssu, 1e9) : 0)) + " from " + marvelWord + ". Below it, the whole cloud sinks after 2022, with <em>Brand New Day</em> the lone exception so far." +
         (real ? " The billion-dollar club is a nominal milestone by convention; this is what it looks like in real terms." : "");
     }
     var h2 = document.getElementById("h-treemap");
@@ -3269,6 +3320,7 @@
     var mw = measureChartWidth(); if (mw) MW = mw;
     renderThesis();
     renderClubCopy();
+    renderLensCopy();
     renderScorecards();
     renderYear();
     renderBox();
