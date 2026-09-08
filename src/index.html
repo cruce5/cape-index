@@ -210,6 +210,9 @@
   .notes-link { appearance: none; border: 0; background: transparent; padding: 0 2px; font: inherit; font-weight: 600; color: var(--note); cursor: pointer; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--note) 45%, transparent); text-underline-offset: 3px; border-radius: 4px; }
   .notes-link:hover { text-decoration-color: var(--note); }
   .notes-link[aria-pressed="true"] { background: var(--note); color: var(--page); text-decoration: none; padding: 1px 8px; border-radius: 999px; }
+  .lens-link { color: var(--dceu); text-decoration-color: color-mix(in srgb, var(--dceu) 45%, transparent); }
+  .lens-link:hover { text-decoration-color: var(--dceu); }
+  .lens-link[aria-pressed="true"] { background: var(--dceu); color: var(--page); }
   .seg [data-notes="on"][aria-pressed="true"] { background: var(--note); color: var(--page); }
 
   /* ============ SECTION TABS + CONTENTS ============ */
@@ -507,7 +510,9 @@
     .ctl-bar { display: flex; align-items: stretch; gap: 8px; min-height: 40px; }
     .ctl-toggle { flex: 1 1 auto; min-width: 0; appearance: none; border: 0; background: transparent; color: var(--ink); font: inherit; text-align: left; padding: 0; cursor: pointer; }
     .ctl-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; min-height: 40px; }
-    .ctl-notes { flex: none; align-self: center; appearance: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--note) 55%, transparent); background: transparent; color: var(--note); cursor: pointer; }
+    .ctl-lens { flex: none; align-self: center; min-height: 40px; appearance: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--dceu) 55%, transparent); background: transparent; color: var(--dceu); cursor: pointer; white-space: nowrap; }
+    .ctl-lens[aria-pressed="true"] { background: var(--dceu); color: var(--page); border-color: var(--dceu); }
+    .ctl-notes { flex: none; align-self: center; min-height: 40px; appearance: none; font: inherit; font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--note) 55%, transparent); background: transparent; color: var(--note); cursor: pointer; }
     .ctl-notes[aria-pressed="true"] { background: var(--note); color: var(--page); border-color: var(--note); }
     .ctl-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); flex: none; }
     .ctl-summary { flex: 1 1 auto; font-size: 13px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -527,7 +532,7 @@
     /* 44px minimum on every control a thumb has to hit */
     .pill, .seg button, .minibtn { min-height: 44px; }
     .minibtn { padding-left: 14px; padding-right: 14px; }
-    .notes-link { display: inline-block; padding: 6px 4px; }
+    .notes-link { display: inline-block; padding: 6px 2px; margin: 0 -2px; }
     .contents li a { padding: 8px 0; }
     .clabel { font-size: 11px; }
     .legend { font-size: 14px; width: 100%; }
@@ -560,7 +565,7 @@
     <div class="spectrum" aria-hidden="true"></div>
     <p class="byline">By <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a></p>
     <p class="dek">Every live-action Marvel and DC superhero film since 2000 that&rsquo;s in a franchise, and what each made. Grosses come straight from Box&nbsp;Office&nbsp;Mojo; any figure switches to 2025 dollars.</p>
-    <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is.</p>
+    <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six groups back to the two the project started as.</p>
     <div class="thesis" id="thesis"></div>
     <details class="contents" aria-label="Contents">
       <summary class="ct">Contents &middot; 15 findings, 7 tabs</summary>
@@ -583,8 +588,15 @@
 </nav>
 
 <nav class="controls" aria-label="Chart controls">
-  <div class="wrap ctl-bar"><button class="ctl-toggle" aria-expanded="false" aria-controls="controls-inner"><span class="ctl-row"><span class="ctl-label">Filters</span><span class="ctl-summary" id="ctl-summary"></span><span class="ctl-chev" aria-hidden="true"></span></span></button><button class="ctl-notes" aria-pressed="false">Notes</button></div>
+  <div class="wrap ctl-bar"><button class="ctl-toggle" aria-expanded="false" aria-controls="controls-inner"><span class="ctl-row"><span class="ctl-label">Filters</span><span class="ctl-summary" id="ctl-summary"></span><span class="ctl-chev" aria-hidden="true"></span></span></button><button class="ctl-lens" aria-pressed="false">M v DC</button><button class="ctl-notes" aria-pressed="false">Notes</button></div>
   <div class="wrap controls-inner" id="controls-inner">
+    <div class="cgroup" role="group" aria-label="Color by">
+      <span class="clabel">Color by</span>
+      <div class="seg">
+        <button data-lens="universe" aria-pressed="true">Six universes</button>
+        <button data-lens="brand" aria-pressed="false">Marvel v DC</button>
+      </div>
+    </div>
     <div class="cgroup" role="group" aria-label="Filter by universe">
       <span class="clabel">Universe</span>
       <button class="pill pill-all" data-uni-all aria-pressed="true">All</button>
@@ -596,13 +608,6 @@
       <button class="pill" data-uni="DCEU" style="--c:var(--dceu)" aria-pressed="true"><span class="dot"></span>DCEU</button>
       <button class="pill" data-uni="DCU" style="--c:var(--dcu)" aria-pressed="true"><span class="dot"></span>DCU</button>
       <button class="pill" data-uni="Elseworlds" style="--c:var(--else)" aria-pressed="true"><span class="dot"></span>Elseworlds</button>
-    </div>
-    <div class="cgroup" role="group" aria-label="Color by">
-      <span class="clabel">Color by</span>
-      <div class="seg">
-        <button data-lens="universe" aria-pressed="true">Six universes</button>
-        <button data-lens="brand" aria-pressed="false">Marvel v DC</button>
-      </div>
     </div>
     <div class="cgroup" role="group" aria-label="Dollar basis">
       <span class="clabel">Dollars</span>
@@ -1163,7 +1168,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">87 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">88 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1253,6 +1258,7 @@
           <li><b>&ldquo;This started as Marvel v DC and spun out. String up a binary mode, red and blue again.&rdquo;</b> A <b>Marvel v DC</b> lens in the control bar collapses the six groups to two: Marvel&rsquo;s three studios, DC&rsquo;s three continuities, everything on the page recolored and regrouped. It is the comparison the project began as, and it reads hard: <b>$48.4B across 68 films against $12.5B across 23</b>, and $266M of profit per completed film against $94M. The red/blue convention was dropped at six categories because five saturated hues plus a gray can&rsquo;t all stay apart under color blindness. Two can: this pair measures <b>21.7</b> apart under deuteranopia against a floor of 10, and <code>npm run check:palette</code> now holds it to a higher bar than the six-way set.</li>
           <li><b>&ldquo;In Marvel v DC mode the gradient bars should go red and blue too.&rdquo;</b> They do. Both the masthead rule and the sticky read line take their colors from one <code>--spectrum</code> token, so the lens only has to redefine that token: Marvel red held on the left, DC blue on the right, blending through the middle. It was worth building them off a single token for exactly this.</li>
           <li><b>&ldquo;Do all the claims hold up in Marvel v DC mode?&rdquo;</b> Three didn&rsquo;t. Under the lens &ldquo;Marvel&rdquo; stops meaning Marvel Studios and starts meaning all three of its studios, which moves every Marvel-to-DC number on the page: the ratio goes from <b>2.80&times;</b> to <b>3.87&times;</b>, the total from $34.91B across 38 films to $48.37B across 68, and the median Marvel film from out-grossing seven of every ten DC films to six. &sect;01&rsquo;s headline, its opening paragraph and the spread chart&rsquo;s caption are all written from whichever side the lens is showing now, and &sect;04 stops saying &ldquo;Fox and Sony never&rdquo; when the lens has folded Fox and Sony into Marvel. &sect;12 was the opposite problem: it was following the lens when its own copy says nothing in the control bar reaches it, so its legend listed six universes in two colors. It keeps the six-hue palette whatever the lens is doing.</li>
+          <li><b>&ldquo;The Marvel v DC toggle might be more important than the design notes one now.&rdquo;</b> It was, and it had a third of the surface area. Design notes had three ways in: a button in the masthead, a chip that stays visible on a phone when the filter panel is folded, and its row in the control bar. The lens had one, buried inside that folded panel. It has all three now, it reads first in the control bar (it decides what the universe pills even are), and the collapsed filter summary says which lens is on. Both masthead buttons sit in the same sentence, gold and blue, so they read as the pair they are.</li>
         </ol>
       </details>
 
@@ -3382,16 +3388,24 @@
       syncPills(); renderAll();
     });
   })();
-  document.querySelectorAll(".seg [data-lens]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      STATE.lens = b.getAttribute("data-lens");
-      document.querySelectorAll(".seg [data-lens]").forEach(function (x) {
-        x.setAttribute("aria-pressed", x.getAttribute("data-lens") === STATE.lens ? "true" : "false");
-      });
-      document.body.classList.toggle("lens-brand", brandLens());
-      syncPills();
-      renderAll();
+  function applyLens(next) {
+    STATE.lens = next;
+    document.querySelectorAll(".seg [data-lens]").forEach(function (x) {
+      x.setAttribute("aria-pressed", x.getAttribute("data-lens") === STATE.lens ? "true" : "false");
     });
+    document.querySelectorAll(".ctl-lens, [data-lens-link]").forEach(function (x) {
+      x.setAttribute("aria-pressed", brandLens() ? "true" : "false");
+    });
+    document.body.classList.toggle("lens-brand", brandLens());
+    syncPills();
+    renderAll();
+  }
+  document.querySelectorAll(".ctl-lens, [data-lens-link]").forEach(function (b) {
+    b.addEventListener("click", function () { applyLens(brandLens() ? "universe" : "brand"); });
+  });
+  // four controls drive one state: the segmented pair, the masthead link and the mobile chip
+  document.querySelectorAll(".seg [data-lens]").forEach(function (b) {
+    b.addEventListener("click", function () { applyLens(b.getAttribute("data-lens")); });
   });
   document.querySelectorAll(".seg [data-money]").forEach(function (b) {
     b.addEventListener("click", function () {
@@ -3554,7 +3568,7 @@
     var el = document.getElementById("ctl-summary"); if (!el) return;
     var on = UNI.filter(function (u) { return STATE.unis[u.k]; });
     var unis = on.length === UNI.length ? "All universes" : on.length === 0 ? "No universes" : on.map(function (u) { return u.label; }).join(", ");
-    var bits = [unis, STATE.money === "real" ? "2025 $" : "Nominal"];
+    var bits = [brandLens() ? "Marvel v DC" : unis, STATE.money === "real" ? "2025 $" : "Nominal"];
     el.textContent = bits.join(" \u00b7 ");
   }
   (function () {
