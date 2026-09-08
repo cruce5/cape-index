@@ -1168,7 +1168,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">88 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">89 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1237,7 +1237,7 @@
           <li><b>&ldquo;No em dashes anywhere.&rdquo;</b> One had crept back into the Scope card.</li>
           <li><b>&ldquo;I made this gradient bar, could we put it under the title for a splash of color?&rdquo;</b> Rebuilt from the palette tokens rather than pasted as hex, so it re-mixes itself for the light theme instead of being a second, stale copy of the colors. Same order he drew: green, gray, magenta, gold, blue, cyan, with the gray carried in the middle as a transition rather than left to end the run.</li>
           <li><b>&ldquo;The inconsistent white space on these scorecards is BOTHERSOME.&rdquo;</b> Read the wrong way round first: the tiles were sized to their own content, which made the space after each value identical and the tiles three different widths. <b>&ldquo;I STILL want them evenly distributed width wise.&rdquo;</b> The tiles are the repeated object, so they are three equal columns; the air after a value differs because the values do.</li>
-          <li><b>&ldquo;Would it be cool if the gradient bar stuck at the top and followed the scroll?&rdquo;</b> It rides the top edge of the sticky tab bar and fills left to right as you read: dim for what&rsquo;s still below the fold, saturated for what you&rsquo;ve passed. Each tab is its own page length, so switching tabs re-measures. The fill is a window onto a 100vw copy of the gradient rather than a squashed one, so the colors stay put instead of sliding as the bar grows.</li>
+          <li><b>&ldquo;Would it be cool if the gradient bar stuck at the top and followed the scroll?&rdquo;</b> It rides the top edge of the sticky tab bar and fills left to right as you read: dim for what&rsquo;s still below the fold, saturated for what you&rsquo;ve passed. It measures the whole document, not the tab: each tab is a seventh of the bar, so finishing one moves you a seventh rather than filling it. The fill is a window onto a 100vw copy of the gradient rather than a squashed one, so the colors stay put instead of sliding as the bar grows.</li>
           <li><b>&ldquo;James Franco is tagged as Green Goblin. Wasn&rsquo;t he the New Goblin? Is my data rock solid?&rdquo;</b> It wasn&rsquo;t. One line in the canonicalizer, <code>"Harry Osborn": "Green Goblin"</code>, broke both of the roster&rsquo;s own rules at once: it counted Franco in <em>Spider-Man 2</em>, where Harry has no goblin identity at all, called his <em>Spider-Man 3</em> turn Green Goblin when the credit says New Goblin, and folded two Harrys and a Norman into one row. Green Goblin is Norman&rsquo;s, at two films; New Goblin and Webb&rsquo;s Green Goblin are their own rows. The same audit found Shalla-Bal folded into Norrin Radd&rsquo;s Silver Surfer, Hope van Dyne counted as the Wasp a film before she gets the suit, and one actor listed twice under two spellings of her own name. The scraped credits were right the whole time; the mapping on top of them wasn&rsquo;t.</li>
           <li><b>&ldquo;Lots of different fonts going around here. Are we abiding by best practice?&rdquo;</b> Mostly, with two real holes. Seventy chart labels named <code>IBM Plex Mono</code> with no fallback behind it, so a failed webfont would have dropped them to the browser&rsquo;s default. And twenty-one labels were English sentences set in monospace (<em>break-even</em>, the fold markers, the axis titles), while a handful of axis <em>numbers</em> were coming out in the body face, because a label that carries a class takes its family from the CSS and not from its own attribute. Three faces are now tokens with real stacks, words are Sans, figures are Mono, and the sweep is clean at 375px and 1400px.</li>
           <li><b>&ldquo;How do we feel about the spacing and sizing on the Back / Next pair?&rdquo;</b> Two problems with one cause. The arrow was the last word of the title, so on the longer tab name it wrapped to a line of its own, which is why one card was taller than the other as well as wider. The pair is now two halves of one grid row, and the arrow is its own cell pinned to the outer edge, where it nudges outward on hover. Equal at every tab and both widths; when a long name wraps on a phone, both cards grow together.</li>
@@ -1259,6 +1259,7 @@
           <li><b>&ldquo;In Marvel v DC mode the gradient bars should go red and blue too.&rdquo;</b> They do. Both the masthead rule and the sticky read line take their colors from one <code>--spectrum</code> token, so the lens only has to redefine that token: Marvel red held on the left, DC blue on the right, blending through the middle. It was worth building them off a single token for exactly this.</li>
           <li><b>&ldquo;Do all the claims hold up in Marvel v DC mode?&rdquo;</b> Three didn&rsquo;t. Under the lens &ldquo;Marvel&rdquo; stops meaning Marvel Studios and starts meaning all three of its studios, which moves every Marvel-to-DC number on the page: the ratio goes from <b>2.80&times;</b> to <b>3.87&times;</b>, the total from $34.91B across 38 films to $48.37B across 68, and the median Marvel film from out-grossing seven of every ten DC films to six. &sect;01&rsquo;s headline, its opening paragraph and the spread chart&rsquo;s caption are all written from whichever side the lens is showing now, and &sect;04 stops saying &ldquo;Fox and Sony never&rdquo; when the lens has folded Fox and Sony into Marvel. &sect;12 was the opposite problem: it was following the lens when its own copy says nothing in the control bar reaches it, so its legend listed six universes in two colors. It keeps the six-hue palette whatever the lens is doing.</li>
           <li><b>&ldquo;The Marvel v DC toggle might be more important than the design notes one now.&rdquo;</b> It was, and it had a third of the surface area. Design notes had three ways in: a button in the masthead, a chip that stays visible on a phone when the filter panel is folded, and its row in the control bar. The lens had one, buried inside that folded panel. It has all three now, it reads first in the control bar (it decides what the universe pills even are), and the collapsed filter summary says which lens is on. Both masthead buttons sit in the same sentence, gold and blue, so they read as the pair they are.</li>
+          <li><b>&ldquo;The case for the progress bar spanning the document, not the page.&rdquo;</b> It&rsquo;s a good case. Inside a tab the native scrollbar already says the same thing, so a per-tab bar was spending a whole design element on information the browser gives away, and it was misleading in the worst direction: finishing the Scoreboard filled it to 100%, which reads as <em>done</em> when you are one seventh in. A bar that claims you have finished six times before you finish is worse than no bar. It is tab-weighted rather than measured in pixels, because a hidden tab has no height and &sect;15&rsquo;s fold-outs move the total while you stand on it: completed tabs plus your fraction of this one, over seven. Fixed denominator, nothing measured off-screen, and jumping to Reference honestly puts you near the end.</li>
         </ol>
       </details>
 
@@ -3497,7 +3498,7 @@
     updateTabStrip();
     updateStickyVars();
     syncScrollHints(); // the tables measure 0 wide until their tab is the visible one
-    if (STATE.repaintRead) requestAnimationFrame(STATE.repaintRead); // each tab is its own page length
+    if (STATE.repaintRead) requestAnimationFrame(STATE.repaintRead); // the tab index is part of the progress
     if (opts.push !== false) history.replaceState(null, "", "#" + key);
     // a tab opened first from a chart-less tab may never have been measured on this width
     if (booted) { var w = measureChartWidth(); if (w && Math.abs(w - MW) > 2) renderAll(); }
@@ -3532,7 +3533,18 @@
     bar.classList.toggle("can-scroll", can);
     bar.classList.toggle("at-end", !can || strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2);
   }
-  // read progress for the tab you are on, painted into the gradient across the tab bar
+  // Read progress across the whole document, not the tab you happen to be on.
+  //
+  // Per-tab was the obvious version and it was wrong twice over: inside a tab the native
+  // scrollbar already says the same thing, and finishing the Scoreboard filled the bar to
+  // 100%, which reads as "done" when you are one seventh in. A bar that says finished six
+  // times before you finish is worse than no bar.
+  //
+  // It is tab-weighted rather than measured in pixels: completed tabs plus your fraction of
+  // this one, over the tab count. Pixels can't work here because a hidden tab has no height
+  // and §15's fold-outs move the total while you are standing on it; a fixed denominator of
+  // TABS.length can't drift, needs nothing measured that isn't on screen, and puts a reader
+  // who jumps to Reference honestly near the end.
   (function () {
     var fill = document.querySelector(".spectrum-bar i"); if (!fill) return;
     var queued = false;
@@ -3540,7 +3552,10 @@
       queued = false;
       var doc = document.documentElement;
       var h = doc.scrollHeight - window.innerHeight;
-      var p = h > 8 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0;
+      // a tab that fits the viewport has been read in full the moment you land on it
+      var within = h > 8 ? Math.min(1, Math.max(0, window.scrollY / h)) : 1;
+      var i = TABS.indexOf(STATE.tab); if (i < 0) i = 0;
+      var p = Math.min(1, (i + within) / TABS.length);
       fill.style.width = (p * 100).toFixed(2) + "%";
     }
     function onScroll() { if (!queued) { queued = true; requestAnimationFrame(paint); } }
