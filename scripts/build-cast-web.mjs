@@ -34,7 +34,7 @@ filmOrder.forEach((t) => { byFilm[t] = []; });
 characters.forEach((c) => c.films.forEach((t) => byFilm[t].push(c.n)));
 
 writeFileSync(join(ROOT, "data/web-cast.json"), JSON.stringify({
-  generated: new Date().toISOString(),
+  generated: JSON.parse(readFileSync(join(ROOT, "data/films.json"), "utf8")).meta.generated,
   source: "English Wikipedia film cast sections",
   note: "Costumed / codenamed characters only. Recasts counted as one character (see .actors).",
   characters,

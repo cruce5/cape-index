@@ -13,7 +13,7 @@
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="The Cape Index" />
-<meta name="twitter:description" content="Every live-action Marvel and DC superhero film since 2000 that is part of a franchise. Verified box office, profit, legs, reviews and the shared-cast roster." />
+<meta name="twitter:description" content="Every live-action Marvel and DC superhero film since 2000 that is part of a franchise, and what each one made. Grosses from Box Office Mojo; profit, legs, reviews and the shared-cast roster." />
 <meta name="twitter:image" content="https://capeindex.com/og.png" />
 <meta name="theme-color" content="#0d0f14" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
@@ -40,15 +40,15 @@
     --axis: #343c4c;
     --border: rgba(255, 255, 255, 0.11);
     --border-strong: rgba(255, 255, 255, 0.2);
-    /* categorical — CVD-safe set (Paul Tol "bright", stepped for the dark surface).
+    /* categorical - CVD-safe set (Paul Tol "bright", stepped for the dark surface).
        Red/blue franchise convention dropped for separability.
-       Chromatic: MCU, DCEU, DCU, Fox, SSU. Elseworlds is the muted standalone bucket (grey), plus its own mark shape. */
+       Chromatic: MCU, DCEU, DCU, Fox, SSU. Elseworlds is the muted standalone bucket (gray), plus its own mark shape. */
     --mcu: #3ba152;
     --dceu: #4a86c8;
     --dcu: #63c6e4;
     --fox: #bd4a8f;
     --ssu: #ccbb44;
-    --else: #9a938a;
+    --else: #9f9f9f;
     --pos: #3fb950;
     --neg: #f0883e;
     /* P/L pair: deliberately NOT a categorical hue. Positive is a neutral slate so it
@@ -86,11 +86,11 @@
       --dcu: #1b8fb0;
       --fox: #9c3172;
       --ssu: #a8791d;
-      --else: #6a6a74;
+      --else: #4a453c;
       --pos: #197b35;
       --neg: #b64a00;
       --pl-clear: #5d6675;
-      --note: #8a6a34;
+      --note: #7d5f2c;
       --shadow: 0 1px 2px rgba(13, 15, 20, 0.05), 0 4px 16px -14px rgba(13, 15, 20, 0.14);
     }
   }
@@ -111,11 +111,11 @@
     --dcu: #1b8fb0;
     --fox: #9c3172;
     --ssu: #a8791d;
-    --else: #6b665e;
+    --else: #4a453c;
     --pos: #197b35;
     --neg: #b64a00;
     --pl-clear: #5d6675;
-    --note: #8a6a34;
+    --note: #7d5f2c;
     --shadow: 0 1px 2px rgba(13, 15, 20, 0.05), 0 4px 16px -14px rgba(13, 15, 20, 0.14);
   }
 
@@ -150,7 +150,7 @@
   header.masthead { border-bottom: 1px solid var(--border); padding: 40px 0 26px; }
   .masthead h1 { font-size: clamp(48px, 9vw, 104px); letter-spacing: -0.028em; }
   .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 14px 0 0; text-wrap: pretty; }
-  /* the six universe hues in the order Bill drew them, grey carried in the middle as a
+  /* the six universe hues in the order Bill drew them, gray carried in the middle as a
      transition rather than left to end the run. Built from the tokens, so it re-mixes
      itself for the light theme instead of being a second, stale copy of the palette. */
   .spectrum { height: 7px; border-radius: 999px; margin: 16px 0 0; background: var(--spectrum); }
@@ -158,7 +158,7 @@
   /* The same gradient rides the top edge of the sticky tab bar and fills left to right as
      you read the tab you're on: dim for what's below the fold, saturated for what you've
      passed. The fill is a window onto a 100vw copy of the gradient, not a squashed one, so
-     the colours stay put instead of sliding as the bar grows. */
+     the colors stay put instead of sliding as the bar grows. */
   .spectrum-bar { position: absolute; top: 0; left: 0; right: 0; height: 6px; overflow: hidden; pointer-events: none; }
   .spectrum-bar::before { content: ""; position: absolute; inset: 0; background: var(--spectrum); opacity: 0.22; }
   .spectrum-bar i { position: absolute; top: 0; left: 0; height: 100%; width: var(--read, 0%); overflow: hidden; }
@@ -255,7 +255,7 @@
   button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--dceu); outline-offset: 2px; border-radius: 4px; }
 
   /* ============ SECTIONS ============ */
-  section.view { padding: 60px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 64px; }
+  section.view { padding: 60px 0; border-bottom: 1px solid var(--border); } /* scroll-margin-top comes from the rule above; re-declaring it here silently beat the sticky-stack calc */
   .act + section.view { padding-top: 16px; }
   section.view:last-of-type { border-bottom: 0; }
   .view-head { margin-bottom: 30px; max-width: 45rem; }
@@ -281,7 +281,7 @@
   .sc .row span:last-child { font-family: var(--font-mono); font-weight: 500; }
   .sc .big { font-size: 26px; font-weight: 700; font-family: var(--font-display); margin-top: 4px; }
 
-  /* legend — the colour keys are one unbroken row (.lg-keys, nowrap); anything that
+  /* legend - the color keys are one unbroken row (.lg-keys, nowrap); anything that
      isn't an identity key (circle size, the gold ring) drops to a quieter second line
      so the six universes never wrap mid-list. */
   .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 14px; font-size: 14px; color: var(--ink-2); }
@@ -293,7 +293,7 @@
   .legend i { width: 11px; height: 11px; border-radius: 3px; background: var(--c); display: inline-block; }
   .legend i.hollow { background: color-mix(in srgb, var(--c) 34%, transparent); border: 1px solid var(--c); }
 
-  /* a card whose title is its own disclosure control — for the reference tab, where a
+  /* a card whose title is its own disclosure control - for the reference tab, where a
      few cards run to fifty-odd items and would otherwise be the whole tab's scroll */
   details.card > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
   details.card > summary::-webkit-details-marker { display: none; }
@@ -326,8 +326,8 @@
      in one chart come out in a different face from the identical numbers in the next. */
   .lbl.num { font-family: var(--font-mono); }
   /* EVERY classless chart label (axis numbers, "67 more" fold markers, value
-     annotations) honoured its own tiny font-size="10/11" attribute. This one rule
-     resizes all of them at once — CSS beats the attribute. Keep it above the media
+     annotations) honored its own tiny font-size="10/11" attribute. This one rule
+     resizes all of them at once - CSS beats the attribute. Keep it above the media
      query so mobile can pin the pre-fitMobileText base. */
   svg text:not([class]) { font-size: 16px; }
   @media (max-width: 640px) {
@@ -352,6 +352,9 @@
 
   /* data tables */
   .tablewrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; }
+  /* position:sticky on a th needs a scrolling ancestor to stick within; without a height the
+     ledger's header was inert for all 91 rows */
+  #table-full .tablewrap { max-height: 72vh; overflow-y: auto; }
   /* the ledger is wider than any screen; say so, and stop saying it once they've scrolled */
   .scrollhint { display: none; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--note); margin: 2px 2px 0; }
   .scrollhint.on { display: flex; }
@@ -360,7 +363,8 @@
   @media (prefers-reduced-motion: reduce) { .scrollhint .arw { animation: none; } }
   table.data { border-collapse: collapse; width: 100%; font-size: 14px; }
   table.data th, table.data td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
-  table.data th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; user-select: none; }
+  table.data th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; user-select: none; }
+  #table-full table.data th { cursor: pointer; } /* the ledger is the only sortable table */
   table.data th:first-child, table.data td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
   table.data th:first-child { background: var(--surface-2); z-index: 1; }
   table.data td { font-family: var(--font-mono); }
@@ -512,7 +516,7 @@
   }
 </style>
 
-<div class="tip" id="tip" role="status" aria-live="off"></div>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
 
 <header class="masthead">
   <div class="wrap">
@@ -617,7 +621,7 @@
         <div class="card-head">
           <div>
             <div class="card-title">Spread of worldwide grosses, by universe</div>
-            <div class="card-note">Box spans the 25th&ndash;75th percentile; the line is the median; dots are individual films. Marvel&rsquo;s median film out-grosses roughly three of every four DC films.</div>
+            <div class="card-note">Box spans the 25th&ndash;75th percentile; the line is the median; dots are individual films. Marvel&rsquo;s median film out-grosses roughly seven of every ten DC films.</div>
           </div>
           <button class="minibtn" data-outlier aria-pressed="false">Hide &ge; $1B</button>
         </div>
@@ -627,7 +631,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Beyond the averages, how are each universe&rsquo;s grosses actually spread out?</dd>
           <dt>Why this form</dt><dd>A box plot shows the middle 50%, the median and the tails at once. An average alone would hide that DC&rsquo;s range is both wider and lower. The dots put every film back on the chart so the summary isn&rsquo;t a black box.</dd>
-          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean, one $2.8B film drags a mean around. DCU has two films, so it gets dots and a median tick only; a quartile box on a handful of films is theatre. Elseworlds, at six, just clears the bar for a box, so read its quartiles loosely.</dd>
+          <dt>Choices here</dt><dd>The line is the <em>median</em>, not the mean, one $2.8B film drags a mean around. DCU has two films, so it gets dots and a median tick only; a quartile box on a handful of films is theater. Elseworlds, at six, just clears the bar for a box, so read its quartiles loosely.</dd>
           <dt>Watch for</dt><dd>With this few films per group, a single film moves the quartiles a lot. Read it as &ldquo;roughly,&rdquo; not &ldquo;precisely.&rdquo;</dd>
         </dl></div>
       </div>
@@ -639,7 +643,7 @@
       <div class="view-head">
         <span class="num">§ 02 &nbsp;/&nbsp; TREEMAP</span>
         <h2>Only three films have passed $2 billion, and all three are Marvel</h2>
-        <p class="dek">Every film is a rectangle, sized by worldwide gross. The three biggest are all Marvel: two Avengers films, and <em>Brand New Day</em>, which is still in theatres. DC&rsquo;s ceiling, Aquaman at $1.15B, sits below ten separate Marvel films.</p>
+        <p class="dek">Every film is a rectangle, sized by worldwide gross. The three biggest are all Marvel: two Avengers films, and <em>Brand New Day</em>, which is still in theaters. DC&rsquo;s ceiling, Aquaman at $1.15B, sits below ten separate Marvel films.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -652,7 +656,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where is the money concentrated across all 91 films at once?</dd>
           <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 91-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
-          <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Colour is universe identity, never a value ramp.</dd>
+          <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Color is universe identity, never a value ramp.</dd>
           <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
         </dl></div>
       </div>
@@ -666,7 +670,7 @@
       <div class="view-head">
         <span class="num">§ 03 &nbsp;/&nbsp; BY RELEASE DATE</span>
         <h2>Since 2020, no year has produced more than one billion-dollar film</h2>
-        <p class="dek">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 the output is about the same, six or seven films a year, but the films are smaller and the big bubbles thin out to one a year at most. <em>Brand New Day</em>, still in release, is 2026&rsquo;s. Bubbles ringed in gold crossed $1&nbsp;billion.</p>
+        <p class="dek">Each film on its release date, sized by worldwide gross. Through 2019 the pattern was a few films a year, several of them enormous; 2018 and 2019 alone had seven billion-dollar films between them. Since 2021 the count has held up, four to seven films a year, but the films are smaller and the big bubbles thin out to one a year at most. <em>Brand New Day</em>, still in release, is 2026&rsquo;s. Bubbles ringed in gold crossed $1&nbsp;billion.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -703,7 +707,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Is there a trend in film size over 25 years, and which films broke away from the pack?</dd>
           <dt>Why this form</dt><dd>Two continuous axes, date and gross, is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
-          <dt>Choices here</dt><dd>The palette is a color-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of color blindness, so a sixth is a non-starter. Elseworlds (DC&rsquo;s six films outside any shared universe) is drawn in grey, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labelled; a label on all 91 is noise. Those labels print the short title &mdash; <em>Endgame</em>, not <em>Avengers: Endgame</em> &mdash; because the mark&rsquo;s colour and shape already say which universe it is, and the franchise half is what makes a label run into its neighbours.</dd>
+          <dt>Choices here</dt><dd>The palette is a color-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of color blindness, so a sixth is a non-starter. Elseworlds (DC&rsquo;s six films outside any shared universe) is drawn in gray, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labeled; a label on all 91 is noise. Those labels print the short title (<em>Endgame</em>, not <em>Avengers: Endgame</em>) because the mark&rsquo;s color and shape already say which universe it is, and the franchise half is what makes a label run into its neighbors.</dd>
           <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support, the story is the spread and the outliers, not a slope.</dd>
         </dl></div>
       </div>
@@ -741,7 +745,7 @@
       <div class="view-head">
         <span class="num">§ 06 &nbsp;/&nbsp; DID IT MAKE MONEY?</span>
         <h2>A third of these films never cleared their break-even point</h2>
-        <p class="dek">Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. <em>The Marvels</em> is the widest miss; <em>Joker</em> the widest hit, at nearly 20&times; its $55M budget.</p>
+        <p class="dek">Each film&rsquo;s worldwide gross against an estimated break-even of 2.5&times; its production budget. Profit to the right, loss to the left. <em>The Marvels</em> is the widest miss at &minus;$481M; <em>Avengers: Endgame</em> the widest hit at +$1.91B. <em>Joker</em> is the widest hit per dollar spent, at nearly 20&times; its $55M budget, which is a different question and the one &sect;12 warns about.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -753,7 +757,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which films actually cleared their break-even point, and by how much?</dd>
           <dt>Why this form</dt><dd>A diverging bar anchored at zero puts profit right, loss left, and sorts the whole slate best to worst in one read. Gross alone can&rsquo;t answer &ldquo;did it make money&rdquo;, a $400M film is a hit or a bomb depending on its budget.</dd>
-          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Which side of the line a bar runs on already carries the outcome, so the colour doesn&rsquo;t have to: films that cleared break-even are a neutral slate, and the orange is spent only on the ones that didn&rsquo;t. A green here would have sat a shade off the MCU green in the chip beside it, and half these bars would have read as &ldquo;Marvel.&rdquo; Every value label sits in one column clear of the film names.</dd>
+          <dt>Choices here</dt><dd>Zero is break-even, estimated at <code>2.5 &times; budget</code>. Which side of the line a bar runs on already carries the outcome, so the color doesn&rsquo;t have to: films that cleared break-even are a neutral slate, and the orange is spent only on the ones that didn&rsquo;t. A green here would have sat a shade off the MCU green in the chip beside it, and half these bars would have read as &ldquo;Marvel.&rdquo; Every value label sits in one column clear of the film names. No universe chip here: it would put a categorical hue beside a neutral bar in every row, and there is no neutral that stays distinct from six hues under color blindness without simply being the ink color. The title names the film, the tooltip names the universe, and &sect;13 has both.</dd>
           <dt>Watch for</dt><dd>Break-even is a rule of thumb, not studio accounting, home video, streaming and TV deals aren&rsquo;t in it. Trust the ranking more than the exact dollar figure.</dd>
         </dl></div>
       </div>
@@ -788,14 +792,14 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 08 &nbsp;/&nbsp; REVIEWS &amp; REVENUE</span>
-        <h2>Reviews barely move with box office, and critics and audiences often part ways</h2>
-        <p class="dek">Two questions: do better-reviewed films make more money, and where do critics and audiences split?</p>
+        <h2>Better-reviewed films do gross more. That still doesn&rsquo;t mean reviews sell tickets</h2>
+        <p class="dek">Two questions: do better-reviewed films make more money, and where do critics and audiences split? On the first, the honest answer is yes and it is not small, about $9M of worldwide gross per point of critic score, and the best-reviewed quarter of the slate has a median film out-grossing the worst-reviewed quarter roughly two and a half to one. The catch is that reviews and grosses are both downstream of how big the franchise already was.</p>
       </div>
       <div class="card">
         <div class="card-head">
           <div>
             <div class="card-title">Rotten Tomatoes critic score vs worldwide gross</div>
-            <div class="card-note">One point per film. If reviews drove grosses, this would slope up. It mostly doesn&rsquo;t.</div>
+            <div class="card-note">One point per film. It slopes up, and reliably. What the slope can&rsquo;t tell you is which way the arrow points.</div>
           </div>
           <div class="legend" id="leg-rev"></div>
         </div>
@@ -803,7 +807,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Do better reviews go with bigger box office?</dd>
           <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter. The question is whether there&rsquo;s a pattern, and the honest answer is &ldquo;barely.&rdquo;</dd>
-          <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is weak; a line would imply something predictable, which this isn&rsquo;t. The spread is the finding. Dashed lines mark the median score and median gross, so the four quadrants &mdash; acclaimed and huge, loved but flopped, panned but paid &mdash; read on their own. Hover a dot for guides to both axes.</dd>
+          <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is real but moderate (r&nbsp;=&nbsp;0.48, so about three quarters of the variation in gross is something else), and a line would imply a precision and a direction of cause the data can&rsquo;t carry. The spread is the finding. Dashed lines mark the median score and median gross, so the four quadrants read on their own: acclaimed and huge, loved but flopped, panned but paid. Hover a dot for guides to both axes.</dd>
           <dt>Watch for</dt><dd>Reviews and gross are both downstream of the same thing: franchise heat, timing, spend. A scatter shows association, never cause.</dd>
         </dl></div>
       </div>
@@ -819,7 +823,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where do critics and the audience disagree, and who liked it more?</dd>
           <dt>Why this form</dt><dd>Plot one score against the other and draw the 45&deg; line where they&rsquo;d match. Distance from the line is the size of the disagreement; the side tells you who was warmer.</dd>
-          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and grey. It&rsquo;s a reference, not data. The two halves are tinted faintly and labelled &mdash; a dot above the line means the audience rated it higher, below means the critics did &mdash; so which side reads at a glance.</dd>
+          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and gray. It&rsquo;s a reference, not data. The two halves are tinted faintly and labeled, so which side reads at a glance: a dot above the line means the audience rated it higher, below means the critics did.</dd>
           <dt>Watch for</dt><dd>RT critic % (share of positive reviews) and an IMDb rating (average score) aren&rsquo;t the same kind of measure. The diagonal is a visual aid, not a claim that the scales are equivalent.</dd>
         </dl></div>
       </div>
@@ -831,7 +835,7 @@
       <div class="view-head">
         <span class="num">§ 09 &nbsp;/&nbsp; DOMESTIC v OVERSEAS</span>
         <h2>Overseas is the majority, but the split swings from 43% to 75%</h2>
-        <p class="dek">Each film split into domestic and overseas gross, sortable by the overseas share. The most domestic are recent DC films, Superman and Supergirl, at 43% overseas; the furthest-travelled is the first Venom at 75%.</p>
+        <p class="dek">Each film split into domestic and overseas gross, sortable by the overseas share. The most domestic are recent DC films, Superman and Supergirl, at 43% overseas; the furthest-traveled is the first Venom at 75%.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -847,7 +851,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>For each film, how much of the gross came from North America versus everywhere else?</dd>
           <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 91 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
-          <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same color at low opacity, one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalised so you compare shares directly.</dd>
+          <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same color at low opacity, one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalized so you compare shares directly.</dd>
           <dt>Watch for</dt><dd>&ldquo;Overseas&rdquo; lumps very different markets together. China alone swings some of these films by ten points.</dd>
         </dl></div>
       </div>
@@ -874,7 +878,7 @@
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
           <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
           <dt>Choices here</dt><dd>Rows are the 26 most-recurring characters, ordered by appearance count. Columns are all 91 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
-          <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgement call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
+          <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgment call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. Cast lists are from Wikipedia and skew to billed roles, so quick cameos are undercounted.</dd>
         </dl></div>
       </div>
       <div class="card">
@@ -893,9 +897,9 @@
   <section class="view" id="v-footprint" data-tab="act4">
     <div class="wrap">
       <div class="view-head">
-        <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELLED</span>
+        <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELED</span>
         <h2>Spider-Man has been in twelve films, more than any other character by a clear margin</h2>
-        <p class="dek">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man is next at nine, Wolverine at eight; Batman, at seven across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 134 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
+        <p class="dek">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man is next at nine, Wolverine at eight; Batman, at seven across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 151 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -907,7 +911,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Who carries the most cross-film weight?</dd>
           <dt>Why this form</dt><dd>A lollipop, not a bar: the counts are small integers (2&ndash;12), so a dot on a light stem reads the value cleanly without a heavy block of ink for &ldquo;3&rdquo;.</dd>
-          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are 134 of them and they&rsquo;d bury the signal.</dd>
+          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are 151 of them and they&rsquo;d bury the signal.</dd>
           <dt>Watch for</dt><dd>Each identity is one person here. &ldquo;Captain America&rdquo; is Steve Rogers; Sam Wilson&rsquo;s turn is its own row, as are Yelena&rsquo;s Black Widow and Shuri&rsquo;s Black Panther. A codename counts from the film the character takes it up, not before, so Red Hulk and Mighty Thor sit at one film each, and Harry Osborn doesn&rsquo;t appear at all until he puts a mask on. Where two people have worn one name, the rows split: Norman Osborn is the Green Goblin, Harry is the New Goblin in Raimi&rsquo;s trilogy and a second Green Goblin in Webb&rsquo;s, and Shalla-Bal is a second Silver Surfer.</dd>
         </dl></div>
       </div>
@@ -921,7 +925,7 @@
       <div class="view-head">
         <span class="num">§ 12 &nbsp;/&nbsp; ANTI-PATTERNS</span>
         <h2>Every chart down here is accurate. Not one of them earns its place</h2>
-        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film and nominal dollars; the universe filter and the $ toggle in the control bar don&rsquo;t reach them.</p>
+        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every completed film and nominal dollars; the universe filter and the $ toggle in the control bar don&rsquo;t reach them.</p>
         <div class="legend" id="ap-leg" style="margin-top:14px"></div>
       </div>
 
@@ -947,7 +951,7 @@
         <dl class="ap-tear">
           <dt>Tempting</dt><dd>A pie says &ldquo;here is the whole thing, carved up.&rdquo; Banded by universe, this one also happens to look great.</dd>
           <dt>But</dt><dd>You can&rsquo;t compare two wedges that aren&rsquo;t adjacent, can&rsquo;t rank the small ones, and can&rsquo;t read a single value. Roughly half the films are slivers.</dd>
-          <dt>Instead</dt><dd>A <span class="fix">sorted bar</span>, or the treemap in §02: still area, but sorted, aligned to an edge, and labelled where a label fits.</dd>
+          <dt>Instead</dt><dd>A <span class="fix">sorted bar</span>, or the treemap in §02: still area, but sorted, aligned to an edge, and labeled where a label fits.</dd>
         </dl>
       </div>
 
@@ -959,7 +963,7 @@
         <div class="ap-chart" id="ap-trunc"></div>
         <dl class="ap-tear">
           <dt>Tempting</dt><dd>The gap between Marvel and the rest finally &ldquo;pops.&rdquo; The chart looks decisive.</dd>
-          <dt>But</dt><dd>Bar length is the encoding. Chop the baseline and the proportions break: this chart shows Marvel around <b id="ap-trunc-fake">3&times;</b> DCEU; the real ratio is <b id="ap-trunc-real">1.9&times;</b>.</dd>
+          <dt>But</dt><dd>Bar length is the encoding. Chop the baseline and the proportions break: this chart shows Marvel around <b id="ap-trunc-fake">3.6&times;</b> DCEU; the real ratio is <b id="ap-trunc-real">1.9&times;</b>.</dd>
           <dt>Instead</dt><dd><span class="fix">Bars start at zero</span>, always. If the small differences are the point, use a dot plot. §01 does this.</dd>
         </dl>
       </div>
@@ -972,7 +976,7 @@
         <div class="ap-chart" id="ap-cumul"></div>
         <dl class="ap-tear">
           <dt>Tempting</dt><dd>It only goes up and to the right. It feels like momentum, an industry on a tear.</dd>
-          <dt>But</dt><dd>A running total <em>can&rsquo;t</em> go down. This shape is guaranteed no matter what the last five years looked like, and it buries the fact that annual output has fallen by two thirds since 2019.</dd>
+          <dt>But</dt><dd>A running total <em>can&rsquo;t</em> go down. This shape is guaranteed no matter what the last five years looked like, and it buries the fact that annual gross has fallen by two thirds since 2019.</dd>
           <dt>Instead</dt><dd>Plot <span class="fix">each year&rsquo;s value</span>, not the running sum. §01&rsquo;s year chart shows the decline this view erases.</dd>
         </dl>
       </div>
@@ -985,7 +989,7 @@
         <div class="ap-chart" id="ap-trend"></div>
         <dl class="ap-tear">
           <dt>Tempting</dt><dd>The line turns a shapeless cloud into a claim: better reviews, bigger box office. The R&sup2; label looks like proof.</dd>
-          <dt>But</dt><dd>The fit is weak (<b id="ap-trend-r2">R&sup2;</b>) and most of it is a few films that are both acclaimed and enormous. The line still invites you to read &ldquo;reviews drive gross&rdquo; straight off the slope, which the spread doesn&rsquo;t support.</dd>
+          <dt>But</dt><dd>The fit is real but partial (<b id="ap-trend-r2">R&sup2;</b>, so roughly three quarters of the variation is something else), and it survives dropping the ten biggest films, this is not a mirage of a few outliers. The sin is the reading it invites: a line says &ldquo;reviews drive gross&rdquo; when reviews and gross are both downstream of how big the franchise already was, and it implies a precision that a cloud this wide can&rsquo;t support.</dd>
           <dt>Instead</dt><dd><span class="fix">No line.</span> Let the scatter be a scatter. §04 and §08 leave it out for this reason.</dd>
         </dl>
       </div>
@@ -1069,11 +1073,11 @@
         <div class="card">
           <div class="card-title">Sources</div>
           <p style="font-size:14px;color:var(--ink-2)">Worldwide, domestic and overseas grosses and opening weekends come from <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">Box Office Mojo</a> title pages, read one at a time. Scores are from OMDb: Rotten Tomatoes (critics), Metacritic, IMDb.</p>
-          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. Box Office Mojo where it lists a clean one; otherwise the widely-cited number, marked <span class="mono">est.</span> Roughly half are estimates, and studios don&rsquo;t publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
+          <p style="font-size:14px;color:var(--ink-2)">Budgets are the <b>production</b> budget, never a marketing-inclusive figure. Box Office Mojo where it lists a clean one; otherwise the widely-cited number, marked <span class="mono">est.</span> A third are estimates, and they are not spread evenly: none before 2010, four in five since 2021. Studios don&rsquo;t publish the real figure, so treat any single ROI as soft and the ranking as the point.</p>
         </div>
         <div class="card">
           <div class="card-title">Definitions</div>
-          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. That is a purchasing-power adjustment &mdash; what those dollars are worth today &mdash; not the ticket-price or admissions adjustment the box-office world usually reaches for, and it applies US&nbsp;CPI even to the overseas share. Read it as rough real-terms scale, not a tickets-sold count. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. That is a purchasing-power adjustment (what those dollars are worth today), not the ticket-price or admissions adjustment the box-office world usually reaches for, and it applies US&nbsp;CPI even to the overseas share. Read it as rough real-terms scale, not a tickets-sold count. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
           <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">in release</span>) carry grosses as of early September 2026 and will climb; they are left out of the profit tallies until their runs end.</p>
         </div>
       </div>
@@ -1107,7 +1111,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">70 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">76 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1126,7 +1130,7 @@
           <li><b>&ldquo;Should Fox&rsquo;s X-Men be in here?&rdquo;</b> Added the Fox era and <em>The Amazing Spider-Man</em> 1 &amp; 2.</li>
           <li><b>&ldquo;Would reconsidering the 2008 start blow the view to hell?&rdquo;</b> Moved the whole set back to 2000.</li>
           <li>The inclusion rule sprang a leak &rarr; the full-franchise rule. Nolan, Raimi, <em>Ghost Rider</em>, <em>Daredevil</em>, the 2005 <em>Fantastic Four</em>. 92 films.</li>
-          <li><b>&ldquo;Supergirl is out on digital, so it&rsquo;s basically done in theatres.&rdquo;</b> Marked it final; the DCU scorecard went from +$56M to &minus;$317M.</li>
+          <li><b>&ldquo;Supergirl is out on digital, so it&rsquo;s basically done in theaters.&rdquo;</b> Marked it final; the DCU scorecard went from +$56M to &minus;$317M.</li>
           <li><b>&ldquo;Adversarial-audit the ever-living hell out of this.&rdquo;</b> That is where the cast scraper got caught.</li>
           <li>Collapse / expand on the four tallest charts, collapsed by default.</li>
           <li><b>&ldquo;Would a viz snob look at this and go &lsquo;hmm, nice&rsquo;?&rdquo;</b> Treemap labels and the budget markers got a polish pass.</li>
@@ -1135,7 +1139,7 @@
           <li><b>&ldquo;A collection of anti-patterns. Beautiful charts that don&rsquo;t help.&rdquo;</b> §12: eight of them, built from the real data, each with what makes it tempting and what to do instead.</li>
           <li><b>&ldquo;Adversarially audit this entire thing. Pull no punches.&rdquo;</b> Eight pieces of copy had rotted out from under the data (a headline that was false against its own chart, notes still describing a 57-film set). And the 2015 <em>Fantastic Four</em> turned out to be a one-and-done sitting in the Fox bucket, in breach of the rule. <b>&ldquo;Pull it.&rdquo;</b> 91 films.</li>
           <li><b>&ldquo;Some squint-worthy text on a number of visualizations. We have to build for mobile here.&rdquo;</b> Every chart drew into a fixed 480-unit box that a phone then shrank to about 350 pixels, so an 11-point label landed at 8. The charts now measure their container and draw at one unit per pixel. <b>&ldquo;Still small. Bump everything a point or two.&rdquo;</b> Every chart label on a phone now gets two more points after render; nothing is under 12.</li>
-          <li><b>&ldquo;Do all of our white / grey text hues pass contrast on the dark background?&rdquo;</b> They do: the greys sit at 5.0 to 8.4 to 1 on every dark surface, AA or better. The audit found the misses elsewhere: two colored axis labels in §12, the light-theme profit and loss colors on tooltip backgrounds by a hair, a token the forced-light block had never received at all, and the treemap: white labels on the MCU green were 3 to 1. Each cell now picks dark or white ink by measuring its own fill.</li>
+          <li><b>&ldquo;Do all of our white / gray text hues pass contrast on the dark background?&rdquo;</b> They do: the grays sit at 5.0 to 8.4 to 1 on every dark surface, AA or better. The audit found the misses elsewhere: two colored axis labels in §12, the light-theme profit and loss colors on tooltip backgrounds by a hair, a token the forced-light block had never received at all, and the treemap: white labels on the MCU green were 3 to 1. Each cell now picks dark or white ink by measuring its own fill.</li>
           <li><b>&ldquo;We are way too scrolly now. People will never go to the bottom. Implement some structure.&rdquo;</b> Fifteen sections became six tabs, one per act, with a contents list under the masthead that carries every finding as a headline. Someone who reads only the contents still gets all fifteen.</li>
           <li><b>&ldquo;Put the mistakes before Reference.&rdquo;</b> Last is where things go to die. Sections renumbered to match. <b>&ldquo;I didn&rsquo;t know to swipe.&rdquo;</b> The tab strip clipped on a phone with nothing saying there was more. Now it fades at the edge while it can still scroll, and every tab ends in a Back and a Next button named for where they go.</li>
           <li><b>&ldquo;On mobile, can the filters collapse into an expandable bar that follows the scroll?&rdquo;</b> They stick under the tabs now, folded to one row that says what is selected, and open on tap.</li>
@@ -1144,42 +1148,48 @@
           <li><b>&ldquo;This chart is tough on mobile.&rdquo;</b> The characters-per-film chart drew 91 bars three pixels wide on a phone. It is a ranked list there now, top twelve and a fold; the wide screen keeps the timeline. Its note also still said Infinity War topped out at 22, from before the cast scraper was fixed, and the axis stopped at 20 under a bar that reached 33. The number is read from the data now.</li>
           <li><b>&ldquo;At 100% zoom I am squinting. Never make anyone squint, ever.&rdquo;</b> The whole desktop type pass. It took six no-op commits to find why: on an SVG label, a CSS <code>font-size</code> silently beats the <code>font-size</code> attribute, so every per-chart number I was bumping stayed 11px. The fix moved to the stylesheet; every chart label is now a uniform 16px, verified against the live page rather than the source.</li>
           <li><b>&ldquo;The labels are bleeding, and it&rsquo;s different across charts.&rdquo;</b> The bigger labels overran two charts&rsquo; name gutters (<em>Batman v Superman: Dawn of Justice</em> ran off the left) &rarr; wider gutters. Year labels were a mix of sizes and formats (<em>&rsquo;00</em> here, <em>2000</em> there) &rarr; one size, full years on every timeline.</li>
-          <li><b>&ldquo;Why are some years wider than others on the roster?&rdquo;</b> Because its x-axis is release order, one column per film, so the Avengers films line up as vertical stripes. Kept that, and labelled it, so the uneven gaps read as a choice, not a broken scale.</li>
+          <li><b>&ldquo;Why are some years wider than others on the roster?&rdquo;</b> Because its x-axis is release order, one column per film, so the Avengers films line up as vertical stripes. Kept that, and labeled it, so the uneven gaps read as a choice, not a broken scale.</li>
           <li><b>&ldquo;Too much scroll before you reach a chart.&rdquo;</b> Tightened the masthead and folded the contents to a single expandable line.</li>
           <li><b>&ldquo;The sortable table should be its own tab.&rdquo;</b> The ledger moved out of Reference into its own tab, next to it.</li>
           <li><b>&ldquo;Give the billion-dollar bubbles some pop.&rdquo;</b> On the &ldquo;since 2020&rdquo; chart, every film that crossed $1B gets a gold ring and full opacity, so the section&rsquo;s subject reads at a glance.</li>
           <li><b>&ldquo;I don&rsquo;t think the budget chart is great, is there a better way?&rdquo;</b> A median of two or three films a year sawtoothed and buried the trend. Rebuilt as a five-year rolling median with a middle-50% band over every film&rsquo;s dot, so &ldquo;doubled, then flat&rdquo; reads as a shape instead of a zigzag.</li>
           <li><b>&ldquo;Turn Google Analytics on?&rdquo;</b> Went with Cloudflare Web Analytics instead: cookieless, no consent banner, no third-party sharing. A beacon in the head, nothing else.</li>
           <li><b>&ldquo;Are the scatterplots supreme? Anything to make them awesome?&rdquo;</b> The reviews scatter got median quadrant lines (acclaimed-and-huge, loved-but-flopped, panned-but-paid); the critic-vs-audience chart got faintly tinted halves with side labels; and all three scatters got a hover crosshair to both axes.</li>
-          <li><b>&ldquo;We&rsquo;ve got a tie-out problem. Check every hand-written number against the source, and build a check that runs on every refresh.&rdquo;</b> The legs dek said <em>Folie &agrave; Deux</em> ran 1.5&times; while the chart said 1.6&times; &mdash; a double-rounding bug (the multiplier was rounded twice). Fixed at the source, then wrote <code>scripts/tie-out.mjs</code>: it recomputes seventeen claims from the data &mdash; film counts, the $1B and $2B tallies, the legs multipliers, the roster records, the overseas range &mdash; and fails the build if a sentence has drifted. It runs on every data refresh now.</li>
-          <li><b>&ldquo;The xgree lol&rdquo;</b> &mdash; a data point had parked right on the critics-vs-audience chart&rsquo;s <em>they agree</em> label. Moved it to an empty low stretch of the diagonal where no film lands.</li>
-          <li><b>&ldquo;The Design-notes line eats too much space, but don&rsquo;t bury it &mdash; and people won&rsquo;t know the contents is clickable.&rdquo;</b> Cut the disclaimer from five lines to two, and restyled the collapsed contents as an obvious pill button with a chevron.</li>
+          <li><b>&ldquo;We&rsquo;ve got a tie-out problem. Check every hand-written number against the source, and build a check that runs on every refresh.&rdquo;</b> The legs dek said <em>Folie &agrave; Deux</em> ran 1.5&times; while the chart said 1.6&times;: a double-rounding bug (the multiplier was rounded twice). Fixed at the source, then wrote <code>scripts/tie-out.mjs</code>: it recomputes twenty claims from the data (film counts, the $1B and $2B tallies, the legs multipliers, the roster records, the overseas range) and fails the build if a sentence has drifted. It runs on every data refresh now.</li>
+          <li><b>&ldquo;The xgree lol&rdquo;</b> A data point had parked right on the critics-vs-audience chart&rsquo;s <em>they agree</em> label. Moved it to an empty low stretch of the diagonal where no film lands.</li>
+          <li><b>&ldquo;The Design-notes line eats too much space, but don&rsquo;t bury it, and people won&rsquo;t know the contents is clickable.&rdquo;</b> Cut the disclaimer from five lines to two, and restyled the collapsed contents as an obvious pill button with a chevron.</li>
           <li><b>&ldquo;A little arrow pointing to the agreement line, since the label sits in one quadrant now.&rdquo;</b> Added a leader arrow from <em>they agree</em> to the diagonal, so it labels the line and not the corner it happens to occupy.</li>
-          <li><b>&ldquo;We could save lines if so much stuff weren&rsquo;t hanging.&rdquo;</b> Retired the orphan words: the DC scorecard tightened to &ldquo;All of DC / 23 films&rdquo;, uniform with its neighbours, and <code>text-wrap: pretty</code> on the intro stopped it stranding a lone &ldquo;dollars.&rdquo;</li>
-          <li><b>&ldquo;I was hoping that would get shorter, not a line longer.&rdquo;</b> Trimmed the intro &mdash; &ldquo;part of a&rdquo; to &ldquo;in a&rdquo;, and so on &mdash; so it drops from five phone-lines to four.</li>
-          <li><b>&ldquo;Is calling Nolan&rsquo;s Batman &lsquo;Elseworlds&rsquo; truly ok?&rdquo;</b> Kept the name &mdash; it&rsquo;s the banner DC itself now uses for standalone films &mdash; but built the caveat into the scope card: Nolan&rsquo;s trilogy predates the label and wears it loosest.</li>
+          <li><b>&ldquo;We could save lines if so much stuff weren&rsquo;t hanging.&rdquo;</b> Retired the orphan words: the DC scorecard tightened to &ldquo;All of DC / 23 films&rdquo;, uniform with its neighbors, and <code>text-wrap: pretty</code> on the intro stopped it stranding a lone &ldquo;dollars.&rdquo;</li>
+          <li><b>&ldquo;I was hoping that would get shorter, not a line longer.&rdquo;</b> Trimmed the intro (&ldquo;part of a&rdquo; to &ldquo;in a&rdquo;, and so on) so it drops from five phone-lines to four.</li>
+          <li><b>&ldquo;Is calling Nolan&rsquo;s Batman &lsquo;Elseworlds&rsquo; truly ok?&rdquo;</b> Kept the name, since it&rsquo;s the banner DC itself now uses for standalone films, but built the caveat into the scope card: Nolan&rsquo;s trilogy predates the label and wears it loosest.</li>
           <li><b>&ldquo;Add a feedback channel, and prep to share it.&rdquo;</b> Cloudflare Web Analytics (cookieless) went on, the copy stopped claiming the grosses were hand-verified when they are scraped, and the footer got a &ldquo;spotted a wrong number?&rdquo; line pointing at GitHub issues and <code>hello@capeindex.com</code> (a Cloudflare Email Routing alias).</li>
-          <li><b>&ldquo;One last audit, through the lens of an aggravated r/boxoffice reader.&rdquo;</b> It earned its keep: the inflation table started at 2008, so the twelve 2000&ndash;2007 films weren&rsquo;t adjusted at all in 2025-dollar mode &mdash; <em>Spider-Man</em> read $811M when in real terms it&rsquo;s ~$1.45B. Extended the table to 2000 and recomputed. Also spelled out that the 2025-dollar switch is a CPI purchasing-power adjustment, not the ticket-price one the box-office world expects.</li>
+          <li><b>&ldquo;One last audit, through the lens of an aggravated r/boxoffice reader.&rdquo;</b> It earned its keep: the inflation table started at 2008, so the twelve 2000&ndash;2007 films weren&rsquo;t adjusted at all in 2025-dollar mode: <em>Spider-Man</em> read $811M when in real terms it&rsquo;s ~$1.45B. Extended the table to 2000 and recomputed. Also spelled out that the 2025-dollar switch is a CPI purchasing-power adjustment, not the ticket-price one the box-office world expects.</li>
 
-          <li><b>&ldquo;Can we get the colour legend onto one line? Same on every chart.&rdquo;</b> Six universes wrapped to two rows on a phone. The identity keys are now one unbroken row of their own, and the things that aren&rsquo;t identity keys &mdash; <em>circle size = worldwide gross</em>, <em>crossed $1B</em> &mdash; drop to a quieter second line where they belong.</li>
+          <li><b>&ldquo;Can we get the color legend onto one line? Same on every chart.&rdquo;</b> Six universes wrapped to two rows on a phone. The identity keys are now one unbroken row of their own, and the things that aren&rsquo;t identity keys (<em>circle size = worldwide gross</em>, <em>crossed $1B</em>) drop to a quieter second line where they belong.</li>
           <li><b>&ldquo;Nominal to 2025&nbsp;$ changes this chart so much, put a toggle on it.&rdquo;</b> The §03 bubbles now carry their own copy of the $ switch, wired to the same state as the filter bar so the two never disagree.</li>
-          <li><b>&ldquo;The Avengers label is clashing with the $2B club line label.&rdquo;</b> The reference-line labels moved under their rules into the empty corner, and callouts are placed one at a time and nudged off anything already down. They also print the short title now &mdash; <em>Endgame</em>, not <em>Avengers: Endgame</em> &mdash; since the mark&rsquo;s colour already says whose film it is. All 91 short titles are still unique.</li>
-          <li><b>&ldquo;Is the green for positive too close to Marvel&rsquo;s brand colour?&rdquo;</b> It was: <code>#3fb950</code> against an MCU <code>#3ba152</code>, sitting in the same row. Which side of the break-even line a bar runs on already carries the outcome, so the profit side went to a neutral slate and the orange is spent only on the films that lost money.</li>
-          <li><b>&ldquo;The data point labels take a lot of space. Anything clever?&rdquo;</b> Short titles, plus a surface-coloured halo behind every in-plot label so a callout stays readable wherever it lands.</li>
-          <li><b>&ldquo;Cruise through the anti-patterns and make sure they&rsquo;re the best we can do.&rdquo;</b> §12&rsquo;s margins had been sized for the <code>font-size="10"</code> its labels carry &mdash; the same attribute the CSS type pass overrides, so it never applied and every gutter was short of its own text. Re-sized to what actually draws. A sweep of every chart on the page for overlapping and clipped labels now comes back empty at 375px and 1400px.</li>
-          <li><b>&ldquo;The Reference tab is super scrolly.&rdquo;</b> This list, the bugs and the design calls fold into their own titles, with a count on each. The build log is 77% shorter at rest and nothing is more than one click away.</li>
+          <li><b>&ldquo;The Avengers label is clashing with the $2B club line label.&rdquo;</b> The reference-line labels moved under their rules into the empty corner, and callouts are placed one at a time and nudged off anything already down. They also print the short title now (<em>Endgame</em>, not <em>Avengers: Endgame</em>), since the mark&rsquo;s color already says whose film it is. All 91 short titles are still unique.</li>
+          <li><b>&ldquo;Is the green for positive too close to Marvel&rsquo;s brand color?&rdquo;</b> It was: <code>#3fb950</code> against an MCU <code>#3ba152</code>, sitting in the same row. Which side of the break-even line a bar runs on already carries the outcome, so the profit side went to a neutral slate and the orange is spent only on the films that lost money.</li>
+          <li><b>&ldquo;The data point labels take a lot of space. Anything clever?&rdquo;</b> Short titles, plus a surface-colored halo behind every in-plot label so a callout stays readable wherever it lands.</li>
+          <li><b>&ldquo;Cruise through the anti-patterns and make sure they&rsquo;re the best we can do.&rdquo;</b> §12&rsquo;s margins had been sized for the <code>font-size="10"</code> its labels carry. That is the same attribute the CSS type pass overrides, so it never applied and every gutter was short of its own text. Re-sized to what actually draws. A sweep of every chart on the page for overlapping and clipped labels now comes back empty at 375px and 1400px.</li>
+          <li><b>&ldquo;The Reference tab is super scrolly.&rdquo;</b> This list, the bugs and the design calls fold into their own titles, with a count on each. The build log is a fraction of its height at rest and nothing is more than one click away.</li>
           <li><b>&ldquo;Auditing desktop now.&rdquo;</b> Nine screenshots with the problems boxed in red. The year axis was printing all 27 labels into 37px each, so it prints every other year. The spread chart&rsquo;s row names, the roster&rsquo;s appearance counts, the footprint&rsquo;s tick row, the ratio ranking&rsquo;s film names and the rainbow&rsquo;s row labels all had gutters sized against a <code>font-size</code> attribute that never applied. Sized against what draws, and the whole page re-swept at 375px and 1400px: nothing clipped, nothing overlapping.</li>
-          <li><b>&ldquo;Feels like Endgame should get a label as the tallest one.&rdquo;</b> It didn&rsquo;t, because <em>Infinity War</em> sat inside the minimum label spacing a year earlier and got there first. The peak is now labelled whatever its neighbours do.</li>
+          <li><b>&ldquo;Feels like Endgame should get a label as the tallest one.&rdquo;</b> It didn&rsquo;t, because <em>Infinity War</em> sat inside the minimum label spacing a year earlier and got there first. The peak is now labeled whatever its neighbors do.</li>
           <li><b>&ldquo;Why the gap?&rdquo;</b> Three of them, all different. The act divider was followed by a section that paid for its own 60px opener. The two Method cards were top-aligned, so the shorter one left a ragged edge. And the masthead tiles opened on a 40px margin where every other line in the masthead sits 10 to 14px apart.</li>
-          <li><b>&ldquo;Column A is really wide, in favour of seeing more data.&rdquo;</b> The ledger&rsquo;s film column was absorbing every pixel the other thirteen didn&rsquo;t claim, about 450px of it. Pinned at 240, long titles wrap, and four more columns fit before you have to scroll. The scroll itself now says so, and stops saying it once you reach the end.</li>
-          <li><b>&ldquo;Should there be aggregate line-level data per universe?&rdquo;</b> A summary table above the ledger: films, total gross, then median worldwide, opening, multiplier, budget, ROI, RT and Metacritic, on the same filters and dollars, with an all-films row under a rule. Medians, because two dozen billion-dollar films put a mean where no actual film sits.</li>
+          <li><b>&ldquo;Column A is really wide, in favor of seeing more data.&rdquo;</b> The ledger&rsquo;s film column was absorbing every pixel the other thirteen didn&rsquo;t claim, about 450px of it. Pinned at 240, long titles wrap, and four more columns fit before you have to scroll. The scroll itself now says so, and stops saying it once you reach the end.</li>
+          <li><b>&ldquo;Should there be aggregate line-level data per universe?&rdquo;</b> A summary table above the ledger: films, total gross, then median worldwide, opening, multiplier, budget, ROI, RT and Metacritic, on the same filters and dollars, with an all-films row under a rule. Medians, because sixteen billion-dollar films put a mean where no actual film sits.</li>
           <li><b>&ldquo;No em dashes anywhere.&rdquo;</b> One had crept back into the Scope card.</li>
-          <li><b>&ldquo;I made this gradient bar, could we put it under the title for a splash of colour?&rdquo;</b> Rebuilt from the palette tokens rather than pasted as hex, so it re-mixes itself for the light theme instead of being a second, stale copy of the colours. Same order he drew: green, grey, magenta, gold, blue, cyan, with the grey carried in the middle as a transition rather than left to end the run.</li>
+          <li><b>&ldquo;I made this gradient bar, could we put it under the title for a splash of color?&rdquo;</b> Rebuilt from the palette tokens rather than pasted as hex, so it re-mixes itself for the light theme instead of being a second, stale copy of the colors. Same order he drew: green, gray, magenta, gold, blue, cyan, with the gray carried in the middle as a transition rather than left to end the run.</li>
           <li><b>&ldquo;The inconsistent white space on these scorecards is BOTHERSOME.&rdquo;</b> Read the wrong way round first: the tiles were sized to their own content, which made the space after each value identical and the tiles three different widths. <b>&ldquo;I STILL want them evenly distributed width wise.&rdquo;</b> The tiles are the repeated object, so they are three equal columns; the air after a value differs because the values do.</li>
-          <li><b>&ldquo;Would it be cool if the gradient bar stuck at the top and followed the scroll?&rdquo;</b> It rides the top edge of the sticky tab bar and fills left to right as you read: dim for what&rsquo;s still below the fold, saturated for what you&rsquo;ve passed. Each tab is its own page length, so switching tabs re-measures. The fill is a window onto a 100vw copy of the gradient rather than a squashed one, so the colours stay put instead of sliding as the bar grows.</li>
-          <li><b>&ldquo;James Franco is tagged as Green Goblin. Wasn&rsquo;t he the New Goblin? Is my data rock solid?&rdquo;</b> It wasn&rsquo;t. One line in the canonicaliser, <code>"Harry Osborn": "Green Goblin"</code>, broke both of the roster&rsquo;s own rules at once: it counted Franco in <em>Spider-Man 2</em>, where Harry has no goblin identity at all, called his <em>Spider-Man 3</em> turn Green Goblin when the credit says New Goblin, and folded two Harrys and a Norman into one row. Green Goblin is Norman&rsquo;s, at two films; New Goblin and Webb&rsquo;s Green Goblin are their own rows. The same audit found Shalla-Bal folded into Norrin Radd&rsquo;s Silver Surfer, Hope van Dyne counted as the Wasp a film before she gets the suit, and one actor listed twice under two spellings of her own name. The scraped credits were right the whole time; the mapping on top of them wasn&rsquo;t.</li>
-          <li><b>&ldquo;Lots of different fonts going around here. Are we abiding by best practice?&rdquo;</b> Mostly, with two real holes. Seventy chart labels named <code>IBM Plex Mono</code> with no fallback behind it, so a failed webfont would have dropped them to the browser&rsquo;s default. And twenty-one labels were English sentences set in monospace &mdash; <em>break-even</em>, the fold markers, the axis titles &mdash; while a handful of axis <em>numbers</em> were coming out in the body face, because a label that carries a class takes its family from the CSS and not from its own attribute. Three faces are now tokens with real stacks, words are Sans, figures are Mono, and the sweep is clean at 375px and 1400px.</li>
-          <li><b>&ldquo;How do we feel about the spacing and sizing on the Back / Next pair?&rdquo;</b> Two problems with one cause. The arrow was the last word of the title, so on the longer tab name it wrapped to a line of its own &mdash; which is why one card was taller than the other as well as wider. The pair is now two halves of one grid row, and the arrow is its own cell pinned to the outer edge, where it nudges outward on hover. Equal at every tab and both widths; when a long name wraps on a phone, both cards grow together.</li>
+          <li><b>&ldquo;Would it be cool if the gradient bar stuck at the top and followed the scroll?&rdquo;</b> It rides the top edge of the sticky tab bar and fills left to right as you read: dim for what&rsquo;s still below the fold, saturated for what you&rsquo;ve passed. Each tab is its own page length, so switching tabs re-measures. The fill is a window onto a 100vw copy of the gradient rather than a squashed one, so the colors stay put instead of sliding as the bar grows.</li>
+          <li><b>&ldquo;James Franco is tagged as Green Goblin. Wasn&rsquo;t he the New Goblin? Is my data rock solid?&rdquo;</b> It wasn&rsquo;t. One line in the canonicalizer, <code>"Harry Osborn": "Green Goblin"</code>, broke both of the roster&rsquo;s own rules at once: it counted Franco in <em>Spider-Man 2</em>, where Harry has no goblin identity at all, called his <em>Spider-Man 3</em> turn Green Goblin when the credit says New Goblin, and folded two Harrys and a Norman into one row. Green Goblin is Norman&rsquo;s, at two films; New Goblin and Webb&rsquo;s Green Goblin are their own rows. The same audit found Shalla-Bal folded into Norrin Radd&rsquo;s Silver Surfer, Hope van Dyne counted as the Wasp a film before she gets the suit, and one actor listed twice under two spellings of her own name. The scraped credits were right the whole time; the mapping on top of them wasn&rsquo;t.</li>
+          <li><b>&ldquo;Lots of different fonts going around here. Are we abiding by best practice?&rdquo;</b> Mostly, with two real holes. Seventy chart labels named <code>IBM Plex Mono</code> with no fallback behind it, so a failed webfont would have dropped them to the browser&rsquo;s default. And twenty-one labels were English sentences set in monospace (<em>break-even</em>, the fold markers, the axis titles), while a handful of axis <em>numbers</em> were coming out in the body face, because a label that carries a class takes its family from the CSS and not from its own attribute. Three faces are now tokens with real stacks, words are Sans, figures are Mono, and the sweep is clean at 375px and 1400px.</li>
+          <li><b>&ldquo;How do we feel about the spacing and sizing on the Back / Next pair?&rdquo;</b> Two problems with one cause. The arrow was the last word of the title, so on the longer tab name it wrapped to a line of its own, which is why one card was taller than the other as well as wider. The pair is now two halves of one grid row, and the arrow is its own cell pinned to the outer edge, where it nudges outward on hover. Equal at every tab and both widths; when a long name wraps on a phone, both cards grow together.</li>
+          <li><b>&ldquo;Final brand audit. Eight skeptical personas, in parallel.&rdquo;</b> A box-office snob, a comics continuity snob, a statistician, a viz-craft snob, a UX critic, an accessibility specialist, an editor and a front-end engineer, each given the source and told to find what a hostile reader would. They found a lot, and the worst of it was in the copy rather than the code.</li>
+          <li><b>&sect;08 had its finding backwards.</b> The headline said reviews barely move with box office. Recomputed: r&nbsp;=&nbsp;0.48, about $9M of gross per point of critic score, significant past any reasonable threshold, and dropping the ten biggest films makes the fit <em>stronger</em>, not weaker. So the old &sect;12 line blaming the correlation on &ldquo;a few films that are both acclaimed and enormous&rdquo; was exactly wrong too. The honest claim was never about size, it was about direction: reviews and grosses are both downstream of how big the franchise already was. Rewritten to say that.</li>
+          <li><b>&sect;01 led with four averages on the most skewed slate on the page</b>, two cards above a note that says medians, not means. The worst of them: the average completed DC film was reported clearing break-even by $82M. The median clears it by <b>$1M</b>. All four are medians now.</li>
+          <li><b>The palette claim was writing a check the repo couldn&rsquo;t cash.</b> The site said the colors were &ldquo;checked with a script, pair by pair&rdquo;; no such script existed. It does now (<code>npm run check:palette</code>), it simulates all three dichromacies, and it gates the build. First run failed on 22 counts. Elseworlds grey sat at <b>1.8</b> separation from Fox under light deuteranopia, and the two light themes disagreed about what grey even was. Both greys retuned against the validator, &sect;06&rsquo;s universe chip removed (no neutral can clear six hues without simply being the ink color), and the beeswarm finally got the mark shapes the rest of the page claimed every chart had.</li>
+          <li><b>The roster was missing two dozen characters.</b> <code>CODE_KEEP</code> listed them as mononyms while Wikipedia credits them in full, so the lookup never fired: Drax, Yondu, Ronan and Korath were absent from all five Guardians films, Groot from Vol. 2, Gambit, Psylocke, Jubilee and eleven more from theirs. Sabretooth was filed as a one-film MCU character. A bit part called &ldquo;Mr. Sherman/Rafke&rdquo; had been promoted to a superhero named Rafke. The Leader and Toxin were counted from films where the credit is a bare real name, which is the Thaddeus Ross bug again. 223 characters became 247.</li>
+          <li><b>A stored-XSS path, and a robots.txt serving 361KB of HTML.</b> The data-table renderer wrote scraped Wikipedia strings into <code>innerHTML</code> unescaped; nothing in the data carries markup today, but the roster columns come from a scraper. The Worker also answered every unknown path with a 200 and the whole page, so <em>/robots.txt</em> came back as HTML labelled <code>text/plain</code>. Escaped, and the site now ships a real robots, sitemap, 404 and a CSP.</li>
         </ol>
       </details>
 
@@ -1187,7 +1197,7 @@
         <summary class="card-title">The bugs<span class="cnt">7 caught</span></summary>
         <dl>
           <dt>Red Hulk in four films</dt>
-          <dd>The canonicaliser counted every plain <span class="q">Thaddeus Ross</span> credit as the codename. Rule now: a character counts under a codename only from the film they take it up, and a later transformation identity (Red Hulk, Mighty Thor) needs the explicit <code>Name / Codename</code> alias in the credit. Ross is five films of a general and one of a monster, so he shows once.</dd>
+          <dd>The canonicalizer counted every plain <span class="q">Thaddeus Ross</span> credit as the codename. Rule now: a character counts under a codename only from the film they take it up, and a later transformation identity (Red Hulk, Mighty Thor) needs the explicit <code>Name / Codename</code> alias in the credit. Ross is five films of a general and one of a monster, so he shows once.</dd>
 
           <dt>A duplicate ghost film</dt>
           <dd><em>Joker: Folie à Deux</em> was in the source list as <code>Folie a Deux</code> (plain a) and on Box Office Mojo as <code>Folie à Deux</code> (accented). Two records, one with no universe, showing up as an <code>UNKNOWN</code> entry. Fix: match the source of truth&rsquo;s spelling exactly, delete the stale scrape, re-run.</dd>
@@ -1196,7 +1206,7 @@
           <dd>The dark-to-light color overrides live in two rule blocks with different indentation: one under <code>@media (prefers-color-scheme: light)</code>, one under <code>[data-theme="light"]</code>. A &ldquo;replace all&rdquo; on a token value hit one and not the other, so the manual toggle and the OS setting disagreed about a color until both were patched.</dd>
 
           <dt>An unfinished film poisoning the profit math</dt>
-          <dd><em>Supergirl</em>, still in theatres at the time, sat at about $126M on a $200M budget and dragged the whole DCU scorecard to &minus;$317M, the single most roastable number on the page. Fix then: hold in-release films out of every profit tally. Fix now: once its run actually ended, put it back. The &minus;$317M is real.</dd>
+          <dd><em>Supergirl</em>, still in theaters at the time, sat at about $126M on a $200M budget and dragged the whole DCU scorecard to &minus;$317M, the single most roastable number on the page. Fix then: hold in-release films out of every profit tally. Fix now: once its run actually ended, put it back. The &minus;$317M is real.</dd>
 
           <dt>A title collision, and a self-healing bug that wasn&rsquo;t</dt>
           <dd>The 2005 and 2015 <em>Fantastic Four</em> films are both literally titled &ldquo;Fantastic Four&rdquo;, which collided on the join key, so both were disambiguated with a year. Worse: the scraper seeds its worklist from the <em>previous</em> build&rsquo;s output, so renaming a film silently regenerated the old key and produced a phantom <code>UNKNOWN</code> film until the stale key was deleted by hand.</dd>
@@ -1213,15 +1223,15 @@
         <summary class="card-title">The design calls<span class="cnt">9 calls</span></summary>
         <dl>
           <dt>Three faces, one job each</dt>
-          <dd>Condensed sets headings and hero numbers, Sans sets every word a reader reads, Mono sets figures and metadata &mdash; so a column of dollars lines up on its digits and a sentence never comes out typewritten. Each is declared once as a token with a real fallback behind it. The rule is easy to break by accident: a chart label that carries a class gets its family from the CSS, not from its own <code>font-family</code> attribute, which had left some axis numbers set in the body face and the identical numbers one chart over set in Mono.</dd>
+          <dd>Condensed sets headings and hero numbers, Sans sets every word a reader reads, Mono sets figures and metadata, so a column of dollars lines up on its digits and a sentence never comes out typewritten. Each is declared once as a token with a real fallback behind it. The rule is easy to break by accident: a chart label that carries a class gets its family from the CSS, not from its own <code>font-family</code> attribute, which had left some axis numbers set in the body face and the identical numbers one chart over set in Mono.</dd>
           <dt>Titles state the finding</dt>
-          <dd>Every section headline is the takeaway, not a label. <span class="q">Marvel Studios has out-grossed every DC film combined, nearly three to one</span>, never <span class="q">Gross by universe</span>. If a title can&rsquo;t say something, the chart probably shouldn&rsquo;t exist.</dd>
+          <dd>Every headline over a chart is the takeaway, not a label. <span class="q">Marvel Studios has out-grossed every DC film combined, nearly three to one</span>, never <span class="q">Gross by universe</span>. If a title can&rsquo;t say something, the chart probably shouldn&rsquo;t exist.</dd>
 
           <dt>The palette was computed, not chosen</dt>
-          <dd>The red/blue franchise convention is gone, because red read too close to pink for the person who has to look at this daily. The replacement is a color-blind-safe set checked <em>with a script</em>, pair by pair, in both light and dark. Established along the way: five or more saturated categorical hues cannot pass an all-pairs color-blindness test in both modes. Confirmed against two published palettes. Every universe also carries a shape, so identity is never color alone.</dd>
+          <dd>The red/blue franchise convention is gone, because red read too close to pink for the person who has to look at this daily. The replacement is a color-blind-safe set checked with a script, pair by pair, in both light and dark: <code>npm run check:palette</code> simulates protanopia, deuteranopia and tritanopia and measures every pair. What it establishes is a limit, not a clean bill of health. Five saturated hues cannot all stay clearly apart under every kind of color blindness; the closest pair here sits at 7.0 under protanopia, which is legible only because every universe also carries a mark shape. Tritanopia is worse and is the reason no five-hue set survives without going violet. Every universe also carries a shape, so identity is never color alone.</dd>
 
-          <dt>The sixth color is grey on purpose</dt>
-          <dd>Once the Fox films arrived, six distinct chromatic colors was not possible. Elseworlds, the standalone films attached to no franchise engine, is drawn in grey. It fails the palette validator&rsquo;s chroma floor by design: grey <em>is</em> the &ldquo;doesn&rsquo;t belong to a machine&rdquo; signal.</dd>
+          <dt>The sixth color is gray on purpose</dt>
+          <dd>Once the Fox films arrived, six distinct chromatic colors was not possible. Elseworlds, the standalone films attached to no franchise engine, is drawn in gray. It sits below the chroma floor the other five clear, by design: gray <em>is</em> the &ldquo;doesn&rsquo;t belong to a machine&rdquo; signal.</dd>
 
           <dt>Things this site never does</dt>
           <dd>No dual-axis charts: two measures of different scale become two charts. No trend line where the data doesn&rsquo;t support one (reviews vs. gross; film size over time), because fitting one invents a relationship. No mean where a median is honest; one $2.8B film drags a mean around.</dd>
@@ -1277,7 +1287,7 @@
   var DB = JSON.parse(document.getElementById("data").textContent);
   var FILMS = DB.films;
   var CAST = JSON.parse(document.getElementById("cast-data").textContent);
-  // time-axis span — the earliest film is X-Men (2000); charts run through the last release year
+  // time-axis span - the earliest film is X-Men (2000); charts run through the last release year
   var YEAR0 = 2000, YEAR1 = 2026, YEARSPAN = YEAR1 - YEAR0;
   var UNI = [
     { k: "MCU", label: "MCU", full: "Marvel Cinematic Universe" },
@@ -1327,7 +1337,7 @@
     apply(!!STATE.expand[key]);
   }
   // head + tail fold: keep both ends (best AND worst), drop the quiet middle. For charts
-  // where both extremes carry the story — profit/loss, legs, the overseas split.
+  // where both extremes carry the story - profit/loss, legs, the overseas split.
   function headTail(list, headN, tailN, expanded) {
     if (expanded || list.length <= headN + tailN + 3) return { rows: list, foldIdx: -1, hidden: 0 };
     return { rows: list.slice(0, headN).concat(list.slice(list.length - tailN)), foldIdx: headN, hidden: list.length - headN - tailN };
@@ -1437,7 +1447,7 @@
     return out;
   }
   var SVGNS = "http://www.w3.org/2000/svg";
-  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
 
   /* ---------- tooltip ---------- */
   var tip = document.getElementById("tip");
@@ -1506,7 +1516,7 @@
       return '<div><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="sub">' + sub + "</div></div>";
     }
     document.getElementById("smallprint").innerHTML =
-      FILMS.length + " films with a worldwide gross to verify. <b>Avengers: Doomsday</b> and <b>Clayface</b> aren&rsquo;t out yet, so there&rsquo;s nothing to check. <b>Spider-Man: Brand New Day</b> is still in theatres. Box Office Mojo, read " + new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) + ".";
+      FILMS.length + " films with a worldwide gross to verify. <b>Avengers: Doomsday</b> and <b>Clayface</b> aren&rsquo;t out yet, so there&rsquo;s nothing to check. <b>Spider-Man: Brand New Day</b> is still in theaters. Box Office Mojo, read " + new Date(DB.meta.generated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) + ".";
     document.getElementById("method-held").innerHTML =
       "Not in the data until they open: " + DB.meta.held_out.map(function (h) { return "<b>" + esc(h.t) + "</b> (" + h.date + ", " + h.u + ")"; }).join(" · ") + ".";
     var asof = document.getElementById("asof-date");
@@ -1522,7 +1532,7 @@
       var fs = FILMS.filter(function (f) { return f.u === u.k; });
       var gr = fs.map(function (f) { return val(f, "ww"); });
       var tot = gr.reduce(function (a, b) { return a + b; }, 0);
-      // profit only from films that have finished their run — an in-release film's loss isn't real yet
+      // profit only from films that have finished their run - an in-release film's loss isn't real yet
       var finals = fs.filter(function (f) { return f.final; });
       var np = finals.reduce(function (a, f) { return a + profitOf(f); }, 0);
       var el = document.createElement("div");
@@ -1553,15 +1563,15 @@
     var tm = mcu.reduce(function (a, f) { return a + val(f, "ww"); }, 0), td = dc.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
     var tss = ssu.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
     var tfx = fox.reduce(function (a, f) { return a + val(f, "ww"); }, 0);
-    var am = tm / mcu.length, ad = td / dc.length;
+    var am = median(mcu.map(function (f) { return val(f, "ww"); }));
+    var ad = median(dc.map(function (f) { return val(f, "ww"); }));
     var bm = mcu.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     var bd = dc.filter(function (f) { return val(f, "ww") >= 1e9; }).length;
     var mFin = mcu.filter(function (f) { return f.final; }), dFin = dc.filter(function (f) { return f.final; });
-    var mpf = mFin.reduce(function (a, f) { return a + profitOf(f); }, 0) / mFin.length;
-    var dpf = dFin.reduce(function (a, f) { return a + profitOf(f); }, 0) / dFin.length;
+    var mpf = median(mFin.map(profitOf)), dpf = median(dFin.map(profitOf));
     var pfWord = function (v) { return (v >= 0 ? "clears about <b>" : "loses about <b>") + usd(Math.abs(v)) + "</b>"; };
     document.getElementById("d-scorecard").innerHTML =
-      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones (the Dark Knight trilogy, both Jokers, The Batman). The average Marvel Studios film makes <b>" + usd(am) + "</b> worldwide; the average DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel Studios films have passed $1B; " + bd + " DC films have. Net of an estimated theatrical break-even of 2.5&times; production budget, the average completed Marvel Studios film " + pfWord(mpf) + "; the average completed DC film " + pfWord(dpf) + " (home video, streaming and TV not counted). Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; neither run has a billion-dollar title, though Raimi&rsquo;s <em>Spider-Man 3</em> came closest at $887M.";
+      "<b>" + usd(tm) + "</b> across " + mcu.length + " Marvel Studios films, against <b>" + usd(td) + "</b> for DC&rsquo;s " + dc.length + " across the DCEU, James Gunn&rsquo;s DCU and the Elseworlds standalones (the Dark Knight trilogy, both Jokers, The Batman). The median Marvel Studios film makes <b>" + usd(am) + "</b> worldwide; the median DC film, <b>" + usd(ad) + "</b>. " + bm + " Marvel Studios films have passed $1B; " + bd + " DC films have. Net of an estimated theatrical break-even of 2.5&times; production budget, the median completed Marvel Studios film " + pfWord(mpf) + "; the median completed DC film " + pfWord(dpf) + " (home video, streaming and TV not counted). Medians throughout, not averages: on a slate this skewed a mean lands where no actual film sits. Fox&rsquo;s " + fox.length + " Marvel films and Sony&rsquo;s " + ssu.length + " sit outside that fight, at <b>" + usd(tfx) + "</b> and <b>" + usd(tss) + "</b>; neither run has a billion-dollar title, though Raimi&rsquo;s <em>Spider-Man 3</em> came closest at $887M.";
   }
 
   /* ---------- §01 stacked columns by year ---------- */
@@ -1747,8 +1757,8 @@
       var big = c.w > 78 && c.h > 40;
       var med = c.w > 54 && c.h > 26;
       var label = "";
-      // the cyan (DCU) and yellow (SSU) fills are light — dark ink + light halo reads on those;
-      // the Elseworlds grey is light in dark mode only, dark in light mode
+      // the cyan (DCU) and yellow (SSU) fills are light - dark ink + light halo reads on those;
+      // the Elseworlds gray is light in dark mode only, dark in light mode
       // label ink is whichever of dark or white contrasts better with this cell's actual fill, read
       // from the live token so it follows the theme; white on the MCU green was only 3:1 in dark mode
       var lightFill = cellWantsDarkInk(COLORVAR[f.u]);
@@ -1774,11 +1784,11 @@
     fillTable("table-treemap", af.map(function (f) { return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), usd(val(f, "ww"))]; }), ["Film", "Universe", "Worldwide"]);
   }
   function clip(s, n) { return s.length > n ? s.slice(0, Math.max(3, n - 1)) + "…" : s; }
-  // In-plot callouts print the short title, not the marquee one. The mark's colour and
+  // In-plot callouts print the short title, not the marquee one. The mark's color and
   // shape already say which universe it belongs to, so the franchise half of a colon
-  // title is dead weight — and it's the half that makes a label overrun its neighbours.
+  // title is dead weight - and it's the half that makes a label overrun its neighbors.
   // Rule: keep the sub-title, not the franchise. The sub-title is the half that tells four
-  // Avengers films apart — "Avengers: Infinity War" cut to "Avengers" names nothing. The
+  // Avengers films apart - "Avengers: Infinity War" cut to "Avengers" names nothing. The
   // map covers the few where the franchise half is the famous one instead.
   var SHORT_T = {
     "Batman v Superman: Dawn of Justice": "Batman v Superman",
@@ -1793,8 +1803,8 @@
     if (sub.length < 6 || /^(Part|Vol|Chapter)\b/.test(sub)) return t;
     return sub;
   }
-  // a surface-coloured outline behind label text, so a callout stays readable wherever
-  // it lands — over a dot, a grid line, or a reference rule
+  // a surface-colored outline behind label text, so a callout stays readable wherever
+  // it lands - over a dot, a grid line, or a reference rule
   var HALO = ' stroke="var(--surface)" stroke-width="3.5" stroke-linejoin="round" paint-order="stroke"';
   // Callouts are placed one at a time and nudged vertically off anything already down.
   // Two titles on top of each other is worse than a title sitting a line off its own dot,
@@ -1865,12 +1875,15 @@
       // films that crossed $1B get a gold accent ring + full opacity so the section's subject pops out
       var big = val(n.f, "ww") >= 1e9;
       var halo = big ? '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + (n.r + (mob ? 2.5 : 3.5)) + '" fill="none" stroke="var(--note)" stroke-opacity="0.5" stroke-width="' + (mob ? 1.5 : 2) + '"/>' : "";
-      return halo + '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + n.r + '" fill="var(' + COLORVAR[n.f.u] + ')" fill-opacity="' + (big ? "1" : "0.82") + '" stroke="' + (big ? "var(--note)" : "var(--surface)") + '" stroke-width="' + (big ? (mob ? 1.5 : 2) : (mob ? 1 : 1.5)) + '" class="beeDot" data-i="' + FILMS.indexOf(n.f) + '"/>';
+      // the mark carries the universe SHAPE as well as its hue. Under protanopia the palette's
+      // closest pair sits at 7.0 separation, which is only legal with a second channel, and
+      // this was the most prominent chart that had none.
+      return halo + uniMark(n.cx, n.cy, n.f.u, FILMS.indexOf(n.f), n.r, big);
     }).join("");
     document.getElementById("chart-beeswarm").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films placed by release date, sized by worldwide gross">' +
       '<g class="grid">' + ticks + "</g>" + circ + "</svg>";
-    legend("leg-bee", activeUnis(), true, false, true);
+    legend("leg-bee", activeUnis(), true, true, true);
     wireDots(document.querySelector("#chart-beeswarm svg"));
     fillTable("table-beeswarm", af.map(function (f) { return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), f.date, usd(val(f, "ww"))]; }), ["Film", "Universe", "Release", "Worldwide"]);
   }
@@ -2106,8 +2119,14 @@
   }
 
   // show the "scroll for more columns" line only while there is more to scroll to, and
-  // retire it once they've reached the end — a hint that never goes away is decoration
+  // retire it once they've reached the end - a hint that never goes away is decoration
   var SCROLL_HINTS = [];
+  // renderFullTable runs on every sort click and every filter change, so without this the
+  // array and the observers grew without bound over detached nodes
+  function resetScrollHints() {
+    SCROLL_HINTS.forEach(function (h) { if (h.ro) h.ro.disconnect(); });
+    SCROLL_HINTS.length = 0;
+  }
   function wireScrollHint(wrap, hint) {
     if (!wrap || !hint) return;
     function sync() {
@@ -2116,7 +2135,7 @@
       hint.classList.toggle("on", wrap.scrollWidth - wrap.clientWidth - wrap.scrollLeft > 8);
     }
     wrap.addEventListener("scroll", sync, { passive: true });
-    if (window.ResizeObserver) new ResizeObserver(sync).observe(wrap);
+    if (window.ResizeObserver) { sync.ro = new ResizeObserver(sync); sync.ro.observe(wrap); }
     SCROLL_HINTS.push(sync);
     sync();
   }
@@ -2139,11 +2158,25 @@
       + (withRing ? '<span><span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--note);vertical-align:-1px;margin-right:2px"></span>crossed $1B</span>' : "");
     host.innerHTML = '<span class="lg-keys">' + ks + "</span>" + (notes ? '<span class="lg-notes">' + notes + "</span>" : "");
   }
+  // Table cells legitimately carry a little markup the renderers build themselves (the
+  // universe chip, the in-release dot, &ndash; for a null). Anything else is data from a
+  // scraper and gets escaped.
+  // Table cells legitimately carry a little markup the renderers build themselves (the
+  // universe chip, the in-release dot). Everything else reaching fillTable is scraped data,
+  // so it is escaped. Strip the known-safe fragments, then require what's left to be
+  // markup-free; that way a new renderer can't accidentally open a hole.
+  function safeCell(c) {
+    c = String(c);
+    var rest = c
+      .split(/<span class="uchip" style="background:var\(--[a-z0-9-]+\)"><\/span>/).join("")
+      .split(/<span class="inrelease">[^<]*<\/span>/).join("");
+    return /[<>]/.test(rest) ? esc(c) : c;
+  }
   function fillTable(id, rows, headers) {
     var host = document.getElementById(id);
     host.innerHTML = '<div class="tablewrap"><table class="data"><thead><tr>' +
       headers.map(function (h) { return "<th>" + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
-      rows.map(function (r) { return "<tr>" + r.map(function (c, i) { return '<td class="' + (i === 0 ? "name" : "") + '">' + c + "</td>"; }).join("") + "</tr>"; }).join("") +
+      rows.map(function (r) { return "<tr>" + r.map(function (c, i) { return '<td class="' + (i === 0 ? "name" : "") + '">' + safeCell(c) + "</td>"; }).join("") + "</tr>"; }).join("") +
       "</tbody></table></div>";
   }
   function tableToggleFill(id, rows, headers) { fillTable(id, rows, headers); }
@@ -2195,10 +2228,11 @@
       "L" + (cx + d) + " " + (cy + d - t) + "L" + (cx + d - t) + " " + (cy + d) + "L" + cx + " " + (cy + t) +
       "L" + (cx - d + t) + " " + (cy + d) + "L" + (cx - d) + " " + (cy + d - t) + "L" + (cx - t) + " " + cy + "Z";
   }
-  function uniMark(cx, cy, u, i, r) {
+  function uniMark(cx, cy, u, i, r, big) {
     r = r || 6;
     var c = "var(" + COLORVAR[u] + ")", s = SHAPE[u];
-    var a = ' fill="' + c + '" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + i + '"';
+    // "big" is the $1B emphasis the beeswarm asks for: full opacity and a gold edge
+    var a = ' fill="' + c + '" fill-opacity="' + (big ? "1" : "0.82") + '" stroke="' + (big ? "var(--note)" : "var(--surface)") + '" stroke-width="' + (big ? 2 : 1.5) + '" class="beeDot" data-i="' + i + '"';
     if (s === "square") return '<rect x="' + (cx - r) + '" y="' + (cy - r) + '" width="' + (2 * r) + '" height="' + (2 * r) + '" rx="1.5"' + a + "/>";
     if (s === "triangle") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + (cy + r) + "L" + (cx - r - 1) + " " + (cy + r) + 'Z"' + a + "/>";
     if (s === "diamond") return '<path d="M' + cx + " " + (cy - r - 1) + "L" + (cx + r + 1) + " " + cy + "L" + cx + " " + (cy + r + 1) + "L" + (cx - r - 1) + " " + cy + 'Z"' + a + "/>";
@@ -2289,7 +2323,7 @@
   /* ---------- §06 profitability (diverging) ---------- */
   function profitOf(f) { return val(f, "ww") - val(f, "budget") * 2.5; }
   function renderProfit() {
-    // a film still in theatres hasn't finished making its money — keep it out of the P/L read
+    // a film still in theaters hasn't finished making its money - keep it out of the P/L read
     var af = activeFilms().filter(function (f) { return f.final; }).slice().sort(function (a, b) { return profitOf(b) - profitOf(a); });
     var maxPos = Math.max.apply(null, af.map(profitOf).concat([1]));
     var maxNeg = Math.abs(Math.min.apply(null, af.map(profitOf).concat([-1])));
@@ -2313,8 +2347,7 @@
         var w = Math.max(2, Math.abs(p) * sc), bx = p >= 0 ? x0 : x0 - w;
         return '<g class="profRow" data-i="' + FILMS.indexOf(f) + '">' +
           '<rect x="0" y="' + yy + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
-          '<rect x="' + padX + '" y="' + (yy + 6) + '" width="7" height="7" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
-          '<text x="' + (padX + 13) + '" y="' + (yy + 12.5) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
+          '<text x="' + padX + '" y="' + (yy + 12.5) + '" class="lbl" font-size="12" fill="var(--ink)">' + esc(clip(f.t, 32)) + (f.final ? "" : " ◉") + "</text>" +
           '<text x="' + (W - padX) + '" y="' + (yy + 12.5) + '" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</text>" +
           '<rect x="' + bx + '" y="' + (yy + 19) + '" width="' + w + '" height="9" rx="2" fill="' + c + '"/>' +
           "</g>";
@@ -2344,8 +2377,7 @@
         var lblX = p >= 0 ? bx + w + 7 : x0d + 8;
         return '<g class="profRow" data-i="' + FILMS.indexOf(f) + '">' +
           '<rect x="0" y="' + yy + '" width="' + Wd + '" height="' + rh + '" fill="transparent"/>' +
-          '<rect x="' + (md.l - 13) + '" y="' + (yy + rh / 2 - 4) + '" width="8" height="8" rx="1.5" fill="var(' + COLORVAR[f.u] + ')"/>' +
-          '<text x="' + (md.l - 28) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" class="lbl" font-size="13" fill="var(--ink-2)">' + esc(clip(f.t, 26)) + (f.final ? "" : " ◉") + "</text>" +
+          '<text x="' + (md.l - 14) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" class="lbl" font-size="13" fill="var(--ink-2)">' + esc(clip(f.t, 26)) + (f.final ? "" : " ◉") + "</text>" +
           '<rect x="' + bx + '" y="' + (yy + 3.5) + '" width="' + w + '" height="' + (rh - 7) + '" rx="1.5" fill="' + c + '"/>' +
           '<text x="' + lblX + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="start" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="' + c + '">' + (p >= 0 ? "+" : "−") + usd(Math.abs(p)) + "</text>" +
           "</g>";
@@ -2709,8 +2741,9 @@
       var bars = af.map(function (f, i) {
         var v = counts[i], y1 = yS(v), h = Math.max(0, yS(0) - y1 - 1.5);
         var lbl = "";
-        // the peak is the point of the chart, so it is labelled whatever its neighbours do
-        if (v === max || (v >= 11 && x(i) - lastLbl > 88)) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="12">' + clip(shortT(f.t), 16) + " " + v + "</text>"; }
+        // the peak is the point of the chart, so it is labeled whatever its neighbors do
+        // a label near the left edge collides with the y-axis tick column, so keep clear of it
+        if ((v === max || (v >= 11 && x(i) - lastLbl > 150)) && x(i) > m.l + 46) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="12">' + esc(clip(shortT(f.t), 16)) + " " + v + "</text>"; }
         return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + COLORVAR[f.u] + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
       }).join("");
       var yl = "", lastLab = -1e9;
@@ -2885,7 +2918,7 @@
       // "Elseworlds" is 10 characters into a 45px column on a phone; the short code holds
       labs += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="11" fill="var(--ink-2)">' + (d.mob && r.k === "Elseworlds" ? "Else" : uLabel(r.k)) + "</text>";
       // six values into six 36px columns don't fit on a phone. Keep the two the tear-down
-      // compares — Marvel against DCEU — and let the rest read as bar length, which is
+      // compares - Marvel against DCEU - and let the rest read as bar length, which is
       // the distortion this chart exists to show anyway.
       if (!d.mob || r.k === "MCU" || r.k === "DCEU")
         labs += '<text x="' + xS(i) + '" y="' + (yy - 6) + '" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)">' + usd(r.avg) + "</text>";
@@ -3299,14 +3332,18 @@
   }
   document.querySelectorAll(".ctl-notes, [data-notes-link]").forEach(function (b) { b.addEventListener("click", toggleNotesFrom); });
   document.querySelectorAll(".seg [data-notes]").forEach(function (b) { b.addEventListener("click", function () { setTimeout(syncNotesUI, 0); }); });
-  function goToHash(h) {
-    h = (h || location.hash).replace("#", "");
+  // opts.scroll === false selects the tab without scrolling. At boot the charts are still
+  // empty divs, so scrolling to a section then lands nowhere once the SVGs inject their
+  // height; boot selects first, renders, then scrolls.
+  function goToHash(opts) {
+    opts = opts || {};
+    var h = location.hash.replace("#", "");
     if (!h) return false;
     if (TABS.indexOf(h) >= 0) { setTab(h, { push: false }); return true; }
     var el = document.getElementById(h), t = el && el.closest("[data-tab]");
     if (!t) return false;
     setTab(t.getAttribute("data-tab"), { push: false });
-    el.scrollIntoView();
+    if (opts.scroll !== false) el.scrollIntoView();
     return true;
   }
   document.querySelectorAll(".tab").forEach(function (b) { b.addEventListener("click", function () { setTab(b.getAttribute("data-tab"), { scroll: true }); }); });
@@ -3326,9 +3363,10 @@
   })();
 
   var booted = false;
-  if (!goToHash()) setTab("act1", { push: false });
+  if (!goToHash({ scroll: false })) setTab("act1", { push: false });
   renderAll();
   booted = true;
+  goToHash({ scroll: true }); // charts exist now; a hash scroll before renderAll lands nowhere useful
   var wasMobile = isMobile();
   var rz;
   window.addEventListener("resize", function () {

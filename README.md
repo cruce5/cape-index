@@ -7,7 +7,7 @@ visualization of the lot.
 **Live:** https://capeindex.com
 
 Grew out of [Bill Yost's *Marvel / DC Box Office*](https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome)
-Tableau Public workbook — a rebuild that turned into a re-verification and a
+Tableau Public workbook. The rebuild turned into a re-check against the source and a
 much wider scope. The full story of how it got made, with the wrong turns and
 the bugs, is section 15 of the site itself.
 
@@ -15,7 +15,7 @@ the bugs, is section 15 of the site itself.
 
 One rule: every live-action theatrical **Marvel or DC superhero film** whose
 continuity **began in 2000 or later** and that is **part of a multi-film
-continuity** — a shared universe, a trilogy, or a film with a theatrical sequel.
+continuity**: a shared universe, a trilogy, or a film with a theatrical sequel.
 One-and-done films with no sequel are out (no franchise arc to compare).
 
 **In (91 films):**
@@ -57,7 +57,7 @@ About a third of the budgets are estimates, marked `est.` in the ledger.
 ## Weekly refresh
 
 `scripts/weekly-rebuild.ps1` (Windows Task Scheduler, Mondays) re-scrapes only the
-films still in motion — released within ~10 months, or not out yet — rebuilds, and
+films still in motion (released within ~10 months, or not out yet), rebuilds, and
 deploys. Older films stay frozen. It aborts before deploying on any failure and
 logs to `scripts/weekly-rebuild.log`.
 
@@ -67,7 +67,7 @@ your OMDb key in it (gitignored).
 ## Design
 
 Dark mode is the primary target. The palette is a color-blind-safe set
-([Paul Tol "bright"](https://personal.sron.nl/~pault/) plus a grey), validated
+([Paul Tol "bright"](https://personal.sron.nl/~pault/) plus a gray), validated
 with a script rather than by eye, with a mark shape per group as a backstop.
 Type is three faces with one job each: IBM Plex Sans Condensed for headings and hero
 numbers, Sans for every word a reader reads, Mono for figures and metadata, each declared

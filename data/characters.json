@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-08T00:21:10.250Z",
+  "generated": "2026-09-08T00:53:42.172Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 226,
+  "count": 247,
   "characters": [
     {
       "name": "Spider-Man",
@@ -1490,6 +1490,59 @@
       ]
     },
     {
+      "name": "Drax",
+      "real_name": "Drax the Destroyer",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Dave Bautista"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 3,
+          "minor": false,
+          "actor": "Dave Bautista"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 3,
+          "minor": false,
+          "actor": "Dave Bautista"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 20,
+          "minor": false,
+          "actor": "Dave Bautista"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": null,
+          "minor": true,
+          "actor": "Dave Bautista"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 3,
+          "minor": false,
+          "actor": "Dave Bautista"
+        }
+      ]
+    },
+    {
       "name": "Gamora",
       "real_name": null,
       "universes": [
@@ -1539,6 +1592,59 @@
           "order": 2,
           "minor": false,
           "actor": "Zoe Saldaña"
+        }
+      ]
+    },
+    {
+      "name": "Groot",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Vin Diesel"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 4,
+          "minor": false,
+          "actor": "Vin Diesel"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 4,
+          "minor": false,
+          "actor": "Vin Diesel"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 22,
+          "minor": false,
+          "actor": "Vin Diesel"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": null,
+          "minor": true,
+          "actor": "Vin Diesel"
+        },
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 6,
+          "minor": false,
+          "actor": "Vin Diesel"
         }
       ]
     },
@@ -2009,51 +2115,6 @@
       ]
     },
     {
-      "name": "Groot",
-      "real_name": null,
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Vin Diesel"
-      ],
-      "appearances": 4,
-      "films": [
-        {
-          "title": "Guardians of the Galaxy",
-          "universe": "MCU",
-          "date": "2014-08-01",
-          "order": 4,
-          "minor": false,
-          "actor": "Vin Diesel"
-        },
-        {
-          "title": "Avengers: Infinity War",
-          "universe": "MCU",
-          "date": "2018-04-27",
-          "order": 22,
-          "minor": false,
-          "actor": "Vin Diesel"
-        },
-        {
-          "title": "Avengers: Endgame",
-          "universe": "MCU",
-          "date": "2019-04-26",
-          "order": null,
-          "minor": true,
-          "actor": "Vin Diesel"
-        },
-        {
-          "title": "Guardians of the Galaxy Vol. 3",
-          "universe": "MCU",
-          "date": "2023-05-05",
-          "order": 6,
-          "minor": false,
-          "actor": "Vin Diesel"
-        }
-      ]
-    },
-    {
       "name": "Harley Quinn",
       "real_name": "Dr. Harleen Quinzel",
       "universes": [
@@ -2468,6 +2529,53 @@
       ]
     },
     {
+      "name": "William Stryker",
+      "real_name": "Colonel William Stryker",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Brian Cox",
+        "Danny Huston",
+        "Josh Helman"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "X2",
+          "universe": "Fox",
+          "date": "2003-05-02",
+          "order": 8,
+          "minor": false,
+          "actor": "Brian Cox"
+        },
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 3,
+          "minor": false,
+          "actor": "Danny Huston"
+        },
+        {
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": 11,
+          "minor": false,
+          "actor": "Josh Helman"
+        },
+        {
+          "title": "X-Men: Apocalypse",
+          "universe": "Fox",
+          "date": "2016-05-27",
+          "order": 8,
+          "minor": false,
+          "actor": "Josh Helman"
+        }
+      ]
+    },
+    {
       "name": "Wonder Woman",
       "real_name": "Diana Prince",
       "universes": [
@@ -2816,6 +2924,45 @@
       ]
     },
     {
+      "name": "Sabretooth",
+      "real_name": null,
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Tyler Mane",
+        "Liev Schreiber"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "X-Men",
+          "universe": "Fox",
+          "date": "2000-07-14",
+          "order": 11,
+          "minor": false,
+          "actor": "Tyler Mane"
+        },
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 2,
+          "minor": false,
+          "actor": "Liev Schreiber"
+        },
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": null,
+          "minor": true,
+          "actor": "Tyler Mane"
+        }
+      ]
+    },
+    {
       "name": "The Thing",
       "real_name": "Ben Grimm",
       "universes": [
@@ -3003,41 +3150,39 @@
       ]
     },
     {
-      "name": "William Stryker",
-      "real_name": "Colonel William Stryker",
+      "name": "Yondu",
+      "real_name": "Yondu Udonta",
       "universes": [
-        "Fox"
+        "MCU"
       ],
       "actors": [
-        "Brian Cox",
-        "Danny Huston",
-        "Josh Helman"
+        "Michael Rooker"
       ],
       "appearances": 3,
       "films": [
         {
-          "title": "X2",
-          "universe": "Fox",
-          "date": "2003-05-02",
-          "order": 8,
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 7,
           "minor": false,
-          "actor": "Brian Cox"
+          "actor": "Michael Rooker"
         },
         {
-          "title": "X-Men Origins: Wolverine",
-          "universe": "Fox",
-          "date": "2009-05-01",
-          "order": 3,
+          "title": "Guardians of the Galaxy Vol. 2",
+          "universe": "MCU",
+          "date": "2017-05-05",
+          "order": 6,
           "minor": false,
-          "actor": "Danny Huston"
+          "actor": "Michael Rooker"
         },
         {
-          "title": "X-Men: Apocalypse",
-          "universe": "Fox",
-          "date": "2016-05-27",
-          "order": 8,
-          "minor": false,
-          "actor": "Josh Helman"
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": null,
+          "minor": true,
+          "actor": "Michael Rooker"
         }
       ]
     },
@@ -3096,6 +3241,37 @@
           "order": 4,
           "minor": false,
           "actor": "Yahya Abdul-Mateen II"
+        }
+      ]
+    },
+    {
+      "name": "Blob",
+      "real_name": "Fred Dukes",
+      "universes": [
+        "Fox",
+        "MCU"
+      ],
+      "actors": [
+        "Kevin Durand",
+        "UK Pitbulls"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 6,
+          "minor": false,
+          "actor": "Kevin Durand"
+        },
+        {
+          "title": "Deadpool & Wolverine",
+          "universe": "MCU",
+          "date": "2024-07-26",
+          "order": null,
+          "minor": true,
+          "actor": "UK Pitbulls"
         }
       ]
     },
@@ -3423,6 +3599,35 @@
       ]
     },
     {
+      "name": "Korath",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Djimon Hounsou"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 9,
+          "minor": false,
+          "actor": "Djimon Hounsou"
+        },
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": 4,
+          "minor": false,
+          "actor": "Djimon Hounsou"
+        }
+      ]
+    },
+    {
       "name": "Korg",
       "real_name": null,
       "universes": [
@@ -3656,6 +3861,35 @@
           "order": 4,
           "minor": false,
           "actor": "Alessandro Nivola"
+        }
+      ]
+    },
+    {
+      "name": "Ronan",
+      "real_name": "Ronan the Accuser",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Lee Pace"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy",
+          "universe": "MCU",
+          "date": "2014-08-01",
+          "order": 6,
+          "minor": false,
+          "actor": "Lee Pace"
+        },
+        {
+          "title": "Captain Marvel",
+          "universe": "MCU",
+          "date": "2019-03-08",
+          "order": 5,
+          "minor": false,
+          "actor": "Lee Pace"
         }
       ]
     },
@@ -3924,64 +4158,6 @@
       ]
     },
     {
-      "name": "The Leader",
-      "real_name": "Samuel Sterns",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Tim Blake Nelson"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "The Incredible Hulk",
-          "universe": "MCU",
-          "date": "2008-06-13",
-          "order": 5,
-          "minor": false,
-          "actor": "Tim Blake Nelson"
-        },
-        {
-          "title": "Captain America: Brave New World",
-          "universe": "MCU",
-          "date": "2025-02-14",
-          "order": 8,
-          "minor": false,
-          "actor": "Tim Blake Nelson"
-        }
-      ]
-    },
-    {
-      "name": "Toxin",
-      "real_name": "Patrick Mulligan",
-      "universes": [
-        "SSU"
-      ],
-      "actors": [
-        "Stephen Graham"
-      ],
-      "appearances": 2,
-      "films": [
-        {
-          "title": "Venom: Let There Be Carnage",
-          "universe": "SSU",
-          "date": "2021-10-01",
-          "order": 5,
-          "minor": false,
-          "actor": "Stephen Graham"
-        },
-        {
-          "title": "Venom: The Last Dance",
-          "universe": "SSU",
-          "date": "2024-10-25",
-          "order": 5,
-          "minor": false,
-          "actor": "Stephen Graham"
-        }
-      ]
-    },
-    {
       "name": "Weasel",
       "real_name": null,
       "universes": [
@@ -4164,6 +4340,27 @@
       ]
     },
     {
+      "name": "Agent Zero",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Daniel Henney"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 9,
+          "minor": false,
+          "actor": "Daniel Henney"
+        }
+      ]
+    },
+    {
       "name": "Ajak",
       "real_name": null,
       "universes": [
@@ -4227,6 +4424,69 @@
       ]
     },
     {
+      "name": "Angel Dust",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Gina Carano"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Deadpool",
+          "universe": "Fox",
+          "date": "2016-02-12",
+          "order": 8,
+          "minor": false,
+          "actor": "Gina Carano"
+        }
+      ]
+    },
+    {
+      "name": "Angel Salvadore",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Zoë Kravitz"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men: First Class",
+          "universe": "Fox",
+          "date": "2011-06-03",
+          "order": 8,
+          "minor": false,
+          "actor": "Zoë Kravitz"
+        }
+      ]
+    },
+    {
+      "name": "Ant-Man (Hank Pym)",
+      "real_name": "Dr. Hank Pym",
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Michael Douglas"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "universe": "MCU",
+          "date": "2023-02-17",
+          "order": 11,
+          "minor": false,
+          "actor": "Michael Douglas"
+        }
+      ]
+    },
+    {
       "name": "Apocalypse",
       "real_name": "En Sabah Nur",
       "universes": [
@@ -4248,6 +4508,27 @@
       ]
     },
     {
+      "name": "Ares",
+      "real_name": "Sir Patrick",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "David Thewlis"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Wonder Woman",
+          "universe": "DCEU",
+          "date": "2017-06-02",
+          "order": 5,
+          "minor": false,
+          "actor": "David Thewlis"
+        }
+      ]
+    },
+    {
       "name": "Atom Smasher",
       "real_name": "Albert Rothstein",
       "universes": [
@@ -4265,6 +4546,27 @@
           "order": 3,
           "minor": false,
           "actor": "Noah Centineo"
+        }
+      ]
+    },
+    {
+      "name": "Ayesha",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Elizabeth Debicki"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": null,
+          "minor": true,
+          "actor": "Elizabeth Debicki"
         }
       ]
     },
@@ -4328,6 +4630,27 @@
           "order": 11,
           "minor": false,
           "actor": "Caleb Landry Jones"
+        }
+      ]
+    },
+    {
+      "name": "Bishop",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Omar Sy"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": 9,
+          "minor": false,
+          "actor": "Omar Sy"
         }
       ]
     },
@@ -4479,23 +4802,23 @@
       ]
     },
     {
-      "name": "Blob",
-      "real_name": "Fred Dukes",
+      "name": "Blink",
+      "real_name": null,
       "universes": [
-        "MCU"
+        "Fox"
       ],
       "actors": [
-        "UK Pitbulls"
+        "Fan Bingbing"
       ],
       "appearances": 1,
       "films": [
         {
-          "title": "Deadpool & Wolverine",
-          "universe": "MCU",
-          "date": "2024-07-26",
-          "order": null,
-          "minor": true,
-          "actor": "UK Pitbulls"
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": 13,
+          "minor": false,
+          "actor": "Fan Bingbing"
         }
       ]
     },
@@ -4941,6 +5264,27 @@
       ]
     },
     {
+      "name": "Doctor Poison",
+      "real_name": "Dr. Maru",
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Elena Anaya"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Wonder Woman",
+          "universe": "DCEU",
+          "date": "2017-06-02",
+          "order": 7,
+          "minor": false,
+          "actor": "Elena Anaya"
+        }
+      ]
+    },
+    {
       "name": "Doctor Sivana",
       "real_name": "Dr. Thaddeus Sivana",
       "universes": [
@@ -5147,6 +5491,27 @@
           "order": 10,
           "minor": false,
           "actor": "Ralph Ineson"
+        }
+      ]
+    },
+    {
+      "name": "Gambit",
+      "real_name": "Remy LeBeau",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Taylor Kitsch"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 8,
+          "minor": false,
+          "actor": "Taylor Kitsch"
         }
       ]
     },
@@ -5403,6 +5768,27 @@
       ]
     },
     {
+      "name": "Jubilee",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Lana Condor"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men: Apocalypse",
+          "universe": "Fox",
+          "date": "2016-05-27",
+          "order": 15,
+          "minor": false,
+          "actor": "Lana Condor"
+        }
+      ]
+    },
+    {
       "name": "Juggernaut",
       "real_name": "Cain Marko",
       "universes": [
@@ -5592,6 +5978,48 @@
       ]
     },
     {
+      "name": "Knull",
+      "real_name": null,
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Andy Serkis"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Venom: The Last Dance",
+          "universe": "SSU",
+          "date": "2024-10-25",
+          "order": 9,
+          "minor": false,
+          "actor": "Andy Serkis"
+        }
+      ]
+    },
+    {
+      "name": "Kraglin",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Sean Gunn"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Guardians of the Galaxy Vol. 3",
+          "universe": "MCU",
+          "date": "2023-05-05",
+          "order": 9,
+          "minor": false,
+          "actor": "Sean Gunn"
+        }
+      ]
+    },
+    {
       "name": "Kraven the Hunter",
       "real_name": "Sergei Kravinoff",
       "universes": [
@@ -5651,6 +6079,27 @@
           "order": 3,
           "minor": false,
           "actor": "Rhys Ifans"
+        }
+      ]
+    },
+    {
+      "name": "Lobo",
+      "real_name": null,
+      "universes": [
+        "DCU"
+      ],
+      "actors": [
+        "Jason Momoa"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Supergirl",
+          "universe": "DCU",
+          "date": "2026-06-26",
+          "order": 7,
+          "minor": false,
+          "actor": "Jason Momoa"
         }
       ]
     },
@@ -5756,27 +6205,6 @@
           "order": 8,
           "minor": false,
           "actor": "Annette Bening"
-        }
-      ]
-    },
-    {
-      "name": "Margaret Smith",
-      "real_name": "Vuk",
-      "universes": [
-        "Fox"
-      ],
-      "actors": [
-        "Jessica Chastain"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "X-Men: Dark Phoenix",
-          "universe": "Fox",
-          "date": "2019-06-07",
-          "order": 10,
-          "minor": false,
-          "actor": "Jessica Chastain"
         }
       ]
     },
@@ -5970,6 +6398,27 @@
       ]
     },
     {
+      "name": "Namora",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Mabel Cadena"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 8,
+          "minor": false,
+          "actor": "Mabel Cadena"
+        }
+      ]
+    },
+    {
       "name": "New Goblin",
       "real_name": "Harry Osborn",
       "universes": [
@@ -6075,6 +6524,27 @@
       ]
     },
     {
+      "name": "Psylocke",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Olivia Munn"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men: Apocalypse",
+          "universe": "Fox",
+          "date": "2016-05-27",
+          "order": 16,
+          "minor": false,
+          "actor": "Olivia Munn"
+        }
+      ]
+    },
+    {
       "name": "Punisher",
       "real_name": "Frank Castle",
       "universes": [
@@ -6092,27 +6562,6 @@
           "order": 5,
           "minor": false,
           "actor": "Jon Bernthal"
-        }
-      ]
-    },
-    {
-      "name": "Rafke",
-      "real_name": "Mr. Sherman",
-      "universes": [
-        "Fox"
-      ],
-      "actors": [
-        "Zach Grenier"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Fantastic Four: Rise of the Silver Surfer",
-          "universe": "Fox",
-          "date": "2007-06-15",
-          "order": 12,
-          "minor": false,
-          "actor": "Zach Grenier"
         }
       ]
     },
@@ -6218,27 +6667,6 @@
           "order": 5,
           "minor": false,
           "actor": "Marwan Kenzari"
-        }
-      ]
-    },
-    {
-      "name": "Sabretooth",
-      "real_name": "Victor Creed",
-      "universes": [
-        "MCU"
-      ],
-      "actors": [
-        "Tyler Mane"
-      ],
-      "appearances": 1,
-      "films": [
-        {
-          "title": "Deadpool & Wolverine",
-          "universe": "MCU",
-          "date": "2024-07-26",
-          "order": null,
-          "minor": true,
-          "actor": "Tyler Mane"
         }
       ]
     },
@@ -6474,6 +6902,27 @@
       ]
     },
     {
+      "name": "Silver Fox",
+      "real_name": "Kayla Silverfox",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Lynn Collins"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men Origins: Wolverine",
+          "universe": "Fox",
+          "date": "2009-05-01",
+          "order": 5,
+          "minor": false,
+          "actor": "Lynn Collins"
+        }
+      ]
+    },
+    {
       "name": "Silver Surfer",
       "real_name": null,
       "universes": [
@@ -6596,6 +7045,27 @@
           "order": 6,
           "minor": false,
           "actor": "Marion Cotillard"
+        }
+      ]
+    },
+    {
+      "name": "The Foreigner",
+      "real_name": "Foreigner",
+      "universes": [
+        "SSU"
+      ],
+      "actors": [
+        "Christopher Abbott"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Kraven the Hunter",
+          "universe": "SSU",
+          "date": "2024-12-13",
+          "order": 5,
+          "minor": false,
+          "actor": "Christopher Abbott"
         }
       ]
     },
@@ -6747,6 +7217,27 @@
       ]
     },
     {
+      "name": "Typhoid Mary",
+      "real_name": "Typhoid",
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Natassia Malthe"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Elektra",
+          "universe": "Fox",
+          "date": "2005-01-14",
+          "order": 7,
+          "minor": false,
+          "actor": "Natassia Malthe"
+        }
+      ]
+    },
+    {
       "name": "U.S. Agent",
       "real_name": "John Walker",
       "universes": [
@@ -6810,6 +7301,27 @@
       ]
     },
     {
+      "name": "Vuk",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Jessica Chastain"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men: Dark Phoenix",
+          "universe": "Fox",
+          "date": "2019-06-07",
+          "order": 10,
+          "minor": false,
+          "actor": "Jessica Chastain"
+        }
+      ]
+    },
+    {
       "name": "Vulture",
       "real_name": "Adrian Toomes",
       "universes": [
@@ -6827,6 +7339,27 @@
           "order": 2,
           "minor": false,
           "actor": "Michael Keaton"
+        }
+      ]
+    },
+    {
+      "name": "Warpath",
+      "real_name": null,
+      "universes": [
+        "Fox"
+      ],
+      "actors": [
+        "Booboo Stewart"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "X-Men: Days of Future Past",
+          "universe": "Fox",
+          "date": "2014-05-23",
+          "order": 15,
+          "minor": false,
+          "actor": "Booboo Stewart"
         }
       ]
     },

@@ -365,11 +365,48 @@ const CANON = {
 };
 // noise that slips through the heuristics — never a real hero/villain identity here
 const DROP = new Set(["Anne", "Isis", "Sol Soria", "Grid", "The Kid", "Girl", "Milo Morbius", "Milo", "Lucien"]);
+
+// Full-name credits for characters CODE_KEEP only lists as mononyms. Without these the
+// lookup fails on the whole string, the "/" split finds nothing, and the row never exists:
+// Drax, Yondu, Ronan and Korath were absent from all five Guardians films.
+Object.assign(CANON, {
+  "Drax the Destroyer": "Drax", "Drax": "Drax",
+  "Yondu Udonta": "Yondu", "Yondu": "Yondu",
+  "Ronan the Accuser": "Ronan", "Ronan": "Ronan",
+  "Korath the Pursuer": "Korath", "Korath": "Korath",
+  "Baby Groot": "Groot",
+  // Sabretooth was filed as a one-film MCU character; he is a foundational Fox villain
+  "Sabretooth": "Sabretooth", "Victor Creed": "Sabretooth",
+  "Fred Dukes": "Blob",
+  "Maj. Bill Stryker": "William Stryker", "Bill Stryker": "William Stryker",
+  // Wonder Woman resolved to exactly one codenamed character without these
+  "Sir Patrick": "Ares", "Sir Patrick Morgan": "Ares",
+  "Dr. Maru": "Doctor Poison", "Maru": "Doctor Poison",
+  // Vuk is the character; "Margaret Smith" is the human body she wears, and the row was inverted
+  "Vuk": "Vuk", "Margaret Smith": "Vuk",
+  "Remy LeBeau": "Gambit", "Gambit": "Gambit",
+  "Psylocke": "Psylocke", "Jubilee": "Jubilee",
+  "Bishop": "Bishop", "Blink": "Blink", "Warpath": "Warpath",
+  "Knull": "Knull", "Lobo": "Lobo",
+  "Angel Salvadore": "Angel Salvadore", "Angel Dust": "Angel Dust",
+  "Typhoid": "Typhoid Mary",
+  "Kayla Silverfox": "Silver Fox", "Agent Zero": "Agent Zero",
+  "Kraglin": "Kraglin", "Ayesha": "Ayesha", "Namora": "Namora",
+  "the Foreigner": "The Foreigner", "Foreigner": "The Foreigner",
+  "Hank Pym / Ant-Man": "Ant-Man (Hank Pym)", "Dr. Hank Pym / Ant-Man": "Ant-Man (Hank Pym)",
+});
+// Samuel Sterns and Patrick Mulligan are credited by their bare real names in BOTH their
+// films, so mapping the name to the codename counted a scientist as the Leader in 2008 and a
+// detective as Toxin in 2021. Same bug as Thaddeus Ross / Red Hulk.
+delete CANON["Samuel Sterns"];
+delete CANON["Patrick Mulligan"];
+// "Mr. Sherman/Rafke" is a bit part; the last-segment fallback invented a hero called Rafke.
+DROP.add("Rafke"); DROP.add("Mr. Sherman");
 // Identities that are a later transformation, not a through-line: only count a film
 // where the credit actually carries the alias ("Real Name / Codename"), never a bare real name.
 // Hope van Dyne is credited plainly in Ant-Man and gets the suit in its mid-credits scene;
 // the other three films slash the credit. Same shape as Red Hulk.
-const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)", "New Goblin", "Green Goblin (Harry Osborn)", "Silver Surfer (Shalla-Bal)", "Wasp"]);
+const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wilson)", "New Goblin", "Green Goblin (Harry Osborn)", "Silver Surfer (Shalla-Bal)", "Wasp", "Ant-Man (Hank Pym)"]);
 // Wikipedia credits one performer under two billings across a series; the roll-up should not
 // show her twice in the same actor list.
 const ACTOR_ALIAS = { "Rebecca Romijn-Stamos": "Rebecca Romijn" };

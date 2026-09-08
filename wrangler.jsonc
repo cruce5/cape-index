@@ -4,7 +4,7 @@
   "compatibility_date": "2026-09-01",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "404-page"
   },
   // capeindex.com + www serve the site directly. thecapeindex.com (and its www)
   // 301 to capeindex.com via a Cloudflare Redirect Rule on that zone, not here.
