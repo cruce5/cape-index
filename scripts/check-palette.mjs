@@ -139,7 +139,24 @@ for (const [name, T] of Object.entries(THEMES)) {
   }
 }
 
-// 4. the two colors that DO share a row in §06: the cleared-break-even bar and the loss bar.
+// 4. the Marvel v DC lens. Two categories only, so this pair is held to a much higher bar
+// than the six-hue set: red/blue is the classic convention and with n=2 it is genuinely safe.
+for (const [name, T] of Object.entries(THEMES)) {
+  if (!T.marvel || !T.dc) { fails.push(name + ": --marvel/--dc missing"); continue; }
+  for (const vision of ["normal", "protanopia", "deuteranopia", "tritanopia"]) {
+    const [c1, c2] = vision === "normal" ? [T.marvel, T.dc] : [cvd(T.marvel, vision), cvd(T.dc, vision)];
+    const d = dE(c1, c2);
+    if (d < 15) fails.push(name + " / " + vision + ": --marvel vs --dc separation " + d.toFixed(1) + " (floor 15 for a two-color lens)");
+  }
+  for (const surf of ["surface", "surface-2"]) {
+    for (const k of ["marvel", "dc"]) {
+      const r = contrast(T[k], T[surf]);
+      if (r < 3) fails.push(name + ": --" + k + " on --" + surf + " is " + r.toFixed(2) + ":1 (graphics need 3:1)");
+    }
+  }
+}
+
+// 5. the two colors that DO share a row in §06: the cleared-break-even bar and the loss bar.
 // (The universe chip was removed from that chart precisely so --pl-clear only has to clear
 // one other color instead of six.)
 for (const [name, T] of Object.entries(THEMES)) {

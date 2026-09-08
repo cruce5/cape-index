@@ -41,7 +41,8 @@
     --border: rgba(255, 255, 255, 0.11);
     --border-strong: rgba(255, 255, 255, 0.2);
     /* categorical - CVD-safe set (Paul Tol "bright", stepped for the dark surface).
-       Red/blue franchise convention dropped for separability.
+       Red/blue franchise convention dropped for separability at six categories; it comes
+       back under the Marvel v DC lens, where two colors have room to be red and blue.
        Chromatic: MCU, DCEU, DCU, Fox, SSU. Elseworlds is the muted standalone bucket (gray), plus its own mark shape. */
     --mcu: #3ba152;
     --dceu: #4a86c8;
@@ -54,6 +55,10 @@
     /* P/L pair: deliberately NOT a categorical hue. Positive is a neutral slate so it
        can't be misread as the MCU green sitting in the same row; the loss keeps orange. */
     --pl-clear: #8b95a8;
+    /* Marvel v DC lens. Two categories, so the red/blue convention is back and safe:
+       worst-case separation 21.7 (deuteranopia) against a floor of 10. */
+    --marvel: #e2564f;
+    --dc: #6aa9e0;
     --note: #caa25e;
     /* one definition for both the masthead rule and the sticky read line. The var()s inside
        resolve against whichever theme block won, so it re-mixes itself rather than needing
@@ -90,6 +95,10 @@
       --pos: #197b35;
       --neg: #b64a00;
       --pl-clear: #5d6675;
+    --marvel: #c0392b;
+    --dc: #33549c;
+      --marvel: #c0392b;
+      --dc: #33549c;
       --note: #7d5f2c;
       --shadow: 0 1px 2px rgba(13, 15, 20, 0.05), 0 4px 16px -14px rgba(13, 15, 20, 0.14);
     }
@@ -115,6 +124,8 @@
     --pos: #197b35;
     --neg: #b64a00;
     --pl-clear: #5d6675;
+    --marvel: #c0392b;
+    --dc: #33549c;
     --note: #7d5f2c;
     --shadow: 0 1px 2px rgba(13, 15, 20, 0.05), 0 4px 16px -14px rgba(13, 15, 20, 0.14);
   }
@@ -250,6 +261,8 @@
   }
   .pill:hover { color: var(--ink); }
   .pill .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); flex: none; }
+  /* .pill sets display, which outranks the hidden attribute on its own */
+  .pill[hidden] { display: none !important; }
   .pill[aria-pressed="true"] { color: var(--ink); border-color: var(--c, var(--ink)); background: color-mix(in srgb, var(--c, var(--ink)) 15%, transparent); }
   .pill[aria-pressed="false"] .dot { opacity: 0.35; }
   .seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 999px; overflow: hidden; }
@@ -569,12 +582,21 @@
     <div class="cgroup" role="group" aria-label="Filter by universe">
       <span class="clabel">Universe</span>
       <button class="pill pill-all" data-uni-all aria-pressed="true">All</button>
+      <button class="pill" data-brand="Marvel" style="--c:var(--marvel)" aria-pressed="true" hidden><span class="dot"></span>Marvel</button>
+      <button class="pill" data-brand="DC" style="--c:var(--dc)" aria-pressed="true" hidden><span class="dot"></span>DC</button>
       <button class="pill" data-uni="MCU" style="--c:var(--mcu)" aria-pressed="true"><span class="dot"></span>MCU</button>
       <button class="pill" data-uni="Fox" style="--c:var(--fox)" aria-pressed="true"><span class="dot"></span>Fox</button>
       <button class="pill" data-uni="SSU" style="--c:var(--ssu)" aria-pressed="true"><span class="dot"></span>Sony</button>
       <button class="pill" data-uni="DCEU" style="--c:var(--dceu)" aria-pressed="true"><span class="dot"></span>DCEU</button>
       <button class="pill" data-uni="DCU" style="--c:var(--dcu)" aria-pressed="true"><span class="dot"></span>DCU</button>
       <button class="pill" data-uni="Elseworlds" style="--c:var(--else)" aria-pressed="true"><span class="dot"></span>Elseworlds</button>
+    </div>
+    <div class="cgroup" role="group" aria-label="Color by">
+      <span class="clabel">Color by</span>
+      <div class="seg">
+        <button data-lens="universe" aria-pressed="true">Six universes</button>
+        <button data-lens="brand" aria-pressed="false">Marvel v DC</button>
+      </div>
     </div>
     <div class="cgroup" role="group" aria-label="Dollar basis">
       <span class="clabel">Dollars</span>
@@ -631,6 +653,7 @@
           <dt>Question</dt><dd>How has total superhero box office moved year to year, and how does each year split between the studios?</dd>
           <dt>Why this form</dt><dd>A stacked column reads as one total per year (the height) and a split within it (the segments). Separate lines would bury the &ldquo;how big was the whole year&rdquo; question; a grouped column would make the year total hard to see.</dd>
           <dt>Choices here</dt><dd>Segments are held apart by a 2&nbsp;px gap in the page color, not a stroke, a border is ink that isn&rsquo;t data. Universe order is fixed, so a color never jumps position between years. Y-axis labels sit flush left, close to the title.</dd>
+          <dt>The lens</dt><dd><b>Marvel v DC</b> in the control bar collapses the six groups to two and colors them red and blue. That is the comparison this project started as, and the one the six-way split had buried: Marvel’s three studios against DC’s three continuities. Nothing in the data changes, only how it is grouped and colored. Six saturated hues can’t all stay apart under color blindness, which is why the six-way view is green/magenta/yellow/blue/cyan/gray; two can, so the lens gets the convention back.</dd>
           <dt>Watch for</dt><dd>Stacking hides the individual films. Good for the total and rough shares; useless for &ldquo;which 2021 Marvel film was that.&rdquo; That&rsquo;s what the table is for.</dd>
         </dl></div>
       </div>
@@ -1134,7 +1157,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt">83 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt">85 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1220,6 +1243,8 @@
           <li><b>Eleven charts had a data table; three didn&rsquo;t</b>, and the per-film character count existed in no table anywhere, while &sect;13&rsquo;s note called the tables &ldquo;the accessibility backbone: every value a chart encodes is a plain number here.&rdquo; All fourteen have one now, which let the 455 focusable-but-silent chart marks go: they sat inside <code>role="img"</code> SVGs that prune their own subtree, so tabbing 91 times through a chart announced nothing.</li>
           <li><b>The tab bar declared an ARIA pattern it never implemented</b>, <code>role="tab"</code> with no tabpanel, no <code>aria-controls</code>, no arrow keys. Declared-and-broken is worse than absent, so it is a plain nav with <code>aria-current</code>. The ledger&rsquo;s sort was a click handler on a <code>&lt;th&gt;</code>, which no keyboard can reach; it is a button with <code>aria-sort</code>, and focus returns to the column you just sorted.</li>
           <li><b>A per-node style pass ran on every render.</b> The mobile type bump walked every SVG text node reading and writing computed styles, forcing a style recalc each time, on every filter click. The bump was uniform, so it is two lines of CSS and no JavaScript.</li>
+          <li><b>&ldquo;Should Ryan Reynolds&rsquo; Green Lantern be in here? Watchmen? Jonah Hex?&rdquo;</b> No, and for the same reason all three are already in the Out list: no sequel, no shared universe. The instinct that Green Lantern feels closer to scope is about the <em>character</em> being a Justice League name, and that isn&rsquo;t the test. Make it the test and <em>Catwoman</em> and <em>Constantine</em> come with it, and the rule stops being mechanical, which is the only thing making it defensible.</li>
+          <li><b>&ldquo;This started as Marvel v DC and spun out. String up a binary mode, red and blue again.&rdquo;</b> A <b>Marvel v DC</b> lens in the control bar collapses the six groups to two: Marvel&rsquo;s three studios, DC&rsquo;s three continuities, everything on the page recolored and regrouped. It is the comparison the project began as, and it reads hard: <b>$48.4B across 68 films against $12.5B across 23</b>, and $266M of profit per completed film against $94M. The red/blue convention was dropped at six categories because five saturated hues plus a gray can&rsquo;t all stay apart under color blindness. Two can: this pair measures <b>21.7</b> apart under deuteranopia against a floor of 10, and <code>npm run check:palette</code> now holds it to a higher bar than the six-way set.</li>
         </ol>
       </details>
 
@@ -1258,7 +1283,7 @@
           <dd>Every headline over a chart is the takeaway, not a label. <span class="q">Marvel Studios has out-grossed every DC film combined, nearly three to one</span>, never <span class="q">Gross by universe</span>. If a title can&rsquo;t say something, the chart probably shouldn&rsquo;t exist.</dd>
 
           <dt>The palette was computed, not chosen</dt>
-          <dd>The red/blue franchise convention is gone, because red read too close to pink for the person who has to look at this daily. The replacement is a color-blind-safe set checked with a script, pair by pair, in both light and dark: <code>npm run check:palette</code> simulates protanopia, deuteranopia and tritanopia and measures every pair. What it establishes is a limit, not a clean bill of health. Five saturated hues cannot all stay clearly apart under every kind of color blindness; the closest pair here sits at 7.0 under protanopia, which is legible only because every universe also carries a mark shape. Tritanopia is worse and is the reason no five-hue set survives without going violet. Every universe also carries a shape, so identity is never color alone.</dd>
+          <dd>The red/blue franchise convention is gone from the six-way view, because red read too close to pink for the person who has to look at this daily. It is back under the <b>Marvel v DC</b> lens: with two categories instead of six there is room for it, and the pair measures 21.7 apart under deuteranopia against a floor of 10. The replacement is a color-blind-safe set checked with a script, pair by pair, in both light and dark: <code>npm run check:palette</code> simulates protanopia, deuteranopia and tritanopia and measures every pair. What it establishes is a limit, not a clean bill of health. Five saturated hues cannot all stay clearly apart under every kind of color blindness; the closest pair here sits at 7.0 under protanopia, which is legible only because every universe also carries a mark shape. Tritanopia is worse and is the reason no five-hue set survives without going violet. Every universe also carries a shape, so identity is never color alone.</dd>
 
           <dt>The sixth color is gray on purpose</dt>
           <dd>Once the Fox films arrived, six distinct chromatic colors was not possible. Elseworlds, the standalone films attached to no franchise engine, is drawn in gray. It sits below the chroma floor the other five clear, by design: gray <em>is</em> the &ldquo;doesn&rsquo;t belong to a machine&rdquo; signal.</dd>
@@ -1328,12 +1353,23 @@
     { k: "Elseworlds", label: "Elseworlds", full: "DC's standalone films, outside its shared universes (the Dark Knight trilogy, both Jokers, The Batman)" }
   ];
   var COLORVAR = { MCU: "--mcu", Fox: "--fox", SSU: "--ssu", DCEU: "--dceu", DCU: "--dcu", Elseworlds: "--else" };
-  function cvar(k) { return getComputedStyle(document.body).getPropertyValue(COLORVAR[k]).trim(); }
-  function uLabel(k) { for (var i = 0; i < UNI.length; i++) if (UNI[i].k === k) return UNI[i].label; return k; }
+  // The project started as Marvel v DC and grew six groups. The lens collapses back: every
+  // film keeps its universe in the data, but the page colours and counts it by brand.
+  var BRAND = { MCU: "Marvel", Fox: "Marvel", SSU: "Marvel", DCEU: "DC", DCU: "DC", Elseworlds: "DC" };
+  var BRANDVAR = { Marvel: "--marvel", DC: "--dc" };
+  var BRAND_SHAPE = { Marvel: "circle", DC: "square" };
+  var BRANDS = [{ k: "Marvel", label: "Marvel" }, { k: "DC", label: "DC" }];
+  function brandLens() { return STATE.lens === "brand"; }
+  function keyOf(u) { return brandLens() ? BRAND[u] : u; }        // the group a film is drawn as
+  function hueVar(u) { return brandLens() ? BRANDVAR[BRAND[u]] : COLORVAR[u]; }
+  function groups() { return brandLens() ? BRANDS : UNI; }
+  function cvar(k) { return getComputedStyle(document.body).getPropertyValue(BRANDVAR[k] || COLORVAR[k]).trim(); }
+  function uLabel(k) { var g = groups(); for (var i = 0; i < g.length; i++) if (g[i].k === k) return g[i].label; return k; }
 
   var STATE = {
     unis: { MCU: true, Fox: true, SSU: true, DCEU: true, DCU: true, Elseworlds: true },
     money: "nominal",
+    lens: "universe",
     outlierHide: false,
     splitSort: "ww",
     sort: { key: "date", dir: 1 },
@@ -1570,9 +1606,16 @@
   function renderScorecards() {
     var host = document.getElementById("scorecards");
     host.innerHTML = "";
-    UNI.forEach(function (u) {
-      if (!STATE.unis[u.k]) return;
-      var fs = FILMS.filter(function (f) { return f.u === u.k; });
+    // under the Marvel v DC lens this is the comparison the project started as: two cards,
+    // 68 films against 23, on the same five rows
+    var cards = brandLens()
+      ? BRANDS.map(function (br) { return { k: br.k, label: br.label, full: br.k === "Marvel" ? "Marvel (MCU, Fox and Sony)" : "DC (DCEU, DCU and Elseworlds)", hue: br.k === "Marvel" ? "MCU" : "DCEU" }; })
+      : UNI.map(function (u) { return { k: u.k, label: u.label, full: u.full, hue: u.k }; });
+    cards.forEach(function (u) {
+      if (brandLens()) { if (!activeUnis().length || activeUnis().indexOf(u.k) < 0) return; }
+      else if (!STATE.unis[u.k]) return;
+      var fs = FILMS.filter(function (f) { return keyOf(f.u) === u.k && STATE.unis[f.u]; });
+      if (!fs.length) return;
       var gr = fs.map(function (f) { return val(f, "ww"); });
       var tot = gr.reduce(function (a, b) { return a + b; }, 0);
       // profit only from films that have finished their run - an in-release film's loss isn't real yet
@@ -1580,7 +1623,7 @@
       var np = finals.reduce(function (a, f) { return a + profitOf(f); }, 0);
       var el = document.createElement("div");
       el.className = "sc";
-      el.style.setProperty("--c", "var(" + COLORVAR[u.k] + ")");
+      el.style.setProperty("--c", "var(" + hueVar(u.hue) + ")");
       el.innerHTML =
         '<h3><span class="sc-full">' + u.full + '</span><span class="sc-short">' + u.label + "</span></h3>" +
         '<div class="big">' + usd(tot) + "</div>" +
@@ -1596,7 +1639,9 @@
     });
     function rowline(k, v) { return '<div class="row"><span>' + k + "</span><span>" + v + "</span></div>"; }
     function signed(v, muted) {
-      var c = muted ? "--ink-muted" : (v >= 0 ? "--pos" : "--neg");
+      // --pos is a shade off --mcu, and on the MCU scorecard this text sits directly under
+      // an --mcu rule. §06 moved off green for the same collision; this is the other half.
+      var c = muted ? "--ink-muted" : (v >= 0 ? "--pl-clear" : "--neg");
       return '<span style="color:var(' + c + ')">' + (v >= 0 ? "+" : "−") + usd(Math.abs(v)) + "</span>";
     }
     var mcu = FILMS.filter(function (f) { return f.u === "MCU"; });
@@ -1650,7 +1695,7 @@
         var v = byYear[yr][u]; if (!v) return;
         var y0 = yS(acc), y1 = yS(acc + v);
         var h = Math.max(0, y0 - y1 - 2);
-        bars += '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="2" fill="var(' + COLORVAR[u] + ')"' + (partial ? ' fill-opacity="0.5"' : '') + ' data-y="' + yr + '" data-u="' + u + '" data-v="' + v + '"/>';
+        bars += '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="2" fill="var(' + hueVar(u) + ')"' + (partial ? ' fill-opacity="0.5"' : '') + ' data-y="' + yr + '" data-u="' + u + '" data-v="' + v + '"/>';
         acc += v;
       });
       if (partial) bars += '<text x="' + (W - m.r) + '" y="' + (yS(acc) - 6) + '" text-anchor="end" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="10" fill="var(--ink-muted)">partial</text>';
@@ -1709,7 +1754,7 @@
       var fs = all.filter(function (f) { return f.u === u; });
       var arr = fs.map(function (f) { return val(f, "ww"); }).sort(function (a, b) { return a - b; });
       var cy = m.t + rowH * i + rowH / 2;
-      var c = "var(" + COLORVAR[u] + ")";
+      var c = "var(" + hueVar(u) + ")";
       rows += '<text x="' + (m.l - 10) + '" y="' + (cy + 4) + '" text-anchor="end" class="lbl lbl-strong" font-size="' + (mob ? 12 : 12) + '">' + uLabel(u) + (mob ? " " : " · ") + fs.length + "</text>";
       if (arr.length < 4) {
         if (arr.length >= 2) {
@@ -1727,7 +1772,7 @@
       fs.forEach(function (f) { rows += dot(xS(val(f, "ww")), cy + 22 + jit(f.t), u, f); });
     });
     function dot(cx, cy, u, f) {
-      return '<circle cx="' + cx + '" cy="' + cy + '" r="3.6" fill="var(' + COLORVAR[u] + ')" fill-opacity="0.75" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
+      return '<circle cx="' + cx + '" cy="' + cy + '" r="3.6" fill="var(' + hueVar(u) + ')" fill-opacity="0.75" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + FILMS.indexOf(f) + '"/>';
     }
     document.getElementById("chart-box").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Box and whisker of worldwide gross by universe">' +
@@ -1796,7 +1841,7 @@
     var items = af.map(function (f) { return { value: val(f, "ww"), f: f }; });
     var cells = squarify(items, 0, 0, W, H);
     var rects = cells.map(function (c) {
-      var f = c.d.f, col = "var(" + COLORVAR[f.u] + ")";
+      var f = c.d.f, col = "var(" + hueVar(f.u) + ")";
       var big = c.w > 78 && c.h > 40;
       var med = c.w > 54 && c.h > 26;
       var label = "";
@@ -1804,7 +1849,7 @@
       // the Elseworlds gray is light in dark mode only, dark in light mode
       // label ink is whichever of dark or white contrasts better with this cell's actual fill, read
       // from the live token so it follows the theme; white on the MCU green was only 3:1 in dark mode
-      var lightFill = cellWantsDarkInk(COLORVAR[f.u]);
+      var lightFill = cellWantsDarkInk(hueVar(f.u));
       var ink = lightFill ? "#12151b" : "#fff", ink2 = lightFill ? "rgba(18,21,27,0.78)" : "rgba(255,255,255,0.92)";
       var halo = ' paint-order="stroke" stroke="' + (lightFill ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.5)") + '" stroke-width="3.5" stroke-linejoin="round"';
       // a clipped title reads as a mistake, so only show the name when it fits the cell uncut, else just the gross
@@ -1962,7 +2007,7 @@
       refs += '<text x="' + (m.l + 6) + '" y="' + (yS(r) + 13) + '" text-anchor="start" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)"' + HALO + '>' + usdAxis(r) + ' club</text>';
     });
     function mark(cx, cy, u, i) {
-      var c = "var(" + COLORVAR[u] + ")", s = SHAPE[u], r = mr;
+      var c = "var(" + hueVar(u) + ")", s = shapeOf(u), r = mr;
       var common = ' fill="' + c + '" fill-opacity="0.82" stroke="var(--surface)" stroke-width="1.5" class="beeDot" data-i="' + i + '"';
       if (s === "circle") return '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + common + "/>";
       if (s === "square") return '<rect x="' + (cx - r) + '" y="' + (cy - r) + '" width="' + (2 * r) + '" height="' + (2 * r) + '" rx="1.5"' + common + "/>";
@@ -2022,7 +2067,7 @@
     var bars = rowsArr.map(function (f, i) {
       var y = m.t + i * rowH + (fold.fold > -1 && i >= fold.fold ? foldH : 0);
       var d = val(f, "d"), ii = val(f, "i"), tot = d + ii;
-      var c = "var(" + COLORVAR[f.u] + ")";
+      var c = "var(" + hueVar(f.u) + ")";
       if (mob) {
         var wpx = mode ? iw : (tot / maxWW) * iw;
         var dw = wpx * (d / tot);
@@ -2109,9 +2154,10 @@
     function fmtX(v) { return v == null ? "&ndash;" : v.toFixed(2) + "×"; }
     function fmtN(v, suf) { return v == null ? "&ndash;" : Math.round(v) + suf; }
     var body = activeUnis().map(function (k) {
-      return row(uLabel(k), COLORVAR[k], af.filter(function (f) { return f.u === k; }));
+      return row(uLabel(k), hueVar(brandLens() ? (k === "Marvel" ? "MCU" : "DCEU") : k),
+        af.filter(function (f) { return keyOf(f.u) === k; }));
     }).join("") + row("All " + af.length + " films", null, af);
-    var heads = ["Universe", "Films", "Worldwide", "Med. WW", "Med. open", "Med. mult.", "Med. budget", "Med. ROI", "Med. RT", "Med. MC"];
+    var heads = [brandLens() ? "Brand" : "Universe", "Films", "Worldwide", "Med. WW", "Med. open", "Med. mult.", "Med. budget", "Med. ROI", "Med. RT", "Med. MC"];
     document.getElementById("table-summary").innerHTML =
       '<div class="scrollhint" id="hint-sum">' + (mob ? "Swipe" : "Scroll") + ' for the rest of the columns <span class="arw">&rarr;</span></div>' +
       '<div class="tablewrap"><table class="data"><thead><tr>' +
@@ -2144,7 +2190,7 @@
       return "<tr>" + cols.map(function (c) {
         var raw = c.g ? val(f, c.g) : f[c.k];
         var disp;
-        if (c.k === "t") disp = '<span class="uchip" style="background:var(' + COLORVAR[f.u] + ')"></span>' + esc(mob ? clip(f.t, 16) : f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
+        if (c.k === "t") disp = '<span class="uchip" style="background:var(' + hueVar(f.u) + ')"></span>' + esc(mob ? clip(f.t, 16) : f.t) + (f.final ? "" : ' <span class="inrelease">◉</span>');
         else if (c.t === "$") disp = usd(raw) + (c.k === "budget" && f.budgetEst ? ' <span class="estflag">est.</span>' : "");
         else if (c.t === "p") disp = raw == null ? "&ndash;" : Math.round(raw) + "%";
         else if (c.t === "x") disp = raw == null ? "&ndash;" : raw.toFixed(2) + "×";
@@ -2193,15 +2239,22 @@
   function syncScrollHints() { SCROLL_HINTS.forEach(function (f) { f(); }); }
 
   /* ---------- shared: legend, tables, wiring ---------- */
-  function activeUnis() { return UNI.map(function (u) { return u.k; }).filter(function (k) { return STATE.unis[k]; }); }
+  function activeUnis() {
+    if (brandLens()) {
+      return BRANDS.map(function (b) { return b.k; }).filter(function (k) {
+        return UNI.some(function (u) { return BRAND[u.k] === k && STATE.unis[u.k]; });
+      });
+    }
+    return UNI.map(function (u) { return u.k; }).filter(function (k) { return STATE.unis[k]; });
+  }
   function legend(id, keys, withSize, withShape, withRing) {
     var host = document.getElementById(id);
     if (!host) return;
-    var shape = { MCU: "●", Fox: "◆", SSU: "✚", DCEU: "■", DCU: "▲", Elseworlds: "✕" };
+    var shape = { MCU: "●", Fox: "◆", SSU: "✚", DCEU: "■", DCU: "▲", Elseworlds: "✕", Marvel: "●", DC: "■" };
     var labelOf = {};
     UNI.forEach(function (u) { labelOf[u.k] = u.label; });
     var ks = keys.map(function (k) {
-      var mk = withShape ? '<span class="lg-shape" style="color:var(' + COLORVAR[k] + ')">' + shape[k] + "</span>" : '<i style="--c:var(' + COLORVAR[k] + ')"></i>';
+      var mk = withShape ? '<span class="lg-shape" style="color:var(' + hueVar(k) + ')">' + shape[k] + "</span>" : '<i style="--c:var(' + hueVar(k) + ')"></i>';
       return "<span>" + mk + " " + (labelOf[k] || k) + "</span>";
     }).join("");
     // identity keys stay on one row; the encoding notes are a separate, quieter line
@@ -2270,6 +2323,7 @@
 
   /* ---------- shared: universe-shaped marker ---------- */
   var SHAPE = { MCU: "circle", Fox: "diamond", SSU: "plus", DCEU: "square", DCU: "triangle", Elseworlds: "x" };
+  function shapeOf(u) { return brandLens() ? BRAND_SHAPE[BRAND[u]] : SHAPE[u]; }
   function plusPath(cx, cy, r) {
     var t = r * 0.42;
     return "M" + (cx - t) + " " + (cy - r) + "H" + (cx + t) + "V" + (cy - t) + "H" + (cx + r) + "V" + (cy + t) +
@@ -2284,7 +2338,7 @@
   }
   function uniMark(cx, cy, u, i, r, big) {
     r = r || 6;
-    var c = "var(" + COLORVAR[u] + ")", s = SHAPE[u];
+    var c = "var(" + hueVar(u) + ")", s = shapeOf(u);
     // "big" is the $1B emphasis the beeswarm asks for: full opacity and a gold edge
     var a = ' fill="' + c + '" fill-opacity="' + (big ? "1" : "0.82") + '" stroke="' + (big ? "var(--note)" : "var(--surface)") + '" stroke-width="' + (big ? 2 : 1.5) + '" class="beeDot" data-i="' + i + '"';
     if (s === "square") return '<rect x="' + (cx - r) + '" y="' + (cy - r) + '" width="' + (2 * r) + '" height="' + (2 * r) + '" rx="1.5"' + a + "/>";
@@ -2488,7 +2542,7 @@
     });
     if (fold.fold > -1) g += '<text x="' + (W / 2) + '" y="' + (m.t + rowH * fold.fold + 20) + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="10" fill="var(--ink-muted)">· ' + fold.label + " ·</text>";
     var rows = fold.rows.map(function (f, i) {
-      var c = "var(" + COLORVAR[f.u] + ")";
+      var c = "var(" + hueVar(f.u) + ")";
       var xo = xS(val(f, "open")), xd = xS(val(f, "d"));
       var off = (fold.fold > -1 && i >= fold.fold ? foldH : 0);
       if (mob) {
@@ -2680,7 +2734,7 @@
       var iw = W - m.l - m.r;
       var xI = function (i) { return m.l + (af.length < 2 ? iw / 2 : (i / (af.length - 1)) * iw); };
       var body = show.map(function (x, r) {
-        var yt = m.t + r * rowH, c = "var(" + COLORVAR[x.c.u] + ")";
+        var yt = m.t + r * rowH, c = "var(" + hueVar(x.c.u) + ")";
         var ticks = x.films.map(function (t) {
           return '<rect x="' + (xI(idxOf[t]) - 2.5) + '" y="' + (yt + 19) + '" width="5" height="9" rx="1" fill="' + c + '"/>';
         }).join("");
@@ -2722,7 +2776,7 @@
         head += '<text x="' + (xx + 2) + '" y="' + (md.t - 12) + '" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="var(--ink-muted)">' + ("’" + String(yr).slice(2)) + "</text>";
       }
       var grid = showD.map(function (x, r) {
-        var yy = md.t + r * rh, c = "var(" + COLORVAR[x.c.u] + ")";
+        var yy = md.t + r * rh, c = "var(" + hueVar(x.c.u) + ")";
         var cells = x.films.map(function (t) {
           var cx = md.l + idxOf[t] * colW;
           return '<rect x="' + (cx + colW * 0.15) + '" y="' + (yy + 3) + '" width="' + (colW * 0.7) + '" height="' + (rh - 8) + '" rx="1.5" fill="' + c + '" class="rc" data-c="' + esc(x.c.n) + '" data-f="' + esc(t) + '"/>';
@@ -2780,7 +2834,7 @@
       var xS = function (v) { return m.l + (v / max) * iw; };
       var body = rows.map(function (r, i) {
         var yt = m.t + i * rowH + (fi > -1 && i >= fi ? foldH : 0);
-        var c = "var(" + COLORVAR[r.f.u] + ")";
+        var c = "var(" + hueVar(r.f.u) + ")";
         return "<g>" +
           '<rect x="0" y="' + yt + '" width="' + W + '" height="' + rowH + '" fill="transparent" class="ensBar" data-i="' + FILMS.indexOf(r.f) + '" data-v="' + r.v + '"/>' +
           '<rect x="' + m.l + '" y="' + (yt + 6) + '" width="7" height="7" rx="1.5" fill="' + c + '"/>' +
@@ -2812,7 +2866,7 @@
         // the peak is the point of the chart, so it is labeled whatever its neighbors do
         // a label near the left edge collides with the y-axis tick column, so keep clear of it
         if ((v === max || (v >= 11 && x(i) - lastLbl > 150)) && x(i) > m.l + 46) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="12">' + esc(clip(shortT(f.t), 16)) + " " + v + "</text>"; }
-        return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + COLORVAR[f.u] + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
+        return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + hueVar(f.u) + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
       }).join("");
       var yl = "", lastLab = -1e9;
       for (var yy = YEAR0; yy <= YEAR1; yy += 2) {
@@ -2860,7 +2914,7 @@
       g += '<text x="' + xS(t) + '" y="' + (m.t - 10) + '" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)">' + t + "</text>";
     }
     var body = rows.map(function (x, i) {
-      var c = "var(" + COLORVAR[x.c.u] + ")", n = x.films.length;
+      var c = "var(" + hueVar(x.c.u) + ")", n = x.films.length;
       if (mob) {
         var yt = m.t + i * rowH;
         return '<g class="fpRow" data-c="' + esc(x.c.n) + '">' +
@@ -2964,7 +3018,7 @@
       var x1 = cx + r * Math.cos(ang), y1 = cy + r * Math.sin(ang);
       var x2 = cx + r * Math.cos(a2), y2 = cy + r * Math.sin(a2);
       var large = (a2 - ang) > Math.PI ? 1 : 0;
-      seg += '<path d="M' + cx + " " + cy + " L" + x1.toFixed(1) + " " + y1.toFixed(1) + " A" + r + " " + r + " 0 " + large + " 1 " + x2.toFixed(1) + " " + y2.toFixed(1) + ' Z" fill="var(' + COLORVAR[f.u] + ')" stroke="var(--surface-2)" stroke-width="0.6"/>';
+      seg += '<path d="M' + cx + " " + cy + " L" + x1.toFixed(1) + " " + y1.toFixed(1) + " A" + r + " " + r + " 0 " + large + " 1 " + x2.toFixed(1) + " " + y2.toFixed(1) + ' Z" fill="var(' + hueVar(f.u) + ')" stroke="var(--surface-2)" stroke-width="0.6"/>';
       ang = a2;
     });
     document.getElementById("ap-pie").innerHTML =
@@ -2987,7 +3041,7 @@
     var bars = "", labs = "";
     rows.forEach(function (r, i) {
       var yy = yS(r.avg);
-      bars += '<rect x="' + (xS(i) - bw / 2) + '" y="' + yy + '" width="' + bw + '" height="' + (m.t + ih - yy) + '" rx="3" fill="var(' + COLORVAR[r.k] + ')"/>';
+      bars += '<rect x="' + (xS(i) - bw / 2) + '" y="' + yy + '" width="' + bw + '" height="' + (m.t + ih - yy) + '" rx="3" fill="var(' + hueVar(r.k) + ')"/>';
       // "Elseworlds" is 10 characters into a 45px column on a phone; the short code holds
       labs += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="11" fill="var(--ink-2)">' + (d.mob && r.k === "Elseworlds" ? "Else" : uLabel(r.k)) + "</text>";
       // six values into six 36px columns don't fit on a phone. Keep the two the tear-down
@@ -3036,7 +3090,7 @@
       acc = acc.map(function (v, i) { return v + series[ki][i]; });
       var up = acc.map(function (v, i) { return xS(i).toFixed(1) + " " + yS(v).toFixed(1); });
       var dn = lower.map(function (v, i) { return xS(i).toFixed(1) + " " + yS(v).toFixed(1); }).reverse();
-      areas += '<path d="M' + up.join(" L") + " L" + dn.join(" L") + ' Z" fill="var(' + COLORVAR[k] + ')" fill-opacity="0.82"/>';
+      areas += '<path d="M' + up.join(" L") + " L" + dn.join(" L") + ' Z" fill="var(' + hueVar(k) + ')" fill-opacity="0.82"/>';
     });
     var xlab = ""; for (var i = 0; i < years.length; i += (d.mob ? 4 : 3)) xlab += '<text x="' + xS(i) + '" y="' + (H - m.b + 16) + '" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="' + (d.mob ? 11 : 10) + '" fill="var(--ink-muted)">' + ("’" + String(years[i]).slice(2)) + "</text>";
     document.getElementById("ap-cumul").innerHTML =
@@ -3062,7 +3116,7 @@
     var lab = "R² = " + r2.toFixed(2);
     var pe = document.getElementById("ap-trend-r2"); if (pe) pe.textContent = lab;
     var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
-    var dots = fs.map(function (f) { return '<circle cx="' + xS(f.rt).toFixed(1) + '" cy="' + yS(f.ww).toFixed(1) + '" r="3.2" fill="var(' + COLORVAR[f.u] + ')" fill-opacity="0.7"/>'; }).join("");
+    var dots = fs.map(function (f) { return '<circle cx="' + xS(f.rt).toFixed(1) + '" cy="' + yS(f.ww).toFixed(1) + '" r="3.2" fill="var(' + hueVar(f.u) + ')" fill-opacity="0.7"/>'; }).join("");
     var g = "";
     axisTicks(maxY).forEach(function (t) {
       g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yS(t) + '" y2="' + yS(t) + '" stroke="var(--grid)"/>';
@@ -3087,7 +3141,7 @@
     var gap = ih / fs.length, bh = gap * 0.68;
     var bars = fs.map(function (f, i) {
       var yy = m.t + i * gap + (gap - bh) / 2, cap = d.mob ? 15 : 22;
-      return '<rect x="' + m.l + '" y="' + yy + '" width="' + (xS(f.roi) - m.l) + '" height="' + bh + '" rx="2" fill="var(' + COLORVAR[f.u] + ')"/>' +
+      return '<rect x="' + m.l + '" y="' + yy + '" width="' + (xS(f.roi) - m.l) + '" height="' + bh + '" rx="2" fill="var(' + hueVar(f.u) + ')"/>' +
         '<text x="' + (m.l - 8) + '" y="' + (yy + bh / 2 + 3.5) + '" text-anchor="end" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="' + (d.mob ? 10.5 : 10.5) + '" fill="var(--ink-2)">' + esc(f.t.length > cap ? f.t.slice(0, cap - 1) + "…" : f.t) + "</text>" +
         '<text x="' + (xS(f.roi) + 5) + '" y="' + (yy + bh / 2 + 3.5) + '" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="var(--ink-muted)">' + f.roi.toFixed(1) + "×</text>";
     }).join("");
@@ -3127,7 +3181,7 @@
       web += '<text x="' + lp[0] + '" y="' + lp[1] + '" text-anchor="middle" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="10" fill="var(--ink-muted)">' + mm.name + "</text>";
     });
     var polys = AP_ORDER.map(function (k, ki) {
-      return '<polygon points="' + metrics.map(function (_, i) { return pt(i, 0.08 + 0.92 * norm[i][ki]).join(" "); }).join(" ") + '" fill="var(' + COLORVAR[k] + ')" fill-opacity="0.16" stroke="var(' + COLORVAR[k] + ')" stroke-width="1.5"/>';
+      return '<polygon points="' + metrics.map(function (_, i) { return pt(i, 0.08 + 0.92 * norm[i][ki]).join(" "); }).join(" ") + '" fill="var(' + hueVar(k) + ')" fill-opacity="0.16" stroke="var(' + hueVar(k) + ')" stroke-width="1.5"/>';
     }).join("");
     document.getElementById("ap-radar").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Radar chart comparing six metrics across universes, an anti-pattern">' + web + polys + "</svg>";
@@ -3155,7 +3209,7 @@
 
   function renderAntipatterns() {
     var leg = document.getElementById("ap-leg");
-    if (leg) leg.innerHTML = '<span class="lg-keys">' + AP_ORDER.map(function (k) { return '<span><i style="--c:var(' + COLORVAR[k] + ')"></i>' + uLabel(k) + "</span>"; }).join("") + "</span>";
+    if (leg) leg.innerHTML = '<span class="lg-keys">' + AP_ORDER.map(function (k) { return '<span><i style="--c:var(' + hueVar(k) + ')"></i>' + uLabel(k) + "</span>"; }).join("") + "</span>";
     apDual(); apPie(); apTrunc(); apCumul(); apTrend(); apRoi(); apRadar(); apRainbow();
   }
 
@@ -3233,9 +3287,26 @@
 
   function syncPills() {
     document.querySelectorAll(".pill[data-uni]").forEach(function (b) {
-      b.setAttribute("aria-pressed", STATE.unis[b.getAttribute("data-uni")] ? "true" : "false");
+      var k = b.getAttribute("data-uni");
+      b.hidden = brandLens();
+      b.setAttribute("aria-pressed", STATE.unis[k] ? "true" : "false");
+    });
+    // the brand pills stand in for their three universes each while the lens is on
+    document.querySelectorAll(".pill[data-brand]").forEach(function (b) {
+      var br = b.getAttribute("data-brand");
+      b.hidden = !brandLens();
+      var on = UNI.some(function (u) { return BRAND[u.k] === br && STATE.unis[u.k]; });
+      b.setAttribute("aria-pressed", on ? "true" : "false");
     });
   }
+  document.querySelectorAll(".pill[data-brand]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var br = b.getAttribute("data-brand");
+      var on = UNI.some(function (u) { return BRAND[u.k] === br && STATE.unis[u.k]; });
+      UNI.forEach(function (u) { if (BRAND[u.k] === br) STATE.unis[u.k] = !on; });
+      syncPills(); renderAll();
+    });
+  });
   document.querySelectorAll(".pill[data-uni]").forEach(function (b) {
     b.addEventListener("click", function () {
       var k = b.getAttribute("data-uni");
@@ -3252,6 +3323,17 @@
       syncPills(); renderAll();
     });
   })();
+  document.querySelectorAll(".seg [data-lens]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      STATE.lens = b.getAttribute("data-lens");
+      document.querySelectorAll(".seg [data-lens]").forEach(function (x) {
+        x.setAttribute("aria-pressed", x.getAttribute("data-lens") === STATE.lens ? "true" : "false");
+      });
+      document.body.classList.toggle("lens-brand", brandLens());
+      syncPills();
+      renderAll();
+    });
+  });
   document.querySelectorAll(".seg [data-money]").forEach(function (b) {
     b.addEventListener("click", function () {
       STATE.money = b.getAttribute("data-money");
