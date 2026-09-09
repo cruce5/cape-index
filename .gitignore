@@ -15,3 +15,7 @@ scripts/local.env.ps1
 .env
 .env.local
 .reconcilers/
+
+# raw Gemini portraits + crops: working files, 5 MB; the optimised ten ship from assets/reconcilers/
+reconcilers/*.jpg
+reconcilers/cropped/

@@ -29,6 +29,10 @@
 
 <!-- the saved theme, applied before the stylesheet so a Dark reader on a light OS never sees a light frame -->
 <script>try{var t=localStorage.getItem("capeindex-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<!-- The chips paint long before the page script at the bottom binds their handlers; on a phone
+     that gap is most of a second, and a tap inside it used to vanish. Queue those taps here,
+     the boot replays them once the handlers exist. -->
+<script>(function(){var q=[];function h(e){var t=e.target&&e.target.closest&&e.target.closest("button.ctl-lens,button.ctl-notes,button.ctl-toggle,button.notes-link,button.spot-flag");if(t)q.push(t);}document.addEventListener("click",h,true);window.__preboot={q:q,off:function(){document.removeEventListener("click",h,true);}};})();</script>
 
 <style>
   /* ============ FONTS - self-hosted IBM Plex, latin + latin-ext ============ */
@@ -160,6 +164,12 @@
   }
   body {
     margin: 0;
+    /* disable scroll anchoring: at the exact sticky-boundary scroll position, the collapsing
+       panel would resize, the browser would scroll-anchor to preserve visual position, the
+       new scrollY would flip the boundary check, and the panel would expand/collapse in a
+       loop. Bill: "I stopped it at the exact right place and it's in an infinite loop of
+       disappearing and reappearing" */
+    overflow-anchor: none;
     background: var(--page);
     color: var(--ink);
     font-family: var(--font-body);
@@ -185,9 +195,12 @@
   }
 
   /* ============ MASTHEAD ============ */
-  header.masthead { border-bottom: 1px solid var(--border); padding: 40px 0 26px; }
+  header.masthead { border-bottom: 1px solid var(--border); padding: 40px 0 20px; }
   .masthead h1 { font-size: clamp(48px, 9vw, 104px); letter-spacing: -0.028em; }
-  .masthead .dek { max-width: 62ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 14px 0 0; text-wrap: pretty; }
+  /* wide enough that the intro reflows to two lines on desktop instead of three (it was capped
+     at 62ch, which broke ~197 chars of 20px text across three lines); on a phone the .wrap is
+     narrower than this cap so the text fills the column as before */
+  .masthead .dek { max-width: 104ch; color: var(--ink-2); font-size: clamp(16px, 2.1vw, 20px); margin: 14px 0 0; text-wrap: pretty; }
   /* the six universe hues in the order Bill drew them, gray carried in the middle as a
      transition rather than left to end the run. Built from the tokens, so it re-mixes
      itself for the light theme instead of being a second, stale copy of the palette. */
@@ -213,11 +226,18 @@
   .byline a:hover { text-decoration-color: var(--ink); }
   /* Three equal columns, always. The values are different widths so the air after each
      one differs; the tiles are the repeated object and they stay identical. */
-  .thesis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 22px; max-width: 52rem; }
-  .thesis > div { background: var(--surface); padding: 20px 22px; }
-  .thesis .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
-  .thesis .v { font-size: clamp(28px, 4.6vw, 44px); font-weight: 700; font-family: var(--font-display); margin-top: 6px; }
-  .thesis .sub { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
+  /* four tiles fill the column; the old 52rem cap stopped three of them two-thirds of the way across */
+  .thesis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 18px; }
+  /* the tiles used to be three lines (label, number, sub-count) with generous padding, which
+     left dead space around the number. two lines - "MARVEL STUDIOS · 38 films" then a big number -
+     is tighter and the number gets to be bigger */
+  .thesis > div { background: var(--surface); padding: 11px 20px 9px; }
+  .thesis .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); line-height: 1; }
+  .thesis .k .sub { text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--ink-muted); margin-left: 4px; }
+  /* line-height: 1 crops the number's box to the glyph, removing the inherited body leading
+     that padded it above and below; margin-top holds the only gap to the label */
+  /* ceiling 52 -> 48 so "$60.85B" clears a four-up tile at a 1000px window (~206px of text room) */
+  .thesis .v { font-size: clamp(30px, 4.4vw, 48px); font-weight: 700; font-family: var(--font-display); margin-top: 3px; line-height: 1; letter-spacing: -0.01em; }
   .smallprint { margin-top: 14px; font-size: 13px; color: var(--ink-muted); max-width: 52rem; }
   .smallprint a { text-decoration-color: var(--border-strong); text-underline-offset: 2px; }
 
@@ -238,6 +258,73 @@
   .lens-link:hover { text-decoration-color: var(--dceu); }
   .lens-link[aria-pressed="true"] { background: var(--dceu); color: var(--page); }
   .seg [data-notes="on"][aria-pressed="true"] { background: var(--note); color: var(--page); }
+
+  /* ============ desktop scroll-collapse for the controls bar ============
+     Mobile keeps its own always-collapsed pattern (below in the media query). Desktop:
+     the filter bar rides full-height at the top of the page, and collapses to a one-row
+     summary once the reader has scrolled into content. Clicking the summary re-expands
+     the panel (adds .open) until the next scroll-collapse or a scroll-to-top. The ctl-bar
+     children reuse the same class names the mobile pattern uses; sharing them avoids
+     duplicating style bytes across three states. */
+  /* animate the panel's max-height instead of flipping display, so the collapse doesn't just
+     "disappear". The controls-inner keeps display: flex the whole time; the max-height goes
+     to 0 with opacity 0 when collapsed, and back to a generous ceiling when re-expanded. */
+  .controls-inner { transition: max-height 220ms cubic-bezier(.4,0,.2,1), opacity 160ms ease-out, padding 200ms ease-out; }
+  .controls.collapsed .controls-inner {
+    max-height: 0; opacity: 0;
+    padding-top: 0; padding-bottom: 0;
+    overflow: hidden; pointer-events: none;
+  }
+  .controls.collapsed .ctl-bar {
+    display: flex; align-items: stretch; gap: 12px; min-height: 44px;
+  }
+  .controls.collapsed .ctl-toggle {
+    flex: 1 1 auto; min-width: 0; appearance: none; border: 0;
+    background: transparent; color: var(--ink); font: inherit;
+    text-align: left; padding: 0; cursor: pointer;
+  }
+  .controls.collapsed .ctl-row {
+    display: flex; align-items: center; gap: 12px; padding: 10px 0; min-height: 44px;
+  }
+  .controls.collapsed .ctl-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-muted); flex: none;
+  }
+  .controls.collapsed .ctl-summary {
+    flex: 1 1 auto; font-size: 13.5px; color: var(--ink-2);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .controls.collapsed .ctl-chev {
+    flex: none; width: 8px; height: 8px;
+    border-right: 1.5px solid var(--ink-2); border-bottom: 1.5px solid var(--ink-2);
+    transform: rotate(45deg); margin: 0 4px 3px 0; transition: transform 120ms;
+  }
+  .controls.collapsed.open .ctl-chev { transform: rotate(225deg); margin-bottom: -3px; }
+  .controls.collapsed .ctl-lens, .controls.collapsed .ctl-notes {
+    flex: none; align-self: center; appearance: none;
+    font: inherit; font-size: 12px; font-weight: 600;
+    padding: 6px 12px; border-radius: 999px; background: transparent;
+    cursor: pointer; min-height: 32px; white-space: nowrap;
+  }
+  .controls.collapsed .ctl-lens {
+    border: 1px solid color-mix(in srgb, var(--dceu) 55%, transparent); color: var(--dceu);
+  }
+  .controls.collapsed .ctl-lens[aria-pressed="true"] {
+    background: var(--dceu); color: var(--page); border-color: var(--dceu);
+  }
+  .controls.collapsed .ctl-notes {
+    border: 1px solid color-mix(in srgb, var(--note) 55%, transparent); color: var(--note);
+  }
+  .controls.collapsed .ctl-notes[aria-pressed="true"] {
+    background: var(--note); color: var(--page); border-color: var(--note);
+  }
+  /* click to re-expand from a scrolled state: the full panel drops in under the summary */
+  .controls.collapsed.open .controls-inner {
+    max-height: 500px; opacity: 1;
+    padding-top: 8px; padding-bottom: 12px;
+    pointer-events: auto;
+    border-top: 1px solid var(--border);
+  }
 
   /* ============ SECTION TABS + CONTENTS ============ */
   .tabs { position: sticky; top: 0; z-index: 51; background: color-mix(in srgb, var(--page) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
@@ -372,7 +459,9 @@
      rules are the real control for every .lbl / .ax label, not the per-chart attributes.
      The ≤640px block below sets the mobile size directly; there is no longer a JS pass
      that walks every text node adding to it. */
-  .lbl { fill: var(--ink-2); font-family: var(--font-body); font-size: 16px; }
+  /* --lbl is set per <svg> by fitLabels() in units that render at 16px on screen whatever the
+     chart's width; the fallback is the old fixed size for anything not yet measured */
+  .lbl { fill: var(--ink-2); font-family: var(--font-body); font-size: var(--lbl, 16px); }
   .lbl-strong { fill: var(--ink); font-weight: 600; }
   /* a figure keeps the mono face even when it takes .lbl for its size. Without this the
      .lbl family wins over the element's own font-family attribute and axis numbers set
@@ -382,12 +471,12 @@
      annotations) honored its own tiny font-size="10/11" attribute. This one rule
      resizes all of them at once - CSS beats the attribute. Keep it above the media
      query so the mobile block can override it. */
-  svg text:not([class]) { font-size: 16px; }
+  svg text:not([class]) { font-size: var(--lbl, 16px); }
   @media (max-width: 640px) {
     /* was 11px + a JS +2 bump applied per node on every render; same result, no recalcs */
-    .lbl { font-size: 13px; }
-    .ax text { font-size: 13px; }
-    svg text:not([class]) { font-size: 13px; }
+    .lbl { font-size: var(--lbl, 13px); }
+    .ax text { font-size: var(--lbl, 13px); }
+    svg text:not([class]) { font-size: var(--lbl, 13px); }
   }
 
   /* tooltip */
@@ -404,6 +493,59 @@
   .tip .flist div { display: flex; gap: 8px; color: var(--ink-2); font-size: 11.5px; line-height: 1.35; }
   .tip .flist .fy { color: var(--ink-muted); font-family: var(--font-mono); flex: none; }
 
+  /* ============ SPOTLIGHT ============
+     A search palette that lights one film or character up on every chart at once. The glow
+     colour is a token so it reads on either theme; the dim is plain opacity, which composites
+     over whatever fill-opacity a mark already carries. */
+  :root { --spot-glow: rgba(255, 255, 255, 0.55); }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --spot-glow: rgba(20, 22, 28, 0.4); } }
+  :root[data-theme="light"] { --spot-glow: rgba(20, 22, 28, 0.4); }
+
+  .spot-flag { appearance: none; border: 0; background: transparent; padding: 0 2px; margin: 0 -2px; font: inherit; line-height: 1; cursor: pointer; border-radius: 5px; transition: transform 120ms; }
+  .spot-flag:hover { transform: rotate(-8deg) scale(1.12); }
+  .spot-flag:focus-visible { outline: 2px solid var(--dceu); outline-offset: 2px; }
+
+  .spot-scrim { position: fixed; inset: 0; z-index: 190; background: color-mix(in srgb, var(--page) 55%, transparent); backdrop-filter: blur(2px); animation: spot-fade 140ms ease-out; }
+  .spot-palette { position: fixed; z-index: 200; top: 14vh; left: 50%; transform: translateX(-50%); width: min(540px, calc(100vw - 32px)); background: var(--surface); border: 1px solid var(--border-strong); border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.35); overflow: hidden; animation: spot-pop 140ms cubic-bezier(.2,.9,.3,1.2); }
+  .spot-field { display: flex; align-items: center; gap: 10px; padding: 4px 16px; border-bottom: 1px solid var(--border); }
+  .spot-ico { color: var(--ink-muted); font-size: 18px; }
+  #spot-input { flex: 1 1 auto; appearance: none; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 18px; padding: 15px 0; outline: none; }
+  #spot-input::placeholder { color: var(--ink-muted); }
+  .spot-results { list-style: none; margin: 0; padding: 6px; max-height: 46vh; overflow-y: auto; overscroll-behavior: contain; }
+  .spot-results:empty { display: none; }
+  .spot-opt { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 9px; cursor: pointer; }
+  .spot-opt .so-key { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .spot-opt.is-char .so-key { border-radius: 999px; }
+  .spot-opt .so-label { flex: 1 1 auto; min-width: 0; color: var(--ink); font-weight: 600; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .spot-opt .so-label .so-real { color: var(--ink-muted); font-weight: 400; }
+  .spot-opt .so-meta { flex: none; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-muted); }
+  .spot-opt .so-kind { flex: none; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); border: 1px solid var(--border); border-radius: 999px; padding: 1px 7px; }
+  .spot-opt[aria-selected="true"], .spot-opt:hover { background: var(--surface-2); }
+  .spot-empty { padding: 16px 12px; color: var(--ink-muted); font-size: 13.5px; }
+  .spot-hint { display: flex; gap: 16px; padding: 9px 16px; border-top: 1px solid var(--border); color: var(--ink-muted); font-size: 11.5px; }
+  .spot-hint kbd { font-family: var(--font-mono); font-size: 10.5px; background: var(--surface-2); border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; margin-right: 2px; }
+
+  .spot-chip { position: fixed; z-index: 180; left: 50%; bottom: 20px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px 8px 14px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-size: 13px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,0.28); cursor: pointer; animation: spot-pop 160ms cubic-bezier(.2,.9,.3,1.2); }
+  .spot-chip .spot-chip-ico { color: var(--note); }
+  .spot-chip .spot-chip-x { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); font-size: 12px; }
+  .spot-chip:hover .spot-chip-x { background: var(--neg); color: var(--page); }
+
+  /* the effect itself: dim every film / character mark, then lift the matched ones */
+  /* No transition on the dim: a per-mark opacity transition left already-rendered marks on the
+     visible tab stuck at opacity 1 (the change is applied in the same frame as the class toggles,
+     and the transition never resolves to its end value, with no animation running). An instant
+     dim is reliable on every tab. The palette and chip still animate in below. */
+  body.spotlight main svg .beeDot, body.spotlight main svg .beeHalo, body.spotlight main svg .budFilm, body.spotlight main svg .tmCell,
+  body.spotlight main svg .splitRow, body.spotlight main svg .profRow, body.spotlight main svg .legRow,
+  body.spotlight main svg .ensBar, body.spotlight main svg .rosterRow, body.spotlight main svg .rc,
+  body.spotlight main svg .fpRow { opacity: 0.1; }
+  body.spotlight main svg .spot { opacity: 1; filter: drop-shadow(0 0 3px var(--spot-glow)) drop-shadow(0 0 6px var(--spot-glow)); }
+  @keyframes spot-fade { from { opacity: 0; } }
+  @keyframes spot-pop { from { opacity: 0; transform: translateX(-50%) translateY(6px) scale(0.98); } }
+  @media (prefers-reduced-motion: reduce) {
+    .spot-scrim, .spot-palette, .spot-chip { animation: none; }
+  }
+
   /* data tables */
   .tablewrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; }
   /* position:sticky on a th needs a scrolling ancestor to stick within; without a height the
@@ -417,12 +559,23 @@
   @media (prefers-reduced-motion: reduce) { .scrollhint .arw { animation: none; } }
   table.data { border-collapse: collapse; width: 100%; font-size: 14px; }
   table.data th, table.data td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
-  table.data th { position: sticky; top: var(--sticky-h, 0px); background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; user-select: none; }
+  /* top: 0, NOT var(--sticky-h). Every table sits in .tablewrap, which is overflow-x: auto and
+     therefore a scroll container, so sticky resolves against the wrapper, never the viewport.
+     top: var(--sticky-h) meant "89px below the top of the table": on a wrapper that doesn't
+     scroll vertically the header was permanently shoved down onto row 3 with a blank band left
+     in its own slot (the "label row is taking over DCEU data" bug, misdiagnosed once as z-index).
+     Inside the one wrapper that does scroll vertically (#table-full, max-height 72vh) top: 0 is
+     also the right answer: it pins to the wrapper's own top edge. */
+  table.data th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; user-select: none; z-index: 3; box-shadow: 0 2px 0 rgba(0,0,0,0.18); }
   /* the ledger is the only sortable table, and its header is a real button */
   #table-full table.data th { padding: 0; }
   .sortbtn { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; padding: 8px 12px; min-height: 44px; width: 100%; text-align: inherit; cursor: pointer; }
   .sortbtn:hover { color: var(--ink); }
-  table.data th:first-child, table.data td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
+  table.data th:first-child, table.data td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+  /* the corner cell is both top and left sticky, and must beat both row headers and the top-only
+     header row when they cross under it. Specificity has to beat table.data th:first-child (0,1,2). */
+  table.data thead th { z-index: 3; }
+  table.data thead th:first-child { z-index: 4; }
   /* a row header is a th for the reader's sake; it must not pick up the column-header styling */
   table.data th[scope="row"] { top: auto; text-transform: none; letter-spacing: 0; font-size: inherit; font-weight: 500; color: inherit; background: var(--surface); }
   table.data th:first-child { background: var(--surface-2); z-index: 1; }
@@ -498,7 +651,7 @@
   .rec-track::-webkit-scrollbar { display: none; }
   .rec-slide { flex: 0 0 100%; scroll-snap-align: start; display: grid; grid-template-columns: 320px 1fr; gap: 24px; padding: 24px 28px; min-height: 440px; }
   .rec-portrait { align-self: center; }
-  .rec-portrait svg { display: block; width: 100%; height: auto; border-radius: 12px; }
+  .rec-portrait img { display: block; width: 100%; height: auto; border-radius: 12px; background: var(--surface-2); }
   .rec-info h5 { font-family: var(--font-display); font-size: 34px; font-weight: 700; margin: 0; letter-spacing: -0.01em; line-height: 1; }
   .rec-info .lane { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-top: 6px; }
   .rec-info .model-chip { display: inline-block; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; margin-left: 8px; padding: 2px 8px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--ink-2); vertical-align: 2px; }
@@ -525,6 +678,37 @@
     .rec-portrait { max-width: 240px; margin: 0 auto; }
     .rec-info h5 { font-size: 26px; }
     .rec-nav { top: 200px; transform: none; }
+  }
+  /* tighten the tab lead-in on the Reconcilers view: heading closer to the dek and the dek closer
+     to the pitch card, so the reader hits the install steps sooner */
+  .view-head.rec-head { margin-bottom: 14px; }
+  .view-head.rec-head h3 { margin-top: 6px; }
+  .view-head.rec-head .dek { margin-top: 8px; max-width: 62rem; }
+  /* Get-the-team card: front-page pitch, three steps, one download */
+  .rec-getstarted { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px 20px; box-shadow: var(--shadow); margin-top: 12px; }
+  .rec-get-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+  .rec-get-head h4 { font-family: var(--font-display); font-weight: 700; font-size: 20px; margin: 0; letter-spacing: -0.01em; }
+  .rec-download { display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; background: var(--ink); color: var(--page); border-radius: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: 15px; transition: transform 120ms, box-shadow 120ms; min-height: 44px; }
+  .rec-download:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.24); color: var(--page); }
+  .rec-download .dl-icon { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 999px; background: color-mix(in srgb, var(--page) 22%, transparent); font-weight: 800; font-size: 16px; }
+  .rec-download .dl-sub { display: block; font-family: var(--font-mono); font-weight: 400; font-size: 10.5px; letter-spacing: 0.08em; opacity: 0.75; text-transform: uppercase; margin-top: 2px; }
+  .rec-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+  .rec-steps > li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+  .rec-steps .step-n { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border-strong); font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--ink); margin-top: 2px; }
+  .rec-steps .step-title { font-size: 15px; font-weight: 600; color: var(--ink); margin: 4px 0 8px; }
+  .rec-steps .step-note { font-size: 13px; color: var(--ink-2); margin-top: 8px; }
+  .rec-steps .step-note em { color: var(--ink); font-style: normal; font-family: var(--font-mono); font-size: 12.5px; background: var(--surface-2); padding: 1px 6px; border-radius: 4px; }
+  .step-cmd { font-family: var(--font-mono); font-size: 13px; background: var(--page); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; overflow-x: auto; margin: 0; color: var(--ink); }
+  .step-cmd code { display: block; white-space: pre; line-height: 1.7; }
+  .step-cmd .cmd-comment { color: var(--ink-muted); }
+  .rec-promise { margin: 18px 0 0; padding: 12px 14px; background: var(--surface-2); border-left: 3px solid var(--dceu); border-radius: 4px; font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+  .rec-promise b { color: var(--ink); font-weight: 600; }
+  /* Meet-the-roster mini-header above the carousel */
+  .rec-meet-title { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 36px 0 4px; letter-spacing: -0.01em; }
+  .rec-meet-dek { font-size: 14px; color: var(--ink-2); margin: 0 0 6px; line-height: 1.55; max-width: 68ch; }
+  @media (max-width: 640px) {
+    .rec-get-head { flex-direction: column; align-items: stretch; }
+    .rec-download { justify-content: center; }
   }
   .log p { font-size: 14px; color: var(--ink-2); margin: 0 0 10px; }
   .log p:last-child { margin-bottom: 0; }
@@ -567,19 +751,29 @@
      under the tab strip, ate 224 of those 375 pixels, so the phone layout is keyed on height too */
   @media (max-width: 760px), (max-height: 500px) {
     .wrap { padding: 0 16px; }
-    .masthead { padding: 36px 0 28px; }
+    /* header.masthead, not .masthead: the base rule is header.masthead and has outranked the
+       phone padding for months (it measured 40/20 on a 375px screen). At 812px tall the masthead
+       ran 688px, one whole screen with no chart on it. */
+    header.masthead { padding: 24px 0 14px; }
+    .masthead .eyebrow { margin-top: 0; }
+    .masthead .byline { margin-top: 10px; }
+    .masthead .teach-hint { font-size: 13px; line-height: 1.4; margin-top: 8px; }
     .masthead h1 { font-size: clamp(38px, 12.5vw, 66px); }
-    .masthead .dek { font-size: 16px; }
+    .masthead .dek { font-size: 16px; line-height: 1.45; }
     section.view { padding: 38px 0; }
     .view-head { margin-bottom: 22px; }
     .card { padding: 16px; border-radius: 12px; }
     .card-head { margin-bottom: 12px; }
-    .thesis { margin-top: 24px; max-width: none; }
-    .spectrum { height: 6px; margin-top: 13px; }
-    .thesis > div { padding: 12px 10px 12px 12px; min-width: 0; }
+    /* three across on a phone, not 2x2: the slate-total tile is a desktop-width luxury, and one
+       row of tiles is a whole row less to scroll past before the first chart */
+    .thesis { margin-top: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .thesis > div:first-child { display: none; }
+    .spectrum { height: 6px; margin-top: 10px; }
+    .thesis > div { padding: 9px 10px 8px 12px; min-width: 0; }
     .thesis .k { font-size: 10px; letter-spacing: 0.05em; line-height: 1.3; }
-    .thesis .v { font-size: 21px; margin-top: 4px; letter-spacing: -0.01em; }
-    .thesis .sub { font-size: 11px; line-height: 1.3; }
+    .thesis .v { font-size: 22px; margin-top: 4px; letter-spacing: -0.01em; } /* "$34.91B" must clear a 114px column */
+    /* on a phone the film-count runs off the tile beside the label; drop it */
+    .thesis .k .sub { display: none; }
     .scorecards { grid-template-columns: 1fr 1fr; gap: 8px; }
     .sc { padding: 12px 12px 13px; }
     .sc h4 .sc-full { display: none; }
@@ -606,7 +800,7 @@
        inside itself; the toggle stays visible and the reader still gets to the content */
     .controls.open .controls-inner { display: flex; max-height: 55vh; overflow-y: auto; overscroll-behavior: contain; }
     .tab { padding: 12px 10px 10px; font-size: 13px; }
-    .contents { margin-top: 22px; }
+    .contents { margin-top: 12px; }
     .contents ol { grid-template-columns: 1fr; }
     section.view, .act { scroll-margin-top: calc(var(--sticky-h, 80px) + 6px); }
     .pager { padding: 18px 0 6px; }
@@ -617,7 +811,12 @@
     /* 44px minimum on every control a thumb has to hit */
     .pill, .seg button, .minibtn { min-height: 44px; }
     .minibtn { padding-left: 14px; padding-right: 14px; }
-    .notes-link { display: inline-block; padding: 11px 2px; margin: -5px -2px; }
+    /* a 44px tap target that layout can't see: the old inline-block with 11px padding and -5px
+       margins made every line it sat on 6px taller than its neighbors, which the teach-hint's
+       tighter leading exposed ("spacing on the small sentences got weird"). The hit area is a
+       pseudo-element now, so the line box is the text's own. */
+    .notes-link { position: relative; }
+    .notes-link::after { content: ""; position: absolute; inset: -12px -6px; }
     footer.foot a { display: inline-block; padding: 8px 0; margin: -8px 0; }
     .contents li a { padding: 8px 0; }
     .clabel { font-size: 11px; }
@@ -650,12 +849,25 @@
 
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
 
+<!-- Spotlight: press / (or tap the flag) to search a film or character; the pick lights up on
+     every chart at once and everything else dims. Wired in the main script at the foot. -->
+<div class="spot-scrim" id="spot-scrim" hidden></div>
+<div class="spot-palette" id="spot-palette" role="dialog" aria-modal="true" aria-label="Spotlight" hidden>
+  <div class="spot-field">
+    <span class="spot-ico" aria-hidden="true">&#9906;</span>
+    <input type="text" id="spot-input" placeholder="Spotlight a film or character&hellip;" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="spot-results" aria-autocomplete="list">
+  </div>
+  <ul class="spot-results" id="spot-results" role="listbox" aria-label="Matches"></ul>
+  <div class="spot-hint"><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> move</span><span><kbd>&crarr;</kbd> spotlight</span><span><kbd>esc</kbd> close</span></div>
+</div>
+<button class="spot-chip" id="spot-chip" hidden><span class="spot-chip-ico" aria-hidden="true">&#9906;</span><span id="spot-chip-label"></span><span class="spot-chip-x" aria-hidden="true">&times;</span></button>
+
 <header class="masthead">
   <div class="wrap">
     <p class="eyebrow">Superhero box office &nbsp;·&nbsp; 2000&ndash;2026</p>
     <h1>The Cape Index</h1>
     <div class="spectrum" aria-hidden="true"></div>
-    <p class="byline">By <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a></p>
+    <p class="byline">By <button class="spot-flag" id="spot-flag" aria-label="Spotlight a film or character" title="Spotlight a film or character (press /)">🏴‍☠️</button> <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">Bill Yost</a></p>
     <p class="dek">Every live-action Marvel or DC superhero film since 2000 that&rsquo;s part of a multi-film continuity, and what each made. Grosses from Box&nbsp;Office&nbsp;Mojo; every figure toggles to 2025 dollars.</p>
     <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six universes back to the two the project started as.</p>
     <div class="thesis" id="thesis"></div>
@@ -938,7 +1150,7 @@
       <div class="view-head">
         <span class="num">§ 08 &nbsp;/&nbsp; REVIEWS &amp; REVENUE</span>
         <h3>Better-reviewed films do gross more. That still doesn&rsquo;t mean reviews sell tickets</h3>
-        <p class="dek">Two questions: do better-reviewed films make more money, and where do critics and audiences split? On the first, the honest answer is yes and it is not small, about $9M of worldwide gross per point of critic score, and the best-reviewed quarter of the slate has a median film out-grossing the worst-reviewed quarter roughly two and a half to one. The catch is that reviews and grosses are both downstream of how big the franchise already was.</p>
+        <p class="dek">Better-reviewed films do make more money, and not by a little: about $9M of worldwide gross per point of critic score, and the best-reviewed quarter of the slate out-grosses the worst-reviewed quarter two and a half to one at the median. The catch is that reviews and grosses are both downstream of how big the franchise already was.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -953,8 +1165,8 @@
         <div id="table-reviews" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Do better reviews go with bigger box office?</dd>
-          <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter. The pattern is real (r&nbsp;=&nbsp;0.48); the question the chart cannot answer is which way it runs.</dd>
-          <dt>Choices here</dt><dd>Deliberately no trend line. The correlation is real but moderate (r&nbsp;=&nbsp;0.48, so about three quarters of the variation in gross is something else), and a line would imply a precision and a direction of cause the data can&rsquo;t carry. The spread is the finding. Dashed lines mark the median score and median gross, so the four quadrants read on their own: acclaimed and huge, loved but flopped, panned but paid. Hover a dot for guides to both axes.</dd>
+          <dt>Why this form</dt><dd>Two continuous variables, one point per film: a scatter.</dd>
+          <dt>Choices here</dt><dd>No trend line, deliberately. r&nbsp;=&nbsp;0.48 is real but moderate, about three quarters of the variation in gross is something else, and a line would claim a precision and a direction the data can&rsquo;t carry. The spread is the finding. Dashed medians split the plot into four quadrants that read on their own: acclaimed and huge, loved but flopped, panned but paid.</dd>
           <dt>Watch for</dt><dd>Reviews and gross are both downstream of the same thing: franchise heat, timing, spend. A scatter shows association, never cause.</dd>
         </dl></div>
       </div>
@@ -962,7 +1174,7 @@
         <div class="card-head">
           <div>
             <h4 class="card-title">Critics vs audiences</h4>
-            <div class="card-note">RT critic score against IMDb user rating, both on 0&ndash;100. On the diagonal they agree; the widest splits are Sony&rsquo;s Venom-adjacent films (Kraven, Morbius, Venom itself) plus Elektra, Batman v Superman and Dark Phoenix, where the critic score craters but the audience rating holds up.</div>
+            <div class="card-note">RT critic score against IMDb rating, both on 0&ndash;100; on the diagonal they agree. The widest splits are Kraven, Morbius, Venom, Elektra, Batman v Superman and Dark Phoenix: the critics cratered and the audience held up.</div>
           </div>
           <div class="legend" id="leg-par"></div>
         </div>
@@ -972,7 +1184,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Where do critics and the audience disagree, and who liked it more?</dd>
           <dt>Why this form</dt><dd>Plot one score against the other and draw the 45&deg; line where they&rsquo;d match. Distance from the line is the size of the disagreement; the side tells you who was warmer.</dd>
-          <dt>Choices here</dt><dd>Both scores are put on 0&ndash;100 so the parity line is a true diagonal. The line is drawn thin and gray. It&rsquo;s a reference, not data. The two halves are tinted faintly and labeled, so which side reads at a glance: a dot above the line means the audience rated it higher, below means the critics did.</dd>
+          <dt>Choices here</dt><dd>Both scores on 0&ndash;100 so the parity line is a true diagonal, drawn thin and gray: a reference, not data. The halves are tinted and labeled, so which side a dot sits on reads at a glance.</dd>
           <dt>Watch for</dt><dd>RT critic % (share of positive reviews) and an IMDb rating (average score) aren&rsquo;t the same kind of measure. The diagonal is a visual aid, not a claim that the scales are equivalent.</dd>
         </dl></div>
       </div>
@@ -1228,13 +1440,16 @@
         </div>
         <div class="card">
           <h4 class="card-title">Definitions</h4>
-          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual CPI-U. That is a purchasing-power adjustment (what those dollars are worth today), not the ticket-price or admissions adjustment the box-office world usually reaches for, and it applies US&nbsp;CPI even to the overseas share. Read it as rough real-terms scale, not a tickets-sold count. <b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, the standard proxy that folds in marketing and the exhibitor split; home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
+          <p style="font-size:14px;color:var(--ink-2)"><b>2025&nbsp;$</b> rescales every gross and budget by annual US inflation (CPI-U). It answers what those dollars are worth today, not how many tickets a film sold. Read it as real-terms scale, not an admissions count.</p>
+        <p style="font-size:14px;color:var(--ink-2)"><b>Break-even</b> is estimated at <b>2.5&times; the production budget</b>, a rough proxy that folds in marketing and the theater&rsquo;s cut. Home video, streaming and licensing are not in it, so a &ldquo;loss&rdquo; here is a theatrical shortfall, not a studio write-down.</p>
           <p style="font-size:14px;color:var(--ink-2)"><b>Still in release</b> films (marked <span class="inrelease">&#9678;</span>) carry grosses as of <span id="asof">September 2026</span> and will climb. The rule, applied everywhere: they are <b>held out of anything that needs a finished number</b> (profit, break-even, the ROI ranking, the reviews scatter, the legs chart, and the ledger&rsquo;s opening and multiplier medians) and <b>counted in anything that describes the slate as it stands</b> (totals, gross medians, the $1B and $2B clubs, the treemap). <span id="ratio-pair">So <em>Brand New Day</em> is in §02&rsquo;s $2B count and out of §06 entirely; without it the Marvel-to-DC ratio reads 2.60 rather than 2.80.</span></p>
         </div>
       </div>
       <div class="card" style="margin-top:20px">
         <h4 class="card-title">Scope</h4>
-        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b> whose continuity <b>began in 2000 or later</b> and that is <b>part of a multi-film continuity</b>, meaning a shared universe, a trilogy, or a film with a theatrical sequel released or in production. That is the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (the X-Men series, the 2005 <em>Fantastic Four</em> and <em>Rise of the Silver Surfer</em>, <em>Daredevil</em> and <em>Elektra</em>); and Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, and both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox. The charts label those standalone DC films <b>Elseworlds</b>, the banner DC itself now uses for one-offs outside its shared universes, though Nolan&rsquo;s trilogy came a decade before the label and wears it loosest.</p>
+        <p style="font-size:14px;color:var(--ink-2)">One rule: every live-action theatrical <b>Marvel or DC superhero film</b>, released <b>2000 or later</b>, that is <b>part of a multi-film continuity</b>. That means a shared universe, a trilogy, or a film with a theatrical sequel already out or in production.</p>
+        <p style="font-size:14px;color:var(--ink-2)"><b>In:</b> the MCU; the DCEU and James Gunn&rsquo;s DCU; DC&rsquo;s standalone films (Nolan&rsquo;s Dark Knight trilogy, both <em>Joker</em>s, <em>The Batman</em>); 20th Century Fox&rsquo;s Marvel films (X-Men, the 2005 <em>Fantastic Four</em> and its sequel, <em>Daredevil</em>, <em>Elektra</em>); Sony&rsquo;s Marvel films (Raimi&rsquo;s <em>Spider-Man</em> trilogy, <em>The Amazing Spider-Man</em> 1 and 2, the Venom-led SSU, both <em>Ghost Rider</em>s). <em>Deadpool &amp; Wolverine</em> counts as MCU, not Fox.</p>
+        <p style="font-size:14px;color:var(--ink-2)">The charts label the standalone DC films <b>Elseworlds</b>, the banner DC itself uses for one-offs outside its shared universes. Nolan&rsquo;s trilogy came a decade before the label and wears it loosest.</p>
         <p style="font-size:14px;color:var(--ink-2)">Out: continuities that began before 2000 (Burton&rsquo;s <em>Batman</em>, Donner&rsquo;s <em>Superman</em> and its 2006 coda <em>Superman Returns</em>, the <em>Blade</em> trilogy); anything animated (the Spider-Verse trilogy, <em>DC League of Super-Pets</em>); one-and-done films with no sequel, which have no franchise arc to compare: <em>Catwoman</em>, <em>Constantine</em>, <em>Green Lantern</em>, <em>Jonah Hex</em>, <em>Watchmen</em>, Ang Lee&rsquo;s <em>Hulk</em>, the 2015 <em>Fantastic Four</em> (a reboot that never got its sequel or its X-Men crossover), both <em>Punisher</em>s (2008&rsquo;s is a reboot, not a sequel); and creator-owned books Marvel merely published (<em>Kick-Ass</em>). A later multiverse cameo (Tobey Maguire in <em>No Way Home</em>, Michael Keaton in <em>The Flash</em>) doesn&rsquo;t pull an excluded film back in.</p>
       </div>
       <p class="smallprint" id="method-held"></p>
@@ -1262,7 +1477,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>100 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>120 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1358,18 +1573,38 @@
           <li><b>&ldquo;I can&rsquo;t scroll this table any farther, and should we freeze the first column?&rdquo;</b> Both, the same bug twice: the mobile stylesheet was turning the frozen column <em>off</em>, and only five of fourteen columns shipped on a phone. All fourteen now, name pinned at 118px.</li>
           <li><b>&ldquo;Hitting Next makes the progress bar bounce forward and then come back.&rdquo;</b> The tab index flips before the scroll catches up, so the bar was pairing the new tab with the old position. Pinning the within-tab fraction to zero mid-transition fixed it.</li>
           <li><b>&ldquo;The commentary around every follow-up is&hellip; intense. Should we pare it down? Emphasize where I was funny, of course.&rdquo;</b> Trimmed 20% first. <b>&ldquo;Didn&rsquo;t work.&rdquo;</b> Cut 47 entries in half instead: the quote is the content, the rationale behind each fix isn&rsquo;t.</li>
-          <li><b>&ldquo;We have to eat our own dog food. Send this superteam at our product and audit in parallel.&rdquo;</b> Eight auditors, one lane each, 78 findings, 55 once the overlaps merged. The worst: the Marvel v DC lens had blanked every legend and emptied the box plot since the day it shipped, the scorecards&rsquo; profit per film was a mean under a dek that promised medians, and <em>Love and Thunder</em> credited zero Guardians. All 55 fixed; the tie-out went from thirty claims to thirty.</li>
-          <li><b>&ldquo;The supervillain of the audit team. Doctor Missedit. He pokes apart the findings with his encyclopedic knowledge of the heroes&rsquo; weaknesses.&rdquo;</b> <b>&ldquo;Unleash the doctor.&rdquo;</b> He may only remove confidence, never add findings. Of 55: 43 stand, 4 downgraded, 1 an artifact of a hidden browser, and 7 where the hero was right and the fix was not. Every headline had been rendered a weight too light since the fonts moved in-house, a credits scene had made Black Widow a nine-film character, and a sentence about the budget band was written into the page by the same commit that made it false. All seven fixed.</li>
-          <li><b>&ldquo;So Wolverine&rsquo;s First Class and Apocalypse cameos don&rsquo;t count as appearances?&rdquo;</b> They didn&rsquo;t; Wikipedia calls both cameos. <b>&ldquo;I feel like if they speak, it counts. Wolverine&rsquo;s line in First Class is a high point of the movie.&rdquo;</b> New rule, applied everywhere: a cameo counts if the character speaks. Eighteen speaking cameos went back in by hand, from Stark at the end of <em>The Incredible Hulk</em> to Supergirl in <em>Superman</em>. Apocalypse stayed out: he roars.</li>
+          <li><b>&ldquo;We have to eat our own dog food. Send this superteam at our product and audit in parallel.&rdquo;</b> Eight auditors, 78 findings, 55 once the overlaps merged. The worst: the Marvel v DC lens had blanked every legend since the day it shipped, and <em>Love and Thunder</em> credited zero Guardians. All 55 fixed.</li>
+          <li><b>&ldquo;The supervillain of the audit team. Doctor Missedit. He pokes apart the findings with his encyclopedic knowledge of the heroes&rsquo; weaknesses.&rdquo;</b> <b>&ldquo;Unleash the doctor.&rdquo;</b> He may only remove confidence, never add findings. Of 55: 43 stand, 4 downgraded, 1 an artifact, and 7 where the hero was right and the fix was not. Every headline had been a weight too light since the fonts moved in-house.</li>
+          <li><b>&ldquo;So Wolverine&rsquo;s First Class and Apocalypse cameos don&rsquo;t count as appearances?&rdquo;</b> They didn&rsquo;t. <b>&ldquo;I feel like if they speak, it counts. Wolverine&rsquo;s line in First Class is a high point of the movie.&rdquo;</b> New rule: a cameo counts if the character speaks. Eighteen went back in by hand. Apocalypse stayed out: he roars.</li>
           <li><b>&ldquo;Bro, of COURSE the Apocalypse cameo would count. Extend the rule to speaking or &lsquo;slays a bunch.&rsquo;&rdquo;</b> Extended. Wolverine is at ten, level with Iron Man and Professor X.</li>
-          <li><b>&ldquo;Reconcilers. I want a bundled package with instructions, a ninth hero, Meld, who reads the local stack cold, and I want running it to feel like watching Adam West Batman.&rdquo;</b> §16 and <span class="mono">reconcilers.zip</span>: a Claude Code skill plus ten agent files, one per hero and one for the villain, each on the model that suits its lane. Meld goes in first and writes the map. The episode has title cards, a narrator, sound effects, and a cliffhanger before the Doctor.</li>
-          <li><b>&ldquo;Let's run it with Opus 4.7 so we don&rsquo;t blow the usage.&rdquo;</b> <b>The Cape Index Cover-Up!</b> Meld read the room, the eight went in in parallel, sixty-five findings came back across two rounds, Doctor Missedit walked in uninvited and downgraded six, marked three as artifacts of the hero&rsquo;s own method, and caught the compiler (me) fabricating a summary miscount. Real bites: &sect;12&rsquo;s radar was silently NaN on one spoke and every universe rendered identically; the cast scraper had lost Kraglin, Thanos and Doctor Strange to Wikipedia phrasing; the contents pill and deep links landed on the masthead not the section; filter state died on reload; the light-theme treemap missed AA where a source comment said it passed. All fixed same episode.</li>
-          <li><b>&ldquo;Reconcilers is a big feature. Give it a top-level tab, a rotating carousel with a generated image for each hero, a diverse and eccentric cast, and make it extendible to non-Claude platforms like Codex.&rdquo;</b> &sect;16 is its own tab now, at the end of the reading order. The card grid became a scroll-snap carousel of ten hero portraits (stylized SVGs, one per lane), with prev / next, dots, a play-pause chip, keyboard nav, and an auto-advance that stops on hover or focus and pauses when the carousel scrolls off-screen. The cast picked up eccentricities: Meld with a shoulder braid and lockpick, Ledger with a monocle and a red flashlight, Median with an interquartile-range tattoo, Chartjunk with a magenta streak, Redline&rsquo;s red pen tucked into a silver bun. And the bundle now ships a Codex adapter (<span class="mono">adapters/codex/AGENTS.md</span> that runs the same ten lanes sequentially in a single agent) plus <span class="mono">adapters/PORTING.md</span>, a one-page protocol so any runtime (Cursor, Aider, Cline, a shell script) can host the team.</li>
+          <li><b>&ldquo;Reconcilers. I want a bundled package with instructions, a ninth hero, Meld, who reads the local stack cold, and I want running it to feel like watching Adam West Batman.&rdquo;</b> §16 and <span class="mono">reconcilers.zip</span>: a skill plus ten agent files. Meld goes in first with the map. Title cards, a narrator, sound effects, and a cliffhanger before the Doctor.</li>
+          <li><b>&ldquo;Let&rsquo;s run it with Opus 4.7 so we don&rsquo;t blow the usage.&rdquo;</b> <b>The Cape Index Cover-Up!</b> Sixty-five findings. The Doctor downgraded six, marked three as artifacts, and caught the compiler (me) fabricating a miscount. Real bites: &sect;12&rsquo;s radar was NaN on one spoke, the scraper had lost Kraglin, Thanos and Doctor Strange to Wikipedia phrasing, and filter state died on reload. All fixed same episode.</li>
+          <li><b>&ldquo;Reconcilers is a big feature. Give it a top-level tab, a rotating carousel with a generated image for each hero, a diverse and eccentric cast, and make it extendible to non-Claude platforms like Codex.&rdquo;</b> Its own tab, last in the reading order. A carousel of ten portraits with a play-pause chip and keyboard nav. A Codex adapter, and a one-page porting guide for anything else.</li>
+          <li><b>&ldquo;The generated images are pretty bad. Give me a prompt I can feed through Gemini.&rdquo;</b> Ten portraits came back, each in a different label frame Gemini had invented. <b>&ldquo;A circle crop might take away the props. Make the right call.&rdquo;</b> Rectangles; the props are the character. A script finds each frame by its flat color and cuts it off.</li>
+          <li><b>&ldquo;We call them auditors, but lean into Heroes. And the page is jargony. Sell why someone needs this, and make it easy to download and run.&rdquo;</b> The head is a pitch now, the install is three numbered steps under one download button, and two cards of runtime talk became one paragraph of links.</li>
+          <li><b>&ldquo;On desktop.&rdquo;</b> Nine screenshots, problems boxed in red. Callouts draw a leader to their dot now, bar labels sit above the bar with a tick, the tiles lost a line. The table headers I misdiagnosed as a z-index bug.</li>
+          <li><b>&ldquo;Should the filter bar collapse on scroll on desktop like it does on mobile?&rdquo;</b> <b>&ldquo;Do it.&rdquo;</b> <b>&ldquo;It disappears too quickly, and it just disappears. It should be smooth, yeah?&rdquo;</b> It waits for the tab strip to anchor now, and fades.</li>
+          <li><b>&ldquo;I stopped it at the exact right place and it&rsquo;s in an infinite loop of disappearing and reappearing.&rdquo;</b> Scroll anchoring: the panel resized, the browser nudged the page back across the boundary, repeat. <code>overflow-anchor: none</code>.</li>
+          <li><b>&ldquo;THE TABLE HEADERS ARE STILL BROKEN SAVE ME FABLE&rdquo;</b> Every table sits in a sideways-scrolling wrapper, so a sticky header sticks to the wrapper, not the page: <code>top: var(--sticky-h)</code> meant 89px down into the table, permanently. <code>top: 0</code>.</li>
+          <li><b>&ldquo;These text sizes shouldn&rsquo;t be different sizes, and should skew bigger, not smaller.&rdquo;</b> Chart labels were riding each chart&rsquo;s scale: 16.3px in a wide window, 14.1px in a narrow one, beside prose at 15.5. Fitted to 16px on screen after every render now.</li>
+          <li><b>&ldquo;Label / data point clash on the right side still.&rdquo;</b> The roster totals were anchored where the grid ends, and right-aligned text grows leftward, so widening the margin had moved both. Anchored at the canvas edge.</li>
+          <li><b>&ldquo;We don&rsquo;t have any honest-to-goodness heatmaps. Anywhere we could responsibly?&rdquo;</b> Two candidates, and a list of ones I&rsquo;d refuse. <b>&ldquo;Nevermind on the heatmap.&rdquo;</b></li>
+          <li><b>&ldquo;Get the &lsquo;every live action&rsquo; paragraph to two lines. Trim a line of whitespace out of the scorecards. I really want to get people to the good stuff ASAP.&rdquo;</b> <b>&ldquo;Tighter still.&rdquo;</b> Intro on two lines; the tiles went from 112px tall to 87.</li>
+          <li><b>&ldquo;Is there a fourth scorecard we could add so the entire width of the top is padded out?&rdquo;</b> All six universes, 91 films, $60.85B, first in the row: the size of the whole thing, and the sum the other tiles stop short of. <b>&ldquo;Why do the green squares say MCU? It always cuts into the other tile.&rdquo;</b> Colorblind fallback, and the fit test was measuring the wrong font size. It survives on four cells now.</li>
+          <li><b>&ldquo;Are all of these totally valid and up to date now?&rdquo;</b> Fifteen of sixteen headlines were. §05 said budgets &ldquo;rose about 8%, then flattened&rdquo;: my thin-window rule had cut the 2000s off the front of a sentence about the 2000s. Tail only now. Roughly doubled.</li>
+          <li><b>&ldquo;The prompt list needs today&rsquo;s work, and we&rsquo;ve drifted back into being super verbose. Tighten them up again.&rdquo;</b> Six entries cut in half. Again.</li>
+          <li><b>&ldquo;Now I kind of wish this section was trimmed vertically on mobile too.&rdquo;</b> The masthead was 688px on a 375px phone, one whole screen with no chart on it, partly because the phone padding rule had been outranked by the desktop one for months. 585px now; &sect;01&rsquo;s headline makes the first screen.</li>
+          <li><b>&ldquo;Spacing on the small sentences got weird. And the all-six-universes scorecard could be removed from mobile so this goes back into one line.&rdquo;</b> The two controls in that sentence carried a 44px tap target as padding, so every line holding one was 6px taller than the rest. Hit area is invisible to layout now. Three tiles across on a phone, and the total stays a desktop-width luxury.</li>
+          <li><b>&ldquo;I&rsquo;m on mobile now, and if I refresh the page and then click M v DC, it won&rsquo;t stick about half the time.&rdquo;</b> The chip paints in the first frame; its handler binds at the end of a 460KB script, after fifteen charts draw. A tap in between vanished. Taps are queued from the first byte now and replayed at boot.</li>
+          <li><b>&ldquo;Let&rsquo;s brainstorm four Easter eggs, then build one.&rdquo;</b> <b>&ldquo;Implement Spotlight.&rdquo;</b> Press <kbd>/</kbd> or tap the flag by the byline, search a film or character, and the pick lights up on every chart at once while the rest dims. It needs no new data: every mark already carries its film index or character name for the hover cards, so this only toggles a class. A film also lights its column in the roster, so you see who was in it. Same effect after any filter change, because it re-runs on every render.</li>
+          <li><b>&ldquo;The halo is overriding some of the nearby points.&rdquo;</b> The &sect;03 bubbles draw a gold ring on the billion-dollar films, and each ring was painted just before its own bubble, so it sat on top of every neighbour drawn earlier. Rings go in a layer beneath all bubbles now, and the packing reserves the ring&rsquo;s width. Fixing it turned up a second bug: the spotlight dim rode a CSS transition that left marks on the visible tab stuck at full opacity. Instant dim now.</li>
+          <li><b>&ldquo;Batman v Superman is way above the actual point. And on the other chart, two labels sit close together on the left while the right has none.&rdquo;</b> The label placer only nudged vertically on one side of the dot, so a callout facing the dense cloud climbed several lines to clear it. First fix: try both sides. <b>&ldquo;Things kind of got worse.&rdquo;</b> It had no idea where the chart ended, and put far-left dots&rsquo; labels off the canvas over the y axis. It knows the plot bounds now, tries both sides within them, stops at three lines, and takes the least-crowded spot if nothing is clear. The critic-vs-audience gaps all cluster in one corner, so the phone labels just the widest one there instead of stacking two.</li>
+          <li><b>&ldquo;Is the layout and flow and order and length of all of this satisfactory now?&rdquo;</b> Measured rather than felt: the report proper is 4,300 words, Reference is 7,100 of which 5,400 sit folded, and Act III is the long tab at eleven phone screens. One real finding: &sect;08 said &ldquo;association, not cause&rdquo; four times across its dek and design notes. <b>&ldquo;Trim it.&rdquo;</b> Once now.</li>
         </ol>
       </details>
 
       <details class="card">
-        <summary class="card-title">The bugs<span class="cnt"><span class="sr-only">, </span>8 caught</span></summary>
+        <summary class="card-title">The bugs<span class="cnt"><span class="sr-only">, </span>13 caught</span></summary>
         <dl>
           <dt>Red Hulk in four films</dt>
           <dd>The canonicalizer counted every plain <span class="q">Thaddeus Ross</span> credit as the codename. Rule now: a character counts under a codename only from the film they take it up, and a later transformation identity (Red Hulk, Mighty Thor) needs the explicit <code>Name / Codename</code> alias in the credit; a mantle already held on first sight (Janet&rsquo;s Wasp) does not. Ross is five films of a general and one of a monster, so he shows once.</dd>
@@ -1394,6 +1629,21 @@
 
           <dt>&hellip;and the fix</dt>
           <dd>Strip HTML comments and citations before matching. A case-insensitive lookup that also drops articles and honorifics. Split credits on &ldquo;and&rdquo;. A guarded prose scan that only reads a paragraph if it carries a reprisal cue, only takes clean <code>[[Actor]] as [[Character]]</code> pairs, and skips anything preceded by &ldquo;footage of&rdquo; or &ldquo;was cast&rdquo;. A short, hand-checked overrides file for the last few stars buried in prose. Recovered counts: Joker 1&rarr;4, Magneto 5&rarr;7, Doctor Strange 2&rarr;5, and every <em>Endgame</em> reprisal.</dd>
+
+          <dt>A script hash of the wrong bytes</dt>
+          <dd>Windows wrote <code>dist/index.html</code> with CRLF line endings; the CDN served it LF. The CSP hash was computed on the file and checked against the wire, so the browser refused the entire main script and the carousel rendered ten empty slots. The build normalizes to LF before anything hashes it.</dd>
+
+          <dt>A sticky header stuck to the wrong box</dt>
+          <dd>Every data table lives in an <code>overflow-x: auto</code> wrapper so its columns can scroll sideways, and that makes the wrapper the scroll container a sticky header answers to. <code>top: var(--sticky-h)</code>, written as if the header stuck to the viewport, parked it 89px down inside the table on top of row three. Misread once as a z-index problem.</dd>
+
+          <dt>Chart text in the wrong unit</dt>
+          <dd>Desktop charts draw on a fixed 1000-unit canvas, so a 16-unit label is 16px only when the chart happens to be 1000px wide: 16.3px in a wide window, 14.1px in a narrow one, beside prose that never moves. A pass after each render now sets each chart&rsquo;s label size from its real scale.</dd>
+
+          <dt>A stability rule that ate the decade it described</dt>
+          <dd>The §05 headline ignores rolling windows under half the biggest window&rsquo;s film count, so the unfinished 2026 window can&rsquo;t drive the end of the sentence. The rule was applied to both ends, and the thin early windows it discarded were the 2000s. &ldquo;Rose about 8% over the 2000s, then flattened&rdquo; was comparing 2012 to 2025.</dd>
+
+          <dt>A button that painted before it worked</dt>
+          <dd>The filter chips are plain HTML at the top of the page and paint in the first frame. Their handlers are bound by the inline script at the bottom, after it has parsed and drawn every chart: about 200ms on a desktop, most of a second on a phone. A tap in that window hit a button with nothing behind it. A one-line head script now queues those taps and the boot replays them.</dd>
         </dl>
       </details>
 
@@ -1447,160 +1697,55 @@
 
   <section class="view reconcilers" id="v-reconcilers" data-tab="reconcilers">
     <div class="wrap">
-      <div class="view-head">
+      <div class="view-head rec-head">
         <span class="num">§ 16 &nbsp;/&nbsp; THE RECONCILERS</span>
-        <h3>Nine auditors and a villain, in a folder you can point at any data product</h3>
-        <p class="dek">The eight-lane audit in &sect;15 was run by a team, and the team is packaged. Each hero owns one lane, they work in parallel and don&rsquo;t compare notes until the end, and every finding has to point at a line, a cell, or a screen. Meld reads the local stack first and writes the map the others follow. When the findings are in, Doctor Missedit turns up uninvited and audits the auditors: he may only remove confidence, never add findings. On this site the heroes filed 65 findings across two runs; the Doctor downgraded a handful and marked three as artifacts of their own method.</p>
+        <h3>Send in the heroes</h3>
+        <p class="dek">Nine heroes find what your reviewers missed: a number that stopped tying, a label that lies, a chart that misleads by accident. Ten minutes, on your machine, free. Then Doctor Missedit turns up uninvited and picks apart their findings.</p>
       </div>
 
-      <div class="card">
-        <h4 class="card-title">Call the Reconcilers</h4>
-        <p>They run inside <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> as a skill plus ten agent files. Codex users get an <span class="mono">AGENTS.md</span> adapter that runs the same episode sequentially in a single agent. Download the bundle, run the installer from the folder that holds your product, and say the words.</p>
-        <p class="callcmd">/reconcilers &nbsp; <span style="color:var(--ink-muted)">(Claude Code)</span> &nbsp;/&nbsp; codex &nbsp;: "run the Reconcilers episode" &nbsp; <span style="color:var(--ink-muted)">(Codex)</span></p>
-        <p>The skill asks three things before anyone moves: what the product is, which model roster (standard issue, or every hero on the biggest model available), and whether it may drive a browser. Then Meld reads the room, the eight go in, the compiled report lands, and the surprise happens. Every report is written to <span class="mono">.reconcilers/</span> in your directory. The team is read-only: it never edits, commits or deploys. Fixing is a separate conversation, and you start it.</p>
-        <p><a href="/reconcilers.zip">Download the bundle (zip)</a> &nbsp;&middot;&nbsp; <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers" target="_blank" rel="noopener">Read it on GitHub</a></p>
+      <div class="rec-getstarted">
+        <div class="rec-get-head">
+          <h4>Get the team</h4>
+          <a class="rec-download" href="/reconcilers.zip" download>
+            <span class="dl-icon" aria-hidden="true">&darr;</span>
+            <span class="dl-text">Download the bundle<span class="dl-sub">reconcilers.zip &middot; 37 KB</span></span>
+          </a>
+        </div>
+        <ol class="rec-steps">
+          <li>
+            <span class="step-n" aria-hidden="true">1</span>
+            <div class="step-body">
+              <div class="step-title">Unzip it wherever you keep tools.</div>
+              <div class="step-note">You will point at your product from a separate folder, not from inside this one.</div>
+            </div>
+          </li>
+          <li>
+            <span class="step-n" aria-hidden="true">2</span>
+            <div class="step-body">
+              <div class="step-title">In the folder that holds your product, run the installer.</div>
+              <pre class="step-cmd" aria-label="install commands"><code><span class="cmd-comment"># cd into your dashboard, notebook or repo, then run one of these:</span>
+bash /path/to/reconcilers/install.sh
+&amp; "C:\path\to\reconcilers\install.ps1"
+bash /path/to/reconcilers/install.sh --platform codex</code></pre>
+            </div>
+          </li>
+          <li>
+            <span class="step-n" aria-hidden="true">3</span>
+            <div class="step-body">
+              <div class="step-title">Call them.</div>
+              <pre class="step-cmd" aria-label="call commands"><code>claude
+/reconcilers</code></pre>
+              <div class="step-note">On Codex, say: <em>run the Reconcilers episode against this repo</em>.</div>
+            </div>
+          </li>
+        </ol>
+        <p class="rec-promise"><b>Read-only.</b> The team never edits, commits or deploys your product. <b>Local.</b> Nothing about it leaves your machine except through the AI model you were going to use anyway. Every report lands in <span class="mono">.reconcilers/</span> beside your code. On this site the heroes filed 65 findings across two runs, and the Doctor downgraded a handful; the three most fixable landed as the last entries in the log at &sect;15.</p>
       </div>
 
-      <!-- Portrait symbol library. Every slide below <use>s one of these; keeping them in
-           one <defs> block halves the bytes on the wire vs repeating each portrait per slide. -->
-      <svg class="rec-defs" width="0" height="0" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="g-meld" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2ea6c4"/><stop offset="1" stop-color="#0e5468"/></linearGradient>
-          <linearGradient id="g-ledger" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3fa057"/><stop offset="1" stop-color="#1e5c30"/></linearGradient>
-          <linearGradient id="g-doppel" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#3f2a80"/></linearGradient>
-          <linearGradient id="g-median" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4a86c8"/><stop offset="1" stop-color="#20416b"/></linearGradient>
-          <linearGradient id="g-chart" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ea823a"/><stop offset="1" stop-color="#8c3d13"/></linearGradient>
-          <linearGradient id="g-thumb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ec6d90"/><stop offset="1" stop-color="#8a2547"/></linearGradient>
-          <linearGradient id="g-grey" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4a4a52"/><stop offset="1" stop-color="#161618"/></linearGradient>
-          <linearGradient id="g-red" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c33e3e"/><stop offset="1" stop-color="#5e1414"/></linearGradient>
-          <linearGradient id="g-payload" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3fbcd4"/><stop offset="1" stop-color="#12586a"/></linearGradient>
-          <linearGradient id="g-doc" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#242028"/><stop offset="1" stop-color="#0a080c"/></linearGradient>
-          <radialGradient id="g-doc-spot" cx="0.5" cy="0.4" r="0.55"><stop offset="0" stop-color="rgba(194,60,60,0.4)"/><stop offset="1" stop-color="rgba(194,60,60,0)"/></radialGradient>
-        </defs>
+      <h4 class="rec-meet-title">Meet the roster</h4>
+      <p class="rec-meet-dek">Nine heroes each own one lane. They read cold, work in parallel, and don&rsquo;t compare notes until the compiled report. Then Doctor Missedit shows up uninvited.</p>
 
-        <!-- MELD: cartographer, translucent map overlay, dark-skin silhouette with a shoulder braid, compass-rose emblem -->
-        <symbol id="p-meld" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-meld)"/>
-          <g stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none"><path d="M0 80H320M0 160H320M0 240H320M0 320H320M60 0V400M140 0V400M220 0V400M300 0V400"/><path d="M0 220 C 80 180 160 260 240 210 S 320 250 320 240" stroke="rgba(255,255,255,0.32)" stroke-width="3"/><circle cx="90" cy="210" r="4" fill="rgba(255,255,255,0.55)"/><circle cx="240" cy="210" r="4" fill="rgba(255,255,255,0.55)"/></g>
-          <g fill="#2f1f14"><ellipse cx="160" cy="150" rx="50" ry="56"/><path d="M60 360 L60 320 Q160 240 260 320 L260 360 Z"/><path d="M215 205 Q240 250 232 320 Q228 350 220 360" stroke="#2f1f14" stroke-width="20" fill="none" stroke-linecap="round"/></g>
-          <g transform="translate(160 300)" stroke="#fff" fill="none" stroke-width="2"><circle r="18"/><path d="M0 -14 L4 0 L0 14 L-4 0 Z" fill="#fff" stroke="none"/><path d="M-14 0 L0 -4 L14 0 L0 4 Z" fill="rgba(255,255,255,0.45)" stroke="none"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(6,40,50,0.9)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">MELD</text>
-        </symbol>
-
-        <!-- LEDGER: elder auditor, silver bun, spectacles low on nose, open ledger with columns -->
-        <symbol id="p-ledger" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-ledger)"/>
-          <g fill="rgba(255,255,255,0.08)"><text x="18" y="60" font-family="IBM Plex Mono, monospace" font-size="12">$1,908,442,000</text><text x="18" y="80" font-family="IBM Plex Mono, monospace" font-size="12">$   867,300,000</text><text x="18" y="100" font-family="IBM Plex Mono, monospace" font-size="12">$   374,000,000</text></g>
-          <g fill="#f0d6b6"><ellipse cx="160" cy="150" rx="46" ry="52"/><ellipse cx="160" cy="105" rx="30" ry="24" fill="#dcdcdc"/></g>
-          <g fill="#233c22"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/><path d="M118 260 L118 340 L202 340 L202 260 Q160 240 118 260 Z" fill="#f5efe3"/></g>
-          <g stroke="#7b5a25" stroke-width="1" opacity="0.55"><line x1="130" y1="278" x2="192" y2="278"/><line x1="130" y1="292" x2="192" y2="292"/><line x1="130" y1="306" x2="192" y2="306"/><line x1="130" y1="320" x2="192" y2="320"/><line x1="160" y1="270" x2="160" y2="336"/></g>
-          <g stroke="#1a1a1a" stroke-width="2" fill="none"><circle cx="145" cy="150" r="12"/><path d="M157 152 L170 148"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(20,50,28,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">LEDGER</text>
-        </symbol>
-
-        <!-- DOPPEL: two silhouettes facing each other (bob + fade), Venn overlap -->
-        <symbol id="p-doppel" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-doppel)"/>
-          <g opacity="0.85"><circle cx="118" cy="200" r="80" fill="rgba(240,220,255,0.15)"/><circle cx="202" cy="200" r="80" fill="rgba(240,220,255,0.15)"/><path d="M160 122 A 78 78 0 0 1 160 278 A 78 78 0 0 1 160 122 Z" fill="rgba(240,220,255,0.2)"/></g>
-          <g fill="#5a3d1c"><path d="M40 340 Q100 220 120 200 Q115 155 128 130 L155 130 Q158 155 152 200 L160 220 L100 340 Z"/><circle cx="128" cy="115" r="30"/></g>
-          <g fill="#f0d0c0"><path d="M280 340 Q220 220 200 200 Q205 155 192 130 L165 130 Q162 155 168 200 L160 220 L220 340 Z"/><circle cx="192" cy="115" r="30"/></g>
-          <g fill="#5a3d1c" opacity="0.9"><path d="M105 100 Q128 78 150 92 Q140 106 128 108 Q112 108 105 100 Z"/></g>
-          <g fill="#3a1a0a" opacity="0.9"><rect x="170" y="82" width="45" height="14" rx="2"/><rect x="175" y="96" width="35" height="6"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(45,25,80,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">DOPPEL</text>
-        </symbol>
-
-        <!-- MEDIAN: androgynous, oversized round glasses, headphones, bell curve behind -->
-        <symbol id="p-median" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-median)"/>
-          <path d="M20 300 Q80 300 130 220 Q160 175 190 220 Q240 300 300 300" stroke="rgba(255,255,255,0.35)" stroke-width="3" fill="none"/>
-          <line x1="160" y1="180" x2="160" y2="320" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-dasharray="4 4"/>
-          <text x="164" y="196" font-family="IBM Plex Mono, monospace" font-size="12" fill="rgba(255,255,255,0.7)">median</text>
-          <g fill="#c9a684"><ellipse cx="160" cy="150" rx="48" ry="54"/><path d="M112 106 Q160 60 208 106 L208 130 Q195 118 178 118 L142 118 Q125 118 112 130 Z" fill="#2a1e14"/></g>
-          <g fill="#111"><rect x="94" y="132" width="30" height="26" rx="6" ry="6"/><rect x="196" y="132" width="30" height="26" rx="6" ry="6"/></g>
-          <g fill="none" stroke="#111" stroke-width="4"><path d="M108 142 A 22 22 0 0 1 152 148"/><path d="M212 142 A 22 22 0 0 1 168 148"/><line x1="128" y1="148" x2="146" y2="148"/><line x1="208" y1="148" x2="190" y2="148"/></g>
-          <g fill="#e33"><circle cx="128" cy="148" r="7"/><circle cx="208" cy="148" r="7"/></g>
-          <g fill="#111"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(15,30,55,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">MEDIAN</text>
-        </symbol>
-
-        <!-- CHARTJUNK: reformed art director, magenta hair streak, paint-splattered smock, X-marked pie -->
-        <symbol id="p-chart" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-chart)"/>
-          <g transform="translate(60 80)" opacity="0.42"><circle r="30" fill="#fff"/><path d="M0 -30 A 30 30 0 0 1 26 -15 L0 0 Z" fill="#c33"/><path d="M26 -15 A 30 30 0 0 1 26 15 L0 0 Z" fill="#3c3"/><path d="M26 15 A 30 30 0 1 1 0 -30 L0 0 Z" fill="#39c"/><line x1="-38" y1="-38" x2="38" y2="38" stroke="#900" stroke-width="6"/><line x1="-38" y1="38" x2="38" y2="-38" stroke="#900" stroke-width="6"/></g>
-          <g fill="#f4d4a8"><ellipse cx="160" cy="150" rx="48" ry="54"/><path d="M112 108 Q125 62 165 68 Q210 74 208 118 L200 128 L192 108 Q175 100 158 106 Q142 112 132 122 L112 128 Z" fill="#181818"/><path d="M155 68 Q168 60 178 66 L172 108 L164 108 Z" fill="#d6337a"/></g>
-          <g fill="#2b2b2b"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
-          <g fill="#fff" opacity="0.75"><circle cx="90" cy="336" r="5"/><circle cx="130" cy="352" r="3"/><circle cx="200" cy="336" r="4"/><circle cx="240" cy="348" r="6"/></g>
-          <g fill="#e33" opacity="0.85"><circle cx="110" cy="346" r="4"/><circle cx="180" cy="330" r="5"/><circle cx="230" cy="336" r="3"/></g>
-          <g transform="translate(230 250) rotate(35)"><rect x="0" y="-2" width="60" height="4" rx="1" fill="#111"/><path d="M60 -3 L72 0 L60 3 Z" fill="#c33"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(80,30,10,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">CHARTJUNK</text>
-        </symbol>
-
-        <!-- THUMB: subway commuter, cap sideways, giant foam thumb, phone -->
-        <symbol id="p-thumb" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-thumb)"/>
-          <g fill="#8e5a3d"><ellipse cx="160" cy="150" rx="44" ry="50"/></g>
-          <g fill="#1c1c1c"><path d="M112 128 Q160 96 208 128 L208 100 Q160 78 112 100 Z"/><path d="M208 100 L228 110 L228 122 L208 118 Z"/></g>
-          <g fill="#111"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
-          <g transform="translate(216 240)"><rect x="0" y="0" width="46" height="80" rx="8" fill="#0d0d0d"/><rect x="4" y="6" width="38" height="60" rx="2" fill="#1e88ff"/><rect x="4" y="14" width="38" height="4" fill="rgba(255,255,255,0.7)"/><rect x="4" y="22" width="26" height="4" fill="rgba(255,255,255,0.5)"/><rect x="4" y="30" width="34" height="4" fill="rgba(255,255,255,0.5)"/></g>
-          <g fill="#f4c99f"><path d="M80 350 Q90 240 130 220 Q170 200 210 250 Q200 260 175 258 Q168 280 158 300 Q155 310 165 316 L215 316 Q212 330 205 344 L100 344 Z"/></g>
-          <g fill="#c88060" opacity="0.7"><path d="M158 300 Q170 296 178 288"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(80,20,40,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">THUMB</text>
-        </symbol>
-
-        <!-- GREYSCALE: dark visor, red-and-white cane, high-contrast strips, keyboard slung over shoulder -->
-        <symbol id="p-grey" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-grey)"/>
-          <g fill="rgba(255,255,255,0.06)"><rect x="0" y="70" width="320" height="4"/><rect x="0" y="130" width="320" height="4"/><rect x="0" y="200" width="320" height="4"/><rect x="0" y="270" width="320" height="4"/></g>
-          <g fill="#d8c8b6"><ellipse cx="160" cy="150" rx="46" ry="52"/></g>
-          <g fill="#111"><rect x="108" y="130" width="104" height="26" rx="6"/></g>
-          <g fill="#e8e8e8"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
-          <g><rect x="248" y="240" width="8" height="120" fill="#f5f5f5"/><rect x="248" y="260" width="8" height="14" fill="#e33"/><rect x="248" y="292" width="8" height="14" fill="#e33"/><rect x="248" y="324" width="8" height="14" fill="#e33"/><circle cx="252" cy="230" r="7" fill="#f5f5f5"/></g>
-          <g transform="translate(70 260)"><rect x="0" y="0" width="60" height="34" rx="3" fill="#2a2a2a"/><g fill="#e8e8e8"><rect x="4" y="4" width="6" height="6"/><rect x="12" y="4" width="6" height="6"/><rect x="20" y="4" width="6" height="6"/><rect x="28" y="4" width="6" height="6"/><rect x="36" y="4" width="6" height="6"/><rect x="44" y="4" width="6" height="6"/><rect x="52" y="4" width="6" height="6"/><rect x="4" y="12" width="6" height="6"/><rect x="12" y="12" width="6" height="6"/><rect x="20" y="12" width="6" height="6"/><rect x="28" y="12" width="6" height="6"/><rect x="36" y="12" width="6" height="6"/><rect x="44" y="12" width="6" height="6"/><rect x="52" y="12" width="6" height="6"/><rect x="12" y="20" width="30" height="8"/></g></g>
-          <rect y="360" width="320" height="40" fill="rgba(0,0,0,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">GREYSCALE</text>
-        </symbol>
-
-        <!-- REDLINE: Black woman, silver bun with red pen tucked, cat-eye glasses, cardigan collar -->
-        <symbol id="p-red" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-red)"/>
-          <g fill="rgba(255,255,255,0.06)"><text x="18" y="60" font-family="Georgia, serif" font-size="16" font-style="italic">nearly three</text><text x="18" y="82" font-family="Georgia, serif" font-size="16" font-style="italic">to one</text></g>
-          <g fill="#3d251a"><ellipse cx="160" cy="150" rx="48" ry="54"/><ellipse cx="160" cy="90" rx="34" ry="28" fill="#d8d8d8"/><path d="M126 88 Q130 68 160 66 Q190 68 194 88 Q194 74 160 72 Q126 74 126 88 Z" fill="#d8d8d8"/></g>
-          <g transform="translate(178 68) rotate(28)"><rect x="0" y="0" width="34" height="6" rx="1" fill="#111"/><rect x="0" y="0" width="34" height="6" rx="1" fill="#e33"/><path d="M34 0 L42 3 L34 6 Z" fill="#c00"/></g>
-          <g fill="none" stroke="#111" stroke-width="3"><path d="M120 148 Q130 130 148 138 Q148 155 130 155 Q118 155 120 148 Z"/><path d="M172 138 Q190 130 200 148 Q202 155 190 155 Q172 155 172 138 Z"/><line x1="148" y1="145" x2="172" y2="145"/></g>
-          <g fill="#e8dcc0"><path d="M60 360 L60 320 Q160 250 260 320 L260 360 Z"/></g>
-          <g fill="#111" opacity="0.75"><path d="M136 320 L136 348 M184 320 L184 348" stroke="#111" stroke-width="2"/><rect x="130" y="318" width="60" height="4"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(70,10,10,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">REDLINE</text>
-        </symbol>
-
-        <!-- PAYLOAD: hoodie, headphones, network topology halo of nodes and edges -->
-        <symbol id="p-payload" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-payload)"/>
-          <g stroke="rgba(255,255,255,0.35)" stroke-width="1.4" fill="none"><path d="M60 90 L110 60 L160 40 L210 60 L260 90"/><path d="M60 90 L120 130 L180 130 L260 90"/><path d="M120 130 L160 40 L200 130"/></g>
-          <g fill="rgba(255,255,255,0.85)"><circle cx="60" cy="90" r="5"/><circle cx="110" cy="60" r="5"/><circle cx="160" cy="40" r="6"/><circle cx="210" cy="60" r="5"/><circle cx="260" cy="90" r="5"/><circle cx="120" cy="130" r="4"/><circle cx="200" cy="130" r="4"/></g>
-          <g fill="#7a4e2e"><ellipse cx="160" cy="180" rx="42" ry="46"/></g>
-          <g fill="#111"><path d="M100 200 Q118 130 160 130 Q202 130 220 200 L220 260 L100 260 Z"/></g>
-          <g fill="#333"><rect x="102" y="180" width="20" height="34" rx="6"/><rect x="198" y="180" width="20" height="34" rx="6"/></g>
-          <g fill="#0aa" opacity="0.85"><rect x="106" y="188" width="12" height="4" rx="1"/><rect x="202" y="188" width="12" height="4" rx="1"/></g>
-          <g fill="#141414"><path d="M60 360 L60 320 Q160 260 260 320 L260 360 Z"/></g>
-          <g fill="#3fbcd4" opacity="0.6"><rect x="150" y="270" width="20" height="20" rx="2"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(10,50,60,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">PAYLOAD</text>
-        </symbol>
-
-        <!-- DOCTOR MISSEDIT: top hat, monocle, red cape, red pen wand, red spotlight -->
-        <symbol id="p-doc" viewBox="0 0 320 400">
-          <rect width="320" height="400" rx="12" fill="url(#g-doc)"/>
-          <rect width="320" height="400" fill="url(#g-doc-spot)"/>
-          <g fill="#0a0a0a"><rect x="112" y="30" width="96" height="70" rx="2"/><rect x="96" y="94" width="128" height="10" rx="2"/></g>
-          <g fill="#a01818"><rect x="112" y="52" width="96" height="10"/></g>
-          <g fill="#e6c8a0"><ellipse cx="160" cy="150" rx="42" ry="48"/></g>
-          <g stroke="#0a0a0a" stroke-width="3" fill="none"><circle cx="176" cy="150" r="14"/><path d="M190 156 L214 168"/></g>
-          <g fill="#0a0a0a"><path d="M148 128 L172 130 L170 138 L146 136 Z"/></g>
-          <g fill="#181818"><path d="M50 360 L60 260 L160 218 L260 260 L270 360 Z"/></g>
-          <g fill="#8c1a1a"><path d="M118 236 L160 220 L202 236 L200 360 L120 360 Z"/></g>
-          <g fill="#c33"><rect x="148" y="248" width="24" height="14" rx="1"/></g>
-          <g transform="translate(224 250) rotate(-38)"><rect x="0" y="-3" width="72" height="6" rx="1" fill="#c33"/><path d="M72 -5 L86 0 L72 5 Z" fill="#900"/><rect x="0" y="-3" width="18" height="6" rx="1" fill="#1a1a1a"/></g>
-          <rect y="360" width="320" height="40" fill="rgba(0,0,0,0.95)"/><text x="160" y="388" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="22" font-weight="800" fill="#c33" letter-spacing="3">DR MISSEDIT</text>
-        </symbol>
-      </svg>
+      <!-- Hero portraits load as JPEGs from /reconcilers/ (self-hosted, CSP img-src self). -->
 
       <!-- The carousel. Ten hero cards plus the villain, in reading order (Meld first because
            he goes in first; Missedit last, obviously). Each slide is a scroll-snap point. -->
@@ -1610,7 +1755,7 @@
           <div class="rec-track" id="rec-track" aria-live="polite">
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Meld, hero 1 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Meld: hooded cartographer overlaid with a translucent city grid, compass rose on the chest"><use href="#p-meld"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/meld.jpg" width="800" height="1000" alt="Meld: cartographer with a shoulder braid and field vest, brass compass in her palm, a translucent city grid hovering behind her." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Meld <span class="model-chip">Sonnet</span></h5><div class="lane">Context &middot; not an audit lane &middot; goes in first</div><dl>
                 <dt>Powers</dt><dd>Walks into any codebase cold and comes out with the map: what it is, how it builds, where the data lives, where the numbers on the screen come from. The other nine read it before they move, so nobody audits a notebook for missing webpack.</dd>
                 <dt>Weakness</dt><dd>Sees the whole system and wants to explain all of it. Will draw the map of a room asked to be checked for a chair.</dd>
@@ -1619,7 +1764,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Ledger, hero 2 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Ledger: silver-bunned elder in a green cardigan, monocle low on the nose, open leather-bound ledger between the hands"><use href="#p-ledger"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/ledger.jpg" width="800" height="1000" alt="Ledger: silver-haired elder with a silver bun, monocle on a gold chain, open leather ledger held across the forearm." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Ledger <span class="model-chip">Opus</span></h5><div class="lane">Data integrity</div><dl>
                 <dt>Powers</dt><dd>Touches a number and sees where it came from. Can smell a hand-typed figure from across the room. Nothing gets on the page without a source it can be walked back to.</dd>
                 <dt>Weakness</dt><dd>Cannot accept an estimate. Applies one rule to the number in front of them and another to the one a paragraph up. Has been known to audit their own dinner receipt at the table.</dd>
@@ -1628,7 +1773,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Doppel, hero 3 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Doppel: two overlapping silhouettes facing each other, one with a bob, one with a fade, over a purple Venn diagram"><use href="#p-doppel"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/doppel.jpg" width="800" height="1000" alt="Doppel: a single face with two overlapping profiles bleeding out of the silhouette, one bob and one fade, over a Venn diagram." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Doppel <span class="model-chip">Opus</span></h5><div class="lane">Entities and consistency</div><dl>
                 <dt>Powers</dt><dd>Sees every record that is secretly the same thing, and every thing that is secretly two records. The accented and the unaccented. The alias claimed a period early. The renamed category that now counts twice. Knows what the key was supposed to be.</dd>
                 <dt>Weakness</dt><dd>Sees duplicates everywhere, including in people. Will not let a join through without a grudge. Introduces themselves twice.</dd>
@@ -1637,7 +1782,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Median, hero 4 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Median: bell curve behind, oversized round glasses, big headphones, calm face with an IQR tattoo peeking above the collar"><use href="#p-median"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/median.jpg" width="800" height="1000" alt="Median: curly dark hair, oversized tortoise-shell glasses, big studio headphones around the neck, a bell-curve pin on the cardigan." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Median <span class="model-chip">Opus</span></h5><div class="lane">Statistics</div><dl>
                 <dt>Powers</dt><dd>Immune to outliers. Sees the n behind every average, the denominator behind every rate, the &ldquo;significant&rdquo; with no &ldquo;against what.&rdquo; Asks what the top ten do to the fit before anyone says the word trend.</dd>
                 <dt>Weakness</dt><dd>Boring at parties. Loses all power when n is under five, and says so loudly. Has an interquartile-range tattoo on one forearm.</dd>
@@ -1646,7 +1791,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Chartjunk, hero 5 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Chartjunk: magenta streak in dark hair, paint-splattered smock, an X-marked 3D pie chart floating in the background"><use href="#p-chart"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/chartjunk.jpg" width="800" height="1000" alt="Chartjunk: shaved head with a magenta streak, paint-splattered smock, fistful of markers, an X-marked pie chart on a stick." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Chartjunk <span class="model-chip">Opus</span></h5><div class="lane">Visualization craft &middot; reformed, allegedly</div><dl>
                 <dt>Powers</dt><dd>Has personally made every misleading chart at least once. The truncated axis, the dual scale, the rainbow ramp, the pie with fourteen slices, the bubble scaled by radius, the label sitting on the point it labels. Sees the anti-pattern before the render finishes.</dd>
                 <dt>Weakness</dt><dd>Relapses near a gradient. Cannot be left alone with a 3D bar chart. Wears a &ldquo;one day at a time&rdquo; chip on their smock, hand-painted.</dd>
@@ -1655,7 +1800,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Thumb, hero 6 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Thumb: subway commuter with a cap turned sideways, phone in one hand, an oversized foam finger on the other"><use href="#p-thumb"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/thumb.jpg" width="800" height="1000" alt="Thumb: subway cap turned sideways, coral hoodie, oversized foam finger on one hand, scuffed phone in the other showing a dashboard." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Thumb <span class="model-chip">Sonnet</span></h5><div class="lane">UX &middot; the only member who actually uses the thing</div><dl>
                 <dt>Powers</dt><dd>Shrinks to the size of a phone screen and reads the product the way a stranger does: one thumb, on a train, no onboarding. Finds the scroll nobody knew to do, the control three taps deep, the filter that resets when you rotate.</dd>
                 <dt>Weakness</dt><dd>Will not read the docs. Ever. Has been fooled by a hidden browser tab more than once. Owns exactly one shirt.</dd>
@@ -1664,7 +1809,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Greyscale, hero 7 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Greyscale: dark visor, high-contrast strip in the background, red-and-white cane, mechanical keyboard slung over one shoulder like a guitar"><use href="#p-grey"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/greyscale.jpg" width="800" height="1000" alt="Greyscale: dark wraparound visor, black blazer, red-and-white cane in the crook of the elbow, mechanical keyboard slung across the back on a leather strap." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Greyscale <span class="model-chip">Sonnet</span></h5><div class="lane">Accessibility</div><dl>
                 <dt>Powers</dt><dd>Perceives the product through every channel except color: shape, order, text, and what the screen reader actually announces. If identity is carried by hue alone they cannot see it, and neither can eight percent of men or anyone who printed it. Keyboard only: if it cannot be tabbed to, it does not exist.</dd>
                 <dt>Weakness</dt><dd>Will tab through all four hundred marks to prove they say nothing, and rank a spec threshold beside a real loss. Ships everywhere by keyboard.</dd>
@@ -1673,7 +1818,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Redline, hero 8 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Redline: silver hair pulled up in a bun with a red pen tucked in, cat-eye glasses, cardigan over ink-stained cuffs, proofreading marks floating"><use href="#p-red"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/redline.jpg" width="800" height="1000" alt="Redline: silver hair pulled up with a red pen tucked in like a hair stick, cat-eye glasses on a beaded chain, marked-up printout in both hands." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Redline <span class="model-chip">Opus</span></h5><div class="lane">Editorial</div><dl>
                 <dt>Powers</dt><dd>The Red Pen. Draw it under a headline and the sentence has to say the finding, not the label. Catches the claim that rotted out from under its chart, the footnote describing last quarter&rsquo;s dataset, the hedge doing a number&rsquo;s job, the &ldquo;insight&rdquo; that is only a noun.</dd>
                 <dt>Weakness</dt><dd>No tolerance for &ldquo;nearly.&rdquo; Cuts it, and sometimes the truth goes with it. Removes em dashes on sight.</dd>
@@ -1682,7 +1827,7 @@
             </article>
 
             <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Payload, hero 9 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Payload: hood up, big headphones, a glowing network topology halo above the head, a small cyan packet in the pocket"><use href="#p-payload"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/payload.jpg" width="800" height="1000" alt="Payload: matte-black tactical hoodie with hood up, small silver key on a cord, network topology halo of nodes and edges behind the head." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Payload <span class="model-chip">Sonnet</span></h5><div class="lane">Engineering, security, performance</div><dl>
                 <dt>Powers</dt><dd>Is the network tab. Reads the headers, the policy, the innerHTML a pasted string could walk straight through, the style recalc on every click, the observer created on every render and never released. Sees what the product does that nobody asked it to.</dd>
                 <dt>Weakness</dt><dd>Cannot stop seeing it. Will flag a 30ms paint on a page that loads in 400. Prefers to introduce themselves via their JIRA history.</dd>
@@ -1691,7 +1836,7 @@
             </article>
 
             <article class="rec-slide villain" role="group" aria-roledescription="slide" aria-label="Doctor Missedit, the villain, slide 10 of 10">
-              <div class="rec-portrait"><svg viewBox="0 0 320 400" role="img" aria-label="Doctor Missedit: top hat with a red band, monocle glinting, black-and-red cape, red fountain pen held aloft, spotlit in red"><use href="#p-doc"/></svg></div>
+              <div class="rec-portrait"><img src="reconcilers/doctor_missedit.jpg" width="800" height="1000" alt="Doctor Missedit: waxed handlebar mustache, battered black top hat, monocle, crimson opera cape, long red fountain pen held aloft under a red spotlight." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Doctor Missedit <span class="model-chip">Fable</span></h5><div class="lane">The audit itself &middot; arrives uninvited</div><dl>
                 <dt>Powers</dt><dd>Encyclopedic knowledge of each hero&rsquo;s weakness, which is the same thing as knowing each lane&rsquo;s characteristic false positive. May only remove confidence from a finding, never add one. Verdicts: <b>stands</b>, <b>downgraded</b>, <b>artifact</b>, <b>fix mismatch</b>.</dd>
                 <dt>Weakness</dt><dd>Produces nothing on his own. Cannot resist &ldquo;well, actually,&rdquo; and a team that was mostly right makes him irritable rather than useful.</dd>
@@ -1709,14 +1854,9 @@
       </div>
 
       <div class="card">
-        <h4 class="card-title">Ports to other agent runtimes</h4>
-        <p>The Claude Code install (<span class="mono">install.sh</span> or <span class="mono">install.ps1</span>, default) copies the ten agent files to <span class="mono">.claude/agents/</span> and the skill to <span class="mono">.claude/skills/reconcilers/</span>. The bundle also ships an <span class="mono">adapters/</span> folder with a Codex adapter (<span class="mono">AGENTS.md</span> at the repo root: one agent runs the ten lanes sequentially, the exact same briefs) and a porting guide that describes the protocol in one page so a Cursor, Aider or Cline user can drop in an equivalent rules file. Install with a flag: <span class="mono">install.sh --platform codex</span>. Read-only in every adapter.</p>
-      </div>
-
-      <div class="card">
-        <h4 class="card-title">How an episode runs</h4>
-        <p>It is meant to feel like calling a superhero team, and specifically like 1966. The title card names the episode after your product. Meld goes in first and reads the room. Then the narrator says <em>Meanwhile, in the Hall of Reconciliation</em> and eight heroes are dispatched in one breath, each on the model that suits the lane (Opus for the recompute-heavy lanes, Sonnet for the browser-driving ones, Fable for the villain, or Fable for everyone if you said so and were warned). Each report lands with a sound effect. The compiled report is ranked, deduplicated and cross-checked. Then: <em>HOLD IT!</em> A shadow falls across the Hall, and Doctor Missedit does his thing. Roll credits, three fixes to make first, same Bat-time, same Bat-channel.</p>
-        <p>House rules the theatre never overrides: read-only; only verified findings in the ranking; every finding cites a location; every report ends with what was checked clean; no em dashes, which is a team quirk you should not fight.</p>
+        <h4 class="card-title">One more thing</h4>
+        <p>Runs on <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> by default. The bundle also ships an adapter for <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers/adapters" target="_blank" rel="noopener">Codex</a>, and a one-page <a href="https://github.com/cruce5/cape-index/blob/main/reconcilers/adapters/PORTING.md" target="_blank" rel="noopener">porting guide</a> for Cursor, Aider, Cline or a shell script. Standard model roster is Sonnet plus Opus. A flamethrower option puts every hero on Fable and warns you what it will cost in tokens.</p>
+        <p>Meant to feel like calling a superhero team, and specifically like 1966. The title card names the episode after your product, Meld reads the room first, eight heroes go in on one breath, the compiled report lands, and then <em>HOLD IT!</em> A shadow falls, Doctor Missedit turns up. Roll credits, three fixes to make first, same Bat-time, same Bat-channel. <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers" target="_blank" rel="noopener">Source on GitHub</a>.</p>
       </div>
     </div>
   </section>
@@ -2060,12 +2200,18 @@
     var sum = function (a, w) { return a.reduce(function (s, f) { return s + val(f, w); }, 0); };
     var m = sum(mcu, "ww"), d = sum(dc, "ww");
     var el = document.getElementById("thesis");
+    // fourth tile, first in the row: the size of the whole slate. In the six-universe view the two
+    // side tiles don't sum to it (Fox and Sony sit outside the fight; the dek says so); under the
+    // lens they do. It's a sum over FILMS, not an estimate, and the universe pills never touch it.
+    var all = sum(FILMS, "ww"), real = STATE.money === "real" ? " · 2025 $" : "";
     el.innerHTML =
-      block(side.name, usd(m), mcu.length + " films" + (STATE.money === "real" ? " · 2025 $" : "")) +
-      block("All of DC", usd(d), dc.length + " films" + (STATE.money === "real" ? " · 2025 $" : "")) +
+      block("All six universes", usd(all), FILMS.length + " films" + real) +
+      block(side.name, usd(m), mcu.length + " films" + real) +
+      block("All of DC", usd(d), dc.length + " films" + real) +
       block("The gap", (m / d).toFixed(2) + "×", "Marvel to DC");
     function block(k, v, sub) {
-      return '<div><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="sub">' + sub + "</div></div>";
+      // sub rides beside the label, so the tile is two visual lines instead of three
+      return '<div><div class="k">' + k + (sub ? ' <span class="sub">&middot; ' + sub + '</span>' : '') + '</div><div class="v">' + v + "</div></div>";
     }
     // the smallprint (held-out and in-release names) is written in renderClubCopy from the data
     document.getElementById("method-held").innerHTML =
@@ -2350,10 +2496,17 @@
       // the universe rides on the gross line wherever it fits: this is the one chart with no
       // shape channel and no row name, so without it identity was hue alone
       var tag = " · " + uLabel(keyOf(f.u));
-      var fits = function (s, x) { return s.length <= Math.floor((c.w - x) / 6.6); };
+      // Real width, not a character count against a constant. Every treemap label is classless,
+      // so the svg text:not([class]) rule (and fitLabels) renders it at lblSize() units, ~16, not
+      // the 10-12 in its attribute. 6.6 units per char was the advance of 11px mono; at 16 it is
+      // 9.6, so the old test approved strings 45% wider than it measured and "$1.52B · MC" ran
+      // into the next cell. Plex Mono advances 0.6em, Plex Sans about 0.56; 6 units of slack
+      // covers the halo stroke.
+      var u = lblSize();
+      var fits = function (s, x, em) { return s.length * (em || 0.6) * u <= c.w - x - 6; };
       var grossLine = usd(val(f, "ww")) + (fits(usd(val(f, "ww")) + tag, 16) ? tag : "");
       // a clipped title reads as a mistake, so only show the name when it fits the cell uncut, else just the gross
-      var titleFits = big && fits(f.t, 16);
+      var titleFits = big && fits(f.t, 16, 0.56);
       if (titleFits) {
         label = '<text x="' + (c.x + 8) + '" y="' + (c.y + 18) + '" fill="' + ink + '"' + halo + ' font-family="IBM Plex Sans, system-ui, sans-serif" font-size="12" font-weight="600" style="pointer-events:none">' + esc(f.t) + '</text>' +
           '<text x="' + (c.x + 8) + '" y="' + (c.y + 34) + '" fill="' + ink2 + '"' + halo + ' font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" style="pointer-events:none">' + grossLine + "</text>";
@@ -2402,29 +2555,92 @@
   // does not just cover it, it erases it. Sizes passed in must be the RENDERED size (the CSS
   // sets .lbl to 16px desktop / 13px phone whatever the attribute says).
   function labelPlacer() {
-    var placed = [], marks = [];
+    var placed = [], marks = [], bL = -Infinity, bR = Infinity;
     function add(x0, x1, y) { placed.push({ x0: x0, x1: x1, y: y }); }
     return {
       block: function (x0, x1, y) { add(x0, x1, y); },
       mark: function (cx, cy, r, id) { marks.push({ cx: cx, cy: cy, r: r, id: id }); },
-      // returns the y to draw at; id is the labeled film's own mark, which it may sit beside
-      place: function (cx, cy, txt, size, right, id) {
-        var w = txt.length * size * 0.56, lh = size + 3;
-        var x0 = right ? cx - 10 - w : cx + 10, x1 = x0 + w, y = cy + size / 3;
-        for (var k = 1; k <= 12; k++) {
-          var yc = y - size * 0.35;   // the glyph box's vertical centre
-          var clash = placed.some(function (p) { return x0 < p.x1 + 5 && p.x0 < x1 + 5 && Math.abs(p.y - y) < lh; })
-            || marks.some(function (mk) { return mk.id !== id && x0 < mk.cx + mk.r + 2 && mk.cx - mk.r - 2 < x1 && Math.abs(mk.cy - yc) < mk.r + size * 0.5; });
-          if (!clash) break;
-          y = cy + size / 3 + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * lh;
+      // the plot's horizontal extent: a label may not leave it, on either side
+      bounds: function (left, right) { bL = left; bR = right; },
+      // returns { y, right }: the baseline to draw at, and which side of the dot the label
+      // sits on. Three rules learned the hard way on the phone charts:
+      //   1. try both sides of the dot, not just the caller's guess: a label facing the dense
+      //      cloud used to climb several lines to clear it ("Batman v Superman is way above the
+      //      actual point");
+      //   2. never leave the plot: the first fix put far-left dots' labels off the canvas, over
+      //      the y axis ("things kind of got worse");
+      //   3. never fly: the search stops at three lines. If nothing in that range is clear, take
+      //      the least-crowded spot nearest the dot and let the leader line carry it.
+      place: function (cx, cy, txt, size, preferRight, id) {
+        var w = txt.length * size * 0.56, lh = size + 3, base = cy + size / 3;
+        function clashes(x0, x1, y) {
+          var yc = y - size * 0.35, n = 0;
+          placed.forEach(function (p) { if (x0 < p.x1 + 5 && p.x0 < x1 + 5 && Math.abs(p.y - y) < lh) n++; });
+          marks.forEach(function (mk) { if (mk.id !== id && x0 < mk.cx + mk.r + 2 && mk.cx - mk.r - 2 < x1 && Math.abs(mk.cy - yc) < mk.r + size * 0.5) n++; });
+          return n;
         }
-        add(x0, x1, y);
-        return y;
+        var best = null, fallback = null;
+        [preferRight, !preferRight].forEach(function (right, sideIdx) {
+          var x0 = right ? cx - 10 - w : cx + 10, x1 = x0 + w;
+          if (x0 < bL || x1 > bR) return; // this side runs off the plot; not a candidate
+          for (var k = 0; k <= 6; k++) { // 0, +1, -1, +2, -2, +3, -3 lines
+            var y = base + (k === 0 ? 0 : (k % 2 ? 1 : -1) * Math.ceil(k / 2) * lh);
+            var n = clashes(x0, x1, y), dist = Math.abs(y - base) + sideIdx * lh * 0.75;
+            if (n === 0) {
+              if (!best || dist < best.cost) best = { y: y, right: right, x0: x0, x1: x1, cost: dist };
+              break; // nearest clear offset on this side
+            }
+            // remember the least-crowded position in case nothing on either side is clear
+            if (!fallback || n < fallback.n || (n === fallback.n && dist < fallback.cost)) fallback = { y: y, right: right, x0: x0, x1: x1, cost: dist, n: n };
+          }
+        });
+        if (!best) best = fallback;
+        if (!best) { // both sides overflow the plot (label wider than the room): preferred side, on the dot
+          var x0 = preferRight ? cx - 10 - w : cx + 10;
+          best = { y: base, right: preferRight, x0: x0, x1: x0 + w };
+        }
+        add(best.x0, best.x1, best.y);
+        return { y: best.y, right: best.right };
       }
     };
   }
   // what the CSS actually renders chart labels at (see the .lbl rules); the placer needs it
-  function lblSize() { return isMobile() ? 13 : 16; }
+  /* Chart text is sized in SVG units on a fixed 1000-unit desktop viewBox, so a 16-unit label
+     rendered at 16px only when the chart happened to be 1000px wide: measured 16.3px at a 1280
+     window and 14.1px at 1000, while the dek beside it stayed at 15.5 (Bill: "these text sizes
+     shouldn't be different sizes, and should skew bigger, not smaller"). After every render,
+     read each chart's real scale and set --lbl on the <svg> in units that land on LBL_PX on
+     screen. Capped at +10% units so a long film name cannot outgrow the gutter its chart was
+     laid out for; narrower than that the label still shrinks, from a bigger base than before.
+     Mobile charts draw at W = MW, the measured pixel width, so their scale is 1 and this is a
+     no-op there. */
+  var LBL_PX = { desk: 16, mob: 13 }, LBL_UNITS = 0;
+  function fitLabels() {
+    var target = isMobile() ? LBL_PX.mob : LBL_PX.desk, first = true;
+    document.querySelectorAll("main svg[viewBox]").forEach(function (svg) {
+      var w = svg.getBoundingClientRect().width, vb = svg.viewBox.baseVal.width;
+      if (!w || !vb) return; // on a hidden tab; setTab measures it when it shows
+      var units = Math.min(target / (w / vb), target * 1.1);
+      svg.style.setProperty("--lbl", units.toFixed(2) + "px");
+      if (first) { LBL_UNITS = units; first = false; }
+    });
+  }
+  // what the labelPlacer must assume a label measures, in the chart's own units: the value the
+  // last fit produced (every desktop chart shares W=1000 and a card width, so one number serves)
+  function lblSize() { return LBL_UNITS || (isMobile() ? 13 : 16); }
+  // Any redraw outside renderAll (theme change redraws the treemap alone, fold and expand toggles
+  // redraw one chart) replaces its <svg> and loses the fitted size. Watching main for child
+  // replacements catches every such path without each caller having to remember. childList only:
+  // fitLabels writes style attributes, which this does not observe, so it cannot retrigger itself.
+  (function () {
+    var main = document.querySelector("main"), queued = false;
+    if (!main || !window.MutationObserver) return;
+    new MutationObserver(function () {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () { queued = false; fitLabels(); });
+    }).observe(main, { childList: true, subtree: true });
+  })();
 
   /* ---------- §03 beeswarm by date (horizontal; smaller on mobile) ---------- */
   function renderBeeswarm() {
@@ -2446,23 +2662,27 @@
     var mid = m.t + (H - m.t - m.b) / 2, lim0 = m.t, lim1 = H - m.b;
     var step0 = mob ? 2.2 : 3.2, gap = mob ? 0.8 : 1.4;
 
+    // the $1B films wear a gold ring 2.5-3.5px outside their edge; packing has to reserve that
+    // room or a neighbour lands inside the ring and the ring reads as painted over it
+    var haloR = mob ? 2.5 : 3.5;
     var placed = [];
     var nodes = af.map(function (f) {
-      var r = rS(val(f, "ww")), pos = xOf(f.date), spread = mid, dir = 1, step = 0;
+      var r = rS(val(f, "ww")), er = r + (val(f, "ww") >= 1e9 ? haloR : 0);
+      var pos = xOf(f.date), spread = mid, dir = 1, step = 0;
       for (var guard = 0; guard < 600; guard++) {
         var ok = true;
         for (var j = 0; j < placed.length; j++) {
           var p = placed[j], dp = pos - p.pos, ds = spread - p.spread;
-          if (dp * dp + ds * ds < (r + p.r + gap) * (r + p.r + gap)) { ok = false; break; }
+          if (dp * dp + ds * ds < (er + p.er + gap) * (er + p.er + gap)) { ok = false; break; }
         }
         if (ok) break;
         step += 1;
         spread = mid + dir * step * step0;
         dir *= -1;
-        if (spread - r < lim0) spread = lim0 + r;
-        if (spread + r > lim1) spread = lim1 - r;
+        if (spread - er < lim0) spread = lim0 + er;
+        if (spread + er > lim1) spread = lim1 - er;
       }
-      placed.push({ pos: pos, spread: spread, r: r });
+      placed.push({ pos: pos, spread: spread, er: er });
       return { f: f, cx: pos, cy: spread, r: r };
     });
 
@@ -2472,18 +2692,23 @@
       ticks += '<line x1="' + p + '" x2="' + p + '" y1="' + m.t + '" y2="' + (H - m.b) + '" stroke="var(--grid)"/>';
       ticks += '<text x="' + p + '" y="' + (H - m.b + (mob ? 13 : 16)) + '" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="' + (mob ? 11 : 18) + '" fill="var(--ink-muted)">' + (mob ? "&rsquo;" + String(y).slice(2) : y) + "</text>";
     }
-    var circ = nodes.map(function (n) {
-      // films that crossed $1B get a gold accent ring + full opacity so the section's subject pops out
+    // rings and marks in two passes, not interleaved: every $1B ring goes in a layer BENEATH
+    // every bubble, so where a ring extends over a neighbour the neighbour paints on top of it
+    // (a glow behind), instead of the ring cutting across the neighbour. Bill: "the halo is
+    // overriding some of the nearby points".
+    var halos = "", marks = "";
+    nodes.forEach(function (n) {
       var big = val(n.f, "ww") >= 1e9;
-      var halo = big ? '<circle cx="' + n.cx + '" cy="' + n.cy + '" r="' + (n.r + (mob ? 2.5 : 3.5)) + '" fill="none" stroke="var(--note)" stroke-opacity="0.5" stroke-width="' + (mob ? 1.5 : 2) + '"/>' : "";
+      // data-i (but not the .beeDot hover class) so Spotlight dims and lights the ring with its bubble
+      if (big) halos += '<circle class="beeHalo" data-i="' + FILMS.indexOf(n.f) + '" cx="' + n.cx + '" cy="' + n.cy + '" r="' + (n.r + haloR) + '" fill="none" stroke="var(--note)" stroke-opacity="0.5" stroke-width="' + (mob ? 1.5 : 2) + '"/>';
       // the mark carries the universe SHAPE as well as its hue. Under protanopia the palette's
       // closest pair sits at 7.0 separation, which is only legal with a second channel, and
       // this was the most prominent chart that had none.
-      return halo + uniMark(n.cx, n.cy, n.f.u, FILMS.indexOf(n.f), n.r, big);
-    }).join("");
+      marks += uniMark(n.cx, n.cy, n.f.u, FILMS.indexOf(n.f), n.r, big);
+    });
     document.getElementById("chart-beeswarm").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Films placed by release date, sized by worldwide gross">' +
-      '<g class="grid">' + ticks + "</g>" + circ + "</svg>";
+      '<g class="grid">' + ticks + "</g>" + halos + marks + "</svg>";
     legend("leg-bee", activeUnis(), true, true, true);
     wireDots(document.querySelector("#chart-beeswarm svg"));
     fillTable("table-beeswarm", af.map(function (f) { return [f.t + (f.final ? "" : " ◉"), uLabel(f.u), f.date, usd(val(f, "ww"))]; }), ["Film", "Universe", "Release", "Worldwide"]);
@@ -2533,14 +2758,22 @@
     var top = af.slice().sort(function (a, b) { return val(b, "ww") - val(a, "ww"); }).slice(0, topN);
     af.forEach(function (f) { pts += mark(xS(f.date), yS(val(f, "ww")), f.u, FILMS.indexOf(f)); });
     var lsz = lblSize(), place = labelPlacer();
+    place.bounds(m.l, W - m.r);
     // reference-line labels are already on the canvas, so the placer has to know about them
     [1e9, 2e9].forEach(function (r) { if (r <= maxWW) place.block(m.l + 6, m.l + 6 + 70, yS(r) + 13); });
     af.forEach(function (f) { place.mark(xS(f.date), yS(val(f, "ww")), mr, FILMS.indexOf(f)); });
     top.forEach(function (f) {
       var cx = xS(f.date), cy = yS(val(f, "ww")), rightSide = cx > m.l + iw * 0.55;
       var st = mob ? clip(shortT(f.t), 20) : shortT(f.t);
-      var ly = place.place(cx, cy, st, lsz, rightSide, FILMS.indexOf(f));
-      labels += '<text x="' + (rightSide ? cx - 10 : cx + 10) + '" y="' + ly + '" text-anchor="' + (rightSide ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + lsz + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
+      var pl = place.place(cx, cy, st, lsz, rightSide, FILMS.indexOf(f)), ly = pl.y, right = pl.right;
+      // when the placer nudges a label off its dot, draw a thin leader so the reader
+      // never has to guess which dot the callout belongs to. Bill: "Age of Ultron is the
+      // bottom right dot - it looks like they are pointing at the wrong ones"
+      var lyCenter = ly - lsz * 0.35, lx = right ? cx - 10 : cx + 10;
+      if (Math.abs(lyCenter - cy) > lsz * 0.8) {
+        labels += '<line x1="' + cx + '" y1="' + cy + '" x2="' + lx + '" y2="' + lyCenter + '" stroke="var(--ink-muted)" stroke-width="1" stroke-opacity="0.55" style="pointer-events:none"/>';
+      }
+      labels += '<text x="' + lx + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + lsz + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
     });
     document.getElementById("chart-scatter").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Scatter of worldwide gross by release date">' +
@@ -2916,11 +3149,16 @@
     // "last" is the last STABLE window, not literally the last one: 2026 has n=11 and drops
     // below the 2021 to 2025 plateau at n>=27, and reporting the shorter window as "flattened
     // near $180M" is the drift Median caught. Anything under half the biggest window's n is thin
+    // ...but thin windows only matter at the TAIL. The windows at the START are thin because the
+    // genre was four films deep, and they ARE the 2000s the sentence is about. Filtering both ends
+    // made "over the 2000s" compare the 2012 window to 2025 and print "rose about 8%, then
+    // flattened", a sentence that says nothing (Bill caught it reading the contents list).
     var maxN = Math.max.apply(null, roll.map(function (p) { return p.n; }));
-    var stable = roll.filter(function (p) { return p.n >= maxN / 2; });
-    if (stable.length < 2) stable = roll;
-    var first = stable[0], last = stable[stable.length - 1];
-    var peak = stable.slice().sort(function (a, b) { return b.med - a.med; })[0];
+    var tail = roll.filter(function (p) { return p.n >= maxN / 2; });
+    var first = roll[0], last = tail.length ? tail[tail.length - 1] : roll[roll.length - 1];
+    // the peak is looked for over every window up to "last": an unfinished tail can't claim it
+    var span = roll.filter(function (p) { return p.yr <= last.yr; });
+    var peak = span.slice().sort(function (a, b) { return b.med - a.med; })[0];
     var flat = last.med >= peak.med * 0.9;
     // flat: the rise is start to finish; peaked: start to the peak
     var ratio = (flat ? last.med : peak.med) / first.med;
@@ -3216,13 +3454,19 @@
     var pick = [biggest, panHit, likedMiss].filter(function (f, i, a) { return f && a.indexOf(f) === i; });
     if (mob) pick = pick.slice(0, 2);
     var lsz = lblSize(), place = labelPlacer(), mr8 = mob ? 4.5 : 5.5;
+    place.bounds(m.l, W - m.r);
     place.block(mob ? xS(medRT) - 110 : xS(medRT) + 5, mob ? xS(medRT) - 5 : xS(medRT) + 110, m.t + 15); // "median score"
     place.block(m.l + 5, m.l + 110, yS(medWW) - 5);          // "median gross"
     af.forEach(function (f) { place.mark(xS(f.rt), yS(val(f, "ww")), mr8, FILMS.indexOf(f)); });
     var labs = pick.map(function (f) {
-      var x = xS(f.rt), right = f.rt > 55, st = mob ? clip(shortT(f.t), 18) : shortT(f.t);
-      var ly = place.place(x, yS(val(f, "ww")), st, lsz, right, FILMS.indexOf(f));
-      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + lsz + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
+      var x = xS(f.rt), y0 = yS(val(f, "ww")), st = mob ? clip(shortT(f.t), 18) : shortT(f.t);
+      var pl = place.place(x, y0, st, lsz, f.rt > 55, FILMS.indexOf(f)), ly = pl.y, right = pl.right;
+      var lyCenter = ly - lsz * 0.35, lx = right ? x - 9 : x + 9;
+      var leader = "";
+      if (Math.abs(lyCenter - y0) > lsz * 0.8) {
+        leader = '<line x1="' + x + '" y1="' + y0 + '" x2="' + lx + '" y2="' + lyCenter + '" stroke="var(--ink-muted)" stroke-width="1" stroke-opacity="0.55" style="pointer-events:none"/>';
+      }
+      return leader + '<text x="' + lx + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + lsz + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
     }).join("");
     document.getElementById("chart-reviews").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Rotten Tomatoes critic score versus worldwide gross"><g class="grid">' + g + "</g>" + quad + pts + labs +
@@ -3265,18 +3509,27 @@
       '<path transform="translate(' + pX + ',' + pY + ') rotate(' + ang + ')" d="M0 0 L-7 -3 L-7 3 Z" fill="var(--ink-muted)" fill-opacity="0.7"/>' +
       '<text x="' + lX + '" y="' + lY + '" font-family="IBM Plex Sans, system-ui, sans-serif" fill="var(--ink-muted)">they agree</text>';
     var pts = af.map(function (f) { return uniMark(xS(f.rt), yS(f.imdb * 10), f.u, FILMS.indexOf(f), mob ? 4.5 : 5.5); }).join("");
-    var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 2 : 3);
-    // the three widest gaps all cluster in the same low-RT corner, which is exactly the case
-    // the placer exists for; the two side labels are blocked out first
+    // The widest gaps all sit in the same low-RT corner, so on a phone two of them land right on
+    // top of each other, which reads as an arbitrary pair (Bill: "two on the left that are close
+    // to each other"). One callout there is cleaner; the card note names the rest. Desktop keeps 3.
+    var gap = af.slice().sort(function (a, b) { return Math.abs(b.rt - b.imdb * 10) - Math.abs(a.rt - a.imdb * 10); }).slice(0, mob ? 1 : 3);
     var place = labelPlacer(), mrP = mob ? 4.5 : 5.5;
+    place.bounds(m.l, W - m.r);
     place.block(xS(5), xS(5) + 190, yS(93));
     place.block(xS(95) - 180, xS(95), yS(6));
     af.forEach(function (f) { place.mark(xS(f.rt), yS(f.imdb * 10), mrP, FILMS.indexOf(f)); });
     var labs = gap.map(function (f) {
-      var x = xS(f.rt), yv = yS(f.imdb * 10), right = f.rt > 55;
+      var x = xS(f.rt), yv = yS(f.imdb * 10);
       var st = mob ? clip(shortT(f.t), 16) : shortT(f.t);
-      var ly = place.place(x, yv, st, lblSize(), right, FILMS.indexOf(f));
-      return '<text x="' + (right ? x - 9 : x + 9) + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 18) + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
+      var lsz2 = lblSize();
+      var pl = place.place(x, yv, st, lsz2, f.rt > 55, FILMS.indexOf(f)), ly = pl.y, right = pl.right;
+      // Bill: "Elektra is WAY south of where the dot actually is" - leader lines make it clear
+      var lyCenter = ly - lsz2 * 0.35, lx = right ? x - 9 : x + 9;
+      var leader = "";
+      if (Math.abs(lyCenter - yv) > lsz2 * 0.8) {
+        leader = '<line x1="' + x + '" y1="' + yv + '" x2="' + lx + '" y2="' + lyCenter + '" stroke="var(--ink-muted)" stroke-width="1" stroke-opacity="0.55" style="pointer-events:none"/>';
+      }
+      return leader + '<text x="' + lx + '" y="' + ly + '" text-anchor="' + (right ? "end" : "start") + '" class="lbl lbl-strong" font-size="' + (mob ? 11 : 18) + '" style="pointer-events:none"' + HALO + ">" + esc(st) + "</text>";
     }).join("");
     document.getElementById("chart-parity").innerHTML =
       '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Critic score versus audience score"><g class="grid">' + g + "</g>" + shade + diag + pts + labs +
@@ -3360,7 +3613,11 @@
         if (rec) tipBind(el, function () { return charFilmTip(rec.c, rec.films); });
       });
     } else {
-      var Wd = 1000, md = { t: 52, r: 44, b: 10, l: 152 }, rh = 19;
+      // md.r is the gutter between the last film column and the totals column. The totals are
+      // anchored at the canvas edge (Wd - 4, text-anchor end), NOT at Wd - md.r: right-aligned
+      // text grows leftward from its anchor, so anchoring it where the grid ends put every
+      // count on top of the newest film's cells, and widening md.r moved both together.
+      var Wd = 1000, md = { t: 52, r: 60, b: 10, l: 152 }, rh = 19;
       var showD = rows.filter(function (x) { return x.films.length >= ROSTER_MIN; });
       var Hd = md.t + md.b + rh * showD.length;
       var iwd = Wd - md.l - md.r;
@@ -3386,7 +3643,7 @@
         return '<g>' +
           '<rect x="' + (md.l - 14) + '" y="' + (yy + rh / 2 - 4) + '" width="8" height="8" rx="1.5" fill="' + c + '"/>' +
           '<text x="' + (md.l - 22) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" class="lbl" font-size="11.5" fill="var(--ink-2)">' + esc(clip(x.c.n, 22)) + "</text>" +
-          '<text x="' + (Wd - md.r) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="var(--ink-muted)">' + x.films.length + "</text>" +
+          '<text x="' + (Wd - 4) + '" y="' + (yy + rh / 2 + 4) + '" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" fill="var(--ink-muted)">' + x.films.length + "</text>" +
           cells + "</g>";
       }).join("");
       document.getElementById("chart-roster").innerHTML =
@@ -3451,7 +3708,9 @@
       stripToggle("chart-ensemble"); if (af.length > 26) foldToggle("chart-ensemble", "ensemble", af.length);
     } else {
       var stray = host.nextElementSibling; if (stray && stray.classList.contains("collapse-toggle")) stray.remove();
-      var W = 1000, H = 300, m = { t: 16, r: 12, b: 28, l: 34 };
+      // top margin widened from 16 -> 28: labels now sit elevated above the bars (y1 - 18)
+      // so the peak bar's label needs headroom or it collides with the top axis
+      var W = 1000, H = 316, m = { t: 32, r: 12, b: 28, l: 34 };
       var iw = W - m.l - m.r, ih = H - m.t - m.b;
       var step = max > 30 ? 10 : 5, top = Math.ceil(max / step) * step;
       var bw = Math.min(13, iw / af.length * 0.66);
@@ -3468,7 +3727,13 @@
         var lbl = "";
         // the peak is the point of the chart, so it is labeled whatever its neighbors do
         // a label near the left edge collides with the y-axis tick column, so keep clear of it
-        if ((v === max || (v >= 11 && x(i) - lastLbl > 150)) && x(i) > m.l + 46) { lastLbl = x(i); lbl = '<text x="' + x(i) + '" y="' + (y1 - 4) + '" text-anchor="middle" class="lbl lbl-strong" font-size="12">' + esc(mob ? clip(shortT(f.t), 16) : shortT(f.t)) + " " + v + "</text>"; }
+        if ((v === max || (v >= 11 && x(i) - lastLbl > 150)) && x(i) > m.l + 46) {
+          lastLbl = x(i);
+          // label is elevated with a thin tick down to the bar top, so which bar the callout
+          // annotates is unambiguous even when the bar is narrower than the label
+          lbl = '<line x1="' + x(i) + '" y1="' + (y1 - 14) + '" x2="' + x(i) + '" y2="' + (y1 - 3) + '" stroke="var(--ink-muted)" stroke-width="1" stroke-opacity="0.55"/>' +
+                '<text x="' + x(i) + '" y="' + (y1 - 18) + '" text-anchor="middle" class="lbl lbl-strong" font-size="12">' + esc(mob ? clip(shortT(f.t), 16) : shortT(f.t)) + " " + v + "</text>";
+        }
         return '<rect x="' + (x(i) - bw / 2) + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="1.5" fill="var(' + hueVar(f.u) + ')" class="ensBar" data-i="' + FILMS.indexOf(f) + '" data-v="' + v + '"/>' + lbl;
       }).join("");
       var yl = "", lastLab = -1e9;
@@ -4017,6 +4282,8 @@
     updateCtlSummary();
     syncNotesUI();
     buildContents();
+    fitLabels(); // every render above replaced its <svg>, and with it the fitted label size
+    applySpotlight(); // ...and with it any spotlight classes, so re-apply on the fresh marks
   }
 
   /* ---------- controls ---------- */
@@ -4194,6 +4461,8 @@
     updateTabStrip();
     updateStickyVars();
     syncScrollHints(); // the tables measure 0 wide until their tab is the visible one
+    fitLabels();       // so do the charts: their labels get fitted the first time the tab shows
+    applySpotlight();  // a chart drawn for the first time on tab-show needs the spotlight too
     if (STATE.repaintRead) requestAnimationFrame(STATE.repaintRead); // the tab index is part of the progress
     if (opts.push !== false) history.replaceState(null, "", "#" + key);
     // a tab opened first from a chart-less tab may never have been measured on this width
@@ -4328,7 +4597,7 @@
   function scheduleChrome() {
     if (chromeQueued) return;
     chromeQueued = true;
-    requestAnimationFrame(function () { chromeQueued = false; updateTabStrip(); updateStickyVars(); });
+    requestAnimationFrame(function () { chromeQueued = false; updateTabStrip(); updateStickyVars(); fitLabels(); });
   }
   function updateCtlSummary() {
     var el = document.getElementById("ctl-summary"); if (!el) return;
@@ -4353,6 +4622,47 @@
     });
     window.addEventListener("resize", scheduleChrome);
     updateStickyVars();
+    /* Desktop scroll-collapse: collapse only once the tab strip has actually anchored to the
+       top of the viewport. Bill: "it disappears too quickly, before the gradient bar is
+       anchored at the top". The tabs bar uses position: sticky; top: 0, so its bounding rect
+       .top hits 0 exactly when it's stuck; expand again as soon as it lifts off (top >= 4 to
+       avoid subpixel oscillation). Mobile is out of scope: the mobile pattern already starts
+       collapsed and clicks open, no scroll trigger involved. */
+    var tabsEl = document.querySelector(".tabs");
+    var scrollQueued = false, cooldownUntil = 0;
+    function evalScrollState() {
+      scrollQueued = false;
+      if (isMobile() || !tabsEl) return;
+      // second guard against a flip-flop at the boundary: after a state change, ignore new
+      // scroll events for a beat past the CSS transition (220ms). The overflow-anchor: none
+      // on body is the primary fix, this covers browsers that anchor anyway.
+      if (Date.now() < cooldownUntil) return;
+      var top = tabsEl.getBoundingClientRect().top;
+      var c = ctl.classList.contains("collapsed");
+      if (top <= 0 && !c) {
+        ctl.classList.add("collapsed");
+        ctl.classList.remove("open"); // a scroll-collapse cancels a prior click-open
+        tog.setAttribute("aria-expanded", "false");
+        cooldownUntil = Date.now() + 260;
+        scheduleChrome();
+      } else if (top >= 4 && c) { // hysteresis so subpixel rounding doesn't flip the class
+        ctl.classList.remove("collapsed");
+        ctl.classList.remove("open");
+        tog.setAttribute("aria-expanded", "false");
+        cooldownUntil = Date.now() + 260;
+        scheduleChrome();
+      }
+    }
+    window.addEventListener("scroll", function () {
+      if (scrollQueued) return;
+      scrollQueued = true;
+      requestAnimationFrame(evalScrollState);
+    }, { passive: true });
+    // catch a resize from mobile-width to desktop-width mid-scroll (or the other direction),
+    // which would otherwise leave the state stale until the next scroll event
+    window.addEventListener("resize", function () { requestAnimationFrame(evalScrollState); });
+    // and evaluate on load in case the page opened partway down via a hash link
+    evalScrollState();
   })();
   /* ---------- design notes: one state, three switches ---------- */
   // The seg in the controls is the source of truth. The masthead link and the phone bar's Notes
@@ -4505,6 +4815,9 @@
   if (!goToHash({ scroll: false })) setTab("act1", { push: false });
   renderAll();
   booted = true;
+  // taps that landed before this script finished were queued by the head script (see the
+  // comment above it); the handlers exist now, so replay them in the order they happened
+  if (window.__preboot) { var pb = window.__preboot; window.__preboot = null; pb.off(); pb.q.forEach(function (el) { el.click(); }); }
   goToHash({ scroll: true }); // charts exist now; a hash scroll before renderAll lands nowhere useful
   var wasMobile = isMobile();
   var rz;
@@ -4516,5 +4829,155 @@
       if (isMobile() !== wasMobile || (isMobile() && w && Math.abs(w - MW) > 24)) { wasMobile = isMobile(); renderAll(); }
     }, 200);
   });
+
+  /* ---------- Spotlight ---------- */
+  // Press / (or tap the flag) to search one film or character; the pick lights up on every chart
+  // at once and the rest dims. Marks already carry data-i (film index) or data-c (character); this
+  // only toggles a .spot class and a body class, and re-runs after every render (see renderAll).
+  var SPOT = null; // { type:"film", key:<index> } | { type:"char", key:<name> } | null
+  var spotEls = {
+    scrim: document.getElementById("spot-scrim"),
+    palette: document.getElementById("spot-palette"),
+    input: document.getElementById("spot-input"),
+    results: document.getElementById("spot-results"),
+    chip: document.getElementById("spot-chip"),
+    chipLabel: document.getElementById("spot-chip-label"),
+    flag: document.getElementById("spot-flag")
+  };
+  var spotIndexCache = null;
+  function spotIndex() {
+    if (spotIndexCache) return spotIndexCache;
+    var items = [];
+    FILMS.forEach(function (f, i) {
+      items.push({ type: "film", label: f.t, key: i, u: f.u, meta: yearOf(f) + " · " + uLabel(f.u), rank: val(f, "ww") });
+    });
+    (CAST.characters || []).forEach(function (c) {
+      items.push({ type: "char", label: c.n, key: c.n, real: c.real || "", meta: c.films.length + " film" + (c.films.length === 1 ? "" : "s"), rank: c.films.length * 2e8 });
+    });
+    spotIndexCache = items;
+    return items;
+  }
+  function spotSearch(q) {
+    q = q.trim().toLowerCase();
+    if (!q) {
+      // no query: the biggest films and the widest-cast characters, a browsable starting point
+      return spotIndex().slice().sort(function (a, b) { return b.rank - a.rank; }).slice(0, 8);
+    }
+    var scored = [];
+    spotIndex().forEach(function (it) {
+      var hay = (it.label + " " + (it.real || "")).toLowerCase();
+      var pos = hay.indexOf(q);
+      if (pos < 0) return;
+      // rank: title start beats word-start beats anywhere; ties broken by prominence
+      var boundary = pos === 0 ? 2 : (/\s/.test(hay.charAt(pos - 1)) ? 1 : 0);
+      scored.push({ it: it, s: boundary * 1e18 + it.rank - pos });
+    });
+    scored.sort(function (a, b) { return b.s - a.s; });
+    return scored.slice(0, 8).map(function (x) { return x.it; });
+  }
+  var spotResults = [], spotSel = 0;
+  function renderSpotResults() {
+    var q = spotEls.input.value;
+    spotResults = spotSearch(q);
+    spotSel = 0;
+    if (!spotResults.length) {
+      spotEls.results.innerHTML = '<li class="spot-empty">No film or character called &ldquo;' + esc(q) + '&rdquo;.</li>';
+      return;
+    }
+    spotEls.results.innerHTML = spotResults.map(function (it, i) {
+      var swatch = it.type === "film" ? '<span class="so-key" style="background:var(' + hueVar(it.u) + ')"></span>' : '<span class="so-key" style="background:var(--ink-muted)"></span>';
+      var label = esc(it.label) + (it.type === "char" && it.real ? ' <span class="so-real">' + esc(it.real) + "</span>" : "");
+      return '<li class="spot-opt ' + (it.type === "char" ? "is-char" : "") + '" role="option" data-i="' + i + '" aria-selected="' + (i === 0 ? "true" : "false") + '">' +
+        swatch + '<span class="so-label">' + label + '</span><span class="so-meta">' + esc(it.meta) + '</span><span class="so-kind">' + (it.type === "film" ? "film" : "hero") + "</span></li>";
+    }).join("");
+  }
+  function spotMoveSel(d) {
+    if (!spotResults.length) return;
+    spotSel = (spotSel + d + spotResults.length) % spotResults.length;
+    var opts = spotEls.results.querySelectorAll(".spot-opt");
+    opts.forEach(function (o, i) { o.setAttribute("aria-selected", i === spotSel ? "true" : "false"); });
+    var cur = opts[spotSel]; if (cur) cur.scrollIntoView({ block: "nearest" });
+  }
+  var spotLastFocus = null;
+  function openSpot() {
+    spotLastFocus = document.activeElement;
+    spotEls.scrim.hidden = false; spotEls.palette.hidden = false;
+    spotEls.input.value = ""; renderSpotResults();
+    spotEls.input.focus();
+  }
+  function closeSpot() {
+    spotEls.scrim.hidden = true; spotEls.palette.hidden = true;
+    if (spotLastFocus && spotLastFocus.focus) spotLastFocus.focus();
+  }
+  function spotIsOpen() { return !spotEls.palette.hidden; }
+  function chooseSpot(it) {
+    SPOT = { type: it.type, key: it.key };
+    applySpotlight();
+    spotEls.chipLabel.textContent = it.label;
+    spotEls.chip.hidden = false;
+    closeSpot();
+  }
+  function clearSpot() {
+    SPOT = null; applySpotlight();
+    spotEls.chip.hidden = true;
+  }
+  // resolve the current spotlight to the set of film indices and titles it should light
+  function spotTargets() {
+    if (!SPOT) return null;
+    if (SPOT.type === "film") {
+      var f = FILMS[SPOT.key];
+      return { idx: {}, titles: {}, char: null, one: SPOT.key, title: f && f.t };
+    }
+    var c = (CAST.characters || []).find(function (x) { return x.n === SPOT.key; });
+    var titles = {}; (c ? c.films : []).forEach(function (t) { titles[t] = 1; });
+    return { idx: null, titles: titles, char: SPOT.key, one: -1, title: null };
+  }
+  function applySpotlight() {
+    var on = !!SPOT;
+    document.body.classList.toggle("spotlight", on);
+    var marks = document.querySelectorAll("main svg .spot");
+    marks.forEach(function (el) { el.classList.remove("spot"); });
+    if (!on) return;
+    var t = spotTargets();
+    // film marks: data-i
+    document.querySelectorAll("main svg [data-i]").forEach(function (el) {
+      var i = +el.getAttribute("data-i");
+      var hit = t.char == null ? i === t.one : !!t.titles[FILMS[i] && FILMS[i].t];
+      if (hit) el.classList.add("spot");
+    });
+    // character marks: data-c (roster rows, footprint rows, grid cells)
+    document.querySelectorAll("main svg [data-c]").forEach(function (el) {
+      if (t.char != null && el.getAttribute("data-c") === t.char) el.classList.add("spot");
+    });
+    // a film also lights the roster column for that film, so you see who was in it
+    if (t.char == null && t.title) {
+      document.querySelectorAll('main svg .rc[data-f]').forEach(function (el) {
+        if (el.getAttribute("data-f") === t.title) el.classList.add("spot");
+      });
+    }
+  }
+  // wiring
+  if (spotEls.palette && spotEls.input) {
+    spotEls.flag && spotEls.flag.addEventListener("click", openSpot);
+    spotEls.scrim.addEventListener("click", closeSpot);
+    spotEls.chip.addEventListener("click", clearSpot);
+    spotEls.input.addEventListener("input", renderSpotResults);
+    spotEls.input.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { e.preventDefault(); spotMoveSel(1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); spotMoveSel(-1); }
+      else if (e.key === "Enter") { e.preventDefault(); if (spotResults[spotSel]) chooseSpot(spotResults[spotSel]); }
+      else if (e.key === "Escape") { e.preventDefault(); closeSpot(); }
+    });
+    spotEls.results.addEventListener("click", function (e) {
+      var li = e.target.closest(".spot-opt"); if (!li) return;
+      var it = spotResults[+li.getAttribute("data-i")]; if (it) chooseSpot(it);
+    });
+    document.addEventListener("keydown", function (e) {
+      var el = document.activeElement, tag = el ? el.tagName : "";
+      var typing = tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (el && el.isContentEditable);
+      if (e.key === "/" && !spotIsOpen() && !typing) { e.preventDefault(); openSpot(); }
+      else if (e.key === "Escape" && !spotIsOpen() && SPOT) { clearSpot(); }
+    });
+  }
 })();
 </script>

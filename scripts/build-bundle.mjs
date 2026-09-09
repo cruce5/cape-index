@@ -16,6 +16,9 @@ const crc32 = (buf) => { let c = -1; for (const b of buf) c = CRC[(c ^ b) & 0xff
 function walk(dir) {
   const out = [];
   for (const name of readdirSync(dir).sort()) {
+    // the raw Gemini portraits and their crops live beside the bundle sources but are not part
+    // of it (the optimised ten ship from assets/reconcilers/); without this the zip grows 5 MB
+    if (/\.(jpe?g|png|webp)$/i.test(name) || name === "cropped") continue;
     const p = join(dir, name);
     if (statSync(p).isDirectory()) out.push(...walk(p));
     else out.push(p);

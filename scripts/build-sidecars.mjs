@@ -29,6 +29,20 @@ if (existsSync(ogPath)) {
   html = html.split("https://capeindex.com/og.png").join("https://capeindex.com/" + name);
   writeFileSync(htmlPath, html);
   console.log(`dist/${name} — share image, content-hashed`);
+} else {
+  // og-image.mjs is not in the build chain, so after its first run the plain og.png is gone
+  // and only the fingerprinted copy remains. Every later build regenerates index.html from
+  // source (which says og.png) and used to skip this block, shipping a meta tag that 404s:
+  // LinkedIn would have scraped the launch post with no image. Point the meta at whatever
+  // fingerprinted card is already in dist.
+  const existing = readdirSync(join(ROOT, "dist")).find((f) => /^og\.[0-9a-f]{10}\.png$/.test(f));
+  if (existing) {
+    html = html.split("https://capeindex.com/og.png").join("https://capeindex.com/" + existing);
+    writeFileSync(htmlPath, html);
+    console.log(`dist/${existing} — share image (existing), meta re-pointed`);
+  } else {
+    console.warn("WARNING: no share image in dist/ — run scripts/og-image.mjs; og:image will 404");
+  }
 }
 
 writeFileSync(

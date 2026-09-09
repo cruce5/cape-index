@@ -46,6 +46,9 @@ writeFileSync(join(ROOT, "dist/index.html"), doc.replace(/\r\n/g, "\n"));
 import { readdirSync, copyFileSync } from "node:fs";
 mkdirSync(join(ROOT, "dist/fonts"), { recursive: true });
 for (const f of readdirSync(join(ROOT, "assets/fonts"))) if (f.endsWith(".woff2")) copyFileSync(join(ROOT, "assets/fonts", f), join(ROOT, "dist/fonts", f));
+// The Reconcilers carousel loads one hero portrait per slide, self-hosted so the CSP img-src 'self' rule covers it.
+mkdirSync(join(ROOT, "dist/reconcilers"), { recursive: true });
+for (const f of readdirSync(join(ROOT, "assets/reconcilers"))) if (f.endsWith(".jpg")) copyFileSync(join(ROOT, "assets/reconcilers", f), join(ROOT, "dist/reconcilers", f));
 console.log(
   `dist/index.html — ${(doc.length / 1024).toFixed(0)} KB standalone · ` +
   `build/artifact.html — ${(fragment.length / 1024).toFixed(0)} KB fragment · ` +
