@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-07T15:00:41.560Z",
+    "generated": "2026-09-15T02:53:00.038Z",
     "currency": "USD",
     "grosses": "nominal lifetime gross unless a film is still in release (then as-of dated)",
     "universes": [
@@ -163,7 +163,7 @@
     },
     {
       "title": "The Avengers",
-      "release_date": "2012-05-04",
+      "release_date": "2012-05-12",
       "universe": "MCU",
       "universe_label": "Marvel Cinematic Universe",
       "studio_label": "Marvel Studios",
