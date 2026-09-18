@@ -526,9 +526,15 @@
   .spot-hint kbd { font-family: var(--font-mono); font-size: 10.5px; background: var(--surface-2); border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; margin-right: 2px; }
 
   .spot-chip { position: fixed; z-index: 180; left: 50%; bottom: 20px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px 8px 14px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-size: 13px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,0.28); cursor: pointer; animation: spot-pop 160ms cubic-bezier(.2,.9,.3,1.2); }
+  /* the display above overrode the hidden attribute (author CSS beats the UA [hidden] rule), so
+     the chip rendered on every load with no label and clearSpot could not hide it. This wins it back. */
+  .spot-chip[hidden] { display: none; }
   .spot-chip .spot-chip-ico { color: var(--note); }
-  .spot-chip .spot-chip-x { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); font-size: 12px; }
-  .spot-chip:hover .spot-chip-x { background: var(--neg); color: var(--page); }
+  .spot-chip .spot-chip-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
+  .spot-chip #spot-chip-label { max-width: 40vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .spot-chip .spot-chip-x { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-left: 2px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--surface-2); color: var(--ink-2); font-size: 14px; line-height: 1; }
+  .spot-chip:hover .spot-chip-x, .spot-chip:focus-visible .spot-chip-x { background: var(--neg); color: var(--page); border-color: var(--neg); }
+  .spot-chip:focus-visible { outline: 2px solid var(--dceu); outline-offset: 2px; }
 
   /* the effect itself: dim every film / character mark, then lift the matched ones */
   /* No transition on the dim: a per-mark opacity transition left already-rendered marks on the
@@ -860,7 +866,7 @@
   <ul class="spot-results" id="spot-results" role="listbox" aria-label="Matches"></ul>
   <div class="spot-hint"><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> move</span><span><kbd>&crarr;</kbd> spotlight</span><span><kbd>esc</kbd> close</span></div>
 </div>
-<button class="spot-chip" id="spot-chip" hidden><span class="spot-chip-ico" aria-hidden="true">&#9906;</span><span id="spot-chip-label"></span><span class="spot-chip-x" aria-hidden="true">&times;</span></button>
+<button class="spot-chip" id="spot-chip" type="button" aria-label="Clear spotlight" title="Clear spotlight (or press Esc)" hidden><span class="spot-chip-ico" aria-hidden="true">&#9906;</span><span class="spot-chip-tag">Spotlight</span><span id="spot-chip-label"></span><span class="spot-chip-x" aria-hidden="true">&times;</span></button>
 
 <header class="masthead">
   <div class="wrap">
@@ -1477,7 +1483,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>122 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>123 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1602,6 +1608,7 @@
           <li><b>&ldquo;Is the layout and flow and order and length of all of this satisfactory now?&rdquo;</b> Measured rather than felt: the report proper is 4,300 words, Reference is 7,100 of which 5,400 sit folded, and Act III is the long tab at eleven phone screens. One real finding: &sect;08 said &ldquo;association, not cause&rdquo; four times across its dek and design notes. <b>&ldquo;Trim it.&rdquo;</b> Once now.</li>
           <li><b>&ldquo;When someone uses the tab navigation in the middle of the page, I want it to spring to the top of that section, but scrolled down past the intro.&rdquo;</b> It jumps instantly to the act divider under the stuck strip now, with the filter bar settled into its collapsed state first so the landing is measured, not guessed. First attempt floored the jump on the strip&rsquo;s <span class="mono">offsetTop</span>, which for a stuck sticky element is wherever you already are, so it jumped nowhere. Floored on the masthead&rsquo;s bottom edge instead.</li>
           <li><b>&ldquo;Add a hero to the Reconcilers: a summoner. Using Meld&rsquo;s map, it reaches across the multiverse and brings in the perfect hero to audit this specific product, with its own strengths, weaknesses and model. In special cases, two summons, if it asks the user first and explains in character.&rdquo;</b> Beacon, the tenth hero, runs second. The standing eight own method; Beacon owns domain. It reads the map, names the one gap a specialist would catch that the eight cannot, and writes a full bespoke agent brief, a hero cast for this one product with a real weakness so Doctor Missedit has a tell. It stands down with empty hands when the eight already cover everything, and asks permission, in its own words, before ever calling a second.</li>
+          <li><b>&ldquo;What is this popup with a magnifying-glass thing and an x? It loads by default and won&rsquo;t close.&rdquo;</b> The Spotlight chip, showing empty on every load and refusing to clear. The chip&rsquo;s base rule set <span class="mono">display: inline-flex</span>, and an author display rule beats the browser&rsquo;s own <span class="mono">[hidden]</span> rule, so the <span class="mono">hidden</span> attribute did nothing: the chip rendered on load with no film, and <span class="mono">clearSpot</span> setting hidden could not take it away. A first pass only relabeled it, because I checked the <span class="mono">hidden</span> property, which read true, instead of the computed display. <span class="mono">.spot-chip[hidden]&nbsp;{&nbsp;display:&nbsp;none&nbsp;}</span> wins it back, and the pill now reads <span class="mono">Spotlight</span> with a real close button.</li>
         </ol>
       </details>
 
