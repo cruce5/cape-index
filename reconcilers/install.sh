@@ -26,7 +26,7 @@ case "$platform" in
     cat <<EOF
 
   THE RECONCILERS are on call in $target
-  Ten agents in .claude/agents, the skill in .claude/skills/reconcilers.
+  Eleven agents in .claude/agents, the skill in .claude/skills/reconcilers.
 
   Start Claude Code here and type:  /reconcilers
   Same Bat-time. Same Bat-channel.

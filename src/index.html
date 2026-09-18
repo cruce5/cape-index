@@ -1477,7 +1477,7 @@
       </div>
 
       <details class="card">
-        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>120 asks</span></summary>
+        <summary class="card-title">Every follow-up, in order<span class="cnt"><span class="sr-only">, </span>122 asks</span></summary>
         <ol class="asks">
           <li><b>&ldquo;Red Hulk&rsquo;s been in four movies? No way, bud.&rdquo;</b> Rebuilt how a character is identified across films.</li>
           <li>Show which films a character appears in, from the hover card itself.</li>
@@ -1600,6 +1600,8 @@
           <li><b>&ldquo;The halo is overriding some of the nearby points.&rdquo;</b> The &sect;03 bubbles draw a gold ring on the billion-dollar films, and each ring was painted just before its own bubble, so it sat on top of every neighbour drawn earlier. Rings go in a layer beneath all bubbles now, and the packing reserves the ring&rsquo;s width. Fixing it turned up a second bug: the spotlight dim rode a CSS transition that left marks on the visible tab stuck at full opacity. Instant dim now.</li>
           <li><b>&ldquo;Batman v Superman is way above the actual point. And on the other chart, two labels sit close together on the left while the right has none.&rdquo;</b> The label placer only nudged vertically on one side of the dot, so a callout facing the dense cloud climbed several lines to clear it. First fix: try both sides. <b>&ldquo;Things kind of got worse.&rdquo;</b> It had no idea where the chart ended, and put far-left dots&rsquo; labels off the canvas over the y axis. It knows the plot bounds now, tries both sides within them, stops at three lines, and takes the least-crowded spot if nothing is clear. The critic-vs-audience gaps all cluster in one corner, so the phone labels just the widest one there instead of stacking two.</li>
           <li><b>&ldquo;Is the layout and flow and order and length of all of this satisfactory now?&rdquo;</b> Measured rather than felt: the report proper is 4,300 words, Reference is 7,100 of which 5,400 sit folded, and Act III is the long tab at eleven phone screens. One real finding: &sect;08 said &ldquo;association, not cause&rdquo; four times across its dek and design notes. <b>&ldquo;Trim it.&rdquo;</b> Once now.</li>
+          <li><b>&ldquo;When someone uses the tab navigation in the middle of the page, I want it to spring to the top of that section, but scrolled down past the intro.&rdquo;</b> It jumps instantly to the act divider under the stuck strip now, with the filter bar settled into its collapsed state first so the landing is measured, not guessed. First attempt floored the jump on the strip&rsquo;s <span class="mono">offsetTop</span>, which for a stuck sticky element is wherever you already are, so it jumped nowhere. Floored on the masthead&rsquo;s bottom edge instead.</li>
+          <li><b>&ldquo;Add a hero to the Reconcilers: a summoner. Using Meld&rsquo;s map, it reaches across the multiverse and brings in the perfect hero to audit this specific product, with its own strengths, weaknesses and model. In special cases, two summons, if it asks the user first and explains in character.&rdquo;</b> Beacon, the tenth hero, runs second. The standing eight own method; Beacon owns domain. It reads the map, names the one gap a specialist would catch that the eight cannot, and writes a full bespoke agent brief, a hero cast for this one product with a real weakness so Doctor Missedit has a tell. It stands down with empty hands when the eight already cover everything, and asks permission, in its own words, before ever calling a second.</li>
         </ol>
       </details>
 
@@ -1700,7 +1702,7 @@
       <div class="view-head rec-head">
         <span class="num">§ 16 &nbsp;/&nbsp; THE RECONCILERS</span>
         <h3>Send in the heroes</h3>
-        <p class="dek">Nine heroes find what your reviewers missed: a number that stopped tying, a label that lies, a chart that misleads by accident. Ten minutes, on your machine, free. Then Doctor Missedit turns up uninvited and picks apart their findings.</p>
+        <p class="dek">Ten heroes find what your reviewers missed: a number that stopped tying, a label that lies, a chart that misleads by accident. One of them, Beacon, summons a specialist for your subject. Ten minutes, on your machine, free. Then Doctor Missedit turns up uninvited and picks apart their findings.</p>
       </div>
 
       <div class="rec-getstarted">
@@ -1743,7 +1745,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
       </div>
 
       <h4 class="rec-meet-title">Meet the roster</h4>
-      <p class="rec-meet-dek">Nine heroes each own one lane. They read cold, work in parallel, and don&rsquo;t compare notes until the compiled report. Then Doctor Missedit shows up uninvited.</p>
+      <p class="rec-meet-dek">Eight own a lane. Meld reads the room first, Beacon summons a specialist for your subject, and the rest work in parallel without comparing notes until the compiled report. Then Doctor Missedit shows up uninvited.</p>
 
       <!-- Hero portraits load as JPEGs from /reconcilers/ (self-hosted, CSP img-src self). -->
 
@@ -1754,16 +1756,25 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
           <button class="rec-nav rec-prev" type="button" aria-label="Previous hero" data-rec-dir="-1">&larr;</button>
           <div class="rec-track" id="rec-track" aria-live="polite">
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Meld, hero 1 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Meld, hero 1 of 11">
               <div class="rec-portrait"><img src="reconcilers/meld.jpg" width="800" height="1000" alt="Meld: cartographer with a shoulder braid and field vest, brass compass in her palm, a translucent city grid hovering behind her." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Meld <span class="model-chip">Sonnet</span></h5><div class="lane">Context &middot; not an audit lane &middot; goes in first</div><dl>
-                <dt>Powers</dt><dd>Walks into any codebase cold and comes out with the map: what it is, how it builds, where the data lives, where the numbers on the screen come from. The other nine read it before they move, so nobody audits a notebook for missing webpack.</dd>
+                <dt>Powers</dt><dd>Walks into any codebase cold and comes out with the map: what it is, how it builds, where the data lives, where the numbers on the screen come from. The other ten read it before they move, so nobody audits a notebook for missing webpack.</dd>
                 <dt>Weakness</dt><dd>Sees the whole system and wants to explain all of it. Will draw the map of a room asked to be checked for a chair.</dd>
                 <dt>Origin</dt><dd>Woke up in someone else&rsquo;s monorepo at three in the morning with no README, in the dark. Has been drawing the map for whoever walks in next ever since. Carries a compass and a lockpick set.</dd>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Ledger, hero 2 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Beacon, hero 2 of 11">
+              <div class="rec-portrait"><img src="reconcilers/beacon.jpg" width="800" height="1000" alt="Beacon: silver-haired woman in a violet suit holding a glowing summoning key, faint summoned heroes in the stained-glass rings behind her." loading="lazy" decoding="async"></div>
+              <div class="rec-info"><h5>Beacon <span class="model-chip">Opus</span></h5><div class="lane">The summon &middot; not an audit lane &middot; goes in second</div><dl>
+                <dt>Powers</dt><dd>Reads Meld&rsquo;s map and finds the one hole in it: the part of your product that is right or wrong on terms only a specialist knows, and that none of the standing eight were built to catch. Then reaches across the multiverse and calls that hero by name, casting a bespoke auditor for this one job with its own power, weakness, origin and the model the work deserves. A clinical dashboard gets someone who knows what a lab value may never imply; a model card gets someone who knows where the test set leaked into training.</dd>
+                <dt>Weakness</dt><dd>Loves to cast. Handed a plain product the eight already cover, will summon someone anyway, because an empty call feels like failure. The best summon is often no summon. When two domains truly need two heroes, asks you first, in character, and never calls a second on its own.</dd>
+                <dt>Origin</dt><dd>Was the analyst who, on every project, knew exactly which expert to pull into the room and was never in the room themselves. Learned that the pull was the whole job. Reaches across every universe there is now, and asks for nothing back but a name.</dd>
+              </dl></div>
+            </article>
+
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Ledger, hero 3 of 11">
               <div class="rec-portrait"><img src="reconcilers/ledger.jpg" width="800" height="1000" alt="Ledger: silver-haired elder with a silver bun, monocle on a gold chain, open leather ledger held across the forearm." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Ledger <span class="model-chip">Opus</span></h5><div class="lane">Data integrity</div><dl>
                 <dt>Powers</dt><dd>Touches a number and sees where it came from. Can smell a hand-typed figure from across the room. Nothing gets on the page without a source it can be walked back to.</dd>
@@ -1772,7 +1783,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Doppel, hero 3 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Doppel, hero 4 of 11">
               <div class="rec-portrait"><img src="reconcilers/doppel.jpg" width="800" height="1000" alt="Doppel: a single face with two overlapping profiles bleeding out of the silhouette, one bob and one fade, over a Venn diagram." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Doppel <span class="model-chip">Opus</span></h5><div class="lane">Entities and consistency</div><dl>
                 <dt>Powers</dt><dd>Sees every record that is secretly the same thing, and every thing that is secretly two records. The accented and the unaccented. The alias claimed a period early. The renamed category that now counts twice. Knows what the key was supposed to be.</dd>
@@ -1781,7 +1792,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Median, hero 4 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Median, hero 5 of 11">
               <div class="rec-portrait"><img src="reconcilers/median.jpg" width="800" height="1000" alt="Median: curly dark hair, oversized tortoise-shell glasses, big studio headphones around the neck, a bell-curve pin on the cardigan." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Median <span class="model-chip">Opus</span></h5><div class="lane">Statistics</div><dl>
                 <dt>Powers</dt><dd>Immune to outliers. Sees the n behind every average, the denominator behind every rate, the &ldquo;significant&rdquo; with no &ldquo;against what.&rdquo; Asks what the top ten do to the fit before anyone says the word trend.</dd>
@@ -1790,7 +1801,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Chartjunk, hero 5 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Chartjunk, hero 6 of 11">
               <div class="rec-portrait"><img src="reconcilers/chartjunk.jpg" width="800" height="1000" alt="Chartjunk: shaved head with a magenta streak, paint-splattered smock, fistful of markers, an X-marked pie chart on a stick." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Chartjunk <span class="model-chip">Opus</span></h5><div class="lane">Visualization craft &middot; reformed, allegedly</div><dl>
                 <dt>Powers</dt><dd>Has personally made every misleading chart at least once. The truncated axis, the dual scale, the rainbow ramp, the pie with fourteen slices, the bubble scaled by radius, the label sitting on the point it labels. Sees the anti-pattern before the render finishes.</dd>
@@ -1799,7 +1810,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Thumb, hero 6 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Thumb, hero 7 of 11">
               <div class="rec-portrait"><img src="reconcilers/thumb.jpg" width="800" height="1000" alt="Thumb: subway cap turned sideways, coral hoodie, oversized foam finger on one hand, scuffed phone in the other showing a dashboard." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Thumb <span class="model-chip">Sonnet</span></h5><div class="lane">UX &middot; the only member who actually uses the thing</div><dl>
                 <dt>Powers</dt><dd>Shrinks to the size of a phone screen and reads the product the way a stranger does: one thumb, on a train, no onboarding. Finds the scroll nobody knew to do, the control three taps deep, the filter that resets when you rotate.</dd>
@@ -1808,7 +1819,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Greyscale, hero 7 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Greyscale, hero 8 of 11">
               <div class="rec-portrait"><img src="reconcilers/greyscale.jpg" width="800" height="1000" alt="Greyscale: dark wraparound visor, black blazer, red-and-white cane in the crook of the elbow, mechanical keyboard slung across the back on a leather strap." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Greyscale <span class="model-chip">Sonnet</span></h5><div class="lane">Accessibility</div><dl>
                 <dt>Powers</dt><dd>Perceives the product through every channel except color: shape, order, text, and what the screen reader actually announces. If identity is carried by hue alone they cannot see it, and neither can eight percent of men or anyone who printed it. Keyboard only: if it cannot be tabbed to, it does not exist.</dd>
@@ -1817,7 +1828,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Redline, hero 8 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Redline, hero 9 of 11">
               <div class="rec-portrait"><img src="reconcilers/redline.jpg" width="800" height="1000" alt="Redline: silver hair pulled up with a red pen tucked in like a hair stick, cat-eye glasses on a beaded chain, marked-up printout in both hands." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Redline <span class="model-chip">Opus</span></h5><div class="lane">Editorial</div><dl>
                 <dt>Powers</dt><dd>The Red Pen. Draw it under a headline and the sentence has to say the finding, not the label. Catches the claim that rotted out from under its chart, the footnote describing last quarter&rsquo;s dataset, the hedge doing a number&rsquo;s job, the &ldquo;insight&rdquo; that is only a noun.</dd>
@@ -1826,7 +1837,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Payload, hero 9 of 10">
+            <article class="rec-slide" role="group" aria-roledescription="slide" aria-label="Payload, hero 10 of 11">
               <div class="rec-portrait"><img src="reconcilers/payload.jpg" width="800" height="1000" alt="Payload: matte-black tactical hoodie with hood up, small silver key on a cord, network topology halo of nodes and edges behind the head." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Payload <span class="model-chip">Sonnet</span></h5><div class="lane">Engineering, security, performance</div><dl>
                 <dt>Powers</dt><dd>Is the network tab. Reads the headers, the policy, the innerHTML a pasted string could walk straight through, the style recalc on every click, the observer created on every render and never released. Sees what the product does that nobody asked it to.</dd>
@@ -1835,7 +1846,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
               </dl></div>
             </article>
 
-            <article class="rec-slide villain" role="group" aria-roledescription="slide" aria-label="Doctor Missedit, the villain, slide 10 of 10">
+            <article class="rec-slide villain" role="group" aria-roledescription="slide" aria-label="Doctor Missedit, the villain, slide 11 of 11">
               <div class="rec-portrait"><img src="reconcilers/doctor_missedit.jpg" width="800" height="1000" alt="Doctor Missedit: waxed handlebar mustache, battered black top hat, monocle, crimson opera cape, long red fountain pen held aloft under a red spotlight." loading="lazy" decoding="async"></div>
               <div class="rec-info"><h5>Doctor Missedit <span class="model-chip">Fable</span></h5><div class="lane">The audit itself &middot; arrives uninvited</div><dl>
                 <dt>Powers</dt><dd>Encyclopedic knowledge of each hero&rsquo;s weakness, which is the same thing as knowing each lane&rsquo;s characteristic false positive. May only remove confidence from a finding, never add one. Verdicts: <b>stands</b>, <b>downgraded</b>, <b>artifact</b>, <b>fix mismatch</b>.</dd>
@@ -1856,7 +1867,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
       <div class="card">
         <h4 class="card-title">One more thing</h4>
         <p>Runs on <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a> by default. The bundle also ships an adapter for <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers/adapters" target="_blank" rel="noopener">Codex</a>, and a one-page <a href="https://github.com/cruce5/cape-index/blob/main/reconcilers/adapters/PORTING.md" target="_blank" rel="noopener">porting guide</a> for Cursor, Aider, Cline or a shell script. Standard model roster is Sonnet plus Opus. A flamethrower option puts every hero on Fable and warns you what it will cost in tokens.</p>
-        <p>Meant to feel like calling a superhero team, and specifically like 1966. The title card names the episode after your product, Meld reads the room first, eight heroes go in on one breath, the compiled report lands, and then <em>HOLD IT!</em> A shadow falls, Doctor Missedit turns up. Roll credits, three fixes to make first, same Bat-time, same Bat-channel. <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers" target="_blank" rel="noopener">Source on GitHub</a>.</p>
+        <p>Meant to feel like calling a superhero team, and specifically like 1966. The title card names the episode after your product, Meld reads the room, Beacon reaches across the multiverse for the one specialist your subject needs, the eight go in on one breath alongside the summon, the compiled report lands, and then <em>HOLD IT!</em> A shadow falls, Doctor Missedit turns up. Roll credits, three fixes to make first, same Bat-time, same Bat-channel. <a href="https://github.com/cruce5/cape-index/tree/main/reconcilers" target="_blank" rel="noopener">Source on GitHub</a>.</p>
       </div>
     </div>
   </section>
@@ -1869,7 +1880,7 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
 
 <footer class="foot">
   <div class="wrap">
-    Built by <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a>, rebuilt from his <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a>. Box office from Box Office Mojo, read <span id="foot-date">September 2026</span>. Source on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>. Spotted a wrong number? <a href="https://github.com/cruce5/cape-index/issues" target="_blank" rel="noopener">Open an issue</a> or <a href="mailto:hello@capeindex.com">email</a>. Not affiliated with Marvel, DC, Disney, Warner Bros. or Sony.
+    Built by <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">🏴‍☠️ Bill Yost</a>, rebuilt from his <a href="https://public.tableau.com/app/profile/bill.yost/viz/MarvelDCBoxOffice/Welcome" target="_blank" rel="noopener">Tableau Public workbook</a>. Box office from Box Office Mojo, read <span id="foot-date">September 2026</span>. Source on <a href="https://github.com/cruce5/cape-index" target="_blank" rel="noopener">GitHub</a>. Spotted a wrong number? <a href="https://github.com/cruce5/cape-index/issues" target="_blank" rel="noopener">Open an issue</a> or <a href="mailto:hello@capeindex.com">email</a>. More things nobody asked for at <a href="https://billyost.com/" target="_blank" rel="noopener">billyost.com</a>. Not affiliated with Marvel, DC, Disney, Warner Bros. or Sony.
   </div>
 </footer>
 
@@ -4471,7 +4482,24 @@ bash /path/to/reconcilers/install.sh --platform codex</code></pre>
     // once the bar was stuck, since a stuck element reports its position as wherever you already are.)
     if (opts.scroll) {
       var first = document.querySelector('main .act[data-tab="' + key + '"]');
-      if (first) first.scrollIntoView({ block: "start" });
+      if (first) {
+        // A tab click from mid-page springs to the top of that tab: the act divider sits right
+        // under the stuck strip, with the intro scrolled past. The strip is stuck at the
+        // destination, so settle the chrome into that state first (on desktop the filter bar is
+        // collapsed while stuck), measure it, then jump. Instant, not smooth: a 3000px animated
+        // scroll on a phone reads as the page flying away, and a layout change mid-animation
+        // could leave it short. Never above the strip's own top, so the masthead stays scrolled past.
+        var ctlEl = document.querySelector(".controls"), togEl = document.querySelector(".ctl-toggle"), mhEl = document.querySelector("header.masthead");
+        if (ctlEl && !isMobile()) { ctlEl.classList.add("collapsed"); ctlEl.classList.remove("open"); if (togEl) togEl.setAttribute("aria-expanded", "false"); }
+        updateStickyVars();
+        var stickyH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--sticky-h")) || 0;
+        var target = first.getBoundingClientRect().top + window.scrollY - stickyH - 8;
+        // floor at the masthead's bottom edge, which is the strip's natural top. NOT tabs.offsetTop:
+        // a stuck sticky element reports its stuck position, i.e. wherever you already are, and
+        // flooring on that clamped the jump to no jump at all.
+        if (mhEl) target = Math.max(target, mhEl.getBoundingClientRect().bottom + window.scrollY);
+        window.scrollTo({ top: Math.round(target), behavior: "instant" });
+      }
     }
   }
   // the tab strip clips on a phone and nothing said "there is more to the right": a fade on the strip

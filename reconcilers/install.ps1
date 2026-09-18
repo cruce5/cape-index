@@ -18,7 +18,7 @@ switch ($Platform) {
     Copy-Item -Path (Join-Path $bundle "SKILL.md") -Destination (Join-Path $target ".claude\skills\reconcilers\SKILL.md") -Force
     Write-Host ""
     Write-Host "  THE RECONCILERS are on call in $target"
-    Write-Host "  Ten agents in .claude\agents, the skill in .claude\skills\reconcilers."
+    Write-Host "  Eleven agents in .claude\agents, the skill in .claude\skills\reconcilers."
     Write-Host ""
     Write-Host "  Start Claude Code here and type:  /reconcilers"
     Write-Host "  Same Bat-time. Same Bat-channel."

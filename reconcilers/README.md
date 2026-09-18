@@ -2,7 +2,7 @@
 
 *They don't save the world. They check it.*
 
-Nine auditors and one villain, packaged as a Claude Code skill plus ten agent definitions, that you point at any data product: a dashboard, a report, a notebook, a public dataset, a model card, a single-file visualization. Each hero owns one lane. They work in parallel, they don't compare notes until the end, and every finding has to point at a line, a cell, or a screen. When the findings are in, Doctor Missedit turns up uninvited and audits the auditors.
+Ten heroes and one villain, packaged as a Claude Code skill plus eleven agent definitions, that you point at any data product: a dashboard, a report, a notebook, a public dataset, a model card, a single-file visualization. Eight own a lane of method. Meld reads the room first. Beacon reads the map back and summons a bespoke specialist for your product's subject, a hero cast for this one job and no other. They work in parallel, they don't compare notes until the end, and every finding has to point at a line, a cell, or a screen. When the findings are in, Doctor Missedit turns up uninvited and audits the auditors, the summon included.
 
 Built on and first run against [The Cape Index](https://capeindex.com), where the team found 78 things, 55 after the overlaps merged, and the Doctor found 7 places the fixes had missed.
 
@@ -10,7 +10,8 @@ Built on and first run against [The Cape Index](https://capeindex.com), where th
 
 | Hero | Lane | Model (standard issue) |
 |---|---|---|
-| **Meld** | Context. Reads the local stack first and draws the map the other eight follow, so nobody audits a notebook for missing webpack. Runs alone, before anyone else. | Sonnet |
+| **Meld** | Context. Reads the local stack first and draws the map the others follow, so nobody audits a notebook for missing webpack. Runs alone, before anyone else. | Sonnet |
+| **Beacon** | The summon. Reads Meld's map and calls the one specialist the standing eight cannot cover: a bespoke hero cast for this product's subject, with its own powers, weakness and model. Runs second. May ask to call a second, and asks you first. | Opus |
 | **Ledger** | Data integrity. Every number walks back to a source, or it doesn't get on the page. | Opus |
 | **Doppel** | Entities and consistency. The same thing under two names; two things under one. | Opus |
 | **Median** | Statistics. The n behind every average, the denominator behind every rate. | Opus |
@@ -65,7 +66,7 @@ codex
 > run the Reconcilers episode against this repo
 ```
 
-The skill asks three things: what the product is (one line), which model roster, and whether it may use the browser. Then Meld goes in, then the eight, then the report, then the surprise.
+The skill asks three things: what the product is (one line), which model roster, and whether it may use the browser. Then Meld goes in, then Beacon calls the specialist, then the eight and the summon run together, then the report, then the surprise.
 
 Every report lands in `.reconcilers/` inside the target directory: `context.md` (Meld's map), one file per hero, `REPORT.md` (the compiled, ranked, deduplicated list), and `missedit.md` (the verdicts). Add `.reconcilers/` to your `.gitignore` or commit it; both are fine.
 

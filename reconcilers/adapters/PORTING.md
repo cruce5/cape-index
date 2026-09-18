@@ -1,6 +1,6 @@
 # Porting The Reconcilers to another agent runtime
 
-The team is defined by one skill (the episode) and ten briefs (one per hero, one for the villain). Any agent runtime that can (a) read a file, (b) write a file, and (c) follow a checklist can host the Reconcilers. This page describes the protocol.
+The team is defined by one skill (the episode) and eleven briefs (one per hero, one for the villain), plus one brief written at runtime by Beacon for whatever it summons. Any agent runtime that can (a) read a file, (b) write a file, and (c) follow a checklist can host the Reconcilers. This page describes the protocol.
 
 ## The protocol, in one page
 
@@ -8,9 +8,10 @@ The team is defined by one skill (the episode) and ten briefs (one per hero, one
 2. **State**: a folder `<target>/.reconcilers/` where every report lands.
 3. **Order**:
    - `context.md` (Meld) is written first, alone.
-   - Every other hero reads `context.md` before writing their own report.
+   - `summons/<slug>.md` (Beacon) is written second: Beacon reads `context.md` and either casts one bespoke specialist brief for the product's subject or stands down. A second summon needs the analyst's yes.
+   - Every other hero, and the summon, reads `context.md` before writing their own report.
    - Heroes do not read each other's reports.
-   - `REPORT.md` (the compiler) reads all eight hero reports and Meld's map.
+   - `REPORT.md` (the compiler) reads all the hero reports, the summon's report, and Meld's map.
    - `missedit.md` (the villain) reads all of the above.
 4. **Output shape** (per hero):
    - Title line: `<HERO> · <lane>`
@@ -31,7 +32,7 @@ The team is defined by one skill (the episode) and ten briefs (one per hero, one
 ## Two runtimes we ship
 
 - **Claude Code** (the default): `SKILL.md` (the episode) + `agents/*.md` (one file per hero, with model frontmatter). Installed to `.claude/skills/reconcilers/` and `.claude/agents/`. Ten agents run in parallel from one dispatcher.
-- **Codex**: `adapters/codex/AGENTS.md`, dropped at the repo root. One agent runs the ten lanes sequentially. Same briefs, same rules, same output.
+- **Codex**: `adapters/codex/AGENTS.md`, dropped at the repo root. One agent runs the lanes and Beacon's summon sequentially. Same briefs, same rules, same output.
 
 ## Adding a runtime
 
