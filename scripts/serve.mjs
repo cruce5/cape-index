@@ -1,7 +1,7 @@
 // Minimal static server for local preview of dist/.
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
-import { join, extname } from "node:path";
+import { join, extname, normalize, sep } from "node:path";
 import { ROOT } from "./lib-bom.mjs";
 
 const PORT = process.env.PORT || 4599;
@@ -19,3 +19,10 @@ createServer(async (req, res) => {
     res.writeHead(404); res.end("not found");
   }
 }).listen(PORT, () => console.log(`serving dist/ on http://localhost:${PORT}`));
+
+// resolve a request path inside DIR only; "..", encoded or not, can't climb out
+function safeJoin(dir, p) {
+  const full = normalize(join(dir, decodeURIComponent(p)));
+  if (full !== dir && !full.startsWith(dir + sep)) throw new Error("outside dist/");
+  return full;
+}

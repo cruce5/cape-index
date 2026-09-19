@@ -13,6 +13,9 @@ import { toReal2025 } from "./inflation.mjs";
 const scraped = JSON.parse(readFileSync(join(ROOT, "data/scraped.json"), "utf8"));
 const additions = JSON.parse(readFileSync(join(ROOT, "data/additions.json"), "utf8")).candidates;
 const skeleton = JSON.parse(readFileSync(join(ROOT, "data/skeleton.json"), "utf8"));
+// Release dates the legacy sheet got wrong (Turnstile audit, 2026-09-19). The sheet stays as it was
+// for the diff; the correction is applied here, by title, and each carries its source.
+const DATE_FIX = JSON.parse(readFileSync(join(ROOT, "data/trade-conventions.json"), "utf8")).release_date_fixes;
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
@@ -41,8 +44,8 @@ for (const [key, rec] of Object.entries(scraped)) {
   const universe = add?.universe || legacy?.universe || "UNKNOWN";
   const universe_label = add?.universe_label || legacy?.universe_label || universe;
   const studio_label = add?.studio_label || legacy?.studio_label || universe_label;
-  const release_date = add?.release_date || legacy?.release_date || `${rec.year}-01-01`;
   const title = CANON_TITLE[rec.title] || rec.title;
+  const release_date = DATE_FIX[title]?.date || add?.release_date || legacy?.release_date || `${rec.year}-01-01`;
   const year = Number(release_date.slice(0, 4));
 
   if (p.worldwide == null) {

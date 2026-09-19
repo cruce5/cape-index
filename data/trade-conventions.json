@@ -1,0 +1,24 @@
+{
+  "note": "Box-office trade conventions the raw scrape does not encode, from the Turnstile audit of 2026-09-19 (a Reconcilers summon). Every figure here was confirmed against Box Office Mojo before it went in. promote.mjs applies release_date_fixes; build-web.mjs applies the rest to web.json. tie-out.mjs fails the build if a film opens on a day other than Friday without an entry in opening_through_first_sunday.",
+  "release_date_fixes": {
+    "The Avengers": { "date": "2012-05-04", "was": "2012-05-12", "source": "BOM release group gr1911837189, Domestic row: May 4, 2012. The legacy sheet had May 12, a Saturday." },
+    "The Suicide Squad": { "date": "2021-08-06", "was": "2021-08-05", "source": "BOM title tt6334354, Domestic row; Wikipedia infobox 2021|8|6|United States" },
+    "Aquaman and the Lost Kingdom": { "date": "2023-12-22", "was": "2023-12-20", "source": "BOM title tt9663764, Domestic row; Wikipedia infobox 2023|12|22|United States" }
+  },
+  "opening_through_first_sunday": {
+    "Spider-Man 2": { "value": 152411751, "window": "Wed to Sun, 5 days", "source": "BOM rl896763393 daily, Jun 30 to Jul 4, 2004 (To Date)" },
+    "Batman Begins": { "value": 72896986, "window": "Wed to Sun, 5 days", "source": "BOM rl3510994433 daily, Jun 15 to Jun 19, 2005 (To Date)" },
+    "The Amazing Spider-Man": { "value": 137022258, "window": "Tue to Sun, 6 days, with Monday previews", "source": "BOM rl930317825 daily, Jul 2 to Jul 8, 2012 (To Date)" },
+    "Spider-Man: Far From Home": { "value": 185063062, "window": "Tue to Sun, 6 days", "source": "BOM rl3791750657 daily, Jul 2 to Jul 7, 2019 (To Date)" },
+    "Madame Web": { "value": 23540479, "window": "Wed to Sun, 5 days", "source": "BOM rl1379697409 daily, Feb 14 to Feb 18, 2024 (To Date)" }
+  },
+  "domestic_original_run": {
+    "Deadpool 2": { "value": 318491426, "source": "BOM title tt5463162, Original Release group. Lifetime domestic also carries Once Upon a Deadpool, the PG-13 recut ($6,100,309)." },
+    "Spider-Man: No Way Home": { "value": 804793477, "source": "BOM title tt10872600, Original Release group. Lifetime domestic also carries the 2022 re-release ($9,321,593) and the 2024 Columbia 100th Anniversary run ($6,013,515)." }
+  },
+  "day_and_date": {
+    "Wonder Woman 1984": { "where": "HBO Max", "source": "Wikipedia cache wiki-Wonder_Woman_1984.txt: simultaneous release on HBO Max (Christmas Day 2020)" },
+    "Black Widow": { "where": "Disney+ Premier Access", "source": "BOM title tt3480822, Streaming - PVOD release group, July 9, 2021" },
+    "The Suicide Squad": { "where": "HBO Max", "source": "Wikipedia cache wiki-The_Suicide_Squad_film_.txt: simultaneously in theaters and on HBO Max" }
+  }
+}

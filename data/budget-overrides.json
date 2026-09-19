@@ -1,16 +1,21 @@
 {
-  "note": "PRODUCTION budgets (USD), r/boxoffice convention: the number used for break-even math, NOT a marketing-inclusive figure. Source order per film: the studio's own filing (UK Companies House / Disney disclosures) net of rebates where one exists; otherwise Box Office Mojo's production figure; otherwise the widely cited figure, lower bound of a range. Every entry here is budget_estimated:true. Applied last, after BOM and Wikipedia. The 2026-09-08 audit found six MCU films pinned to $200M pre-release guesses while filings showed $236M to $534M; those now carry the filed net figure. Superman was pinned at $225M which matches BOM verbatim, so the override was a no-op and Ledger flagged the discrepancy; removed 2026-09-08.",
+  "note": "PRODUCTION budgets (USD), r/boxoffice convention: the number used for break-even math, NOT a marketing-inclusive figure. Source order per film: the studio's own filing (UK Companies House / Disney disclosures) net of rebates where one exists; otherwise Box Office Mojo's production figure; otherwise the widely cited figure, lower bound of a range. Every entry here is budget_estimated:true. Applied last, after BOM and Wikipedia. The 2026-09-08 audit found six MCU films pinned to $200M pre-release guesses while filings showed $236M to $534M; those now carry the filed net figure. Superman was pinned at $225M which matches BOM verbatim, so the override was a no-op and Ledger flagged the discrepancy; removed 2026-09-08. The 2026-09-19 Turnstile audit found five pins at the top of their ranges, against this file's own lower-bound rule (Blue Beetle, Shazam! Fury of the Gods, Joker: Folie à Deux, Venom: The Last Dance, and First Steps' gross rather than its net); corrected. filed_net lists the six films whose figure comes from a studio filing: most of their peers carry BOM or press figures, and the page flags these six wherever it compares them.",
   "sources": {
     "Deadpool & Wolverine": "Disney filing: $533.7M gross, $429M net of rebates (Wikipedia infobox); BOM $537M all-in",
     "Doctor Strange in the Multiverse of Madness": "UK filing: $414.9M gross, $350.6M net",
     "Ant-Man and the Wasp: Quantumania": "UK filing: $388.4M gross, $330.1M net",
-    "Black Widow": "Wikipedia infobox, $288.5M",
-    "Eternals": "Wikipedia infobox, $236.2M",
+    "Black Widow": "Forbes (Caroline Reid) reading of the UK filing, $288.5M; cited in the Wikipedia infobox",
+    "Eternals": "Forbes (Caroline Reid) reading of the UK filing, $236.2M; cited in the Wikipedia infobox",
     "The Marvels": "UK filing: $374M gross, $307.3M net",
     "Supergirl": "Wikipedia infobox, $170 to 186M net; lower bound, the same rule as Aquaman and Black Adam",
     "Spider-Man: Brand New Day": "Wikipedia infobox, $225M",
     "Aquaman": "Wikipedia range $160 to 200M, lower bound",
-    "Black Adam": "Wikipedia range $190 to 260M, lower bound"
+    "Black Adam": "Wikipedia range $190 to 260M, lower bound",
+    "Blue Beetle": "Wikipedia range $104 to 125M, lower bound",
+    "Shazam! Fury of the Gods": "Wikipedia range $110 to 125M, lower bound",
+    "Joker: Folie à Deux": "Wikipedia range $190 to 200M, lower bound",
+    "Venom: The Last Dance": "Wikipedia range $110 to 120M, lower bound",
+    "The Fantastic Four: First Steps": "Wikipedia infobox, $229.6M gross and $181M net; the net figure, as the rule prefers"
   },
   "budgets": {
     "Doctor Strange in the Multiverse of Madness": 350600000,
@@ -22,11 +27,11 @@
     "Ant-Man and the Wasp: Quantumania": 330100000,
     "The Marvels": 307300000,
     "The Flash": 200000000,
-    "Blue Beetle": 120000000,
+    "Blue Beetle": 104000000,
     "Aquaman and the Lost Kingdom": 205000000,
-    "Shazam! Fury of the Gods": 125000000,
-    "Joker: Folie à Deux": 200000000,
-    "The Fantastic Four: First Steps": 200000000,
+    "Shazam! Fury of the Gods": 110000000,
+    "Joker: Folie à Deux": 190000000,
+    "The Fantastic Four: First Steps": 181000000,
     "Thunderbolts*": 180000000,
     "Supergirl": 170000000,
     "Captain America: Brave New World": 180000000,
@@ -34,7 +39,7 @@
     "Venom: Let There Be Carnage": 110000000,
     "Morbius": 75000000,
     "Madame Web": 80000000,
-    "Venom: The Last Dance": 120000000,
+    "Venom: The Last Dance": 110000000,
     "Kraven the Hunter": 110000000,
     "The Amazing Spider-Man 2": 200000000,
     "The New Mutants": 67000000,
@@ -44,5 +49,13 @@
   "rt_critic_note": "Filled only where OMDb and Wikipedia both omit a literal RT %. From rottentomatoes.com.",
   "rt_critic": {
     "The Suicide Squad": 90
-  }
+  },
+  "filed_net": [
+    "Deadpool & Wolverine",
+    "Doctor Strange in the Multiverse of Madness",
+    "Ant-Man and the Wasp: Quantumania",
+    "Black Widow",
+    "Eternals",
+    "The Marvels"
+  ]
 }

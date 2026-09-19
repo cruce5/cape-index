@@ -96,6 +96,18 @@ const CLAIMS = [
   { name: "§15 follow-up count on the fold", grab: new RegExp('Every follow-up, in order<span class="cnt">(?:<span class="sr-only">[^<]*</span>)?([0-9]+) asks'), want: String(countItems("asks", "li")) },
   { name: "§15 bug count on the fold", grab: new RegExp('The bugs<span class="cnt">(?:<span class="sr-only">[^<]*</span>)?([0-9]+) caught'), want: String(countAfter("The bugs", "dt")) },
   { name: "§15 design-call count on the fold", grab: new RegExp('The design calls<span class="cnt">(?:<span class="sr-only">[^<]*</span>)?([0-9]+) calls'), want: String(countAfter("The design calls", "dt")) },
+  // --- added after the 2026-09-19 Turnstile audit (box-office conventions) ---------------------
+  { name: "every midweek opener's multiplier counts its opening through the first Sunday",
+    also: () => { const odd = F.filter((f) => f.open && new Date(f.date + "T12:00:00Z").getUTCDay() !== 5 && !f.open1);
+      return odd.length === 0 || `opens on a non-Friday with no entry in data/trade-conventions.json opening_through_first_sunday: ${odd.map((f) => f.t + " (" + f.date + ")").join(", ")}`; } },
+  { name: "§07 note counts the midweek openers", grab: /The ([a-z]+) midweek openers/, want: WORD[F.filter((f) => f.open1).length] },
+  { name: "§14 filed-budget count", grab: /\(([a-z]+) recent Marvel Studios films, \$([0-9]+)M to \$[0-9]+M/, want: WORD[F.filter((f) => f.filed).length],
+    want2: String(Math.round(Math.min(...F.filter((f) => f.filed).map((f) => f.budget)) / 1e6)) },
+  { name: "§14 filed-budget top of range", grab: /recent Marvel Studios films, \$[0-9]+M to \$([0-9]+)M/, want: String(Math.round(Math.max(...F.filter((f) => f.filed).map((f) => f.budget)) / 1e6)) },
+  { name: "§06 static dek flags a filed-cost widest miss exactly when it is one",
+    also: () => { const done = F.filter((f) => f.final && f.budget); const miss = done.slice().sort((a, b) => (a.ww - 2.5 * a.budget) - (b.ww - 2.5 * b.budget))[0];
+      const dek = (html.match(/<p class="dek" id="d-profit">([\s\S]*?)<\/p>/) || [])[1] || ""; const says = dek.includes("studio&rsquo;s own filing");
+      return says === !!miss.filed || `widest miss is ${miss.t} (filed: ${!!miss.filed}); the static dek ${says ? "says" : "does not say"} it is a filing`; } },
 ];
 
 // count <li>/<dt> inside one §15 card, so its hand-typed "N asks" can't drift
