@@ -45,6 +45,13 @@ if (existsSync(ogPath)) {
   }
 }
 
+// The Reconcilers moved to their own site. Old links to /reconcilers.zip (the launch post among
+// them) hand off to the new zip. 302 until the team has a permanent domain, then 301. Any zip left
+// in dist/ by an older build is removed first, so a stale file can never answer instead.
+const RECONCILERS = "https://reconcilers.williamfyost.workers.dev";
+if (existsSync(join(ROOT, "dist/reconcilers.zip"))) unlinkSync(join(ROOT, "dist/reconcilers.zip"));
+writeFileSync(join(ROOT, "dist/_redirects"), ["/reconcilers.zip " + RECONCILERS + "/reconcilers.zip 302", "/reconcilers " + RECONCILERS + "/ 302", ""].join("\n"));
+
 writeFileSync(
   join(ROOT, "dist/robots.txt"),
   ["User-agent: *", "Allow: /", "Disallow: /404", "Sitemap: https://capeindex.com/sitemap.xml", ""].join("\n")
