@@ -6,6 +6,12 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["scripts/serve.mjs"],
       "port": 4599
+    },
+    {
+      "name": "reconcilers",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["wrangler", "dev", "-c", "../reconcilers/wrangler.jsonc", "--port", "8788"],
+      "port": 8788
     }
   ]
 }
