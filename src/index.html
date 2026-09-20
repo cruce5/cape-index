@@ -643,9 +643,9 @@
   .view-head.rec-head .dek { margin-top: 8px; max-width: 62rem; }
   /* §16 teaser: the team moved to its own site; this is the door across */
   .rec-teaser { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 24px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow); }
-  .rec-faces { display: flex; }
-  .rec-faces img { width: 64px; height: 80px; object-fit: cover; border-radius: 10px; border: 2px solid var(--surface); background: var(--surface-2); }
-  .rec-faces img + img { margin-left: -14px; }
+  .rec-faces { display: grid; grid-template-columns: repeat(3, 112px); gap: 8px; }
+  .rec-faces img { width: 112px; height: 112px; object-fit: cover; border-radius: 10px; border: 2px solid var(--surface); background: var(--surface-2); }
+  
   .rec-faces img:last-child { border-color: color-mix(in srgb, var(--neg) 55%, var(--surface)); }
   .rec-teaser-body h4 { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 0 0 6px; letter-spacing: -0.01em; }
   .rec-teaser-body p { font-size: 15px; line-height: 1.55; color: var(--ink-2); margin: 0; max-width: 68ch; }
@@ -659,7 +659,8 @@
   .rec-alt { font-size: 14px; }
   @media (max-width: 760px) {
     .rec-teaser { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 18px; }
-    .rec-faces img { width: 52px; height: 65px; }
+    .rec-faces { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+    .rec-faces img { width: 100%; height: auto; aspect-ratio: 1; }
     .rec-stats { gap: 20px; }
     .rec-stats dd { font-size: 24px; }
   }
@@ -1664,11 +1665,11 @@
 
       <div class="rec-teaser">
         <div class="rec-faces">
-          <img src="reconcilers/meld.jpg" width="800" height="1000" alt="Meld" loading="lazy" decoding="async">
-          <img src="reconcilers/beacon.jpg" width="800" height="1000" alt="Beacon" loading="lazy" decoding="async">
-          <img src="reconcilers/ledger.jpg" width="800" height="1000" alt="Ledger" loading="lazy" decoding="async">
-          <img src="reconcilers/chartjunk.jpg" width="800" height="1000" alt="Chartjunk" loading="lazy" decoding="async">
-          <img src="reconcilers/doctor_missedit.jpg" width="800" height="1000" alt="Doctor Missedit" loading="lazy" decoding="async">
+          <img src="reconcilers/meld.jpg" width="720" height="720" alt="Meld" loading="lazy" decoding="async">
+          <img src="reconcilers/beacon.jpg" width="720" height="720" alt="Beacon" loading="lazy" decoding="async">
+          <img src="reconcilers/ledger.jpg" width="720" height="720" alt="Ledger" loading="lazy" decoding="async">
+          <img src="reconcilers/chartjunk.jpg" width="720" height="720" alt="Chartjunk" loading="lazy" decoding="async">
+          <img src="reconcilers/doctor_missedit.jpg" width="720" height="720" alt="Doctor Missedit" loading="lazy" decoding="async">
         </div>
         <div class="rec-teaser-body">
           <h4>They have their own site now</h4>

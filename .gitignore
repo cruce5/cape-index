@@ -16,6 +16,5 @@ scripts/local.env.ps1
 .env.local
 .reconcilers/
 
-# raw Gemini portraits + crops: working files, 5 MB; the optimised ten ship from assets/reconcilers/
-reconcilers/*.jpg
-reconcilers/cropped/
+# raw hero art: working files at full size; the optimised set ships from assets/reconcilers/
+assets/new_reconcilers/
