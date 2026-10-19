@@ -2837,18 +2837,18 @@
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 954476970,
-      "international": 1551000000,
-      "worldwide": 2505476970,
+      "domestic": 958290528,
+      "international": 1558000000,
+      "worldwide": 2516290528,
       "opening_weekend_domestic": 360091572,
       "budget": null,
       "earliest_release_date": "July 29, 2026 (6 markets)",
       "mpaa": "PG-13",
       "running_time_minutes": 145,
-      "genres": "Action Adventure",
+      "genres": "Action &middot; Adventure",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-10-05T15:00:27.738Z"
+    "scraped_at": "2026-10-19T15:00:23.101Z"
   },
   "avengers-doomsday-2026": {
     "title": "Avengers: Doomsday",
@@ -2870,10 +2870,10 @@
       "earliest_release_date": "December 18, 2026 (Domestic)",
       "mpaa": null,
       "running_time_minutes": 165,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-10-05T15:00:34.948Z"
+    "scraped_at": "2026-10-19T15:00:28.145Z"
   },
   "supergirl-2026": {
     "title": "Supergirl",
@@ -2895,10 +2895,10 @@
       "earliest_release_date": "June 24, 2026 (APAC)",
       "mpaa": "PG-13",
       "running_time_minutes": 108,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-10-05T15:00:39.686Z"
+    "scraped_at": "2026-10-19T15:00:34.649Z"
   },
   "clayface-2026": {
     "title": "Clayface",
@@ -2920,9 +2920,9 @@
       "earliest_release_date": "October 23, 2026 (Domestic)",
       "mpaa": "R",
       "running_time_minutes": 108,
-      "genres": "Horror Sci-Fi Thriller",
+      "genres": "Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-10-05T15:00:44.740Z"
+    "scraped_at": "2026-10-19T15:00:40.504Z"
   }
 }
