@@ -1,6 +1,6 @@
 # Reconciliation — legacy sheet vs Box Office Mojo
 
-_Generated 2026-10-05. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
+_Generated 2026-11-03. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
 
 ## Summary
 
@@ -10,8 +10,8 @@ _Generated 2026-10-05. Source of truth: Box Office Mojo (boxofficemojo.com) titl
 | Exact match (no change) | 34 |
 | Minor drift (< $1M worldwide) | 11 |
 | **Material change (≥ $1M worldwide)** | **5** |
-| New films added (verified) | 41 |
-| Held out (unreleased on BOM) | 2 |
+| New films added (verified) | 42 |
+| Held out (unreleased on BOM) | 1 |
 | Legacy total worldwide | $38,797,637,720 |
 | Verified total worldwide | $38,813,899,440 |
 | Net change | +$16,261,720 |
@@ -90,12 +90,12 @@ Iron Man · The Incredible Hulk · Iron Man 2 · Thor · Captain America: The Fi
 | Superman | DCU | 2025-07-11 | $354,223,803 | $264,500,000 | $618,723,803 | yes |
 | The Fantastic Four: First Steps | MCU | 2025-07-25 | $274,286,610 | $247,572,118 | $521,858,728 | yes |
 | Supergirl | DCU | 2026-06-26 | $72,366,532 | $54,100,000 | $126,466,532 | yes |
-| Spider-Man: Brand New Day | MCU | 2026-07-31 | $954,476,970 | $1,551,000,000 | $2,505,476,970 | **still in release** |
+| Spider-Man: Brand New Day | MCU | 2026-07-31 | $958,886,996 | $1,560,735,770 | $2,519,622,766 | **still in release** |
+| Clayface | DCU | 2026-09-11 | $44,666,368 | $38,900,000 | $83,566,368 | **still in release** |
 
 ## Held out (no worldwide gross on Box Office Mojo)
 
 - **Avengers: Doomsday** (2026-12-18, MCU) — no worldwide gross on Box Office Mojo (unreleased). https://www.boxofficemojo.com/title/tt21357150/
-- **Clayface** (2026-09-11, DCU) — no worldwide gross on Box Office Mojo (unreleased). https://www.boxofficemojo.com/title/tt34890576/
 
 ## Notes
 

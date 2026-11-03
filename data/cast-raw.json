@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T16:53:30.905Z",
+  "generated": "2026-11-03T03:44:59.565Z",
   "source": "English Wikipedia film Cast sections",
   "films": {
     "X-Men": {
@@ -5441,7 +5441,7 @@
     "The Suicide Squad": {
       "page": "The Suicide Squad (film)",
       "universe": "DCEU",
-      "date": "2021-08-05",
+      "date": "2021-08-06",
       "cast": [
         {
           "order": 1,
@@ -6783,7 +6783,7 @@
     "Aquaman and the Lost Kingdom": {
       "page": "Aquaman and the Lost Kingdom",
       "universe": "DCEU",
-      "date": "2023-12-20",
+      "date": "2023-12-22",
       "cast": [
         {
           "order": 1,
@@ -7625,6 +7625,43 @@
           "minor": false,
           "actor": "Mark Ruffalo",
           "character": "Bruce Banner / Hulk"
+        }
+      ]
+    },
+    "Clayface": {
+      "page": "Clayface (film)",
+      "universe": "DCU",
+      "date": "2026-09-11",
+      "cast": [
+        {
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Rhys Harries",
+          "character": "Matt Hagen / Clayface"
+        },
+        {
+          "order": 2,
+          "minor": false,
+          "actor": "Naomi Ackie",
+          "character": "Dr. Caitlyn Corr"
+        },
+        {
+          "order": 3,
+          "minor": false,
+          "actor": "David Dencik",
+          "character": "Markos Szabo"
+        },
+        {
+          "order": 4,
+          "minor": false,
+          "actor": "Max Minghella",
+          "character": "John Borrelli"
+        },
+        {
+          "order": 5,
+          "minor": false,
+          "actor": "Eddie Marsan",
+          "character": "Frank Fitzpatrick"
         }
       ]
     }

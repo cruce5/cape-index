@@ -2837,18 +2837,18 @@
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 958290528,
-      "international": 1558000000,
-      "worldwide": 2516290528,
+      "domestic": 958886996,
+      "international": 1560735770,
+      "worldwide": 2519622766,
       "opening_weekend_domestic": 360091572,
       "budget": null,
-      "earliest_release_date": "July 29, 2026 (6 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 29, 2026 (6 areas)",
+      "mpaa": null,
       "running_time_minutes": 145,
       "genres": "Action &middot; Adventure",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-10-19T15:00:23.101Z"
+    "scraped_at": "2026-11-03T03:43:39.642Z"
   },
   "avengers-doomsday-2026": {
     "title": "Avengers: Doomsday",
@@ -2867,13 +2867,13 @@
       "worldwide": null,
       "opening_weekend_domestic": null,
       "budget": null,
-      "earliest_release_date": "December 18, 2026 (Domestic)",
+      "earliest_release_date": "Fri Dec 18, 2026 (Domestic)",
       "mpaa": null,
       "running_time_minutes": 165,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "genres": "Action",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-10-19T15:00:28.145Z"
+    "scraped_at": "2026-11-03T03:43:44.762Z"
   },
   "supergirl-2026": {
     "title": "Supergirl",
@@ -2892,13 +2892,13 @@
       "worldwide": 126466532,
       "opening_weekend_domestic": 37102018,
       "budget": null,
-      "earliest_release_date": "June 24, 2026 (APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 24, 2026 (APAC)",
+      "mpaa": null,
       "running_time_minutes": 108,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-10-19T15:00:34.649Z"
+    "scraped_at": "2026-11-03T03:43:49.845Z"
   },
   "clayface-2026": {
     "title": "Clayface",
@@ -2910,19 +2910,19 @@
     "bom_url": "https://www.boxofficemojo.com/title/tt34890576/",
     "matchedText": "(pinned id)",
     "candidates": null,
-    "status": "unreleased-or-no-gross",
+    "status": "ok",
     "parsed": {
-      "domestic": null,
-      "international": null,
-      "worldwide": null,
-      "opening_weekend_domestic": null,
+      "domestic": 44666368,
+      "international": 38900000,
+      "worldwide": 83566368,
+      "opening_weekend_domestic": 24002731,
       "budget": null,
-      "earliest_release_date": "October 23, 2026 (Domestic)",
-      "mpaa": "R",
+      "earliest_release_date": "Wed Oct 21, 2026 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 108,
       "genres": "Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-10-19T15:00:40.504Z"
+    "scraped_at": "2026-11-03T03:43:55.476Z"
   }
 }

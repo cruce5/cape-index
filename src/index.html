@@ -960,8 +960,8 @@
         <button class="minibtn" data-table="treemap" aria-pressed="false" style="margin-top:12px">Show data</button>
         <div id="table-treemap" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
-          <dt>Question</dt><dd>Where is the money concentrated across all 91 films at once?</dd>
-          <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 91-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
+          <dt>Question</dt><dd>Where is the money concentrated across all 92 films at once?</dd>
+          <dt>Why this form</dt><dd>A treemap fits every film on one screen with area doing the work. A 92-row bar chart would need a long scroll and lose the sense of proportion. It&rsquo;s built for &ldquo;a few things are huge, most are not.&rdquo;</dd>
           <dt>Choices here</dt><dd>Squarified layout keeps rectangles near square so their areas stay comparable. A label appears only where it fits with padding, a clipped title is worse than none. Color is universe identity, never a value ramp.</dd>
           <dt>Watch for</dt><dd>People judge area badly, long thin rectangles especially. Use it for the gestalt; use the tooltip or the table for the exact number.</dd>
         </dl></div>
@@ -1013,7 +1013,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Is there a trend in film size over 25 years, and which films broke away from the pack?</dd>
           <dt>Why this form</dt><dd>Two continuous axes, date and gross, is the textbook scatter. Reference lines at $1B and $2B give the eye something to measure against.</dd>
-          <dt>Choices here</dt><dd>The palette is a color-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of color blindness, so a sixth is a non-starter. Elseworlds (DC&rsquo;s six films outside any shared universe) is drawn in gray, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labeled; a label on all 91 is noise. Those labels print the short title (<em>Endgame</em>, not <em>Avengers: Endgame</em>) because the mark&rsquo;s color and shape already say which universe it is, and the franchise half is what makes a label run into its neighbors.</dd>
+          <dt>Choices here</dt><dd>The palette is a color-blind-safe set, checked pair by pair. Five chromatic hues already can&rsquo;t all stay distinct under every kind of color blindness, so a sixth is a non-starter. Elseworlds (DC&rsquo;s six films outside any shared universe) is drawn in gray, and every universe also carries a shape: circle MCU, diamond Fox, plus Sony, square DCEU, triangle DCU, cross Elseworlds. Only the six biggest films are labeled; a label on all 92 is noise. Those labels print the short title (<em>Endgame</em>, not <em>Avengers: Endgame</em>) because the mark&rsquo;s color and shape already say which universe it is, and the franchise half is what makes a label run into its neighbors.</dd>
           <dt>Watch for</dt><dd>No trend line. Fitting one here would invent a relationship the data doesn&rsquo;t support, the story is the spread and the outliers, not a slope.</dd>
         </dl></div>
       </div>
@@ -1161,7 +1161,7 @@
         <div id="table-split" hidden></div>
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>For each film, how much of the gross came from North America versus everywhere else?</dd>
-          <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 91 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
+          <dt>Why this form</dt><dd>Part-to-whole, one film per row. A pie per film would be 92 pies; a stacked bar per row shows the split and lets you scan the whole list.</dd>
           <dt>Choices here</dt><dd>Domestic is the solid bar, overseas the same color at low opacity, one hue keeps the universe identity while the fill separates the two parts. Two sort orders: by total gross, or normalized so you compare shares directly.</dd>
           <dt>Watch for</dt><dd>&ldquo;Overseas&rdquo; lumps very different markets together. China alone swings some of these films by ten points.</dd>
         </dl></div>
@@ -1188,7 +1188,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Which characters recur, and how connected is each universe&rsquo;s filmography?</dd>
           <dt>Why this form</dt><dd>A presence grid, character &times; film, is the honest way to show set membership across many items. Density and gaps do the talking; no summary stat captures &ldquo;the roster hangs together&rdquo; as directly.</dd>
-          <dt>Choices here</dt><dd><span id="n-roster-rows">Rows are every character in six or more films, 23 of them, ordered by appearance count (ties alphabetical).</span> Columns are all 91 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
+          <dt>Choices here</dt><dd><span id="n-roster-rows">Rows are every character in six or more films, 23 of them, ordered by appearance count (ties alphabetical).</span> Columns are all 92 films in release order, with year ticks. A recast is one character (Hulk = Norton then Ruffalo); a passed-on mantle is not (Sam Wilson&rsquo;s Falcon and his Captain America are separate rows, as are Natasha&rsquo;s and Yelena&rsquo;s Black Widow).</dd>
           <dt>Watch for</dt><dd>&ldquo;Codenamed&rdquo; is a judgment call. Plain-name roles are out even when the person is central: Nick Fury, Pepper Potts, Alfred. And a character counts under a codename only from the film they take it up: Thaddeus Ross is five films of General Ross and one of Red Hulk, so he shows here once. A mantle a character already holds when we meet them (Janet van Dyne&rsquo;s Wasp, Yelena&rsquo;s Widow) counts from their first credit. A few named antagonists without a codename (Lex Luthor, Zod, Amanda Waller) are admitted by hand. Cast lists are from Wikipedia and skew to billed roles. A cameo counts if the character speaks or slays a bunch: Wolverine&rsquo;s one line in <em>First Class</em> and his Weapon X rampage in <em>Apocalypse</em> both do; the X-Men behind a door in <em>Deadpool 2</em> don&rsquo;t. The parser drops whatever Wikipedia calls a cameo, since it can neither hear nor count bodies; the qualifying ones are put back by hand.</dd>
         </dl></div>
       </div>
@@ -1212,7 +1212,7 @@
       <div class="view-head">
         <span class="num">§ 11 &nbsp;/&nbsp; MOST-TRAVELED</span>
         <h3>Spider-Man has been in twelve films, more than any other character by a clear margin</h3>
-        <p class="dek" id="d-foot">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man, Professor X and Wolverine are next at ten, then four characters at nine; Batman, at eight across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 151 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
+        <p class="dek" id="d-foot">Characters ranked by how many films they turn up in, from Raimi&rsquo;s trilogy and the Amazing Spider-Man pair to the MCU run. Iron Man, Professor X and Wolverine are next at ten, then four characters at nine; Batman, at eight across the Nolan, DCEU and Reeves continuities, tops DC. The long tail, 152 characters with a single appearance, is trimmed; the full list is in &ldquo;Show data&rdquo;.</p>
       </div>
       <div class="card">
         <div class="card-head">
@@ -1224,7 +1224,7 @@
         <div class="note"><div class="nlabel">Design note</div><dl>
           <dt>Question</dt><dd>Who carries the most cross-film weight?</dd>
           <dt>Why this form</dt><dd>A lollipop, not a bar: the counts are small integers (2&ndash;12), so a dot on a light stem reads the value cleanly without a heavy block of ink for &ldquo;3&rdquo;.</dd>
-          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are 151 of them and they&rsquo;d bury the signal.</dd>
+          <dt>Choices here</dt><dd>Sorted by count, colored by the universe the character appears in most. Single-appearance characters are cut, there are 152 of them and they&rsquo;d bury the signal.</dd>
           <dt>Watch for</dt><dd>Each identity is one person here. &ldquo;Captain America&rdquo; is Steve Rogers; Sam Wilson&rsquo;s turn is its own row, as are Yelena&rsquo;s Black Widow and Shuri&rsquo;s Black Panther. A codename counts from the film the character takes it up, not before, so Red Hulk and Mighty Thor sit at one film each, and Harry Osborn doesn&rsquo;t appear at all until he puts a mask on. Where two people have worn one name, the rows split: Norman Osborn is the Green Goblin, Harry is the New Goblin in Raimi&rsquo;s trilogy and a second Green Goblin in Webb&rsquo;s, and Shalla-Bal is a second Silver Surfer.</dd>
         </dl></div>
       </div>
@@ -1238,7 +1238,7 @@
       <div class="view-head">
         <span class="num">§ 12 &nbsp;/&nbsp; ANTI-PATTERNS</span>
         <h3>Every chart down here is accurate. Not one of them earns its place</h3>
-        <p class="dek">Eight charts, built from the same 91 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film, nominal dollars and the six-universe palette; nothing in the control bar reaches them.</p>
+        <p class="dek">Eight charts, built from the same 92 films as everything above. Each one is quick to make, easy on the eyes, and quietly useless. They always use every film, nominal dollars and the six-universe palette; nothing in the control bar reaches them.</p>
         <div class="legend" id="ap-leg" style="margin-top:14px"></div>
       </div>
 
@@ -1354,7 +1354,7 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 13 &nbsp;/&nbsp; THE LEDGER</span>
-        <h3>Every chart above reduces to fourteen columns and 91 rows</h3>
+        <h3>Every chart above reduces to fourteen columns and 92 rows</h3>
         <p class="dek">Every film and every field behind the charts above. Click a column header to sort. Mult. is domestic gross &divide; opening weekend: how long a film kept selling. ROI is worldwide gross &divide; production budget.</p>
         <p class="smallprint" id="smallprint"></p>
       </div>
@@ -1380,7 +1380,7 @@
     <div class="wrap">
       <div class="view-head">
         <span class="num">§ 14 &nbsp;/&nbsp; METHOD</span>
-        <h3>One rule picks the 91 films; break-even is a guess at 2.5&times; the budget</h3>
+        <h3>One rule picks the 92 films; break-even is a guess at 2.5&times; the budget</h3>
       </div>
       <div class="two-col">
         <div class="card">
@@ -1417,7 +1417,7 @@
       <div class="card">
         <h4 class="card-title">The brief</h4>
         <p>It started as a maintenance job. Verify a Tableau Public workbook, <em>Marvel / DC Box Office</em>, against Box Office Mojo: 50 films, six columns, movie / date / franchise / domestic / international / total. Then extend it with the films that had come out since, and rebuild the seven-tab Tableau suite as one self-contained dark-first HTML page.</p>
-        <p>It ended at <b>91 films across six universes</b>, ninety-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
+        <p>It ended at <b>92 films across six universes</b>, ninety-odd follow-ups, a scope rule that took three tries, and a cast scraper that turned out to be lying.</p>
       </div>
 
       <div class="card">

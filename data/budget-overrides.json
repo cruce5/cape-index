@@ -15,7 +15,8 @@
     "Shazam! Fury of the Gods": "Wikipedia range $110 to 125M, lower bound",
     "Joker: Folie à Deux": "Wikipedia range $190 to 200M, lower bound",
     "Venom: The Last Dance": "Wikipedia range $110 to 120M, lower bound",
-    "The Fantastic Four: First Steps": "Wikipedia infobox, $229.6M gross and $181M net; the net figure, as the rule prefers"
+    "The Fantastic Four: First Steps": "Wikipedia infobox, $229.6M gross and $181M net; the net figure, as the rule prefers",
+    "Clayface": "Widely reported $40 to 44M (The Numbers, trade press); lower bound"
   },
   "budgets": {
     "Doctor Strange in the Multiverse of Madness": 350600000,
@@ -44,11 +45,13 @@
     "The Amazing Spider-Man 2": 200000000,
     "The New Mutants": 67000000,
     "Aquaman": 160000000,
-    "Black Adam": 190000000
+    "Black Adam": 190000000,
+    "Clayface": 40000000
   },
   "rt_critic_note": "Filled only where OMDb and Wikipedia both omit a literal RT %. From rottentomatoes.com.",
   "rt_critic": {
-    "The Suicide Squad": 90
+    "The Suicide Squad": 90,
+    "Clayface": 77
   },
   "filed_net": [
     "Deadpool & Wolverine",

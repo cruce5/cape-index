@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-08T16:53:30.907Z",
+  "generated": "2026-11-03T03:44:59.568Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 257,
+  "count": 258,
   "characters": [
     {
       "name": "Spider-Man",
@@ -2293,7 +2293,7 @@
         {
           "title": "Aquaman and the Lost Kingdom",
           "universe": "DCEU",
-          "date": "2023-12-20",
+          "date": "2023-12-22",
           "order": 1,
           "minor": false,
           "actor": "Jason Momoa"
@@ -2514,7 +2514,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 1,
           "minor": false,
           "actor": "Margot Robbie"
@@ -3696,7 +3696,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 6,
           "minor": false,
           "actor": "Viola Davis"
@@ -3755,7 +3755,7 @@
         {
           "title": "Aquaman and the Lost Kingdom",
           "universe": "DCEU",
-          "date": "2023-12-20",
+          "date": "2023-12-22",
           "order": 4,
           "minor": false,
           "actor": "Yahya Abdul-Mateen II"
@@ -3815,7 +3815,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 10,
           "minor": false,
           "actor": "Jai Courtney"
@@ -4374,7 +4374,7 @@
         {
           "title": "Aquaman and the Lost Kingdom",
           "universe": "DCEU",
-          "date": "2023-12-20",
+          "date": "2023-12-22",
           "order": 2,
           "minor": false,
           "actor": "Patrick Wilson"
@@ -5298,7 +5298,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 13,
           "minor": false,
           "actor": "Pete Davidson"
@@ -5403,7 +5403,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 2,
           "minor": false,
           "actor": "Idris Elba"
@@ -5659,6 +5659,27 @@
           "order": 3,
           "minor": false,
           "actor": "Kristen Wiig"
+        }
+      ]
+    },
+    {
+      "name": "Clayface",
+      "real_name": "Matt Hagen",
+      "universes": [
+        "DCU"
+      ],
+      "actors": [
+        "Tom Rhys Harries"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Clayface",
+          "universe": "DCU",
+          "date": "2026-09-11",
+          "order": 1,
+          "minor": false,
+          "actor": "Tom Rhys Harries"
         }
       ]
     },
@@ -6495,7 +6516,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 5,
           "minor": false,
           "actor": "Sylvester Stallone"
@@ -7041,7 +7062,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 3,
           "minor": false,
           "actor": "John Cena"
@@ -7083,7 +7104,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 7,
           "minor": false,
           "actor": "David Dastmalchian"
@@ -7146,7 +7167,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 8,
           "minor": false,
           "actor": "Daniela Melchior"
@@ -7251,7 +7272,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 9,
           "minor": false,
           "actor": "Michael Rooker"
@@ -7692,7 +7713,7 @@
         {
           "title": "The Suicide Squad",
           "universe": "DCEU",
-          "date": "2021-08-05",
+          "date": "2021-08-06",
           "order": 11,
           "minor": false,
           "actor": "Peter Capaldi"
