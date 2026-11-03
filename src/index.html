@@ -818,7 +818,7 @@
     <div class="spectrum" aria-hidden="true"></div>
     <p class="byline">By <button class="spot-flag" id="spot-flag" aria-label="Spotlight a film or character" title="Spotlight a film or character (press /)">🏴‍☠️</button> <a href="https://www.linkedin.com/in/billyost/" target="_blank" rel="noopener">Bill Yost</a></p>
     <p class="dek">Every live-action Marvel or DC superhero film since 2000 that&rsquo;s part of a multi-film continuity, and what each made. Grosses from Box&nbsp;Office&nbsp;Mojo; every figure toggles to 2025 dollars.</p>
-    <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. <button class="notes-link lens-link" data-lens-link aria-pressed="false">Marvel v DC</button> collapses the six universes back to the two the project started as.</p>
+    <p class="teach-hint">It doubles as a set of worked examples: turn on <button class="notes-link" data-notes-link aria-pressed="false">Design notes</button> and every chart explains why it&rsquo;s built the way it is. The page opens on <button class="notes-link lens-link" data-lens-link aria-pressed="true">Marvel v DC</button>, the two-way fight the project started as; switch it off to split each side into the six universes underneath.</p>
     <div class="thesis" id="thesis"></div>
     <details class="contents" aria-label="Contents">
       <summary class="ct">Contents &middot; 16 sections, 8 tabs</summary>
@@ -842,27 +842,27 @@
 </nav>
 
 <nav class="controls" aria-label="Chart controls">
-  <div class="wrap ctl-bar"><button class="ctl-toggle" aria-expanded="false" aria-controls="controls-inner"><span class="ctl-row"><span class="ctl-label">Filters</span><span class="ctl-summary" id="ctl-summary"></span><span class="ctl-chev" aria-hidden="true"></span></span></button><button class="ctl-lens" aria-pressed="false" aria-label="Marvel v DC lens">M v DC</button><button class="ctl-notes" aria-pressed="false">Notes</button></div>
+  <div class="wrap ctl-bar"><button class="ctl-toggle" aria-expanded="false" aria-controls="controls-inner"><span class="ctl-row"><span class="ctl-label">Filters</span><span class="ctl-summary" id="ctl-summary"></span><span class="ctl-chev" aria-hidden="true"></span></span></button><button class="ctl-lens" aria-pressed="true" aria-label="Marvel v DC lens">M v DC</button><button class="ctl-notes" aria-pressed="false">Notes</button></div>
   <p class="sr-only" role="status" id="ctl-status"></p>
   <div class="wrap controls-inner" id="controls-inner">
     <div class="cgroup" role="group" aria-label="Color by">
       <span class="clabel">Color by</span>
       <div class="seg">
-        <button data-lens="universe" aria-pressed="true">Six universes</button>
-        <button data-lens="brand" aria-pressed="false">Marvel v DC</button>
+        <button data-lens="universe" aria-pressed="false">Six universes</button>
+        <button data-lens="brand" aria-pressed="true">Marvel v DC</button>
       </div>
     </div>
     <div class="cgroup" role="group" aria-label="Filter by universe">
       <span class="clabel">Universe</span>
       <button class="pill pill-all" data-uni-all aria-pressed="true">All</button>
-      <button class="pill" data-brand="Marvel" style="--c:var(--marvel)" aria-pressed="true" hidden><span class="dot"></span>Marvel</button>
-      <button class="pill" data-brand="DC" style="--c:var(--dc)" aria-pressed="true" hidden><span class="dot"></span>DC</button>
-      <button class="pill" data-uni="MCU" style="--c:var(--mcu)" aria-pressed="true"><span class="dot"></span>MCU</button>
-      <button class="pill" data-uni="Fox" style="--c:var(--fox)" aria-pressed="true"><span class="dot"></span>Fox</button>
-      <button class="pill" data-uni="SSU" style="--c:var(--ssu)" aria-pressed="true"><span class="dot"></span>Sony</button>
-      <button class="pill" data-uni="DCEU" style="--c:var(--dceu)" aria-pressed="true"><span class="dot"></span>DCEU</button>
-      <button class="pill" data-uni="DCU" style="--c:var(--dcu)" aria-pressed="true"><span class="dot"></span>DCU</button>
-      <button class="pill" data-uni="Elseworlds" style="--c:var(--else)" aria-pressed="true"><span class="dot"></span>Elseworlds</button>
+      <button class="pill" data-brand="Marvel" style="--c:var(--marvel)" aria-pressed="true"><span class="dot"></span>Marvel</button>
+      <button class="pill" data-brand="DC" style="--c:var(--dc)" aria-pressed="true"><span class="dot"></span>DC</button>
+      <button class="pill" data-uni="MCU" style="--c:var(--mcu)" aria-pressed="true" hidden><span class="dot"></span>MCU</button>
+      <button class="pill" data-uni="Fox" style="--c:var(--fox)" aria-pressed="true" hidden><span class="dot"></span>Fox</button>
+      <button class="pill" data-uni="SSU" style="--c:var(--ssu)" aria-pressed="true" hidden><span class="dot"></span>Sony</button>
+      <button class="pill" data-uni="DCEU" style="--c:var(--dceu)" aria-pressed="true" hidden><span class="dot"></span>DCEU</button>
+      <button class="pill" data-uni="DCU" style="--c:var(--dcu)" aria-pressed="true" hidden><span class="dot"></span>DCU</button>
+      <button class="pill" data-uni="Elseworlds" style="--c:var(--else)" aria-pressed="true" hidden><span class="dot"></span>Elseworlds</button>
     </div>
     <div class="cgroup" role="group" aria-label="Dollar basis">
       <span class="clabel">Dollars</span>
@@ -919,7 +919,7 @@
           <dt>Question</dt><dd>How has total superhero box office moved year to year, and how does each year split between the studios?</dd>
           <dt>Why this form</dt><dd>A stacked column reads as one total per year (the height) and a split within it (the segments). Separate lines would bury the &ldquo;how big was the whole year&rdquo; question; a grouped column would make the year total hard to see.</dd>
           <dt>Choices here</dt><dd>Segments are held apart by a 2&nbsp;px gap in the page color, not a stroke, a border is ink that isn&rsquo;t data. Universe order is fixed, so a color never jumps position between years. Y-axis labels sit flush left, close to the title.</dd>
-          <dt>The lens</dt><dd><b>Marvel v DC</b> in the control bar collapses the six universes to two and colors them red and blue. That is the comparison this project started as, and the one the six-way split had buried: Marvel’s three studios against DC’s three continuities. Nothing in the data changes, only how it is grouped and colored. Six saturated hues can’t all stay apart under color blindness, which is why the six-way view is green/magenta/yellow/blue/cyan/gray; two can, so the lens gets the convention back.</dd>
+          <dt>The lens</dt><dd><b>Marvel v DC</b>, the view the page opens on, collapses the six universes to two and colors them red and blue. That is the comparison this project started as, and the one the six-way split had buried: Marvel’s three studios against DC’s three continuities. Nothing in the data changes, only how it is grouped and colored. Six saturated hues can’t all stay apart under color blindness, which is why the six-way view is green/magenta/yellow/blue/cyan/gray; two can, so the lens gets the convention back.</dd>
           <dt>Watch for</dt><dd>Stacking hides the individual films. Good for the total and rough shares; useless for &ldquo;which 2021 Marvel film was that.&rdquo; That&rsquo;s what the table is for.</dd>
         </dl></div>
       </div>
@@ -1742,7 +1742,7 @@
   var STATE = {
     unis: { MCU: true, Fox: true, SSU: true, DCEU: true, DCU: true, Elseworlds: true },
     money: "nominal",
-    lens: "universe",
+    lens: "brand",
     outlierHide: false,
     splitSort: "ww",
     sort: { key: "date", dir: 1 },
@@ -1755,7 +1755,9 @@
       var v = JSON.parse(localStorage.getItem("capeindex-view") || "null");
       if (!v || typeof v !== "object") return;
       if (v.money === "nominal" || v.money === "real") STATE.money = v.money;
-      if (v.lens === "universe" || v.lens === "brand") STATE.lens = v.lens;
+      // the lens default flipped to Marvel v DC on 2026-11-03; saves from before then (no v:2)
+      // stored "universe" whether or not anyone chose it, so only a v:2 save can override the default
+      if (v.v === 2 && (v.lens === "universe" || v.lens === "brand")) STATE.lens = v.lens;
       if (typeof v.outlierHide === "boolean") STATE.outlierHide = v.outlierHide;
       if (v.unis && typeof v.unis === "object") {
         Object.keys(STATE.unis).forEach(function (k) { if (typeof v.unis[k] === "boolean") STATE.unis[k] = v.unis[k]; });
@@ -4145,7 +4147,7 @@
   });
   // one place that writes the view state: filters, lens and dollar basis. Theme and notes
   // have had their own keys since day one; these ride along so a reload doesn't drop them
-  function saveView() { try { localStorage.setItem("capeindex-view", JSON.stringify({ unis: STATE.unis, money: STATE.money, lens: STATE.lens, outlierHide: STATE.outlierHide })); } catch (e) {} }
+  function saveView() { try { localStorage.setItem("capeindex-view", JSON.stringify({ v: 2, unis: STATE.unis, money: STATE.money, lens: STATE.lens, outlierHide: STATE.outlierHide })); } catch (e) {} }
   document.querySelectorAll(".pill[data-uni]").forEach(function (b) {
     b.addEventListener("click", function () {
       var k = b.getAttribute("data-uni");
@@ -4163,8 +4165,7 @@
       syncPills(); renderAll(); saveView();
     });
   })();
-  function applyLens(next) {
-    STATE.lens = next;
+  function syncLens() {
     document.querySelectorAll(".seg [data-lens]").forEach(function (x) {
       x.setAttribute("aria-pressed", x.getAttribute("data-lens") === STATE.lens ? "true" : "false");
     });
@@ -4173,6 +4174,10 @@
     });
     document.body.classList.toggle("lens-brand", brandLens());
     syncPills();
+  }
+  function applyLens(next) {
+    STATE.lens = next;
+    syncLens();
     renderAll();
     saveView();
   }
@@ -4570,6 +4575,7 @@
   }
 
   var booted = false;
+  syncLens(); // the default (or a saved lens) has to reach the buttons, pills and body class before the first render
   if (!goToHash({ scroll: false })) setTab("act1", { push: false });
   renderAll();
   booted = true;
