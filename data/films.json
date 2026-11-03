@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-03T03:44:55.639Z",
+    "generated": "2026-11-03T03:50:45.848Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -5526,7 +5526,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "Wed Oct 21, 2026 (APAC, EMEA)"
+        "earliest_release_date": "Wed Oct 21, 2026 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-03",
