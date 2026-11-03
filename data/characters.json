@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-03T03:44:59.568Z",
+  "generated": "2026-11-03T04:20:26.370Z",
   "scope": "Costumed / codenamed characters only (alias form, or a known single-name identity). Ordered by number of film appearances.",
   "source": "English Wikipedia film Cast sections (billing order)",
   "missing_cast": [],
-  "count": 258,
+  "count": 271,
   "characters": [
     {
       "name": "Spider-Man",
@@ -1989,6 +1989,59 @@
       ]
     },
     {
+      "name": "Heimdall",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Idris Elba"
+      ],
+      "appearances": 5,
+      "films": [
+        {
+          "title": "Thor",
+          "universe": "MCU",
+          "date": "2011-05-06",
+          "order": 9,
+          "minor": false,
+          "actor": "Idris Elba"
+        },
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 5,
+          "minor": false,
+          "actor": "Idris Elba"
+        },
+        {
+          "title": "Avengers: Age of Ultron",
+          "universe": "MCU",
+          "date": "2015-05-01",
+          "order": 14,
+          "minor": false,
+          "actor": "Idris Elba"
+        },
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 4,
+          "minor": false,
+          "actor": "Idris Elba"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": 15,
+          "minor": false,
+          "actor": "Idris Elba"
+        }
+      ]
+    },
+    {
       "name": "Mantis",
       "real_name": null,
       "universes": [
@@ -2715,6 +2768,51 @@
       ]
     },
     {
+      "name": "M'Baku",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Winston Duke"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 8,
+          "minor": false,
+          "actor": "Winston Duke"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": null,
+          "minor": true,
+          "actor": "Winston Duke"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": null,
+          "minor": true,
+          "actor": "Winston Duke"
+        },
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 4,
+          "minor": false,
+          "actor": "Winston Duke"
+        }
+      ]
+    },
+    {
       "name": "Mister Fantastic",
       "real_name": "Reed Richards",
       "universes": [
@@ -2759,6 +2857,51 @@
           "order": 1,
           "minor": false,
           "actor": "Pedro Pascal"
+        }
+      ]
+    },
+    {
+      "name": "Okoye",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Danai Gurira"
+      ],
+      "appearances": 4,
+      "films": [
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 4,
+          "minor": false,
+          "actor": "Danai Gurira"
+        },
+        {
+          "title": "Avengers: Infinity War",
+          "universe": "MCU",
+          "date": "2018-04-27",
+          "order": null,
+          "minor": true,
+          "actor": "Danai Gurira"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": 11,
+          "minor": false,
+          "actor": "Danai Gurira"
+        },
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 3,
+          "minor": false,
+          "actor": "Danai Gurira"
         }
       ]
     },
@@ -3146,6 +3289,43 @@
       ]
     },
     {
+      "name": "Mera",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Amber Heard"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Justice League",
+          "universe": "DCEU",
+          "date": "2017-11-17",
+          "order": 13,
+          "minor": false,
+          "actor": "Amber Heard"
+        },
+        {
+          "title": "Aquaman",
+          "universe": "DCEU",
+          "date": "2018-12-21",
+          "order": 2,
+          "minor": false,
+          "actor": "Amber Heard"
+        },
+        {
+          "title": "Aquaman and the Lost Kingdom",
+          "universe": "DCEU",
+          "date": "2023-12-22",
+          "order": 3,
+          "minor": false,
+          "actor": "Amber Heard"
+        }
+      ]
+    },
+    {
       "name": "Negasonic Teenage Warhead",
       "real_name": null,
       "universes": [
@@ -3332,6 +3512,43 @@
           "order": 18,
           "minor": false,
           "actor": "Cillian Murphy"
+        }
+      ]
+    },
+    {
+      "name": "Sif",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Jaimie Alexander"
+      ],
+      "appearances": 3,
+      "films": [
+        {
+          "title": "Thor",
+          "universe": "MCU",
+          "date": "2011-05-06",
+          "order": 10,
+          "minor": false,
+          "actor": "Jaimie Alexander"
+        },
+        {
+          "title": "Thor: The Dark World",
+          "universe": "MCU",
+          "date": "2013-11-08",
+          "order": 12,
+          "minor": false,
+          "actor": "Jaimie Alexander"
+        },
+        {
+          "title": "Thor: Love and Thunder",
+          "universe": "MCU",
+          "date": "2022-07-08",
+          "order": 4,
+          "minor": false,
+          "actor": "Jaimie Alexander"
         }
       ]
     },
@@ -3730,6 +3947,64 @@
           "order": 13,
           "minor": false,
           "actor": "Ben Hardy"
+        }
+      ]
+    },
+    {
+      "name": "Antiope",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Robin Wright"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Wonder Woman",
+          "universe": "DCEU",
+          "date": "2017-06-02",
+          "order": 4,
+          "minor": false,
+          "actor": "Robin Wright"
+        },
+        {
+          "title": "Wonder Woman 1984",
+          "universe": "DCEU",
+          "date": "2020-12-25",
+          "order": 5,
+          "minor": false,
+          "actor": "Robin Wright"
+        }
+      ]
+    },
+    {
+      "name": "Atlanna",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Nicole Kidman"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Aquaman",
+          "universe": "DCEU",
+          "date": "2018-12-21",
+          "order": 9,
+          "minor": false,
+          "actor": "Nicole Kidman"
+        },
+        {
+          "title": "Aquaman and the Lost Kingdom",
+          "universe": "DCEU",
+          "date": "2023-12-22",
+          "order": 8,
+          "minor": false,
+          "actor": "Nicole Kidman"
         }
       ]
     },
@@ -4206,6 +4481,35 @@
       ]
     },
     {
+      "name": "Hippolyta",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Connie Nielsen"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Wonder Woman",
+          "universe": "DCEU",
+          "date": "2017-06-02",
+          "order": 3,
+          "minor": false,
+          "actor": "Connie Nielsen"
+        },
+        {
+          "title": "Wonder Woman 1984",
+          "universe": "DCEU",
+          "date": "2020-12-25",
+          "order": 6,
+          "minor": false,
+          "actor": "Connie Nielsen"
+        }
+      ]
+    },
+    {
       "name": "Korath",
       "real_name": null,
       "universes": [
@@ -4349,6 +4653,64 @@
           "order": 3,
           "minor": false,
           "actor": "Chiwetel Ejiofor"
+        }
+      ]
+    },
+    {
+      "name": "Nakia",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Lupita Nyong'o"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 3,
+          "minor": false,
+          "actor": "Lupita Nyong'o"
+        },
+        {
+          "title": "Black Panther: Wakanda Forever",
+          "universe": "MCU",
+          "date": "2022-11-11",
+          "order": 2,
+          "minor": false,
+          "actor": "Lupita Nyong'o"
+        }
+      ]
+    },
+    {
+      "name": "Nereus",
+      "real_name": null,
+      "universes": [
+        "DCEU"
+      ],
+      "actors": [
+        "Dolph Lundgren"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Aquaman",
+          "universe": "DCEU",
+          "date": "2018-12-21",
+          "order": 5,
+          "minor": false,
+          "actor": "Dolph Lundgren"
+        },
+        {
+          "title": "Aquaman and the Lost Kingdom",
+          "universe": "DCEU",
+          "date": "2023-12-22",
+          "order": 6,
+          "minor": false,
+          "actor": "Dolph Lundgren"
         }
       ]
     },
@@ -4613,6 +4975,35 @@
           "order": -4,
           "minor": false,
           "actor": "Zachary Levi"
+        }
+      ]
+    },
+    {
+      "name": "Shuri",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Letitia Wright"
+      ],
+      "appearances": 2,
+      "films": [
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 7,
+          "minor": false,
+          "actor": "Letitia Wright"
+        },
+        {
+          "title": "Avengers: Endgame",
+          "universe": "MCU",
+          "date": "2019-04-26",
+          "order": null,
+          "minor": true,
+          "actor": "Letitia Wright"
         }
       ]
     },
@@ -7511,6 +7902,27 @@
       ]
     },
     {
+      "name": "Skurge",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Karl Urban"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Thor: Ragnarok",
+          "universe": "MCU",
+          "date": "2017-11-03",
+          "order": 7,
+          "minor": false,
+          "actor": "Karl Urban"
+        }
+      ]
+    },
+    {
       "name": "Slipknot",
       "real_name": "Christopher Weiss",
       "universes": [
@@ -7885,6 +8297,27 @@
           "order": 10,
           "minor": false,
           "actor": "Jessica Chastain"
+        }
+      ]
+    },
+    {
+      "name": "W'Kabi",
+      "real_name": null,
+      "universes": [
+        "MCU"
+      ],
+      "actors": [
+        "Daniel Kaluuya"
+      ],
+      "appearances": 1,
+      "films": [
+        {
+          "title": "Black Panther",
+          "universe": "MCU",
+          "date": "2018-02-16",
+          "order": 6,
+          "minor": false,
+          "actor": "Daniel Kaluuya"
         }
       ]
     },

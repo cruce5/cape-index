@@ -43,11 +43,15 @@ function unlink(s) {
   return s.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, tgt, disp) => (disp || tgt).replace(/\s*\([^)]*\)\s*$/, ""));
 }
 
-// Codenames Wikipedia writes WITHOUT a "/" alias (true mononyms + a few 2-word ones).
+// Codenames Wikipedia writes WITHOUT a "/" alias (true mononyms + a few 2-word ones), plus
+// single-name characters who fight in the film's action on either side. That last rule is
+// stated on the page (§10 Watch for) and applied to every single-name credit: Plumb's
+// 2026-11-02 audit found it admitting Wong, Korg and every Eternal but none of the Wakandan,
+// Atlantean or Amazon fighters. Civilians, mentors and royals who don't fight stay out.
 const CODE_KEEP = new Set([
   // MCU
   "Thanos", "Loki", "Groot", "Rocket", "Gamora", "Nebula", "Drax", "Mantis", "Vision", "Ultron",
-  "Hela", "Ronan", "Yondu", "Korg", "Wong", "Namor", "Attuma", "Sylvie", "Clea", "Sersi",
+  "Hela", "Ronan", "Yondu", "Korg", "Wong", "Okoye", "M'Baku", "Nakia", "Shuri", "W'Kabi", "Heimdall", "Sif", "Skurge", "Namor", "Attuma", "Sylvie", "Clea", "Sersi",
   "Ikaris", "Kingo", "Sprite", "Phastos", "Makkari", "Druig", "Gilgamesh", "Thena", "Ajak",
   "Dormammu", "Gorr", "Kurse", "Malekith", "Surtur", "Abomination", "Whiplash", "Mysterio",
   "Vulture", "Taskmaster", "Ghost", "Yellowjacket", "Kang", "Valkyrie", "Wenwu", "Xialing",
@@ -55,10 +59,10 @@ const CODE_KEEP = new Set([
   "Adam Warlock", "High Evolutionary", "Cassandra Nova", "Lady Deathstrike", "Silver Surfer",
   "Galactus", "Red Skull", "Zemo", "Baron Zemo", "Winter Soldier", "War Machine", "Scarlet Witch",
   "Star-Lord", "Doctor Strange", "Ancient One", "The Ancient One", "The Mandarin", "The Leader",
-  "Aunt May", "Red Guardian", "Ghost Rider", "US Agent", "U.S. Agent", "John Walker",
+  "Red Guardian", "Ghost Rider", "US Agent", "U.S. Agent", "John Walker",
   "Red Hulk", "Mighty Thor", "Blade", "Captain Carter", "Black Bolt", "Mister Fantastic", "Deathstroke",
   // DC
-  "Doomsday", "Steppenwolf", "Darkseid", "Ares", "Starro", "Krypto", "Peacemaker", "Bloodsport",
+  "Doomsday", "Steppenwolf", "Darkseid", "Ares", "Mera", "Atlanna", "Nereus", "Hippolyta", "Antiope", "Starro", "Krypto", "Peacemaker", "Bloodsport",
   "Blackguard", "Mongal", "Javelin", "Weasel", "Savant", "T.D.K.", "Nanaue", "King Shark",
   "Milton", "Enchantress", "Katana", "Slipknot", "El Diablo", "Killer Croc",
   "Captain Boomerang", "Ratcatcher 2", "Polka-Dot Man", "The Thinker", "Lex Luthor", "General Zod",
@@ -100,7 +104,7 @@ function parseCast(wt, filmTitle) {
     // Last Stand X-Men and the 2025 Engineer
     const AS = String.raw`(?:as|appears as|plays|portrays|voices|repris\w+ (?:his|her|their) (?:respective )?roles? as|return\w* as)`;
     const am = body.match(new RegExp(String.raw`^\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\s+` + AS + String.raw`\s+(.+)$`, "i"))
-      || body.match(new RegExp(String.raw`^([A-ZÀ-Ý][\wÀ-ÿ.'’-]+(?:\s+[A-Za-zÀ-ÿ][\wÀ-ÿ.'’-]+){0,4})\s+` + AS + String.raw`\s+(.+)$`));
+      || body.match(new RegExp(String.raw`^([\p{Lu}\u02bb][\p{L}\p{M}.'’\u02bb-]+(?:\s+[\p{L}\u02bb][\p{L}\p{M}.'’\u02bb-]+){0,4})\s+` + AS + String.raw`\s+(.+)$`, "u"));
     if (!am) continue;
     const actor = strip(unlink(am[1])).replace(/\s*\([^)]*\)\s*$/, "");
     let character = strip(unlink(am[2].split(/<br|\n/)[0].replace(/<!--[\s\S]*/, "")));
@@ -135,7 +139,7 @@ function parseCast(wt, filmTitle) {
     return text.slice(s < 0 ? 0 : s + 2, e);
   };
   const addProse = (actor, character) => {
-    if (!actor || !/^[A-ZÀ-Ý]/.test(actor) || haveActors.has(actor.toLowerCase())) return;
+    if (!actor || !/^[\p{Lu}\u02bb]/u.test(actor) || haveActors.has(actor.toLowerCase())) return;
     character = character.replace(/\s*\([^)]*\)\s*$/, "").replace(/[.,;:]+$/, "").replace(/\s+/g, " ").trim();
     if (!character || character.length > 60) return;
     haveActors.add(actor.toLowerCase());
@@ -452,13 +456,16 @@ const ALIAS_ONLY = new Set(["Red Hulk", "Mighty Thor", "Captain America (Sam Wil
 // show her twice in the same actor list.
 const ACTOR_ALIAS = { "Rebecca Romijn-Stamos": "Rebecca Romijn", "UK Pitbulls": "Mike Waters" }; // the Blob link resolved to a wrestling promotion
 const canon = (c) => CANON[c] || c;
+// Keys and queries fold the same way (case, apostrophes of every kind, spacing): folding only
+// the query left T'Challa, N'Jadaka, K'uk'ulkan and Ra's al Ghul without a fallback.
+const foldName = (s) => s.toLowerCase().replace(/["'‘’ʼ]/g, "").replace(/\s+/g, " ").trim();
 const CANON_LC = {};
-for (const [k, v] of Object.entries(CANON)) CANON_LC[k.toLowerCase()] = v;
-for (const k of CODE_KEEP) if (!(k.toLowerCase() in CANON_LC)) CANON_LC[k.toLowerCase()] = k; // mononyms resolve to themselves
+for (const [k, v] of Object.entries(CANON)) CANON_LC[foldName(k)] = v;
+for (const k of CODE_KEEP) if (!(foldName(k) in CANON_LC)) CANON_LC[foldName(k)] = k; // mononyms resolve to themselves
 function lookup(s) {
   if (!s) return null;
   if (CANON[s]) return CANON[s];
-  const lc = s.toLowerCase().replace(/["'’]/g, "").replace(/\s+/g, " ").trim();
+  const lc = foldName(s);
   const tries = new Set([lc]);
   tries.add(lc.replace(/^(the|a)\s+/, ""));                    // drop article
   tries.add(lc.replace(/^dr\.?\s+/, "doctor "));               // "Dr." -> "Doctor" (title)
