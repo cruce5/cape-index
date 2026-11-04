@@ -1,6 +1,6 @@
 # Reconciliation — legacy sheet vs Box Office Mojo
 
-_Generated 2026-11-03. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
+_Generated 2026-11-04. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
 
 ## Summary
 

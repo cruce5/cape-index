@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated": "2026-11-03T03:50:45.848Z",
+    "generated": "2026-11-04T04:31:30.048Z",
     "currency": "USD",
-    "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars",
+    "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars, each later release (re-release, recut) at its own year",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
     "universes": {
       "MCU": 38,
@@ -70,7 +70,7 @@
         "earliest_release_date": "July 13, 2000 (Australia)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 53.08,
@@ -104,9 +104,18 @@
       },
       "box_office_real_2025": {
         "domestic": 731438923,
-        "international": 720473481,
-        "worldwide": 1451912403
+        "international": 720459065,
+        "worldwide": 1451897987
       },
+      "later_releases": [
+        {
+          "name": "Re-release 2025",
+          "year": 2025,
+          "domestic": 0,
+          "international": 18238,
+          "worldwide": 18238
+        }
+      ],
       "budget": 139000000,
       "runtime_minutes": 121,
       "mpaa": "PG-13",
@@ -127,7 +136,7 @@
         "earliest_release_date": "May 3, 2002 (18 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 50.38,
@@ -185,7 +194,7 @@
         "earliest_release_date": "February 14, 2003 (Domestic, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 57.23,
@@ -242,7 +251,7 @@
         "earliest_release_date": "April 30, 2003 (24 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 52.72,
@@ -276,9 +285,18 @@
       },
       "box_office_real_2025": {
         "domestic": 639575401,
-        "international": 704503209,
-        "worldwide": 1344078610
+        "international": 704371313,
+        "worldwide": 1343946714
       },
+      "later_releases": [
+        {
+          "name": "2025 Re-release",
+          "year": 2025,
+          "domestic": 0,
+          "international": 187051,
+          "worldwide": 187051
+        }
+      ],
       "budget": 200000000,
       "runtime_minutes": 127,
       "mpaa": "PG-13",
@@ -299,7 +317,7 @@
         "earliest_release_date": "June 30, 2004 (19 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 47.58,
@@ -357,7 +375,7 @@
         "earliest_release_date": "January 12, 2005 (Lesser Antilles)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 42.83,
@@ -390,10 +408,61 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 341171155,
-        "international": 278231507,
-        "worldwide": 619446773
+        "domestic": 340794414,
+        "international": 277937055,
+        "worldwide": 618764070
       },
+      "later_releases": [
+        {
+          "name": "2012 Re-release",
+          "year": 2012,
+          "domestic": 1508658,
+          "international": 103776,
+          "worldwide": 1612434
+        },
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 195729,
+          "worldwide": 210198
+        },
+        {
+          "name": "2023 Re-release",
+          "year": 2023,
+          "domestic": 0,
+          "international": 35962,
+          "worldwide": 35962
+        },
+        {
+          "name": "2024 Re-release",
+          "year": 2024,
+          "domestic": 0,
+          "international": 151587,
+          "worldwide": 151587
+        },
+        {
+          "name": "2026 Re-release",
+          "year": 2026,
+          "domestic": 0,
+          "international": 7591,
+          "worldwide": 7591
+        },
+        {
+          "name": "2025 Re-release",
+          "year": 2025,
+          "domestic": 0,
+          "international": 106421,
+          "worldwide": 106421
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 11047,
+          "international": 0,
+          "worldwide": 23324
+        }
+      ],
       "budget": 150000000,
       "runtime_minutes": 140,
       "mpaa": "PG-13",
@@ -412,7 +481,7 @@
         "earliest_release_date": "June 15, 2005 (6 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 55.08,
@@ -470,7 +539,7 @@
         "earliest_release_date": "July 6, 2005 (APAC, LATAM)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 46.38,
@@ -527,7 +596,7 @@
         "earliest_release_date": "May 24, 2006 (13 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 50.9,
@@ -584,7 +653,7 @@
         "earliest_release_date": "February 14, 2007 (9 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 50.63,
@@ -618,9 +687,25 @@
       },
       "box_office_real_2025": {
         "domestic": 525123755,
-        "international": 853361191,
-        "worldwide": 1378574594
+        "international": 853356073,
+        "worldwide": 1378556579
       },
+      "later_releases": [
+        {
+          "name": "2025 Re-release",
+          "year": 2025,
+          "domestic": 0,
+          "international": 9246,
+          "worldwide": 32548
+        },
+        {
+          "name": "Fathom 2025",
+          "year": 2025,
+          "domestic": 0,
+          "international": 0,
+          "worldwide": 0
+        }
+      ],
       "budget": 258000000,
       "runtime_minutes": 139,
       "mpaa": "PG-13",
@@ -641,7 +726,7 @@
         "earliest_release_date": "May 1, 2007 (18 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 38.09,
@@ -699,7 +784,7 @@
         "earliest_release_date": "June 13, 2007 (9 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 43.7,
@@ -732,10 +817,19 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 477284998,
+        "domestic": 477176856,
         "international": 399084449,
-        "worldwide": 876369448
+        "worldwide": 876261305
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 430000,
+          "international": 0,
+          "worldwide": 430000
+        }
+      ],
       "budget": 140000000,
       "runtime_minutes": 126,
       "mpaa": "PG-13",
@@ -760,7 +854,7 @@
         "earliest_release_date": "April 30, 2008 (29 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 54.46,
@@ -820,7 +914,7 @@
         "earliest_release_date": "June 11, 2008 (Ukraine)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.91,
@@ -853,10 +947,75 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 800357344,
-        "international": 708069740,
-        "worldwide": 1508718310
+        "domestic": 800176911,
+        "international": 707103549,
+        "worldwide": 1507494549
       },
+      "later_releases": [
+        {
+          "name": "2012 Re-release",
+          "year": 2012,
+          "domestic": 1513086,
+          "international": 0,
+          "worldwide": 1513086
+        },
+        {
+          "name": "2018 Re-release",
+          "year": 2018,
+          "domestic": 0,
+          "international": 84589,
+          "worldwide": 84589
+        },
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 1330612,
+          "worldwide": 1362290
+        },
+        {
+          "name": "2022 Re-release",
+          "year": 2022,
+          "domestic": 0,
+          "international": 390479,
+          "worldwide": 390605
+        },
+        {
+          "name": "2023 Re-release",
+          "year": 2023,
+          "domestic": 0,
+          "international": 372193,
+          "worldwide": 517076
+        },
+        {
+          "name": "2024 Re-release",
+          "year": 2024,
+          "domestic": 0,
+          "international": 431366,
+          "worldwide": 431366
+        },
+        {
+          "name": "2026 Re-Release",
+          "year": 2026,
+          "domestic": 0,
+          "international": 185571,
+          "worldwide": 185571
+        },
+        {
+          "name": "2025 Re-release",
+          "year": 2025,
+          "domestic": 0,
+          "international": 326,
+          "worldwide": 326
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 128632,
+          "international": 3651,
+          "worldwide": 150262
+        }
+      ],
       "budget": 185000000,
       "runtime_minutes": 152,
       "mpaa": "PG-13",
@@ -876,7 +1035,7 @@
         "earliest_release_date": "July 16, 2008 (Taiwan)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 53.05,
@@ -932,7 +1091,7 @@
         "earliest_release_date": "April 29, 2009 (28 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 48.22,
@@ -992,7 +1151,7 @@
         "earliest_release_date": "April 28, 2010 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.07,
@@ -1052,7 +1211,7 @@
         "earliest_release_date": "April 21, 2011 (Australia)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 40.29,
@@ -1108,7 +1267,7 @@
         "earliest_release_date": "June 1, 2011 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 41.52,
@@ -1169,7 +1328,7 @@
         "earliest_release_date": "July 22, 2011 (Domestic, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 47.67,
@@ -1228,7 +1387,7 @@
         "earliest_release_date": "February 15, 2012 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 39.06,
@@ -1262,9 +1421,18 @@
       },
       "box_office_real_2025": {
         "domestic": 874515810,
-        "international": 1258664772,
-        "worldwide": 2133180582
+        "international": 1258664372,
+        "worldwide": 2133180181
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 2527,
+          "worldwide": 2527
+        }
+      ],
       "budget": 220000000,
       "runtime_minutes": 143,
       "mpaa": "PG-13",
@@ -1288,7 +1456,7 @@
         "earliest_release_date": "April 25, 2012 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 41,
@@ -1344,7 +1512,7 @@
         "earliest_release_date": "June 28, 2012 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 34.63,
@@ -1377,10 +1545,40 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 628714082,
-        "international": 894031462,
-        "worldwide": 1522761500
+        "domestic": 628711836,
+        "international": 893873758,
+        "worldwide": 1522599747
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 101325,
+          "worldwide": 112678
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 10485,
+          "international": 16728,
+          "worldwide": 27233
+        },
+        {
+          "name": "2024 Re-release",
+          "year": 2024,
+          "domestic": 0,
+          "international": 120105,
+          "worldwide": 120105
+        },
+        {
+          "name": "2026 Re-Release",
+          "year": 2026,
+          "domestic": 0,
+          "international": 230577,
+          "worldwide": 230577
+        }
+      ],
       "budget": 250000000,
       "runtime_minutes": 164,
       "mpaa": "PG-13",
@@ -1400,7 +1598,7 @@
         "earliest_release_date": "July 19, 2012 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 41.29,
@@ -1434,9 +1632,18 @@
       },
       "box_office_real_2025": {
         "domestic": 565526717,
-        "international": 1115201562,
-        "worldwide": 1680728279
+        "international": 1115196872,
+        "worldwide": 1680723589
       },
+      "later_releases": [
+        {
+          "name": "2024 Re-release",
+          "year": 2024,
+          "domestic": 0,
+          "international": 13179,
+          "worldwide": 13179
+        }
+      ],
       "budget": 200000000,
       "runtime_minutes": 130,
       "mpaa": "PG-13",
@@ -1461,7 +1668,7 @@
         "earliest_release_date": "April 24, 2013 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.65,
@@ -1522,7 +1729,7 @@
         "earliest_release_date": "June 12, 2013 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.43,
@@ -1579,7 +1786,7 @@
         "earliest_release_date": "July 24, 2013 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 31.95,
@@ -1641,7 +1848,7 @@
         "earliest_release_date": "October 30, 2013 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 32,
@@ -1703,7 +1910,7 @@
         "earliest_release_date": "March 26, 2014 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 36.36,
@@ -1737,9 +1944,18 @@
       },
       "box_office_real_2025": {
         "domestic": 277023228,
-        "international": 698360746,
-        "worldwide": 975452370
+        "international": 695980159,
+        "worldwide": 973063473
       },
+      "later_releases": [
+        {
+          "name": "2024 Re-release",
+          "year": 2024,
+          "domestic": 0,
+          "international": 7132326,
+          "worldwide": 7157226
+        }
+      ],
       "budget": 200000000,
       "runtime_minutes": 142,
       "mpaa": "PG-13",
@@ -1760,7 +1976,7 @@
         "earliest_release_date": "April 16, 2014 (Belgium)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -1819,7 +2035,7 @@
         "earliest_release_date": "May 21, 2014 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 31.35,
@@ -1852,10 +2068,19 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 454053296,
-        "international": 598157109,
-        "worldwide": 1052210716
+        "domestic": 453990397,
+        "international": 598153447,
+        "worldwide": 1052144130
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 542000,
+          "international": 31547,
+          "worldwide": 573776
+        }
+      ],
       "budget": 170000000,
       "runtime_minutes": 121,
       "mpaa": "PG-13",
@@ -1881,7 +2106,7 @@
         "earliest_release_date": "July 30, 2014 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.15,
@@ -1915,9 +2140,18 @@
       },
       "box_office_real_2025": {
         "domestic": 623777156,
-        "international": 1285606194,
-        "worldwide": 1909383349
+        "international": 1285605773,
+        "worldwide": 1909382921
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 3672,
+          "worldwide": 3748
+        }
+      ],
       "budget": 250000000,
       "runtime_minutes": 141,
       "mpaa": "PG-13",
@@ -1942,7 +2176,7 @@
         "earliest_release_date": "April 22, 2015 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 32.67,
@@ -2003,7 +2237,7 @@
         "earliest_release_date": "July 10, 2015 (Bulgaria)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.7,
@@ -2037,9 +2271,18 @@
       },
       "box_office_real_2025": {
         "domestic": 487256936,
-        "international": 563344632,
-        "worldwide": 1050602314
+        "international": 563322728,
+        "worldwide": 1050580356
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 224636,
+          "worldwide": 225192
+        }
+      ],
       "budget": 58000000,
       "runtime_minutes": 108,
       "mpaa": "R",
@@ -2060,7 +2303,7 @@
         "earliest_release_date": "February 9, 2016 (Taiwan)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 46.38,
@@ -2094,9 +2337,18 @@
       },
       "box_office_real_2025": {
         "domestic": 443357979,
-        "international": 730075541,
-        "worldwide": 1173433520
+        "international": 730075287,
+        "worldwide": 1173433266
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 2609,
+          "worldwide": 2609
+        }
+      ],
       "budget": 250000000,
       "runtime_minutes": 151,
       "mpaa": "PG-13",
@@ -2119,7 +2371,7 @@
         "earliest_release_date": "March 23, 2016 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 37.78,
@@ -2153,9 +2405,18 @@
       },
       "box_office_real_2025": {
         "domestic": 547667230,
-        "international": 1002456102,
-        "worldwide": 1550123332
+        "international": 1002452085,
+        "worldwide": 1550119315
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 41203,
+          "worldwide": 41203
+        }
+      ],
       "budget": 250000000,
       "runtime_minutes": 147,
       "mpaa": "PG-13",
@@ -2179,7 +2440,7 @@
         "earliest_release_date": "April 27, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 35.33,
@@ -2236,7 +2497,7 @@
         "earliest_release_date": "May 18, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 28.58,
@@ -2298,7 +2559,7 @@
         "earliest_release_date": "August 3, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.39,
@@ -2332,9 +2593,18 @@
       },
       "box_office_real_2025": {
         "domestic": 312215737,
-        "international": 597416549,
-        "worldwide": 909633302
+        "international": 597408975,
+        "worldwide": 909625654
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 77681,
+          "worldwide": 78438
+        }
+      ],
       "budget": 165000000,
       "runtime_minutes": 115,
       "mpaa": "PG-13",
@@ -2360,7 +2630,7 @@
         "earliest_release_date": "October 25, 2016 (United Kingdom)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.32,
@@ -2394,9 +2664,18 @@
       },
       "box_office_real_2025": {
         "domestic": 297339440,
-        "international": 516294135,
-        "worldwide": 813634266
+        "international": 516283116,
+        "worldwide": 813623211
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 158514,
+          "worldwide": 159040
+        }
+      ],
       "budget": 97000000,
       "runtime_minutes": 137,
       "mpaa": "R",
@@ -2418,7 +2697,7 @@
         "earliest_release_date": "March 1, 2017 (12 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 36.54,
@@ -2452,9 +2731,18 @@
       },
       "box_office_real_2025": {
         "domestic": 512234007,
-        "international": 622794464,
-        "worldwide": 1135029591
+        "international": 622793956,
+        "worldwide": 1135029023
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 7311,
+          "worldwide": 8163
+        }
+      ],
       "budget": 200000000,
       "runtime_minutes": 136,
       "mpaa": "PG-13",
@@ -2482,7 +2770,7 @@
         "earliest_release_date": "April 25, 2017 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 45.13,
@@ -2515,10 +2803,26 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 542499306,
-        "international": 540239584,
-        "worldwide": 1082738890
+        "domestic": 542478057,
+        "international": 540160055,
+        "worldwide": 1082638113
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 252000,
+          "international": 204493,
+          "worldwide": 456493
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 29764,
+          "international": 521017,
+          "worldwide": 550781
+        }
+      ],
       "budget": 149000000,
       "runtime_minutes": 141,
       "mpaa": "PG-13",
@@ -2545,7 +2849,7 @@
         "earliest_release_date": "May 30, 2017 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.1,
@@ -2580,8 +2884,24 @@
       "box_office_real_2025": {
         "domestic": 440144852,
         "international": 717450359,
-        "worldwide": 1157649614
+        "worldwide": 1157644622
       },
+      "later_releases": [
+        {
+          "name": "2025 Re-release",
+          "year": 2025,
+          "domestic": 0,
+          "international": 0,
+          "worldwide": 15804
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 0,
+          "international": 0,
+          "worldwide": 227
+        }
+      ],
       "budget": 175000000,
       "runtime_minutes": 133,
       "mpaa": "PG-13",
@@ -2606,7 +2926,7 @@
         "earliest_release_date": "July 5, 2017 (8 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 38.02,
@@ -2640,9 +2960,18 @@
       },
       "box_office_real_2025": {
         "domestic": 414002427,
-        "international": 709907135,
-        "worldwide": 1123909561
+        "international": 709906665,
+        "worldwide": 1123909092
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 6753,
+          "worldwide": 6753
+        }
+      ],
       "budget": 180000000,
       "runtime_minutes": 130,
       "mpaa": "PG-13",
@@ -2669,7 +2998,7 @@
         "earliest_release_date": "October 24, 2017 (United Kingdom)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 36.84,
@@ -2703,9 +3032,18 @@
       },
       "box_office_real_2025": {
         "domestic": 300949435,
-        "international": 568067465,
-        "worldwide": 869016900
+        "international": 568067278,
+        "worldwide": 869016713
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 2692,
+          "worldwide": 2692
+        }
+      ],
       "budget": 300000000,
       "runtime_minutes": 120,
       "mpaa": "PG-13",
@@ -2728,7 +3066,7 @@
         "earliest_release_date": "October 17, 2017 (Lithuania)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -2762,10 +3100,19 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 898451246,
-        "international": 833126095,
-        "worldwide": 1731577341
+        "domestic": 898437232,
+        "international": 833113961,
+        "worldwide": 1731549405
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 367000,
+          "international": 317812,
+          "worldwide": 731661
+        }
+      ],
       "budget": 200000000,
       "runtime_minutes": 134,
       "mpaa": "PG-13",
@@ -2790,7 +3137,7 @@
         "earliest_release_date": "February 13, 2018 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 51.89,
@@ -2825,8 +3172,17 @@
       "box_office_real_2025": {
         "domestic": 870730273,
         "international": 1761943782,
-        "worldwide": 2632674056
+        "worldwide": 2632673911
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 0,
+          "worldwide": 3795
+        }
+      ],
       "budget": 350000000,
       "runtime_minutes": 149,
       "mpaa": "PG-13",
@@ -2851,7 +3207,7 @@
         "earliest_release_date": "April 25, 2018 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.07,
@@ -2884,10 +3240,26 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 416360348,
-        "international": 591725041,
-        "worldwide": 1008085418
+        "domestic": 416221085,
+        "international": 590692036,
+        "worldwide": 1006913150
       },
+      "later_releases": [
+        {
+          "name": "Once Upon a Deadpool",
+          "year": 2019,
+          "domestic": 6100309,
+          "international": 45249524,
+          "worldwide": 51349833
+        },
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 165,
+          "worldwide": 188
+        }
+      ],
       "budget": 110000000,
       "runtime_minutes": 119,
       "mpaa": "R",
@@ -2909,7 +3281,7 @@
         "earliest_release_date": "May 16, 2018 (18 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 41.3,
@@ -2971,7 +3343,7 @@
         "earliest_release_date": "July 4, 2018 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3009,6 +3381,15 @@
         "international": 824237009,
         "worldwide": 1098117656
       },
+      "later_releases": [
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 0,
+          "international": 0,
+          "worldwide": 10
+        }
+      ],
       "budget": 100000000,
       "runtime_minutes": 112,
       "mpaa": "PG-13",
@@ -3029,7 +3410,7 @@
         "earliest_release_date": "October 3, 2018 (7 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 24.94,
@@ -3062,10 +3443,26 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 429845044,
-        "international": 1047884949,
-        "worldwide": 1477729993
+        "domestic": 429841048,
+        "international": 1047884029,
+        "worldwide": 1477725077
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 24079,
+          "worldwide": 24079
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 42507,
+          "international": 0,
+          "worldwide": 42507
+        }
+      ],
       "budget": 160000000,
       "runtime_minutes": 143,
       "mpaa": "PG-13",
@@ -3091,7 +3488,7 @@
         "earliest_release_date": "December 7, 2018 (China)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3126,9 +3523,18 @@
       },
       "box_office_real_2025": {
         "domestic": 537759151,
-        "international": 887702453,
-        "worldwide": 1425461604
+        "international": 887699565,
+        "worldwide": 1425458715
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 188178,
+          "worldwide": 188178
+        }
+      ],
       "budget": 160000000,
       "runtime_minutes": 123,
       "mpaa": "PG-13",
@@ -3153,7 +3559,7 @@
         "earliest_release_date": "March 6, 2019 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 37.73,
@@ -3186,10 +3592,26 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 176989575,
-        "international": 286397156,
-        "worldwide": 463386731
+        "domestic": 176981858,
+        "international": 286048563,
+        "worldwide": 463030420
       },
+      "later_releases": [
+        {
+          "name": "2023 Re-release",
+          "year": 2023,
+          "domestic": 0,
+          "international": 1718962,
+          "worldwide": 1718962
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 108393,
+          "international": 0,
+          "worldwide": 108393
+        }
+      ],
       "budget": 100000000,
       "runtime_minutes": 132,
       "mpaa": "PG-13",
@@ -3215,7 +3637,7 @@
         "earliest_release_date": "April 3, 2019 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 38.19,
@@ -3252,6 +3674,15 @@
         "international": 2445532064,
         "worldwide": 3526988638
       },
+      "later_releases": [
+        {
+          "name": "2026 Re-release",
+          "year": 2026,
+          "domestic": 0,
+          "international": 0,
+          "worldwide": 0
+        }
+      ],
       "budget": 356000000,
       "runtime_minutes": 181,
       "mpaa": "PG-13",
@@ -3276,7 +3707,7 @@
         "earliest_release_date": "April 24, 2019 (22 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 30.66,
@@ -3333,7 +3764,7 @@
         "earliest_release_date": "June 5, 2019 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 26.08,
@@ -3396,7 +3827,7 @@
         "earliest_release_date": "June 28, 2019 (China, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.54,
@@ -3429,10 +3860,33 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 422665342,
-        "international": 936704684,
-        "worldwide": 1359370463
+        "domestic": 422663466,
+        "international": 936700104,
+        "worldwide": 1359364002
       },
+      "later_releases": [
+        {
+          "name": "2020 Re-release",
+          "year": 2020,
+          "domestic": 0,
+          "international": 168073,
+          "worldwide": 168420
+        },
+        {
+          "name": "2022 Re-release",
+          "year": 2022,
+          "domestic": 0,
+          "international": 12552,
+          "worldwide": 12552
+        },
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 26346,
+          "international": 0,
+          "worldwide": 26346
+        }
+      ],
       "budget": 55000000,
       "runtime_minutes": 122,
       "mpaa": "R",
@@ -3451,7 +3905,7 @@
         "earliest_release_date": "October 2, 2019 (APAC, LATAM)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 31.09,
@@ -3484,10 +3938,19 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 104756197,
+        "domestic": 104755396,
         "international": 150837947,
-        "worldwide": 255799669
+        "worldwide": 255789647
       },
+      "later_releases": [
+        {
+          "name": "2021 Re-release",
+          "year": 2021,
+          "domestic": 14330,
+          "international": 0,
+          "worldwide": 179472
+        }
+      ],
       "budget": 84500000,
       "runtime_minutes": 109,
       "mpaa": "R",
@@ -3512,7 +3975,7 @@
         "earliest_release_date": "February 5, 2020 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 40.95,
@@ -3570,7 +4033,7 @@
         "earliest_release_date": "August 26, 2020 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -3632,7 +4095,7 @@
         "earliest_release_date": "December 16, 2020 (EMEA, LATAM)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3694,7 +4157,7 @@
         "earliest_release_date": "July 7, 2021 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3757,7 +4220,7 @@
         "earliest_release_date": "May 8, 2021 (Italy)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.08,
@@ -3819,7 +4282,7 @@
         "earliest_release_date": "September 1, 2021 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3881,7 +4344,7 @@
         "earliest_release_date": "September 30, 2021 (Russia/CIS)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -3944,7 +4407,7 @@
         "earliest_release_date": "November 3, 2021 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3978,10 +4441,33 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 968625985,
-        "international": 1315328573,
-        "worldwide": 2283984715
+        "domestic": 967804947,
+        "international": 1315297891,
+        "worldwide": 2283132996
       },
+      "later_releases": [
+        {
+          "name": "2022 Re-release",
+          "year": 2022,
+          "domestic": 9321593,
+          "international": 300387,
+          "worldwide": 9621980
+        },
+        {
+          "name": "2025 Re-release",
+          "year": 2025,
+          "domestic": 0,
+          "international": 0,
+          "worldwide": 0
+        },
+        {
+          "name": "2024 Re-release",
+          "year": 2024,
+          "domestic": 0,
+          "international": 26093,
+          "worldwide": 26093
+        }
+      ],
       "budget": 200000000,
       "runtime_minutes": 148,
       "mpaa": "PG-13",
@@ -4007,7 +4493,7 @@
         "earliest_release_date": "December 15, 2021 (14 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 42.41,
@@ -4040,10 +4526,26 @@
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 407008518,
-        "international": 443518269,
-        "worldwide": 850526788
+        "domestic": 406962642,
+        "international": 443512828,
+        "worldwide": 850475470
       },
+      "later_releases": [
+        {
+          "name": "2024 Re-release",
+          "year": 2024,
+          "domestic": 0,
+          "international": 73732,
+          "worldwide": 73732
+        },
+        {
+          "name": "2025 Re-release",
+          "year": 2025,
+          "domestic": 455963,
+          "international": 0,
+          "worldwide": 455963
+        }
+      ],
       "budget": 200000000,
       "runtime_minutes": 176,
       "mpaa": "PG-13",
@@ -4065,7 +4567,7 @@
         "earliest_release_date": "March 1, 2022 (South Korea)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 47.85,
@@ -4124,7 +4626,7 @@
         "earliest_release_date": "March 30, 2022 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -4187,7 +4689,7 @@
         "earliest_release_date": "May 4, 2022 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4251,7 +4753,7 @@
         "earliest_release_date": "July 6, 2022 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4314,7 +4816,7 @@
         "earliest_release_date": "October 14, 2022 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4377,7 +4879,7 @@
         "earliest_release_date": "November 4, 2022 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 52.82,
@@ -4439,7 +4941,7 @@
         "earliest_release_date": "February 15, 2023 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4503,7 +5005,7 @@
         "earliest_release_date": "March 15, 2023 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4567,7 +5069,7 @@
         "earliest_release_date": "April 13, 2023 (Italy)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "metrics": {
         "pct_domestic": 42.46,
@@ -4629,7 +5131,7 @@
         "earliest_release_date": "June 14, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4692,7 +5194,7 @@
         "earliest_release_date": "August 16, 2023 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4754,7 +5256,7 @@
         "earliest_release_date": "November 8, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4817,7 +5319,7 @@
         "earliest_release_date": "December 20, 2023 (9 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4874,7 +5376,7 @@
         "earliest_release_date": "February 14, 2024 (7 markets)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -4937,7 +5439,7 @@
         "earliest_release_date": "July 18, 2024 (Slovakia)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4995,7 +5497,7 @@
         "earliest_release_date": "October 1, 2024 (South Korea)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5055,7 +5557,7 @@
         "earliest_release_date": "October 23, 2024 (China, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5113,7 +5615,7 @@
         "earliest_release_date": "December 11, 2024 (Mexico)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5175,7 +5677,7 @@
         "earliest_release_date": "February 12, 2025 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5236,7 +5738,7 @@
         "earliest_release_date": "January 1, 2025 (Portugal)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5294,7 +5796,7 @@
         "earliest_release_date": "July 9, 2025 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 57.25,
@@ -5351,7 +5853,7 @@
         "earliest_release_date": "July 23, 2025 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5411,7 +5913,7 @@
         "earliest_release_date": "Wed Jun 24, 2026 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5469,7 +5971,7 @@
         "earliest_release_date": "Wed Jul 29, 2026 (6 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5529,7 +6031,7 @@
         "earliest_release_date": "Wed Oct 21, 2026 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-04",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
