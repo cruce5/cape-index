@@ -2848,7 +2848,7 @@
       "genres": "Action &middot; Adventure",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-03T03:50:15.881Z"
+    "scraped_at": "2026-11-05T16:31:04.192Z"
   },
   "avengers-doomsday-2026": {
     "title": "Avengers: Doomsday",
@@ -2873,7 +2873,7 @@
       "genres": "Action",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-03T03:50:20.730Z"
+    "scraped_at": "2026-11-05T16:31:08.976Z"
   },
   "supergirl-2026": {
     "title": "Supergirl",
@@ -2898,7 +2898,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-03T03:50:26.753Z"
+    "scraped_at": "2026-11-05T16:31:13.999Z"
   },
   "clayface-2026": {
     "title": "Clayface",
@@ -2912,17 +2912,17 @@
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 44666368,
-      "international": 38900000,
-      "worldwide": 83566368,
+      "domestic": 47784703,
+      "international": 42800000,
+      "worldwide": 90584703,
       "opening_weekend_domestic": 24002731,
       "budget": null,
-      "earliest_release_date": "Wed Oct 21, 2026 (EMEA, APAC)",
+      "earliest_release_date": "Wed Oct 21, 2026 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 108,
       "genres": "Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-03T03:50:31.516Z"
+    "scraped_at": "2026-11-05T16:31:20.400Z"
   }
 }
