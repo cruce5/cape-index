@@ -2136,7 +2136,7 @@
     years.forEach(function (y) { byYear[y] = {}; });
     // under the lens a year is two segments, Marvel and DC, not six in two colors
     af.forEach(function (f) {
-      var y = new Date(f.date).getFullYear(), k = keyOf(f.u);
+      var y = yearOf(f), k = keyOf(f.u);
       byYear[y][k] = (byYear[y][k] || 0) + val(f, "ww");
     });
     var totals = years.map(function (y) { return Object.keys(byYear[y]).reduce(function (s, k) { return s + byYear[y][k]; }, 0); });
@@ -2176,7 +2176,7 @@
     svg.querySelectorAll("#year-bars rect").forEach(function (r) {
       tipBind(r, function () {
         var u = r.getAttribute("data-u"), yr = +r.getAttribute("data-y"), v = +r.getAttribute("data-v");
-        var fs = af.filter(function (f) { return f.u === u && new Date(f.date).getFullYear() === yr; })
+        var fs = af.filter(function (f) { return keyOf(f.u) === u && yearOf(f) === yr; })
           .sort(function (a, b) { return val(b, "ww") - val(a, "ww"); });
         return '<div class="tt">' + yr + " &nbsp;·&nbsp; " + uLabel(u) + '</div>' +
           '<div class="tr"><span>Worldwide</span><b>' + usd(v) + '</b></div>' +
