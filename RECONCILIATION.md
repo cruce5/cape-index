@@ -1,6 +1,6 @@
 # Reconciliation — legacy sheet vs Box Office Mojo
 
-_Generated 2026-11-04. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
+_Generated 2026-11-05. Source of truth: Box Office Mojo (boxofficemojo.com) title pages._
 
 ## Summary
 
@@ -91,7 +91,7 @@ Iron Man · The Incredible Hulk · Iron Man 2 · Thor · Captain America: The Fi
 | The Fantastic Four: First Steps | MCU | 2025-07-25 | $274,286,610 | $247,572,118 | $521,858,728 | yes |
 | Supergirl | DCU | 2026-06-26 | $72,366,532 | $54,100,000 | $126,466,532 | yes |
 | Spider-Man: Brand New Day | MCU | 2026-07-31 | $958,886,996 | $1,560,735,770 | $2,519,622,766 | **still in release** |
-| Clayface | DCU | 2026-09-11 | $44,666,368 | $38,900,000 | $83,566,368 | **still in release** |
+| Clayface | DCU | 2026-09-11 | $47,784,703 | $42,800,000 | $90,584,703 | **still in release** |
 
 ## Held out (no worldwide gross on Box Office Mojo)
 
