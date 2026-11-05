@@ -7,27 +7,32 @@
     "source": "baseline",
     "bom_id": "tt0371746",
     "bom_url": "https://www.boxofficemojo.com/title/tt0371746/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66",
+    "matchedText": "Iron Man (2008)",
     "candidates": [
       {
         "id": "tt0371746",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66"
+        "text": "Iron Man (2008)",
+        "score": 120
+      },
+      {
+        "id": "tt0772174",
+        "text": "The Iron Man (2006)",
+        "score": 104
       },
       {
         "id": "tt1228705",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._"
+        "text": "Iron Man 2 (2010)",
+        "score": 64
       },
       {
         "id": "tt1300854",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66"
-      },
-      {
-        "id": "tt0082222",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmE4N2Q0ZWItNjRiNC00YzkyLWE2MmYtNzdhYjQ2YWVkZGQ5XkEyXkFqcGc@._"
+        "text": "Iron Man 3 (2013)",
+        "score": 60
       },
       {
         "id": "tt0096251",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BY2YwM2EyZDMtZTdhYi00NDg1LTgxYWItNWU2NDdiY2JiZGJjXkEyXkFqcGc@._"
+        "text": "Tetsuo: The Iron Man (1989)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -37,13 +42,13 @@
       "worldwide": 585796247,
       "opening_weekend_domestic": 98618668,
       "budget": 140000000,
-      "earliest_release_date": "April 30, 2008 (29 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 30, 2008 (29 areas)",
+      "mpaa": null,
       "running_time_minutes": 126,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-09-05T18:55:31.292Z"
+    "scraped_at": "2026-11-05T16:38:29.189Z"
   },
   "the-incredible-hulk-2008": {
     "title": "The Incredible Hulk",
@@ -53,27 +58,32 @@
     "source": "baseline",
     "bom_id": "tt0800080",
     "bom_url": "https://www.boxofficemojo.com/title/tt0800080/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX66_CR0,0,66",
+    "matchedText": "The Incredible Hulk (2008)",
     "candidates": [
       {
         "id": "tt0800080",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX66_CR0,0,66"
+        "text": "The Incredible Hulk (2008)",
+        "score": 120
       },
       {
         "id": "tt0286716",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTQxMmVlMTItMGFjYi00MTc2LWE5MzMtYjFhZWJmZGY0MTY5XkEyXkFqcGc@._"
+        "text": "Hulk (2003)",
+        "score": 60
       },
       {
         "id": "tt32642156",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZDczZmYxNWEtNjNkNy00OWEwLWE3YjQtMzJmNWE5N2VlYjI4XkEyXkFqcGc@._"
+        "text": "The Shrinking Man (2025)",
+        "score": 0
       },
       {
         "id": "tt0790628",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk3MDkxMDAyN15BMl5BanBnXkFtZTcwODY5NzQyOQ@@._V1_SX66_CR0,0,66"
+        "text": "The Incredible Burt Wonderstone (2013)",
+        "score": 0
       },
       {
         "id": "tt0107131",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOWQzYzgyNGEtMjFhMC00MjhlLTk2OGYtMzY4M2MyYWE5ZGI1XkEyXkFqcGc@._"
+        "text": "Homeward Bound: The Incredible Journey (1993)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -83,13 +93,13 @@
       "worldwide": 264770996,
       "opening_weekend_domestic": 55414050,
       "budget": 150000000,
-      "earliest_release_date": "June 11, 2008 (Ukraine)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 11, 2008 (Ukraine)",
+      "mpaa": null,
       "running_time_minutes": 112,
-      "genres": "Action Sci-Fi",
+      "genres": "Action &middot; Sci-Fi",
       "distributor": "Universal Pictures"
     },
-    "scraped_at": "2026-09-05T18:55:43.214Z"
+    "scraped_at": "2026-11-05T16:38:35.043Z"
   },
   "iron-man-2-2010": {
     "title": "Iron Man 2",
@@ -99,27 +109,32 @@
     "source": "baseline",
     "bom_id": "tt1228705",
     "bom_url": "https://www.boxofficemojo.com/title/tt1228705/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._",
+    "matchedText": "Iron Man 2 (2010)",
     "candidates": [
       {
         "id": "tt1228705",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._"
+        "text": "Iron Man 2 (2010)",
+        "score": 120
       },
       {
         "id": "tt0371746",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66"
+        "text": "Iron Man (2008)",
+        "score": 64
       },
       {
-        "id": "tt1300854",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66"
+        "id": "tt0772174",
+        "text": "The Iron Man (2006)",
+        "score": 60
       },
       {
-        "id": "tt0082222",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmE4N2Q0ZWItNjRiNC00YzkyLWE2MmYtNzdhYjQ2YWVkZGQ5XkEyXkFqcGc@._"
+        "id": "tt1386932",
+        "text": "Ip Man 2 (2010)",
+        "score": 20
       },
       {
-        "id": "tt0096251",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BY2YwM2EyZDMtZTdhYi00NDg1LTgxYWItNWU2NDdiY2JiZGJjXkEyXkFqcGc@._"
+        "id": "tt1258972",
+        "text": "The Man with the Iron Fists (2012)",
+        "score": 4
       }
     ],
     "status": "ok",
@@ -129,13 +144,13 @@
       "worldwide": 623933331,
       "opening_weekend_domestic": 128122480,
       "budget": 200000000,
-      "earliest_release_date": "April 28, 2010 (EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 28, 2010 (EMEA)",
+      "mpaa": null,
       "running_time_minutes": 124,
-      "genres": "Action Sci-Fi",
+      "genres": "Action &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-09-05T18:55:56.955Z"
+    "scraped_at": "2026-11-05T16:39:08.247Z"
   },
   "thor-2011": {
     "title": "Thor",
@@ -145,27 +160,32 @@
     "source": "baseline",
     "bom_id": "tt0800369",
     "bom_url": "https://www.boxofficemojo.com/title/tt0800369/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjRhNGZjZjEtYTQzYS00OWUxLThjNGEtMTIwMTE2ZDFlZTZkXkEyXkFqcGc@._",
+    "matchedText": "Thor (2011)",
     "candidates": [
       {
         "id": "tt0800369",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjRhNGZjZjEtYTQzYS00OWUxLThjNGEtMTIwMTE2ZDFlZTZkXkEyXkFqcGc@._"
+        "text": "Thor (2011)",
+        "score": 120
       },
       {
-        "id": "tt3501632",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SX66_CR0,0,66"
+        "id": "tt1241721",
+        "text": "Thor: Legend of the Magical Hammer (2011)",
+        "score": 80
       },
       {
         "id": "tt1981115",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SY96_CR0,0,66"
+        "text": "Thor: The Dark World (2013)",
+        "score": 64
       },
       {
-        "id": "tt10648342",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._"
+        "id": "tt2690596",
+        "text": "Thoranai (2009)",
+        "score": 64
       },
       {
-        "id": "tt0115610",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjBkYzY5MzMtYmFlNS00NGVlLWFjMGEtYjZiMzdjNzRhZGI5XkEyXkFqcGc@._"
+        "id": "tt3501632",
+        "text": "Thor: Ragnarok (2017)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -175,13 +195,13 @@
       "worldwide": 449326618,
       "opening_weekend_domestic": 65723338,
       "budget": 150000000,
-      "earliest_release_date": "April 21, 2011 (Australia)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Thu Apr 21, 2011 (Australia)",
+      "mpaa": null,
       "running_time_minutes": 115,
-      "genres": "Action Fantasy",
+      "genres": "Action &middot; Fantasy",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-09-05T18:56:10.560Z"
+    "scraped_at": "2026-11-05T16:39:14.675Z"
   },
   "captain-america-the-first-avenger-2011": {
     "title": "Captain America: The First Avenger",
@@ -191,19 +211,22 @@
     "source": "baseline",
     "bom_id": "tt0458339",
     "bom_url": "https://www.boxofficemojo.com/title/tt0458339/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzUyM2YyY2MtNzNlMS00MWU5LTgxNjAtNzZlNmI2NjU2NDZlXkEyXkFqcGc@._",
+    "matchedText": "Captain America: The First Avenger (2011)",
     "candidates": [
       {
         "id": "tt0458339",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzUyM2YyY2MtNzNlMS00MWU5LTgxNjAtNzZlNmI2NjU2NDZlXkEyXkFqcGc@._"
+        "text": "Captain America: The First Avenger (2011)",
+        "score": 120
       },
       {
         "id": "tt1843866",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._"
+        "text": "Captain America: The Winter Soldier (2014)",
+        "score": 0
       },
       {
         "id": "tt3498820",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX66_CR0,0,66"
+        "text": "Captain America: Civil War (2016)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -213,43 +236,48 @@
       "worldwide": 370569774,
       "opening_weekend_domestic": 65058524,
       "budget": 140000000,
-      "earliest_release_date": "July 22, 2011 (Domestic, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri Jul 22, 2011 (Domestic, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 124,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-09-05T18:56:24.506Z"
+    "scraped_at": "2026-11-05T16:39:33.854Z"
   },
   "the-avengers-2012": {
     "title": "The Avengers",
     "year": "2012",
-    "release_date": "2012-05-12",
+    "release_date": "2012-05-04",
     "universe": "MCU",
     "source": "baseline",
     "bom_id": "tt0848228",
     "bom_url": "https://www.boxofficemojo.com/title/tt0848228/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._",
+    "matchedText": "The Avengers (2012)",
     "candidates": [
       {
         "id": "tt0848228",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._"
+        "text": "The Avengers (2012)",
+        "score": 120
       },
       {
         "id": "tt0118661",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTA4ZmZlZWQtZDRlYS00ZWZhLTk0MzEtYjExMGIzMTBlZDNlXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt20969586",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNDIzNGUwZmYtODM0Yy00NjA3LTgxOGUtOTY0ZGM5MjBkM2I3XkEyXkFqcGc@._"
+        "text": "The Avengers (1998)",
+        "score": 100
       },
       {
         "id": "tt4154756",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX66_CR0,0,66"
+        "text": "Avengers: Infinity War (2018)",
+        "score": 60
       },
       {
         "id": "tt21357150",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNGEwYWZkN2UtOTQ5Mi00MGQzLWEzNjYtMWMyNDBkMTkzMWNkXkEyXkFqcGc@._"
+        "text": "Avengers: Doomsday (2026)",
+        "score": 60
+      },
+      {
+        "id": "tt2395427",
+        "text": "Avengers: Age of Ultron (2015)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -259,13 +287,13 @@
       "worldwide": 1520538536,
       "opening_weekend_domestic": 207438708,
       "budget": 220000000,
-      "earliest_release_date": "April 25, 2012 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 25, 2012 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 143,
-      "genres": "Action Sci-Fi",
+      "genres": "Action &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:56:40.728Z"
+    "scraped_at": "2026-11-05T16:39:54.867Z"
   },
   "iron-man-3-2013": {
     "title": "Iron Man 3",
@@ -275,27 +303,32 @@
     "source": "baseline",
     "bom_id": "tt1300854",
     "bom_url": "https://www.boxofficemojo.com/title/tt1300854/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66",
+    "matchedText": "Iron Man 3 (2013)",
     "candidates": [
       {
         "id": "tt1300854",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_SX66_CR0,0,66"
+        "text": "Iron Man 3 (2013)",
+        "score": 120
       },
       {
         "id": "tt0371746",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX66_CR0,0,66"
+        "text": "Iron Man (2008)",
+        "score": 60
       },
       {
-        "id": "tt1228705",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._"
+        "id": "tt0772174",
+        "text": "The Iron Man (2006)",
+        "score": 60
       },
       {
-        "id": "tt0423866",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTM1ODIwNzM5OV5BMl5BanBnXkFtZTcwNjk5MDkyMQ@@._V1_SX66_CR0,0,66"
+        "id": "tt1258972",
+        "text": "The Man with the Iron Fists (2012)",
+        "score": 12
       },
       {
-        "id": "tt0082222",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmE4N2Q0ZWItNjRiNC00YzkyLWE2MmYtNzdhYjQ2YWVkZGQ5XkEyXkFqcGc@._"
+        "id": "tt2888046",
+        "text": "Ip Man 3 (2015)",
+        "score": 4
       }
     ],
     "status": "ok",
@@ -305,13 +338,13 @@
       "worldwide": 1215577205,
       "opening_weekend_domestic": 174144585,
       "budget": 200000000,
-      "earliest_release_date": "April 24, 2013 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 24, 2013 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 130,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:56:53.400Z"
+    "scraped_at": "2026-11-05T16:40:24.985Z"
   },
   "man-of-steel-2013": {
     "title": "Man of Steel",
@@ -321,27 +354,32 @@
     "source": "baseline",
     "bom_id": "tt0770828",
     "bom_url": "https://www.boxofficemojo.com/title/tt0770828/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX66_CR0,0,66",
+    "matchedText": "Man of Steel (2013)",
     "candidates": [
       {
         "id": "tt0770828",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX66_CR0,0,66"
+        "text": "Man of Steel (2013)",
+        "score": 120
       },
       {
         "id": "tt37833661",
-        "text": "> <a class=\"a-size-medium a-link-normal a-text-bold"
+        "text": "Man of Tomorrow (2027)",
+        "score": 0
       },
       {
         "id": "tt11132342",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTc2OTdiMGEtYzBhMy00NGY3LWFiMjctZmYxZDA3NjRhNTZlXkEyXkFqcGc@._"
+        "text": "Ladies of Steel (2020)",
+        "score": 0
       },
       {
         "id": "tt11083552",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODE4ZGY4OTktNDBjMy00NGVkLTk5YWUtNjA3NGU3MTA5NzM0XkEyXkFqcGc@._"
+        "text": "Wrath of Man (2021)",
+        "score": 0
       },
       {
         "id": "tt0098362",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzhjMzM2MjQtNzY4ZC00MDFhLWEwZTUtNWNjZTc4NmMwMzA0XkEyXkFqcGc@._"
+        "text": "Sons of Steel (1988)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -351,13 +389,13 @@
       "worldwide": 670145518,
       "opening_weekend_domestic": 116619362,
       "budget": 225000000,
-      "earliest_release_date": "June 12, 2013 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 12, 2013 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 143,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T18:57:08.006Z"
+    "scraped_at": "2026-11-05T16:40:32.860Z"
   },
   "thor-the-dark-world-2013": {
     "title": "Thor: The Dark World",
@@ -367,11 +405,12 @@
     "source": "baseline",
     "bom_id": "tt1981115",
     "bom_url": "https://www.boxofficemojo.com/title/tt1981115/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SY96_CR0,0,66",
+    "matchedText": "Thor: The Dark World (2013)",
     "candidates": [
       {
         "id": "tt1981115",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SY96_CR0,0,66"
+        "text": "Thor: The Dark World (2013)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -381,13 +420,13 @@
       "worldwide": 644783140,
       "opening_weekend_domestic": 85737841,
       "budget": 170000000,
-      "earliest_release_date": "October 30, 2013 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Oct 30, 2013 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 112,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:57:21.478Z"
+    "scraped_at": "2026-11-05T16:40:50.577Z"
   },
   "captain-america-the-winter-soldier-2014": {
     "title": "Captain America: The Winter Soldier",
@@ -397,11 +436,12 @@
     "source": "baseline",
     "bom_id": "tt1843866",
     "bom_url": "https://www.boxofficemojo.com/title/tt1843866/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._",
+    "matchedText": "Captain America: The Winter Soldier (2014)",
     "candidates": [
       {
         "id": "tt1843866",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._"
+        "text": "Captain America: The Winter Soldier (2014)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -411,13 +451,13 @@
       "worldwide": 714421503,
       "opening_weekend_domestic": 95023721,
       "budget": 170000000,
-      "earliest_release_date": "March 26, 2014 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Mar 26, 2014 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 136,
-      "genres": "Action Adventure Sci-Fi Thriller",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:57:36.614Z"
+    "scraped_at": "2026-11-05T16:40:56.929Z"
   },
   "guardians-of-the-galaxy-2014": {
     "title": "Guardians of the Galaxy",
@@ -427,27 +467,32 @@
     "source": "baseline",
     "bom_id": "tt2015381",
     "bom_url": "https://www.boxofficemojo.com/title/tt2015381/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._",
+    "matchedText": "Guardians of the Galaxy (2014)",
     "candidates": [
       {
         "id": "tt2015381",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._"
+        "text": "Guardians of the Galaxy (2014)",
+        "score": 120
       },
       {
         "id": "tt6791350",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._"
+        "text": "Guardians of the Galaxy Vol. 3 (2023)",
+        "score": 60
       },
       {
         "id": "tt3896198",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt32649961",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjc0MjgwMjAtZWVmZS00NTRiLThlMjYtODhiMGFjYjYzYjM1XkEyXkFqcGc@._"
+        "text": "Guardians of the Galaxy: Vol. 2 (2017)",
+        "score": 60
       },
       {
         "id": "tt1446192",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTkzMjgwMDg1M15BMl5BanBnXkFtZTcwMTgzNTI1OA@@._V1_SX66_CR0,0,66"
+        "text": "Rise of the Guardians (2012)",
+        "score": 4
+      },
+      {
+        "id": "tt5487524",
+        "text": "Guardians of the Night (2016)",
+        "score": 4
       }
     ],
     "status": "ok",
@@ -457,13 +502,13 @@
       "worldwide": 773350376,
       "opening_weekend_domestic": 94320883,
       "budget": 170000000,
-      "earliest_release_date": "July 30, 2014 (Iceland)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 30, 2014 (Iceland)",
+      "mpaa": null,
       "running_time_minutes": 121,
-      "genres": "Action Adventure Comedy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:57:49.775Z"
+    "scraped_at": "2026-11-05T16:41:28.004Z"
   },
   "avengers-age-of-ultron-2015": {
     "title": "Avengers: Age of Ultron",
@@ -473,11 +518,12 @@
     "source": "baseline",
     "bom_id": "tt2395427",
     "bom_url": "https://www.boxofficemojo.com/title/tt2395427/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._",
+    "matchedText": "Avengers: Age of Ultron (2015)",
     "candidates": [
       {
         "id": "tt2395427",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._"
+        "text": "Avengers: Age of Ultron (2015)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -487,13 +533,13 @@
       "worldwide": 1405018048,
       "opening_weekend_domestic": 191271109,
       "budget": 250000000,
-      "earliest_release_date": "April 22, 2015 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 22, 2015 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 141,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:58:06.775Z"
+    "scraped_at": "2026-11-05T16:41:35.515Z"
   },
   "ant-man-2015": {
     "title": "Ant-Man",
@@ -503,19 +549,22 @@
     "source": "baseline",
     "bom_id": "tt0478970",
     "bom_url": "https://www.boxofficemojo.com/title/tt0478970/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_SX66_CR0,0,66",
+    "matchedText": "Ant-Man (2015)",
     "candidates": [
       {
         "id": "tt0478970",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_SX66_CR0,0,66"
+        "text": "Ant-Man (2015)",
+        "score": 120
       },
       {
         "id": "tt5095030",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._"
+        "text": "Ant-Man and the Wasp (2018)",
+        "score": 60
       },
       {
         "id": "tt10954600",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._"
+        "text": "Ant-Man and the Wasp: Quantumania (2023)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -525,13 +574,13 @@
       "worldwide": 519311965,
       "opening_weekend_domestic": 57225526,
       "budget": 130000000,
-      "earliest_release_date": "July 10, 2015 (Bulgaria)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri Jul 10, 2015 (Bulgaria)",
+      "mpaa": null,
       "running_time_minutes": 117,
-      "genres": "Action Comedy Sci-Fi",
+      "genres": "Action &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:58:22.749Z"
+    "scraped_at": "2026-11-05T16:41:43.233Z"
   },
   "batman-v-superman-dawn-of-justice-2016": {
     "title": "Batman v Superman: Dawn of Justice",
@@ -541,11 +590,12 @@
     "source": "baseline",
     "bom_id": "tt2975590",
     "bom_url": "https://www.boxofficemojo.com/title/tt2975590/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTJkYjdmYjYtOGMyNC00ZGU1LThkY2ItYTc1OTVlMmE2YWY1XkEyXkFqcGc@._",
+    "matchedText": "Batman v Superman: Dawn of Justice (2016)",
     "candidates": [
       {
         "id": "tt2975590",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTJkYjdmYjYtOGMyNC00ZGU1LThkY2ItYTc1OTVlMmE2YWY1XkEyXkFqcGc@._"
+        "text": "Batman v Superman: Dawn of Justice (2016)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -555,13 +605,13 @@
       "worldwide": 874362803,
       "opening_weekend_domestic": 166007347,
       "budget": 250000000,
-      "earliest_release_date": "March 23, 2016 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Mar 23, 2016 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 151,
       "genres": "Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T18:58:35.821Z"
+    "scraped_at": "2026-11-05T16:42:02.989Z"
   },
   "captain-america-civil-war-2016": {
     "title": "Captain America: Civil War",
@@ -571,11 +621,12 @@
     "source": "baseline",
     "bom_id": "tt3498820",
     "bom_url": "https://www.boxofficemojo.com/title/tt3498820/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX66_CR0,0,66",
+    "matchedText": "Captain America: Civil War (2016)",
     "candidates": [
       {
         "id": "tt3498820",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX66_CR0,0,66"
+        "text": "Captain America: Civil War (2016)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -585,13 +636,13 @@
       "worldwide": 1155046416,
       "opening_weekend_domestic": 179139142,
       "budget": 250000000,
-      "earliest_release_date": "April 27, 2016 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 27, 2016 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 147,
-      "genres": "Action Sci-Fi",
+      "genres": "Action &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:58:48.887Z"
+    "scraped_at": "2026-11-05T16:42:08.682Z"
   },
   "suicide-squad-2016": {
     "title": "Suicide Squad",
@@ -601,15 +652,17 @@
     "source": "baseline",
     "bom_id": "tt1386697",
     "bom_url": "https://www.boxofficemojo.com/title/tt1386697/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SX66_CR0,0,66",
+    "matchedText": "Suicide Squad (2016)",
     "candidates": [
       {
         "id": "tt1386697",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SX66_CR0,0,66"
+        "text": "Suicide Squad (2016)",
+        "score": 120
       },
       {
         "id": "tt6334354",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._"
+        "text": "The Suicide Squad (2021)",
+        "score": 100
       }
     ],
     "status": "ok",
@@ -619,13 +672,13 @@
       "worldwide": 749200054,
       "opening_weekend_domestic": 133682248,
       "budget": 175000000,
-      "earliest_release_date": "August 3, 2016 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Aug 3, 2016 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 123,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T18:59:04.246Z"
+    "scraped_at": "2026-11-05T16:42:25.883Z"
   },
   "doctor-strange-2016": {
     "title": "Doctor Strange",
@@ -635,23 +688,27 @@
     "source": "baseline",
     "bom_id": "tt1211837",
     "bom_url": "https://www.boxofficemojo.com/title/tt1211837/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX66_CR0,0,66",
+    "matchedText": "Doctor Strange (2016)",
     "candidates": [
       {
         "id": "tt1211837",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX66_CR0,0,66"
-      },
-      {
-        "id": "tt9419884",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BN2YxZGRjMzYtZjE1ZC00MDI0LThjZmQtZTZmMzVmMmQ2NzBmXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt0057012",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjFjYzBlOTktMTI2OS00ZWVhLTgxMDUtNzAwODY2NmI3YTAzXkEyXkFqcGc@._"
+        "text": "Doctor Strange (2016)",
+        "score": 120
       },
       {
         "id": "tt3693414",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjU4NDIxZjUtZDNkNC00ZTBlLTg0NzUtNjJlNjYzNjIwZGRmXkEyXkFqcGc@._"
+        "text": "Doctor Stranger (2014)",
+        "score": 64
+      },
+      {
+        "id": "tt9419884",
+        "text": "Doctor Strange in the Multiverse of Madness (2022)",
+        "score": 60
+      },
+      {
+        "id": "tt0057012",
+        "text": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -661,13 +718,13 @@
       "worldwide": 677796833,
       "opening_weekend_domestic": 85058311,
       "budget": 165000000,
-      "earliest_release_date": "October 25, 2016 (United Kingdom)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue Oct 25, 2016 (United Kingdom)",
+      "mpaa": null,
       "running_time_minutes": 115,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:59:18.627Z"
+    "scraped_at": "2026-11-05T16:42:32.931Z"
   },
   "guardians-of-the-galaxy-vol-2-2017": {
     "title": "Guardians of the Galaxy Vol. 2",
@@ -677,19 +734,22 @@
     "source": "baseline",
     "bom_id": "tt3896198",
     "bom_url": "https://www.boxofficemojo.com/title/tt3896198/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._",
+    "matchedText": "Guardians of the Galaxy: Vol. 2 (2017)",
     "candidates": [
       {
         "id": "tt3896198",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt6791350",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._"
+        "text": "Guardians of the Galaxy: Vol. 2 (2017)",
+        "score": 120
       },
       {
         "id": "tt2015381",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._"
+        "text": "Guardians of the Galaxy (2014)",
+        "score": 60
+      },
+      {
+        "id": "tt6791350",
+        "text": "Guardians of the Galaxy Vol. 3 (2023)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -699,13 +759,13 @@
       "worldwide": 863764214,
       "opening_weekend_domestic": 146510104,
       "budget": 200000000,
-      "earliest_release_date": "April 25, 2017 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue Apr 25, 2017 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 136,
-      "genres": "Action Adventure Comedy Fantasy Music Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Music &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T18:59:32.532Z"
+    "scraped_at": "2026-11-05T16:42:52.594Z"
   },
   "wonder-woman-2017": {
     "title": "Wonder Woman",
@@ -715,19 +775,22 @@
     "source": "baseline",
     "bom_id": "tt0451279",
     "bom_url": "https://www.boxofficemojo.com/title/tt0451279/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._",
+    "matchedText": "Wonder Woman (2017)",
     "candidates": [
       {
         "id": "tt0451279",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._"
+        "text": "Wonder Woman (2017)",
+        "score": 120
       },
       {
         "id": "tt7126948",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTdkYjI0M2ItMmUxZi00YjU1LTgwM2ItODgxNDY0ODZhZDQzXkEyXkFqcGc@._"
+        "text": "Wonder Woman 1984 (2020)",
+        "score": 60
       },
       {
         "id": "tt6133130",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTcyMTQzMDIwNl5BMl5BanBnXkFtZTgwMTY1NjgzMzI@._V1_SX66_CR0,0,66"
+        "text": "Professor Marston & the Wonder Women (2017)",
+        "score": 20
       }
     ],
     "status": "ok",
@@ -737,13 +800,13 @@
       "worldwide": 823970682,
       "opening_weekend_domestic": 103251471,
       "budget": 149000000,
-      "earliest_release_date": "May 30, 2017 (APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue May 30, 2017 (APAC)",
+      "mpaa": null,
       "running_time_minutes": 141,
-      "genres": "Action Adventure Fantasy Sci-Fi War",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi &middot; War",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T18:59:46.873Z"
+    "scraped_at": "2026-11-05T16:42:57.824Z"
   },
   "spider-man-homecoming-2017": {
     "title": "Spider-Man: Homecoming",
@@ -753,11 +816,12 @@
     "source": "baseline",
     "bom_id": "tt2250912",
     "bom_url": "https://www.boxofficemojo.com/title/tt2250912/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_SX66_CR0,0,66",
+    "matchedText": "Spider-Man: Homecoming (2017)",
     "candidates": [
       {
         "id": "tt2250912",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_SX66_CR0,0,66"
+        "text": "Spider-Man: Homecoming (2017)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -767,13 +831,13 @@
       "worldwide": 880978185,
       "opening_weekend_domestic": 117027503,
       "budget": 175000000,
-      "earliest_release_date": "July 5, 2017 (8 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 5, 2017 (8 areas)",
+      "mpaa": null,
       "running_time_minutes": 133,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-05T19:00:01.489Z"
+    "scraped_at": "2026-11-05T16:43:03.424Z"
   },
   "thor-ragnarok-2017": {
     "title": "Thor: Ragnarok",
@@ -783,11 +847,12 @@
     "source": "baseline",
     "bom_id": "tt3501632",
     "bom_url": "https://www.boxofficemojo.com/title/tt3501632/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SX66_CR0,0,66",
+    "matchedText": "Thor: Ragnarok (2017)",
     "candidates": [
       {
         "id": "tt3501632",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SX66_CR0,0,66"
+        "text": "Thor: Ragnarok (2017)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -797,13 +862,13 @@
       "worldwide": 855301806,
       "opening_weekend_domestic": 122744989,
       "budget": 180000000,
-      "earliest_release_date": "October 24, 2017 (United Kingdom)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue Oct 24, 2017 (United Kingdom)",
+      "mpaa": null,
       "running_time_minutes": 130,
-      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:00:18.204Z"
+    "scraped_at": "2026-11-05T16:43:08.184Z"
   },
   "justice-league-2017": {
     "title": "Justice League",
@@ -813,11 +878,12 @@
     "source": "baseline",
     "bom_id": "tt0974015",
     "bom_url": "https://www.boxofficemojo.com/title/tt0974015/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM5YmQxM2YtZjI2Yy00YjhhLTg5N2MtMTEyMzdlZDU3OTVhXkEyXkFqcGc@._",
+    "matchedText": "Justice League (2017)",
     "candidates": [
       {
         "id": "tt0974015",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM5YmQxM2YtZjI2Yy00YjhhLTg5N2MtMTEyMzdlZDU3OTVhXkEyXkFqcGc@._"
+        "text": "Justice League (2017)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -827,13 +893,13 @@
       "worldwide": 661326987,
       "opening_weekend_domestic": 93842239,
       "budget": null,
-      "earliest_release_date": "October 17, 2017 (Lithuania)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue Oct 17, 2017 (Lithuania)",
+      "mpaa": null,
       "running_time_minutes": 120,
       "genres": "Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:00:31.525Z"
+    "scraped_at": "2026-11-05T16:43:15.373Z"
   },
   "black-panther-2018": {
     "title": "Black Panther",
@@ -843,23 +909,27 @@
     "source": "baseline",
     "bom_id": "tt1825683",
     "bom_url": "https://www.boxofficemojo.com/title/tt1825683/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX66_CR0,0,66",
+    "matchedText": "Black Panther (2018)",
     "candidates": [
       {
         "id": "tt1825683",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX66_CR0,0,66"
+        "text": "Black Panther (2018)",
+        "score": 120
       },
       {
         "id": "tt37884905",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNjNhNzIzNWQtMGNiYy00YTM5LWE2YzQtNjBkNTRjNDU4ZjM3XkEyXkFqcGc@._"
+        "text": "Black Panther 3 (2028)",
+        "score": 60
       },
       {
         "id": "tt9114286",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWY5NDY1ZjItZDQxMy00MTAzLTgyOGQtNTQxYjFiMzZjMjUyXkEyXkFqcGc@._"
+        "text": "Black Panther: Wakanda Forever (2022)",
+        "score": 60
       },
       {
         "id": "tt0775543",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTIyNDEyNjY3NF5BMl5BanBnXkFtZTcwNjY0MjE3Mw@@._V1_SX66_CR0,0,66"
+        "text": "Night Catches Us (2010)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -869,13 +939,13 @@
       "worldwide": 1349926083,
       "opening_weekend_domestic": 202003951,
       "budget": 200000000,
-      "earliest_release_date": "February 13, 2018 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue Feb 13, 2018 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 134,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:00:45.408Z"
+    "scraped_at": "2026-11-05T16:43:20.152Z"
   },
   "avengers-infinity-war-2018": {
     "title": "Avengers: Infinity War",
@@ -885,11 +955,12 @@
     "source": "baseline",
     "bom_id": "tt4154756",
     "bom_url": "https://www.boxofficemojo.com/title/tt4154756/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX66_CR0,0,66",
+    "matchedText": "Avengers: Infinity War (2018)",
     "candidates": [
       {
         "id": "tt4154756",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX66_CR0,0,66"
+        "text": "Avengers: Infinity War (2018)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -899,13 +970,13 @@
       "worldwide": 2052415039,
       "opening_weekend_domestic": 257698183,
       "budget": 350000000,
-      "earliest_release_date": "April 25, 2018 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 25, 2018 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 149,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:00:57.996Z"
+    "scraped_at": "2026-11-05T16:43:27.373Z"
   },
   "ant-man-and-the-wasp-2018": {
     "title": "Ant-Man and the Wasp",
@@ -915,15 +986,17 @@
     "source": "baseline",
     "bom_id": "tt5095030",
     "bom_url": "https://www.boxofficemojo.com/title/tt5095030/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._",
+    "matchedText": "Ant-Man and the Wasp (2018)",
     "candidates": [
       {
         "id": "tt5095030",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._"
+        "text": "Ant-Man and the Wasp (2018)",
+        "score": 120
       },
       {
         "id": "tt10954600",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._"
+        "text": "Ant-Man and the Wasp: Quantumania (2023)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -933,13 +1006,13 @@
       "worldwide": 622674139,
       "opening_weekend_domestic": 75812205,
       "budget": null,
-      "earliest_release_date": "July 4, 2018 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 4, 2018 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 118,
-      "genres": "Action Adventure Comedy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:01:13.792Z"
+    "scraped_at": "2026-11-05T16:43:46.467Z"
   },
   "aquaman-2018": {
     "title": "Aquaman",
@@ -949,15 +1022,17 @@
     "source": "baseline",
     "bom_id": "tt1477834",
     "bom_url": "https://www.boxofficemojo.com/title/tt1477834/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX66_CR0,0,66",
+    "matchedText": "Aquaman (2018)",
     "candidates": [
       {
         "id": "tt1477834",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX66_CR0,0,66"
+        "text": "Aquaman (2018)",
+        "score": 120
       },
       {
         "id": "tt9663764",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjQ1ZTUzMWMtY2VkNS00ZDRjLWEwODYtYmFkMWJiNTQxMDUzXkEyXkFqcGc@._"
+        "text": "Aquaman and the Lost Kingdom (2023)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -967,13 +1042,13 @@
       "worldwide": 1152028393,
       "opening_weekend_domestic": 67873522,
       "budget": null,
-      "earliest_release_date": "December 7, 2018 (China)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri Dec 7, 2018 (China)",
+      "mpaa": null,
       "running_time_minutes": 143,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:01:29.276Z"
+    "scraped_at": "2026-11-05T16:44:05.690Z"
   },
   "captain-marvel-2019": {
     "title": "Captain Marvel",
@@ -983,19 +1058,22 @@
     "source": "baseline",
     "bom_id": "tt4154664",
     "bom_url": "https://www.boxofficemojo.com/title/tt4154664/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZDI1NGU2ODAtNzBiNy00MWY5LWIyMGEtZjUxZjUwZmZiNjBlXkEyXkFqcGc@._",
+    "matchedText": "Captain Marvel (2019)",
     "candidates": [
       {
         "id": "tt4154664",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZDI1NGU2ODAtNzBiNy00MWY5LWIyMGEtZjUxZjUwZmZiNjBlXkEyXkFqcGc@._"
+        "text": "Captain Marvel (2019)",
+        "score": 120
       },
       {
         "id": "tt10676048",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._"
+        "text": "The Marvels (2023)",
+        "score": 0
       },
       {
         "id": "tt1843866",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._"
+        "text": "Captain America: The Winter Soldier (2014)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -1005,13 +1083,13 @@
       "worldwide": 1131416446,
       "opening_weekend_domestic": 153433423,
       "budget": 160000000,
-      "earliest_release_date": "March 6, 2019 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Mar 6, 2019 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 123,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:01:42.110Z"
+    "scraped_at": "2026-11-05T16:44:12.470Z"
   },
   "shazam-2019": {
     "title": "Shazam!",
@@ -1021,23 +1099,27 @@
     "source": "baseline",
     "bom_id": "tt0448115",
     "bom_url": "https://www.boxofficemojo.com/title/tt0448115/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZWM1YjdmOGQtNGYyMC00NjMwLTk1OWUtMGYzM2NjYjliYzYyXkEyXkFqcGc@._",
+    "matchedText": "Shazam! (2019)",
     "candidates": [
       {
         "id": "tt0448115",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZWM1YjdmOGQtNGYyMC00NjMwLTk1OWUtMGYzM2NjYjliYzYyXkEyXkFqcGc@._"
+        "text": "Shazam! (2019)",
+        "score": 120
       },
       {
         "id": "tt10151854",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._"
+        "text": "Shazam! Fury of the Gods (2023)",
+        "score": 60
       },
       {
         "id": "tt0805184",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjIyNmJjMDYtNTFjOS00NDA0LWI1NTMtNjc5NDRkZWQ2NjMyXkEyXkFqcGc@._"
+        "text": "Bhagam Bhag (2006)",
+        "score": 0
       },
       {
         "id": "tt35613198",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2YwYTFiM2YtNjY3Ny00OWZiLTlkOTctYjk4Mjk3YTg5MzkyXkEyXkFqcGc@._"
+        "text": "Sahasam (2025)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -1047,13 +1129,13 @@
       "worldwide": 367799011,
       "opening_weekend_domestic": 53505326,
       "budget": 100000000,
-      "earliest_release_date": "April 3, 2019 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 3, 2019 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 132,
-      "genres": "Action Adventure Comedy Fantasy",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:01:55.699Z"
+    "scraped_at": "2026-11-05T16:44:19.206Z"
   },
   "avengers-endgame-2019": {
     "title": "Avengers: Endgame",
@@ -1063,27 +1145,28 @@
     "source": "baseline",
     "bom_id": "tt4154796",
     "bom_url": "https://www.boxofficemojo.com/title/tt4154796/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWEyNDM2ZmQtMmFkNi00MTQ1LTk1MjItMzdlZGJlYmIyYzZlXkEyXkFqcGc@._",
+    "matchedText": "Avengers: Endgame (2019)",
     "candidates": [
       {
         "id": "tt4154796",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWEyNDM2ZmQtMmFkNi00MTQ1LTk1MjItMzdlZGJlYmIyYzZlXkEyXkFqcGc@._"
+        "text": "Avengers: Endgame (2019)",
+        "score": 120
       }
     ],
     "status": "ok",
     "parsed": {
-      "domestic": 858373000,
-      "international": 1941066100,
-      "worldwide": 2799439100,
+      "domestic": 898471864,
+      "international": 2043715069,
+      "worldwide": 2942318540,
       "opening_weekend_domestic": 357115007,
       "budget": 356000000,
-      "earliest_release_date": "April 24, 2019 (22 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 24, 2019 (20 areas)",
+      "mpaa": null,
       "running_time_minutes": 181,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:02:10.053Z"
+    "scraped_at": "2026-11-05T16:44:26.368Z"
   },
   "spider-man-far-from-home-2019": {
     "title": "Spider-Man: Far From Home",
@@ -1118,13 +1201,13 @@
       "worldwide": 1132723226,
       "opening_weekend_domestic": 92579212,
       "budget": 160000000,
-      "earliest_release_date": "June 28, 2019 (China, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri Jun 28, 2019 (China, APAC)",
+      "mpaa": null,
       "running_time_minutes": 129,
-      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-05T19:12:31.955Z"
+    "scraped_at": "2026-11-05T16:44:47.723Z"
   },
   "birds-of-prey-and-the-fantabulous-emancipation-of-one-harley-quinn-2020": {
     "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
@@ -1134,11 +1217,12 @@
     "source": "baseline",
     "bom_id": "tt7713068",
     "bom_url": "https://www.boxofficemojo.com/title/tt7713068/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTgwNWEwOWMtNGIxMy00YzU5LTk2MzgtMjAzMmM1MjZiY2RiXkEyXkFqcGc@._",
+    "matchedText": "Birds of Prey and the Fantabulous Emancipation of One Harley Quinn (2020)",
     "candidates": [
       {
         "id": "tt7713068",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTgwNWEwOWMtNGIxMy00YzU5LTk2MzgtMjAzMmM1MjZiY2RiXkEyXkFqcGc@._"
+        "text": "Birds of Prey and the Fantabulous Emancipation of One Harley Quinn (2020)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1148,13 +1232,13 @@
       "worldwide": 205537933,
       "opening_weekend_domestic": 33010017,
       "budget": 84500000,
-      "earliest_release_date": "February 5, 2020 (APAC, EMEA)",
-      "mpaa": "R",
+      "earliest_release_date": "Wed Feb 5, 2020 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 109,
-      "genres": "Action Comedy Crime",
+      "genres": "Action &middot; Comedy &middot; Crime",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:02:30.528Z"
+    "scraped_at": "2026-11-05T16:45:07.206Z"
   },
   "wonder-woman-1984-2020": {
     "title": "Wonder Woman 1984",
@@ -1164,15 +1248,17 @@
     "source": "baseline",
     "bom_id": "tt7126948",
     "bom_url": "https://www.boxofficemojo.com/title/tt7126948/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTdkYjI0M2ItMmUxZi00YjU1LTgwM2ItODgxNDY0ODZhZDQzXkEyXkFqcGc@._",
+    "matchedText": "Wonder Woman 1984 (2020)",
     "candidates": [
       {
         "id": "tt7126948",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTdkYjI0M2ItMmUxZi00YjU1LTgwM2ItODgxNDY0ODZhZDQzXkEyXkFqcGc@._"
+        "text": "Wonder Woman 1984 (2020)",
+        "score": 120
       },
       {
         "id": "tt0451279",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._"
+        "text": "Wonder Woman (2017)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -1182,13 +1268,13 @@
       "worldwide": 169601036,
       "opening_weekend_domestic": 16701957,
       "budget": null,
-      "earliest_release_date": "December 16, 2020 (EMEA, LATAM)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Dec 16, 2020 (LATAM, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 151,
-      "genres": "Action Adventure Fantasy",
+      "genres": "Action &middot; Adventure &middot; Fantasy",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:02:43.675Z"
+    "scraped_at": "2026-11-05T16:45:23.003Z"
   },
   "black-widow-2021": {
     "title": "Black Widow",
@@ -1198,27 +1284,32 @@
     "source": "baseline",
     "bom_id": "tt3480822",
     "bom_url": "https://www.boxofficemojo.com/title/tt3480822/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTMyZTA0ZTItYjY3Yi00ODNjLWExYTgtYzgxZTk0NTg0Y2FlXkEyXkFqcGc@._",
+    "matchedText": "Black Widow (2021)",
     "candidates": [
       {
         "id": "tt3480822",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTMyZTA0ZTItYjY3Yi00ODNjLWExYTgtYzgxZTk0NTg0Y2FlXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt0090738",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTFjOGViZjYtOWE4Mi00NTQyLTkyOTMtNjFmMzhjZWM5NzQ3XkEyXkFqcGc@._"
+        "text": "Black Widow (2021)",
+        "score": 120
       },
       {
         "id": "tt9272572",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmM4MWUyZGEtYTdmNC00OTZkLWJmZjItNWM0OGI5ZmFiNDEwXkEyXkFqcGc@._"
+        "text": "Black Widow (2019)",
+        "score": 104
+      },
+      {
+        "id": "tt0090738",
+        "text": "Black Widow (1987)",
+        "score": 100
       },
       {
         "id": "tt0257727",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmM3NGU4ODgtM2VmZi00ZjU4LWI4MjktM2VjZDQzY2UzMDM3XkEyXkFqcGc@._"
+        "text": "Black Widow (2001)",
+        "score": 100
       },
       {
         "id": "tt4920094",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BODRkNTc2NGQtMTI5Mi00MWE2LTlmNjItOGUwZDgwMjBjMzJlXkEyXkFqcGc@._"
+        "text": "Black Widow Business (2016)",
+        "score": 60
       }
     ],
     "status": "ok",
@@ -1228,43 +1319,48 @@
       "worldwide": 379751655,
       "opening_weekend_domestic": 80366312,
       "budget": null,
-      "earliest_release_date": "July 7, 2021 (EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 7, 2021 (EMEA)",
+      "mpaa": null,
       "running_time_minutes": 134,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:02:57.292Z"
+    "scraped_at": "2026-11-05T16:45:29.285Z"
   },
   "the-suicide-squad-2021": {
     "title": "The Suicide Squad",
     "year": "2021",
-    "release_date": "2021-08-05",
+    "release_date": "2021-08-06",
     "universe": "DCEU",
     "source": "baseline",
     "bom_id": "tt6334354",
     "bom_url": "https://www.boxofficemojo.com/title/tt6334354/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._",
+    "matchedText": "The Suicide Squad (2021)",
     "candidates": [
       {
         "id": "tt6334354",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._"
+        "text": "The Suicide Squad (2021)",
+        "score": 120
       },
       {
         "id": "tt1386697",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SX66_CR0,0,66"
+        "text": "Suicide Squad (2016)",
+        "score": 100
       },
       {
         "id": "tt4232610",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTliYjFmMDMtODdkZC00OTZjLTk1M2UtMWZiMmIxNDhlN2EyXkEyXkFqcGc@._"
+        "text": "The Squad (2015)",
+        "score": 60
       },
       {
         "id": "tt1547084",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTExNDI2NDcxNTNeQTJeQWpwZ15BbWU3MDg1Mjg2OTY@._V1_SY96_CR0,0,66"
+        "text": "The Squad (2011)",
+        "score": 60
       },
       {
         "id": "tt1655413",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMDQ0MjJjYmItZjU2YS00M2NiLTkxZTYtNWVlNjMwYWRkZjhlXkEyXkFqcGc@._"
+        "text": "The Suicide Shop (2012)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -1274,13 +1370,13 @@
       "worldwide": 168717425,
       "opening_weekend_domestic": 26205415,
       "budget": 185000000,
-      "earliest_release_date": "May 8, 2021 (Italy)",
-      "mpaa": "R",
+      "earliest_release_date": "Sat May 8, 2021 (Italy)",
+      "mpaa": null,
       "running_time_minutes": 132,
-      "genres": "Action Adventure Comedy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:03:11.833Z"
+    "scraped_at": "2026-11-05T16:45:34.617Z"
   },
   "shang-chi-and-the-legend-of-the-ten-rings-2021": {
     "title": "Shang-Chi and the Legend of the Ten Rings",
@@ -1290,11 +1386,12 @@
     "source": "baseline",
     "bom_id": "tt9376612",
     "bom_url": "https://www.boxofficemojo.com/title/tt9376612/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmY5MDcyNzAtYzg3MC00MGNlLTg3OGItNmRjYThkZGVlNzAyXkEyXkFqcGc@._",
+    "matchedText": "Shang-Chi and the Legend of the Ten Rings (2021)",
     "candidates": [
       {
         "id": "tt9376612",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZmY5MDcyNzAtYzg3MC00MGNlLTg3OGItNmRjYThkZGVlNzAyXkEyXkFqcGc@._"
+        "text": "Shang-Chi and the Legend of the Ten Rings (2021)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1304,13 +1401,13 @@
       "worldwide": 432243292,
       "opening_weekend_domestic": 75388688,
       "budget": null,
-      "earliest_release_date": "September 1, 2021 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Sep 1, 2021 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 132,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:03:26.132Z"
+    "scraped_at": "2026-11-05T16:45:42.011Z"
   },
   "eternals-2021": {
     "title": "Eternals",
@@ -1320,27 +1417,32 @@
     "source": "baseline",
     "bom_id": "tt9032400",
     "bom_url": "https://www.boxofficemojo.com/title/tt9032400/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._",
+    "matchedText": "Eternals (2021)",
     "candidates": [
       {
         "id": "tt9032400",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._"
+        "text": "Eternals (2021)",
+        "score": 120
       },
       {
-        "id": "tt0338013",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_SX66_CR0,0,66"
+        "id": "tt19496260",
+        "text": "Eternal (2023)",
+        "score": 64
       },
       {
-        "id": "tt0885520",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMDQ3ZGNlZjMtMjM1Yy00OTg3LThhNTItZTQxMDQ5OTJkYTNiXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt3914324",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTgwOTYwNzU3OV5BMl5BanBnXkFtZTgwNzYyNjc5NTE@._V1_SY96_CR0,0,66"
+        "id": "tt0382019",
+        "text": "Eternal (2004)",
+        "score": 60
       },
       {
         "id": "tt20199286",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYTI2MjFkZDEtYjJiMy00MjUwLTgyZTEtYWI5OTYyOTE5MjliXkEyXkFqcGc@._"
+        "text": "Eternal Spring (2022)",
+        "score": 12
+      },
+      {
+        "id": "tt13874422",
+        "text": "The Eternal Daughter (2022)",
+        "score": 12
       }
     ],
     "status": "ok",
@@ -1350,13 +1452,13 @@
       "worldwide": 402064899,
       "opening_weekend_domestic": 71297219,
       "budget": null,
-      "earliest_release_date": "November 3, 2021 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Nov 3, 2021 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 156,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:03:41.382Z"
+    "scraped_at": "2026-11-05T16:45:58.431Z"
   },
   "spider-man-no-way-home-2021": {
     "title": "Spider-Man: No Way Home",
@@ -1366,11 +1468,12 @@
     "source": "baseline",
     "bom_id": "tt10872600",
     "bom_url": "https://www.boxofficemojo.com/title/tt10872600/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._",
+    "matchedText": "Spider-Man: No Way Home (2021)",
     "candidates": [
       {
         "id": "tt10872600",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._"
+        "text": "Spider-Man: No Way Home (2021)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1380,13 +1483,13 @@
       "worldwide": 1921426073,
       "opening_weekend_domestic": 260138569,
       "budget": 200000000,
-      "earliest_release_date": "December 15, 2021 (14 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Dec 15, 2021 (14 areas)",
+      "mpaa": null,
       "running_time_minutes": 148,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-05T19:03:53.150Z"
+    "scraped_at": "2026-11-05T16:46:04.044Z"
   },
   "doctor-strange-in-the-multiverse-of-madness-2022": {
     "title": "Doctor Strange in the Multiverse of Madness",
@@ -1396,11 +1499,12 @@
     "source": "baseline",
     "bom_id": "tt9419884",
     "bom_url": "https://www.boxofficemojo.com/title/tt9419884/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BN2YxZGRjMzYtZjE1ZC00MDI0LThjZmQtZTZmMzVmMmQ2NzBmXkEyXkFqcGc@._",
+    "matchedText": "Doctor Strange in the Multiverse of Madness (2022)",
     "candidates": [
       {
         "id": "tt9419884",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BN2YxZGRjMzYtZjE1ZC00MDI0LThjZmQtZTZmMzVmMmQ2NzBmXkEyXkFqcGc@._"
+        "text": "Doctor Strange in the Multiverse of Madness (2022)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1410,13 +1514,13 @@
       "worldwide": 955775804,
       "opening_weekend_domestic": 187420998,
       "budget": 414900000,
-      "earliest_release_date": "May 4, 2022 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed May 4, 2022 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 126,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:04:07.476Z"
+    "scraped_at": "2026-11-05T16:46:34.995Z"
   },
   "thor-love-and-thunder-2022": {
     "title": "Thor: Love and Thunder",
@@ -1426,11 +1530,12 @@
     "source": "baseline",
     "bom_id": "tt10648342",
     "bom_url": "https://www.boxofficemojo.com/title/tt10648342/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._",
+    "matchedText": "Thor: Love and Thunder (2022)",
     "candidates": [
       {
         "id": "tt10648342",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._"
+        "text": "Thor: Love and Thunder (2022)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1440,13 +1545,13 @@
       "worldwide": 760928081,
       "opening_weekend_domestic": 144165107,
       "budget": null,
-      "earliest_release_date": "July 6, 2022 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 6, 2022 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 118,
-      "genres": "Action Adventure Comedy Romance Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Romance &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:04:19.231Z"
+    "scraped_at": "2026-11-05T16:46:42.265Z"
   },
   "black-adam-2022": {
     "title": "Black Adam",
@@ -1456,11 +1561,12 @@
     "source": "baseline",
     "bom_id": "tt6443346",
     "bom_url": "https://www.boxofficemojo.com/title/tt6443346/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmM3OTM4NDktMmI2NS00OWU0LTg4OTQtNjZhMmFkYjhmOGY1XkEyXkFqcGc@._",
+    "matchedText": "Black Adam (2022)",
     "candidates": [
       {
         "id": "tt6443346",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmM3OTM4NDktMmI2NS00OWU0LTg4OTQtNjZhMmFkYjhmOGY1XkEyXkFqcGc@._"
+        "text": "Black Adam (2022)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1470,13 +1576,13 @@
       "worldwide": 393452111,
       "opening_weekend_domestic": 67004323,
       "budget": null,
-      "earliest_release_date": "October 14, 2022 (Iceland)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri Oct 14, 2022 (Iceland)",
+      "mpaa": null,
       "running_time_minutes": 125,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:04:33.516Z"
+    "scraped_at": "2026-11-05T16:46:47.583Z"
   },
   "black-panther-wakanda-forever-2022": {
     "title": "Black Panther: Wakanda Forever",
@@ -1486,11 +1592,12 @@
     "source": "baseline",
     "bom_id": "tt9114286",
     "bom_url": "https://www.boxofficemojo.com/title/tt9114286/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWY5NDY1ZjItZDQxMy00MTAzLTgyOGQtNTQxYjFiMzZjMjUyXkEyXkFqcGc@._",
+    "matchedText": "Black Panther: Wakanda Forever (2022)",
     "candidates": [
       {
         "id": "tt9114286",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYWY5NDY1ZjItZDQxMy00MTAzLTgyOGQtNTQxYjFiMzZjMjUyXkEyXkFqcGc@._"
+        "text": "Black Panther: Wakanda Forever (2022)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1500,13 +1607,13 @@
       "worldwide": 859208836,
       "opening_weekend_domestic": 181339761,
       "budget": 250000000,
-      "earliest_release_date": "November 4, 2022 (Iceland)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri Nov 4, 2022 (Iceland)",
+      "mpaa": null,
       "running_time_minutes": 161,
-      "genres": "Action Adventure Drama Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Drama &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:04:48.294Z"
+    "scraped_at": "2026-11-05T16:46:53.893Z"
   },
   "ant-man-and-the-wasp-quantumania-2023": {
     "title": "Ant-Man and the Wasp: Quantumania",
@@ -1516,11 +1623,12 @@
     "source": "baseline",
     "bom_id": "tt10954600",
     "bom_url": "https://www.boxofficemojo.com/title/tt10954600/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._",
+    "matchedText": "Ant-Man and the Wasp: Quantumania (2023)",
     "candidates": [
       {
         "id": "tt10954600",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._"
+        "text": "Ant-Man and the Wasp: Quantumania (2023)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1530,13 +1638,13 @@
       "worldwide": 476071180,
       "opening_weekend_domestic": 106109650,
       "budget": null,
-      "earliest_release_date": "February 15, 2023 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Feb 15, 2023 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 124,
-      "genres": "Action Adventure Comedy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:05:02.750Z"
+    "scraped_at": "2026-11-05T16:46:59.086Z"
   },
   "shazam-fury-of-the-gods-2023": {
     "title": "Shazam! Fury of the Gods",
@@ -1546,11 +1654,12 @@
     "source": "baseline",
     "bom_id": "tt10151854",
     "bom_url": "https://www.boxofficemojo.com/title/tt10151854/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._",
+    "matchedText": "Shazam! Fury of the Gods (2023)",
     "candidates": [
       {
         "id": "tt10151854",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._"
+        "text": "Shazam! Fury of the Gods (2023)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1560,13 +1669,13 @@
       "worldwide": 134138006,
       "opening_weekend_domestic": 30111158,
       "budget": null,
-      "earliest_release_date": "March 15, 2023 (APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Mar 15, 2023 (APAC)",
+      "mpaa": null,
       "running_time_minutes": 130,
-      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:05:16.903Z"
+    "scraped_at": "2026-11-05T16:47:05.227Z"
   },
   "guardians-of-the-galaxy-vol-3-2023": {
     "title": "Guardians of the Galaxy Vol. 3",
@@ -1576,19 +1685,22 @@
     "source": "baseline",
     "bom_id": "tt6791350",
     "bom_url": "https://www.boxofficemojo.com/title/tt6791350/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._",
+    "matchedText": "Guardians of the Galaxy Vol. 3 (2023)",
     "candidates": [
       {
         "id": "tt6791350",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt3896198",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._"
+        "text": "Guardians of the Galaxy Vol. 3 (2023)",
+        "score": 120
       },
       {
         "id": "tt2015381",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._"
+        "text": "Guardians of the Galaxy (2014)",
+        "score": 60
+      },
+      {
+        "id": "tt3896198",
+        "text": "Guardians of the Galaxy: Vol. 2 (2017)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -1598,13 +1710,13 @@
       "worldwide": 845555777,
       "opening_weekend_domestic": 118414021,
       "budget": 250000000,
-      "earliest_release_date": "April 13, 2023 (Italy)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Thu Apr 13, 2023 (Italy)",
+      "mpaa": null,
       "running_time_minutes": 150,
-      "genres": "Action Adventure Comedy Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:05:31.457Z"
+    "scraped_at": "2026-11-05T16:47:12.662Z"
   },
   "the-flash-2023": {
     "title": "The Flash",
@@ -1614,27 +1726,32 @@
     "source": "baseline",
     "bom_id": "tt0439572",
     "bom_url": "https://www.boxofficemojo.com/title/tt0439572/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmE2NzBjNGUtNTJiMy00N2UxLWEyYzMtYzFjODFhMGZlOTgzXkEyXkFqcGc@._",
+    "matchedText": "The Flash (2023)",
     "candidates": [
       {
         "id": "tt0439572",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYmE2NzBjNGUtNTJiMy00N2UxLWEyYzMtYzFjODFhMGZlOTgzXkEyXkFqcGc@._"
+        "text": "The Flash (2023)",
+        "score": 120
       },
       {
         "id": "tt3623726",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTY1NzIxNzkzM15BMl5BanBnXkFtZTgwMzAzNjIzNjE@._V1_SX66_CR0,0,66"
+        "text": "Ricki and the Flash (2015)",
+        "score": 60
       },
       {
         "id": "tt2704212",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjlmODhkZmUtYzJmYy00NzVhLWFiN2YtYzU5NTlkNWY1ZTYyXkEyXkFqcGc@._"
+        "text": "The Finnish Flash: A Teemu Selänne Story (2013)",
+        "score": 60
       },
       {
         "id": "tt0800320",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTYxNjg4MzU5OV5BMl5BanBnXkFtZTcwOTA3NTUwMw@@._V1_SX66_CR0,0,66"
+        "text": "Clash of the Titans (2010)",
+        "score": 0
       },
       {
         "id": "tt32915652",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNWJjZmEyZDEtYmRhNS00OTJlLWEzNjMtYzQ1ZWY5ZTA5NzYxXkEyXkFqcGc@._"
+        "text": "Mobile Suit Gundam Hathaway: The Sorcery of Nymph Circe (2026)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -1644,13 +1761,13 @@
       "worldwide": 271433313,
       "opening_weekend_domestic": 55043679,
       "budget": null,
-      "earliest_release_date": "June 14, 2023 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 14, 2023 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 144,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:05:46.012Z"
+    "scraped_at": "2026-11-05T16:47:19.834Z"
   },
   "blue-beetle-2023": {
     "title": "Blue Beetle",
@@ -1660,11 +1777,12 @@
     "source": "baseline",
     "bom_id": "tt9362930",
     "bom_url": "https://www.boxofficemojo.com/title/tt9362930/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTEyYzQzOTMtMWExNi00OWNjLTgwMDUtNzY0YjhmZDBiMTk2XkEyXkFqcGc@._",
+    "matchedText": "Blue Beetle (2023)",
     "candidates": [
       {
         "id": "tt9362930",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOTEyYzQzOTMtMWExNi00OWNjLTgwMDUtNzY0YjhmZDBiMTk2XkEyXkFqcGc@._"
+        "text": "Blue Beetle (2023)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1674,13 +1792,13 @@
       "worldwide": 130788072,
       "opening_weekend_domestic": 25030225,
       "budget": null,
-      "earliest_release_date": "August 16, 2023 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Aug 16, 2023 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 127,
-      "genres": "Action Adventure Sci-Fi Thriller",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:05:58.660Z"
+    "scraped_at": "2026-11-05T16:47:26.449Z"
   },
   "the-marvels-2023": {
     "title": "The Marvels",
@@ -1690,11 +1808,12 @@
     "source": "baseline",
     "bom_id": "tt10676048",
     "bom_url": "https://www.boxofficemojo.com/title/tt10676048/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._",
+    "matchedText": "The Marvels (2023)",
     "candidates": [
       {
         "id": "tt10676048",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._"
+        "text": "The Marvels (2023)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1704,43 +1823,48 @@
       "worldwide": 206136825,
       "opening_weekend_domestic": 46110859,
       "budget": null,
-      "earliest_release_date": "November 8, 2023 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Nov 8, 2023 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 105,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:06:12.791Z"
+    "scraped_at": "2026-11-05T16:47:32.380Z"
   },
   "aquaman-and-the-lost-kingdom-2023": {
     "title": "Aquaman and the Lost Kingdom",
     "year": "2023",
-    "release_date": "2023-12-20",
+    "release_date": "2023-12-22",
     "universe": "DCEU",
     "source": "baseline",
     "bom_id": "tt9663764",
     "bom_url": "https://www.boxofficemojo.com/title/tt9663764/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjQ1ZTUzMWMtY2VkNS00ZDRjLWEwODYtYmFkMWJiNTQxMDUzXkEyXkFqcGc@._",
+    "matchedText": "Aquaman and the Lost Kingdom (2023)",
     "candidates": [
       {
         "id": "tt9663764",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjQ1ZTUzMWMtY2VkNS00ZDRjLWEwODYtYmFkMWJiNTQxMDUzXkEyXkFqcGc@._"
+        "text": "Aquaman and the Lost Kingdom (2023)",
+        "score": 120
+      },
+      {
+        "id": "tt11210390",
+        "text": "Asterix & Obelix: The Middle Kingdom (2023)",
+        "score": 20
       },
       {
         "id": "tt10187800",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNTJmNjg1NTAtMDFjNi00NGEzLWI0YWYtZDA1OWNhM2Q2MzQ2XkEyXkFqcGc@._"
+        "text": "The Lost Lion Kingdom (2019)",
+        "score": 0
       },
       {
         "id": "tt7547410",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BYjUwNjJmOGEtOGI0YS00ZjAyLWJjMTYtMjMzZjNhYWQxODY1XkEyXkFqcGc@._"
+        "text": "Dora and the Lost City of Gold (2019)",
+        "score": 0
       },
       {
         "id": "tt1206585",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOWQ4ZDk4NWItNWZhNi00ZDU3LThhYTMtMGI4NzdlNjUxZjFlXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt0082971",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGNhMjg2ZjgtYzk4Ni00MTViLTg1MmUtYzM2MDZiYjZlMmU3XkEyXkFqcGc@._"
+        "text": "Winx Club: The Secret of the Lost Kingdom (2007)",
+        "score": 0
       }
     ],
     "status": "ok",
@@ -1750,13 +1874,13 @@
       "worldwide": 440181226,
       "opening_weekend_domestic": 27686211,
       "budget": null,
-      "earliest_release_date": "December 20, 2023 (9 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Dec 20, 2023 (9 areas)",
+      "mpaa": null,
       "running_time_minutes": 124,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:06:26.998Z"
+    "scraped_at": "2026-11-05T16:47:39.005Z"
   },
   "deadpool-wolverine-2024": {
     "title": "Deadpool & Wolverine",
@@ -1766,11 +1890,12 @@
     "source": "baseline",
     "bom_id": "tt6263850",
     "bom_url": "https://www.boxofficemojo.com/title/tt6263850/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._",
+    "matchedText": "Deadpool & Wolverine (2024)",
     "candidates": [
       {
         "id": "tt6263850",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._"
+        "text": "Deadpool & Wolverine (2024)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1780,13 +1905,13 @@
       "worldwide": 1338073645,
       "opening_weekend_domestic": 211435291,
       "budget": 537000000,
-      "earliest_release_date": "July 18, 2024 (Slovakia)",
-      "mpaa": "R",
+      "earliest_release_date": "Thu Jul 18, 2024 (Slovakia)",
+      "mpaa": null,
       "running_time_minutes": 128,
-      "genres": "Action Adventure Comedy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:06:41.175Z"
+    "scraped_at": "2026-11-05T16:47:56.593Z"
   },
   "captain-america-brave-new-world-2025": {
     "title": "Captain America: Brave New World",
@@ -1796,11 +1921,12 @@
     "source": "baseline",
     "bom_id": "tt14513804",
     "bom_url": "https://www.boxofficemojo.com/title/tt14513804/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._",
+    "matchedText": "Captain America: Brave New World (2025)",
     "candidates": [
       {
         "id": "tt14513804",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._"
+        "text": "Captain America: Brave New World (2025)",
+        "score": 120
       }
     ],
     "status": "ok",
@@ -1810,13 +1936,13 @@
       "worldwide": 415101577,
       "opening_weekend_domestic": 88842603,
       "budget": null,
-      "earliest_release_date": "February 12, 2025 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Feb 12, 2025 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 118,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:06:54.978Z"
+    "scraped_at": "2026-11-05T16:48:31.800Z"
   },
   "thunderbolts-2025": {
     "title": "Thunderbolts*",
@@ -1835,13 +1961,13 @@
       "worldwide": 382436917,
       "opening_weekend_domestic": 74300608,
       "budget": null,
-      "earliest_release_date": "January 1, 2025 (Portugal)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jan 1, 2025 (Portugal)",
+      "mpaa": null,
       "running_time_minutes": 127,
-      "genres": "Action Adventure Crime Drama Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Crime &middot; Drama &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:07:01.135Z"
+    "scraped_at": "2026-11-05T16:49:58.676Z"
   },
   "the-fantastic-four-first-steps-2025": {
     "title": "The Fantastic Four: First Steps",
@@ -1851,13 +1977,8 @@
     "source": "addition",
     "bom_id": "tt10676052",
     "bom_url": "https://www.boxofficemojo.com/title/tt10676052/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._",
-    "candidates": [
-      {
-        "id": "tt10676052",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._"
-      }
-    ],
+    "matchedText": "(pinned id)",
+    "candidates": null,
     "status": "ok",
     "parsed": {
       "domestic": 274286610,
@@ -1865,13 +1986,13 @@
       "worldwide": 521858728,
       "opening_weekend_domestic": 117644828,
       "budget": null,
-      "earliest_release_date": "July 23, 2025 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 23, 2025 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 115,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-09-05T19:07:13.626Z"
+    "scraped_at": "2026-11-05T16:50:05.528Z"
   },
   "superman-2025": {
     "title": "Superman",
@@ -1881,29 +2002,8 @@
     "source": "addition",
     "bom_id": "tt5950044",
     "bom_url": "https://www.boxofficemojo.com/title/tt5950044/",
-    "matchedText": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._",
-    "candidates": [
-      {
-        "id": "tt5950044",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt0770828",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX66_CR0,0,66"
-      },
-      {
-        "id": "tt0078346",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMzFlZDJjMDAtZDYxZS00NzZhLTk2ODMtZWRlODA3Njk3ZTdmXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt0348150",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BMjg1ZGRiMTEtYmU4Zi00NTkwLWJmODQtMjU3MTAyMGQ2OGZlXkEyXkFqcGc@._"
-      },
-      {
-        "id": "tt0081573",
-        "text": "><img alt=\"\" src=\"https://m.media-amazon.com/images/M/MV5BNzg5ZjJkNGEtNzhjNy00YzI4LTlkZjItNTViNmYxNGZlZWE2XkEyXkFqcGc@._"
-      }
-    ],
+    "matchedText": "(pinned id)",
+    "candidates": null,
     "status": "ok",
     "parsed": {
       "domestic": 354223803,
@@ -1911,13 +2011,13 @@
       "worldwide": 618723803,
       "opening_weekend_domestic": 125021735,
       "budget": 225000000,
-      "earliest_release_date": "July 9, 2025 (EMEA, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 9, 2025 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 129,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:07:58.647Z"
+    "scraped_at": "2026-11-05T16:50:21.767Z"
   },
   "joker-2019": {
     "title": "Joker",
@@ -1936,13 +2036,13 @@
       "worldwide": 1078958629,
       "opening_weekend_domestic": 96202337,
       "budget": 55000000,
-      "earliest_release_date": "October 2, 2019 (APAC, LATAM)",
-      "mpaa": "R",
+      "earliest_release_date": "Wed Oct 2, 2019 (LATAM, APAC)",
+      "mpaa": null,
       "running_time_minutes": 122,
-      "genres": "Drama",
+      "genres": "Drama &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-05T19:12:38.186Z"
+    "scraped_at": "2026-11-05T16:49:17.687Z"
   },
   "venom-2018": {
     "title": "Venom",
@@ -1961,13 +2061,13 @@
       "worldwide": 856085161,
       "opening_weekend_domestic": 80255756,
       "budget": 100000000,
-      "earliest_release_date": "October 3, 2018 (7 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Oct 3, 2018 (7 areas)",
+      "mpaa": null,
       "running_time_minutes": 112,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T14:59:18.057Z"
+    "scraped_at": "2026-11-05T16:50:41.369Z"
   },
   "venom-let-there-be-carnage-2021": {
     "title": "Venom: Let There Be Carnage",
@@ -1986,13 +2086,13 @@
       "worldwide": 506813864,
       "opening_weekend_domestic": 90033210,
       "budget": null,
-      "earliest_release_date": "September 30, 2021 (Russia/CIS)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Thu Sep 30, 2021 (Russia/CIS)",
+      "mpaa": null,
       "running_time_minutes": 97,
-      "genres": "Action Adventure Crime Fantasy Horror Sci-Fi Thriller",
+      "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T14:59:23.998Z"
+    "scraped_at": "2026-11-05T16:50:47.671Z"
   },
   "morbius-2022": {
     "title": "Morbius",
@@ -2011,13 +2111,13 @@
       "worldwide": 167460961,
       "opening_weekend_domestic": 39005895,
       "budget": null,
-      "earliest_release_date": "March 30, 2022 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Mar 30, 2022 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 104,
-      "genres": "Action Adventure Horror Sci-Fi Thriller",
+      "genres": "Action &middot; Adventure &middot; Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Columbia Pictures"
     },
-    "scraped_at": "2026-09-06T14:59:28.808Z"
+    "scraped_at": "2026-11-05T16:50:54.854Z"
   },
   "madame-web-2024": {
     "title": "Madame Web",
@@ -2036,13 +2136,13 @@
       "worldwide": 100498764,
       "opening_weekend_domestic": 15335860,
       "budget": null,
-      "earliest_release_date": "February 14, 2024 (7 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Feb 14, 2024 (7 areas)",
+      "mpaa": null,
       "running_time_minutes": 116,
-      "genres": "Action Thriller",
+      "genres": "Action &middot; Thriller",
       "distributor": "Columbia Pictures"
     },
-    "scraped_at": "2026-09-06T14:59:35.676Z"
+    "scraped_at": "2026-11-05T16:50:59.635Z"
   },
   "venom-the-last-dance-2024": {
     "title": "Venom: The Last Dance",
@@ -2061,13 +2161,13 @@
       "worldwide": 478937618,
       "opening_weekend_domestic": 51012404,
       "budget": null,
-      "earliest_release_date": "October 23, 2024 (China, APAC)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Oct 23, 2024 (APAC, China)",
+      "mpaa": null,
       "running_time_minutes": 110,
-      "genres": "Action Fantasy Horror Sci-Fi Thriller",
+      "genres": "Action &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T14:59:42.109Z"
+    "scraped_at": "2026-11-05T16:51:06.102Z"
   },
   "kraven-the-hunter-2024": {
     "title": "Kraven the Hunter",
@@ -2086,30 +2186,24 @@
       "worldwide": 62076533,
       "opening_weekend_domestic": 11001109,
       "budget": null,
-      "earliest_release_date": "December 11, 2024 (Mexico)",
-      "mpaa": "R",
+      "earliest_release_date": "Wed Dec 11, 2024 (Mexico)",
+      "mpaa": null,
       "running_time_minutes": 127,
-      "genres": "Action Adventure Thriller",
+      "genres": "Action &middot; Adventure &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T14:59:47.892Z"
+    "scraped_at": "2026-11-05T16:51:12.839Z"
   },
   "joker-folie-deux-2024": {
     "title": "Joker: Folie à Deux",
     "year": "2024",
-    "release_date": "2024-01-01",
-    "universe": "UNKNOWN",
-    "source": "baseline",
+    "release_date": "2024-10-04",
+    "universe": "Elseworlds",
+    "source": "addition",
     "bom_id": "tt11315808",
     "bom_url": "https://www.boxofficemojo.com/title/tt11315808/",
-    "matchedText": "Joker: Folie à Deux (2024)",
-    "candidates": [
-      {
-        "id": "tt11315808",
-        "text": "Joker: Folie à Deux (2024)",
-        "score": 120
-      }
-    ],
+    "matchedText": "(pinned id)",
+    "candidates": null,
     "status": "ok",
     "parsed": {
       "domestic": 58300287,
@@ -2117,13 +2211,13 @@
       "worldwide": 207500287,
       "opening_weekend_domestic": 37678467,
       "budget": null,
-      "earliest_release_date": "October 1, 2024 (South Korea)",
-      "mpaa": "R",
+      "earliest_release_date": "Tue Oct 1, 2024 (South Korea)",
+      "mpaa": null,
       "running_time_minutes": 138,
-      "genres": "Drama Musical Thriller",
+      "genres": "Drama &middot; Musical &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-06T15:01:49.337Z"
+    "scraped_at": "2026-11-05T16:49:23.754Z"
   },
   "the-batman-2022": {
     "title": "The Batman",
@@ -2142,13 +2236,13 @@
       "worldwide": 772775278,
       "opening_weekend_domestic": 134008624,
       "budget": 200000000,
-      "earliest_release_date": "March 1, 2022 (South Korea)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue Mar 1, 2022 (South Korea)",
+      "mpaa": null,
       "running_time_minutes": 176,
-      "genres": "Action Crime Drama Mystery",
+      "genres": "Action &middot; Crime &middot; Mystery",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-06T15:44:38.607Z"
+    "scraped_at": "2026-11-05T16:49:30.883Z"
   },
   "the-amazing-spider-man-2012": {
     "title": "The Amazing Spider-Man",
@@ -2167,13 +2261,13 @@
       "worldwide": 758725893,
       "opening_weekend_domestic": 62004688,
       "budget": 230000000,
-      "earliest_release_date": "June 28, 2012 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Thu Jun 28, 2012 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 136,
-      "genres": "Action Sci-Fi",
+      "genres": "Action &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T17:04:52.733Z"
+    "scraped_at": "2026-11-05T16:51:19.318Z"
   },
   "the-amazing-spider-man-2-2014": {
     "title": "The Amazing Spider-Man 2",
@@ -2188,17 +2282,17 @@
     "status": "ok",
     "parsed": {
       "domestic": 203605622,
-      "international": 513278887,
-      "worldwide": 716934779,
+      "international": 524542299,
+      "worldwide": 728198191,
       "opening_weekend_domestic": 91608337,
       "budget": null,
-      "earliest_release_date": "April 16, 2014 (Belgium)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 16, 2014 (Belgium)",
+      "mpaa": null,
       "running_time_minutes": 142,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T17:04:57.347Z"
+    "scraped_at": "2026-11-05T16:51:26.499Z"
   },
   "x-men-origins-wolverine-2009": {
     "title": "X-Men Origins: Wolverine",
@@ -2217,13 +2311,13 @@
       "worldwide": 373062864,
       "opening_weekend_domestic": 85058003,
       "budget": 150000000,
-      "earliest_release_date": "April 29, 2009 (28 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 29, 2009 (28 areas)",
+      "mpaa": null,
       "running_time_minutes": 107,
-      "genres": "Action Sci-Fi",
+      "genres": "Action &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:04.552Z"
+    "scraped_at": "2026-11-05T16:52:52.577Z"
   },
   "x-men-first-class-2011": {
     "title": "X-Men: First Class",
@@ -2242,13 +2336,13 @@
       "worldwide": 352616690,
       "opening_weekend_domestic": 55101604,
       "budget": 160000000,
-      "earliest_release_date": "June 1, 2011 (EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 1, 2011 (EMEA)",
+      "mpaa": null,
       "running_time_minutes": 131,
-      "genres": "Action Sci-Fi",
+      "genres": "Action &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:09.907Z"
+    "scraped_at": "2026-11-05T16:52:59.282Z"
   },
   "the-wolverine-2013": {
     "title": "The Wolverine",
@@ -2267,13 +2361,13 @@
       "worldwide": 414828246,
       "opening_weekend_domestic": 53113752,
       "budget": 120000000,
-      "earliest_release_date": "July 24, 2013 (EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 24, 2013 (EMEA)",
+      "mpaa": null,
       "running_time_minutes": 126,
-      "genres": "Action Sci-Fi Thriller",
+      "genres": "Action &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:14.567Z"
+    "scraped_at": "2026-11-05T16:53:07.121Z"
   },
   "x-men-days-of-future-past-2014": {
     "title": "X-Men: Days of Future Past",
@@ -2292,13 +2386,13 @@
       "worldwide": 746045700,
       "opening_weekend_domestic": 90823660,
       "budget": 200000000,
-      "earliest_release_date": "May 21, 2014 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed May 21, 2014 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 132,
-      "genres": "Action Adventure Sci-Fi Thriller",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:21.365Z"
+    "scraped_at": "2026-11-05T16:53:12.972Z"
   },
   "deadpool-2016": {
     "title": "Deadpool",
@@ -2317,13 +2411,13 @@
       "worldwide": 782837347,
       "opening_weekend_domestic": 132434639,
       "budget": 58000000,
-      "earliest_release_date": "February 9, 2016 (Taiwan)",
-      "mpaa": "R",
+      "earliest_release_date": "Tue Feb 9, 2016 (Taiwan)",
+      "mpaa": null,
       "running_time_minutes": 108,
-      "genres": "Action Comedy Sci-Fi",
+      "genres": "Action &middot; Comedy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:33.761Z"
+    "scraped_at": "2026-11-05T16:53:20.306Z"
   },
   "x-men-apocalypse-2016": {
     "title": "X-Men: Apocalypse",
@@ -2342,13 +2436,13 @@
       "worldwide": 543934105,
       "opening_weekend_domestic": 65769562,
       "budget": 178000000,
-      "earliest_release_date": "May 18, 2016 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed May 18, 2016 (EMEA, APAC)",
+      "mpaa": null,
       "running_time_minutes": 144,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:38.502Z"
+    "scraped_at": "2026-11-05T16:53:27.149Z"
   },
   "logan-2017": {
     "title": "Logan",
@@ -2367,13 +2461,13 @@
       "worldwide": 619180476,
       "opening_weekend_domestic": 88411916,
       "budget": 97000000,
-      "earliest_release_date": "March 1, 2017 (12 markets)",
-      "mpaa": "R",
+      "earliest_release_date": "Wed Mar 1, 2017 (12 areas)",
+      "mpaa": null,
       "running_time_minutes": 137,
-      "genres": "Action Drama Sci-Fi Thriller",
+      "genres": "Action &middot; Drama &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:44.213Z"
+    "scraped_at": "2026-11-05T16:53:33.065Z"
   },
   "deadpool-2-2018": {
     "title": "Deadpool 2",
@@ -2392,13 +2486,13 @@
       "worldwide": 785896632,
       "opening_weekend_domestic": 125507153,
       "budget": 110000000,
-      "earliest_release_date": "May 16, 2018 (18 markets)",
-      "mpaa": "R",
+      "earliest_release_date": "Wed May 16, 2018 (18 areas)",
+      "mpaa": null,
       "running_time_minutes": 119,
-      "genres": "Action Adventure Comedy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:48.886Z"
+    "scraped_at": "2026-11-05T16:53:39.562Z"
   },
   "x-men-dark-phoenix-2019": {
     "title": "X-Men: Dark Phoenix",
@@ -2417,13 +2511,13 @@
       "worldwide": 252442974,
       "opening_weekend_domestic": 32828348,
       "budget": 200000000,
-      "earliest_release_date": "June 5, 2019 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 5, 2019 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 113,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:05:55.502Z"
+    "scraped_at": "2026-11-05T16:53:46.265Z"
   },
   "the-new-mutants-2020": {
     "title": "The New Mutants",
@@ -2442,13 +2536,13 @@
       "worldwide": 49169594,
       "opening_weekend_domestic": 7037017,
       "budget": null,
-      "earliest_release_date": "August 26, 2020 (EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Aug 26, 2020 (EMEA)",
+      "mpaa": null,
       "running_time_minutes": 94,
-      "genres": "Action Horror Mystery Sci-Fi",
+      "genres": "Action &middot; Horror &middot; Mystery &middot; Sci-Fi",
       "distributor": "20th Century Studios"
     },
-    "scraped_at": "2026-09-06T17:06:01.145Z"
+    "scraped_at": "2026-11-05T16:53:52.414Z"
   },
   "x-men-2000": {
     "title": "X-Men",
@@ -2467,13 +2561,13 @@
       "worldwide": 296339528,
       "opening_weekend_domestic": 54471475,
       "budget": 75000000,
-      "earliest_release_date": "July 13, 2000 (Australia)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Thu Jul 13, 2000 (Australia)",
+      "mpaa": null,
       "running_time_minutes": 104,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:41:30.100Z"
+    "scraped_at": "2026-11-05T16:52:07.398Z"
   },
   "x2-2003": {
     "title": "X2",
@@ -2492,13 +2586,13 @@
       "worldwide": 407711549,
       "opening_weekend_domestic": 85558731,
       "budget": 110000000,
-      "earliest_release_date": "April 30, 2003 (24 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Apr 30, 2003 (24 areas)",
+      "mpaa": null,
       "running_time_minutes": 134,
-      "genres": "Action Sci-Fi Thriller",
+      "genres": "Action &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:41:35.367Z"
+    "scraped_at": "2026-11-05T16:52:13.976Z"
   },
   "x-men-the-last-stand-2006": {
     "title": "X-Men: The Last Stand",
@@ -2517,13 +2611,13 @@
       "worldwide": 460435291,
       "opening_weekend_domestic": 102750665,
       "budget": 210000000,
-      "earliest_release_date": "May 24, 2006 (13 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed May 24, 2006 (13 areas)",
+      "mpaa": null,
       "running_time_minutes": 104,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T17:41:40.017Z"
+    "scraped_at": "2026-11-05T16:52:21.131Z"
   },
   "batman-begins-2005": {
     "title": "Batman Begins",
@@ -2542,13 +2636,13 @@
       "worldwide": 375591291,
       "opening_weekend_domestic": 48745440,
       "budget": 150000000,
-      "earliest_release_date": "June 15, 2005 (6 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 15, 2005 (6 areas)",
+      "mpaa": null,
       "running_time_minutes": 140,
       "genres": "Crime",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-06T18:23:16.020Z"
+    "scraped_at": "2026-11-05T16:49:36.026Z"
   },
   "the-dark-knight-2008": {
     "title": "The Dark Knight",
@@ -2567,13 +2661,13 @@
       "worldwide": 1008480529,
       "opening_weekend_domestic": 158411483,
       "budget": 185000000,
-      "earliest_release_date": "July 16, 2008 (Taiwan)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 16, 2008 (Taiwan)",
+      "mpaa": null,
       "running_time_minutes": 152,
-      "genres": "Crime Thriller",
+      "genres": "Crime &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-06T18:23:21.765Z"
+    "scraped_at": "2026-11-05T16:49:43.987Z"
   },
   "the-dark-knight-rises-2012": {
     "title": "The Dark Knight Rises",
@@ -2592,13 +2686,13 @@
       "worldwide": 1085429692,
       "opening_weekend_domestic": 160887295,
       "budget": 250000000,
-      "earliest_release_date": "July 19, 2012 (APAC, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Thu Jul 19, 2012 (APAC, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 164,
-      "genres": "Crime Thriller",
+      "genres": "Crime &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-09-06T18:23:26.373Z"
+    "scraped_at": "2026-11-05T16:49:51.823Z"
   },
   "spider-man-2002": {
     "title": "Spider-Man",
@@ -2613,17 +2707,17 @@
     "status": "ok",
     "parsed": {
       "domestic": 408524875,
-      "international": 402400432,
-      "worldwide": 810925307,
+      "international": 402465308,
+      "worldwide": 810990183,
       "opening_weekend_domestic": 114844116,
       "budget": 139000000,
-      "earliest_release_date": "May 3, 2002 (18 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri May 3, 2002 (18 areas)",
+      "mpaa": null,
       "running_time_minutes": 121,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T18:23:32.499Z"
+    "scraped_at": "2026-11-05T16:51:34.480Z"
   },
   "spider-man-2-2004": {
     "title": "Spider-Man 2",
@@ -2638,17 +2732,17 @@
     "status": "ok",
     "parsed": {
       "domestic": 375087840,
-      "international": 413165651,
-      "worldwide": 788253491,
+      "international": 413279729,
+      "worldwide": 788367569,
       "opening_weekend_domestic": 88156227,
       "budget": 200000000,
-      "earliest_release_date": "June 30, 2004 (19 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jun 30, 2004 (19 areas)",
+      "mpaa": null,
       "running_time_minutes": 127,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T18:23:36.748Z"
+    "scraped_at": "2026-11-05T16:51:41.709Z"
   },
   "spider-man-3-2007": {
     "title": "Spider-Man 3",
@@ -2663,17 +2757,17 @@
     "status": "ok",
     "parsed": {
       "domestic": 338032318,
-      "international": 549325104,
-      "worldwide": 887415130,
+      "international": 549396867,
+      "worldwide": 887486893,
       "opening_weekend_domestic": 151116516,
       "budget": 258000000,
-      "earliest_release_date": "May 1, 2007 (18 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Tue May 1, 2007 (18 areas)",
+      "mpaa": null,
       "running_time_minutes": 139,
-      "genres": "Action Adventure Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T18:23:43.441Z"
+    "scraped_at": "2026-11-05T16:51:48.146Z"
   },
   "ghost-rider-2007": {
     "title": "Ghost Rider",
@@ -2692,13 +2786,13 @@
       "worldwide": 228738393,
       "opening_weekend_domestic": 45388836,
       "budget": 110000000,
-      "earliest_release_date": "February 14, 2007 (9 markets)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Feb 14, 2007 (9 areas)",
+      "mpaa": null,
       "running_time_minutes": 110,
-      "genres": "Action Fantasy Thriller",
+      "genres": "Action &middot; Fantasy &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T18:23:49.441Z"
+    "scraped_at": "2026-11-05T16:51:54.652Z"
   },
   "ghost-rider-spirit-of-vengeance-2012": {
     "title": "Ghost Rider: Spirit of Vengeance",
@@ -2717,13 +2811,13 @@
       "worldwide": 132563930,
       "opening_weekend_domestic": 22115334,
       "budget": 57000000,
-      "earliest_release_date": "February 15, 2012 (EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Feb 15, 2012 (EMEA)",
+      "mpaa": null,
       "running_time_minutes": 96,
-      "genres": "Action Adventure Fantasy Sci-Fi Thriller",
+      "genres": "Action &middot; Fantasy &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-09-06T18:23:54.368Z"
+    "scraped_at": "2026-11-05T16:52:00.243Z"
   },
   "daredevil-2003": {
     "title": "Daredevil",
@@ -2742,13 +2836,13 @@
       "worldwide": 179179718,
       "opening_weekend_domestic": 40310419,
       "budget": 78000000,
-      "earliest_release_date": "February 14, 2003 (Domestic, EMEA)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Fri Feb 14, 2003 (Domestic, EMEA)",
+      "mpaa": null,
       "running_time_minutes": 103,
-      "genres": "Action Crime Drama Sci-Fi",
+      "genres": "Action &middot; Crime &middot; Drama &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T18:24:00.635Z"
+    "scraped_at": "2026-11-05T16:52:28.747Z"
   },
   "elektra-2005": {
     "title": "Elektra",
@@ -2767,13 +2861,13 @@
       "worldwide": 56995646,
       "opening_weekend_domestic": 12804793,
       "budget": 43000000,
-      "earliest_release_date": "January 12, 2005 (Lesser Antilles)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jan 12, 2005 (Lesser Antilles)",
+      "mpaa": null,
       "running_time_minutes": 97,
-      "genres": "Action Adventure Crime Fantasy",
+      "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T18:24:05.164Z"
+    "scraped_at": "2026-11-05T16:52:35.296Z"
   },
   "fantastic-four-2005-2005": {
     "title": "Fantastic Four (2005)",
@@ -2792,13 +2886,13 @@
       "worldwide": 333535934,
       "opening_weekend_domestic": 56061504,
       "budget": 100000000,
-      "earliest_release_date": "July 6, 2005 (APAC, LATAM)",
-      "mpaa": "PG-13",
+      "earliest_release_date": "Wed Jul 6, 2005 (APAC, LATAM)",
+      "mpaa": null,
       "running_time_minutes": 106,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T18:24:10.185Z"
+    "scraped_at": "2026-11-05T16:52:41.968Z"
   },
   "fantastic-four-rise-of-the-silver-surfer-2007": {
     "title": "Fantastic Four: Rise of the Silver Surfer",
@@ -2817,13 +2911,13 @@
       "worldwide": 301913131,
       "opening_weekend_domestic": 58051684,
       "budget": 130000000,
-      "earliest_release_date": "June 13, 2007 (9 markets)",
-      "mpaa": "PG",
+      "earliest_release_date": "Wed Jun 13, 2007 (9 areas)",
+      "mpaa": null,
       "running_time_minutes": 92,
-      "genres": "Action Adventure Fantasy Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-09-06T18:24:16.385Z"
+    "scraped_at": "2026-11-05T16:52:47.214Z"
   },
   "spider-man-brand-new-day-2026": {
     "title": "Spider-Man: Brand New Day",
@@ -2848,7 +2942,7 @@
       "genres": "Action &middot; Adventure",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-05T16:31:04.192Z"
+    "scraped_at": "2026-11-05T16:50:10.750Z"
   },
   "avengers-doomsday-2026": {
     "title": "Avengers: Doomsday",
@@ -2873,7 +2967,7 @@
       "genres": "Action",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:31:08.976Z"
+    "scraped_at": "2026-11-05T16:50:16.314Z"
   },
   "supergirl-2026": {
     "title": "Supergirl",
@@ -2898,7 +2992,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:31:13.999Z"
+    "scraped_at": "2026-11-05T16:50:27.164Z"
   },
   "clayface-2026": {
     "title": "Clayface",
@@ -2923,6 +3017,6 @@
       "genres": "Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:31:20.400Z"
+    "scraped_at": "2026-11-05T16:50:34.585Z"
   }
 }

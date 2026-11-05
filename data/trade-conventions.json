@@ -1,9 +1,12 @@
 {
-  "note": "Box-office trade conventions the raw scrape does not encode, from the Turnstile audit of 2026-09-19 (a Reconcilers summon). Every figure here was confirmed against Box Office Mojo before it went in. promote.mjs applies release_date_fixes; build-web.mjs applies the rest to web.json. tie-out.mjs fails the build if a film opens on a day other than Friday without an entry in opening_through_first_sunday.",
+  "note": "Box-office trade conventions the raw scrape does not encode, from the Turnstile audit of 2026-09-19 (a Reconcilers summon). Every figure here was confirmed against Box Office Mojo before it went in. promote.mjs applies release_date_fixes and gross_fixes; build-web.mjs applies the rest to web.json. tie-out.mjs fails the build if a film opens on a day other than Friday without an entry in opening_through_first_sunday.",
   "release_date_fixes": {
     "The Avengers": { "date": "2012-05-04", "was": "2012-05-12", "source": "BOM release group gr1911837189, Domestic row: May 4, 2012. The legacy sheet had May 12, a Saturday." },
     "The Suicide Squad": { "date": "2021-08-06", "was": "2021-08-05", "source": "BOM title tt6334354, Domestic row; Wikipedia infobox 2021|8|6|United States" },
     "Aquaman and the Lost Kingdom": { "date": "2023-12-22", "was": "2023-12-20", "source": "BOM title tt9663764, Domestic row; Wikipedia infobox 2023|12|22|United States" }
+  },
+  "gross_fixes": {
+    "The Amazing Spider-Man 2": [{ "group": "2026 Re-release", "field": "international", "reported": 11263412, "value": 999, "source": "BOM release rl895320321 (Australia, 2026 Re-release): one theater, one weekend (Oct 8-11, 2026), $999, yet To Date reads $11,263,412 and flows into the lifetime. Checked 2026-11-05. Applies only while BOM still shows the reported figure." }]
   },
   "opening_through_first_sunday": {
     "Spider-Man 2": { "value": 152411751, "window": "Wed to Sun, 5 days", "source": "BOM rl896763393 daily, Jun 30 to Jul 4, 2004 (To Date)" },

@@ -15,7 +15,12 @@ const additions = JSON.parse(readFileSync(join(ROOT, "data/additions.json"), "ut
 const skeleton = JSON.parse(readFileSync(join(ROOT, "data/skeleton.json"), "utf8"));
 // Release dates the legacy sheet got wrong (Turnstile audit, 2026-09-19). The sheet stays as it was
 // for the diff; the correction is applied here, by title, and each carries its source.
-const DATE_FIX = JSON.parse(readFileSync(join(ROOT, "data/trade-conventions.json"), "utf8")).release_date_fixes;
+const CONV = JSON.parse(readFileSync(join(ROOT, "data/trade-conventions.json"), "utf8"));
+const DATE_FIX = CONV.release_date_fixes;
+// Release-group grosses Box Office Mojo has wrong (a one-theater, $999 weekend logged as $11.3M To Date).
+// Each names the group, the figure BOM shows and the right one; it applies only while BOM still shows
+// the wrong figure, so a correction on their side retires it rather than subtracting twice.
+const GROSS_FIX = CONV.gross_fixes || {};
 
 // Money a film earns in a later release (a re-release, a recut, an anniversary run) is inflated at
 // that release's own year, not the original's (Turnstile audit, 2026-09-19): The Dark Knight's 2012
@@ -97,9 +102,20 @@ for (const [key, rec] of Object.entries(scraped)) {
     continue;
   }
 
-  const dom = p.domestic ?? null;
-  const intl = p.international ?? (p.worldwide != null && dom != null ? p.worldwide - dom : null);
+  let dom = p.domestic ?? null;
+  let intl = p.international ?? (p.worldwide != null && dom != null ? p.worldwide - dom : null);
+  let ww = p.worldwide;
   const groups = laterReleaseGroups(rec.bom_id, year).filter(ownGroup);
+  for (const fx of GROSS_FIX[title] || []) {
+    const shown = laterReleaseGroups(rec.bom_id, 0).find((g) => g.name === fx.group);
+    if (!shown || shown[fx.field] !== fx.reported) continue;
+    const delta = fx.value - fx.reported;
+    if (fx.field === "domestic") dom += delta; else intl += delta;
+    ww += delta;
+    const g = groups.find((x) => x.name === fx.group);
+    if (g) { g[fx.field] += delta; g.worldwide += delta; }
+    console.log(`gross fix: ${title}, ${fx.group} ${fx.field} ${fx.reported} -> ${fx.value}`);
+  }
 
   films.push({
     title,
@@ -111,7 +127,7 @@ for (const [key, rec] of Object.entries(scraped)) {
     box_office: {
       domestic: dom,
       international: intl,
-      worldwide: p.worldwide,
+      worldwide: ww,
       opening_weekend_domestic: p.opening_weekend_domestic ?? null,
       widest_release_theaters: null,
       is_final: release_date < FINAL_CUTOFF,
@@ -119,7 +135,7 @@ for (const [key, rec] of Object.entries(scraped)) {
     box_office_real_2025: {
       domestic: realByRelease(dom, "domestic", year, groups),
       international: realByRelease(intl, "international", year, groups),
-      worldwide: realByRelease(p.worldwide, "worldwide", year, groups),
+      worldwide: realByRelease(ww, "worldwide", year, groups),
     },
     ...(groups.length ? { later_releases: groups } : {}),
     budget: p.budget ?? null,

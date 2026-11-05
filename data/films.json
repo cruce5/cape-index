@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-05T16:31:34.844Z",
+    "generated": "2026-11-05T16:56:07.085Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars, each later release (re-release, recut) at its own year",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -52,11 +52,13 @@
       },
       "budget": 75000000,
       "runtime_minutes": 104,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -67,7 +69,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "July 13, 2000 (Australia)"
+        "earliest_release_date": "Thu Jul 13, 2000 (Australia)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -96,16 +98,16 @@
       },
       "box_office": {
         "domestic": 408524875,
-        "international": 402400432,
-        "worldwide": 810925307,
+        "international": 402465308,
+        "worldwide": 810990183,
         "opening_weekend_domestic": 114844116,
         "widest_release_theaters": null,
         "is_final": true
       },
       "box_office_real_2025": {
         "domestic": 731438923,
-        "international": 720459065,
-        "worldwide": 1451897987
+        "international": 720575221,
+        "worldwide": 1452014144
       },
       "later_releases": [
         {
@@ -118,11 +120,13 @@
       ],
       "budget": 139000000,
       "runtime_minutes": 121,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -133,19 +137,19 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "May 3, 2002 (18 markets)"
+        "earliest_release_date": "Fri May 3, 2002 (18 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
-        "pct_domestic": 50.38,
-        "pct_international": 49.62,
+        "pct_domestic": 50.37,
+        "pct_international": 49.63,
         "domestic_multiplier": 3.56,
         "opening_share_worldwide": 14.16,
         "roi_worldwide": 5.83,
         "breakeven_worldwide": 347500000,
-        "profit_vs_breakeven": 463425307,
+        "profit_vs_breakeven": 463490183,
         "profitable": true,
         "budget_real_2025": 248871039
       }
@@ -175,12 +179,15 @@
       },
       "budget": 78000000,
       "runtime_minutes": 103,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Crime",
+        "&middot;",
         "Drama",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -191,7 +198,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "February 14, 2003 (Domestic, EMEA)"
+        "earliest_release_date": "Fri Feb 14, 2003 (Domestic, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -233,11 +240,13 @@
       },
       "budget": 110000000,
       "runtime_minutes": 134,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -248,7 +257,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "April 30, 2003 (24 markets)"
+        "earliest_release_date": "Wed Apr 30, 2003 (24 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -277,16 +286,16 @@
       },
       "box_office": {
         "domestic": 375087840,
-        "international": 413165651,
-        "worldwide": 788253491,
+        "international": 413279729,
+        "worldwide": 788367569,
         "opening_weekend_domestic": 88156227,
         "widest_release_theaters": null,
         "is_final": true
       },
       "box_office_real_2025": {
         "domestic": 639575401,
-        "international": 704371313,
-        "worldwide": 1343946714
+        "international": 704565831,
+        "worldwide": 1344141232
       },
       "later_releases": [
         {
@@ -299,11 +308,13 @@
       ],
       "budget": 200000000,
       "runtime_minutes": 127,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -314,7 +325,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "June 30, 2004 (19 markets)"
+        "earliest_release_date": "Wed Jun 30, 2004 (19 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -326,7 +337,7 @@
         "opening_share_worldwide": 11.18,
         "roi_worldwide": 3.94,
         "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": 288253491,
+        "profit_vs_breakeven": 288367569,
         "profitable": true,
         "budget_real_2025": 341026998
       }
@@ -356,12 +367,15 @@
       },
       "budget": 43000000,
       "runtime_minutes": 97,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Crime",
+        "&middot;",
         "Fantasy"
       ],
       "scores": {
@@ -372,7 +386,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "January 12, 2005 (Lesser Antilles)"
+        "earliest_release_date": "Wed Jan 12, 2005 (Lesser Antilles)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -465,7 +479,7 @@
       ],
       "budget": 150000000,
       "runtime_minutes": 140,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Crime"
@@ -478,7 +492,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "June 15, 2005 (6 markets)"
+        "earliest_release_date": "Wed Jun 15, 2005 (6 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -520,12 +534,15 @@
       },
       "budget": 100000000,
       "runtime_minutes": 106,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -536,7 +553,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "July 6, 2005 (APAC, LATAM)"
+        "earliest_release_date": "Wed Jul 6, 2005 (APAC, LATAM)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -578,11 +595,13 @@
       },
       "budget": 210000000,
       "runtime_minutes": 104,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -593,7 +612,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "May 24, 2006 (13 markets)"
+        "earliest_release_date": "Wed May 24, 2006 (13 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -635,11 +654,13 @@
       },
       "budget": 110000000,
       "runtime_minutes": 110,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -650,7 +671,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "February 14, 2007 (9 markets)"
+        "earliest_release_date": "Wed Feb 14, 2007 (9 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -679,16 +700,16 @@
       },
       "box_office": {
         "domestic": 338032318,
-        "international": 549325104,
-        "worldwide": 887415130,
+        "international": 549396867,
+        "worldwide": 887486893,
         "opening_weekend_domestic": 151116516,
         "widest_release_theaters": null,
         "is_final": true
       },
       "box_office_real_2025": {
         "domestic": 525123755,
-        "international": 853356073,
-        "worldwide": 1378556579
+        "international": 853467555,
+        "worldwide": 1378668061
       },
       "later_releases": [
         {
@@ -708,11 +729,13 @@
       ],
       "budget": 258000000,
       "runtime_minutes": 139,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -723,7 +746,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "May 1, 2007 (18 markets)"
+        "earliest_release_date": "Tue May 1, 2007 (18 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -735,7 +758,7 @@
         "opening_share_worldwide": 17.03,
         "roi_worldwide": 3.44,
         "breakeven_worldwide": 645000000,
-        "profit_vs_breakeven": 242415130,
+        "profit_vs_breakeven": 242486893,
         "profitable": true,
         "budget_real_2025": 400795787
       }
@@ -765,12 +788,15 @@
       },
       "budget": 130000000,
       "runtime_minutes": 92,
-      "mpaa": "PG",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -781,7 +807,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "June 13, 2007 (9 markets)"
+        "earliest_release_date": "Wed Jun 13, 2007 (9 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -832,11 +858,13 @@
       ],
       "budget": 140000000,
       "runtime_minutes": 126,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Paramount Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -851,7 +879,7 @@
         "worldwide": 585796247
       },
       "bom_meta": {
-        "earliest_release_date": "April 30, 2008 (29 markets)"
+        "earliest_release_date": "Wed Apr 30, 2008 (29 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -893,10 +921,11 @@
       },
       "budget": 150000000,
       "runtime_minutes": 112,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Universal Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -911,7 +940,7 @@
         "worldwide": 264770996
       },
       "bom_meta": {
-        "earliest_release_date": "June 11, 2008 (Ukraine)"
+        "earliest_release_date": "Wed Jun 11, 2008 (Ukraine)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1018,10 +1047,11 @@
       ],
       "budget": 185000000,
       "runtime_minutes": 152,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Crime",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -1032,7 +1062,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "July 16, 2008 (Taiwan)"
+        "earliest_release_date": "Wed Jul 16, 2008 (Taiwan)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1074,10 +1104,11 @@
       },
       "budget": 150000000,
       "runtime_minutes": 107,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1088,7 +1119,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "April 29, 2009 (28 markets)"
+        "earliest_release_date": "Wed Apr 29, 2009 (28 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1130,10 +1161,11 @@
       },
       "budget": 200000000,
       "runtime_minutes": 124,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Paramount Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1148,7 +1180,7 @@
         "worldwide": 623933331
       },
       "bom_meta": {
-        "earliest_release_date": "April 28, 2010 (EMEA)"
+        "earliest_release_date": "Wed Apr 28, 2010 (EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1190,10 +1222,11 @@
       },
       "budget": 150000000,
       "runtime_minutes": 115,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Paramount Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Fantasy"
       ],
       "scores": {
@@ -1208,7 +1241,7 @@
         "worldwide": 449326618
       },
       "bom_meta": {
-        "earliest_release_date": "April 21, 2011 (Australia)"
+        "earliest_release_date": "Thu Apr 21, 2011 (Australia)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1250,10 +1283,11 @@
       },
       "budget": 160000000,
       "runtime_minutes": 131,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1264,7 +1298,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "June 1, 2011 (EMEA)"
+        "earliest_release_date": "Wed Jun 1, 2011 (EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1306,11 +1340,13 @@
       },
       "budget": 140000000,
       "runtime_minutes": 124,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Paramount Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1325,7 +1361,7 @@
         "worldwide": 370569774
       },
       "bom_meta": {
-        "earliest_release_date": "July 22, 2011 (Domestic, EMEA)"
+        "earliest_release_date": "Fri Jul 22, 2011 (Domestic, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1367,13 +1403,13 @@
       },
       "budget": 57000000,
       "runtime_minutes": 96,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
-        "Adventure",
+        "&middot;",
         "Fantasy",
-        "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -1384,7 +1420,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "February 15, 2012 (EMEA)"
+        "earliest_release_date": "Wed Feb 15, 2012 (EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1435,10 +1471,11 @@
       ],
       "budget": 220000000,
       "runtime_minutes": 143,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1453,7 +1490,7 @@
         "worldwide": 1520538536
       },
       "bom_meta": {
-        "earliest_release_date": "April 25, 2012 (APAC, EMEA)"
+        "earliest_release_date": "Wed Apr 25, 2012 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1495,10 +1532,11 @@
       },
       "budget": 230000000,
       "runtime_minutes": 136,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1509,7 +1547,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "June 28, 2012 (APAC, EMEA)"
+        "earliest_release_date": "Thu Jun 28, 2012 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1581,10 +1619,11 @@
       ],
       "budget": 250000000,
       "runtime_minutes": 164,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Crime",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -1595,7 +1634,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "July 19, 2012 (APAC, EMEA)"
+        "earliest_release_date": "Thu Jul 19, 2012 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1646,12 +1685,12 @@
       ],
       "budget": 200000000,
       "runtime_minutes": 130,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
-        "Adventure",
-        "Sci-Fi"
+        "&middot;",
+        "Adventure"
       ],
       "scores": {
         "rt_critic": 79,
@@ -1665,7 +1704,7 @@
         "worldwide": 1215577205
       },
       "bom_meta": {
-        "earliest_release_date": "April 24, 2013 (EMEA, APAC)"
+        "earliest_release_date": "Wed Apr 24, 2013 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1707,11 +1746,13 @@
       },
       "budget": 225000000,
       "runtime_minutes": 143,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1726,7 +1767,7 @@
         "worldwide": 668045518
       },
       "bom_meta": {
-        "earliest_release_date": "June 12, 2013 (APAC, EMEA)"
+        "earliest_release_date": "Wed Jun 12, 2013 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1768,11 +1809,13 @@
       },
       "budget": 120000000,
       "runtime_minutes": 126,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -1783,7 +1826,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "July 24, 2013 (EMEA)"
+        "earliest_release_date": "Wed Jul 24, 2013 (EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1825,12 +1868,15 @@
       },
       "budget": 170000000,
       "runtime_minutes": 112,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1845,7 +1891,7 @@
         "worldwide": 644783140
       },
       "bom_meta": {
-        "earliest_release_date": "October 30, 2013 (EMEA, APAC)"
+        "earliest_release_date": "Wed Oct 30, 2013 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1887,12 +1933,15 @@
       },
       "budget": 170000000,
       "runtime_minutes": 136,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -1907,7 +1956,7 @@
         "worldwide": 714421503
       },
       "bom_meta": {
-        "earliest_release_date": "March 26, 2014 (APAC, EMEA)"
+        "earliest_release_date": "Wed Mar 26, 2014 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1936,18 +1985,25 @@
       },
       "box_office": {
         "domestic": 203605622,
-        "international": 513278887,
-        "worldwide": 716934779,
+        "international": 513279886,
+        "worldwide": 716935778,
         "opening_weekend_domestic": 91608337,
         "widest_release_theaters": null,
         "is_final": true
       },
       "box_office_real_2025": {
         "domestic": 277023228,
-        "international": 695980159,
-        "worldwide": 973063473
+        "international": 695981158,
+        "worldwide": 973064472
       },
       "later_releases": [
+        {
+          "name": "2026 Re-release",
+          "year": 2026,
+          "domestic": 0,
+          "international": 999,
+          "worldwide": 999
+        },
         {
           "name": "2024 Re-release",
           "year": 2024,
@@ -1958,11 +2014,13 @@
       ],
       "budget": 200000000,
       "runtime_minutes": 142,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -1973,7 +2031,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "April 16, 2014 (Belgium)"
+        "earliest_release_date": "Wed Apr 16, 2014 (Belgium)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -1986,7 +2044,7 @@
         "opening_share_worldwide": 12.78,
         "roi_worldwide": 3.58,
         "breakeven_worldwide": 500000000,
-        "profit_vs_breakeven": 216934779,
+        "profit_vs_breakeven": 216935778,
         "profitable": true,
         "budget_real_2025": 272117464
       }
@@ -2016,12 +2074,15 @@
       },
       "budget": 200000000,
       "runtime_minutes": 132,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -2032,7 +2093,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "May 21, 2014 (APAC, EMEA)"
+        "earliest_release_date": "Wed May 21, 2014 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2083,12 +2144,15 @@
       ],
       "budget": 170000000,
       "runtime_minutes": 121,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2103,7 +2167,7 @@
         "worldwide": 773350147
       },
       "bom_meta": {
-        "earliest_release_date": "July 30, 2014 (Iceland)"
+        "earliest_release_date": "Wed Jul 30, 2014 (Iceland)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2154,11 +2218,13 @@
       ],
       "budget": 250000000,
       "runtime_minutes": 141,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2173,7 +2239,7 @@
         "worldwide": 1405018048
       },
       "bom_meta": {
-        "earliest_release_date": "April 22, 2015 (EMEA, APAC)"
+        "earliest_release_date": "Wed Apr 22, 2015 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2215,11 +2281,13 @@
       },
       "budget": 130000000,
       "runtime_minutes": 117,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2234,7 +2302,7 @@
         "worldwide": 519311965
       },
       "bom_meta": {
-        "earliest_release_date": "July 10, 2015 (Bulgaria)"
+        "earliest_release_date": "Fri Jul 10, 2015 (Bulgaria)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2285,11 +2353,13 @@
       ],
       "budget": 58000000,
       "runtime_minutes": 108,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2300,7 +2370,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "February 9, 2016 (Taiwan)"
+        "earliest_release_date": "Tue Feb 9, 2016 (Taiwan)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2351,7 +2421,7 @@
       ],
       "budget": 250000000,
       "runtime_minutes": 151,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Sci-Fi"
@@ -2368,7 +2438,7 @@
         "worldwide": 873637528
       },
       "bom_meta": {
-        "earliest_release_date": "March 23, 2016 (EMEA, APAC)"
+        "earliest_release_date": "Wed Mar 23, 2016 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2419,10 +2489,11 @@
       ],
       "budget": 250000000,
       "runtime_minutes": 147,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2437,7 +2508,7 @@
         "worldwide": 1155046416
       },
       "bom_meta": {
-        "earliest_release_date": "April 27, 2016 (APAC, EMEA)"
+        "earliest_release_date": "Wed Apr 27, 2016 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2479,11 +2550,13 @@
       },
       "budget": 178000000,
       "runtime_minutes": 144,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2494,7 +2567,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "May 18, 2016 (APAC, EMEA)"
+        "earliest_release_date": "Wed May 18, 2016 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2536,12 +2609,15 @@
       },
       "budget": 175000000,
       "runtime_minutes": 123,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2556,7 +2632,7 @@
         "worldwide": 746846894
       },
       "bom_meta": {
-        "earliest_release_date": "August 3, 2016 (APAC, EMEA)"
+        "earliest_release_date": "Wed Aug 3, 2016 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2607,12 +2683,15 @@
       ],
       "budget": 165000000,
       "runtime_minutes": 115,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2627,7 +2706,7 @@
         "worldwide": 677796076
       },
       "bom_meta": {
-        "earliest_release_date": "October 25, 2016 (United Kingdom)"
+        "earliest_release_date": "Tue Oct 25, 2016 (United Kingdom)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2678,12 +2757,15 @@
       ],
       "budget": 97000000,
       "runtime_minutes": 137,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Drama",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -2694,7 +2776,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "March 1, 2017 (12 markets)"
+        "earliest_release_date": "Wed Mar 1, 2017 (12 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2745,14 +2827,19 @@
       ],
       "budget": 200000000,
       "runtime_minutes": 136,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Music",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2767,7 +2854,7 @@
         "worldwide": 863756051
       },
       "bom_meta": {
-        "earliest_release_date": "April 25, 2017 (APAC, EMEA)"
+        "earliest_release_date": "Tue Apr 25, 2017 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2825,13 +2912,17 @@
       ],
       "budget": 149000000,
       "runtime_minutes": 141,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "War"
       ],
       "scores": {
@@ -2846,7 +2937,7 @@
         "worldwide": 822854286
       },
       "bom_meta": {
-        "earliest_release_date": "May 30, 2017 (APAC)"
+        "earliest_release_date": "Tue May 30, 2017 (APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2904,11 +2995,13 @@
       ],
       "budget": 175000000,
       "runtime_minutes": 133,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2923,7 +3016,7 @@
         "worldwide": 880166924
       },
       "bom_meta": {
-        "earliest_release_date": "July 5, 2017 (8 markets)"
+        "earliest_release_date": "Wed Jul 5, 2017 (8 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -2974,13 +3067,17 @@
       ],
       "budget": 180000000,
       "runtime_minutes": 130,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2995,7 +3092,7 @@
         "worldwide": 855301806
       },
       "bom_meta": {
-        "earliest_release_date": "October 24, 2017 (United Kingdom)"
+        "earliest_release_date": "Tue Oct 24, 2017 (United Kingdom)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3046,7 +3143,7 @@
       ],
       "budget": 300000000,
       "runtime_minutes": 120,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Sci-Fi"
@@ -3063,7 +3160,7 @@
         "worldwide": 657926987
       },
       "bom_meta": {
-        "earliest_release_date": "October 17, 2017 (Lithuania)"
+        "earliest_release_date": "Tue Oct 17, 2017 (Lithuania)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3115,11 +3212,13 @@
       ],
       "budget": 200000000,
       "runtime_minutes": 134,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3134,7 +3233,7 @@
         "worldwide": 1349926083
       },
       "bom_meta": {
-        "earliest_release_date": "February 13, 2018 (APAC, EMEA)"
+        "earliest_release_date": "Tue Feb 13, 2018 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3185,11 +3284,13 @@
       ],
       "budget": 350000000,
       "runtime_minutes": 149,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3204,7 +3305,7 @@
         "worldwide": 2052415039
       },
       "bom_meta": {
-        "earliest_release_date": "April 25, 2018 (APAC, EMEA)"
+        "earliest_release_date": "Wed Apr 25, 2018 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3262,12 +3363,15 @@
       ],
       "budget": 110000000,
       "runtime_minutes": 119,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3278,7 +3382,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "May 16, 2018 (18 markets)"
+        "earliest_release_date": "Wed May 16, 2018 (18 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3320,12 +3424,15 @@
       },
       "budget": 162000000,
       "runtime_minutes": 118,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3340,7 +3447,7 @@
         "worldwide": 622674139
       },
       "bom_meta": {
-        "earliest_release_date": "July 4, 2018 (EMEA, APAC)"
+        "earliest_release_date": "Wed Jul 4, 2018 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3392,11 +3499,13 @@
       ],
       "budget": 100000000,
       "runtime_minutes": 112,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3407,7 +3516,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "October 3, 2018 (7 markets)"
+        "earliest_release_date": "Wed Oct 3, 2018 (7 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3465,12 +3574,15 @@
       ],
       "budget": 160000000,
       "runtime_minutes": 143,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3485,7 +3597,7 @@
         "worldwide": 1148528393
       },
       "bom_meta": {
-        "earliest_release_date": "December 7, 2018 (China)"
+        "earliest_release_date": "Fri Dec 7, 2018 (China)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3537,11 +3649,13 @@
       ],
       "budget": 160000000,
       "runtime_minutes": 123,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3556,7 +3670,7 @@
         "worldwide": 1131416446
       },
       "bom_meta": {
-        "earliest_release_date": "March 6, 2019 (EMEA, APAC)"
+        "earliest_release_date": "Wed Mar 6, 2019 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3614,12 +3728,15 @@
       ],
       "budget": 100000000,
       "runtime_minutes": 132,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Fantasy"
       ],
       "scores": {
@@ -3634,7 +3751,7 @@
         "worldwide": 367799011
       },
       "bom_meta": {
-        "earliest_release_date": "April 3, 2019 (EMEA, APAC)"
+        "earliest_release_date": "Wed Apr 3, 2019 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3662,34 +3779,36 @@
         "url": "https://www.boxofficemojo.com/title/tt4154796/"
       },
       "box_office": {
-        "domestic": 858373000,
-        "international": 1941066100,
-        "worldwide": 2799439100,
+        "domestic": 898471864,
+        "international": 2043715069,
+        "worldwide": 2942318540,
         "opening_weekend_domestic": 357115007,
         "widest_release_theaters": null,
         "is_final": true
       },
       "box_office_real_2025": {
-        "domestic": 1081456574,
-        "international": 2445532064,
-        "worldwide": 3526988638
+        "domestic": 1121555438,
+        "international": 2548181033,
+        "worldwide": 3669868078
       },
       "later_releases": [
         {
           "name": "2026 Re-release",
           "year": 2026,
-          "domestic": 0,
-          "international": 0,
-          "worldwide": 0
+          "domestic": 40098864,
+          "international": 102648969,
+          "worldwide": 142879440
         }
       ],
       "budget": 356000000,
       "runtime_minutes": 181,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3704,19 +3823,19 @@
         "worldwide": 2799439100
       },
       "bom_meta": {
-        "earliest_release_date": "April 24, 2019 (22 markets)"
+        "earliest_release_date": "Wed Apr 24, 2019 (20 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
       "notes": null,
       "metrics": {
-        "pct_domestic": 30.66,
-        "pct_international": 69.34,
-        "domestic_multiplier": 2.4,
-        "opening_share_worldwide": 12.76,
-        "roi_worldwide": 7.86,
+        "pct_domestic": 30.54,
+        "pct_international": 69.46,
+        "domestic_multiplier": 2.52,
+        "opening_share_worldwide": 12.14,
+        "roi_worldwide": 8.26,
         "breakeven_worldwide": 890000000,
-        "profit_vs_breakeven": 1909439100,
+        "profit_vs_breakeven": 2052318540,
         "profitable": true,
         "budget_real_2025": 448521261
       }
@@ -3746,11 +3865,13 @@
       },
       "budget": 200000000,
       "runtime_minutes": 113,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Fox",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3761,7 +3882,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "June 5, 2019 (APAC, EMEA)"
+        "earliest_release_date": "Wed Jun 5, 2019 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3803,13 +3924,17 @@
       },
       "budget": 160000000,
       "runtime_minutes": 129,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -3824,7 +3949,7 @@
         "worldwide": 1131927996
       },
       "bom_meta": {
-        "earliest_release_date": "June 28, 2019 (China, APAC)"
+        "earliest_release_date": "Fri Jun 28, 2019 (China, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3889,10 +4014,12 @@
       ],
       "budget": 55000000,
       "runtime_minutes": 122,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
-        "Drama"
+        "Drama",
+        "&middot;",
+        "Thriller"
       ],
       "scores": {
         "rt_critic": 68,
@@ -3902,7 +4029,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "October 2, 2019 (APAC, LATAM)"
+        "earliest_release_date": "Wed Oct 2, 2019 (LATAM, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -3953,11 +4080,13 @@
       ],
       "budget": 84500000,
       "runtime_minutes": 109,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Crime"
       ],
       "scores": {
@@ -3972,7 +4101,7 @@
         "worldwide": 205372791
       },
       "bom_meta": {
-        "earliest_release_date": "February 5, 2020 (APAC, EMEA)"
+        "earliest_release_date": "Wed Feb 5, 2020 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4014,12 +4143,15 @@
       },
       "budget": 67000000,
       "runtime_minutes": 94,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "20th Century Studios",
       "genres": [
         "Action",
+        "&middot;",
         "Horror",
+        "&middot;",
         "Mystery",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4030,7 +4162,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "August 26, 2020 (EMEA)"
+        "earliest_release_date": "Wed Aug 26, 2020 (EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4073,11 +4205,13 @@
       },
       "budget": 200000000,
       "runtime_minutes": 151,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy"
       ],
       "scores": {
@@ -4092,7 +4226,7 @@
         "worldwide": 169601036
       },
       "bom_meta": {
-        "earliest_release_date": "December 16, 2020 (EMEA, LATAM)"
+        "earliest_release_date": "Wed Dec 16, 2020 (LATAM, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4135,11 +4269,13 @@
       },
       "budget": 288500000,
       "runtime_minutes": 134,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4154,7 +4290,7 @@
         "worldwide": 379751655
       },
       "bom_meta": {
-        "earliest_release_date": "July 7, 2021 (EMEA)"
+        "earliest_release_date": "Wed Jul 7, 2021 (EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4197,12 +4333,15 @@
       },
       "budget": 185000000,
       "runtime_minutes": 132,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4217,7 +4356,7 @@
         "worldwide": 168717425
       },
       "bom_meta": {
-        "earliest_release_date": "May 8, 2021 (Italy)"
+        "earliest_release_date": "Sat May 8, 2021 (Italy)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4259,12 +4398,15 @@
       },
       "budget": 150000000,
       "runtime_minutes": 132,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4279,7 +4421,7 @@
         "worldwide": 432243292
       },
       "bom_meta": {
-        "earliest_release_date": "September 1, 2021 (APAC, EMEA)"
+        "earliest_release_date": "Wed Sep 1, 2021 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4322,15 +4464,21 @@
       },
       "budget": 110000000,
       "runtime_minutes": 97,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Crime",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Horror",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -4341,7 +4489,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "September 30, 2021 (Russia/CIS)"
+        "earliest_release_date": "Thu Sep 30, 2021 (Russia/CIS)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4384,12 +4532,15 @@
       },
       "budget": 236200000,
       "runtime_minutes": 156,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4404,7 +4555,7 @@
         "worldwide": 402064899
       },
       "bom_meta": {
-        "earliest_release_date": "November 3, 2021 (APAC, EMEA)"
+        "earliest_release_date": "Wed Nov 3, 2021 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4470,12 +4621,15 @@
       ],
       "budget": 200000000,
       "runtime_minutes": 148,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4490,7 +4644,7 @@
         "worldwide": 1921847111
       },
       "bom_meta": {
-        "earliest_release_date": "December 15, 2021 (14 markets)"
+        "earliest_release_date": "Wed Dec 15, 2021 (14 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4548,12 +4702,13 @@
       ],
       "budget": 200000000,
       "runtime_minutes": 176,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Crime",
-        "Drama",
+        "&middot;",
         "Mystery"
       ],
       "scores": {
@@ -4564,7 +4719,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "March 1, 2022 (South Korea)"
+        "earliest_release_date": "Tue Mar 1, 2022 (South Korea)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4606,13 +4761,17 @@
       },
       "budget": 75000000,
       "runtime_minutes": 104,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Columbia Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Horror",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -4623,7 +4782,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "March 30, 2022 (APAC, EMEA)"
+        "earliest_release_date": "Wed Mar 30, 2022 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4666,12 +4825,15 @@
       },
       "budget": 350600000,
       "runtime_minutes": 126,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4686,7 +4848,7 @@
         "worldwide": 955775804
       },
       "bom_meta": {
-        "earliest_release_date": "May 4, 2022 (APAC, EMEA)"
+        "earliest_release_date": "Wed May 4, 2022 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4729,13 +4891,17 @@
       },
       "budget": 250000000,
       "runtime_minutes": 118,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Romance",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4750,7 +4916,7 @@
         "worldwide": 760928081
       },
       "bom_meta": {
-        "earliest_release_date": "July 6, 2022 (APAC, EMEA)"
+        "earliest_release_date": "Wed Jul 6, 2022 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4793,12 +4959,15 @@
       },
       "budget": 190000000,
       "runtime_minutes": 125,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4813,7 +4982,7 @@
         "worldwide": 393452111
       },
       "bom_meta": {
-        "earliest_release_date": "October 14, 2022 (Iceland)"
+        "earliest_release_date": "Fri Oct 14, 2022 (Iceland)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4856,12 +5025,15 @@
       },
       "budget": 250000000,
       "runtime_minutes": 161,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Drama",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4876,7 +5048,7 @@
         "worldwide": 859208836
       },
       "bom_meta": {
-        "earliest_release_date": "November 4, 2022 (Iceland)"
+        "earliest_release_date": "Fri Nov 4, 2022 (Iceland)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4918,12 +5090,15 @@
       },
       "budget": 330100000,
       "runtime_minutes": 124,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -4938,7 +5113,7 @@
         "worldwide": 476071180
       },
       "bom_meta": {
-        "earliest_release_date": "February 15, 2023 (EMEA, APAC)"
+        "earliest_release_date": "Wed Feb 15, 2023 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -4981,13 +5156,17 @@
       },
       "budget": 110000000,
       "runtime_minutes": 130,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5002,7 +5181,7 @@
         "worldwide": 134138006
       },
       "bom_meta": {
-        "earliest_release_date": "March 15, 2023 (APAC)"
+        "earliest_release_date": "Wed Mar 15, 2023 (APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5045,13 +5224,17 @@
       },
       "budget": 250000000,
       "runtime_minutes": 150,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5066,7 +5249,7 @@
         "worldwide": 845472421
       },
       "bom_meta": {
-        "earliest_release_date": "April 13, 2023 (Italy)"
+        "earliest_release_date": "Thu Apr 13, 2023 (Italy)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5108,12 +5291,15 @@
       },
       "budget": 200000000,
       "runtime_minutes": 144,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5128,7 +5314,7 @@
         "worldwide": 271433313
       },
       "bom_meta": {
-        "earliest_release_date": "June 14, 2023 (APAC, EMEA)"
+        "earliest_release_date": "Wed Jun 14, 2023 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5171,12 +5357,15 @@
       },
       "budget": 104000000,
       "runtime_minutes": 127,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -5191,7 +5380,7 @@
         "worldwide": 130788072
       },
       "bom_meta": {
-        "earliest_release_date": "August 16, 2023 (EMEA, APAC)"
+        "earliest_release_date": "Wed Aug 16, 2023 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5234,11 +5423,13 @@
       },
       "budget": 307300000,
       "runtime_minutes": 105,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5253,7 +5444,7 @@
         "worldwide": 206136825
       },
       "bom_meta": {
-        "earliest_release_date": "November 8, 2023 (APAC, EMEA)"
+        "earliest_release_date": "Wed Nov 8, 2023 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5296,12 +5487,15 @@
       },
       "budget": 205000000,
       "runtime_minutes": 124,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5316,7 +5510,7 @@
         "worldwide": 439381226
       },
       "bom_meta": {
-        "earliest_release_date": "December 20, 2023 (9 markets)"
+        "earliest_release_date": "Wed Dec 20, 2023 (9 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5359,10 +5553,11 @@
       },
       "budget": 80000000,
       "runtime_minutes": 116,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Columbia Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -5373,7 +5568,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "February 14, 2024 (7 markets)"
+        "earliest_release_date": "Wed Feb 14, 2024 (7 areas)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5416,12 +5611,15 @@
       },
       "budget": 429000000,
       "runtime_minutes": 128,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Comedy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5436,7 +5634,7 @@
         "worldwide": 1338073645
       },
       "bom_meta": {
-        "earliest_release_date": "July 18, 2024 (Slovakia)"
+        "earliest_release_date": "Thu Jul 18, 2024 (Slovakia)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5479,11 +5677,13 @@
       },
       "budget": 190000000,
       "runtime_minutes": 138,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Drama",
+        "&middot;",
         "Musical",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -5494,11 +5694,11 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "October 1, 2024 (South Korea)"
+        "earliest_release_date": "Tue Oct 1, 2024 (South Korea)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
-      "notes": null,
+      "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
         "pct_domestic": 28.1,
@@ -5537,13 +5737,17 @@
       },
       "budget": 110000000,
       "runtime_minutes": 110,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Horror",
+        "&middot;",
         "Sci-Fi",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -5554,7 +5758,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "October 23, 2024 (China, APAC)"
+        "earliest_release_date": "Wed Oct 23, 2024 (APAC, China)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5597,11 +5801,13 @@
       },
       "budget": 110000000,
       "runtime_minutes": 127,
-      "mpaa": "R",
+      "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Thriller"
       ],
       "scores": {
@@ -5612,7 +5818,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "December 11, 2024 (Mexico)"
+        "earliest_release_date": "Wed Dec 11, 2024 (Mexico)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5655,11 +5861,13 @@
       },
       "budget": 180000000,
       "runtime_minutes": 118,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5674,7 +5882,7 @@
         "worldwide": 414277788
       },
       "bom_meta": {
-        "earliest_release_date": "February 12, 2025 (APAC, EMEA)"
+        "earliest_release_date": "Wed Feb 12, 2025 (EMEA, APAC)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5717,14 +5925,19 @@
       },
       "budget": 180000000,
       "runtime_minutes": 127,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Crime",
+        "&middot;",
         "Drama",
+        "&middot;",
         "Fantasy",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5735,7 +5948,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "January 1, 2025 (Portugal)"
+        "earliest_release_date": "Wed Jan 1, 2025 (Portugal)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5778,11 +5991,13 @@
       },
       "budget": 225000000,
       "runtime_minutes": 129,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Warner Bros.",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5793,7 +6008,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "July 9, 2025 (EMEA, APAC)"
+        "earliest_release_date": "Wed Jul 9, 2025 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",
@@ -5835,11 +6050,13 @@
       },
       "budget": 181000000,
       "runtime_minutes": 115,
-      "mpaa": "PG-13",
+      "mpaa": null,
       "distributor": "Walt Disney Studios Motion Pictures",
       "genres": [
         "Action",
+        "&middot;",
         "Adventure",
+        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -5850,7 +6067,7 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "July 23, 2025 (APAC, EMEA)"
+        "earliest_release_date": "Wed Jul 23, 2025 (APAC, EMEA)"
       },
       "verified": true,
       "verified_at": "2026-11-05",

@@ -1,8 +1,8 @@
 # Weekly data refresh for The Cape Index.
 #
-# Re-scrapes only the films that could still be moving (releases < ~10 months old,
-# plus anything not yet out), re-derives the dataset, rebuilds the single HTML
-# file + OG image, and deploys to Cloudflare. Older films stay frozen.
+# Re-scrapes every film from Box Office Mojo (old ones too: a re-release lands on the
+# original film's page, as Endgame's 2026 run did), re-derives the dataset, rebuilds the single HTML
+# file + OG image, and deploys to Cloudflare.
 #
 # Run it by hand first to confirm it works, then point Windows Task Scheduler at it.
 #
@@ -42,7 +42,7 @@ Say "=== weekly rebuild start ==="
 $secrets = Join-Path $PSScriptRoot "local.env.ps1"
 if (Test-Path $secrets) { . $secrets }
 if (-not $env:OMDB_KEY) { throw "OMDB_KEY not set. Create scripts/local.env.ps1 from the .example file." }
-$env:BOM_REFRESH = "1"
+$env:BOM_REFRESH_ALL = "1"
 $env:BOM_DELAY = "$BomDelay"
 
 # film count before, so we can flag if a held-out film just went live
