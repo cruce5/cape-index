@@ -48,7 +48,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-05T16:38:29.189Z"
+    "scraped_at": "2026-11-09T16:01:27.778Z"
   },
   "the-incredible-hulk-2008": {
     "title": "The Incredible Hulk",
@@ -99,7 +99,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Universal Pictures"
     },
-    "scraped_at": "2026-11-05T16:38:35.043Z"
+    "scraped_at": "2026-11-09T16:01:33.184Z"
   },
   "iron-man-2-2010": {
     "title": "Iron Man 2",
@@ -150,7 +150,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-05T16:39:08.247Z"
+    "scraped_at": "2026-11-09T16:01:50.248Z"
   },
   "thor-2011": {
     "title": "Thor",
@@ -201,7 +201,7 @@
       "genres": "Action &middot; Fantasy",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-05T16:39:14.675Z"
+    "scraped_at": "2026-11-09T16:01:57.270Z"
   },
   "captain-america-the-first-avenger-2011": {
     "title": "Captain America: The First Avenger",
@@ -236,13 +236,13 @@
       "worldwide": 370569774,
       "opening_weekend_domestic": 65058524,
       "budget": 140000000,
-      "earliest_release_date": "Fri Jul 22, 2011 (Domestic, EMEA)",
+      "earliest_release_date": "Fri Jul 22, 2011 (EMEA, Domestic)",
       "mpaa": null,
       "running_time_minutes": 124,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-05T16:39:33.854Z"
+    "scraped_at": "2026-11-09T16:02:11.062Z"
   },
   "the-avengers-2012": {
     "title": "The Avengers",
@@ -287,13 +287,13 @@
       "worldwide": 1520538536,
       "opening_weekend_domestic": 207438708,
       "budget": 220000000,
-      "earliest_release_date": "Wed Apr 25, 2012 (APAC, EMEA)",
+      "earliest_release_date": "Wed Apr 25, 2012 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 143,
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:39:54.867Z"
+    "scraped_at": "2026-11-09T16:02:24.034Z"
   },
   "iron-man-3-2013": {
     "title": "Iron Man 3",
@@ -344,7 +344,7 @@
       "genres": "Action &middot; Adventure",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:40:24.985Z"
+    "scraped_at": "2026-11-09T16:02:42.746Z"
   },
   "man-of-steel-2013": {
     "title": "Man of Steel",
@@ -389,13 +389,13 @@
       "worldwide": 670145518,
       "opening_weekend_domestic": 116619362,
       "budget": 225000000,
-      "earliest_release_date": "Wed Jun 12, 2013 (EMEA, APAC)",
+      "earliest_release_date": "Wed Jun 12, 2013 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 143,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:40:32.860Z"
+    "scraped_at": "2026-11-09T16:02:49.499Z"
   },
   "thor-the-dark-world-2013": {
     "title": "Thor: The Dark World",
@@ -420,13 +420,13 @@
       "worldwide": 644783140,
       "opening_weekend_domestic": 85737841,
       "budget": 170000000,
-      "earliest_release_date": "Wed Oct 30, 2013 (EMEA, APAC)",
+      "earliest_release_date": "Wed Oct 30, 2013 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 112,
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:40:50.577Z"
+    "scraped_at": "2026-11-09T16:03:00.571Z"
   },
   "captain-america-the-winter-soldier-2014": {
     "title": "Captain America: The Winter Soldier",
@@ -451,13 +451,13 @@
       "worldwide": 714421503,
       "opening_weekend_domestic": 95023721,
       "budget": 170000000,
-      "earliest_release_date": "Wed Mar 26, 2014 (EMEA, APAC)",
+      "earliest_release_date": "Wed Mar 26, 2014 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 136,
       "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:40:56.929Z"
+    "scraped_at": "2026-11-09T16:03:07.632Z"
   },
   "guardians-of-the-galaxy-2014": {
     "title": "Guardians of the Galaxy",
@@ -508,7 +508,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:41:28.004Z"
+    "scraped_at": "2026-11-09T16:03:27.487Z"
   },
   "avengers-age-of-ultron-2015": {
     "title": "Avengers: Age of Ultron",
@@ -533,13 +533,13 @@
       "worldwide": 1405018048,
       "opening_weekend_domestic": 191271109,
       "budget": 250000000,
-      "earliest_release_date": "Wed Apr 22, 2015 (APAC, EMEA)",
+      "earliest_release_date": "Wed Apr 22, 2015 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 141,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:41:35.515Z"
+    "scraped_at": "2026-11-09T16:03:33.153Z"
   },
   "ant-man-2015": {
     "title": "Ant-Man",
@@ -580,7 +580,7 @@
       "genres": "Action &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:41:43.233Z"
+    "scraped_at": "2026-11-09T16:03:39.888Z"
   },
   "batman-v-superman-dawn-of-justice-2016": {
     "title": "Batman v Superman: Dawn of Justice",
@@ -605,13 +605,13 @@
       "worldwide": 874362803,
       "opening_weekend_domestic": 166007347,
       "budget": 250000000,
-      "earliest_release_date": "Wed Mar 23, 2016 (EMEA, APAC)",
+      "earliest_release_date": "Wed Mar 23, 2016 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 151,
       "genres": "Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:42:02.989Z"
+    "scraped_at": "2026-11-09T16:03:53.361Z"
   },
   "captain-america-civil-war-2016": {
     "title": "Captain America: Civil War",
@@ -636,13 +636,13 @@
       "worldwide": 1155046416,
       "opening_weekend_domestic": 179139142,
       "budget": 250000000,
-      "earliest_release_date": "Wed Apr 27, 2016 (EMEA, APAC)",
+      "earliest_release_date": "Wed Apr 27, 2016 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 147,
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:42:08.682Z"
+    "scraped_at": "2026-11-09T16:03:58.620Z"
   },
   "suicide-squad-2016": {
     "title": "Suicide Squad",
@@ -672,13 +672,13 @@
       "worldwide": 749200054,
       "opening_weekend_domestic": 133682248,
       "budget": 175000000,
-      "earliest_release_date": "Wed Aug 3, 2016 (EMEA, APAC)",
+      "earliest_release_date": "Wed Aug 3, 2016 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 123,
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:42:25.883Z"
+    "scraped_at": "2026-11-09T16:04:10.666Z"
   },
   "doctor-strange-2016": {
     "title": "Doctor Strange",
@@ -724,7 +724,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:42:32.931Z"
+    "scraped_at": "2026-11-09T16:04:17.649Z"
   },
   "guardians-of-the-galaxy-vol-2-2017": {
     "title": "Guardians of the Galaxy Vol. 2",
@@ -759,13 +759,13 @@
       "worldwide": 863764214,
       "opening_weekend_domestic": 146510104,
       "budget": 200000000,
-      "earliest_release_date": "Tue Apr 25, 2017 (EMEA, APAC)",
+      "earliest_release_date": "Tue Apr 25, 2017 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 136,
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Music &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:42:52.594Z"
+    "scraped_at": "2026-11-09T16:04:31.780Z"
   },
   "wonder-woman-2017": {
     "title": "Wonder Woman",
@@ -806,7 +806,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi &middot; War",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:42:57.824Z"
+    "scraped_at": "2026-11-09T16:04:39.327Z"
   },
   "spider-man-homecoming-2017": {
     "title": "Spider-Man: Homecoming",
@@ -837,7 +837,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-05T16:43:03.424Z"
+    "scraped_at": "2026-11-09T16:04:44.704Z"
   },
   "thor-ragnarok-2017": {
     "title": "Thor: Ragnarok",
@@ -868,7 +868,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:43:08.184Z"
+    "scraped_at": "2026-11-09T16:04:52.193Z"
   },
   "justice-league-2017": {
     "title": "Justice League",
@@ -899,7 +899,7 @@
       "genres": "Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:43:15.373Z"
+    "scraped_at": "2026-11-09T16:04:59.528Z"
   },
   "black-panther-2018": {
     "title": "Black Panther",
@@ -945,7 +945,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:43:20.152Z"
+    "scraped_at": "2026-11-09T16:05:04.092Z"
   },
   "avengers-infinity-war-2018": {
     "title": "Avengers: Infinity War",
@@ -976,7 +976,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:43:27.373Z"
+    "scraped_at": "2026-11-09T16:05:09.232Z"
   },
   "ant-man-and-the-wasp-2018": {
     "title": "Ant-Man and the Wasp",
@@ -1006,13 +1006,13 @@
       "worldwide": 622674139,
       "opening_weekend_domestic": 75812205,
       "budget": null,
-      "earliest_release_date": "Wed Jul 4, 2018 (EMEA, APAC)",
+      "earliest_release_date": "Wed Jul 4, 2018 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 118,
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:43:46.467Z"
+    "scraped_at": "2026-11-09T16:05:21.066Z"
   },
   "aquaman-2018": {
     "title": "Aquaman",
@@ -1048,7 +1048,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:44:05.690Z"
+    "scraped_at": "2026-11-09T16:05:33.854Z"
   },
   "captain-marvel-2019": {
     "title": "Captain Marvel",
@@ -1089,7 +1089,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:44:12.470Z"
+    "scraped_at": "2026-11-09T16:05:40.317Z"
   },
   "shazam-2019": {
     "title": "Shazam!",
@@ -1129,13 +1129,13 @@
       "worldwide": 367799011,
       "opening_weekend_domestic": 53505326,
       "budget": 100000000,
-      "earliest_release_date": "Wed Apr 3, 2019 (APAC, EMEA)",
+      "earliest_release_date": "Wed Apr 3, 2019 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 132,
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:44:19.206Z"
+    "scraped_at": "2026-11-09T16:05:46.695Z"
   },
   "avengers-endgame-2019": {
     "title": "Avengers: Endgame",
@@ -1166,7 +1166,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:44:26.368Z"
+    "scraped_at": "2026-11-09T16:05:53.351Z"
   },
   "spider-man-far-from-home-2019": {
     "title": "Spider-Man: Far From Home",
@@ -1207,7 +1207,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-05T16:44:47.723Z"
+    "scraped_at": "2026-11-09T16:06:05.550Z"
   },
   "birds-of-prey-and-the-fantabulous-emancipation-of-one-harley-quinn-2020": {
     "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
@@ -1232,13 +1232,13 @@
       "worldwide": 205537933,
       "opening_weekend_domestic": 33010017,
       "budget": 84500000,
-      "earliest_release_date": "Wed Feb 5, 2020 (APAC, EMEA)",
+      "earliest_release_date": "Wed Feb 5, 2020 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 109,
       "genres": "Action &middot; Comedy &middot; Crime",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:45:07.206Z"
+    "scraped_at": "2026-11-09T16:06:18.510Z"
   },
   "wonder-woman-1984-2020": {
     "title": "Wonder Woman 1984",
@@ -1268,13 +1268,13 @@
       "worldwide": 169601036,
       "opening_weekend_domestic": 16701957,
       "budget": null,
-      "earliest_release_date": "Wed Dec 16, 2020 (LATAM, EMEA)",
+      "earliest_release_date": "Wed Dec 16, 2020 (EMEA, LATAM)",
       "mpaa": null,
       "running_time_minutes": 151,
       "genres": "Action &middot; Adventure &middot; Fantasy",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:45:23.003Z"
+    "scraped_at": "2026-11-09T16:06:30.140Z"
   },
   "black-widow-2021": {
     "title": "Black Widow",
@@ -1325,7 +1325,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:45:29.285Z"
+    "scraped_at": "2026-11-09T16:06:36.496Z"
   },
   "the-suicide-squad-2021": {
     "title": "The Suicide Squad",
@@ -1376,7 +1376,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:45:34.617Z"
+    "scraped_at": "2026-11-09T16:06:42.095Z"
   },
   "shang-chi-and-the-legend-of-the-ten-rings-2021": {
     "title": "Shang-Chi and the Legend of the Ten Rings",
@@ -1407,7 +1407,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:45:42.011Z"
+    "scraped_at": "2026-11-09T16:06:49.126Z"
   },
   "eternals-2021": {
     "title": "Eternals",
@@ -1452,13 +1452,13 @@
       "worldwide": 402064899,
       "opening_weekend_domestic": 71297219,
       "budget": null,
-      "earliest_release_date": "Wed Nov 3, 2021 (APAC, EMEA)",
+      "earliest_release_date": "Wed Nov 3, 2021 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 156,
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:45:58.431Z"
+    "scraped_at": "2026-11-09T16:06:59.231Z"
   },
   "spider-man-no-way-home-2021": {
     "title": "Spider-Man: No Way Home",
@@ -1489,7 +1489,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-05T16:46:04.044Z"
+    "scraped_at": "2026-11-09T16:07:06.741Z"
   },
   "doctor-strange-in-the-multiverse-of-madness-2022": {
     "title": "Doctor Strange in the Multiverse of Madness",
@@ -1514,13 +1514,13 @@
       "worldwide": 955775804,
       "opening_weekend_domestic": 187420998,
       "budget": 414900000,
-      "earliest_release_date": "Wed May 4, 2022 (APAC, EMEA)",
+      "earliest_release_date": "Wed May 4, 2022 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 126,
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:46:34.995Z"
+    "scraped_at": "2026-11-09T16:07:23.902Z"
   },
   "thor-love-and-thunder-2022": {
     "title": "Thor: Love and Thunder",
@@ -1545,13 +1545,13 @@
       "worldwide": 760928081,
       "opening_weekend_domestic": 144165107,
       "budget": null,
-      "earliest_release_date": "Wed Jul 6, 2022 (EMEA, APAC)",
+      "earliest_release_date": "Wed Jul 6, 2022 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 118,
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Romance &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:46:42.265Z"
+    "scraped_at": "2026-11-09T16:07:31.331Z"
   },
   "black-adam-2022": {
     "title": "Black Adam",
@@ -1582,7 +1582,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:46:47.583Z"
+    "scraped_at": "2026-11-09T16:07:37.436Z"
   },
   "black-panther-wakanda-forever-2022": {
     "title": "Black Panther: Wakanda Forever",
@@ -1613,7 +1613,7 @@
       "genres": "Action &middot; Adventure &middot; Drama &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:46:53.893Z"
+    "scraped_at": "2026-11-09T16:07:44.905Z"
   },
   "ant-man-and-the-wasp-quantumania-2023": {
     "title": "Ant-Man and the Wasp: Quantumania",
@@ -1644,7 +1644,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:46:59.086Z"
+    "scraped_at": "2026-11-09T16:07:52.264Z"
   },
   "shazam-fury-of-the-gods-2023": {
     "title": "Shazam! Fury of the Gods",
@@ -1675,7 +1675,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:47:05.227Z"
+    "scraped_at": "2026-11-09T16:07:57.510Z"
   },
   "guardians-of-the-galaxy-vol-3-2023": {
     "title": "Guardians of the Galaxy Vol. 3",
@@ -1716,7 +1716,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:47:12.662Z"
+    "scraped_at": "2026-11-09T16:08:03.716Z"
   },
   "the-flash-2023": {
     "title": "The Flash",
@@ -1767,7 +1767,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:47:19.834Z"
+    "scraped_at": "2026-11-09T16:08:08.288Z"
   },
   "blue-beetle-2023": {
     "title": "Blue Beetle",
@@ -1792,13 +1792,13 @@
       "worldwide": 130788072,
       "opening_weekend_domestic": 25030225,
       "budget": null,
-      "earliest_release_date": "Wed Aug 16, 2023 (APAC, EMEA)",
+      "earliest_release_date": "Wed Aug 16, 2023 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 127,
       "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:47:26.449Z"
+    "scraped_at": "2026-11-09T16:08:12.995Z"
   },
   "the-marvels-2023": {
     "title": "The Marvels",
@@ -1829,7 +1829,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:47:32.380Z"
+    "scraped_at": "2026-11-09T16:08:18.537Z"
   },
   "aquaman-and-the-lost-kingdom-2023": {
     "title": "Aquaman and the Lost Kingdom",
@@ -1880,7 +1880,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:47:39.005Z"
+    "scraped_at": "2026-11-09T16:08:25.707Z"
   },
   "deadpool-wolverine-2024": {
     "title": "Deadpool & Wolverine",
@@ -1911,7 +1911,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:47:56.593Z"
+    "scraped_at": "2026-11-09T16:08:36.879Z"
   },
   "captain-america-brave-new-world-2025": {
     "title": "Captain America: Brave New World",
@@ -1936,88 +1936,13 @@
       "worldwide": 415101577,
       "opening_weekend_domestic": 88842603,
       "budget": null,
-      "earliest_release_date": "Wed Feb 12, 2025 (EMEA, APAC)",
+      "earliest_release_date": "Wed Feb 12, 2025 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 118,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:48:31.800Z"
-  },
-  "thunderbolts-2025": {
-    "title": "Thunderbolts*",
-    "year": "2025",
-    "release_date": "2025-05-02",
-    "universe": "MCU",
-    "source": "addition",
-    "bom_id": "tt20969586",
-    "bom_url": "https://www.boxofficemojo.com/title/tt20969586/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 190274328,
-      "international": 192162589,
-      "worldwide": 382436917,
-      "opening_weekend_domestic": 74300608,
-      "budget": null,
-      "earliest_release_date": "Wed Jan 1, 2025 (Portugal)",
-      "mpaa": null,
-      "running_time_minutes": 127,
-      "genres": "Action &middot; Adventure &middot; Crime &middot; Drama &middot; Fantasy &middot; Sci-Fi",
-      "distributor": "Walt Disney Studios Motion Pictures"
-    },
-    "scraped_at": "2026-11-05T16:49:58.676Z"
-  },
-  "the-fantastic-four-first-steps-2025": {
-    "title": "The Fantastic Four: First Steps",
-    "year": "2025",
-    "release_date": "2025-07-25",
-    "universe": "MCU",
-    "source": "addition",
-    "bom_id": "tt10676052",
-    "bom_url": "https://www.boxofficemojo.com/title/tt10676052/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 274286610,
-      "international": 247572118,
-      "worldwide": 521858728,
-      "opening_weekend_domestic": 117644828,
-      "budget": null,
-      "earliest_release_date": "Wed Jul 23, 2025 (APAC, EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 115,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "Walt Disney Studios Motion Pictures"
-    },
-    "scraped_at": "2026-11-05T16:50:05.528Z"
-  },
-  "superman-2025": {
-    "title": "Superman",
-    "year": "2025",
-    "release_date": "2025-07-11",
-    "universe": "DCU",
-    "source": "addition",
-    "bom_id": "tt5950044",
-    "bom_url": "https://www.boxofficemojo.com/title/tt5950044/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 354223803,
-      "international": 264500000,
-      "worldwide": 618723803,
-      "opening_weekend_domestic": 125021735,
-      "budget": 225000000,
-      "earliest_release_date": "Wed Jul 9, 2025 (APAC, EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 129,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "Warner Bros."
-    },
-    "scraped_at": "2026-11-05T16:50:21.767Z"
+    "scraped_at": "2026-11-09T16:08:57.621Z"
   },
   "joker-2019": {
     "title": "Joker",
@@ -2036,163 +1961,13 @@
       "worldwide": 1078958629,
       "opening_weekend_domestic": 96202337,
       "budget": 55000000,
-      "earliest_release_date": "Wed Oct 2, 2019 (LATAM, APAC)",
+      "earliest_release_date": "Wed Oct 2, 2019 (APAC, LATAM)",
       "mpaa": null,
       "running_time_minutes": 122,
       "genres": "Drama &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:49:17.687Z"
-  },
-  "venom-2018": {
-    "title": "Venom",
-    "year": "2018",
-    "release_date": "2018-10-05",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt1270797",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1270797/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 213515506,
-      "international": 642569645,
-      "worldwide": 856085161,
-      "opening_weekend_domestic": 80255756,
-      "budget": 100000000,
-      "earliest_release_date": "Wed Oct 3, 2018 (7 areas)",
-      "mpaa": null,
-      "running_time_minutes": 112,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:50:41.369Z"
-  },
-  "venom-let-there-be-carnage-2021": {
-    "title": "Venom: Let There Be Carnage",
-    "year": "2021",
-    "release_date": "2021-10-01",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt7097896",
-    "bom_url": "https://www.boxofficemojo.com/title/tt7097896/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 213550366,
-      "international": 293263498,
-      "worldwide": 506813864,
-      "opening_weekend_domestic": 90033210,
-      "budget": null,
-      "earliest_release_date": "Thu Sep 30, 2021 (Russia/CIS)",
-      "mpaa": null,
-      "running_time_minutes": 97,
-      "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:50:47.671Z"
-  },
-  "morbius-2022": {
-    "title": "Morbius",
-    "year": "2022",
-    "release_date": "2022-04-01",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt5108870",
-    "bom_url": "https://www.boxofficemojo.com/title/tt5108870/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 73865530,
-      "international": 93595431,
-      "worldwide": 167460961,
-      "opening_weekend_domestic": 39005895,
-      "budget": null,
-      "earliest_release_date": "Wed Mar 30, 2022 (APAC, EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 104,
-      "genres": "Action &middot; Adventure &middot; Horror &middot; Sci-Fi &middot; Thriller",
-      "distributor": "Columbia Pictures"
-    },
-    "scraped_at": "2026-11-05T16:50:54.854Z"
-  },
-  "madame-web-2024": {
-    "title": "Madame Web",
-    "year": "2024",
-    "release_date": "2024-02-14",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt11057302",
-    "bom_url": "https://www.boxofficemojo.com/title/tt11057302/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 43817106,
-      "international": 56681658,
-      "worldwide": 100498764,
-      "opening_weekend_domestic": 15335860,
-      "budget": null,
-      "earliest_release_date": "Wed Feb 14, 2024 (7 areas)",
-      "mpaa": null,
-      "running_time_minutes": 116,
-      "genres": "Action &middot; Thriller",
-      "distributor": "Columbia Pictures"
-    },
-    "scraped_at": "2026-11-05T16:50:59.635Z"
-  },
-  "venom-the-last-dance-2024": {
-    "title": "Venom: The Last Dance",
-    "year": "2024",
-    "release_date": "2024-10-25",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt16366836",
-    "bom_url": "https://www.boxofficemojo.com/title/tt16366836/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 139755882,
-      "international": 339181736,
-      "worldwide": 478937618,
-      "opening_weekend_domestic": 51012404,
-      "budget": null,
-      "earliest_release_date": "Wed Oct 23, 2024 (APAC, China)",
-      "mpaa": null,
-      "running_time_minutes": 110,
-      "genres": "Action &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:51:06.102Z"
-  },
-  "kraven-the-hunter-2024": {
-    "title": "Kraven the Hunter",
-    "year": "2024",
-    "release_date": "2024-12-13",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt8790086",
-    "bom_url": "https://www.boxofficemojo.com/title/tt8790086/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 25026310,
-      "international": 37050223,
-      "worldwide": 62076533,
-      "opening_weekend_domestic": 11001109,
-      "budget": null,
-      "earliest_release_date": "Wed Dec 11, 2024 (Mexico)",
-      "mpaa": null,
-      "running_time_minutes": 127,
-      "genres": "Action &middot; Adventure &middot; Thriller",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:51:12.839Z"
+    "scraped_at": "2026-11-09T16:09:37.425Z"
   },
   "joker-folie-deux-2024": {
     "title": "Joker: Folie à Deux",
@@ -2217,7 +1992,7 @@
       "genres": "Drama &middot; Musical &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:49:23.754Z"
+    "scraped_at": "2026-11-09T16:09:44.409Z"
   },
   "the-batman-2022": {
     "title": "The Batman",
@@ -2242,382 +2017,7 @@
       "genres": "Action &middot; Crime &middot; Mystery",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:49:30.883Z"
-  },
-  "the-amazing-spider-man-2012": {
-    "title": "The Amazing Spider-Man",
-    "year": "2012",
-    "release_date": "2012-07-03",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt0948470",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0948470/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 262782352,
-      "international": 495918171,
-      "worldwide": 758725893,
-      "opening_weekend_domestic": 62004688,
-      "budget": 230000000,
-      "earliest_release_date": "Thu Jun 28, 2012 (APAC, EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 136,
-      "genres": "Action &middot; Sci-Fi",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:51:19.318Z"
-  },
-  "the-amazing-spider-man-2-2014": {
-    "title": "The Amazing Spider-Man 2",
-    "year": "2014",
-    "release_date": "2014-05-02",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt1872181",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1872181/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 203605622,
-      "international": 524542299,
-      "worldwide": 728198191,
-      "opening_weekend_domestic": 91608337,
-      "budget": null,
-      "earliest_release_date": "Wed Apr 16, 2014 (Belgium)",
-      "mpaa": null,
-      "running_time_minutes": 142,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:51:26.499Z"
-  },
-  "x-men-origins-wolverine-2009": {
-    "title": "X-Men Origins: Wolverine",
-    "year": "2009",
-    "release_date": "2009-05-01",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0458525",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0458525/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 179883157,
-      "international": 193179707,
-      "worldwide": 373062864,
-      "opening_weekend_domestic": 85058003,
-      "budget": 150000000,
-      "earliest_release_date": "Wed Apr 29, 2009 (28 areas)",
-      "mpaa": null,
-      "running_time_minutes": 107,
-      "genres": "Action &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:52.577Z"
-  },
-  "x-men-first-class-2011": {
-    "title": "X-Men: First Class",
-    "year": "2011",
-    "release_date": "2011-06-03",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt1270798",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1270798/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 146408305,
-      "international": 206208385,
-      "worldwide": 352616690,
-      "opening_weekend_domestic": 55101604,
-      "budget": 160000000,
-      "earliest_release_date": "Wed Jun 1, 2011 (EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 131,
-      "genres": "Action &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:59.282Z"
-  },
-  "the-wolverine-2013": {
-    "title": "The Wolverine",
-    "year": "2013",
-    "release_date": "2013-07-26",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt1430132",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1430132/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 132556852,
-      "international": 282271394,
-      "worldwide": 414828246,
-      "opening_weekend_domestic": 53113752,
-      "budget": 120000000,
-      "earliest_release_date": "Wed Jul 24, 2013 (EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 126,
-      "genres": "Action &middot; Sci-Fi &middot; Thriller",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:53:07.121Z"
-  },
-  "x-men-days-of-future-past-2014": {
-    "title": "X-Men: Days of Future Past",
-    "year": "2014",
-    "release_date": "2014-05-23",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt1877832",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1877832/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 233921534,
-      "international": 512124166,
-      "worldwide": 746045700,
-      "opening_weekend_domestic": 90823660,
-      "budget": 200000000,
-      "earliest_release_date": "Wed May 21, 2014 (EMEA, APAC)",
-      "mpaa": null,
-      "running_time_minutes": 132,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:53:12.972Z"
-  },
-  "deadpool-2016": {
-    "title": "Deadpool",
-    "year": "2016",
-    "release_date": "2016-02-12",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt1431045",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1431045/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 363070709,
-      "international": 419766082,
-      "worldwide": 782837347,
-      "opening_weekend_domestic": 132434639,
-      "budget": 58000000,
-      "earliest_release_date": "Tue Feb 9, 2016 (Taiwan)",
-      "mpaa": null,
-      "running_time_minutes": 108,
-      "genres": "Action &middot; Comedy &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:53:20.306Z"
-  },
-  "x-men-apocalypse-2016": {
-    "title": "X-Men: Apocalypse",
-    "year": "2016",
-    "release_date": "2016-05-27",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt3385516",
-    "bom_url": "https://www.boxofficemojo.com/title/tt3385516/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 155442489,
-      "international": 388491616,
-      "worldwide": 543934105,
-      "opening_weekend_domestic": 65769562,
-      "budget": 178000000,
-      "earliest_release_date": "Wed May 18, 2016 (EMEA, APAC)",
-      "mpaa": null,
-      "running_time_minutes": 144,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:53:27.149Z"
-  },
-  "logan-2017": {
-    "title": "Logan",
-    "year": "2017",
-    "release_date": "2017-03-03",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt3315342",
-    "bom_url": "https://www.boxofficemojo.com/title/tt3315342/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 226277068,
-      "international": 392902882,
-      "worldwide": 619180476,
-      "opening_weekend_domestic": 88411916,
-      "budget": 97000000,
-      "earliest_release_date": "Wed Mar 1, 2017 (12 areas)",
-      "mpaa": null,
-      "running_time_minutes": 137,
-      "genres": "Action &middot; Drama &middot; Sci-Fi &middot; Thriller",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:53:33.065Z"
-  },
-  "deadpool-2-2018": {
-    "title": "Deadpool 2",
-    "year": "2018",
-    "release_date": "2018-05-18",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt5463162",
-    "bom_url": "https://www.boxofficemojo.com/title/tt5463162/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 324591735,
-      "international": 461304874,
-      "worldwide": 785896632,
-      "opening_weekend_domestic": 125507153,
-      "budget": 110000000,
-      "earliest_release_date": "Wed May 16, 2018 (18 areas)",
-      "mpaa": null,
-      "running_time_minutes": 119,
-      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:53:39.562Z"
-  },
-  "x-men-dark-phoenix-2019": {
-    "title": "X-Men: Dark Phoenix",
-    "year": "2019",
-    "release_date": "2019-06-07",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt6565702",
-    "bom_url": "https://www.boxofficemojo.com/title/tt6565702/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 65845974,
-      "international": 186597000,
-      "worldwide": 252442974,
-      "opening_weekend_domestic": 32828348,
-      "budget": 200000000,
-      "earliest_release_date": "Wed Jun 5, 2019 (APAC, EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 113,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:53:46.265Z"
-  },
-  "the-new-mutants-2020": {
-    "title": "The New Mutants",
-    "year": "2020",
-    "release_date": "2020-08-28",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt4682266",
-    "bom_url": "https://www.boxofficemojo.com/title/tt4682266/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 23852659,
-      "international": 25316935,
-      "worldwide": 49169594,
-      "opening_weekend_domestic": 7037017,
-      "budget": null,
-      "earliest_release_date": "Wed Aug 26, 2020 (EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 94,
-      "genres": "Action &middot; Horror &middot; Mystery &middot; Sci-Fi",
-      "distributor": "20th Century Studios"
-    },
-    "scraped_at": "2026-11-05T16:53:52.414Z"
-  },
-  "x-men-2000": {
-    "title": "X-Men",
-    "year": "2000",
-    "release_date": "2000-07-14",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0120903",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0120903/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 157299718,
-      "international": 139039810,
-      "worldwide": 296339528,
-      "opening_weekend_domestic": 54471475,
-      "budget": 75000000,
-      "earliest_release_date": "Thu Jul 13, 2000 (Australia)",
-      "mpaa": null,
-      "running_time_minutes": 104,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:07.398Z"
-  },
-  "x2-2003": {
-    "title": "X2",
-    "year": "2003",
-    "release_date": "2003-05-02",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0290334",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0290334/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 214949694,
-      "international": 192761855,
-      "worldwide": 407711549,
-      "opening_weekend_domestic": 85558731,
-      "budget": 110000000,
-      "earliest_release_date": "Wed Apr 30, 2003 (24 areas)",
-      "mpaa": null,
-      "running_time_minutes": 134,
-      "genres": "Action &middot; Sci-Fi &middot; Thriller",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:13.976Z"
-  },
-  "x-men-the-last-stand-2006": {
-    "title": "X-Men: The Last Stand",
-    "year": "2006",
-    "release_date": "2006-05-26",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0376994",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0376994/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 234362462,
-      "international": 226072829,
-      "worldwide": 460435291,
-      "opening_weekend_domestic": 102750665,
-      "budget": 210000000,
-      "earliest_release_date": "Wed May 24, 2006 (13 areas)",
-      "mpaa": null,
-      "running_time_minutes": 104,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:21.131Z"
+    "scraped_at": "2026-11-09T16:09:48.933Z"
   },
   "batman-begins-2005": {
     "title": "Batman Begins",
@@ -2642,7 +2042,7 @@
       "genres": "Crime",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:49:36.026Z"
+    "scraped_at": "2026-11-09T16:09:55.572Z"
   },
   "the-dark-knight-2008": {
     "title": "The Dark Knight",
@@ -2667,7 +2067,7 @@
       "genres": "Crime &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:49:43.987Z"
+    "scraped_at": "2026-11-09T16:10:02.372Z"
   },
   "the-dark-knight-rises-2012": {
     "title": "The Dark Knight Rises",
@@ -2686,238 +2086,63 @@
       "worldwide": 1085429692,
       "opening_weekend_domestic": 160887295,
       "budget": 250000000,
-      "earliest_release_date": "Thu Jul 19, 2012 (APAC, EMEA)",
+      "earliest_release_date": "Thu Jul 19, 2012 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 164,
       "genres": "Crime &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:49:51.823Z"
+    "scraped_at": "2026-11-09T16:10:07.901Z"
   },
-  "spider-man-2002": {
-    "title": "Spider-Man",
-    "year": "2002",
-    "release_date": "2002-05-03",
-    "universe": "SSU",
+  "thunderbolts-2025": {
+    "title": "Thunderbolts*",
+    "year": "2025",
+    "release_date": "2025-05-02",
+    "universe": "MCU",
     "source": "addition",
-    "bom_id": "tt0145487",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0145487/",
+    "bom_id": "tt20969586",
+    "bom_url": "https://www.boxofficemojo.com/title/tt20969586/",
     "matchedText": "(pinned id)",
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 408524875,
-      "international": 402465308,
-      "worldwide": 810990183,
-      "opening_weekend_domestic": 114844116,
-      "budget": 139000000,
-      "earliest_release_date": "Fri May 3, 2002 (18 areas)",
-      "mpaa": null,
-      "running_time_minutes": 121,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:51:34.480Z"
-  },
-  "spider-man-2-2004": {
-    "title": "Spider-Man 2",
-    "year": "2004",
-    "release_date": "2004-06-30",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt0316654",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0316654/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 375087840,
-      "international": 413279729,
-      "worldwide": 788367569,
-      "opening_weekend_domestic": 88156227,
-      "budget": 200000000,
-      "earliest_release_date": "Wed Jun 30, 2004 (19 areas)",
+      "domestic": 190274328,
+      "international": 192162589,
+      "worldwide": 382436917,
+      "opening_weekend_domestic": 74300608,
+      "budget": null,
+      "earliest_release_date": "Wed Jan 1, 2025 (Portugal)",
       "mpaa": null,
       "running_time_minutes": 127,
+      "genres": "Action &middot; Adventure &middot; Crime &middot; Drama &middot; Fantasy &middot; Sci-Fi",
+      "distributor": "Walt Disney Studios Motion Pictures"
+    },
+    "scraped_at": "2026-11-09T16:10:14.650Z"
+  },
+  "the-fantastic-four-first-steps-2025": {
+    "title": "The Fantastic Four: First Steps",
+    "year": "2025",
+    "release_date": "2025-07-25",
+    "universe": "MCU",
+    "source": "addition",
+    "bom_id": "tt10676052",
+    "bom_url": "https://www.boxofficemojo.com/title/tt10676052/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 274286610,
+      "international": 247572118,
+      "worldwide": 521858728,
+      "opening_weekend_domestic": 117644828,
+      "budget": null,
+      "earliest_release_date": "Wed Jul 23, 2025 (EMEA, APAC)",
+      "mpaa": null,
+      "running_time_minutes": 115,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "Sony Pictures Releasing"
+      "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:51:41.709Z"
-  },
-  "spider-man-3-2007": {
-    "title": "Spider-Man 3",
-    "year": "2007",
-    "release_date": "2007-05-04",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt0413300",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0413300/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 338032318,
-      "international": 549396867,
-      "worldwide": 887486893,
-      "opening_weekend_domestic": 151116516,
-      "budget": 258000000,
-      "earliest_release_date": "Tue May 1, 2007 (18 areas)",
-      "mpaa": null,
-      "running_time_minutes": 139,
-      "genres": "Action &middot; Adventure &middot; Sci-Fi",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:51:48.146Z"
-  },
-  "ghost-rider-2007": {
-    "title": "Ghost Rider",
-    "year": "2007",
-    "release_date": "2007-02-16",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt0259324",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0259324/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 115802596,
-      "international": 112935797,
-      "worldwide": 228738393,
-      "opening_weekend_domestic": 45388836,
-      "budget": 110000000,
-      "earliest_release_date": "Wed Feb 14, 2007 (9 areas)",
-      "mpaa": null,
-      "running_time_minutes": 110,
-      "genres": "Action &middot; Fantasy &middot; Thriller",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:51:54.652Z"
-  },
-  "ghost-rider-spirit-of-vengeance-2012": {
-    "title": "Ghost Rider: Spirit of Vengeance",
-    "year": "2012",
-    "release_date": "2012-02-17",
-    "universe": "SSU",
-    "source": "addition",
-    "bom_id": "tt1071875",
-    "bom_url": "https://www.boxofficemojo.com/title/tt1071875/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 51774002,
-      "international": 80789928,
-      "worldwide": 132563930,
-      "opening_weekend_domestic": 22115334,
-      "budget": 57000000,
-      "earliest_release_date": "Wed Feb 15, 2012 (EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 96,
-      "genres": "Action &middot; Fantasy &middot; Thriller",
-      "distributor": "Sony Pictures Releasing"
-    },
-    "scraped_at": "2026-11-05T16:52:00.243Z"
-  },
-  "daredevil-2003": {
-    "title": "Daredevil",
-    "year": "2003",
-    "release_date": "2003-02-14",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0287978",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0287978/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 102543518,
-      "international": 76636200,
-      "worldwide": 179179718,
-      "opening_weekend_domestic": 40310419,
-      "budget": 78000000,
-      "earliest_release_date": "Fri Feb 14, 2003 (Domestic, EMEA)",
-      "mpaa": null,
-      "running_time_minutes": 103,
-      "genres": "Action &middot; Crime &middot; Drama &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:28.747Z"
-  },
-  "elektra-2005": {
-    "title": "Elektra",
-    "year": "2005",
-    "release_date": "2005-01-14",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0357277",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0357277/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 24409722,
-      "international": 32585924,
-      "worldwide": 56995646,
-      "opening_weekend_domestic": 12804793,
-      "budget": 43000000,
-      "earliest_release_date": "Wed Jan 12, 2005 (Lesser Antilles)",
-      "mpaa": null,
-      "running_time_minutes": 97,
-      "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:35.296Z"
-  },
-  "fantastic-four-2005-2005": {
-    "title": "Fantastic Four (2005)",
-    "year": "2005",
-    "release_date": "2005-07-08",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0120667",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0120667/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 154696080,
-      "international": 178839854,
-      "worldwide": 333535934,
-      "opening_weekend_domestic": 56061504,
-      "budget": 100000000,
-      "earliest_release_date": "Wed Jul 6, 2005 (APAC, LATAM)",
-      "mpaa": null,
-      "running_time_minutes": 106,
-      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:41.968Z"
-  },
-  "fantastic-four-rise-of-the-silver-surfer-2007": {
-    "title": "Fantastic Four: Rise of the Silver Surfer",
-    "year": "2007",
-    "release_date": "2007-06-15",
-    "universe": "Fox",
-    "source": "addition",
-    "bom_id": "tt0486576",
-    "bom_url": "https://www.boxofficemojo.com/title/tt0486576/",
-    "matchedText": "(pinned id)",
-    "candidates": null,
-    "status": "ok",
-    "parsed": {
-      "domestic": 131921738,
-      "international": 169991393,
-      "worldwide": 301913131,
-      "opening_weekend_domestic": 58051684,
-      "budget": 130000000,
-      "earliest_release_date": "Wed Jun 13, 2007 (9 areas)",
-      "mpaa": null,
-      "running_time_minutes": 92,
-      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
-      "distributor": "20th Century Fox"
-    },
-    "scraped_at": "2026-11-05T16:52:47.214Z"
+    "scraped_at": "2026-11-09T16:10:21.487Z"
   },
   "spider-man-brand-new-day-2026": {
     "title": "Spider-Man: Brand New Day",
@@ -2931,9 +2156,9 @@
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 958886996,
-      "international": 1560735770,
-      "worldwide": 2519622766,
+      "domestic": 958944095,
+      "international": 1562270576,
+      "worldwide": 2521214671,
       "opening_weekend_domestic": 360091572,
       "budget": null,
       "earliest_release_date": "Wed Jul 29, 2026 (6 areas)",
@@ -2942,7 +2167,7 @@
       "genres": "Action &middot; Adventure",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-05T16:50:10.750Z"
+    "scraped_at": "2026-11-09T16:10:28.174Z"
   },
   "avengers-doomsday-2026": {
     "title": "Avengers: Doomsday",
@@ -2967,7 +2192,32 @@
       "genres": "Action",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-05T16:50:16.314Z"
+    "scraped_at": "2026-11-09T16:10:33.071Z"
+  },
+  "superman-2025": {
+    "title": "Superman",
+    "year": "2025",
+    "release_date": "2025-07-11",
+    "universe": "DCU",
+    "source": "addition",
+    "bom_id": "tt5950044",
+    "bom_url": "https://www.boxofficemojo.com/title/tt5950044/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 354223803,
+      "international": 264500000,
+      "worldwide": 618723803,
+      "opening_weekend_domestic": 125021735,
+      "budget": 225000000,
+      "earliest_release_date": "Wed Jul 9, 2025 (APAC, EMEA)",
+      "mpaa": null,
+      "running_time_minutes": 129,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "Warner Bros."
+    },
+    "scraped_at": "2026-11-09T16:10:39.484Z"
   },
   "supergirl-2026": {
     "title": "Supergirl",
@@ -2992,7 +2242,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:50:27.164Z"
+    "scraped_at": "2026-11-09T16:10:44.467Z"
   },
   "clayface-2026": {
     "title": "Clayface",
@@ -3006,17 +2256,767 @@
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 47784703,
-      "international": 42800000,
-      "worldwide": 90584703,
+      "domestic": 56607567,
+      "international": 52400000,
+      "worldwide": 109007567,
       "opening_weekend_domestic": 24002731,
       "budget": null,
-      "earliest_release_date": "Wed Oct 21, 2026 (APAC, EMEA)",
+      "earliest_release_date": "Wed Oct 21, 2026 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 108,
       "genres": "Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-05T16:50:34.585Z"
+    "scraped_at": "2026-11-09T16:10:50.873Z"
+  },
+  "venom-2018": {
+    "title": "Venom",
+    "year": "2018",
+    "release_date": "2018-10-05",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt1270797",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1270797/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 213515506,
+      "international": 642569645,
+      "worldwide": 856085161,
+      "opening_weekend_domestic": 80255756,
+      "budget": 100000000,
+      "earliest_release_date": "Wed Oct 3, 2018 (7 areas)",
+      "mpaa": null,
+      "running_time_minutes": 112,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:10:55.620Z"
+  },
+  "venom-let-there-be-carnage-2021": {
+    "title": "Venom: Let There Be Carnage",
+    "year": "2021",
+    "release_date": "2021-10-01",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt7097896",
+    "bom_url": "https://www.boxofficemojo.com/title/tt7097896/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 213550366,
+      "international": 293263498,
+      "worldwide": 506813864,
+      "opening_weekend_domestic": 90033210,
+      "budget": null,
+      "earliest_release_date": "Thu Sep 30, 2021 (Russia/CIS)",
+      "mpaa": null,
+      "running_time_minutes": 97,
+      "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:01.585Z"
+  },
+  "morbius-2022": {
+    "title": "Morbius",
+    "year": "2022",
+    "release_date": "2022-04-01",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt5108870",
+    "bom_url": "https://www.boxofficemojo.com/title/tt5108870/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 73865530,
+      "international": 93595431,
+      "worldwide": 167460961,
+      "opening_weekend_domestic": 39005895,
+      "budget": null,
+      "earliest_release_date": "Wed Mar 30, 2022 (EMEA, APAC)",
+      "mpaa": null,
+      "running_time_minutes": 104,
+      "genres": "Action &middot; Adventure &middot; Horror &middot; Sci-Fi &middot; Thriller",
+      "distributor": "Columbia Pictures"
+    },
+    "scraped_at": "2026-11-09T16:11:08.010Z"
+  },
+  "madame-web-2024": {
+    "title": "Madame Web",
+    "year": "2024",
+    "release_date": "2024-02-14",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt11057302",
+    "bom_url": "https://www.boxofficemojo.com/title/tt11057302/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 43817106,
+      "international": 56681658,
+      "worldwide": 100498764,
+      "opening_weekend_domestic": 15335860,
+      "budget": null,
+      "earliest_release_date": "Wed Feb 14, 2024 (7 areas)",
+      "mpaa": null,
+      "running_time_minutes": 116,
+      "genres": "Action &middot; Thriller",
+      "distributor": "Columbia Pictures"
+    },
+    "scraped_at": "2026-11-09T16:11:12.566Z"
+  },
+  "venom-the-last-dance-2024": {
+    "title": "Venom: The Last Dance",
+    "year": "2024",
+    "release_date": "2024-10-25",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt16366836",
+    "bom_url": "https://www.boxofficemojo.com/title/tt16366836/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 139755882,
+      "international": 339181736,
+      "worldwide": 478937618,
+      "opening_weekend_domestic": 51012404,
+      "budget": null,
+      "earliest_release_date": "Wed Oct 23, 2024 (APAC, China)",
+      "mpaa": null,
+      "running_time_minutes": 110,
+      "genres": "Action &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:18.160Z"
+  },
+  "kraven-the-hunter-2024": {
+    "title": "Kraven the Hunter",
+    "year": "2024",
+    "release_date": "2024-12-13",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt8790086",
+    "bom_url": "https://www.boxofficemojo.com/title/tt8790086/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 25026310,
+      "international": 37050223,
+      "worldwide": 62076533,
+      "opening_weekend_domestic": 11001109,
+      "budget": null,
+      "earliest_release_date": "Wed Dec 11, 2024 (Mexico)",
+      "mpaa": null,
+      "running_time_minutes": 127,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:24.341Z"
+  },
+  "the-amazing-spider-man-2012": {
+    "title": "The Amazing Spider-Man",
+    "year": "2012",
+    "release_date": "2012-07-03",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt0948470",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0948470/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 262782352,
+      "international": 495918171,
+      "worldwide": 758725893,
+      "opening_weekend_domestic": 62004688,
+      "budget": 230000000,
+      "earliest_release_date": "Thu Jun 28, 2012 (APAC, EMEA)",
+      "mpaa": null,
+      "running_time_minutes": 136,
+      "genres": "Action &middot; Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:30.191Z"
+  },
+  "the-amazing-spider-man-2-2014": {
+    "title": "The Amazing Spider-Man 2",
+    "year": "2014",
+    "release_date": "2014-05-02",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt1872181",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1872181/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 203605622,
+      "international": 524542299,
+      "worldwide": 728198191,
+      "opening_weekend_domestic": 91608337,
+      "budget": null,
+      "earliest_release_date": "Wed Apr 16, 2014 (Belgium)",
+      "mpaa": null,
+      "running_time_minutes": 142,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:35.961Z"
+  },
+  "spider-man-2002": {
+    "title": "Spider-Man",
+    "year": "2002",
+    "release_date": "2002-05-03",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt0145487",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0145487/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 408524875,
+      "international": 402465308,
+      "worldwide": 810990183,
+      "opening_weekend_domestic": 114844116,
+      "budget": 139000000,
+      "earliest_release_date": "Fri May 3, 2002 (18 areas)",
+      "mpaa": null,
+      "running_time_minutes": 121,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:42.264Z"
+  },
+  "spider-man-2-2004": {
+    "title": "Spider-Man 2",
+    "year": "2004",
+    "release_date": "2004-06-30",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt0316654",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0316654/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 375087840,
+      "international": 413279729,
+      "worldwide": 788367569,
+      "opening_weekend_domestic": 88156227,
+      "budget": 200000000,
+      "earliest_release_date": "Wed Jun 30, 2004 (19 areas)",
+      "mpaa": null,
+      "running_time_minutes": 127,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:47.906Z"
+  },
+  "spider-man-3-2007": {
+    "title": "Spider-Man 3",
+    "year": "2007",
+    "release_date": "2007-05-04",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt0413300",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0413300/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 338032318,
+      "international": 549396867,
+      "worldwide": 887486893,
+      "opening_weekend_domestic": 151116516,
+      "budget": 258000000,
+      "earliest_release_date": "Tue May 1, 2007 (18 areas)",
+      "mpaa": null,
+      "running_time_minutes": 139,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:11:53.669Z"
+  },
+  "ghost-rider-2007": {
+    "title": "Ghost Rider",
+    "year": "2007",
+    "release_date": "2007-02-16",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt0259324",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0259324/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 115802596,
+      "international": 112935797,
+      "worldwide": 228738393,
+      "opening_weekend_domestic": 45388836,
+      "budget": 110000000,
+      "earliest_release_date": "Wed Feb 14, 2007 (9 areas)",
+      "mpaa": null,
+      "running_time_minutes": 110,
+      "genres": "Action &middot; Fantasy &middot; Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:12:00.430Z"
+  },
+  "ghost-rider-spirit-of-vengeance-2012": {
+    "title": "Ghost Rider: Spirit of Vengeance",
+    "year": "2012",
+    "release_date": "2012-02-17",
+    "universe": "SSU",
+    "source": "addition",
+    "bom_id": "tt1071875",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1071875/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 51774002,
+      "international": 80789928,
+      "worldwide": 132563930,
+      "opening_weekend_domestic": 22115334,
+      "budget": 57000000,
+      "earliest_release_date": "Wed Feb 15, 2012 (EMEA)",
+      "mpaa": null,
+      "running_time_minutes": 96,
+      "genres": "Action &middot; Fantasy &middot; Thriller",
+      "distributor": "Sony Pictures Releasing"
+    },
+    "scraped_at": "2026-11-09T16:12:05.529Z"
+  },
+  "x-men-2000": {
+    "title": "X-Men",
+    "year": "2000",
+    "release_date": "2000-07-14",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0120903",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0120903/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 157299718,
+      "international": 139039810,
+      "worldwide": 296339528,
+      "opening_weekend_domestic": 54471475,
+      "budget": 75000000,
+      "earliest_release_date": "Thu Jul 13, 2000 (Australia)",
+      "mpaa": null,
+      "running_time_minutes": 104,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:11.342Z"
+  },
+  "x2-2003": {
+    "title": "X2",
+    "year": "2003",
+    "release_date": "2003-05-02",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0290334",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0290334/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 214949694,
+      "international": 192761855,
+      "worldwide": 407711549,
+      "opening_weekend_domestic": 85558731,
+      "budget": 110000000,
+      "earliest_release_date": "Wed Apr 30, 2003 (24 areas)",
+      "mpaa": null,
+      "running_time_minutes": 134,
+      "genres": "Action &middot; Sci-Fi &middot; Thriller",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:18.998Z"
+  },
+  "x-men-the-last-stand-2006": {
+    "title": "X-Men: The Last Stand",
+    "year": "2006",
+    "release_date": "2006-05-26",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0376994",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0376994/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 234362462,
+      "international": 226072829,
+      "worldwide": 460435291,
+      "opening_weekend_domestic": 102750665,
+      "budget": 210000000,
+      "earliest_release_date": "Wed May 24, 2006 (13 areas)",
+      "mpaa": null,
+      "running_time_minutes": 104,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:25.033Z"
+  },
+  "daredevil-2003": {
+    "title": "Daredevil",
+    "year": "2003",
+    "release_date": "2003-02-14",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0287978",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0287978/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 102543518,
+      "international": 76636200,
+      "worldwide": 179179718,
+      "opening_weekend_domestic": 40310419,
+      "budget": 78000000,
+      "earliest_release_date": "Fri Feb 14, 2003 (EMEA, Domestic)",
+      "mpaa": null,
+      "running_time_minutes": 103,
+      "genres": "Action &middot; Crime &middot; Drama &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:31.630Z"
+  },
+  "elektra-2005": {
+    "title": "Elektra",
+    "year": "2005",
+    "release_date": "2005-01-14",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0357277",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0357277/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 24409722,
+      "international": 32585924,
+      "worldwide": 56995646,
+      "opening_weekend_domestic": 12804793,
+      "budget": 43000000,
+      "earliest_release_date": "Wed Jan 12, 2005 (Lesser Antilles)",
+      "mpaa": null,
+      "running_time_minutes": 97,
+      "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:36.481Z"
+  },
+  "fantastic-four-2005-2005": {
+    "title": "Fantastic Four (2005)",
+    "year": "2005",
+    "release_date": "2005-07-08",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0120667",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0120667/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 154696080,
+      "international": 178839854,
+      "worldwide": 333535934,
+      "opening_weekend_domestic": 56061504,
+      "budget": 100000000,
+      "earliest_release_date": "Wed Jul 6, 2005 (LATAM, APAC)",
+      "mpaa": null,
+      "running_time_minutes": 106,
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:44.399Z"
+  },
+  "fantastic-four-rise-of-the-silver-surfer-2007": {
+    "title": "Fantastic Four: Rise of the Silver Surfer",
+    "year": "2007",
+    "release_date": "2007-06-15",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0486576",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0486576/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 131921738,
+      "international": 169991393,
+      "worldwide": 301913131,
+      "opening_weekend_domestic": 58051684,
+      "budget": 130000000,
+      "earliest_release_date": "Wed Jun 13, 2007 (9 areas)",
+      "mpaa": null,
+      "running_time_minutes": 92,
+      "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:50.161Z"
+  },
+  "x-men-origins-wolverine-2009": {
+    "title": "X-Men Origins: Wolverine",
+    "year": "2009",
+    "release_date": "2009-05-01",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt0458525",
+    "bom_url": "https://www.boxofficemojo.com/title/tt0458525/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 179883157,
+      "international": 193179707,
+      "worldwide": 373062864,
+      "opening_weekend_domestic": 85058003,
+      "budget": 150000000,
+      "earliest_release_date": "Wed Apr 29, 2009 (28 areas)",
+      "mpaa": null,
+      "running_time_minutes": 107,
+      "genres": "Action &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:12:55.879Z"
+  },
+  "x-men-first-class-2011": {
+    "title": "X-Men: First Class",
+    "year": "2011",
+    "release_date": "2011-06-03",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt1270798",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1270798/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 146408305,
+      "international": 206208385,
+      "worldwide": 352616690,
+      "opening_weekend_domestic": 55101604,
+      "budget": 160000000,
+      "earliest_release_date": "Wed Jun 1, 2011 (EMEA)",
+      "mpaa": null,
+      "running_time_minutes": 131,
+      "genres": "Action &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:02.795Z"
+  },
+  "the-wolverine-2013": {
+    "title": "The Wolverine",
+    "year": "2013",
+    "release_date": "2013-07-26",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt1430132",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1430132/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 132556852,
+      "international": 282271394,
+      "worldwide": 414828246,
+      "opening_weekend_domestic": 53113752,
+      "budget": 120000000,
+      "earliest_release_date": "Wed Jul 24, 2013 (EMEA)",
+      "mpaa": null,
+      "running_time_minutes": 126,
+      "genres": "Action &middot; Sci-Fi &middot; Thriller",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:09.991Z"
+  },
+  "x-men-days-of-future-past-2014": {
+    "title": "X-Men: Days of Future Past",
+    "year": "2014",
+    "release_date": "2014-05-23",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt1877832",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1877832/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 233921534,
+      "international": 512124166,
+      "worldwide": 746045700,
+      "opening_weekend_domestic": 90823660,
+      "budget": 200000000,
+      "earliest_release_date": "Wed May 21, 2014 (EMEA, APAC)",
+      "mpaa": null,
+      "running_time_minutes": 132,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:15.351Z"
+  },
+  "deadpool-2016": {
+    "title": "Deadpool",
+    "year": "2016",
+    "release_date": "2016-02-12",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt1431045",
+    "bom_url": "https://www.boxofficemojo.com/title/tt1431045/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 363070709,
+      "international": 419766082,
+      "worldwide": 782837347,
+      "opening_weekend_domestic": 132434639,
+      "budget": 58000000,
+      "earliest_release_date": "Tue Feb 9, 2016 (Taiwan)",
+      "mpaa": null,
+      "running_time_minutes": 108,
+      "genres": "Action &middot; Comedy &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:22.607Z"
+  },
+  "x-men-apocalypse-2016": {
+    "title": "X-Men: Apocalypse",
+    "year": "2016",
+    "release_date": "2016-05-27",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt3385516",
+    "bom_url": "https://www.boxofficemojo.com/title/tt3385516/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 155442489,
+      "international": 388491616,
+      "worldwide": 543934105,
+      "opening_weekend_domestic": 65769562,
+      "budget": 178000000,
+      "earliest_release_date": "Wed May 18, 2016 (EMEA, APAC)",
+      "mpaa": null,
+      "running_time_minutes": 144,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:30.007Z"
+  },
+  "logan-2017": {
+    "title": "Logan",
+    "year": "2017",
+    "release_date": "2017-03-03",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt3315342",
+    "bom_url": "https://www.boxofficemojo.com/title/tt3315342/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 226277068,
+      "international": 392902882,
+      "worldwide": 619180476,
+      "opening_weekend_domestic": 88411916,
+      "budget": 97000000,
+      "earliest_release_date": "Wed Mar 1, 2017 (12 areas)",
+      "mpaa": null,
+      "running_time_minutes": 137,
+      "genres": "Action &middot; Drama &middot; Sci-Fi &middot; Thriller",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:35.815Z"
+  },
+  "deadpool-2-2018": {
+    "title": "Deadpool 2",
+    "year": "2018",
+    "release_date": "2018-05-18",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt5463162",
+    "bom_url": "https://www.boxofficemojo.com/title/tt5463162/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 324591735,
+      "international": 461304874,
+      "worldwide": 785896632,
+      "opening_weekend_domestic": 125507153,
+      "budget": 110000000,
+      "earliest_release_date": "Wed May 16, 2018 (18 areas)",
+      "mpaa": null,
+      "running_time_minutes": 119,
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:41.395Z"
+  },
+  "x-men-dark-phoenix-2019": {
+    "title": "X-Men: Dark Phoenix",
+    "year": "2019",
+    "release_date": "2019-06-07",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt6565702",
+    "bom_url": "https://www.boxofficemojo.com/title/tt6565702/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 65845974,
+      "international": 186597000,
+      "worldwide": 252442974,
+      "opening_weekend_domestic": 32828348,
+      "budget": 200000000,
+      "earliest_release_date": "Wed Jun 5, 2019 (EMEA, APAC)",
+      "mpaa": null,
+      "running_time_minutes": 113,
+      "genres": "Action &middot; Adventure &middot; Sci-Fi",
+      "distributor": "20th Century Fox"
+    },
+    "scraped_at": "2026-11-09T16:13:47.063Z"
+  },
+  "the-new-mutants-2020": {
+    "title": "The New Mutants",
+    "year": "2020",
+    "release_date": "2020-08-28",
+    "universe": "Fox",
+    "source": "addition",
+    "bom_id": "tt4682266",
+    "bom_url": "https://www.boxofficemojo.com/title/tt4682266/",
+    "matchedText": "(pinned id)",
+    "candidates": null,
+    "status": "ok",
+    "parsed": {
+      "domestic": 23852659,
+      "international": 25316935,
+      "worldwide": 49169594,
+      "opening_weekend_domestic": 7037017,
+      "budget": null,
+      "earliest_release_date": "Wed Aug 26, 2020 (EMEA)",
+      "mpaa": null,
+      "running_time_minutes": 94,
+      "genres": "Action &middot; Horror &middot; Mystery &middot; Sci-Fi",
+      "distributor": "20th Century Studios"
+    },
+    "scraped_at": "2026-11-09T16:13:51.885Z"
   }
 }
