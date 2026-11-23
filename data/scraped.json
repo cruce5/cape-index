@@ -48,7 +48,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-16T16:01:32.750Z"
+    "scraped_at": "2026-11-23T16:01:22.305Z"
   },
   "the-incredible-hulk-2008": {
     "title": "The Incredible Hulk",
@@ -99,7 +99,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Universal Pictures"
     },
-    "scraped_at": "2026-11-16T16:01:39.275Z"
+    "scraped_at": "2026-11-23T16:01:28.423Z"
   },
   "iron-man-2-2010": {
     "title": "Iron Man 2",
@@ -150,7 +150,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-16T16:02:00.173Z"
+    "scraped_at": "2026-11-23T16:01:47.170Z"
   },
   "thor-2011": {
     "title": "Thor",
@@ -201,7 +201,7 @@
       "genres": "Action &middot; Fantasy",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-16T16:02:06.902Z"
+    "scraped_at": "2026-11-23T16:01:54.553Z"
   },
   "captain-america-the-first-avenger-2011": {
     "title": "Captain America: The First Avenger",
@@ -242,7 +242,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Paramount Pictures"
     },
-    "scraped_at": "2026-11-16T16:02:18.969Z"
+    "scraped_at": "2026-11-23T16:02:06.874Z"
   },
   "the-avengers-2012": {
     "title": "The Avengers",
@@ -293,7 +293,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:02:30.467Z"
+    "scraped_at": "2026-11-23T16:02:17.747Z"
   },
   "iron-man-3-2013": {
     "title": "Iron Man 3",
@@ -344,7 +344,7 @@
       "genres": "Action &middot; Adventure",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:02:50.046Z"
+    "scraped_at": "2026-11-23T16:02:36.802Z"
   },
   "man-of-steel-2013": {
     "title": "Man of Steel",
@@ -395,7 +395,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:02:56.136Z"
+    "scraped_at": "2026-11-23T16:02:44.302Z"
   },
   "thor-the-dark-world-2013": {
     "title": "Thor: The Dark World",
@@ -426,7 +426,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:03:10.222Z"
+    "scraped_at": "2026-11-23T16:02:56.334Z"
   },
   "captain-america-the-winter-soldier-2014": {
     "title": "Captain America: The Winter Soldier",
@@ -451,13 +451,13 @@
       "worldwide": 714421503,
       "opening_weekend_domestic": 95023721,
       "budget": 170000000,
-      "earliest_release_date": "Wed Mar 26, 2014 (EMEA, APAC)",
+      "earliest_release_date": "Wed Mar 26, 2014 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 136,
       "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:03:15.628Z"
+    "scraped_at": "2026-11-23T16:03:04.376Z"
   },
   "guardians-of-the-galaxy-2014": {
     "title": "Guardians of the Galaxy",
@@ -508,7 +508,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:03:36.253Z"
+    "scraped_at": "2026-11-23T16:03:25.801Z"
   },
   "avengers-age-of-ultron-2015": {
     "title": "Avengers: Age of Ultron",
@@ -539,7 +539,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:03:41.725Z"
+    "scraped_at": "2026-11-23T16:03:32.440Z"
   },
   "ant-man-2015": {
     "title": "Ant-Man",
@@ -580,7 +580,7 @@
       "genres": "Action &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:03:48.717Z"
+    "scraped_at": "2026-11-23T16:03:38.888Z"
   },
   "batman-v-superman-dawn-of-justice-2016": {
     "title": "Batman v Superman: Dawn of Justice",
@@ -611,7 +611,7 @@
       "genres": "Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:04:03.209Z"
+    "scraped_at": "2026-11-23T16:03:51.534Z"
   },
   "captain-america-civil-war-2016": {
     "title": "Captain America: Civil War",
@@ -642,7 +642,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:04:08.922Z"
+    "scraped_at": "2026-11-23T16:03:56.271Z"
   },
   "suicide-squad-2016": {
     "title": "Suicide Squad",
@@ -678,7 +678,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:04:19.494Z"
+    "scraped_at": "2026-11-23T16:04:05.988Z"
   },
   "doctor-strange-2016": {
     "title": "Doctor Strange",
@@ -724,7 +724,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:04:26.392Z"
+    "scraped_at": "2026-11-23T16:04:11.036Z"
   },
   "guardians-of-the-galaxy-vol-2-2017": {
     "title": "Guardians of the Galaxy Vol. 2",
@@ -759,13 +759,13 @@
       "worldwide": 863764214,
       "opening_weekend_domestic": 146510104,
       "budget": 200000000,
-      "earliest_release_date": "Tue Apr 25, 2017 (EMEA, APAC)",
+      "earliest_release_date": "Tue Apr 25, 2017 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 136,
-      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Music &middot; Sci-Fi",
+      "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:04:40.016Z"
+    "scraped_at": "2026-11-23T16:04:23.302Z"
   },
   "wonder-woman-2017": {
     "title": "Wonder Woman",
@@ -806,7 +806,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi &middot; War",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:04:45.559Z"
+    "scraped_at": "2026-11-23T16:04:28.297Z"
   },
   "spider-man-homecoming-2017": {
     "title": "Spider-Man: Homecoming",
@@ -837,7 +837,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:04:50.371Z"
+    "scraped_at": "2026-11-23T16:04:34.594Z"
   },
   "thor-ragnarok-2017": {
     "title": "Thor: Ragnarok",
@@ -868,7 +868,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:04:57.448Z"
+    "scraped_at": "2026-11-23T16:04:42.076Z"
   },
   "justice-league-2017": {
     "title": "Justice League",
@@ -899,7 +899,7 @@
       "genres": "Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:05:04.800Z"
+    "scraped_at": "2026-11-23T16:04:47.194Z"
   },
   "black-panther-2018": {
     "title": "Black Panther",
@@ -945,7 +945,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:05:10.670Z"
+    "scraped_at": "2026-11-23T16:04:54.140Z"
   },
   "avengers-infinity-war-2018": {
     "title": "Avengers: Infinity War",
@@ -970,13 +970,13 @@
       "worldwide": 2052415039,
       "opening_weekend_domestic": 257698183,
       "budget": 350000000,
-      "earliest_release_date": "Wed Apr 25, 2018 (EMEA, APAC)",
+      "earliest_release_date": "Wed Apr 25, 2018 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 149,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:05:16.252Z"
+    "scraped_at": "2026-11-23T16:04:59.440Z"
   },
   "ant-man-and-the-wasp-2018": {
     "title": "Ant-Man and the Wasp",
@@ -1006,13 +1006,13 @@
       "worldwide": 622674139,
       "opening_weekend_domestic": 75812205,
       "budget": null,
-      "earliest_release_date": "Wed Jul 4, 2018 (EMEA, APAC)",
+      "earliest_release_date": "Wed Jul 4, 2018 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 118,
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:05:29.716Z"
+    "scraped_at": "2026-11-23T16:05:12.040Z"
   },
   "aquaman-2018": {
     "title": "Aquaman",
@@ -1048,7 +1048,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:05:41.819Z"
+    "scraped_at": "2026-11-23T16:05:24.036Z"
   },
   "captain-marvel-2019": {
     "title": "Captain Marvel",
@@ -1083,13 +1083,13 @@
       "worldwide": 1131416446,
       "opening_weekend_domestic": 153433423,
       "budget": 160000000,
-      "earliest_release_date": "Wed Mar 6, 2019 (EMEA, APAC)",
+      "earliest_release_date": "Wed Mar 6, 2019 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 123,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:05:46.878Z"
+    "scraped_at": "2026-11-23T16:05:31.385Z"
   },
   "shazam-2019": {
     "title": "Shazam!",
@@ -1135,7 +1135,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:05:51.695Z"
+    "scraped_at": "2026-11-23T16:05:38.554Z"
   },
   "avengers-endgame-2019": {
     "title": "Avengers: Endgame",
@@ -1157,7 +1157,7 @@
     "parsed": {
       "domestic": 898471864,
       "international": 2044177914,
-      "worldwide": 2942649778,
+      "worldwide": 2942661253,
       "opening_weekend_domestic": 357115007,
       "budget": 356000000,
       "earliest_release_date": "Wed Apr 24, 2019 (20 areas)",
@@ -1166,7 +1166,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:05:57.992Z"
+    "scraped_at": "2026-11-23T16:05:44.645Z"
   },
   "spider-man-far-from-home-2019": {
     "title": "Spider-Man: Far From Home",
@@ -1207,7 +1207,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:06:11.889Z"
+    "scraped_at": "2026-11-23T16:05:57.923Z"
   },
   "birds-of-prey-and-the-fantabulous-emancipation-of-one-harley-quinn-2020": {
     "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
@@ -1232,13 +1232,13 @@
       "worldwide": 205537933,
       "opening_weekend_domestic": 33010017,
       "budget": 84500000,
-      "earliest_release_date": "Wed Feb 5, 2020 (APAC, EMEA)",
+      "earliest_release_date": "Wed Feb 5, 2020 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 109,
       "genres": "Action &middot; Comedy &middot; Crime",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:06:25.516Z"
+    "scraped_at": "2026-11-23T16:06:10.581Z"
   },
   "wonder-woman-1984-2020": {
     "title": "Wonder Woman 1984",
@@ -1274,7 +1274,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:06:37.793Z"
+    "scraped_at": "2026-11-23T16:06:22.855Z"
   },
   "black-widow-2021": {
     "title": "Black Widow",
@@ -1325,7 +1325,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:06:42.469Z"
+    "scraped_at": "2026-11-23T16:06:29.144Z"
   },
   "the-suicide-squad-2021": {
     "title": "The Suicide Squad",
@@ -1376,7 +1376,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:06:48.902Z"
+    "scraped_at": "2026-11-23T16:06:34.435Z"
   },
   "shang-chi-and-the-legend-of-the-ten-rings-2021": {
     "title": "Shang-Chi and the Legend of the Ten Rings",
@@ -1407,7 +1407,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:06:53.940Z"
+    "scraped_at": "2026-11-23T16:06:40.086Z"
   },
   "eternals-2021": {
     "title": "Eternals",
@@ -1452,13 +1452,13 @@
       "worldwide": 402064899,
       "opening_weekend_domestic": 71297219,
       "budget": null,
-      "earliest_release_date": "Wed Nov 3, 2021 (APAC, EMEA)",
+      "earliest_release_date": "Wed Nov 3, 2021 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 156,
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:07:06.572Z"
+    "scraped_at": "2026-11-23T16:06:51.851Z"
   },
   "spider-man-no-way-home-2021": {
     "title": "Spider-Man: No Way Home",
@@ -1489,7 +1489,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:07:11.579Z"
+    "scraped_at": "2026-11-23T16:06:57.807Z"
   },
   "doctor-strange-in-the-multiverse-of-madness-2022": {
     "title": "Doctor Strange in the Multiverse of Madness",
@@ -1520,7 +1520,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:07:29.404Z"
+    "scraped_at": "2026-11-23T16:07:14.584Z"
   },
   "thor-love-and-thunder-2022": {
     "title": "Thor: Love and Thunder",
@@ -1551,7 +1551,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Romance &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:07:36.759Z"
+    "scraped_at": "2026-11-23T16:07:19.598Z"
   },
   "black-adam-2022": {
     "title": "Black Adam",
@@ -1582,7 +1582,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:07:43.971Z"
+    "scraped_at": "2026-11-23T16:07:25.274Z"
   },
   "black-panther-wakanda-forever-2022": {
     "title": "Black Panther: Wakanda Forever",
@@ -1613,7 +1613,7 @@
       "genres": "Action &middot; Adventure &middot; Drama &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:07:51.409Z"
+    "scraped_at": "2026-11-23T16:07:31.794Z"
   },
   "ant-man-and-the-wasp-quantumania-2023": {
     "title": "Ant-Man and the Wasp: Quantumania",
@@ -1644,7 +1644,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:07:57.753Z"
+    "scraped_at": "2026-11-23T16:07:37.044Z"
   },
   "shazam-fury-of-the-gods-2023": {
     "title": "Shazam! Fury of the Gods",
@@ -1675,7 +1675,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:08:04.491Z"
+    "scraped_at": "2026-11-23T16:07:43.073Z"
   },
   "guardians-of-the-galaxy-vol-3-2023": {
     "title": "Guardians of the Galaxy Vol. 3",
@@ -1716,7 +1716,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:08:09.064Z"
+    "scraped_at": "2026-11-23T16:07:50.127Z"
   },
   "the-flash-2023": {
     "title": "The Flash",
@@ -1761,13 +1761,13 @@
       "worldwide": 271433313,
       "opening_weekend_domestic": 55043679,
       "budget": null,
-      "earliest_release_date": "Wed Jun 14, 2023 (EMEA, APAC)",
+      "earliest_release_date": "Wed Jun 14, 2023 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 144,
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:08:14.718Z"
+    "scraped_at": "2026-11-23T16:07:55.811Z"
   },
   "blue-beetle-2023": {
     "title": "Blue Beetle",
@@ -1798,7 +1798,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:08:20.774Z"
+    "scraped_at": "2026-11-23T16:08:03.057Z"
   },
   "the-marvels-2023": {
     "title": "The Marvels",
@@ -1823,13 +1823,13 @@
       "worldwide": 206136825,
       "opening_weekend_domestic": 46110859,
       "budget": null,
-      "earliest_release_date": "Wed Nov 8, 2023 (EMEA, APAC)",
+      "earliest_release_date": "Wed Nov 8, 2023 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 105,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:08:25.690Z"
+    "scraped_at": "2026-11-23T16:08:09.232Z"
   },
   "aquaman-and-the-lost-kingdom-2023": {
     "title": "Aquaman and the Lost Kingdom",
@@ -1880,7 +1880,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:08:30.404Z"
+    "scraped_at": "2026-11-23T16:08:16.346Z"
   },
   "deadpool-wolverine-2024": {
     "title": "Deadpool & Wolverine",
@@ -1911,7 +1911,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:08:42.255Z"
+    "scraped_at": "2026-11-23T16:08:28.937Z"
   },
   "captain-america-brave-new-world-2025": {
     "title": "Captain America: Brave New World",
@@ -1942,7 +1942,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:09:08.018Z"
+    "scraped_at": "2026-11-23T16:08:54.159Z"
   },
   "joker-2019": {
     "title": "Joker",
@@ -1967,7 +1967,7 @@
       "genres": "Drama &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:09:49.585Z"
+    "scraped_at": "2026-11-23T16:09:36.701Z"
   },
   "joker-folie-deux-2024": {
     "title": "Joker: Folie à Deux",
@@ -1992,7 +1992,7 @@
       "genres": "Drama &middot; Musical &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:09:54.510Z"
+    "scraped_at": "2026-11-23T16:09:43.395Z"
   },
   "the-batman-2022": {
     "title": "The Batman",
@@ -2017,7 +2017,7 @@
       "genres": "Action &middot; Crime &middot; Mystery",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:09:59.038Z"
+    "scraped_at": "2026-11-23T16:09:48.403Z"
   },
   "batman-begins-2005": {
     "title": "Batman Begins",
@@ -2042,7 +2042,7 @@
       "genres": "Crime",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:10:05.456Z"
+    "scraped_at": "2026-11-23T16:09:55.964Z"
   },
   "the-dark-knight-2008": {
     "title": "The Dark Knight",
@@ -2067,7 +2067,7 @@
       "genres": "Crime &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:10:12.422Z"
+    "scraped_at": "2026-11-23T16:10:01.187Z"
   },
   "the-dark-knight-rises-2012": {
     "title": "The Dark Knight Rises",
@@ -2092,7 +2092,7 @@
       "genres": "Crime &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:10:18.117Z"
+    "scraped_at": "2026-11-23T16:10:08.662Z"
   },
   "thunderbolts-2025": {
     "title": "Thunderbolts*",
@@ -2117,7 +2117,7 @@
       "genres": "Action &middot; Adventure &middot; Crime &middot; Drama &middot; Fantasy &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:10:24.429Z"
+    "scraped_at": "2026-11-23T16:10:14.521Z"
   },
   "the-fantastic-four-first-steps-2025": {
     "title": "The Fantastic Four: First Steps",
@@ -2136,13 +2136,13 @@
       "worldwide": 521858728,
       "opening_weekend_domestic": 117644828,
       "budget": null,
-      "earliest_release_date": "Wed Jul 23, 2025 (APAC, EMEA)",
+      "earliest_release_date": "Wed Jul 23, 2025 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 115,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:10:31.698Z"
+    "scraped_at": "2026-11-23T16:10:19.404Z"
   },
   "spider-man-brand-new-day-2026": {
     "title": "Spider-Man: Brand New Day",
@@ -2156,9 +2156,9 @@
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 959006311,
-      "international": 1564141204,
-      "worldwide": 2523147515,
+      "domestic": 959059276,
+      "international": 1564668977,
+      "worldwide": 2523728253,
       "opening_weekend_domestic": 360091572,
       "budget": null,
       "earliest_release_date": "Wed Jul 29, 2026 (6 areas)",
@@ -2167,7 +2167,7 @@
       "genres": "Action &middot; Adventure",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:10:37.785Z"
+    "scraped_at": "2026-11-23T16:10:25.792Z"
   },
   "avengers-doomsday-2026": {
     "title": "Avengers: Doomsday",
@@ -2192,7 +2192,7 @@
       "genres": "Action",
       "distributor": "Walt Disney Studios Motion Pictures"
     },
-    "scraped_at": "2026-11-16T16:10:42.352Z"
+    "scraped_at": "2026-11-23T16:10:31.486Z"
   },
   "superman-2025": {
     "title": "Superman",
@@ -2211,13 +2211,13 @@
       "worldwide": 618723803,
       "opening_weekend_domestic": 125021735,
       "budget": 225000000,
-      "earliest_release_date": "Wed Jul 9, 2025 (EMEA, APAC)",
+      "earliest_release_date": "Wed Jul 9, 2025 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 129,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:10:48.940Z"
+    "scraped_at": "2026-11-23T16:10:36.983Z"
   },
   "supergirl-2026": {
     "title": "Supergirl",
@@ -2242,7 +2242,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:10:55.337Z"
+    "scraped_at": "2026-11-23T16:10:43.756Z"
   },
   "clayface-2026": {
     "title": "Clayface",
@@ -2256,9 +2256,9 @@
     "candidates": null,
     "status": "ok",
     "parsed": {
-      "domestic": 63634121,
-      "international": 57700000,
-      "worldwide": 121334121,
+      "domestic": 66195354,
+      "international": 60000000,
+      "worldwide": 126195354,
       "opening_weekend_domestic": 24002731,
       "budget": null,
       "earliest_release_date": "Wed Oct 21, 2026 (EMEA, APAC)",
@@ -2267,7 +2267,7 @@
       "genres": "Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Warner Bros."
     },
-    "scraped_at": "2026-11-16T16:11:00.768Z"
+    "scraped_at": "2026-11-23T16:10:50.741Z"
   },
   "venom-2018": {
     "title": "Venom",
@@ -2292,7 +2292,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:11:07.836Z"
+    "scraped_at": "2026-11-23T16:10:58.229Z"
   },
   "venom-let-there-be-carnage-2021": {
     "title": "Venom: Let There Be Carnage",
@@ -2317,7 +2317,7 @@
       "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:11:12.558Z"
+    "scraped_at": "2026-11-23T16:11:02.804Z"
   },
   "morbius-2022": {
     "title": "Morbius",
@@ -2342,7 +2342,7 @@
       "genres": "Action &middot; Adventure &middot; Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Columbia Pictures"
     },
-    "scraped_at": "2026-11-16T16:11:19.260Z"
+    "scraped_at": "2026-11-23T16:11:07.343Z"
   },
   "madame-web-2024": {
     "title": "Madame Web",
@@ -2367,7 +2367,7 @@
       "genres": "Action &middot; Thriller",
       "distributor": "Columbia Pictures"
     },
-    "scraped_at": "2026-11-16T16:11:23.996Z"
+    "scraped_at": "2026-11-23T16:11:14.491Z"
   },
   "venom-the-last-dance-2024": {
     "title": "Venom: The Last Dance",
@@ -2392,7 +2392,7 @@
       "genres": "Action &middot; Fantasy &middot; Horror &middot; Sci-Fi &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:11:28.758Z"
+    "scraped_at": "2026-11-23T16:11:21.307Z"
   },
   "kraven-the-hunter-2024": {
     "title": "Kraven the Hunter",
@@ -2417,7 +2417,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:11:34.421Z"
+    "scraped_at": "2026-11-23T16:11:28.521Z"
   },
   "the-amazing-spider-man-2012": {
     "title": "The Amazing Spider-Man",
@@ -2436,13 +2436,13 @@
       "worldwide": 758725893,
       "opening_weekend_domestic": 62004688,
       "budget": 230000000,
-      "earliest_release_date": "Thu Jun 28, 2012 (APAC, EMEA)",
+      "earliest_release_date": "Thu Jun 28, 2012 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 136,
       "genres": "Action &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:11:42.283Z"
+    "scraped_at": "2026-11-23T16:11:35.752Z"
   },
   "the-amazing-spider-man-2-2014": {
     "title": "The Amazing Spider-Man 2",
@@ -2467,7 +2467,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:11:48.405Z"
+    "scraped_at": "2026-11-23T16:11:43.222Z"
   },
   "spider-man-2002": {
     "title": "Spider-Man",
@@ -2492,7 +2492,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:11:55.952Z"
+    "scraped_at": "2026-11-23T16:11:50.719Z"
   },
   "spider-man-2-2004": {
     "title": "Spider-Man 2",
@@ -2513,11 +2513,11 @@
       "budget": 200000000,
       "earliest_release_date": "Wed Jun 30, 2004 (19 areas)",
       "mpaa": null,
-      "running_time_minutes": 127,
+      "running_time_minutes": 128,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:12:01.240Z"
+    "scraped_at": "2026-11-23T16:11:57.238Z"
   },
   "spider-man-3-2007": {
     "title": "Spider-Man 3",
@@ -2542,7 +2542,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:12:08.162Z"
+    "scraped_at": "2026-11-23T16:12:04.385Z"
   },
   "ghost-rider-2007": {
     "title": "Ghost Rider",
@@ -2567,7 +2567,7 @@
       "genres": "Action &middot; Fantasy &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:12:15.926Z"
+    "scraped_at": "2026-11-23T16:12:12.126Z"
   },
   "ghost-rider-spirit-of-vengeance-2012": {
     "title": "Ghost Rider: Spirit of Vengeance",
@@ -2592,7 +2592,7 @@
       "genres": "Action &middot; Fantasy &middot; Thriller",
       "distributor": "Sony Pictures Releasing"
     },
-    "scraped_at": "2026-11-16T16:12:20.810Z"
+    "scraped_at": "2026-11-23T16:12:18.802Z"
   },
   "x-men-2000": {
     "title": "X-Men",
@@ -2617,7 +2617,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:12:26.287Z"
+    "scraped_at": "2026-11-23T16:12:26.686Z"
   },
   "x2-2003": {
     "title": "X2",
@@ -2642,7 +2642,7 @@
       "genres": "Action &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:12:31.573Z"
+    "scraped_at": "2026-11-23T16:12:33.000Z"
   },
   "x-men-the-last-stand-2006": {
     "title": "X-Men: The Last Stand",
@@ -2667,7 +2667,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:12:38.308Z"
+    "scraped_at": "2026-11-23T16:12:40.131Z"
   },
   "daredevil-2003": {
     "title": "Daredevil",
@@ -2692,7 +2692,7 @@
       "genres": "Action &middot; Crime &middot; Drama &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:12:45.486Z"
+    "scraped_at": "2026-11-23T16:12:45.615Z"
   },
   "elektra-2005": {
     "title": "Elektra",
@@ -2717,7 +2717,7 @@
       "genres": "Action &middot; Adventure &middot; Crime &middot; Fantasy",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:12:52.451Z"
+    "scraped_at": "2026-11-23T16:12:50.922Z"
   },
   "fantastic-four-2005-2005": {
     "title": "Fantastic Four (2005)",
@@ -2742,7 +2742,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:12:59.387Z"
+    "scraped_at": "2026-11-23T16:12:58.247Z"
   },
   "fantastic-four-rise-of-the-silver-surfer-2007": {
     "title": "Fantastic Four: Rise of the Silver Surfer",
@@ -2767,7 +2767,7 @@
       "genres": "Action &middot; Adventure &middot; Fantasy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:05.293Z"
+    "scraped_at": "2026-11-23T16:13:06.029Z"
   },
   "x-men-origins-wolverine-2009": {
     "title": "X-Men Origins: Wolverine",
@@ -2792,7 +2792,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:10.387Z"
+    "scraped_at": "2026-11-23T16:13:13.818Z"
   },
   "x-men-first-class-2011": {
     "title": "X-Men: First Class",
@@ -2817,7 +2817,7 @@
       "genres": "Action &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:16.892Z"
+    "scraped_at": "2026-11-23T16:13:21.647Z"
   },
   "the-wolverine-2013": {
     "title": "The Wolverine",
@@ -2842,7 +2842,7 @@
       "genres": "Action &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:24.105Z"
+    "scraped_at": "2026-11-23T16:13:27.909Z"
   },
   "x-men-days-of-future-past-2014": {
     "title": "X-Men: Days of Future Past",
@@ -2861,13 +2861,13 @@
       "worldwide": 746045700,
       "opening_weekend_domestic": 90823660,
       "budget": 200000000,
-      "earliest_release_date": "Wed May 21, 2014 (APAC, EMEA)",
+      "earliest_release_date": "Wed May 21, 2014 (EMEA, APAC)",
       "mpaa": null,
       "running_time_minutes": 132,
       "genres": "Action &middot; Adventure &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:30.659Z"
+    "scraped_at": "2026-11-23T16:13:34.330Z"
   },
   "deadpool-2016": {
     "title": "Deadpool",
@@ -2892,7 +2892,7 @@
       "genres": "Action &middot; Comedy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:37.190Z"
+    "scraped_at": "2026-11-23T16:13:39.500Z"
   },
   "x-men-apocalypse-2016": {
     "title": "X-Men: Apocalypse",
@@ -2911,13 +2911,13 @@
       "worldwide": 543934105,
       "opening_weekend_domestic": 65769562,
       "budget": 178000000,
-      "earliest_release_date": "Wed May 18, 2016 (EMEA, APAC)",
+      "earliest_release_date": "Wed May 18, 2016 (APAC, EMEA)",
       "mpaa": null,
       "running_time_minutes": 144,
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:42.649Z"
+    "scraped_at": "2026-11-23T16:13:47.001Z"
   },
   "logan-2017": {
     "title": "Logan",
@@ -2942,7 +2942,7 @@
       "genres": "Action &middot; Drama &middot; Sci-Fi &middot; Thriller",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:47.591Z"
+    "scraped_at": "2026-11-23T16:13:52.992Z"
   },
   "deadpool-2-2018": {
     "title": "Deadpool 2",
@@ -2967,7 +2967,7 @@
       "genres": "Action &middot; Adventure &middot; Comedy &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:52.845Z"
+    "scraped_at": "2026-11-23T16:13:57.719Z"
   },
   "x-men-dark-phoenix-2019": {
     "title": "X-Men: Dark Phoenix",
@@ -2992,7 +2992,7 @@
       "genres": "Action &middot; Adventure &middot; Sci-Fi",
       "distributor": "20th Century Fox"
     },
-    "scraped_at": "2026-11-16T16:13:57.994Z"
+    "scraped_at": "2026-11-23T16:14:02.398Z"
   },
   "the-new-mutants-2020": {
     "title": "The New Mutants",
@@ -3017,6 +3017,6 @@
       "genres": "Action &middot; Horror &middot; Mystery &middot; Sci-Fi",
       "distributor": "20th Century Studios"
     },
-    "scraped_at": "2026-11-16T16:14:03.366Z"
+    "scraped_at": "2026-11-23T16:14:08.487Z"
   }
 }

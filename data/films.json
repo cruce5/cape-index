@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-16T16:14:17.786Z",
+    "generated": "2026-11-23T16:14:22.936Z",
     "currency": "USD",
     "grosses": "nominal lifetime worldwide gross from Box Office Mojo; box_office_real_2025 = CPI-U adjusted to 2025 dollars, each later release (re-release, recut) at its own year",
     "source_of_truth": "Box Office Mojo (boxofficemojo.com) title pages",
@@ -72,7 +72,7 @@
         "earliest_release_date": "Thu Jul 13, 2000 (Australia)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 53.08,
@@ -140,7 +140,7 @@
         "earliest_release_date": "Fri May 3, 2002 (18 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 50.37,
@@ -201,7 +201,7 @@
         "earliest_release_date": "Fri Feb 14, 2003 (EMEA, Domestic)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 57.23,
@@ -260,7 +260,7 @@
         "earliest_release_date": "Wed Apr 30, 2003 (24 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 52.72,
@@ -307,7 +307,7 @@
         }
       ],
       "budget": 200000000,
-      "runtime_minutes": 127,
+      "runtime_minutes": 128,
       "mpaa": null,
       "distributor": "Sony Pictures Releasing",
       "genres": [
@@ -328,7 +328,7 @@
         "earliest_release_date": "Wed Jun 30, 2004 (19 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 47.58,
@@ -389,7 +389,7 @@
         "earliest_release_date": "Wed Jan 12, 2005 (Lesser Antilles)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 42.83,
@@ -495,7 +495,7 @@
         "earliest_release_date": "Wed Jun 15, 2005 (6 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 55.08,
@@ -556,7 +556,7 @@
         "earliest_release_date": "Wed Jul 6, 2005 (LATAM, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 46.38,
@@ -615,7 +615,7 @@
         "earliest_release_date": "Wed May 24, 2006 (13 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 50.9,
@@ -674,7 +674,7 @@
         "earliest_release_date": "Wed Feb 14, 2007 (9 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 50.63,
@@ -749,7 +749,7 @@
         "earliest_release_date": "Tue May 1, 2007 (18 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 38.09,
@@ -810,7 +810,7 @@
         "earliest_release_date": "Wed Jun 13, 2007 (9 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 43.7,
@@ -882,7 +882,7 @@
         "earliest_release_date": "Wed Apr 30, 2008 (29 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 54.46,
@@ -943,7 +943,7 @@
         "earliest_release_date": "Wed Jun 11, 2008 (Ukraine)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.91,
@@ -1065,7 +1065,7 @@
         "earliest_release_date": "Wed Jul 16, 2008 (Taiwan)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 53.05,
@@ -1122,7 +1122,7 @@
         "earliest_release_date": "Wed Apr 29, 2009 (28 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 48.22,
@@ -1183,7 +1183,7 @@
         "earliest_release_date": "Wed Apr 28, 2010 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.07,
@@ -1244,7 +1244,7 @@
         "earliest_release_date": "Thu Apr 21, 2011 (Australia)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 40.29,
@@ -1301,7 +1301,7 @@
         "earliest_release_date": "Wed Jun 1, 2011 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 41.52,
@@ -1364,7 +1364,7 @@
         "earliest_release_date": "Fri Jul 22, 2011 (Domestic, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 47.67,
@@ -1423,7 +1423,7 @@
         "earliest_release_date": "Wed Feb 15, 2012 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 39.06,
@@ -1493,7 +1493,7 @@
         "earliest_release_date": "Wed Apr 25, 2012 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 41,
@@ -1547,10 +1547,10 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "Thu Jun 28, 2012 (APAC, EMEA)"
+        "earliest_release_date": "Thu Jun 28, 2012 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 34.63,
@@ -1637,7 +1637,7 @@
         "earliest_release_date": "Thu Jul 19, 2012 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 41.29,
@@ -1707,7 +1707,7 @@
         "earliest_release_date": "Wed Apr 24, 2013 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.65,
@@ -1770,7 +1770,7 @@
         "earliest_release_date": "Wed Jun 12, 2013 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.43,
@@ -1829,7 +1829,7 @@
         "earliest_release_date": "Wed Jul 24, 2013 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 31.95,
@@ -1894,7 +1894,7 @@
         "earliest_release_date": "Wed Oct 30, 2013 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 32,
@@ -1956,10 +1956,10 @@
         "worldwide": 714421503
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Mar 26, 2014 (EMEA, APAC)"
+        "earliest_release_date": "Wed Mar 26, 2014 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 36.36,
@@ -2034,7 +2034,7 @@
         "earliest_release_date": "Wed Apr 16, 2014 (Belgium)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -2093,10 +2093,10 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "Wed May 21, 2014 (APAC, EMEA)"
+        "earliest_release_date": "Wed May 21, 2014 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 31.35,
@@ -2170,7 +2170,7 @@
         "earliest_release_date": "Wed Jul 30, 2014 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.15,
@@ -2242,7 +2242,7 @@
         "earliest_release_date": "Wed Apr 22, 2015 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 32.67,
@@ -2305,7 +2305,7 @@
         "earliest_release_date": "Fri Jul 10, 2015 (Bulgaria)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.7,
@@ -2373,7 +2373,7 @@
         "earliest_release_date": "Tue Feb 9, 2016 (Taiwan)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 46.38,
@@ -2441,7 +2441,7 @@
         "earliest_release_date": "Wed Mar 23, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 37.78,
@@ -2511,7 +2511,7 @@
         "earliest_release_date": "Wed Apr 27, 2016 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 35.33,
@@ -2567,10 +2567,10 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "Wed May 18, 2016 (EMEA, APAC)"
+        "earliest_release_date": "Wed May 18, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 28.58,
@@ -2635,7 +2635,7 @@
         "earliest_release_date": "Wed Aug 3, 2016 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 43.39,
@@ -2709,7 +2709,7 @@
         "earliest_release_date": "Tue Oct 25, 2016 (United Kingdom)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.32,
@@ -2779,7 +2779,7 @@
         "earliest_release_date": "Wed Mar 1, 2017 (12 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 36.54,
@@ -2838,8 +2838,6 @@
         "&middot;",
         "Fantasy",
         "&middot;",
-        "Music",
-        "&middot;",
         "Sci-Fi"
       ],
       "scores": {
@@ -2854,10 +2852,10 @@
         "worldwide": 863756051
       },
       "bom_meta": {
-        "earliest_release_date": "Tue Apr 25, 2017 (EMEA, APAC)"
+        "earliest_release_date": "Tue Apr 25, 2017 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 45.13,
@@ -2940,7 +2938,7 @@
         "earliest_release_date": "Tue May 30, 2017 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 50.1,
@@ -3019,7 +3017,7 @@
         "earliest_release_date": "Wed Jul 5, 2017 (8 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 38.02,
@@ -3095,7 +3093,7 @@
         "earliest_release_date": "Tue Oct 24, 2017 (United Kingdom)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 36.84,
@@ -3163,7 +3161,7 @@
         "earliest_release_date": "Tue Oct 17, 2017 (Lithuania)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3236,7 +3234,7 @@
         "earliest_release_date": "Tue Feb 13, 2018 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 51.89,
@@ -3305,10 +3303,10 @@
         "worldwide": 2052415039
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Apr 25, 2018 (EMEA, APAC)"
+        "earliest_release_date": "Wed Apr 25, 2018 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.07,
@@ -3385,7 +3383,7 @@
         "earliest_release_date": "Wed May 16, 2018 (18 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 41.3,
@@ -3447,10 +3445,10 @@
         "worldwide": 622674139
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Jul 4, 2018 (EMEA, APAC)"
+        "earliest_release_date": "Wed Jul 4, 2018 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3519,7 +3517,7 @@
         "earliest_release_date": "Wed Oct 3, 2018 (7 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 24.94,
@@ -3600,7 +3598,7 @@
         "earliest_release_date": "Fri Dec 7, 2018 (China)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -3670,10 +3668,10 @@
         "worldwide": 1131416446
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Mar 6, 2019 (EMEA, APAC)"
+        "earliest_release_date": "Wed Mar 6, 2019 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 37.73,
@@ -3754,7 +3752,7 @@
         "earliest_release_date": "Wed Apr 3, 2019 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 38.19,
@@ -3781,7 +3779,7 @@
       "box_office": {
         "domestic": 898471864,
         "international": 2044177914,
-        "worldwide": 2942649778,
+        "worldwide": 2942661253,
         "opening_weekend_domestic": 357115007,
         "widest_release_theaters": null,
         "is_final": true
@@ -3789,7 +3787,7 @@
       "box_office_real_2025": {
         "domestic": 1121555438,
         "international": 2548643878,
-        "worldwide": 3670199316
+        "worldwide": 3670210791
       },
       "later_releases": [
         {
@@ -3797,7 +3795,7 @@
           "year": 2026,
           "domestic": 40098864,
           "international": 103111814,
-          "worldwide": 143210678
+          "worldwide": 143222153
         }
       ],
       "budget": 356000000,
@@ -3826,7 +3824,7 @@
         "earliest_release_date": "Wed Apr 24, 2019 (20 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 30.53,
@@ -3835,7 +3833,7 @@
         "opening_share_worldwide": 12.14,
         "roi_worldwide": 8.27,
         "breakeven_worldwide": 890000000,
-        "profit_vs_breakeven": 2052649778,
+        "profit_vs_breakeven": 2052661253,
         "profitable": true,
         "budget_real_2025": 448521261
       }
@@ -3885,7 +3883,7 @@
         "earliest_release_date": "Wed Jun 5, 2019 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 26.08,
@@ -3952,7 +3950,7 @@
         "earliest_release_date": "Fri Jun 28, 2019 (APAC, China)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 34.54,
@@ -4032,7 +4030,7 @@
         "earliest_release_date": "Wed Oct 2, 2019 (LATAM, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 31.09,
@@ -4101,10 +4099,10 @@
         "worldwide": 205372791
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Feb 5, 2020 (APAC, EMEA)"
+        "earliest_release_date": "Wed Feb 5, 2020 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 40.95,
@@ -4165,7 +4163,7 @@
         "earliest_release_date": "Wed Aug 26, 2020 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -4229,7 +4227,7 @@
         "earliest_release_date": "Wed Dec 16, 2020 (LATAM, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4293,7 +4291,7 @@
         "earliest_release_date": "Wed Jul 7, 2021 (EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4359,7 +4357,7 @@
         "earliest_release_date": "Sat May 8, 2021 (Italy)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 33.08,
@@ -4424,7 +4422,7 @@
         "earliest_release_date": "Wed Sep 1, 2021 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4492,7 +4490,7 @@
         "earliest_release_date": "Thu Sep 30, 2021 (Russia/CIS)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -4555,10 +4553,10 @@
         "worldwide": 402064899
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Nov 3, 2021 (APAC, EMEA)"
+        "earliest_release_date": "Wed Nov 3, 2021 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4647,7 +4645,7 @@
         "earliest_release_date": "Wed Dec 15, 2021 (14 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 42.41,
@@ -4722,7 +4720,7 @@
         "earliest_release_date": "Tue Mar 1, 2022 (South Korea)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 47.85,
@@ -4785,7 +4783,7 @@
         "earliest_release_date": "Wed Mar 30, 2022 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -4851,7 +4849,7 @@
         "earliest_release_date": "Wed May 4, 2022 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4919,7 +4917,7 @@
         "earliest_release_date": "Wed Jul 6, 2022 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -4985,7 +4983,7 @@
         "earliest_release_date": "Fri Oct 14, 2022 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5051,7 +5049,7 @@
         "earliest_release_date": "Fri Nov 4, 2022 (Iceland)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 52.82,
@@ -5116,7 +5114,7 @@
         "earliest_release_date": "Wed Feb 15, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5184,7 +5182,7 @@
         "earliest_release_date": "Wed Mar 15, 2023 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5252,7 +5250,7 @@
         "earliest_release_date": "Thu Apr 13, 2023 (Italy)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "metrics": {
         "pct_domestic": 42.46,
@@ -5314,10 +5312,10 @@
         "worldwide": 271433313
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Jun 14, 2023 (EMEA, APAC)"
+        "earliest_release_date": "Wed Jun 14, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5383,7 +5381,7 @@
         "earliest_release_date": "Wed Aug 16, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5444,10 +5442,10 @@
         "worldwide": 206136825
       },
       "bom_meta": {
-        "earliest_release_date": "Wed Nov 8, 2023 (EMEA, APAC)"
+        "earliest_release_date": "Wed Nov 8, 2023 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5513,7 +5511,7 @@
         "earliest_release_date": "Wed Dec 20, 2023 (9 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5571,7 +5569,7 @@
         "earliest_release_date": "Wed Feb 14, 2024 (7 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5637,7 +5635,7 @@
         "earliest_release_date": "Thu Jul 18, 2024 (Slovakia)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5697,7 +5695,7 @@
         "earliest_release_date": "Tue Oct 1, 2024 (South Korea)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5761,7 +5759,7 @@
         "earliest_release_date": "Wed Oct 23, 2024 (China, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5823,7 +5821,7 @@
         "earliest_release_date": "Wed Dec 11, 2024 (Mexico)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -5887,7 +5885,7 @@
         "earliest_release_date": "Wed Feb 12, 2025 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": null,
       "budget_estimated": true,
       "metrics": {
@@ -5953,7 +5951,7 @@
         "earliest_release_date": "Wed Jan 1, 2025 (Portugal)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -6010,10 +6008,10 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "Wed Jul 9, 2025 (EMEA, APAC)"
+        "earliest_release_date": "Wed Jul 9, 2025 (APAC, EMEA)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "metrics": {
         "pct_domestic": 57.25,
@@ -6069,10 +6067,10 @@
       },
       "sheet": null,
       "bom_meta": {
-        "earliest_release_date": "Wed Jul 23, 2025 (APAC, EMEA)"
+        "earliest_release_date": "Wed Jul 23, 2025 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -6132,7 +6130,7 @@
         "earliest_release_date": "Wed Jun 24, 2026 (APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
@@ -6158,17 +6156,17 @@
         "url": "https://www.boxofficemojo.com/title/tt22084616/"
       },
       "box_office": {
-        "domestic": 959006311,
-        "international": 1564141204,
-        "worldwide": 2523147515,
+        "domestic": 959059276,
+        "international": 1564668977,
+        "worldwide": 2523728253,
         "opening_weekend_domestic": 360091572,
         "widest_release_theaters": null,
         "is_final": false
       },
       "box_office_real_2025": {
-        "domestic": 959006311,
-        "international": 1564141204,
-        "worldwide": 2523147515
+        "domestic": 959059276,
+        "international": 1564668977,
+        "worldwide": 2523728253
       },
       "budget": 225000000,
       "runtime_minutes": 145,
@@ -6190,17 +6188,17 @@
         "earliest_release_date": "Wed Jul 29, 2026 (6 areas)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
-        "pct_domestic": 38.01,
-        "pct_international": 61.99,
+        "pct_domestic": 38,
+        "pct_international": 62,
         "domestic_multiplier": 2.66,
         "opening_share_worldwide": 14.27,
-        "roi_worldwide": 11.21,
+        "roi_worldwide": 11.22,
         "breakeven_worldwide": 562500000,
-        "profit_vs_breakeven": 1960647515,
+        "profit_vs_breakeven": 1961228253,
         "profitable": true,
         "budget_real_2025": 225000000
       }
@@ -6216,17 +6214,17 @@
         "url": "https://www.boxofficemojo.com/title/tt34890576/"
       },
       "box_office": {
-        "domestic": 63634121,
-        "international": 57700000,
-        "worldwide": 121334121,
+        "domestic": 66195354,
+        "international": 60000000,
+        "worldwide": 126195354,
         "opening_weekend_domestic": 24002731,
         "widest_release_theaters": null,
         "is_final": false
       },
       "box_office_real_2025": {
-        "domestic": 63634121,
-        "international": 57700000,
-        "worldwide": 121334121
+        "domestic": 66195354,
+        "international": 60000000,
+        "worldwide": 126195354
       },
       "budget": 40000000,
       "runtime_minutes": 108,
@@ -6250,17 +6248,17 @@
         "earliest_release_date": "Wed Oct 21, 2026 (EMEA, APAC)"
       },
       "verified": true,
-      "verified_at": "2026-11-16",
+      "verified_at": "2026-11-23",
       "notes": "Added beyond the legacy Tableau sheet.",
       "budget_estimated": true,
       "metrics": {
         "pct_domestic": 52.45,
         "pct_international": 47.55,
-        "domestic_multiplier": 2.65,
-        "opening_share_worldwide": 19.78,
-        "roi_worldwide": 3.03,
+        "domestic_multiplier": 2.76,
+        "opening_share_worldwide": 19.02,
+        "roi_worldwide": 3.15,
         "breakeven_worldwide": 100000000,
-        "profit_vs_breakeven": 21334121,
+        "profit_vs_breakeven": 26195354,
         "profitable": true,
         "budget_real_2025": 40000000
       }
